@@ -1,0 +1,182 @@
+{
+ "name": "Offers",
+ "source_block": "77a80f19-9838-4915-bcce-8da7afd23f4c",
+ "schema": [
+  [
+   "Tests",
+   "text",
+   []
+  ],
+  [
+   "Owner",
+   "person",
+   []
+  ],
+  [
+   "Restrictions",
+   "text",
+   []
+  ],
+  [
+   "Channels",
+   "multi_select",
+   [
+    "Meta",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO"
+   ]
+  ],
+  [
+   "Conversion Rate",
+   "number",
+   []
+  ],
+  [
+   "Briefs",
+   "text",
+   []
+  ],
+  [
+   "Markets",
+   "multi_select",
+   [
+    "US",
+    "UK",
+    "EU",
+    "DE",
+    "CA",
+    "AU",
+    "Global"
+   ]
+  ],
+  [
+   "Offer Type",
+   "select",
+   [
+    "Discount",
+    "Bundle",
+    "HSA/FSA",
+    "Free shipping",
+    "Guarantee",
+    "Seasonal promo",
+    "Subscription value",
+    "No subscription"
+   ]
+  ],
+  [
+   "Landing Pages",
+   "text",
+   []
+  ],
+  [
+   "Product",
+   "multi_select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Campaigns",
+   "text",
+   []
+  ],
+  [
+   "AOV",
+   "number",
+   []
+  ],
+  [
+   "Price",
+   "text",
+   []
+  ],
+  [
+   "Code",
+   "text",
+   []
+  ],
+  [
+   "Compare-at Price",
+   "text",
+   []
+  ],
+  [
+   "ROAS",
+   "number",
+   []
+  ],
+  [
+   "Assets",
+   "text",
+   []
+  ],
+  [
+   "End Date",
+   "date",
+   []
+  ],
+  [
+   "Discount",
+   "text",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Draft",
+    "Approved",
+    "Live",
+    "Expired",
+    "Paused",
+    "Rejected"
+   ]
+  ],
+  [
+   "Start Date",
+   "date",
+   []
+  ],
+  [
+   "Offer Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Restrictions": "Verify current subscription/app-access claim before scale.",
+   "Briefs": "Band subscription comparison static",
+   "Offer Type": "No subscription",
+   "Landing Pages": "SmartScale Band Comparison LP",
+   "Product": "Hume Band 2.0",
+   "Campaigns": "Band Recovery Clarity Sprint",
+   "Price": "Current live price TBD",
+   "Discount": "None",
+   "Status": "Draft",
+   "Offer Name": "Example — Hume Band No-Subscription Value",
+   "_id": "39d20d08-9385-8129-be19-f6d265ea3adf"
+  },
+  {
+   "Restrictions": "Use only after HSA/FSA proof is verified.",
+   "Briefs": "Pod HSA/FSA proof modules",
+   "Offer Type": "HSA/FSA",
+   "Landing Pages": "Hume Pod PDP; Weight Loss General LP",
+   "Product": "Hume Pod",
+   "Campaigns": "Pod Plateau Education Sprint",
+   "Price": "Current live price TBD",
+   "Discount": "None",
+   "Status": "Draft",
+   "Offer Name": "Example — Hume Pod HSA/FSA Angle",
+   "_id": "39d20d08-9385-81c9-9939-d04e9e0a71e7"
+  }
+ ]
+}

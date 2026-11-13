@@ -1,0 +1,438 @@
+{
+ "name": "Customer Insight Bank",
+ "source_block": "9e3fade4-a94f-482d-b033-c00721498604",
+ "schema": [
+  [
+   "Date Collected",
+   "date",
+   []
+  ],
+  [
+   "Trigger",
+   "text",
+   []
+  ],
+  [
+   "Source URL",
+   "url",
+   []
+  ],
+  [
+   "Notes",
+   "text",
+   []
+  ],
+  [
+   "Frequency",
+   "number",
+   []
+  ],
+  [
+   "Objection",
+   "text",
+   []
+  ],
+  [
+   "Desired Outcome",
+   "text",
+   []
+  ],
+  [
+   "Verified",
+   "checkbox",
+   []
+  ],
+  [
+   "Emotional Theme",
+   "select",
+   [
+    "Fear",
+    "Frustration",
+    "Relief",
+    "Control",
+    "Curiosity",
+    "Identity",
+    "Cost concern",
+    "Skepticism"
+   ]
+  ],
+  [
+   "Awareness Stage",
+   "select",
+   [
+    "Unaware",
+    "Problem aware",
+    "Solution aware",
+    "Product aware",
+    "Most aware"
+   ]
+  ],
+  [
+   "Existing Belief",
+   "text",
+   []
+  ],
+  [
+   "Funnel Stage",
+   "select",
+   [
+    "TOF",
+    "MOF",
+    "BOF",
+    "Post-purchase"
+   ]
+  ],
+  [
+   "Strength of Signal",
+   "select",
+   [
+    "Weak",
+    "Moderate",
+    "Strong",
+    "Very strong"
+   ]
+  ],
+  [
+   "Source Type",
+   "select",
+   [
+    "Post-purchase survey",
+    "Review",
+    "Reddit",
+    "Facebook group",
+    "Ad comment",
+    "Customer support",
+    "Interview",
+    "Creator feedback",
+    "Sales feedback",
+    "Competitor review",
+    "Amazon",
+    "Trustpilot",
+    "Organic comment",
+    "Search query",
+    "Forum",
+    "Other"
+   ]
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Exact Customer Language",
+   "text",
+   []
+  ],
+  [
+   "Pain",
+   "text",
+   []
+  ],
+  [
+   "Resulting Performance",
+   "text",
+   []
+  ],
+  [
+   "Used in Creative",
+   "checkbox",
+   []
+  ],
+  [
+   "Insight Type",
+   "select",
+   [
+    "Pain",
+    "Desired outcome",
+    "Objection",
+    "Trigger",
+    "Belief",
+    "Failed solution",
+    "Product praise",
+    "Product complaint",
+    "Competitor complaint",
+    "Feature request",
+    "Identity statement",
+    "Emotional language",
+    "Purchase reason",
+    "Churn reason",
+    "Trust concern",
+    "Pricing concern"
+   ]
+  ],
+  [
+   "Researcher",
+   "person",
+   []
+  ],
+  [
+   "Persona",
+   "text",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "New",
+    "Ready for brief",
+    "Used",
+    "Needs validation",
+    "Archived"
+   ]
+  ],
+  [
+   "Insight",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Notes": "Avoid preventive health claims; frame as awareness and habit adjustment.",
+   "Frequency": "5",
+   "Desired Outcome": "Notice patterns before energy crashes.",
+   "Verified": "Yes",
+   "Existing Belief": "I only need recovery data when I feel bad.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Recognizes burnout too late.",
+   "Persona": "High-stress operator",
+   "Insight": "Band — early awareness before crash",
+   "_id": "39d20d08-9385-811e-9015-d9846e44f079"
+  },
+  {
+   "Notes": "Strong Band recovery-clarity angle.",
+   "Frequency": "8",
+   "Desired Outcome": "Understand recovery and stress patterns.",
+   "Verified": "Yes",
+   "Existing Belief": "If I slept eight hours, I should feel fine.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Sleep duration does not explain morning exhaustion.",
+   "Persona": "Busy professional",
+   "Insight": "Band — waking up exhausted",
+   "_id": "39d20d08-9385-811f-8031-fce93c0b503a"
+  },
+  {
+   "Notes": "Good for product-demo creator content.",
+   "Frequency": "4",
+   "Desired Outcome": "Understand segmental trends while training.",
+   "Verified": "Yes",
+   "Existing Belief": "The mirror is enough to spot imbalances.",
+   "Product": "Hume Pod",
+   "Pain": "One side feels weaker or less developed.",
+   "Persona": "Gym user",
+   "Insight": "Pod — segmental imbalance curiosity",
+   "_id": "39d20d08-9385-812b-8372-dfd32f67e485"
+  },
+  {
+   "Notes": "Static chart visual or UGC mirror-to-app demo.",
+   "Frequency": "6",
+   "Desired Outcome": "See muscle trends and body composition progress.",
+   "Verified": "Yes",
+   "Existing Belief": "A workout is working only if weight drops.",
+   "Product": "Hume Pod",
+   "Pain": "Strength gains are not visible on the bathroom scale.",
+   "Persona": "Gym user",
+   "Insight": "Pod — proof workouts are working",
+   "_id": "39d20d08-9385-8132-8d3f-d8cf56cb9971"
+  },
+  {
+   "Notes": "Keep language around awareness and measurement; avoid disease-risk promises.",
+   "Frequency": "6",
+   "Desired Outcome": "A clearer body-composition signal than weight alone.",
+   "Verified": "Yes",
+   "Existing Belief": "If I look okay, I am probably okay.",
+   "Product": "Hume Pod",
+   "Pain": "Concern about hidden body fat and health trajectory.",
+   "Persona": "Man over 40",
+   "Insight": "Pod — hidden visceral fat concern",
+   "_id": "39d20d08-9385-8133-a86d-d0db02d329f8"
+  },
+  {
+   "Notes": "Potential CRM and onboarding angle.",
+   "Frequency": "4",
+   "Desired Outcome": "A digestible weekly readout.",
+   "Verified": "Yes",
+   "Existing Belief": "Tracking requires checking the app constantly.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Daily dashboards are too noisy.",
+   "Persona": "Executive user",
+   "Insight": "Band — weekly health report desire",
+   "_id": "39d20d08-9385-8136-9fcf-cf993fa38ae5"
+  },
+  {
+   "Notes": "Use for YouTube/CTV educational arc.",
+   "Frequency": "8",
+   "Desired Outcome": "Look at recovery quality and stress context.",
+   "Verified": "Yes",
+   "Existing Belief": "Sleep tracking equals hours slept.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Sleep duration alone does not explain recovery.",
+   "Persona": "Busy professional",
+   "Insight": "Band — sleep hours are incomplete",
+   "_id": "39d20d08-9385-8140-ae15-d7d11e375b0e"
+  },
+  {
+   "Notes": "Useful for retention and CRM education.",
+   "Frequency": "7",
+   "Desired Outcome": "Separate hydration swings from longer-term body composition trends.",
+   "Verified": "Yes",
+   "Existing Belief": "Every pound up means fat gain.",
+   "Product": "Hume Pod",
+   "Pain": "Daily scale fluctuations cause panic.",
+   "Persona": "Weight-loss plateau user",
+   "Insight": "Pod — water weight panic",
+   "_id": "39d20d08-9385-814b-82b5-f45c505bc1ac"
+  },
+  {
+   "Notes": "Validate current offer and app access details before launch.",
+   "Frequency": "7",
+   "Desired Outcome": "A wearable value story without required subscription fatigue.",
+   "Verified": "Yes",
+   "Existing Belief": "Useful wearables require an ongoing membership.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Monthly fees make premium wearables feel expensive.",
+   "Persona": "Wearable skeptic",
+   "Insight": "Band — subscription fatigue",
+   "_id": "39d20d08-9385-814f-a70e-e734bbf5ac03"
+  },
+  {
+   "Notes": "Core old-belief/new-belief bridge for Band.",
+   "Frequency": "9",
+   "Desired Outcome": "Clearer interpretation and next steps.",
+   "Verified": "Yes",
+   "Existing Belief": "More metrics will automatically help me improve.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Wearable dashboards create more questions than answers.",
+   "Persona": "Wearable user overwhelmed by data",
+   "Insight": "Band — wearable data has no meaning",
+   "_id": "39d20d08-9385-8155-a0a3-c1793cef9fed"
+  },
+  {
+   "Notes": "Good for creator voiceover and app walkthrough.",
+   "Frequency": "6",
+   "Desired Outcome": "Know when to rest, push, or adjust routine.",
+   "Verified": "Yes",
+   "Existing Belief": "A metric matters only if I know what to do with it.",
+   "Product": "Hume Band 2.0",
+   "Pain": "HRV changes are hard to interpret.",
+   "Persona": "Data-driven user",
+   "Insight": "Band — HRV but no action",
+   "_id": "39d20d08-9385-8158-8ac0-e404ca3faedc"
+  },
+  {
+   "Notes": "Possible bundle or family challenge idea.",
+   "Frequency": "3",
+   "Desired Outcome": "Create a shared measurement ritual at home.",
+   "Verified": "Yes",
+   "Existing Belief": "Health tracking is an individual chore.",
+   "Product": "Hume Pod",
+   "Pain": "Health goals are hard to maintain alone.",
+   "Persona": "Busy parent",
+   "Insight": "Pod — family accountability",
+   "_id": "39d20d08-9385-8162-b006-c38b4e98ad32"
+  },
+  {
+   "Notes": "Be careful with biological-age language unless substantiated.",
+   "Frequency": "6",
+   "Desired Outcome": "See stress and recovery trends before burnout.",
+   "Verified": "Yes",
+   "Existing Belief": "Stress only matters when I feel it.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Worries that chronic stress is silently compounding.",
+   "Persona": "Longevity-focused buyer",
+   "Insight": "Band — stress aging concern",
+   "_id": "39d20d08-9385-8171-bd41-fbd8f6f0b495"
+  },
+  {
+   "Notes": "Needs product-demo proof and simple mechanism explanation.",
+   "Frequency": "8",
+   "Desired Outcome": "Understand what hand-and-foot measurement adds.",
+   "Verified": "Yes",
+   "Existing Belief": "All smart scales are basically the same.",
+   "Product": "Hume Pod",
+   "Pain": "Doubts that smart scales are meaningfully different.",
+   "Persona": "Skeptical buyer",
+   "Insight": "Pod — smart scale skepticism",
+   "_id": "39d20d08-9385-8197-849b-d6b5fdce29ae"
+  },
+  {
+   "Notes": "Good for lifecycle education and UGC before/after routine story.",
+   "Frequency": "6",
+   "Desired Outcome": "See whether routines are improving trends.",
+   "Verified": "Yes",
+   "Existing Belief": "Health habits are guesswork until I feel different.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Hard to connect habits to energy and recovery.",
+   "Persona": "Habit optimizer",
+   "Insight": "Band — habits improving energy",
+   "_id": "39d20d08-9385-81ab-9c6e-fa6546f2d1e3"
+  },
+  {
+   "Notes": "Old belief: progress equals lower weight. New belief: body composition can improve before scale weight changes.",
+   "Frequency": "8",
+   "Desired Outcome": "Know whether fat is dropping while muscle is maintained.",
+   "Verified": "Yes",
+   "Existing Belief": "If the scale is flat, nothing is working.",
+   "Product": "Hume Pod",
+   "Pain": "Scale weight does not reflect body recomposition.",
+   "Persona": "Weight-loss plateau user",
+   "Insight": "Pod — weight stayed same, clothes changed",
+   "_id": "39d20d08-9385-81ac-a5cf-cf99dc4117fe"
+  },
+  {
+   "Notes": "Position as convenient trend tracking, not as a clinical scan replacement.",
+   "Frequency": "5",
+   "Desired Outcome": "At-home trend visibility between professional scans.",
+   "Verified": "Yes",
+   "Existing Belief": "Only a clinic scan can tell me anything useful.",
+   "Product": "Hume Pod",
+   "Pain": "High-friction body composition testing.",
+   "Persona": "Longevity optimizer",
+   "Insight": "Pod — DEXA is too expensive",
+   "_id": "39d20d08-9385-81b9-96a0-d4fd330a8406"
+  },
+  {
+   "Notes": "Use for GLP-1 and diet-transition creative. Avoid direct medical claims.",
+   "Frequency": "7",
+   "Desired Outcome": "Track fat loss and muscle preservation trends.",
+   "Verified": "Yes",
+   "Existing Belief": "A lower number is always good.",
+   "Product": "Hume Pod",
+   "Pain": "Fear that weight loss includes muscle loss.",
+   "Persona": "GLP-1 user",
+   "Insight": "Pod — losing fat or muscle confusion",
+   "_id": "39d20d08-9385-81be-baec-c8ddeaff64ac"
+  },
+  {
+   "Notes": "Best for TOF and MOF education.",
+   "Frequency": "9",
+   "Desired Outcome": "See whether hydration, muscle or fat shifts explain progress.",
+   "Verified": "Yes",
+   "Existing Belief": "Plateau means my plan failed.",
+   "Product": "Hume Pod",
+   "Pain": "Plateau creates doubt and churn.",
+   "Persona": "Weight-loss plateau user",
+   "Insight": "Pod — plateau needs an explanation",
+   "_id": "39d20d08-9385-81db-8f25-e4012e47de37"
+  },
+  {
+   "Notes": "Verify exact AI/app claims before usage.",
+   "Frequency": "5",
+   "Desired Outcome": "Guided interpretation from the app experience.",
+   "Verified": "Yes",
+   "Existing Belief": "Wearables are mostly passive dashboards.",
+   "Product": "Hume Band 2.0",
+   "Pain": "Data overload without synthesis.",
+   "Persona": "Wearable user overwhelmed by data",
+   "Insight": "Band — wants AI guidance not dashboard",
+   "_id": "39d20d08-9385-81de-8ada-ce944ae35e91"
+  }
+ ]
+}

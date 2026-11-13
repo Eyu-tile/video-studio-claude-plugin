@@ -1,0 +1,195 @@
+{
+ "name": "Products",
+ "source_block": "1ab2923c-0781-44f4-b97c-e04b4c716c4f",
+ "schema": [
+  [
+   "HSA/FSA Eligible",
+   "checkbox",
+   []
+  ],
+  [
+   "Primary Promise",
+   "text",
+   []
+  ],
+  [
+   "Core Proof",
+   "text",
+   []
+  ],
+  [
+   "Subscription Required",
+   "checkbox",
+   []
+  ],
+  [
+   "Product Owner",
+   "person",
+   []
+  ],
+  [
+   "Product Category",
+   "select",
+   [
+    "Body composition",
+    "Wearable",
+    "Ecosystem",
+    "Future product"
+   ]
+  ],
+  [
+   "Primary Landing Pages",
+   "url",
+   []
+  ],
+  [
+   "Key Benefits",
+   "text",
+   []
+  ],
+  [
+   "Archive Status",
+   "select",
+   [
+    "Active",
+    "Archive candidate",
+    "Archived"
+   ]
+  ],
+  [
+   "Key Features",
+   "text",
+   []
+  ],
+  [
+   "Primary Desired Outcomes",
+   "text",
+   []
+  ],
+  [
+   "Last Reviewed",
+   "date",
+   []
+  ],
+  [
+   "Primary Problems",
+   "text",
+   []
+  ],
+  [
+   "Product Status",
+   "select",
+   [
+    "Active",
+    "Planning",
+    "Future",
+    "Archived"
+   ]
+  ],
+  [
+   "Price",
+   "text",
+   []
+  ],
+  [
+   "Approved Offers",
+   "text",
+   []
+  ],
+  [
+   "Primary Personas",
+   "text",
+   []
+  ],
+  [
+   "Review Status",
+   "select",
+   [
+    "Current",
+    "Needs review",
+    "Outdated",
+    "Example"
+   ]
+  ],
+  [
+   "Product Mechanism",
+   "text",
+   []
+  ],
+  [
+   "Product Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "HSA/FSA Eligible": "No",
+   "Primary Promise": "Connect body structure and daily physiology into one long-term health picture.",
+   "Core Proof": "Use only substantiated cross-product claims; avoid overstating causality.",
+   "Subscription Required": "No",
+   "Product Category": "Ecosystem",
+   "Key Benefits": "Creates a fuller loop between what your body is made of and how your daily choices affect it.",
+   "Archive Status": "Active",
+   "Key Features": "Body composition, recovery, sleep, stress, activity and longitudinal Hume app reporting.",
+   "Primary Desired Outcomes": "More complete progress tracking across fat, muscle, sleep, recovery and routine.",
+   "Primary Problems": "Single-device tracking creates blind spots.",
+   "Product Status": "Active",
+   "Product Mechanism": "Body-composition trends from Pod plus daily wearable signals from Band.",
+   "Product Name": "Pod + Band Ecosystem",
+   "_id": "39d20d08-9385-811f-88f0-f6699dcb26da",
+   "_has_body": true
+  },
+  {
+   "HSA/FSA Eligible": "No",
+   "Primary Promise": "Reserved for future Hume launches.",
+   "Core Proof": "TBD",
+   "Subscription Required": "No",
+   "Product Category": "Future product",
+   "Key Benefits": "TBD",
+   "Archive Status": "Archived",
+   "Key Features": "TBD",
+   "Primary Desired Outcomes": "TBD",
+   "Primary Problems": "TBD",
+   "Product Status": "Future",
+   "Product Mechanism": "TBD",
+   "Product Name": "Future Product Placeholder",
+   "_id": "39d20d08-9385-8123-b5b8-f9b41d0174e9",
+   "_has_body": true
+  },
+  {
+   "HSA/FSA Eligible": "No",
+   "Primary Promise": "Understand daily physiology, recovery, stress, sleep and trend signals without another confusing dashboard.",
+   "Core Proof": "Requires source-backed claims for sensors, accuracy, battery and subscription positioning.",
+   "Subscription Required": "No",
+   "Product Category": "Wearable",
+   "Key Benefits": "Converts wearable data into clearer decisions about rest, routine and health habits.",
+   "Archive Status": "Active",
+   "Key Features": "Sleep, stress, recovery, activity and longitudinal trend tracking.",
+   "Primary Desired Outcomes": "Feel more in control of energy, recovery, stress and habit consistency.",
+   "Primary Problems": "Wearable data overload, subscription fatigue, unclear recovery signals.",
+   "Product Status": "Active",
+   "Product Mechanism": "Wrist wearable plus Hume app interpretation of biometric and behavioral trends.",
+   "Product Name": "Hume Band 2.0",
+   "_id": "39d20d08-9385-8148-bfca-e1cba654a96d",
+   "_has_body": true
+  },
+  {
+   "HSA/FSA Eligible": "Yes",
+   "Primary Promise": "Know what your body is made of, not just what you weigh.",
+   "Core Proof": "Product-guideline claim: do not position as diagnostic; use trend and composition language.",
+   "Subscription Required": "No",
+   "Product Category": "Body composition",
+   "Key Benefits": "Turns ambiguous weight changes into clearer body-composition feedback.",
+   "Archive Status": "Active",
+   "Key Features": "8-sensor measurement, segmental composition, body fat, muscle mass, hydration and trend tracking.",
+   "Primary Desired Outcomes": "Lose fat while preserving muscle; understand plateaus; see progress beyond weight.",
+   "Primary Problems": "Scale weight hides fat, muscle, hydration and distribution changes.",
+   "Product Status": "Active",
+   "Product Mechanism": "Hand-and-foot, multi-frequency BIA with segmental body composition trends.",
+   "Product Name": "Hume Pod",
+   "_id": "39d20d08-9385-8154-b95a-e924339d4fdb",
+   "_has_body": true
+  }
+ ]
+}

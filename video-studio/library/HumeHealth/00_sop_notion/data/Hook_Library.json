@@ -1,0 +1,198 @@
+{
+ "name": "Hook Library",
+ "source_block": "2e320d08-9385-81e8-a4fb-f93b6ef4b289",
+ "schema": [
+  [
+   "🎍 Name",
+   "relation",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "POD",
+    "BAND"
+   ]
+  ],
+  [
+   "Hook type",
+   "select",
+   [
+    "Example"
+   ]
+  ],
+  [
+   "Angle",
+   "relation",
+   []
+  ],
+  [
+   "Hook Text",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "🎍 Name": "Video_ReversePsychology_ReversedPsychology2_Arbitrage_10252025_10.30.2025,Video_ReversePsychology_ReversedPsychology2_Arbitrage_10252025_10.30.2025",
+   "Product": "POD",
+   "Hook type": "Example",
+   "Angle": "Video_ReversePsychology_ReversedPsychology2_Arbitrage_10252025_10.30.2025,?,Fake Apology",
+   "jdMa": "Video_ReversePsychology_ReversedPsychology2_Arbitrage_10252025_10.30.2025,Video_W46_HumeBandUGC_BigSale4x5_nov._19z",
+   "Hook Text": "We apologize to anyone who bought the Hume Health Pod at 40% off, because we lied. ",
+   "_id": "2e320d08-9385-818d-90a9-cb35f5fdada2"
+  },
+  {
+   "🎍 Name": "Video_BFCM_SorryMenOver40_4_Arbitrage_Arbitrage_211125_11.24.2025,Video BFCM SorryMenOver40 4 Arbitrage Arbitrage 211125 4x5 - Hume Health (720p, h264).mp4",
+   "Product": "POD",
+   "Hook type": "Fun goal",
+   "Angle": "?,Fake Apology",
+   "jdMa": "Video_BFCM_SorryMenOver40_4_Arbitrage_Arbitrage_211125_11.24.2025,Video BFCM SorryMenOver40 4 Arbitrage Arbitrage 211125 4x5 - Hume Health (720p, h264).mp4",
+   "Hook Text": "To the 520 men over 40 who bought the HealthPod yesterday hoping to drop the beer gut. ",
+   "_id": "2e320d08-9385-812d-848f-cd9c09764461"
+  },
+  {
+   "🎍 Name": "Video_MetabolicHelath_Metabolicagereversal_10XROAS_SV_Hook2_11.13.2025V2_11.19.2025,Video_MetabolicHelath_Metabolicagereversal_10XROAS_SV_Hook2_11.13.2025V2_11.19.2025",
+   "Product": "POD",
+   "Angle": "?,Reverse/slow Aging",
+   "jdMa": "Video_MetabolicHelath_Metabolicagereversal_10XROAS_SV_Hook2_11.13.2025V2_11.19.2025",
+   "Hook Text": "Here's how I got younger getting older my fift birthday I decided I wasn't going to age like everyone else. ",
+   "_id": "2e320d08-9385-810d-b8e4-ed325b203565"
+  },
+  {
+   "🎍 Name": "Video_Ambassador_Craziest_H1_Adsplash_Ani_16092025_916n_KIXk_09.19.2025,Video_Ambassador_Craziest_H1_Adsplash_Ani_16092025_916n_KIXk_09.19.2025",
+   "Product": "POD",
+   "Angle": "?,The missing diagnostic",
+   "jdMa": "Video_Ambassador_Craziest_H1_Adsplash_Ani_16092025_916n_KIXk_09.19.2025",
+   "Hook Text": "Craziest story from our customers.\n",
+   "_id": "2e320d08-9385-8102-bc9b-c532f6b9012e"
+  },
+  {
+   "🎍 Name": "Video_AIAdBoughtYesterday_AdSplash_22082025_H4_10.02.2025,Video_AIAdBoughtYesterday_AdSplash_22082025_H4_10.02.2025",
+   "Product": "POD",
+   "Angle": "?,?,Stop Guessing,Affordable",
+   "jdMa": "Video_AIAdBoughtYesterday_AdSplash_22082025_H4_10.02.2025",
+   "Hook Text": "To the 1000 Ozempic users who bought the body pod yesterday, we're sorry.\n",
+   "_id": "2e320d08-9385-811a-98d2-d2e3d596a268"
+  },
+  {
+   "🎍 Name": "Video_VisceralFat_VisceralFatJourneyV5_Arbitrage_Arbitrage_11072025_11.12.2025,Video_VisceralFat_VisceralFatJourneyV5_Arbitrage_Arbitrage_11072025_11.12.2025",
+   "Product": "POD",
+   "Angle": "?,?,Hidden Health Risks,Visceral Fat",
+   "jdMa": "Video_VisceralFat_VisceralFatJourneyV5_Arbitrage_Arbitrage_11072025_11.12.2025",
+   "Hook Text": "How to destroy visceral belly gat when you're over 50\n",
+   "_id": "2e320d08-9385-816f-9cc6-d6fe8730b814"
+  },
+  {
+   "🎍 Name": "v4 W15   Hume   Body Intelligence   Jack 16X9 - Hume Health (1080p, h264).mp4,v4 W15   Hume   Body Intelligence   Jack 16X9 - Hume Health (1080p, h264).mp4",
+   "Product": "POD",
+   "Angle": "?,?,Body Clarity,Proof of Progress\n",
+   "jdMa": "v4 W15   Hume   Body Intelligence   Jack 16X9 - Hume Health (1080p, h264).mp4",
+   "Hook Text": "The body scanner reveals the brutal truth about your body that your regular scale will never tell you. ",
+   "_id": "2e320d08-9385-8174-ab30-ee935e874359"
+  },
+  {
+   "🎍 Name": "[V] [Pmax] US | NB Body Pod | Asset Only with Videos | Search Theme | TROAS 2.2x>2.5x>2.8x>3x >3.4x,[V] [Pmax] US | NB Body Pod | Asset Only with Videos | Search Theme | TROAS 2.2x>2.5x>2.8x>3x >3.4x",
+   "Product": "POD",
+   "Angle": "?,Precision Weight Loss",
+   "jdMa": "[V] [Pmax] US | NB Body Pod | Asset Only with Videos | Search Theme | TROAS 2.2x>2.5x>2.8x>3x >3.4x",
+   "Hook Text": "Using the right weight matters.",
+   "_id": "2e320d08-9385-8138-b15d-f42c7bb35d95"
+  },
+  {
+   "🎍 Name": "3 reasons 4x5 - Hume Health (720p, h264).mp4,3 reasons 4x5 - Hume Health (720p, h264).mp4",
+   "Product": "POD",
+   "Angle": "?,Affordable",
+   "jdMa": "3 reasons 4x5 - Hume Health (720p, h264).mp4",
+   "Hook Text": "3 reasons why you need to jump on Hume's holiday sale right now.",
+   "_id": "2e320d08-9385-810e-9a65-fbba9a27a044"
+  },
+  {
+   "🎍 Name": "Video Ambassador Industry BodyPod H3 adsplash 16102025 916 - Hume Health (720p, h264).mp4,Video Ambassador Industry BodyPod H3 adsplash 16102025 916 - Hume Health (720p, h264).mp4",
+   "Product": "POD",
+   "Angle": "?,Sickness Industry Exit",
+   "jdMa": "Video Ambassador Industry BodyPod H3 adsplash 16102025 916 - Hume Health (720p, h264).mp4",
+   "Hook Text": "They charge $200 for a DEXA scan that takes 5 minutes, just because they can.",
+   "_id": "2e320d08-9385-8103-9c5c-c9f4dd304888"
+  },
+  {
+   "🎍 Name": "v5 W25 24   Hume UGC   Over 50   Jack 9x16 - Hume Health (720p, h264),v5 W25 24   Hume UGC   Over 50   Jack 9x16 - Hume Health (720p, h264)",
+   "Product": "POD",
+   "Angle": "?,?,Stop Guessing,Body Clarity",
+   "jdMa": "v5 W25 24   Hume UGC   Over 50   Jack 9x16 - Hume Health (720p, h264)",
+   "Hook Text": "Why you should never trust a regular scale after 50 and do this instead.",
+   "_id": "2e320d08-9385-816b-8a73-c862dedc4ada"
+  },
+  {
+   "🎍 Name": "Nov 18 - BodyPod - EC BF - Bundle - Script_5ReasonsWhy_HD_kreo_Aug2025 9x16 h1,Nov 18 - BodyPod - EC BF - Bundle - Script_5ReasonsWhy_HD_kreo_Aug2025 9x16 h1",
+   "Product": "POD",
+   "Angle": "?,Clinic-Grade at Home",
+   "Hook Text": "Here are 5 reasons why 12,000 clinics trust this device.",
+   "_id": "2e320d08-9385-81f9-9a8e-e689741a2564"
+  },
+  {
+   "🎍 Name": "Video_Prevention_EarlyWarnings_10xROAS_SV_Hook3_09.30.2025,Video_Prevention_EarlyWarnings_10xROAS_SV_Hook3_09.30.2025",
+   "Product": "BAND",
+   "Angle": "?,?,Hidden Health Risks,Heart Attack",
+   "jdMa": "Video_Prevention_EarlyWarnings_10xROAS_SV_Hook3_09.30.2025",
+   "Hook Text": "I run marathons yet I was two weeks from a fatal heart attack. ",
+   "_id": "2e320d08-9385-81b1-91fa-ed8e7758e078"
+  },
+  {
+   "🎍 Name": "Video_Video_Ambassador_EricExhausted_Men_H2_adsplash_16102025_916n_nov.-13,Video_Video_Ambassador_EricExhausted_Men_H2_adsplash_16102025_916n_nov.-13",
+   "Product": "BAND",
+   "Angle": "?,?,Hidden Health Risks,Proof of Progress\n",
+   "jdMa": "Video_Video_Ambassador_EricExhausted_Men_H2_adsplash_16102025_916n_nov.-13",
+   "Hook Text": "A 41-year-old man just thought he needed more coffee. ",
+   "_id": "2e320d08-9385-812d-8d8d-db60eabeebcf"
+  },
+  {
+   "🎍 Name": "img-a,img-a",
+   "Product": "BAND",
+   "Angle": "?,Fearless Longetivity",
+   "Hook Text": "Don’t die young",
+   "_id": "2e320d08-9385-812e-853b-cbb442a2f24d"
+  },
+  {
+   "🎍 Name": "US_Band_EN_TOF_Purchase_Broad_EXP_Hume_Band_rmkble 3 9x16 h3_JOHN,US_Band_EN_TOF_Purchase_Broad_EXP_Hume_Band_rmkble 3 9x16 h3_JOHN",
+   "Product": "BAND",
+   "Angle": "?,Reverse/slow Aging",
+   "jdMa": "US_Band_EN_TOF_Purchase_Broad_EXP_Hume_Band_rmkble 3 9x16 h3_JOHN",
+   "Hook Text": "Imagine being able to reverse age-related energy decline. ",
+   "_id": "2e320d08-9385-81c1-871e-f7c24c2da8da"
+  },
+  {
+   "🎍 Name": "Video_Video_Podcast_Mission_Men_H2_adsplash_16102025_916n_nov.-13 y,Video_Video_Podcast_Mission_Men_H2_adsplash_16102025_916n_nov.-13 y",
+   "Product": "BAND",
+   "Angle": "Body Clarity,Misleading data",
+   "jdMa": "Video_Video_Podcast_Mission_Men_H2_adsplash_16102025_916n_nov.-13 y",
+   "Hook Text": "We discovered people with perfect fitness scores were aging 15 years faster internally. ",
+   "_id": "2e320d08-9385-8196-8efe-c9f3a31551e5"
+  },
+  {
+   "🎍 Name": "AQMd_BvL8pHZ_lWpg-yc5bJSRbMnwQhZabP3W_S7V0e0hI00ygwWMBA_BkPgM6rU_9ufMdOUmzJTZC00y802xoB4TuQ_JkRJaZqw0wJ5RAw5Vg.mp4,AQMd_BvL8pHZ_lWpg-yc5bJSRbMnwQhZabP3W_S7V0e0hI00ygwWMBA_BkPgM6rU_9ufMdOUmzJTZC00y802xoB4TuQ_JkRJaZqw0wJ5RAw5Vg.mp4",
+   "Product": "BAND",
+   "Angle": "Fearless Longetivity",
+   "jdMa": "AQMd_BvL8pHZ_lWpg-yc5bJSRbMnwQhZabP3W_S7V0e0hI00ygwWMBA_BkPgM6rU_9ufMdOUmzJTZC00y802xoB4TuQ_JkRJaZqw0wJ5RAw5Vg.mp4",
+   "Hook Text": "Living longer and healthier is now possible with the Hume band. ",
+   "_id": "2e320d08-9385-81d7-997b-f25c64d0321a"
+  },
+  {
+   "🎍 Name": "Nov 01 - Hume Band - Band - Broad Lingyun - remarkable 4.1 4x5 h3.mp4 - Copy 2 BFCM - ThePerformers,Nov 01 - Hume Band - Band - Broad Lingyun - remarkable 4.1 4x5 h3.mp4 - Copy 2 BFCM - ThePerformers",
+   "Product": "BAND",
+   "Angle": "Fearless Longetivity,Reverse/slow Aging",
+   "jdMa": "Nov 01 - Hume Band - Band - Broad Lingyun - remarkable 4.1 4x5 h3.mp4 - Copy 2 BFCM - ThePerformers",
+   "Hook Text": "Getting older isn't bad, but no one warned me how drained I'd feel.",
+   "_id": "2e320d08-9385-8155-bc4a-fb0e9d036261"
+  },
+  {
+   "🎍 Name": "August 28 - HumeBand - Band - Broad Lingyun - Band Meme2 H3,August 28 - HumeBand - Band - Broad Lingyun - Band Meme2 H3",
+   "Product": "BAND",
+   "Angle": "?,Reverse/slow Aging",
+   "jdMa": "August 28 - HumeBand - Band - Broad Lingyun - Band J5 August H1",
+   "Hook Text": "The most advanced wearable of the year is finally on sale, but not for long.",
+   "_id": "2e320d08-9385-81fe-a02c-d1acc3f9c52f"
+  }
+ ]
+}

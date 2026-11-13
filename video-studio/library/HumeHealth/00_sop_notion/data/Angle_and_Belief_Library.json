@@ -1,0 +1,420 @@
+{
+ "name": "Angle and Belief Library",
+ "source_block": "b13445a4-e454-4c0e-b28a-5d1946ffb151",
+ "schema": [
+  [
+   "Problem Mechanism",
+   "text",
+   []
+  ],
+  [
+   "Win Count",
+   "number",
+   []
+  ],
+  [
+   "Saturation Level",
+   "select",
+   [
+    "Low",
+    "Moderate",
+    "High",
+    "Fatigued"
+   ]
+  ],
+  [
+   "Best Hook Families",
+   "text",
+   []
+  ],
+  [
+   "Winner Rate",
+   "formula",
+   []
+  ],
+  [
+   "Core Tension",
+   "text",
+   []
+  ],
+  [
+   "Total Spend",
+   "number",
+   []
+  ],
+  [
+   "New Belief",
+   "text",
+   []
+  ],
+  [
+   "Old Belief",
+   "text",
+   []
+  ],
+  [
+   "Best Landing Pages",
+   "text",
+   []
+  ],
+  [
+   "Parent Angle",
+   "text",
+   []
+  ],
+  [
+   "Average CTR",
+   "number",
+   []
+  ],
+  [
+   "Sophistication Level",
+   "select",
+   [
+    "Low",
+    "Moderate",
+    "High",
+    "Very high"
+   ]
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Emotional Driver",
+   "text",
+   []
+  ],
+  [
+   "Proof Required",
+   "text",
+   []
+  ],
+  [
+   "Owner",
+   "person",
+   []
+  ],
+  [
+   "Best Channels",
+   "multi_select",
+   [
+    "Meta",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO"
+   ]
+  ],
+  [
+   "Notes",
+   "text",
+   []
+  ],
+  [
+   "Strategic Status",
+   "select",
+   [
+    "Untested",
+    "Researching",
+    "Ready to test",
+    "Testing",
+    "Emerging",
+    "Proven",
+    "Scaling",
+    "Fatiguing",
+    "Needs iteration",
+    "Paused",
+    "Retired",
+    "Compliance blocked"
+   ]
+  ],
+  [
+   "Solution Mechanism",
+   "text",
+   []
+  ],
+  [
+   "Next Recommended Test",
+   "text",
+   []
+  ],
+  [
+   "Sub-Angle",
+   "text",
+   []
+  ],
+  [
+   "Awareness Stage",
+   "select",
+   [
+    "Unaware",
+    "Problem aware",
+    "Solution aware",
+    "Product aware",
+    "Most aware"
+   ]
+  ],
+  [
+   "Testing Status",
+   "select",
+   [
+    "Untested",
+    "Researching",
+    "Ready to test",
+    "Testing",
+    "Emerging",
+    "Proven",
+    "Scaling",
+    "Fatiguing",
+    "Needs iteration",
+    "Paused",
+    "Retired",
+    "Compliance blocked"
+   ]
+  ],
+  [
+   "Days Since Last Test",
+   "formula",
+   []
+  ],
+  [
+   "Angle ID",
+   "auto_increment_id",
+   []
+  ],
+  [
+   "Average CVR",
+   "number",
+   []
+  ],
+  [
+   "Average ROAS",
+   "number",
+   []
+  ],
+  [
+   "Best Formats",
+   "multi_select",
+   [
+    "UGC",
+    "Static",
+    "AI visual",
+    "Long-form video",
+    "Advertorial",
+    "Listicle",
+    "Email",
+    "Landing page"
+   ]
+  ],
+  [
+   "Customer Situation",
+   "text",
+   []
+  ],
+  [
+   "Confidence Level",
+   "select",
+   [
+    "Observation",
+    "Early signal",
+    "Moderate confidence",
+    "Strong confidence",
+    "Proven pattern"
+   ]
+  ],
+  [
+   "Loss Count",
+   "number",
+   []
+  ],
+  [
+   "Desired Outcome",
+   "text",
+   []
+  ],
+  [
+   "Revenue",
+   "number",
+   []
+  ],
+  [
+   "Last Tested",
+   "date",
+   []
+  ],
+  [
+   "Angle Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Problem Mechanism": "Clinic scans are high-friction.",
+   "New Belief": "At-home trend tracking can make composition visible between scans.",
+   "Old Belief": "Only a clinic scan can tell me useful composition info.",
+   "Product": "Hume Pod",
+   "Proof Required": "Do not claim DEXA replacement or equivalence.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Pod creates convenient trend visibility.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "7",
+   "Angle Name": "DEXA at-home alternative",
+   "_id": "39d20d08-9385-8111-a878-fd3d16925f26"
+  },
+  {
+   "Problem Mechanism": "Training feel and mirror checks are inconsistent.",
+   "New Belief": "Segmental measurement can reveal asymmetries to monitor.",
+   "Old Belief": "The mirror is enough to spot imbalance.",
+   "Product": "Hume Pod",
+   "Proof Required": "Product demo.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Segmental trends give users a clearer reference point.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "4",
+   "Angle Name": "Segmental imbalance discovery",
+   "_id": "39d20d08-9385-8112-b6ec-ffd284d9469a"
+  },
+  {
+   "Problem Mechanism": "Premium wearable cost compounds over time.",
+   "New Belief": "A health wearable can be valuable without subscription fatigue.",
+   "Old Belief": "Useful wearables lock value behind a membership.",
+   "Product": "Hume Band 2.0",
+   "Proof Required": "Verify current pricing and subscription terms.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Band offer and app access change the value equation.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "12",
+   "Angle Name": "No-subscription wearable value",
+   "_id": "39d20d08-9385-813f-bc1c-f24ed35c5835"
+  },
+  {
+   "Problem Mechanism": "People can lose muscle while chasing lower weight.",
+   "New Belief": "The quality of weight loss matters.",
+   "Old Belief": "All weight loss is good.",
+   "Product": "Hume Pod",
+   "Proof Required": "Compliance-reviewed composition language.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Track fat and muscle trends separately.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "2",
+   "Angle Name": "Fat vs muscle truth",
+   "_id": "39d20d08-9385-815c-b7d8-f7b0e2cb705e"
+  },
+  {
+   "Problem Mechanism": "Single-number tracking creates false negatives.",
+   "New Belief": "Plateaus can hide changes in fat, muscle or hydration.",
+   "Old Belief": "Plateau means failure.",
+   "Product": "Hume Pod",
+   "Proof Required": "Trend screenshot.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Composition breakdown explains more of the story.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "8",
+   "Angle Name": "Plateau explanation",
+   "_id": "39d20d08-9385-8188-b719-e636cf201b21"
+  },
+  {
+   "Problem Mechanism": "External appearance can mask composition changes.",
+   "New Belief": "Body composition can reveal blind spots weight and mirror miss.",
+   "Old Belief": "If I look fine, hidden fat is not a concern.",
+   "Product": "Hume Pod",
+   "Proof Required": "Careful non-medical explanation.",
+   "Strategic Status": "Researching",
+   "Solution Mechanism": "At-home measurement creates earlier awareness.",
+   "Testing Status": "Untested",
+   "Angle ID": "3",
+   "Angle Name": "Hidden visceral fat wake-up",
+   "_id": "39d20d08-9385-8197-b7a9-d5414f1e5c62"
+  },
+  {
+   "Problem Mechanism": "Rapid weight change can obscure muscle changes.",
+   "New Belief": "Weight loss needs composition tracking.",
+   "Old Belief": "If medication makes weight drop, I am done.",
+   "Product": "Hume Pod",
+   "Proof Required": "Compliance review; avoid treatment claims.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Pod helps monitor fat and muscle trends.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "6",
+   "Angle Name": "GLP-1 muscle protection",
+   "_id": "39d20d08-9385-81bb-a8f5-c91710ef1d46"
+  },
+  {
+   "Problem Mechanism": "People notice stress late.",
+   "New Belief": "Stress patterns are worth watching before they dominate your routine.",
+   "Old Belief": "Stress matters only when I feel burned out.",
+   "Product": "Hume Band 2.0",
+   "Proof Required": "Avoid disease and biological-age overclaims.",
+   "Strategic Status": "Researching",
+   "Solution Mechanism": "Wearable trends create earlier awareness.",
+   "Testing Status": "Untested",
+   "Angle ID": "11",
+   "Angle Name": "Stress load and aging pace",
+   "_id": "39d20d08-9385-81c0-bae9-c30f6245c5eb"
+  },
+  {
+   "Problem Mechanism": "Wearable dashboards can overwhelm users.",
+   "New Belief": "Interpreted metrics are what change behavior.",
+   "Old Belief": "More metrics means better health tracking.",
+   "Product": "Hume Band 2.0",
+   "Proof Required": "App interpretation demo.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Band plus Hume app gives clearer patterns.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "9",
+   "Angle Name": "Tracking vs understanding",
+   "_id": "39d20d08-9385-81c8-ab81-f4e07c94fef9"
+  },
+  {
+   "Problem Mechanism": "Bathroom scales collapse multiple body changes into one number.",
+   "New Belief": "Weight alone misses fat, muscle and hydration shifts.",
+   "Old Belief": "My scale tells me if I am making progress.",
+   "Product": "Hume Pod",
+   "Proof Required": "Pod app trend demo.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Body-composition trends reveal what the number hides.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "1",
+   "Angle Name": "Scale is incomplete",
+   "_id": "39d20d08-9385-81d7-b133-fc1546214f0a"
+  },
+  {
+   "Problem Mechanism": "Sleep duration ignores stress and physiological context.",
+   "New Belief": "Recovery depends on more than time asleep.",
+   "Old Belief": "Eight hours means I recovered.",
+   "Product": "Hume Band 2.0",
+   "Proof Required": "Sensor and app claim substantiation.",
+   "Strategic Status": "Ready to test",
+   "Solution Mechanism": "Band tracks recovery-related trends together.",
+   "Testing Status": "Ready to test",
+   "Angle ID": "10",
+   "Angle Name": "Recovery is not just sleep hours",
+   "_id": "39d20d08-9385-81e6-a61b-e0aefc723881"
+  },
+  {
+   "Problem Mechanism": "Abstract health goals do not create action.",
+   "New Belief": "Some body signals can make progress feel more urgent.",
+   "Old Belief": "Age is just my birthday.",
+   "Product": "Hume Pod",
+   "Proof Required": "Verify metric definition and compliance language.",
+   "Strategic Status": "Researching",
+   "Solution Mechanism": "A clear app metric creates a discovery moment.",
+   "Testing Status": "Untested",
+   "Angle ID": "5",
+   "Angle Name": "Metabolic age wake-up",
+   "_id": "39d20d08-9385-81f6-8555-d02c58895268"
+  }
+ ]
+}
