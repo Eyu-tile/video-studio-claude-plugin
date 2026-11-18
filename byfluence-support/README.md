@@ -78,10 +78,12 @@ docker build -t byfluence-support .
 ```
 
 ```bash
-docker run -p 4000:4000 -v byf-data:/app/data byfluence-support
+docker run -p 4000:4000 -v byf-data:/app/data -e ADMIN_EMAIL=you@byfluence.com -e ADMIN_PASSWORD='choose-a-strong-one' byfluence-support
 ```
 
-The first run of the container seeds the database without demo data. Read the admin password from the container log.
+On first start, the container creates the database: the admin account and all documentation, no demo data. Add `-e SEED_ARGS=--with-demo` to include the demo tickets and accounts. Later starts reuse the existing data.
+
+**Storage:** keep `/app/data` on persistent storage (a Docker volume, or the host platform's "volume" or "disk"). Otherwise tickets are lost when the container is replaced. Volumes owned by root are handled: the app fixes ownership and then runs as an unprivileged user.
 
 ### Backups
 

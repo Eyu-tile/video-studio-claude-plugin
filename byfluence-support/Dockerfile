@@ -10,7 +10,6 @@ WORKDIR /app
 ENV NODE_ENV=production PORT=4000 DATA_DIR=/app/data
 COPY --from=build /app /app
 RUN chmod +x docker-entrypoint.sh && mkdir -p /app/data && chown -R node:node /app/data
-USER node
 EXPOSE 4000
 VOLUME ["/app/data"]
 ENTRYPOINT ["./docker-entrypoint.sh"]
