@@ -1,0 +1,221 @@
+{
+  "_comment": "Seed taxonomy. Loaded into the database on first run; after that everything is editable in the app (Documentation Management → Categories, Settings).",
+  "departments": [
+    { "key": "support_l1", "name": "Customer Support (Level 1)", "level": 1, "description": "Routine questions, guidance and basic troubleshooting." },
+    { "key": "support_l2", "name": "Senior Support / Supervisor (Level 2)", "level": 2, "description": "Complex complaints, buyer–seller disputes, repeated unresolved issues, refund recommendations." },
+    { "key": "payments", "name": "Payments & Finance", "level": 3, "description": "Payment verification, duplicate charges, refunds processing, payouts, reconciliation with payment providers." },
+    { "key": "technical", "name": "Technical / Engineering", "level": 3, "description": "Bugs, outages, booking system errors, Google Meet link generation, notification failures." },
+    { "key": "seller_ops", "name": "Seller Operations", "level": 3, "description": "Seller verification review, listing review, seller restrictions, supplier and reseller programs." },
+    { "key": "trust_safety", "name": "Trust & Safety", "level": 3, "description": "Fraud, account compromise, harassment, counterfeit listings, privacy and security incidents." },
+    { "key": "fulfillment", "name": "Logistics & Fulfillment", "level": 3, "description": "Delivery partners, Addis Ababa delivery operations, lost or damaged shipments." },
+    { "key": "management", "name": "Management (Level 4)", "level": 4, "description": "Critical decisions, policy exceptions, legal or regulatory matters, high-value or reputational issues." }
+  ],
+  "features": [
+    { "key": "accounts", "name": "Buyer accounts & registration", "status": "live", "verified": false, "notes": "Part of MVP scope per business overview. Verify in production." },
+    { "key": "seller-onboarding", "name": "Seller application & onboarding", "status": "live", "verified": false, "notes": "MVP scope. Verify in production." },
+    { "key": "seller-verification", "name": "Seller identity verification", "status": "live", "verified": false, "notes": "MVP scope. Required documents not yet confirmed." },
+    { "key": "consultations-1on1", "name": "One-on-one consultations", "status": "live", "verified": false, "notes": "MVP scope." },
+    { "key": "consultations-group", "name": "Group consultations", "status": "live", "verified": false, "notes": "MVP scope; capacity and cancellation rules pending." },
+    { "key": "google-meet", "name": "Google Meet integration", "status": "live", "verified": false, "notes": "MVP scope; confirm whether links are generated automatically or by the seller." },
+    { "key": "seller-withdrawals", "name": "Seller earnings & withdrawals", "status": "live", "verified": false, "notes": "MVP scope; payout methods and timelines pending approval." },
+    { "key": "refunds", "name": "Refund processing", "status": "unconfirmed", "verified": false, "notes": "Refund policy not yet approved." },
+    { "key": "physical-products", "name": "Physical product marketplace", "status": "planned", "verified": false, "notes": "Expansion area." },
+    { "key": "delivery-addis", "name": "Addis Ababa delivery", "status": "planned", "verified": false, "notes": "Expansion area; delivery partners, fees and times not confirmed." },
+    { "key": "inventory-free-selling", "name": "Inventory-free selling / local dropshipping", "status": "planned", "verified": false, "notes": "Expansion area; commercial terms not defined." },
+    { "key": "digital-products", "name": "Digital products", "status": "planned", "verified": false, "notes": "Expansion area; access and refund rules pending." },
+    { "key": "payments-chapa", "name": "Chapa payments", "status": "unconfirmed", "verified": false, "notes": "Worked with or considered. Confirm production status." },
+    { "key": "payments-telebirr", "name": "Telebirr payments", "status": "unconfirmed", "verified": false, "notes": "Confirm integration and approval status." },
+    { "key": "payments-mpesa", "name": "M-Pesa payments", "status": "unconfirmed", "verified": false, "notes": "Confirm integration and approval status." },
+    { "key": "payments-bank", "name": "Bank-based payments", "status": "unconfirmed", "verified": false, "notes": "Confirm which banks, if any." },
+    { "key": "payments-card", "name": "Card payments", "status": "unconfirmed", "verified": false, "notes": "Confirm availability." },
+    { "key": "payments-stripe", "name": "Stripe (international)", "status": "planned", "verified": false, "notes": "Potential international payments." },
+    { "key": "notifications-email", "name": "Email notifications", "status": "unconfirmed", "verified": false, "notes": "Confirm which events send email." },
+    { "key": "notifications-sms", "name": "SMS notifications / OTP", "status": "unconfirmed", "verified": false, "notes": "Confirm whether phone OTP exists." },
+    { "key": "reviews-ratings", "name": "Reviews & ratings", "status": "unconfirmed", "verified": false, "notes": "Not described in business overview." },
+    { "key": "support-telegram", "name": "Telegram support channel", "status": "live", "verified": false, "notes": "Confirm official handle and hours." },
+    { "key": "support-email", "name": "Email support channel", "status": "live", "verified": false, "notes": "Confirm official address." },
+    { "key": "support-phone", "name": "Phone support channel", "status": "unconfirmed", "verified": false, "notes": "Confirm number and hours." },
+    { "key": "support-chat", "name": "Website live chat", "status": "unconfirmed", "verified": false, "notes": "Confirm availability." },
+    { "key": "ai-assistant", "name": "AI support assistant (Telegram)", "status": "planned", "verified": false, "notes": "Future project." }
+  ],
+  "placeholders": [
+    { "key": "customer_name", "label": "Customer name", "ticketField": "customer_name" },
+    { "key": "ticket_id", "label": "Ticket ID", "ticketField": "number" },
+    { "key": "order_id", "label": "Order ID", "ticketField": "order_ref" },
+    { "key": "consultation_id", "label": "Consultation / booking ID", "ticketField": "consultation_ref" },
+    { "key": "transaction_id", "label": "Transaction reference", "ticketField": "transaction_ref" },
+    { "key": "support_agent", "label": "Your name", "ticketField": "_agent" },
+    { "key": "estimated_resolution_time", "label": "Estimated resolution time (approved wording only)" },
+    { "key": "seller_name", "label": "Seller / consultant name" },
+    { "key": "booking_date", "label": "Booking date" },
+    { "key": "booking_time", "label": "Booking time (with time zone)" },
+    { "key": "product_name", "label": "Product / service name" },
+    { "key": "amount", "label": "Amount (ETB)" },
+    { "key": "payment_method", "label": "Payment method" },
+    { "key": "follow_up_time", "label": "When we will follow up" },
+    { "key": "support_channel", "label": "Official support channel / contact" }
+  ],
+  "scopes": {
+    "kb": [
+      { "slug": "registration", "name": "Account Registration", "name_am": "የመለያ ምዝገባ", "icon": "user-plus", "description": "Creating accounts, verification codes, activation and registration errors.",
+        "subcategories": [
+          { "slug": "getting-started", "name": "Getting Started" },
+          { "slug": "verification-otp", "name": "Email, Phone & OTP Verification" },
+          { "slug": "registration-errors", "name": "Registration Errors" },
+          { "slug": "activation", "name": "Activation & Approval" },
+          { "slug": "registration-security", "name": "Duplicate & Suspicious Registrations" }
+        ] },
+      { "slug": "account-access", "name": "Login & Account Access", "name_am": "መግቢያ እና የመለያ ተደራሽነት", "icon": "key-round", "description": "Passwords, login errors, locked/suspended accounts, account changes and recovery.",
+        "subcategories": [
+          { "slug": "passwords", "name": "Passwords & Reset" },
+          { "slug": "login-errors", "name": "Login Errors" },
+          { "slug": "account-status", "name": "Locked, Suspended & Banned Accounts" },
+          { "slug": "account-changes", "name": "Email, Phone & Deletion Requests" },
+          { "slug": "account-security", "name": "Recovery & Unauthorized Access" }
+        ] },
+      { "slug": "buyer-account", "name": "Buyer Account Management", "name_am": "የገዢ መለያ አስተዳደር", "icon": "user", "description": "Buyer dashboard, profile, purchase and consultation history, notifications and privacy.",
+        "subcategories": [
+          { "slug": "dashboard-profile", "name": "Dashboard & Profile" },
+          { "slug": "history", "name": "Purchase & Booking History" },
+          { "slug": "notifications-settings", "name": "Notifications & Settings" },
+          { "slug": "buyer-privacy", "name": "Privacy & Verification" }
+        ] },
+      { "slug": "seller-account", "name": "Seller Account Management", "name_am": "የሻጭ መለያ አስተዳደር", "icon": "store", "description": "Becoming a seller, identity verification, seller status, profile and responsibilities.",
+        "subcategories": [
+          { "slug": "becoming-seller", "name": "Becoming a Seller" },
+          { "slug": "verification", "name": "Identity Verification" },
+          { "slug": "seller-status", "name": "Restrictions, Suspension & Reactivation" },
+          { "slug": "seller-profile", "name": "Seller Profile & Dashboard" },
+          { "slug": "seller-standards", "name": "Responsibilities & Performance" }
+        ] },
+      { "slug": "listings", "name": "Listings & Storefront", "name_am": "ዝርዝሮች እና መደብር", "icon": "layout-list", "description": "Creating and managing product and service listings, listing review and prohibited items.",
+        "subcategories": [
+          { "slug": "creating-listings", "name": "Creating & Editing Listings" },
+          { "slug": "listing-review", "name": "Listing Review & Rejections" },
+          { "slug": "pricing-availability", "name": "Pricing & Availability" },
+          { "slug": "prohibited", "name": "Prohibited & Restricted Items" }
+        ] },
+      { "slug": "consultations", "name": "One-on-One Consultations", "name_am": "የግል ምክክሮች", "icon": "video", "description": "Booking, Google Meet access, attendance, rescheduling, cancellations and session disputes.",
+        "subcategories": [
+          { "slug": "booking", "name": "Booking & Confirmation" },
+          { "slug": "meeting-access", "name": "Google Meet Links & Access" },
+          { "slug": "attendance", "name": "Late Arrivals & No-Shows" },
+          { "slug": "changes", "name": "Rescheduling & Cancellations" },
+          { "slug": "session-quality", "name": "Session Complaints & Completion" }
+        ] },
+      { "slug": "group-consultations", "name": "Group Consultations", "name_am": "የቡድን ምክክሮች", "icon": "users", "description": "Group sessions, capacity, participant access, cancellations and partial attendance.",
+        "subcategories": [
+          { "slug": "group-booking", "name": "Registration & Capacity" },
+          { "slug": "group-access", "name": "Joining & Access Problems" },
+          { "slug": "group-changes", "name": "Cancellations & Rescheduling" },
+          { "slug": "group-attendance", "name": "Attendance, Interruptions & Refund Questions" }
+        ] },
+      { "slug": "physical-products", "name": "Physical Products & Orders", "name_am": "ቁሳዊ ምርቶች እና ትዕዛዞች", "icon": "package", "description": "Ordering, delivery in Addis Ababa, missing/damaged/wrong items, cancellations and returns.",
+        "subcategories": [
+          { "slug": "ordering", "name": "Browsing & Ordering" },
+          { "slug": "order-processing", "name": "Order Processing & Seller Communication" },
+          { "slug": "delivery", "name": "Shipping & Delivery" },
+          { "slug": "order-problems", "name": "Missing, Damaged & Wrong Items" },
+          { "slug": "cancellations-returns", "name": "Cancellations & Returns" }
+        ] },
+      { "slug": "inventory-free", "name": "Inventory-Free Selling", "name_am": "ያለ ክምችት መሸጥ", "icon": "repeat", "description": "Reselling supplier products without upfront stock (local dropshipping).",
+        "subcategories": [
+          { "slug": "how-it-works", "name": "How It Works" },
+          { "slug": "reseller-eligibility", "name": "Eligibility & Joining" },
+          { "slug": "suppliers", "name": "Suppliers & Fulfillment" },
+          { "slug": "reseller-earnings", "name": "Reseller Earnings" },
+          { "slug": "reseller-issues", "name": "Reseller Order Problems" }
+        ] },
+      { "slug": "digital-products", "name": "Digital Products", "name_am": "ዲጂታል ምርቶች", "icon": "file-down", "description": "Purchasing, downloading and accessing digital products; file problems and seller responsibilities.",
+        "subcategories": [
+          { "slug": "purchase-access", "name": "Purchase & Download Access" },
+          { "slug": "file-problems", "name": "File Problems" },
+          { "slug": "digital-disputes", "name": "Refunds & Disputes" },
+          { "slug": "digital-sellers", "name": "Selling Digital Products" }
+        ] },
+      { "slug": "payments", "name": "Payments & Transactions", "name_am": "ክፍያዎች እና ግብይቶች", "icon": "credit-card", "description": "Payment methods, failed/pending payments, paid-but-not-confirmed, duplicate charges, disputes.",
+        "subcategories": [
+          { "slug": "payment-methods", "name": "Payment Methods" },
+          { "slug": "failed-pending", "name": "Failed & Pending Payments" },
+          { "slug": "payment-mismatch", "name": "Paid but Not Confirmed / Wrong Amounts" },
+          { "slug": "verification-references", "name": "Verification & Transaction References" },
+          { "slug": "disputes-chargebacks", "name": "Payment Disputes & Chargebacks" },
+          { "slug": "payment-security", "name": "Payment Security" }
+        ] },
+      { "slug": "payouts", "name": "Seller Earnings & Payouts", "name_am": "የሻጭ ገቢ እና ክፍያ", "icon": "wallet", "description": "Balances, withdrawal requests, payout delays and failures, commissions and restrictions.",
+        "subcategories": [
+          { "slug": "earnings-balances", "name": "Earnings & Balances" },
+          { "slug": "withdrawals", "name": "Withdrawal Requests" },
+          { "slug": "payout-problems", "name": "Delayed & Failed Payouts" },
+          { "slug": "fees-commissions", "name": "Fees & Commissions" },
+          { "slug": "payout-restrictions", "name": "Payout Holds & Disputes" }
+        ] },
+      { "slug": "refunds-disputes", "name": "Refunds, Returns & Disputes", "name_am": "ተመላሽ ገንዘብ እና ክርክሮች", "icon": "undo-2", "description": "Refund requests and eligibility, partial/full refunds, delays, buyer–seller disputes and decisions.",
+        "subcategories": [
+          { "slug": "refund-requests", "name": "Refund Requests & Eligibility" },
+          { "slug": "refund-types", "name": "Refunds by Product Type" },
+          { "slug": "refund-status", "name": "Refund Status & Delays" },
+          { "slug": "disputes", "name": "Buyer–Seller Disputes" },
+          { "slug": "decisions", "name": "Evidence, Escalation & Final Decisions" }
+        ] },
+      { "slug": "technical", "name": "Technical Issues", "name_am": "ቴክኒካዊ ችግሮች", "icon": "wrench", "description": "Site not loading, broken pages, upload failures, booking and payment errors, notifications, browsers.",
+        "subcategories": [
+          { "slug": "site-access", "name": "Site Not Loading & Performance" },
+          { "slug": "functionality", "name": "Broken Pages, Buttons & Errors" },
+          { "slug": "uploads", "name": "Upload Failures" },
+          { "slug": "notifications", "name": "Email & Notification Failures" },
+          { "slug": "browser-device", "name": "Browser, Mobile & Session Issues" }
+        ] },
+      { "slug": "trust-safety", "name": "Trust, Safety & Security", "name_am": "እምነት፣ ደህንነት እና ጥበቃ", "icon": "shield-alert", "description": "Fraud, suspicious sellers, fake products, harassment, account compromise, privacy and policy violations.",
+        "subcategories": [
+          { "slug": "fraud", "name": "Fraud & Scams" },
+          { "slug": "listing-violations", "name": "Fake & Misleading Listings" },
+          { "slug": "abuse", "name": "Harassment & Abusive Behavior" },
+          { "slug": "compromise", "name": "Account Compromise & Security Incidents" },
+          { "slug": "privacy", "name": "Privacy & Data Requests" },
+          { "slug": "policy-violations", "name": "Marketplace Policy Violations" }
+        ] },
+      { "slug": "general", "name": "General Questions", "name_am": "አጠቃላይ ጥያቄዎች", "icon": "circle-help", "description": "What Byfluence is, how it works, joining, contacting support, feedback and partnerships.",
+        "subcategories": [
+          { "slug": "about", "name": "About Byfluence" },
+          { "slug": "getting-help", "name": "Contacting Support & Reporting Problems" },
+          { "slug": "growth", "name": "Growing as a Seller" },
+          { "slug": "feedback", "name": "Feedback, Partnerships & Media" }
+        ] }
+    ],
+    "template": [
+      { "slug": "openings", "name": "Greetings & Openings", "icon": "hand" },
+      { "slug": "information-requests", "name": "Information Requests", "icon": "clipboard-list" },
+      { "slug": "acknowledgments", "name": "Acknowledgments & Apologies", "icon": "heart-handshake" },
+      { "slug": "payments", "name": "Payments", "icon": "credit-card" },
+      { "slug": "refunds", "name": "Refunds", "icon": "undo-2" },
+      { "slug": "consultations", "name": "Consultations", "icon": "video" },
+      { "slug": "orders", "name": "Orders & Delivery", "icon": "package" },
+      { "slug": "sellers", "name": "Seller Support", "icon": "store" },
+      { "slug": "accounts", "name": "Accounts & Security", "icon": "key-round" },
+      { "slug": "technical", "name": "Technical Issues", "icon": "wrench" },
+      { "slug": "escalations", "name": "Escalations & Updates", "icon": "arrow-up-circle" },
+      { "slug": "closing", "name": "Resolution & Closing", "icon": "check-circle" }
+    ],
+    "sop": [
+      { "slug": "shift", "name": "Shift Management", "icon": "clock" },
+      { "slug": "channels", "name": "Channel Handling", "icon": "messages-square" },
+      { "slug": "investigation", "name": "Investigation & Verification", "icon": "search" },
+      { "slug": "resolution", "name": "Escalation & Resolution", "icon": "git-pull-request" },
+      { "slug": "reporting", "name": "Reporting & Quality", "icon": "bar-chart-3" }
+    ],
+    "policy": [
+      { "slug": "operational-safety", "name": "Operational Safety", "icon": "shield" },
+      { "slug": "privacy-data", "name": "Privacy & Data Protection", "icon": "lock" },
+      { "slug": "financial", "name": "Refunds, Cancellations & Payouts", "icon": "banknote" },
+      { "slug": "marketplace", "name": "Marketplace & Seller Rules", "icon": "store" },
+      { "slug": "support-standards", "name": "Support Service Standards", "icon": "headset" }
+    ],
+    "communication": [
+      { "slug": "tone", "name": "Tone & Writing Style", "icon": "pen-line" },
+      { "slug": "language", "name": "Amharic & English", "icon": "languages" },
+      { "slug": "channels", "name": "Channel Guidelines", "icon": "messages-square" },
+      { "slug": "difficult", "name": "Difficult Conversations", "icon": "flame" }
+    ]
+  }
+}
