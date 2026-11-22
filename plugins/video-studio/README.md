@@ -12,7 +12,7 @@ FFmpeg, checks its own work, and iterates on your notes. It handles any common e
 | a folder of b-roll / photos + a song | a beat-synced montage, travel film, highlight reel or slideshow |
 | a screen recording | a tutorial with dead time cut, speed-ups, zooms on the action, step titles |
 | a reference video you like | its pacing, captions, moves, look and sound written as rules and applied to your footage |
-| a brief and no b-roll | footage, photos, music and SFX from the free internet (Internet Archive, Wikipedia/Commons, Creative Commons YouTube, Openverse) and stock libraries (Pexels, Pixabay, Unsplash, Freesound, NASA), downloaded with licences logged; only the seconds you need from long films |
+| a brief and no b-roll | footage, photos, music and SFX from the free internet (Internet Archive, Wikipedia/Commons, Creative Commons YouTube, Openverse) and stock libraries (Pexels, Pixabay, Unsplash, Freesound, NASA), downloaded with licences logged; archive films inspected scene by scene from a keyframe sheet before cutting, then only the seconds you need, verified, with a provenance record |
 | no music | mood/genre/tempo-matched tracks from Jamendo, Openverse, Incompetech, ccMixter, Archive; fitted to the exact edit length on downbeats so the song ends on the last frame, ducked under speech, credit lines logged |
 | a silent edit or HyperFrames film | every moment found (cuts, transitions, text pops, logo reveals, chart builds) and a real recording placed on the exact frame, plus an SFX stem; optional earshot scoring against pro launch films |
 | files, folders, zips, brand kits, Drive/Dropbox/YouTube links | everything imported and sorted into the project (footage linked, not duplicated), with a credits ledger |
@@ -53,6 +53,10 @@ Drop footage into `raw/` and talk to Claude:
 | `video-export` | platform presets, multi-aspect, GIF/WebM/ProRes/MP3, size limits, thumbnails, chapters |
 | `video-style-guide` | learn a style from reference videos |
 | `ai-presenter` | AI talking-head presenter and b-roll through the Higgsfield MCP (or another generator) as tracked jobs, pulled back into the edit |
+| `video-review` | Frame.io-style review page for a finished video: frame-accurate player, filmstrip timeline, comments pinned to frames or ranges, replies, resolve; offered after every finished task; comments come back as `vs notes` (`vs present`) |
+| `social-post` | Post a finished video to TikTok, Instagram Reels, YouTube/Shorts, LinkedIn or X through Composio: one checked upload per platform, platform captions, the exact plan approved before anything posts, links logged (`vs social`, `vs setup --social`) |
+| `video-delivery` | Deliver approved videos straight into a client's Google Drive folder at any size, with no local copy: one folder per video, the latest version of every file only, checked at full size in Drive and logged (`vs deliver`, a one-time Apps Script) |
+| `feedback-learning` | Learns from every note: per-brand lessons with machine checks, a brief before each edit, repeated feedback flagged, and `vs qa --brand` failing when a lesson is broken |
 | `task-history` | Client task history by code: every delivered version (files, link, note, snapshot of the edit), client feedback with done/skipped tracking, and `vs task resume <CODE>` to pick up exactly where you left off |
 | `library-learning` | Learn a client's footage from Drive, Frame.io, Dropbox, OneDrive, web pages, links or a local drive without downloading it all: scan, network frame sampling into contact sheets, described atlas, search, fetch on demand, usage log (`vs learn`) |
 | `ugc-ads` | UGC and VSL ads from a brief: audience/emotion/awareness → hooks, beats, captions, music; variants; ad QA (hook, words on screen, stimulus, safe zones, CTA, loudness, compliance); client review page |
@@ -80,6 +84,21 @@ before billing, Claude selects that workspace and states the account and credits
 Instagram rate-limits), TikTok, X, Vimeo, ~1,800 yt-dlp sites, Google Drive, Dropbox or a direct file, then
 writes `watch.md` with the caption, a Whisper transcript, the shot breakdown and timestamped frame sheets for
 Claude to read. Private or logged-in posts: `--cookies-from-browser chrome`.
+
+**Speed** (3-minute 1080p talk cut to a 2:35 Reel, 4 CPU cores): final render 88.6 s -> 54 s (x264 `veryfast`
+by default, same quality as `medium` on real footage; crop-then-scale framing; one decoder per run of jump cuts),
+review round 67.7 s -> 41 s, QA 32.6 s -> 12.5 s (one pass), silence detection 12.1 s -> 0.7 s, cut sheets 6.4 s ->
+2.4 s, a repeated transcription 0.1 s (cached). Renders also land on the right source frame: 97 % exact against
+82.5 % before. `--speed balanced|best` encodes masters with x264 medium/slow; `vs transcribe --fast` is a 2.5x faster
+draft for reading long recordings (not for cutting).
+
+**Fast revisions, in two commands**: `vs fix <project> "1:12 cut this pause shorter"` prints only that moment: the
+shots there with their EDL index, every word with its time, every pause and filler with the exact `vs edl cut`
+command, and a frame sheet. After the edit, `vs fix <project> --render` remakes the captions, re-renders only the
+shots around each change (`--since`: finals carry a keyframe at every cut and a `.render.json` manifest; the rest of
+the picture is copied), checks the picture around the notes plus the whole sound, and makes a before/after sheet.
+On a 2:35 1080p Reel: finding the spot 3.5 s, the whole revision 19 s (a full render alone is 48 s), and the result
+matches a full render frame for frame. Every shot sits on the absolute frame grid, so untouched shots never move.
 
 **Agentic loop**: `vs edl` makes small edits (trim, split, cut a time range, delete, move, insert, set) with
 version history, undo/redo and ripple (texts, overlays, sfx follow the picture); `vs review` runs one
@@ -128,6 +147,19 @@ Clients keep footage in different places. Add each share once; public links work
 Measured on a real Frame.io share: 454 files listed in about 80 s, then 36 clips (including 4K .mov) sampled in
 about 110 s with 8 parallel jobs. Frame.io and other web pages are read with headless Chromium (Node.js and
 Playwright). Output lives in `library/<Library>/resources/`.
+
+## Learning from feedback (`vs lessons`)
+
+Every note is a chance not to make that mistake again. After each revision round, the notes that apply to future
+videos become lessons in the client's library (`library/<Brand>/LESSONS.md`), most with a machine check:
+```bash
+vs lessons brief --brand TrueClean                      # before planning: the ranked rules for this client
+vs lessons add --brand TrueClean --rule "Music bed at -22 dB or lower" --check music_gain_max=-22 --must
+vs lessons learn --brand TrueClean --notes work/notes.json   # handled notes to classify + feedback that keeps returning
+vs qa out/final.mp4 --edl work/edl.json --brand TrueClean    # a broken MUST lesson fails QA before the client sees it
+```
+`vs notes add` and `vs task feedback` flag a note that repeats a lesson (`REPEAT:`), so a lesson that didn't hold
+gets tightened. House rules for every client: `--global`. Skill: `/feedback-learning`.
 
 ## Task history: pick up a client task by its code
 Every client task gets a code (e.g. `TC0488`). Its history is kept in `video-studio/history/` (committed with the

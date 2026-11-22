@@ -17,7 +17,8 @@ For each beat you are given:
 2. Read the contact sheet PNG(s). Choose 1 primary + 1 backup per beat: subject visible immediately, matches the
    A-roll lighting/colour, no watermarks/text/logos, no implied endorsement, variety across beats.
 3. `vs fetch get <results.json> <n...> --quality hd` (4k only for 4K deliveries); long films/videos: add
-   `--section a-b` to fetch only the part you need. Never download non-cleared YouTube results. If nothing fits after 3 queries,
+   `--section a-b` to fetch only the part you need. Internet Archive films: first `vs fetch inspect <results.json> <n>`
+   and read its keyframe sheet (`inspect_<id>.png`), then cut the scene you saw (`--section` from its times). Never download non-cleared YouTube results. If nothing fits after 3 queries,
    say so and suggest a shot the person could film, or a graphic (`motion-graphics`) instead.
 4. For each downloaded clip pick the best moment (look at `vs filmstrip <clip> -o <work>/x.png --every 1`) and set
    the overlay's `in` to it.

@@ -1,0 +1,100 @@
+{
+ "id": "creative-amoils-warts-h-warts-20261110-996534642081945",
+ "kind": "creatives",
+ "origin": "ai",
+ "data": {
+  "creative": "Kid swears off freezing, shows bottle, warts nearly gone \u00b7 996534642081945",
+  "hook": "I'm never freezing my son's warts again.",
+  "desire": "Get rid of my kid's warts without the freezing that hurts, so he stops hiding his finger at school.",
+  "angle": "Failed effort: doctor freezing and store remedies did not work, a mom-bought bottle did.",
+  "belief_shift": "from 'warts need painful freezing at the doctor' \u2192 to 'a gentle drop at home can work, even for a kid'",
+  "script_structure": "Freezing-clinic hook with mom inset \u2192 kid names the problem (2 years) \u2192 list of failed fixes (doctor freezing, store remedies) \u2192 mom got me this (bottle reveal) \u2192 routine (2x a day, a month) \u2192 result + school confidence \u2192 'worked like magic' endorsement from other moms \u2192 CTA 'go get yours today'",
+  "mechanism_reveal": "NO EVIDENCE: no mechanism; only usage routine (twice a day for about a month).",
+  "proof": "Kid testimonial with claimed result (warts 'almost all the way gone'), finger shown to camera at 0:23, add-on clips of other mom-and-kid pairs endorsing it.",
+  "cta": "So go get yours today! (button: Shop Now). No offer stated in video.",
+  "why_it_works": "Interpretation of execution, not measured performance: The hook turns a feared treatment (freezing a child's wart) into a vow, which every parent who has sat through it understands. A real kid speaking plainly about hiding his finger at school makes the stake social, not medical. The bottle enters only after the failed-fixes list, so it lands as the answer.",
+  "transferable_move": "Open on the painful old fix as a vow ('I'm never doing X again'), list what failed in the user's own words, then reveal the product as the thing a parent brought home. Soften: talk about hiding a hand and rough skin, not 'warts gone'.",
+  "opening_visual": "Gloved clinician freezing a wart on a child's foot with a cryo canister, circular inset of a smiling girl holding the amber bottle, text 'I'm NEVER freezing my son's warts again!'",
+  "transition_to_product": "0:11.6\u201314.6 'nothing has worked until my mom got me this' \u2014 boy pushes the bottle at the camera at 0:14.",
+  "proof_placement": "Result claim follows the routine beat (0:18\u201322); finger shown at 0:23; other-family endorsement clips follow the result (0:24\u201328).",
+  "execution_family": "testimonial/UGC",
+  "variation_of": "",
+  "ad_role": "acquisition",
+  "url": "https://www.facebook.com/ads/library/?id=996534642081945",
+  "source_status": "Analyzed from transcript",
+  "transcript": "Automatic transcript (en) from the original ad audio (Whisper, run locally 2026-11-10). Recognition errors may remain in names; numbers and claims are the advertiser's.\n[0.0\u20132.3] I'm never freezing my son's warts again.\n[2.3\u20136.3] I've been dealing with these warts on my finger for two years now (caption: 'two year'),\n[6.3\u20137.8] and nothing's worked.\n[7.8\u20139.9] We've got them frozen off by the doctor,\n[9.9\u201311.6] all the remedies at the stores,\n[11.6\u201314.6] and nothing has worked until my mom got me this.\n[14.6\u201318.2] I have been using it two times a day for about a month now,\n[18.2\u201320.4] and my warts are almost all the way gone,\n[20.4\u201322.6] and now I don't have to hide my finger at school anymore.\n[23.5\u201325.6] H-Warts worked like magic.\n[25.6\u201326.9] So go get yours today!"
+ },
+ "detail": {
+  "batch": "reused from brand benchmark amoils-com-20261110 (#1 there) \u00b7 top 50 \u00b7 2026-11-10 \u00b7 Meta top by impressions",
+  "attribution": "brand",
+  "avatar": "Parent of a school-age child with stubborn hand warts who has already tried freezing and pharmacy products.",
+  "angle": "failed effort \u2014 freezing and store remedies did not work for two years; this did.",
+  "duration": 27.9,
+  "duplicate_of": "",
+  "timestamps_approximate": false,
+  "scenes": [
+   {
+    "start": 0,
+    "end": 2.3,
+    "dialogue": "I'm never freezing my son's warts again.",
+    "on_screen_text": "I'm NEVER freezing my son's warts again!",
+    "visual": "Gloved hand freezing a wart on a child's foot with a cryo device; inset circle of a girl holding the bottle.",
+    "analysis": "Pattern-interrupt with a feared procedure framed as a vow."
+   },
+   {
+    "start": 2.3,
+    "end": 7.8,
+    "dialogue": "I've been dealing with these warts on my finger for two years now, and nothing's worked.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Boy talking to camera in a hallway, front door behind.",
+    "analysis": "Kid names the problem and its length."
+   },
+   {
+    "start": 7.8,
+    "end": 11.6,
+    "dialogue": "We've got them frozen off by the doctor, all the remedies at the stores,",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Boy on top half; bottom half b-roll of gloved doctor and a freezing pen on skin.",
+    "analysis": "Failed-fixes list with matching b-roll."
+   },
+   {
+    "start": 11.6,
+    "end": 14.6,
+    "dialogue": "and nothing has worked until my mom got me this.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Boy thrusts the amber bottle toward the lens.",
+    "analysis": "Product reveal as the turn of the story."
+   },
+   {
+    "start": 14.6,
+    "end": 22.6,
+    "dialogue": "I have been using it two times a day for about a month now, and my warts are almost all the way gone, and now I don't have to hide my finger at school anymore.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Boy holds bottle at chest while talking.",
+    "analysis": "Routine, claimed result and social payoff."
+   },
+   {
+    "start": 22.6,
+    "end": 23.5,
+    "dialogue": "(pause)",
+    "on_screen_text": "",
+    "visual": "Boy holds his finger close to the lens.",
+    "analysis": "Visual show of the finger as proof."
+   },
+   {
+    "start": 23.5,
+    "end": 27.9,
+    "dialogue": "H-Warts worked like magic. So go get yours today!",
+    "on_screen_text": "H-Warts worked like magic / So go get yours today",
+    "visual": "Cut to other moms with kids smiling to camera (selfie style).",
+    "analysis": "Social echo from other families, then CTA."
+   }
+  ]
+ },
+ "media": {
+  "content_type": "video/mp4",
+  "url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-996534642081945/media",
+  "poster_url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-996534642081945/poster",
+  "sha256": "03eae470d3043cfb1a15a1f31beef4eaf546aa6ecf41fffca24c13338de3cfe8"
+ }
+}

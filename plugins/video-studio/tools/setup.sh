@@ -6,13 +6,15 @@
 #   vs setup --ai        optional AI helpers: OpenCV, PySceneDetect, librosa, rembg (vs ai ...)
 #   vs setup --stems     Demucs + CPU torch for vocal/music stems (~2 GB)
 #   vs setup --rea       also install rea-video (deep shot forensics: live/AI/3D/screen, OCR text timeline)
+#   vs setup --social    posting to social platforms through Composio: installs Composio's `composio` skill for
+#                        Claude Code (npx skills add ComposioHQ/composio --skill composio --agent claude-code --global)
 #
 # Core: ffmpeg/ffprobe (with libass), Node 22+, Python 3.10+, a Whisper backend
 # (mlx-whisper on Apple Silicon, faster-whisper elsewhere), yt-dlp.
 set -uo pipefail
 root="${VS_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 venv="${VS_VENV:-$HOME/.cache/video-studio/venv}"
-check=0 remotion=0 earshot=0 packs=0 rea=0 ai=0 stems=0
+check=0 remotion=0 earshot=0 packs=0 rea=0 ai=0 stems=0 social=0
 for a in "$@"; do
   case "$a" in
     --check) check=1 ;;
@@ -22,6 +24,7 @@ for a in "$@"; do
     --rea) rea=1 ;;
     --ai) ai=1 ;;
     --stems) stems=1 ;;
+    --social) social=1 ;;
     *) echo "unknown flag $a" >&2; exit 2 ;;
   esac
 done
@@ -143,6 +146,22 @@ if [ -x "$rh/bin/rea-video" ]; then ok "rea-video (vs rea ...)"; else info "rea-
 
 if [ $packs = 1 ] && [ $check = 0 ]; then
   VS_ROOT="$root" "$py" "$root/tools/packs.py" install --defaults && ok "free GitHub sound packs installed into the workspace library"
+fi
+
+# Social posting (optional): Composio's skill routes Claude to Composio; the posting runs through Composio's CLI or MCP.
+composio_skill="$HOME/.claude/skills/composio/SKILL.md"
+if [ $social = 1 ] && [ $check = 0 ]; then
+  if command -v npx >/dev/null; then
+    npx -y skills add ComposioHQ/composio --skill composio --agent claude-code --global -y \
+      && ok "Composio skill installed for Claude Code (restart Claude Code to load it)" || bad "Composio skill install failed (see output)"
+  else bad "npx not found (install Node 22+ first)"; fi
+fi
+if [ -f "$composio_skill" ]; then ok "Composio skill (social posting: /social-post)"
+else info "Composio skill not installed (optional, for social posting: vs setup --social)"; fi
+if [ $social = 1 ] || [ -f "$composio_skill" ]; then
+  if command -v composio >/dev/null; then ok "Composio CLI ($(composio --version 2>/dev/null | head -1))"
+  else info "Composio CLI not installed. Terminal agents post through it: curl -fsSL https://composio.dev/install | bash && composio login"
+       info "  (or connect Composio's MCP in claude.ai / Claude Desktop: https://connect.composio.dev/mcp, browser sign-in)"; fi
 fi
 
 keys_file="${VS_KEYS_FILE:-$HOME/.config/video-studio/keys.env}"

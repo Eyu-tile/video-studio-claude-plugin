@@ -1,0 +1,796 @@
+{
+ "we-49d0a135f6": {
+  "kind": "3D/CG explainer (brand-made)",
+  "people": "none",
+  "product": "oil drop + brush (no label)",
+  "beats": "0-2: split screen FREEZING vs ROOTOUT OIL, skin cross-section blocks, 'THE ROOT' tag, caption 'The root sits under the hard skin.'; 2-4: freeze spray frosts the top (left), brush drips oil (right), 'Freezing burns the top.' / 'RootOut is brushed on.'; 4-7: oil pools and streams down a glowing channel to the root, 'The oil soaks down to the root.'; 7-10: left root still there 'The root stays.', right block glows amber 'Up to 8x deeper than a regular cream.†'",
+  "framing": "1:1, two side-by-side blocks, labels top, caption pill bottom",
+  "best": "2-8",
+  "status": "CAUTION",
+  "use": "mechanism / 'freezing burns the top' line; needs † footnote on screen when the 8x frame shows; label as illustration",
+  "tags": {
+   "beat": "mechanism",
+   "format": "1x1",
+   "source": "site PDP"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-83f7120b02": {
+  "kind": "packshot render",
+  "people": "none",
+  "product": "bottle front, white bg",
+  "beats": "0: amber bottle, white brush cap, blue band 'Brush-on · Natural oil', 11 ml",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "clean packshot / cutout source",
+  "tags": {
+   "beat": "product"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-159cb1b39a": {
+  "kind": "lifestyle render",
+  "people": "none",
+  "product": "bottle on bathroom counter",
+  "beats": "0: warm lamp, towel, glass of water, night window",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "bedtime-routine establishing shot",
+  "tags": {
+   "beat": "bedtime"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-3b33e4f096": {
+  "kind": "packshot cutout (PNG, alpha)",
+  "people": "none",
+  "product": "bottle + box",
+  "beats": "0: transparent background",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "overlay packshot for end cards",
+  "tags": {
+   "beat": "product"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-512aaa5607": {
+  "kind": "product flat lay render",
+  "people": "none",
+  "product": "1 box, 1 bottle, dots, 5 files",
+  "beats": "0: light blue background",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "1-bottle tier",
+  "tags": {
+   "beat": "product",
+   "tier": "30"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-fbca821edb": {
+  "kind": "product flat lay render",
+  "people": "none",
+  "product": "2 boxes, 2 bottles, dots, files",
+  "beats": "0: light blue background",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "2-bottle tier (MOST POPULAR)",
+  "tags": {
+   "beat": "product",
+   "tier": "60"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-3d05664dd0": {
+  "kind": "product flat lay render",
+  "people": "none",
+  "product": "3 boxes, 3 bottles, dots, files",
+  "beats": "0: light blue background",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "3-bottle tier (buy 2 get 1)",
+  "tags": {
+   "beat": "product",
+   "tier": "90"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-e9d1aa9aea": {
+  "kind": "macro demo (looks AI/CG-generated, brand-made)",
+  "people": "hands + sole of foot (no face)",
+  "product": "white brush cap, small amber bottle 'WilloMD' bottom right (no RootOut label visible)",
+  "beats": "0-2.5: '1 File' fresh mini file rubs a callus/plantar spot on the ball of the foot, white towel under; 2.5-4.5: '2 Brush' nail-polish brush paints amber oil on the spot, bottle in corner; 4.5-7: '3 Cover' clear round dot pressed on; loops back to 1",
+  "framing": "1:1 macro overhead, step label pill at top",
+  "best": "0-7 (full loop)",
+  "status": "OK",
+  "use": "how-to / routine beat (File · Soak · Cover); crop to 9:16 with care (label pill at top)",
+  "tags": {
+   "beat": "how_to",
+   "format": "1x1",
+   "source": "site PDP"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-bd53417d94": {
+  "kind": "sister product static (Melt-Off Heel Kit)",
+  "people": "none",
+  "product": "Melt-Off lotion + box (teal/navy)",
+  "beats": "0: Melt-Off PDP image",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "not RootOut; do not use in RootOut ads (different product, cracked heels)",
+  "tags": {
+   "beat": "other_product"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-0c9168196a": {
+  "kind": "sister product static (Melt-Off Heel Kit)",
+  "people": "none",
+  "product": "Melt-Off lotion + box (teal/navy)",
+  "beats": "0: Melt-Off PDP image",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "not RootOut; do not use in RootOut ads (different product, cracked heels)",
+  "tags": {
+   "beat": "other_product"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-d172bc8df1": {
+  "kind": "sister product static (Melt-Off Heel Kit)",
+  "people": "none",
+  "product": "Melt-Off lotion + box (teal/navy)",
+  "beats": "0: Melt-Off PDP image",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "not RootOut; do not use in RootOut ads (different product, cracked heels)",
+  "tags": {
+   "beat": "other_product"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-40f2bb6157": {
+  "kind": "product render + headline (static ad)",
+  "people": "none",
+  "product": "1 bottle + box",
+  "beats": "0: 'The no-tears bedtime oil for warts, corns and calluses'; bottle + box left, tiles No freezing / No acid / No tears",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "hero / end card reference; claim 'no tears' is the brand's own line",
+  "tags": {
+   "beat": "hero"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-d8f6183115": {
+  "kind": "product render + headline (static ad)",
+  "people": "none",
+  "product": "1 bottle + box",
+  "beats": "0: 'The no-tears bedtime oil for warts, corns and calluses'; bottle + box left, tiles No freezing / No acid / No tears",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "hero / end card reference; claim 'no tears' is the brand's own line",
+  "tags": {
+   "beat": "hero"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-845fcc899a": {
+  "kind": "product render + headline (static ad)",
+  "people": "none",
+  "product": "1 bottle + box",
+  "beats": "0: 'The no-tears bedtime oil for warts, corns and calluses'; bottle + box left, tiles No freezing / No acid / No tears",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "hero / end card reference; claim 'no tears' is the brand's own line",
+  "tags": {
+   "beat": "hero"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-d661cbdc84": {
+  "kind": "product render + headline (static ad)",
+  "people": "none",
+  "product": "1 bottle + box",
+  "beats": "0: 'The no-tears bedtime oil for warts, corns and calluses'; bottle + box left, tiles No freezing / No acid / No tears",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "hero / end card reference; claim 'no tears' is the brand's own line",
+  "tags": {
+   "beat": "hero"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-49af094e0c": {
+  "kind": "CG cross-section static",
+  "people": "none",
+  "product": "none",
+  "beats": "0: 'Up to 8x deeper than a regular cream†' cream sits on top vs RootOut oil soaks down; footnote †manufacturer's absorption testing",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "mechanism; always keep the † footnote",
+  "tags": {
+   "beat": "mechanism"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-d8c835c5a5": {
+  "kind": "CG cross-section static",
+  "people": "none",
+  "product": "none",
+  "beats": "0: 'Up to 8x deeper than a regular cream†' cream sits on top vs RootOut oil soaks down; footnote †manufacturer's absorption testing",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "mechanism; always keep the † footnote",
+  "tags": {
+   "beat": "mechanism"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-2d1b5ad502": {
+  "kind": "CG cross-section static",
+  "people": "none",
+  "product": "none",
+  "beats": "0: 'Up to 8x deeper than a regular cream†' cream sits on top vs RootOut oil soaks down; footnote †manufacturer's absorption testing",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "mechanism; always keep the † footnote",
+  "tags": {
+   "beat": "mechanism"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-12fd577316": {
+  "kind": "CG cross-section static",
+  "people": "none",
+  "product": "none",
+  "beats": "0: 'The bump is just the tip' labels The tip / Hard skin / The root; 'Freezing and pads stop at the hard skin.'",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "problem/mechanism hook 'the bump is just the tip'",
+  "tags": {
+   "beat": "mechanism"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-bb698c7dce": {
+  "kind": "CG cross-section static",
+  "people": "none",
+  "product": "none",
+  "beats": "0: 'The bump is just the tip' labels The tip / Hard skin / The root; 'Freezing and pads stop at the hard skin.'",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "problem/mechanism hook 'the bump is just the tip'",
+  "tags": {
+   "beat": "mechanism"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-bf3b20016b": {
+  "kind": "lifestyle render (AI look)",
+  "people": "sleeping boy ~7, bare foot with clear dot",
+  "product": "bottle on nightstand",
+  "beats": "0: 'Two brush strokes at bedtime. No tears.' boy asleep under starry duvet, lamp, teddy bear",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "kids/bedtime angle; child is AI-made, never present as a real customer",
+  "tags": {
+   "beat": "kids_bedtime"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-286d197ac9": {
+  "kind": "lifestyle render (AI look)",
+  "people": "sleeping boy ~7, bare foot with clear dot",
+  "product": "bottle on nightstand",
+  "beats": "0: 'Two brush strokes at bedtime. No tears.' boy asleep under starry duvet, lamp, teddy bear",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "kids/bedtime angle; child is AI-made, never present as a real customer",
+  "tags": {
+   "beat": "kids_bedtime"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-6968774ccb": {
+  "kind": "3-step static",
+  "people": "hands + toes",
+  "product": "file, brush, dot",
+  "beats": "0: 'File. Soak. Cover. Two minutes a night.' 1 File / 2 Soak / 3 Cover, 'Keep going 14 nights after it looks gone'",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "routine beat + 14-day rule",
+  "tags": {
+   "beat": "how_to"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-00a3086ef3": {
+  "kind": "3-step static",
+  "people": "hands + toes",
+  "product": "file, brush, dot",
+  "beats": "0: 'File. Soak. Cover. Two minutes a night.' 1 File / 2 Soak / 3 Cover, 'Keep going 14 nights after it looks gone'",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "routine beat + 14-day rule",
+  "tags": {
+   "beat": "how_to"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-2fd05d673f": {
+  "kind": "comparison table static",
+  "people": "none",
+  "product": "freeze can vs bottle",
+  "beats": "0: 'Freezing and acid vs RootOut' rows: Gentle enough for kids, No blisters or scars, Soaks down to the root, Nothing to wear by day",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "comparison; 'no blisters or scars' and 'gentle enough for kids' are claims to clear",
+  "tags": {
+   "beat": "comparison"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-663b931fb7": {
+  "kind": "comparison table static",
+  "people": "none",
+  "product": "freeze can vs bottle",
+  "beats": "0: 'Freezing and acid vs RootOut' rows: Gentle enough for kids, No blisters or scars, Soaks down to the root, Nothing to wear by day",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "comparison; 'no blisters or scars' and 'gentle enough for kids' are claims to clear",
+  "tags": {
+   "beat": "comparison"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-ef44a1c3e9": {
+  "kind": "product flat lay static",
+  "people": "none",
+  "product": "box, bottle, night cover dots, single-use files",
+  "beats": "0: 'Everything you need, in one box' callouts",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "what's in the box",
+  "tags": {
+   "beat": "in_the_box"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-9d945a4c00": {
+  "kind": "product flat lay static",
+  "people": "none",
+  "product": "box, bottle, night cover dots, single-use files",
+  "beats": "0: 'Everything you need, in one box' callouts",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "what's in the box",
+  "tags": {
+   "beat": "in_the_box"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-4f421dacfb": {
+  "kind": "product + body-part circles static",
+  "people": "none",
+  "product": "bottle + box",
+  "beats": "0: 'One bottle for the whole family' Warts (hands, fingers, feet) / Corns (on and between toes) / Calluses (with a hard centre)",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "who it's for",
+  "tags": {
+   "beat": "use_cases"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-4e4103241c": {
+  "kind": "product + body-part circles static",
+  "people": "none",
+  "product": "bottle + box",
+  "beats": "0: 'One bottle for the whole family' Warts (hands, fingers, feet) / Corns (on and between toes) / Calluses (with a hard centre)",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "who it's for",
+  "tags": {
+   "beat": "use_cases"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-bd322a1e08": {
+  "kind": "offer static",
+  "people": "none",
+  "product": "3 bottles + boxes",
+  "beats": "0: 'Buy 2, get 1 free' 'Not gone in 90 days? Every penny back.' navy 90 DAYS badge",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "offer / CTA end card",
+  "tags": {
+   "beat": "offer"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-62f5511efd": {
+  "kind": "offer static",
+  "people": "none",
+  "product": "3 bottles + boxes",
+  "beats": "0: 'Buy 2, get 1 free' 'Not gone in 90 days? Every penny back.' navy 90 DAYS badge",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "whole",
+  "status": "OK",
+  "use": "offer / CTA end card",
+  "tags": {
+   "beat": "offer"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-05b27e0c30": {
+  "kind": "3D/CG explainer (brand-made) (GIF copy)",
+  "people": "none",
+  "product": "oil drop + brush (no label)",
+  "beats": "0-2: split screen FREEZING vs ROOTOUT OIL, skin cross-section blocks, 'THE ROOT' tag, caption 'The root sits under the hard skin.'; 2-4: freeze spray frosts the top (left), brush drips oil (right), 'Freezing burns the top.' / 'RootOut is brushed on.'; 4-7: oil pools and streams down a glowing channel to the root, 'The oil soaks down to the root.'; 7-10: left root still there 'The root stays.', right block glows amber 'Up to 8x deeper than a regular cream.†'",
+  "framing": "1:1, two side-by-side blocks, labels top, caption pill bottom",
+  "best": "2-8",
+  "status": "CAUTION",
+  "use": "mechanism / 'freezing burns the top' line; needs † footnote on screen when the 8x frame shows; label as illustration",
+  "tags": {
+   "beat": "mechanism",
+   "format": "1x1",
+   "source": "site PDP"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-f120b4e2fe": {
+  "kind": "3D/CG explainer (brand-made)",
+  "people": "none",
+  "product": "oil drop + brush (no label)",
+  "beats": "0-2: split screen FREEZING vs ROOTOUT OIL, skin cross-section blocks, 'THE ROOT' tag, caption 'The root sits under the hard skin.'; 2-4: freeze spray frosts the top (left), brush drips oil (right), 'Freezing burns the top.' / 'RootOut is brushed on.'; 4-7: oil pools and streams down a glowing channel to the root, 'The oil soaks down to the root.'; 7-10: left root still there 'The root stays.', right block glows amber 'Up to 8x deeper than a regular cream.†'",
+  "framing": "1:1, two side-by-side blocks, labels top, caption pill bottom",
+  "best": "2-8",
+  "status": "CAUTION",
+  "use": "mechanism / 'freezing burns the top' line; needs † footnote on screen when the 8x frame shows; label as illustration",
+  "tags": {
+   "beat": "mechanism",
+   "format": "1x1",
+   "source": "site PDP"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-79641c2cd5": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "woman 30s (AI)",
+  "product": "none",
+  "beats": "0: 01 woman 30s knuckle wart after; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-2cedd90f59": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "woman 30s (AI)",
+  "product": "none",
+  "beats": "0: 01 woman 30s knuckle wart before; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-a02f7a936e": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "man 40s (AI)",
+  "product": "none",
+  "beats": "0: 02 man 40s plantar wart ball of foot after; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-e9e908b033": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "man 40s (AI)",
+  "product": "none",
+  "beats": "0: 02 man 40s plantar wart ball of foot before; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-ae740d6ee1": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "girl 9 (AI)",
+  "product": "none",
+  "beats": "0: 03 girl 9 finger wart after; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-6fe8792384": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "girl 9 (AI)",
+  "product": "none",
+  "beats": "0: 03 girl 9 finger wart before; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-f38cf2f6bf": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "woman 50s (AI)",
+  "product": "none",
+  "beats": "0: 04 woman 50s corn little toe after; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-1da1c4dd85": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "woman 50s (AI)",
+  "product": "none",
+  "beats": "0: 04 woman 50s corn little toe before; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-0a6cfd00c3": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "boy 6 (AI)",
+  "product": "none",
+  "beats": "0: 09 boy 6 thumb warts after; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-cf1d1661f2": {
+  "kind": "AI before/after sample (stamped 'CONCEPT ONLY · AI EXAMPLE · NOT A REAL RESULT')",
+  "people": "boy 6 (AI)",
+  "product": "none",
+  "beats": "0: 09 boy 6 thumb warts before; orange stamp bar at the bottom",
+  "framing": "1:1 square (2048 px PDP)",
+  "best": "-",
+  "status": "BANNED",
+  "use": "never as results or testimonials; style reference only (phone-shot home look)",
+  "tags": {
+   "beat": "before_after_illustrative"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-4ab4f809a3": {
+  "kind": "macro demo (looks AI/CG-generated, brand-made) (GIF copy)",
+  "people": "hands + sole of foot (no face)",
+  "product": "white brush cap, small amber bottle 'WilloMD' bottom right (no RootOut label visible)",
+  "beats": "0-2.5: '1 File' fresh mini file rubs a callus/plantar spot on the ball of the foot, white towel under; 2.5-4.5: '2 Brush' nail-polish brush paints amber oil on the spot, bottle in corner; 4.5-7: '3 Cover' clear round dot pressed on; loops back to 1",
+  "framing": "1:1 macro overhead, step label pill at top",
+  "best": "0-7 (full loop)",
+  "status": "OK",
+  "use": "how-to / routine beat (File · Soak · Cover); crop to 9:16 with care (label pill at top)",
+  "tags": {
+   "beat": "how_to",
+   "format": "1x1",
+   "source": "site PDP"
+  },
+  "learned": "2026-11-21"
+ },
+ "we-28a1c81788": {
+  "kind": "macro demo (looks AI/CG-generated, brand-made)",
+  "people": "hands + sole of foot (no face)",
+  "product": "white brush cap, small amber bottle 'WilloMD' bottom right (no RootOut label visible)",
+  "beats": "0-2.5: '1 File' fresh mini file rubs a callus/plantar spot on the ball of the foot, white towel under; 2.5-4.5: '2 Brush' nail-polish brush paints amber oil on the spot, bottle in corner; 4.5-7: '3 Cover' clear round dot pressed on; loops back to 1",
+  "framing": "1:1 macro overhead, step label pill at top",
+  "best": "0-7 (full loop)",
+  "status": "OK",
+  "use": "how-to / routine beat (File · Soak · Cover); crop to 9:16 with care (label pill at top)",
+  "tags": {
+   "beat": "how_to",
+   "format": "1x1",
+   "source": "site PDP"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-614242ac9b": {
+  "kind": "real clinical photo (CC, stock)",
+  "people": "foot only, no face",
+  "product": "none",
+  "beats": "0: sole + toes with several plantar warts under the toes, flash, close",
+  "framing": "still",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "problem beat: 'the bump on your foot' / 'just the tip'; graphic skin close-up, keep brief; credit required (CC BY/BY-SA)",
+  "tags": {
+   "beat": "problem_wart",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-2133fb5169": {
+  "kind": "real clinical photo (CC, stock)",
+  "people": "foot only, no face",
+  "product": "none",
+  "beats": "0: macro of skin ridges with two flat plantar warts, warm tone",
+  "framing": "still",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "problem beat: 'the bump on your foot' / 'just the tip'; graphic skin close-up, keep brief; credit required (CC BY/BY-SA)",
+  "tags": {
+   "beat": "problem_wart",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-d3b401b653": {
+  "kind": "real clinical photo (CC, stock)",
+  "people": "foot only, no face",
+  "product": "none",
+  "beats": "0: single white-capped plantar wart on the ball of a foot, purple-toned skin",
+  "framing": "still",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "problem beat: 'the bump on your foot' / 'just the tip'; graphic skin close-up, keep brief; credit required (CC BY/BY-SA)",
+  "tags": {
+   "beat": "problem_wart",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-1eaebe092d": {
+  "kind": "real clinical photo (CC, stock)",
+  "people": "foot only, no face",
+  "product": "none",
+  "beats": "0: heel with two raised white plantar warts, close macro",
+  "framing": "still",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "problem beat: 'the bump on your foot' / 'just the tip'; graphic skin close-up, keep brief; credit required (CC BY/BY-SA)",
+  "tags": {
+   "beat": "problem_wart",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-620dfe29b0": {
+  "kind": "real clinical photo (CC, stock)",
+  "people": "foot only, no face",
+  "product": "none",
+  "beats": "0: side view of a foot sole with a yellowed plantar wart under the arch, wooden floor",
+  "framing": "still",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "problem beat: 'the bump on your foot' / 'just the tip'; graphic skin close-up, keep brief; credit required (CC BY/BY-SA)",
+  "tags": {
+   "beat": "problem_wart",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-6b42c523fc": {
+  "kind": "real clinical photo (CC, stock)",
+  "people": "foot only, no face",
+  "product": "none",
+  "beats": "0: heel with a crusty plantar wart and callus edge, close",
+  "framing": "still",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "problem beat: 'the bump on your foot' / 'just the tip'; graphic skin close-up, keep brief; credit required (CC BY/BY-SA)",
+  "tags": {
+   "beat": "problem_wart",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-5fac4f9f09": {
+  "kind": "real clinical photo (CC, stock)",
+  "people": "foot only, no face",
+  "product": "none",
+  "beats": "0: sole with a cluster of painful plantar warts and a callus patch near the heel",
+  "framing": "still",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "problem beat: 'the bump on your foot' / 'just the tip'; graphic skin close-up, keep brief; credit required (CC BY/BY-SA)",
+  "tags": {
+   "beat": "problem_wart",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-bc7c32cf01": {
+  "kind": "histology micrograph (CC BY 2.0)",
+  "people": "none",
+  "product": "none",
+  "beats": "0: pink H&E slide of a common wart (verruca vulgaris), finger-like folds",
+  "framing": "still",
+  "best": "whole",
+  "status": "OK",
+  "use": "science beat 'what's under the bump'; real microscope texture",
+  "tags": {
+   "beat": "science",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ },
+ "lo-2c011bdaa4": {
+  "kind": "real clinical photo (CC, stock)",
+  "people": "feet only, no face",
+  "product": "none",
+  "beats": "0: both soles side by side with several plantar warts on the balls and heels, white bedding",
+  "framing": "still, portrait",
+  "best": "whole",
+  "status": "CAUTION",
+  "use": "problem beat; graphic skin close-up, keep brief; credit required",
+  "tags": {
+   "beat": "problem_wart",
+   "source": "stock CC"
+  },
+  "learned": "2026-11-21"
+ }
+}

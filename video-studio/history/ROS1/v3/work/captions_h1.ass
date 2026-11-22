@@ -1,0 +1,293 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Inter,81,&H00FFFFFF,&H0000D4FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,86,183,614,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.26,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}I'M{\c&H00FFFFFF\fscx100\fscy100} NEVER HOLDING
+Dialogue: 0,0:00:00.26,0:00:00.44,Cap,,0,0,0,,I'M {\c&H0000D4FF\fscx108\fscy108}NEVER{\c&H00FFFFFF\fscx100\fscy100} HOLDING
+Dialogue: 0,0:00:00.44,0:00:00.70,Cap,,0,0,0,,I'M NEVER {\c&H0000D4FF\fscx108\fscy108}HOLDING{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:00.70,0:00:00.90,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}MY{\c&H00FFFFFF\fscx100\fscy100} SON DOWN
+Dialogue: 0,0:00:00.90,0:00:01.12,Cap,,0,0,0,,MY {\c&H0000D4FF\fscx108\fscy108}SON{\c&H00FFFFFF\fscx100\fscy100} DOWN
+Dialogue: 0,0:00:01.12,0:00:01.32,Cap,,0,0,0,,MY SON {\c&H0000D4FF\fscx108\fscy108}DOWN{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:01.32,0:00:01.52,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}FOR{\c&H00FFFFFF\fscx100\fscy100} A FREEZE
+Dialogue: 0,0:00:01.52,0:00:01.68,Cap,,0,0,0,,FOR {\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100} FREEZE
+Dialogue: 0,0:00:01.68,0:00:01.78,Cap,,0,0,0,,FOR A {\c&H0000D4FF\fscx108\fscy108}FREEZE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:01.78,0:00:02.52,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}AGAIN.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:02.52,0:00:02.78,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}LAST{\c&H00FFFFFF\fscx100\fscy100} TIME HE
+Dialogue: 0,0:00:02.78,0:00:03.10,Cap,,0,0,0,,LAST {\c&H0000D4FF\fscx108\fscy108}TIME{\c&H00FFFFFF\fscx100\fscy100} HE
+Dialogue: 0,0:00:03.10,0:00:03.26,Cap,,0,0,0,,LAST TIME {\c&H0000D4FF\fscx108\fscy108}HE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:03.26,0:00:04.28,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SCREAMED,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:04.28,0:00:04.96,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100} WART ON
+Dialogue: 0,0:00:04.96,0:00:05.20,Cap,,0,0,0,,A {\c&H0000D4FF\fscx108\fscy108}WART{\c&H00FFFFFF\fscx100\fscy100} ON
+Dialogue: 0,0:00:05.20,0:00:05.40,Cap,,0,0,0,,A WART {\c&H0000D4FF\fscx108\fscy108}ON{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:05.40,0:00:05.58,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HIS{\c&H00FFFFFF\fscx100\fscy100} FOOT FOR
+Dialogue: 0,0:00:05.58,0:00:05.94,Cap,,0,0,0,,HIS {\c&H0000D4FF\fscx108\fscy108}FOOT{\c&H00FFFFFF\fscx100\fscy100} FOR
+Dialogue: 0,0:00:05.94,0:00:06.16,Cap,,0,0,0,,HIS FOOT {\c&H0000D4FF\fscx108\fscy108}FOR{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:06.16,0:00:06.32,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100} YEAR.
+Dialogue: 0,0:00:06.32,0:00:07.16,Cap,,0,0,0,,A {\c&H0000D4FF\fscx108\fscy108}YEAR.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:07.16,0:00:07.54,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}STORE{\c&H00FFFFFF\fscx100\fscy100} ACID WAS
+Dialogue: 0,0:00:07.54,0:00:07.88,Cap,,0,0,0,,STORE {\c&H0000D4FF\fscx108\fscy108}ACID{\c&H00FFFFFF\fscx100\fscy100} WAS
+Dialogue: 0,0:00:07.88,0:00:08.14,Cap,,0,0,0,,STORE ACID {\c&H0000D4FF\fscx108\fscy108}WAS{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:08.14,0:00:08.50,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}TOO{\c&H00FFFFFF\fscx100\fscy100} PAINFUL FOR
+Dialogue: 0,0:00:08.50,0:00:08.92,Cap,,0,0,0,,TOO {\c&H0000D4FF\fscx108\fscy108}PAINFUL{\c&H00FFFFFF\fscx100\fscy100} FOR
+Dialogue: 0,0:00:08.92,0:00:09.26,Cap,,0,0,0,,TOO PAINFUL {\c&H0000D4FF\fscx108\fscy108}FOR{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:09.26,0:00:10.08,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HIM.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:10.08,0:00:10.38,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SO{\c&H00FFFFFF\fscx100\fscy100} THE DOCTOR
+Dialogue: 0,0:00:10.38,0:00:10.76,Cap,,0,0,0,,SO {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} DOCTOR
+Dialogue: 0,0:00:10.76,0:00:11.06,Cap,,0,0,0,,SO THE {\c&H0000D4FF\fscx108\fscy108}DOCTOR{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:11.06,0:00:11.50,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}FROZE{\c&H00FFFFFF\fscx100\fscy100} IT.
+Dialogue: 0,0:00:11.50,0:00:12.30,Cap,,0,0,0,,FROZE {\c&H0000D4FF\fscx108\fscy108}IT.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:12.30,0:00:12.42,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}WE{\c&H00FFFFFF\fscx100\fscy100} HELD HIM
+Dialogue: 0,0:00:12.42,0:00:12.66,Cap,,0,0,0,,WE {\c&H0000D4FF\fscx108\fscy108}HELD{\c&H00FFFFFF\fscx100\fscy100} HIM
+Dialogue: 0,0:00:12.66,0:00:12.84,Cap,,0,0,0,,WE HELD {\c&H0000D4FF\fscx108\fscy108}HIM{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:12.84,0:00:13.78,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}STILL.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:13.84,0:00:13.96,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HE{\c&H00FFFFFF\fscx100\fscy100} SCREAMED,
+Dialogue: 0,0:00:13.96,0:00:15.12,Cap,,0,0,0,,HE {\c&H0000D4FF\fscx108\fscy108}SCREAMED,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:15.18,0:00:15.36,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}AND{\c&H00FFFFFF\fscx100\fscy100} IT GREW
+Dialogue: 0,0:00:15.36,0:00:15.46,Cap,,0,0,0,,AND {\c&H0000D4FF\fscx108\fscy108}IT{\c&H00FFFFFF\fscx100\fscy100} GREW
+Dialogue: 0,0:00:15.46,0:00:15.66,Cap,,0,0,0,,AND IT {\c&H0000D4FF\fscx108\fscy108}GREW{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:15.66,0:00:15.86,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}BACK{\c&H00FFFFFF\fscx100\fscy100} ANYWAY.
+Dialogue: 0,0:00:15.86,0:00:16.90,Cap,,0,0,0,,BACK {\c&H0000D4FF\fscx108\fscy108}ANYWAY.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:17.02,0:00:17.22,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}TURNS{\c&H00FFFFFF\fscx100\fscy100} OUT I
+Dialogue: 0,0:00:17.22,0:00:17.58,Cap,,0,0,0,,TURNS {\c&H0000D4FF\fscx108\fscy108}OUT{\c&H00FFFFFF\fscx100\fscy100} I
+Dialogue: 0,0:00:17.58,0:00:18.08,Cap,,0,0,0,,TURNS OUT {\c&H0000D4FF\fscx108\fscy108}I{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:18.08,0:00:18.34,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}DIDN'T{\c&H00FFFFFF\fscx100\fscy100} FAIL HIM.
+Dialogue: 0,0:00:18.34,0:00:18.58,Cap,,0,0,0,,DIDN'T {\c&H0000D4FF\fscx108\fscy108}FAIL{\c&H00FFFFFF\fscx100\fscy100} HIM.
+Dialogue: 0,0:00:18.58,0:00:19.46,Cap,,0,0,0,,DIDN'T FAIL {\c&H0000D4FF\fscx108\fscy108}HIM.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:19.50,0:00:19.76,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HERE'S{\c&H00FFFFFF\fscx100\fscy100} WHAT THE
+Dialogue: 0,0:00:19.76,0:00:19.88,Cap,,0,0,0,,HERE'S {\c&H0000D4FF\fscx108\fscy108}WHAT{\c&H00FFFFFF\fscx100\fscy100} THE
+Dialogue: 0,0:00:19.88,0:00:20.00,Cap,,0,0,0,,HERE'S WHAT {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:20.00,0:00:20.22,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}FREEZE{\c&H00FFFFFF\fscx100\fscy100} MISSED.
+Dialogue: 0,0:00:20.22,0:00:21.02,Cap,,0,0,0,,FREEZE {\c&H0000D4FF\fscx108\fscy108}MISSED.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:21.02,0:00:21.82,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}FREEZING,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:21.82,0:00:22.12,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}ACID{\c&H00FFFFFF\fscx100\fscy100} AND SHAVING
+Dialogue: 0,0:00:22.12,0:00:22.42,Cap,,0,0,0,,ACID {\c&H0000D4FF\fscx108\fscy108}AND{\c&H00FFFFFF\fscx100\fscy100} SHAVING
+Dialogue: 0,0:00:22.42,0:00:22.84,Cap,,0,0,0,,ACID AND {\c&H0000D4FF\fscx108\fscy108}SHAVING{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:22.84,0:00:23.32,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}ONLY{\c&H00FFFFFF\fscx100\fscy100} SNAP OFF
+Dialogue: 0,0:00:23.32,0:00:23.70,Cap,,0,0,0,,ONLY {\c&H0000D4FF\fscx108\fscy108}SNAP{\c&H00FFFFFF\fscx100\fscy100} OFF
+Dialogue: 0,0:00:23.70,0:00:23.94,Cap,,0,0,0,,ONLY SNAP {\c&H0000D4FF\fscx108\fscy108}OFF{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:23.94,0:00:24.14,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} TOP,
+Dialogue: 0,0:00:24.14,0:00:24.76,Cap,,0,0,0,,THE {\c&H0000D4FF\fscx108\fscy108}TOP,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:24.76,0:00:25.00,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}LIKE{\c&H00FFFFFF\fscx100\fscy100} PICKING A
+Dialogue: 0,0:00:25.00,0:00:25.24,Cap,,0,0,0,,LIKE {\c&H0000D4FF\fscx108\fscy108}PICKING{\c&H00FFFFFF\fscx100\fscy100} A
+Dialogue: 0,0:00:25.24,0:00:25.46,Cap,,0,0,0,,LIKE PICKING {\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:25.46,0:00:26.02,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}DANDELION.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:26.02,0:00:26.70,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} ROOT STAYS
+Dialogue: 0,0:00:26.70,0:00:26.90,Cap,,0,0,0,,THE {\c&H0000D4FF\fscx108\fscy108}ROOT{\c&H00FFFFFF\fscx100\fscy100} STAYS
+Dialogue: 0,0:00:26.90,0:00:27.24,Cap,,0,0,0,,THE ROOT {\c&H0000D4FF\fscx108\fscy108}STAYS{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:27.24,0:00:27.64,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}UNDER{\c&H00FFFFFF\fscx100\fscy100} THE HARD
+Dialogue: 0,0:00:27.64,0:00:27.82,Cap,,0,0,0,,UNDER {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} HARD
+Dialogue: 0,0:00:27.82,0:00:28.06,Cap,,0,0,0,,UNDER THE {\c&H0000D4FF\fscx108\fscy108}HARD{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:28.06,0:00:28.68,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SKIN,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:28.68,0:00:28.98,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SO{\c&H00FFFFFF\fscx100\fscy100} IT GROWS
+Dialogue: 0,0:00:28.98,0:00:29.10,Cap,,0,0,0,,SO {\c&H0000D4FF\fscx108\fscy108}IT{\c&H00FFFFFF\fscx100\fscy100} GROWS
+Dialogue: 0,0:00:29.10,0:00:29.30,Cap,,0,0,0,,SO IT {\c&H0000D4FF\fscx108\fscy108}GROWS{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:29.30,0:00:30.22,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}BACK.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:30.36,0:00:30.66,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THAT'S{\c&H00FFFFFF\fscx100\fscy100} WHY I
+Dialogue: 0,0:00:30.66,0:00:30.82,Cap,,0,0,0,,{\an2\pos(540,560)}THAT'S {\c&H0000D4FF\fscx108\fscy108}WHY{\c&H00FFFFFF\fscx100\fscy100} I
+Dialogue: 0,0:00:30.82,0:00:30.96,Cap,,0,0,0,,{\an2\pos(540,560)}THAT'S WHY {\c&H0000D4FF\fscx108\fscy108}I{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:30.96,0:00:31.20,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SWITCHED{\c&H00FFFFFF\fscx100\fscy100} TO
+Dialogue: 0,0:00:31.20,0:00:31.50,Cap,,0,0,0,,{\an2\pos(540,560)}SWITCHED {\c&H0000D4FF\fscx108\fscy108}TO{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:31.50,0:00:32.28,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}ROOTOUT.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:32.40,0:00:32.56,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}IT'S{\c&H00FFFFFF\fscx100\fscy100} AN OIL
+Dialogue: 0,0:00:32.56,0:00:32.66,Cap,,0,0,0,,{\an2\pos(540,560)}IT'S {\c&H0000D4FF\fscx108\fscy108}AN{\c&H00FFFFFF\fscx100\fscy100} OIL
+Dialogue: 0,0:00:32.66,0:00:32.92,Cap,,0,0,0,,{\an2\pos(540,560)}IT'S AN {\c&H0000D4FF\fscx108\fscy108}OIL{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:32.92,0:00:33.14,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}WITH{\c&H00FFFFFF\fscx100\fscy100} FOUR PLANTS
+Dialogue: 0,0:00:33.14,0:00:33.48,Cap,,0,0,0,,{\an2\pos(540,560)}WITH {\c&H0000D4FF\fscx108\fscy108}FOUR{\c&H00FFFFFF\fscx100\fscy100} PLANTS
+Dialogue: 0,0:00:33.48,0:00:33.86,Cap,,0,0,0,,{\an2\pos(540,560)}WITH FOUR {\c&H0000D4FF\fscx108\fscy108}PLANTS{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:33.86,0:00:34.04,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}IN{\c&H00FFFFFF\fscx100\fscy100} IT.
+Dialogue: 0,0:00:34.04,0:00:34.66,Cap,,0,0,0,,{\an2\pos(540,560)}IN {\c&H0000D4FF\fscx108\fscy108}IT.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:34.66,0:00:34.80,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} LEMON OPENS
+Dialogue: 0,0:00:34.80,0:00:35.04,Cap,,0,0,0,,{\an2\pos(540,560)}THE {\c&H0000D4FF\fscx108\fscy108}LEMON{\c&H00FFFFFF\fscx100\fscy100} OPENS
+Dialogue: 0,0:00:35.04,0:00:35.50,Cap,,0,0,0,,{\an2\pos(540,560)}THE LEMON {\c&H0000D4FF\fscx108\fscy108}OPENS{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:35.50,0:00:35.76,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}UP{\c&H00FFFFFF\fscx100\fscy100} THAT HARD
+Dialogue: 0,0:00:35.76,0:00:35.96,Cap,,0,0,0,,{\an2\pos(540,560)}UP {\c&H0000D4FF\fscx108\fscy108}THAT{\c&H00FFFFFF\fscx100\fscy100} HARD
+Dialogue: 0,0:00:35.96,0:00:36.30,Cap,,0,0,0,,{\an2\pos(540,560)}UP THAT {\c&H0000D4FF\fscx108\fscy108}HARD{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:36.30,0:00:37.26,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SKIN.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:37.26,0:00:37.36,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} TEA TREE
+Dialogue: 0,0:00:37.36,0:00:37.56,Cap,,0,0,0,,{\an2\pos(540,560)}THE {\c&H0000D4FF\fscx108\fscy108}TEA{\c&H00FFFFFF\fscx100\fscy100} TREE
+Dialogue: 0,0:00:37.56,0:00:37.80,Cap,,0,0,0,,{\an2\pos(540,560)}THE TEA {\c&H0000D4FF\fscx108\fscy108}TREE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:37.80,0:00:38.20,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}CARRIES{\c&H00FFFFFF\fscx100\fscy100} IT DOWN,
+Dialogue: 0,0:00:38.20,0:00:38.38,Cap,,0,0,0,,{\an2\pos(540,560)}CARRIES {\c&H0000D4FF\fscx108\fscy108}IT{\c&H00FFFFFF\fscx100\fscy100} DOWN,
+Dialogue: 0,0:00:38.38,0:00:39.00,Cap,,0,0,0,,{\an2\pos(540,560)}CARRIES IT {\c&H0000D4FF\fscx108\fscy108}DOWN,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:39.00,0:00:39.12,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}UP{\c&H00FFFFFF\fscx100\fscy100} TO EIGHT
+Dialogue: 0,0:00:39.12,0:00:39.26,Cap,,0,0,0,,{\an2\pos(540,560)}UP {\c&H0000D4FF\fscx108\fscy108}TO{\c&H00FFFFFF\fscx100\fscy100} EIGHT
+Dialogue: 0,0:00:39.26,0:00:39.56,Cap,,0,0,0,,{\an2\pos(540,560)}UP TO {\c&H0000D4FF\fscx108\fscy108}EIGHT{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:39.56,0:00:39.92,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}TIMES{\c&H00FFFFFF\fscx100\fscy100} DEEPER THAN
+Dialogue: 0,0:00:39.92,0:00:40.30,Cap,,0,0,0,,{\an2\pos(540,560)}TIMES {\c&H0000D4FF\fscx108\fscy108}DEEPER{\c&H00FFFFFF\fscx100\fscy100} THAN
+Dialogue: 0,0:00:40.30,0:00:40.58,Cap,,0,0,0,,{\an2\pos(540,560)}TIMES DEEPER {\c&H0000D4FF\fscx108\fscy108}THAN{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:40.58,0:00:40.68,Cap,,0,0,0,,{\an2\pos(540,560)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100} REGULAR CREAM,
+Dialogue: 0,0:00:40.68,0:00:40.98,Cap,,0,0,0,,{\an2\pos(540,560)}A {\c&H0000D4FF\fscx108\fscy108}REGULAR{\c&H00FFFFFF\fscx100\fscy100} CREAM,
+Dialogue: 0,0:00:40.98,0:00:41.76,Cap,,0,0,0,,A REGULAR {\c&H0000D4FF\fscx108\fscy108}CREAM,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:41.76,0:00:41.94,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}AND{\c&H00FFFFFF\fscx100\fscy100} THE POKEWEED
+Dialogue: 0,0:00:41.94,0:00:42.06,Cap,,0,0,0,,AND {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} POKEWEED
+Dialogue: 0,0:00:42.06,0:00:42.58,Cap,,0,0,0,,AND THE {\c&H0000D4FF\fscx108\fscy108}POKEWEED{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:42.58,0:00:42.76,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}AND{\c&H00FFFFFF\fscx100\fscy100} WHITE CEDAR
+Dialogue: 0,0:00:42.76,0:00:43.02,Cap,,0,0,0,,AND {\c&H0000D4FF\fscx108\fscy108}WHITE{\c&H00FFFFFF\fscx100\fscy100} CEDAR
+Dialogue: 0,0:00:43.02,0:00:43.42,Cap,,0,0,0,,AND WHITE {\c&H0000D4FF\fscx108\fscy108}CEDAR{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:43.42,0:00:43.78,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}BREAK{\c&H00FFFFFF\fscx100\fscy100} THE WART
+Dialogue: 0,0:00:43.78,0:00:44.00,Cap,,0,0,0,,BREAK {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} WART
+Dialogue: 0,0:00:44.00,0:00:44.24,Cap,,0,0,0,,BREAK THE {\c&H0000D4FF\fscx108\fscy108}WART{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:44.24,0:00:44.48,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}DOWN{\c&H00FFFFFF\fscx100\fscy100} FROM THE
+Dialogue: 0,0:00:44.48,0:00:44.70,Cap,,0,0,0,,DOWN {\c&H0000D4FF\fscx108\fscy108}FROM{\c&H00FFFFFF\fscx100\fscy100} THE
+Dialogue: 0,0:00:44.70,0:00:44.84,Cap,,0,0,0,,DOWN FROM {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:44.84,0:00:45.68,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}ROOT.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:45.68,0:00:45.98,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}DEEP{\c&H00FFFFFF\fscx100\fscy100} DOESN'T MEAN
+Dialogue: 0,0:00:45.98,0:00:46.46,Cap,,0,0,0,,DEEP {\c&H0000D4FF\fscx108\fscy108}DOESN'T{\c&H00FFFFFF\fscx100\fscy100} MEAN
+Dialogue: 0,0:00:46.46,0:00:46.60,Cap,,0,0,0,,DEEP DOESN'T {\c&H0000D4FF\fscx108\fscy108}MEAN{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:46.60,0:00:47.58,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HARSH.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:47.58,0:00:47.78,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}IT'S{\c&H00FFFFFF\fscx100\fscy100} A KID'S
+Dialogue: 0,0:00:47.78,0:00:47.88,Cap,,0,0,0,,IT'S {\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100} KID'S
+Dialogue: 0,0:00:47.88,0:00:48.14,Cap,,0,0,0,,IT'S A {\c&H0000D4FF\fscx108\fscy108}KID'S{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:48.14,0:00:48.94,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}FORMULA,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:48.94,0:00:49.18,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}AGES{\c&H00FFFFFF\fscx100\fscy100} FOUR AND
+Dialogue: 0,0:00:49.18,0:00:49.56,Cap,,0,0,0,,AGES {\c&H0000D4FF\fscx108\fscy108}FOUR{\c&H00FFFFFF\fscx100\fscy100} AND
+Dialogue: 0,0:00:49.56,0:00:49.84,Cap,,0,0,0,,AGES FOUR {\c&H0000D4FF\fscx108\fscy108}AND{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:49.84,0:00:50.52,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}UP.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:50.52,0:00:50.68,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}NO{\c&H00FFFFFF\fscx100\fscy100} BLISTER,
+Dialogue: 0,0:00:50.68,0:00:51.46,Cap,,0,0,0,,NO {\c&H0000D4FF\fscx108\fscy108}BLISTER,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:51.46,0:00:51.64,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}JUST{\c&H00FFFFFF\fscx100\fscy100} A LITTLE
+Dialogue: 0,0:00:51.64,0:00:51.86,Cap,,0,0,0,,JUST {\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100} LITTLE
+Dialogue: 0,0:00:51.86,0:00:52.00,Cap,,0,0,0,,JUST A {\c&H0000D4FF\fscx108\fscy108}LITTLE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:52.00,0:00:52.36,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}COOL{\c&H00FFFFFF\fscx100\fscy100} TINGLE,
+Dialogue: 0,0:00:52.36,0:00:53.22,Cap,,0,0,0,,COOL {\c&H0000D4FF\fscx108\fscy108}TINGLE,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:53.22,0:00:53.80,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}RECOMMENDED{\c&H00FFFFFF\fscx100\fscy100} BY
+Dialogue: 0,0:00:53.80,0:00:54.06,Cap,,0,0,0,,RECOMMENDED {\c&H0000D4FF\fscx108\fscy108}BY{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:54.06,0:00:54.94,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}PEDIATRICIANS.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:54.94,0:00:56.02,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}BEDTIME{\c&H00FFFFFF\fscx100\fscy100} TAKES TWO
+Dialogue: 0,0:00:56.02,0:00:56.32,Cap,,0,0,0,,BEDTIME {\c&H0000D4FF\fscx108\fscy108}TAKES{\c&H00FFFFFF\fscx100\fscy100} TWO
+Dialogue: 0,0:00:56.32,0:00:56.72,Cap,,0,0,0,,BEDTIME TAKES {\c&H0000D4FF\fscx108\fscy108}TWO{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:56.72,0:00:57.60,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}MINUTES.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:57.60,0:00:58.38,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}FIRST,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:58.38,0:00:58.64,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}TWO{\c&H00FFFFFF\fscx100\fscy100} LIGHT STROKES
+Dialogue: 0,0:00:58.64,0:00:58.88,Cap,,0,0,0,,TWO {\c&H0000D4FF\fscx108\fscy108}LIGHT{\c&H00FFFFFF\fscx100\fscy100} STROKES
+Dialogue: 0,0:00:58.88,0:00:59.26,Cap,,0,0,0,,TWO LIGHT {\c&H0000D4FF\fscx108\fscy108}STROKES{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:00:59.26,0:00:59.50,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}WITH{\c&H00FFFFFF\fscx100\fscy100} THE FILE.
+Dialogue: 0,0:00:59.50,0:00:59.64,Cap,,0,0,0,,WITH {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} FILE.
+Dialogue: 0,0:00:59.64,0:01:00.42,Cap,,0,0,0,,WITH THE {\c&H0000D4FF\fscx108\fscy108}FILE.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:00.42,0:01:00.60,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THAT{\c&H00FFFFFF\fscx100\fscy100} OPENS UP
+Dialogue: 0,0:01:00.60,0:01:00.88,Cap,,0,0,0,,THAT {\c&H0000D4FF\fscx108\fscy108}OPENS{\c&H00FFFFFF\fscx100\fscy100} UP
+Dialogue: 0,0:01:00.88,0:01:01.10,Cap,,0,0,0,,THAT OPENS {\c&H0000D4FF\fscx108\fscy108}UP{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:01.10,0:01:01.22,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} HARD TOP.
+Dialogue: 0,0:01:01.22,0:01:02.10,Cap,,0,0,0,,THE {\c&H0000D4FF\fscx108\fscy108}HARD TOP.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:02.10,0:01:02.42,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}ONLY{\c&H00FFFFFF\fscx100\fscy100} THE HARD TOP.
+Dialogue: 0,0:01:02.42,0:01:02.60,Cap,,0,0,0,,ONLY {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} HARD TOP.
+Dialogue: 0,0:01:02.60,0:01:03.46,Cap,,0,0,0,,ONLY THE {\c&H0000D4FF\fscx108\fscy108}HARD TOP.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:03.46,0:01:03.78,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}NEVER{\c&H00FFFFFF\fscx100\fscy100} HIS SKIN,
+Dialogue: 0,0:01:03.78,0:01:04.04,Cap,,0,0,0,,NEVER {\c&H0000D4FF\fscx108\fscy108}HIS{\c&H00FFFFFF\fscx100\fscy100} SKIN,
+Dialogue: 0,0:01:04.04,0:01:04.62,Cap,,0,0,0,,NEVER HIS {\c&H0000D4FF\fscx108\fscy108}SKIN,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:04.62,0:01:04.82,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SO{\c&H00FFFFFF\fscx100\fscy100} IT DOESN'T
+Dialogue: 0,0:01:04.82,0:01:04.96,Cap,,0,0,0,,SO {\c&H0000D4FF\fscx108\fscy108}IT{\c&H00FFFFFF\fscx100\fscy100} DOESN'T
+Dialogue: 0,0:01:04.96,0:01:05.20,Cap,,0,0,0,,SO IT {\c&H0000D4FF\fscx108\fscy108}DOESN'T{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:05.20,0:01:06.02,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HURT.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:06.02,0:01:06.68,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}NEXT,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:06.68,0:01:06.78,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}I{\c&H00FFFFFF\fscx100\fscy100} BRUSH THE
+Dialogue: 0,0:01:06.78,0:01:06.98,Cap,,0,0,0,,I {\c&H0000D4FF\fscx108\fscy108}BRUSH{\c&H00FFFFFF\fscx100\fscy100} THE
+Dialogue: 0,0:01:06.98,0:01:07.20,Cap,,0,0,0,,I BRUSH {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:07.20,0:01:07.44,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}OIL{\c&H00FFFFFF\fscx100\fscy100} ON.
+Dialogue: 0,0:01:07.44,0:01:08.20,Cap,,0,0,0,,OIL {\c&H0000D4FF\fscx108\fscy108}ON.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:08.20,0:01:08.64,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THEN,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:08.64,0:01:08.72,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100} CLEAR DOT
+Dialogue: 0,0:01:08.72,0:01:09.00,Cap,,0,0,0,,A {\c&H0000D4FF\fscx108\fscy108}CLEAR{\c&H00FFFFFF\fscx100\fscy100} DOT
+Dialogue: 0,0:01:09.00,0:01:09.28,Cap,,0,0,0,,A CLEAR {\c&H0000D4FF\fscx108\fscy108}DOT{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:09.28,0:01:09.64,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SEALS{\c&H00FFFFFF\fscx100\fscy100} IT IN,
+Dialogue: 0,0:01:09.64,0:01:09.86,Cap,,0,0,0,,SEALS {\c&H0000D4FF\fscx108\fscy108}IT{\c&H00FFFFFF\fscx100\fscy100} IN,
+Dialogue: 0,0:01:09.86,0:01:10.28,Cap,,0,0,0,,SEALS IT {\c&H0000D4FF\fscx108\fscy108}IN,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:10.28,0:01:10.46,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SO{\c&H00FFFFFF\fscx100\fscy100} IT KEEPS
+Dialogue: 0,0:01:10.46,0:01:10.60,Cap,,0,0,0,,SO {\c&H0000D4FF\fscx108\fscy108}IT{\c&H00FFFFFF\fscx100\fscy100} KEEPS
+Dialogue: 0,0:01:10.60,0:01:10.78,Cap,,0,0,0,,SO IT {\c&H0000D4FF\fscx108\fscy108}KEEPS{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:10.78,0:01:11.12,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}SOAKING{\c&H00FFFFFF\fscx100\fscy100} ALL NIGHT.
+Dialogue: 0,0:01:11.12,0:01:11.56,Cap,,0,0,0,,SOAKING {\c&H0000D4FF\fscx108\fscy108}ALL{\c&H00FFFFFF\fscx100\fscy100} NIGHT.
+Dialogue: 0,0:01:11.56,0:01:12.44,Cap,,0,0,0,,SOAKING ALL {\c&H0000D4FF\fscx108\fscy108}NIGHT.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:12.48,0:01:12.70,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}NO{\c&H00FFFFFF\fscx100\fscy100} COLD CAN.
+Dialogue: 0,0:01:12.70,0:01:13.06,Cap,,0,0,0,,NO {\c&H0000D4FF\fscx108\fscy108}COLD{\c&H00FFFFFF\fscx100\fscy100} CAN.
+Dialogue: 0,0:01:13.06,0:01:13.94,Cap,,0,0,0,,NO COLD {\c&H0000D4FF\fscx108\fscy108}CAN.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:13.94,0:01:14.22,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}NO{\c&H00FFFFFF\fscx100\fscy100} ACID.
+Dialogue: 0,0:01:14.22,0:01:15.18,Cap,,0,0,0,,NO {\c&H0000D4FF\fscx108\fscy108}ACID.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:15.18,0:01:15.62,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}NOBODY{\c&H00FFFFFF\fscx100\fscy100} HOLDS HIM
+Dialogue: 0,0:01:15.62,0:01:15.96,Cap,,0,0,0,,NOBODY {\c&H0000D4FF\fscx108\fscy108}HOLDS{\c&H00FFFFFF\fscx100\fscy100} HIM
+Dialogue: 0,0:01:15.96,0:01:16.14,Cap,,0,0,0,,NOBODY HOLDS {\c&H0000D4FF\fscx108\fscy108}HIM{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:16.14,0:01:17.04,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}DOWN.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:17.06,0:01:17.36,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}MY{\c&H00FFFFFF\fscx100\fscy100} SON'S FIVE.
+Dialogue: 0,0:01:17.36,0:01:17.74,Cap,,0,0,0,,MY {\c&H0000D4FF\fscx108\fscy108}SON'S{\c&H00FFFFFF\fscx100\fscy100} FIVE.
+Dialogue: 0,0:01:17.74,0:01:18.56,Cap,,0,0,0,,MY SON'S {\c&H0000D4FF\fscx108\fscy108}FIVE.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:18.56,0:01:18.72,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HE{\c&H00FFFFFF\fscx100\fscy100} HATED THE
+Dialogue: 0,0:01:18.72,0:01:19.14,Cap,,0,0,0,,HE {\c&H0000D4FF\fscx108\fscy108}HATED{\c&H00FFFFFF\fscx100\fscy100} THE
+Dialogue: 0,0:01:19.14,0:01:19.36,Cap,,0,0,0,,HE HATED {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:19.36,0:01:20.20,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}FREEZE.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:20.34,0:01:20.98,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}THIS,{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:20.98,0:01:21.24,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HE{\c&H00FFFFFF\fscx100\fscy100} JUST STICKS
+Dialogue: 0,0:01:21.24,0:01:21.42,Cap,,0,0,0,,HE {\c&H0000D4FF\fscx108\fscy108}JUST{\c&H00FFFFFF\fscx100\fscy100} STICKS
+Dialogue: 0,0:01:21.42,0:01:21.62,Cap,,0,0,0,,HE JUST {\c&H0000D4FF\fscx108\fscy108}STICKS{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:21.62,0:01:21.82,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HIS{\c&H00FFFFFF\fscx100\fscy100} FOOT OUT
+Dialogue: 0,0:01:21.82,0:01:22.00,Cap,,0,0,0,,HIS {\c&H0000D4FF\fscx108\fscy108}FOOT{\c&H00FFFFFF\fscx100\fscy100} OUT
+Dialogue: 0,0:01:22.00,0:01:22.16,Cap,,0,0,0,,HIS FOOT {\c&H0000D4FF\fscx108\fscy108}OUT{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:22.16,0:01:22.30,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}AT{\c&H00FFFFFF\fscx100\fscy100} BEDTIME.
+Dialogue: 0,0:01:22.30,0:01:22.62,Cap,,0,0,0,,AT {\c&H0000D4FF\fscx108\fscy108}BEDTIME.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:22.62,0:01:23.60,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}DOES{\c&H00FFFFFF\fscx100\fscy100} IT STING?
+Dialogue: 0,0:01:23.60,0:01:24.30,Cap,,0,0,0,,DOES {\c&H0000D4FF\fscx108\fscy108}IT{\c&H00FFFFFF\fscx100\fscy100} STING?
+Dialogue: 0,0:01:24.30,0:01:25.24,Cap,,0,0,0,,DOES IT {\c&H0000D4FF\fscx108\fscy108}STING?{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:25.52,0:01:25.78,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HE{\c&H00FFFFFF\fscx100\fscy100} SAYS IT'S
+Dialogue: 0,0:01:25.78,0:01:26.00,Cap,,0,0,0,,HE {\c&H0000D4FF\fscx108\fscy108}SAYS{\c&H00FFFFFF\fscx100\fscy100} IT'S
+Dialogue: 0,0:01:26.00,0:01:26.28,Cap,,0,0,0,,HE SAYS {\c&H0000D4FF\fscx108\fscy108}IT'S{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:26.28,0:01:26.48,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}JUST{\c&H00FFFFFF\fscx100\fscy100} A LITTLE
+Dialogue: 0,0:01:26.48,0:01:26.68,Cap,,0,0,0,,JUST {\c&H0000D4FF\fscx108\fscy108}A{\c&H00FFFFFF\fscx100\fscy100} LITTLE
+Dialogue: 0,0:01:26.68,0:01:26.80,Cap,,0,0,0,,JUST A {\c&H0000D4FF\fscx108\fscy108}LITTLE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:26.80,0:01:27.78,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}COOL.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:27.80,0:01:27.94,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}WE{\c&H00FFFFFF\fscx100\fscy100} CALL IT
+Dialogue: 0,0:01:27.94,0:01:28.20,Cap,,0,0,0,,WE {\c&H0000D4FF\fscx108\fscy108}CALL{\c&H00FFFFFF\fscx100\fscy100} IT
+Dialogue: 0,0:01:28.20,0:01:28.34,Cap,,0,0,0,,WE CALL {\c&H0000D4FF\fscx108\fscy108}IT{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:28.34,0:01:28.50,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}HIS{\c&H00FFFFFF\fscx100\fscy100} WART
+Dialogue: 0,0:01:28.50,0:01:28.80,Cap,,0,0,0,,HIS {\c&H0000D4FF\fscx108\fscy108}WART{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:28.80,0:01:30.04,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}CHAPSTICK.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:32.94,0:01:33.50,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}TWO{\c&H00FFFFFF\fscx100\fscy100} MINUTES AT
+Dialogue: 0,0:01:33.50,0:01:33.80,Cap,,0,0,0,,TWO {\c&H0000D4FF\fscx108\fscy108}MINUTES{\c&H00FFFFFF\fscx100\fscy100} AT
+Dialogue: 0,0:01:33.80,0:01:34.14,Cap,,0,0,0,,TWO MINUTES {\c&H0000D4FF\fscx108\fscy108}AT{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:34.14,0:01:35.10,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}BEDTIME.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:35.14,0:01:35.40,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}NO{\c&H00FFFFFF\fscx100\fscy100} HOLDING HIM
+Dialogue: 0,0:01:35.40,0:01:35.70,Cap,,0,0,0,,NO {\c&H0000D4FF\fscx108\fscy108}HOLDING{\c&H00FFFFFF\fscx100\fscy100} HIM
+Dialogue: 0,0:01:35.70,0:01:35.92,Cap,,0,0,0,,NO HOLDING {\c&H0000D4FF\fscx108\fscy108}HIM{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:35.92,0:01:36.80,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}DOWN.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:36.84,0:01:36.94,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}NO{\c&H00FFFFFF\fscx100\fscy100} FIGHT.
+Dialogue: 0,0:01:36.94,0:01:37.48,Cap,,0,0,0,,NO {\c&H0000D4FF\fscx108\fscy108}FIGHT.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:37.48,0:01:37.74,Cap,,0,0,0,,{\an2\pos(540,1580)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}ANOTHER{\c&H00FFFFFF\fscx100\fscy100} FREEZE HE
+Dialogue: 0,0:01:37.74,0:01:38.34,Cap,,0,0,0,,{\an2\pos(540,1580)}ANOTHER {\c&H0000D4FF\fscx108\fscy108}FREEZE{\c&H00FFFFFF\fscx100\fscy100} HE
+Dialogue: 0,0:01:38.34,0:01:38.78,Cap,,0,0,0,,{\an2\pos(540,1580)}ANOTHER FREEZE {\c&H0000D4FF\fscx108\fscy108}HE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:38.78,0:01:39.08,Cap,,0,0,0,,{\an2\pos(540,1580)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}CRIES{\c&H00FFFFFF\fscx100\fscy100} THROUGH.
+Dialogue: 0,0:01:39.08,0:01:39.88,Cap,,0,0,0,,{\an2\pos(540,1580)}CRIES {\c&H0000D4FF\fscx108\fscy108}THROUGH.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:39.88,0:01:40.12,Cap,,0,0,0,,{\an2\pos(540,1580)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}OR{\c&H00FFFFFF\fscx100\fscy100} TWO MINUTES
+Dialogue: 0,0:01:40.12,0:01:40.50,Cap,,0,0,0,,{\an2\pos(540,1580)}OR {\c&H0000D4FF\fscx108\fscy108}TWO{\c&H00FFFFFF\fscx100\fscy100} MINUTES
+Dialogue: 0,0:01:40.50,0:01:40.72,Cap,,0,0,0,,{\an2\pos(540,1580)}OR TWO {\c&H0000D4FF\fscx108\fscy108}MINUTES{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:40.72,0:01:40.94,Cap,,0,0,0,,{\an2\pos(540,1580)}{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}AT{\c&H00FFFFFF\fscx100\fscy100} BEDTIME.
+Dialogue: 0,0:01:40.94,0:01:41.90,Cap,,0,0,0,,{\an2\pos(540,1580)}AT {\c&H0000D4FF\fscx108\fscy108}BEDTIME.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:42.00,0:01:42.32,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}TAP{\c&H00FFFFFF\fscx100\fscy100} THE LINK
+Dialogue: 0,0:01:42.32,0:01:42.54,Cap,,0,0,0,,TAP {\c&H0000D4FF\fscx108\fscy108}THE{\c&H00FFFFFF\fscx100\fscy100} LINK
+Dialogue: 0,0:01:42.54,0:01:42.66,Cap,,0,0,0,,TAP THE {\c&H0000D4FF\fscx108\fscy108}LINK{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:42.66,0:01:43.04,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}BELOW{\c&H00FFFFFF\fscx100\fscy100} AND CHECK
+Dialogue: 0,0:01:43.04,0:01:43.36,Cap,,0,0,0,,BELOW {\c&H0000D4FF\fscx108\fscy108}AND{\c&H00FFFFFF\fscx100\fscy100} CHECK
+Dialogue: 0,0:01:43.36,0:01:43.60,Cap,,0,0,0,,BELOW AND {\c&H0000D4FF\fscx108\fscy108}CHECK{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:43.60,0:01:43.80,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}IF{\c&H00FFFFFF\fscx100\fscy100} BUY TWO
+Dialogue: 0,0:01:43.80,0:01:44.06,Cap,,0,0,0,,IF {\c&H0000D4FF\fscx108\fscy108}BUY{\c&H00FFFFFF\fscx100\fscy100} TWO
+Dialogue: 0,0:01:44.06,0:01:44.32,Cap,,0,0,0,,IF BUY {\c&H0000D4FF\fscx108\fscy108}TWO{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:44.32,0:01:44.72,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}GET{\c&H00FFFFFF\fscx100\fscy100} ONE FREE
+Dialogue: 0,0:01:44.72,0:01:44.98,Cap,,0,0,0,,GET {\c&H0000D4FF\fscx108\fscy108}ONE{\c&H00FFFFFF\fscx100\fscy100} FREE
+Dialogue: 0,0:01:44.98,0:01:45.30,Cap,,0,0,0,,GET ONE {\c&H0000D4FF\fscx108\fscy108}FREE{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:45.30,0:01:45.58,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}IS{\c&H00FFFFFF\fscx100\fscy100} STILL ON.
+Dialogue: 0,0:01:45.58,0:01:45.80,Cap,,0,0,0,,IS {\c&H0000D4FF\fscx108\fscy108}STILL{\c&H00FFFFFF\fscx100\fscy100} ON.
+Dialogue: 0,0:01:45.80,0:01:46.46,Cap,,0,0,0,,IS STILL {\c&H0000D4FF\fscx108\fscy108}ON.{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:46.46,0:01:46.90,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}AND{\c&H00FFFFFF\fscx100\fscy100} YOU'RE COVERED
+Dialogue: 0,0:01:46.90,0:01:47.14,Cap,,0,0,0,,AND {\c&H0000D4FF\fscx108\fscy108}YOU'RE{\c&H00FFFFFF\fscx100\fscy100} COVERED
+Dialogue: 0,0:01:47.14,0:01:47.42,Cap,,0,0,0,,AND YOU'RE {\c&H0000D4FF\fscx108\fscy108}COVERED{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:47.42,0:01:47.68,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}BY{\c&H00FFFFFF\fscx100\fscy100} OUR 90-DAY
+Dialogue: 0,0:01:47.68,0:01:47.84,Cap,,0,0,0,,BY {\c&H0000D4FF\fscx108\fscy108}OUR{\c&H00FFFFFF\fscx100\fscy100} 90-DAY
+Dialogue: 0,0:01:47.84,0:01:48.44,Cap,,0,0,0,,BY OUR {\c&H0000D4FF\fscx108\fscy108}90-DAY{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:48.44,0:01:48.96,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}MONEY-BACK{\c&H00FFFFFF\fscx100\fscy100}
+Dialogue: 0,0:01:48.96,0:01:50.08,Cap,,0,0,0,,{\fad(40,0)}{\c&H0000D4FF\fscx108\fscy108}GUARANTEE.{\c&H00FFFFFF\fscx100\fscy100}

@@ -10,6 +10,11 @@ Search stock (results + a numbered contact sheet to choose from):
   vs fetch search "handshake" --type photo --provider unsplash,pexels --project launch
 Download chosen results (numbers from the sheet / table):
   vs fetch get video-studio/projects/launch/work/assets/city-night-traffic.video.json 2 5 7
+Internet Archive films: look inside before cutting, then cut only the seconds you need (verified, with provenance):
+  vs fetch search "children eating bananas black and white" --provider archive --project launch
+  vs fetch inspect <results.json> 3 --project launch          (scenes + keyframe sheet; multi-clip items: clip list)
+  vs fetch get <results.json> 3 --section 5:00-5:08 --project launch
+  vs fetch inspect archive:AboutBan1935 --window 4:00-9:00    (any item by identifier)
 Bring in anything the editor gives (files, folders, zips, links):
   vs add ~/Desktop/shoot/ --project launch                  (footage -> raw/, by type)
   vs add logo.png font.otf look.cube --project launch       (-> assets/logos, fonts, luts)
@@ -44,6 +49,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from vs_common import IMAGE_EXT, die, fmt_ts, load_json, need, probe, run, save_json  # noqa: E402
+import archive as ia  # noqa: E402
 
 UA = "video-studio-claude-plugin/2.0 (+https://claude.com/claude-code)"
 KEYS_FILE = Path(os.environ.get("VS_KEYS_FILE", Path.home() / ".config" / "video-studio" / "keys.env"))
@@ -63,8 +69,6 @@ PROVIDERS = {  # type -> providers tried in this order by --provider auto
     "music": ["jamendo", "openverse", "incompetech", "ccmixter", "archive", "freesound"],
     "sfx": ["openverse", "freesound", "archive"],
 }
-# Archive.org licence filter: public domain marks and attribution-only CC licences (no NC/ND).
-ARCHIVE_LICENSES = ('licenseurl:(*publicdomain* OR *licenses/by/* OR *licenses/by-sa/*)')
 VIDEO_EXT = {".mp4", ".mov", ".m4v", ".mkv", ".webm", ".avi", ".mts", ".m2ts", ".mxf", ".mpg", ".mpeg"}
 AUDIO_EXT = {".mp3", ".wav", ".m4a", ".aac", ".flac", ".aiff", ".aif", ".ogg", ".opus"}
 KIND_DIR = {"raw": "raw", "broll": "assets/broll", "image": "assets/images", "photo": "assets/images",
@@ -99,7 +103,8 @@ def http_json(url, headers=None, params=None):
                 return json.loads(r.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             if e.code in (429, 502, 503) and attempt < 2:
-                time.sleep(2 * (attempt + 1))
+                ra = e.headers.get("Retry-After") if e.headers else None
+                time.sleep(min(float(ra), 60) if ra and ra.strip().isdigit() else 2 * (attempt + 1))
                 continue
             raise RuntimeError(f"HTTP {e.code} from {urllib.parse.urlsplit(url).netloc}: {e.read()[:200]!r}")
         except urllib.error.URLError as e:
@@ -380,27 +385,25 @@ def s_nasa(q, kind, a, key):
 
 
 def s_archive(q, kind, a, key):
-    """Internet Archive: public-domain and CC films, newsreels, home movies (Prelinger), audio, images."""
+    """Internet Archive: public-domain and CC films (Prelinger, NASA, newsreels, stock footage), audio, images.
+    Two-stage brief search ranked by where the words matched, collection tier and popularity (see archive.py)."""
     media = {"video": "movies", "photo": "image", "music": "audio", "sfx": "audio"}[kind]
-    lic = "" if a.allow_nc else f" AND {ARCHIVE_LICENSES}"
-    query = f"({q}) AND mediatype:{media}{lic}"
-    d = http_json(f"{base('archive')}/advancedsearch.php", params={
-        "q": query, "fl[]": ["identifier", "title", "creator", "licenseurl", "year", "downloads"],
-        "rows": a.n, "output": "json", "sort[]": "downloads desc"})
+    docs = ia.search(q, media, a.n, http_json, licence="stated" if a.allow_nc else "commercial",
+                     collections=[c.strip() for c in a.collection.split(",")] if getattr(a, "collection", None) else None)
     out = []
-    for doc in (d.get("response") or {}).get("docs", []):
-        ident = doc["identifier"]
-        lic_url = doc.get("licenseurl") or ""
-        pd = "publicdomain" in lic_url
-        parts = [x for x in lic_url.split("/licenses/")[-1].split("/")[:2] if x]
-        name = ("Public domain" if pd else "CC " + " ".join([parts[0].upper(), *parts[1:]])) if lic_url \
-            else "unknown (check item page)"
+    for doc in docs:
+        ident, lic = doc["identifier"], doc["_license"]
         creator = doc.get("creator")
+        why = "; ".join(doc["_why"][:3])
         out.append(r_(provider="archive", id=ident, title=doc.get("title") or ident, kind=kind,
                       thumb=f"{base('archive')}/services/img/{ident}", page_url=f"https://archive.org/details/{ident}",
-                      author=", ".join(creator) if isinstance(creator, list) else creator, license=name,
-                      license_url=lic_url or None, attribution_required=bool(lic_url) and not pd,
-                      year=doc.get("year"), files=[]))
+                      author=", ".join(creator) if isinstance(creator, list) else creator, license=lic["label"],
+                      license_url=lic["license_url"], commercial_use=lic["commercial_use"],
+                      attribution_required=lic["attribution_required"] != "no",
+                      duration=ia._num(doc.get("runtime")), year=doc.get("year"), color=ia._flat(doc.get("color")) or None,
+                      tier=doc["_tier"], score=doc["_score"],
+                      tags=f"tier {doc['_tier']}" + (f"; matched {why}" if why else "") + ("" if doc["_strict"] else " (some words)"),
+                      files=[]))
     return out
 
 
@@ -706,8 +709,10 @@ def cmd_search(a):
     else:
         out = workspace() / "searches" / f"{slug(a.query)}_{kind}"
     save_json(out.with_suffix(".json"), {"query": a.query, "type": kind, "searched": now(), "results": results})
+    has_notes = kind in ("video", "photo") and any(r["provider"] == "archive" for r in results)
     lines = [f"# {kind} results for \"{a.query}\"", "",
-             "| # | provider | title | dur | size | licence | credit |", "|---|---|---|---|---|---|---|"]
+             "| # | provider | title | dur | size | licence | credit |" + (" why |" if has_notes else ""),
+             "|---|---|---|---|---|---|---|" + ("---|" if has_notes else "")]
     if kind in ("music", "sfx"):
         lines[2:4] = ["| # | provider | title | dur | bpm/speed | tags | licence | credit |",
                       "|---|---|---|---|---|---|---|---|"]
@@ -721,7 +726,9 @@ def cmd_search(a):
             tags = (r.get("tags") or "")[:60].replace("|", "/")
             lines.append(f"| {r['n']} | {r['provider']} | {title} | {dur} | {tempo} | {tags} | {r.get('license')} | {credit} |")
         else:
-            lines.append(f"| {r['n']} | {r['provider']} | {title} | {dur} | {size} | {r.get('license')} | {credit} |")
+            notes_ = (r.get("tags") or "")[:70].replace("|", "/") if r["provider"] == "archive" else ""
+            lines.append(f"| {r['n']} | {r['provider']} | {title} | {dur} | {size} | {r.get('license')} | {credit} |"
+                         + (f" {notes_} |" if has_notes else ""))
     out.with_suffix(".md").write_text("\n".join(lines + ([""] + [f"- {n}" for n in notes] if notes else [])) + "\n",
                                       encoding="utf-8")
     sheet = contact_sheet(results, out.with_suffix(".png")) if kind in ("video", "photo") and results else None
@@ -742,10 +749,51 @@ def nasa_files(r):
     return sorted(good, key=lambda u: next((i for i, t in enumerate(rank) if t in u), 9))[:1]
 
 
+def archive_result(ident, kind="video"):
+    """A result entry for any archive.org item named as archive:<identifier>."""
+    return {"n": 1, "provider": "archive", "id": ident, "kind": kind, "title": ident,
+            "page_url": f"https://archive.org/details/{ident}"}
+
+
+def load_results(spec, numbers):
+    if spec.startswith("archive:"):
+        return {"query": spec, "results": [archive_result(spec.split(":", 1)[1])]}, numbers or [1]
+    if not Path(spec).exists():
+        die(f"results file not found: {spec} (run vs fetch search first, or pass archive:<identifier>)")
+    return load_json(spec), numbers
+
+
+def archive_get(n_, r, folder, a, data):
+    """Archive video: the best rendition (or --file), and with --section a verified re-encoded cut + provenance."""
+    it = ia.item(http_json, r["id"])
+    g, f = ia.pick_file(it, a.file)
+    url = ia.file_url(r["id"], f["name"])
+    lic = it["license"]
+    r.update(title=it["title"], author=it["creator"], license=lic["label"], license_url=lic["license_url"],
+             commercial_use=lic["commercial_use"], attribution_required=lic["attribution_required"] != "no")
+    stem = f"archive_{slug(r['id'], 24)}_{slug(it['title'], 30)}"
+    if not a.section:
+        dest = folder / f"{stem}{Path(f['name']).suffix.lower() or '.mp4'}"
+        download(url, dest)
+        return dest, url, None
+    need("ffmpeg")
+    t0, t1 = parse_section(a.section)
+    length = f["length"] or g["best"]["length"]
+    if length and t0 >= length:
+        raise RuntimeError(f"section starts at {t0:.1f} s but {f['name']} is {length:.1f} s long")
+    dest = folder / f"{stem}_{t0:07.2f}-{t1:07.2f}.mp4"
+    checked = ia.cut(url, t0, t1 - t0, dest, UA, audio=not a.no_audio, source_length=length)
+    prov = ia.provenance(it, f, t0, checked["asked"], dest, UA, checked)
+    dest.with_suffix(".provenance.json").write_text(json.dumps(prov, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    r["credit_line"] = prov["attribution_text"]
+    print(f"#{n_}: cut {checked['duration']:.3f} s (asked {checked['asked']:.3f} s, 0 decode errors) from {f['name']}")
+    return dest, url, prov
+
+
 def cmd_get(a):
-    if not Path(a.results).exists():
-        die(f"results file not found: {a.results} (run vs fetch search first)")
-    data = load_json(a.results)
+    data, a.numbers = load_results(a.results, a.numbers)
+    if not a.numbers:
+        die("which results? e.g. vs fetch get <results.json> 2 5")
     by_n = {r["n"]: r for r in data["results"]}
     keys = load_keys()
     target = {"sd": 720, "hd": 1080, "4k": 2160}[a.quality]
@@ -766,6 +814,14 @@ def cmd_get(a):
             if not dest:
                 continue
             log_and_report(n_, r, dest, kind, r["page_url"], data)
+            continue
+        if r["provider"] == "archive" and r["kind"] == "video":
+            try:
+                dest, url, prov = archive_get(n_, r, folder, a, data)
+            except Exception as e:
+                print(f"#{n_}: {e}", file=sys.stderr)
+                continue
+            log_and_report(n_, r, dest, kind, url, data, prov)
             continue
         if r["provider"] == "nasa":
             urls = nasa_files(r)
@@ -799,15 +855,46 @@ def cmd_get(a):
         log_and_report(n_, r, dest, kind, url, data)
 
 
-def log_and_report(n_, r, dest, kind, url, data):
+def log_and_report(n_, r, dest, kind, url, data, prov=None):
     entry = {k: r.get(k) for k in ("provider", "id", "title", "author", "author_url", "page_url", "license",
-                                    "license_url", "attribution_required", "credit_line")}
+                                    "license_url", "attribution_required", "commercial_use", "credit_line")}
     entry.update(file=str(dest), kind=kind, source=url, downloaded=now(), query=data["query"])
+    if prov:
+        entry.update(segment=prov["segment"], source_file=prov["source"]["file"], source_md5=prov["source"]["file_md5"],
+                     clip_sha256=prov["clip_sha256"], provenance=str(dest.with_suffix(".provenance.json")))
     ledger_add(dest.parent, entry)
     info = probe(str(dest)) if dest.suffix.lower() not in IMAGE_EXT else {}
     extra = (f" {fmt_ts(info['duration'])}" + (f" {info['width']}x{info['height']}" if info.get("width") else "")) \
         if info.get("duration") else ""
     print(f"#{n_} -> {dest}{extra}  [{r.get('license')}]")
+
+
+def cmd_inspect(a):
+    """Look inside an archive.org film before cutting: scenes with timings + a keyframe sheet (or a clip list)."""
+    need("ffmpeg")
+    if a.results.startswith("archive:"):
+        ident = a.results.split(":", 1)[1]
+    else:
+        data, _ = load_results(a.results, [])
+        r = {x["n"]: x for x in data["results"]}.get(a.number)
+        if not r:
+            die(f"#{a.number} is not in {a.results}")
+        if r["provider"] != "archive" or r["kind"] != "video":
+            die(f"#{a.number} is a {r['provider']} {r['kind']} result; inspect works on Internet Archive videos")
+        ident = r["id"]
+    hint = None if a.results.startswith("archive:") else a.results
+    if a.out:
+        out = Path(a.out)
+    else:
+        where_ = (Path(a.to) if a.to else project_dir(a, hint) / "work" / "assets" if (a.project or a.library or hint)
+                  else workspace() / "searches")
+        out = where_ / f"inspect_{slug(ident, 40)}"
+    window = parse_section(a.window) if a.window else None
+    data, png = ia.inspect(http_json, download, ident, out, UA, name=a.file, window=window, page=a.page)
+    n = len(data.get("scenes") or data.get("clips") or [])
+    print(f"{data['mode']}: {n} {'scenes' if data['mode'] == 'scenes' else 'clips'} -> {out.with_suffix('.md')}"
+          + (f", sheet {png}" if png else ""))
+    print(f"licence: {data['license']['label']} (commercial use {data['license']['commercial_use']})")
 
 
 def parse_section(sec):
@@ -1054,17 +1141,28 @@ def main():
     s.add_argument("--instrumental", action="store_true", help="music: no vocals (background beds under speech)")
     s.add_argument("--bpm-min", type=float)
     s.add_argument("--bpm-max", type=float)
+    s.add_argument("--collection", help="archive.org: only these collections, e.g. prelinger,nasa")
     s.add_argument("-o", "--out", help="output path without extension")
     where(s)
     g = sub.add_parser("get")
     g.add_argument("results")
-    g.add_argument("numbers", nargs="+", type=int)
+    g.add_argument("numbers", nargs="*", type=int)
     g.add_argument("--quality", choices=["sd", "hd", "4k"], default="hd")
     g.add_argument("--as", dest="kind", choices=sorted(KIND_DIR))
     g.add_argument("--section", help="only this part of a long video/audio, source time: 95-110 or 1:35-1:50")
     g.add_argument("--i-have-rights", action="store_true",
                    help="download a non-CC YouTube result because the person owns/licensed it")
+    g.add_argument("--file", help="archive.org: which video file of the item (from vs fetch inspect)")
+    g.add_argument("--no-audio", action="store_true", help="archive.org cuts: picture only")
     where(g)
+    i = sub.add_parser("inspect", help="scenes + keyframes of an Internet Archive film before cutting")
+    i.add_argument("results", help="results JSON from vs fetch search, or archive:<identifier>")
+    i.add_argument("number", nargs="?", type=int, default=1)
+    i.add_argument("--file", help="a video file of the item (multi-clip items list them)")
+    i.add_argument("--window", help="source range to scan, max 15 min: 4:00-9:00 (default: the first 15 min)")
+    i.add_argument("--page", type=int, default=1, help="multi-clip items: which page of 60 clips")
+    i.add_argument("-o", "--out", help="output path without extension")
+    where(i)
     d = sub.add_parser("add")
     d.add_argument("inputs", nargs="+")
     d.add_argument("--as", dest="kind", choices=sorted(KIND_DIR))
@@ -1081,7 +1179,8 @@ def main():
     c = sub.add_parser("credits")
     where(c)
     a = ap.parse_args()
-    {"search": cmd_search, "get": cmd_get, "add": cmd_add, "keys": cmd_keys, "credits": cmd_credits}[a.cmd](a)
+    {"search": cmd_search, "get": cmd_get, "inspect": cmd_inspect, "add": cmd_add, "keys": cmd_keys,
+     "credits": cmd_credits}[a.cmd](a)
 
 
 if __name__ == "__main__":

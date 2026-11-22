@@ -34,7 +34,7 @@ def energy(path, rate=10):
 
 
 def loudness(path):
-    p = run(["ffmpeg", "-hide_banner", "-nostats", "-i", path, "-af", "ebur128", "-f", "null", "-"])
+    p = run(["ffmpeg", "-hide_banner", "-nostats", "-i", path, "-vn", "-af", "ebur128", "-f", "null", "-"])
     m = re.search(r"I:\s+(-?[\d.]+) LUFS", p.stderr[p.stderr.rfind("Summary:"):])
     return float(m.group(1)) if m else None
 

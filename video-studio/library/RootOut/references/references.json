@@ -1,0 +1,184 @@
+[
+ {
+  "key": "amoils-001",
+  "label": "Amoils H-Warts #001",
+  "bm": "amoils-warts-h-warts-20261110",
+  "cr": "creative-amoils-warts-h-warts-20261110-996534642081945",
+  "sets": [
+   "1",
+   "1B"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "amoils-046",
+  "label": "Amoils #046",
+  "bm": "amoils-com-20261110",
+  "cr": "creative-amoils-com-20261110-1423076468817359",
+  "sets": [
+   "2"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "sofyre-035",
+  "label": "SoFyre #035",
+  "bm": "sofyre-com-20261118",
+  "cr": "creative-sofyre-com-20261118-1642965773253625",
+  "sets": [
+   "4"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "sofyre-004",
+  "label": "SoFyre #004",
+  "bm": "sofyre-com-20261118",
+  "cr": "creative-sofyre-com-20261118-932407452929259",
+  "sets": [
+   "5"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "sofyre-002",
+  "label": "SoFyre #002 (sister cut of #004)",
+  "bm": "sofyre-com-20261118",
+  "cr": "creative-sofyre-com-20261118-1119643240402494",
+  "sets": [
+   "5"
+  ],
+  "role": "sister cut"
+ },
+ {
+  "key": "pestlab-026",
+  "label": "PestLab #026",
+  "bm": "pestlab-co-benchmark-20261104",
+  "cr": "creative-pestlab-co-benchmark-20261104-2033619897349355",
+  "sets": [
+   "6"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "azure-007",
+  "label": "Azure Boutique #007",
+  "bm": "hama-saving-azureboutique-co-20260919",
+  "cr": "creative-hama-saving-azureboutique-co-20260919-1419842955696166",
+  "sets": [
+   "7"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "amoils-003",
+  "label": "Amoils H-Warts #003",
+  "bm": "amoils-warts-h-warts-20261110",
+  "cr": "creative-amoils-warts-h-warts-20261110-4332672960298409",
+  "sets": [
+   "13"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "amoils-004",
+  "label": "Amoils H-Warts #004",
+  "bm": "amoils-warts-h-warts-20261110",
+  "cr": "creative-amoils-warts-h-warts-20261110-1864910957451503",
+  "sets": [
+   "14"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "amoils-039",
+  "label": "Amoils H-Warts #039 (UK cut of #004)",
+  "bm": "amoils-warts-h-warts-20261110",
+  "cr": "creative-amoils-warts-h-warts-20261110-807447922106734",
+  "sets": [
+   "14"
+  ],
+  "role": "alt cut"
+ },
+ {
+  "key": "amoils-022",
+  "label": "Amoils H-Warts #022",
+  "bm": "amoils-warts-h-warts-20261110",
+  "cr": "creative-amoils-warts-h-warts-20261110-4217474961875639",
+  "sets": [
+   "15"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "amoils-048",
+  "label": "Amoils H-Warts #048 (cut of #022)",
+  "bm": "amoils-warts-h-warts-20261110",
+  "cr": "creative-amoils-warts-h-warts-20261110-719197644509837",
+  "sets": [
+   "15"
+  ],
+  "role": "alt cut"
+ },
+ {
+  "key": "amoils-023",
+  "label": "Amoils H-Warts #023 (cut of #022)",
+  "bm": "amoils-warts-h-warts-20261110",
+  "cr": "creative-amoils-warts-h-warts-20261110-1436628610780416",
+  "sets": [
+   "15",
+   "1B"
+  ],
+  "role": "alt cut"
+ },
+ {
+  "key": "amoils-040",
+  "label": "Amoils H-Warts #040",
+  "bm": "amoils-warts-h-warts-20261110",
+  "cr": "creative-amoils-warts-h-warts-20261110-929748905821441",
+  "sets": [
+   "16"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "rosabella-skit",
+  "label": "Rosabella doctor/patient skit",
+  "bm": "26739709-fd91-4ab6-897f-39821c797ee2",
+  "cr": "50a1c073-aae5-4dad-b147-13cd882b7353",
+  "sets": [
+   "17"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "pestlab-009",
+  "label": "PestLab #009",
+  "bm": "pestlab-co-benchmark-20261104",
+  "cr": "creative-pestlab-co-benchmark-20261104-890882434018739",
+  "sets": [
+   "18"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "therapet-054",
+  "label": "TheraPet #054",
+  "bm": "411c774f-2c24-41d1-a904-e7437c314e9a",
+  "cr": "creative-411c774f-2c24-41d1-a904-e7437c314e9a-1429057141452291",
+  "sets": [
+   "19"
+  ],
+  "role": "swipe"
+ },
+ {
+  "key": "veloma-19",
+  "label": "Veloma #19 'Not chafing' long form",
+  "bm": "hama-saving-veloma-store-20260916",
+  "cr": "creative-hama-saving-veloma-store-20260916-1975436133115869",
+  "sets": [
+   "20"
+  ],
+  "role": "swipe"
+ }
+]

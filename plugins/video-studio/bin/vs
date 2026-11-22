@@ -27,7 +27,7 @@ init_ws() {
 cmd="${1:-help}"
 shift || true
 case "$cmd" in
-  transcribe|pack|propose_cuts|silences|render|captions|filmstrip|qa|export_edl|ingest|scenes|beats|sync|multicam|convert|thumbs|sfx|packs|music|proxy|breakdown|edl|notes|review|ai|translate|ads|watch|gen|higgsfield|task|learn)
+  transcribe|pack|propose_cuts|silences|render|captions|filmstrip|qa|export_edl|ingest|scenes|beats|sync|multicam|convert|thumbs|sfx|packs|music|proxy|breakdown|edl|notes|review|ai|translate|ads|watch|gen|higgsfield|task|learn|present|social|lessons|fix|deliver)
     exec "$py" "$tools/$cmd.py" "$@" ;;
   cuts) exec "$py" "$tools/propose_cuts.py" "$@" ;;
   fetch) exec "$py" "$tools/assets.py" "$@" ;;
@@ -81,6 +81,16 @@ vs <command>                                         video-studio plugin
  get media
   fetch search "<query>" --type video|photo|music|sfx --project P [--provider archive,youtube,wikipedia,...]
   fetch get <results.json> 2 5 7 [--quality hd --section 95-110]  download picks / only a section (logged with licences)
+  fetch inspect <results.json> N | archive:<id> [--window 4:00-9:00 --file f --page 2]   archive film: scenes + keyframe sheet
+  fix <project> "<time> <note>" ...   revision step 1: the exact words, pauses, shots and cut commands at each note
+  fix <project> --render [--how "..."]  revision step 2: captions, render only what changed, check, before/after
+  lessons brief|add|learn|check|list|retire --brand <Client>   what feedback taught us, applied and QA-checked
+  present <final.mp4> --project P [--task CODE --version v2]   Frame.io-style review page: comments pinned to frames
+  present notes <comments.json|csv> -o notes.txt | present link <dir> <url> | present pref [ask|always|never]
+  deliver setup <Drive folder link> --name N   one-time: delivery target + its Apps Script (any file size, no local copy)
+  deliver plan <project> [--to N]   latest version of every file -> request | deliver upload <project> <res.json> | deliver verify <project> <listing.json>
+  social prep <final.mp4> --platforms tiktok,reels,shorts,youtube,linkedin,x --project P   files + captions to approve
+  social check <post.json> | social log <post.json> <platform> --url U | social pref [ask|never]   (posts via Composio)
   add <files|folders|zips|URLs>... --project P [--as broll|music|sfx|logo|font|lut|ref|raw] | --library
   keys ask <provider> [--project P]    pop-up to enter an API key (hidden; per project or machine-wide)
   keys set|unset|check|list|exec       elevenlabs heygen openai gemini (audio), pexels pixabay unsplash freesound jamendo (stock)
@@ -105,9 +115,12 @@ vs <command>                                         video-studio plugin
  music & sound design
   music analyze <track> | music fit <track> --edl e.json -o work/music_fit.wav   BPM/sections; fit to edit length on downbeats
   packs list | packs install --defaults | packs add <git-url> --name n --path p --license L   free GitHub sound libraries
-  sfx plan --edl e.json | --hyperframes dir | --video v.mp4 -o work/sfx_plan.json   find every moment, pick real recordings
+  sfx plan --edl e.json | --hyperframes dir | --video v.mp4 [--style talking-head|tutorial|ugc-ad|montage|launch]
+           [--words draft_words.json] [--risers] -o work/sfx_plan.json   find every moment, place measured recordings
   sfx apply <video> --plan p.json -o out.mp4 [--stem sfx.wav]  |  sfx merge <edl> --plan p.json -o edl.sfx.json
-  sfx library | sfx bank --from earshot                              what's available / render earshot's code-made bank
+  sfx plan ... --snap out/draft.mp4 --sheet   snap cues to the frame the picture changes; frame per cue to judge
+  sfx check --plan p.json                      measured landing of every sound vs its frame (EBU R37 limits)
+  sfx library | sfx analyse <files|dirs> | sfx bank --from earshot   what's available / onset-hit-crest-level / earshot bank
   earshot critique <video> | timeline <video> | describe <wav> | ...  (optional; vs setup --earshot)
  check & deliver
   qa <video> --edl e.json --transcript t.json [--preset reels --max-length 60]

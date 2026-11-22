@@ -1,0 +1,4 @@
+# third-party reference ads: kept locally, not committed (re-download: see REFERENCES.md)
+*.mp4
+sheets/
+*/frames/

@@ -38,9 +38,12 @@ Everything is in the EDL and applied at render time, so it is non-destructive.
 
 ## Sound effects
 Full workflow (find every moment, place real recordings, stems, earshot scoring): `/video-sound-design`.
-Manual: `"sfx": [{"file", "at", "gain_db"}]` at output times. Whoosh under transitions/whips (start 0.1 s before
-the cut), pop/click on text pops, riser into a reveal, impact on the drop. Keep them −6 to −12 dB and
-sparse (one per 5–10 s in talking content). Free SFX ship with the `media-use` skill (`audio/assets/sfx/`).
+Manual: `"sfx": [{"file", "at", "gain_db", "in", "dur", "fade_in", "fade_out", "pan"}]` at output times (only
+`file` and `at` are required). `at` is when the file starts, so measure the sound first (`vs sfx analyse x.wav`):
+a whoosh's crest, an impact's hit and a click's onset go on the frame (`at = frame − anchor`), and files differ by
+up to 30 dB, so use the `norm` column as the base gain. Prefer `vs sfx plan --style <style>`, which does this;
+numbers in `/video-sound-design` → `references/cue-sheet.md`. Free SFX ship with the `media-use` skill
+(`audio/assets/sfx/`).
 
 ## Loudness & delivery
 - Targets (integrated / true peak): social & YouTube −14 LUFS / −1 dBTP, podcasts −16, broadcast −23.

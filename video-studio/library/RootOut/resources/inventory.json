@@ -1,0 +1,967 @@
+[
+ {
+  "id": "we-49d0a135f6",
+  "provider": "web",
+  "pid": "https://cdn.shopify.com/videos/c/o/v/3062835a834e4ca59bdac6d2a915bec8.mp4",
+  "name": "3062835a834e4ca59bdac6d2a915bec8.mp4",
+  "folder": "",
+  "size": null,
+  "kind": "video",
+  "url": "https://cdn.shopify.com/videos/c/o/v/3062835a834e4ca59bdac6d2a915bec8.mp4",
+  "source": "web-1",
+  "missing": false,
+  "duration": 10.29,
+  "res": "1080x1080",
+  "orient": "square",
+  "fps": 24.0,
+  "has_audio": false,
+  "frame_times": [
+   0.9,
+   2.6,
+   4.3,
+   6.0,
+   7.7,
+   9.4
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#1"
+ },
+ {
+  "id": "we-83f7120b02",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/A01-bottle-front-white.jpg?v=1794311654&width=1280",
+  "name": "A01-bottle-front-white.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/A01-bottle-front-white.jpg?v=1794311654&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#2"
+ },
+ {
+  "id": "we-159cb1b39a",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/A11-lifestyle-bathroom-night.jpg?v=1794311654&width=1280",
+  "name": "A11-lifestyle-bathroom-night.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/A11-lifestyle-bathroom-night.jpg?v=1794311654&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#3"
+ },
+ {
+  "id": "we-3b33e4f096",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/A12-duo-transparent.png?v=1794311655&width=1280",
+  "name": "A12-duo-transparent.png",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/A12-duo-transparent.png?v=1794311655&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#4"
+ },
+ {
+  "id": "we-512aaa5607",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/RootOut-30-flatlay-v3.jpg?v=1794362463&width=1280",
+  "name": "RootOut-30-flatlay-v3.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/RootOut-30-flatlay-v3.jpg?v=1794362463&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#5"
+ },
+ {
+  "id": "we-fbca821edb",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/RootOut-60-flatlay-v3.jpg?v=1794362463&width=1280",
+  "name": "RootOut-60-flatlay-v3.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/RootOut-60-flatlay-v3.jpg?v=1794362463&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#6"
+ },
+ {
+  "id": "we-3d05664dd0",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/RootOut-90-flatlay-v3.jpg?v=1794362463&width=1280",
+  "name": "RootOut-90-flatlay-v3.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/RootOut-90-flatlay-v3.jpg?v=1794362463&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#7"
+ },
+ {
+  "id": "we-e9d1aa9aea",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/videos/c/vp/ff701bf474fd4061850cf12a71a3160a/ff701bf474fd4061850cf12a71a3160a.HD-1080p-2.5Mbps-100785047.mp4?v=0",
+  "name": "ff701bf474fd4061850cf12a71a3160a.HD-1080p-2.5Mbps-100785047.mp4",
+  "folder": "",
+  "size": null,
+  "kind": "video",
+  "url": "https://trywillomd.com/cdn/shop/videos/c/vp/ff701bf474fd4061850cf12a71a3160a/ff701bf474fd4061850cf12a71a3160a.HD-1080p-2.5Mbps-100785047.mp4?v=0",
+  "source": "web-1",
+  "missing": false,
+  "duration": 7.12,
+  "res": "1080x1080",
+  "orient": "square",
+  "fps": 24.0,
+  "has_audio": false,
+  "frame_times": [
+   0.6,
+   1.8,
+   3.0,
+   4.2,
+   5.3,
+   6.5
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#8"
+ },
+ {
+  "id": "we-d7f2856d2b",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/videos/c/vp/ff701bf474fd4061850cf12a71a3160a/ff701bf474fd4061850cf12a71a3160a.HD-1080p.2.5Mbps.hls.100785047_0000000001.ts",
+  "name": "ff701bf474fd4061850cf12a71a3160a.HD-1080p.2.5Mbps.hls.100785047_0000000001.ts",
+  "folder": "",
+  "size": 1147928,
+  "kind": "other",
+  "url": "https://trywillomd.com/cdn/shop/videos/c/vp/ff701bf474fd4061850cf12a71a3160a/ff701bf474fd4061850cf12a71a3160a.HD-1080p.2.5Mbps.hls.100785047_0000000001.ts",
+  "source": "web-1",
+  "missing": false
+ },
+ {
+  "id": "we-312e799ba0",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/videos/c/vp/ff701bf474fd4061850cf12a71a3160a/ff701bf474fd4061850cf12a71a3160a.HD-1080p.2.5Mbps.hls.100785047_0000000002.ts",
+  "name": "ff701bf474fd4061850cf12a71a3160a.HD-1080p.2.5Mbps.hls.100785047_0000000002.ts",
+  "folder": "",
+  "size": 594644,
+  "kind": "other",
+  "url": "https://trywillomd.com/cdn/shop/videos/c/vp/ff701bf474fd4061850cf12a71a3160a/ff701bf474fd4061850cf12a71a3160a.HD-1080p.2.5Mbps.hls.100785047_0000000002.ts",
+  "source": "web-1",
+  "missing": false
+ },
+ {
+  "id": "we-a2250cde46",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/videos/c/vp/ff701bf474fd4061850cf12a71a3160a/ff701bf474fd4061850cf12a71a3160a.SD-480p.0.9Mbps.hls.100785047_0000000000.ts",
+  "name": "ff701bf474fd4061850cf12a71a3160a.SD-480p.0.9Mbps.hls.100785047_0000000000.ts",
+  "folder": "",
+  "size": 379760,
+  "kind": "other",
+  "url": "https://trywillomd.com/cdn/shop/videos/c/vp/ff701bf474fd4061850cf12a71a3160a/ff701bf474fd4061850cf12a71a3160a.SD-480p.0.9Mbps.hls.100785047_0000000000.ts",
+  "source": "web-1",
+  "missing": false
+ },
+ {
+  "id": "we-bd53417d94",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/meltoff-v4-pdp-01-hero.jpg?v=1794395692&width=600",
+  "name": "meltoff-v4-pdp-01-hero.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/meltoff-v4-pdp-01-hero.jpg?v=1794395692&width=600",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#9"
+ },
+ {
+  "id": "we-0c9168196a",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/meltoff-v4-pdp-01-hero.jpg?v=1794395692&width=500",
+  "name": "meltoff-v4-pdp-01-hero.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/meltoff-v4-pdp-01-hero.jpg?v=1794395692&width=500",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#10"
+ },
+ {
+  "id": "we-d172bc8df1",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/meltoff-v4-pdp-02-your-file-is-why.jpg?v=1794395692&width=500",
+  "name": "meltoff-v4-pdp-02-your-file-is-why.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/meltoff-v4-pdp-02-your-file-is-why.jpg?v=1794395692&width=500",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#11"
+ },
+ {
+  "id": "we-40f2bb6157",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-01-hero-v11.jpg?v=1794384068&width=600",
+  "name": "pdp-01-hero-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-01-hero-v11.jpg?v=1794384068&width=600",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0001.jpg#12"
+ },
+ {
+  "id": "we-d8f6183115",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-01-hero-v11.jpg?v=1794384068&width=1280",
+  "name": "pdp-01-hero-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-01-hero-v11.jpg?v=1794384068&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#1"
+ },
+ {
+  "id": "we-845fcc899a",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-01-hero-v11.jpg?v=1794384068&width=120",
+  "name": "pdp-01-hero-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-01-hero-v11.jpg?v=1794384068&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#2"
+ },
+ {
+  "id": "we-d661cbdc84",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-01-hero-v11.jpg?v=1794384068&width=500",
+  "name": "pdp-01-hero-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-01-hero-v11.jpg?v=1794384068&width=500",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#3"
+ },
+ {
+  "id": "we-49af094e0c",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-02-8x-deeper-v11.jpg?v=1794384068&width=1280",
+  "name": "pdp-02-8x-deeper-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-02-8x-deeper-v11.jpg?v=1794384068&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#4"
+ },
+ {
+  "id": "we-d8c835c5a5",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-02-8x-deeper-v11.jpg?v=1794384068&width=120",
+  "name": "pdp-02-8x-deeper-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-02-8x-deeper-v11.jpg?v=1794384068&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#5"
+ },
+ {
+  "id": "we-2d1b5ad502",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-02-8x-deeper-v11.jpg?v=1794384068&width=500",
+  "name": "pdp-02-8x-deeper-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-02-8x-deeper-v11.jpg?v=1794384068&width=500",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#6"
+ },
+ {
+  "id": "we-12fd577316",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-03-just-the-tip-v11.jpg?v=1794384068&width=1280",
+  "name": "pdp-03-just-the-tip-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-03-just-the-tip-v11.jpg?v=1794384068&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#7"
+ },
+ {
+  "id": "we-bb698c7dce",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-03-just-the-tip-v11.jpg?v=1794384068&width=120",
+  "name": "pdp-03-just-the-tip-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-03-just-the-tip-v11.jpg?v=1794384068&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#8"
+ },
+ {
+  "id": "we-bf3b20016b",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-04-no-tears-v11.jpg?v=1794384068&width=1280",
+  "name": "pdp-04-no-tears-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-04-no-tears-v11.jpg?v=1794384068&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#9"
+ },
+ {
+  "id": "we-286d197ac9",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-04-no-tears-v11.jpg?v=1794384068&width=120",
+  "name": "pdp-04-no-tears-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-04-no-tears-v11.jpg?v=1794384068&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#10"
+ },
+ {
+  "id": "we-6968774ccb",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-05-how-to-use-v11.jpg?v=1794384068&width=1280",
+  "name": "pdp-05-how-to-use-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-05-how-to-use-v11.jpg?v=1794384068&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#11"
+ },
+ {
+  "id": "we-00a3086ef3",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-05-how-to-use-v11.jpg?v=1794384068&width=120",
+  "name": "pdp-05-how-to-use-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-05-how-to-use-v11.jpg?v=1794384068&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0002.jpg#12"
+ },
+ {
+  "id": "we-2fd05d673f",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-06-vs-freezing-v11.jpg?v=1794384068&width=1280",
+  "name": "pdp-06-vs-freezing-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-06-vs-freezing-v11.jpg?v=1794384068&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#1"
+ },
+ {
+  "id": "we-663b931fb7",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-06-vs-freezing-v11.jpg?v=1794384068&width=120",
+  "name": "pdp-06-vs-freezing-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-06-vs-freezing-v11.jpg?v=1794384068&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#2"
+ },
+ {
+  "id": "we-ef44a1c3e9",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-07-in-the-box-v11.jpg?v=1794384067&width=1280",
+  "name": "pdp-07-in-the-box-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-07-in-the-box-v11.jpg?v=1794384067&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#3"
+ },
+ {
+  "id": "we-9d945a4c00",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-07-in-the-box-v11.jpg?v=1794384067&width=120",
+  "name": "pdp-07-in-the-box-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-07-in-the-box-v11.jpg?v=1794384067&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#4"
+ },
+ {
+  "id": "we-4f421dacfb",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-08-whole-family-v11.jpg?v=1794384068&width=1280",
+  "name": "pdp-08-whole-family-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-08-whole-family-v11.jpg?v=1794384068&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#5"
+ },
+ {
+  "id": "we-4e4103241c",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-08-whole-family-v11.jpg?v=1794384068&width=120",
+  "name": "pdp-08-whole-family-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-08-whole-family-v11.jpg?v=1794384068&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#6"
+ },
+ {
+  "id": "we-bd322a1e08",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-09-offer-guarantee-v11.jpg?v=1794384068&width=1280",
+  "name": "pdp-09-offer-guarantee-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-09-offer-guarantee-v11.jpg?v=1794384068&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#7"
+ },
+ {
+  "id": "we-62f5511efd",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/pdp-09-offer-guarantee-v11.jpg?v=1794384068&width=120",
+  "name": "pdp-09-offer-guarantee-v11.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/pdp-09-offer-guarantee-v11.jpg?v=1794384068&width=120",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#8"
+ },
+ {
+  "id": "we-05b27e0c30",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-1v1-root-v6.gif?v=1794378215&width=1280",
+  "name": "rootout-1v1-root-v6.gif",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-1v1-root-v6.gif?v=1794378215&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#9"
+ },
+ {
+  "id": "we-f120b4e2fe",
+  "provider": "web",
+  "pid": "https://cdn.shopify.com/s/files/1/0849/7682/8665/files/rootout-1v1-root-v6.webm?v=1794378215",
+  "name": "rootout-1v1-root-v6.webm",
+  "folder": "",
+  "size": null,
+  "kind": "video",
+  "url": "https://cdn.shopify.com/s/files/1/0849/7682/8665/files/rootout-1v1-root-v6.webm?v=1794378215",
+  "source": "web-1",
+  "missing": false,
+  "duration": 10.29,
+  "res": "1080x1080",
+  "orient": "square",
+  "fps": 24.0,
+  "has_audio": false,
+  "frame_times": [
+   0.9,
+   2.6,
+   4.3,
+   6.0,
+   7.7,
+   9.4
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#10"
+ },
+ {
+  "id": "we-79641c2cd5",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-01-woman-30s-knuckle-wart-after.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-01-woman-30s-knuckle-wart-after.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-01-woman-30s-knuckle-wart-after.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#11"
+ },
+ {
+  "id": "we-2cedd90f59",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-01-woman-30s-knuckle-wart-before.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-01-woman-30s-knuckle-wart-before.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-01-woman-30s-knuckle-wart-before.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0003.jpg#12"
+ },
+ {
+  "id": "we-a02f7a936e",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-02-man-40s-plantar-wart-ball-of-foot-after.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-02-man-40s-plantar-wart-ball-of-foot-after.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-02-man-40s-plantar-wart-ball-of-foot-after.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#1"
+ },
+ {
+  "id": "we-e9e908b033",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-02-man-40s-plantar-wart-ball-of-foot-before.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-02-man-40s-plantar-wart-ball-of-foot-before.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-02-man-40s-plantar-wart-ball-of-foot-before.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#2"
+ },
+ {
+  "id": "we-ae740d6ee1",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-03-girl-9-finger-wart-after.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-03-girl-9-finger-wart-after.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-03-girl-9-finger-wart-after.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#3"
+ },
+ {
+  "id": "we-6fe8792384",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-03-girl-9-finger-wart-before.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-03-girl-9-finger-wart-before.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-03-girl-9-finger-wart-before.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#4"
+ },
+ {
+  "id": "we-f38cf2f6bf",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-04-woman-50s-corn-little-toe-after.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-04-woman-50s-corn-little-toe-after.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-04-woman-50s-corn-little-toe-after.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#5"
+ },
+ {
+  "id": "we-1da1c4dd85",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-04-woman-50s-corn-little-toe-before.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-04-woman-50s-corn-little-toe-before.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-04-woman-50s-corn-little-toe-before.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#6"
+ },
+ {
+  "id": "we-0a6cfd00c3",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-09-boy-6-thumb-warts-after.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-09-boy-6-thumb-warts-after.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-09-boy-6-thumb-warts-after.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#7"
+ },
+ {
+  "id": "we-cf1d1661f2",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-09-boy-6-thumb-warts-before.jpg?v=1794537768&width=720",
+  "name": "rootout-SAMPLE-09-boy-6-thumb-warts-before.jpg",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-SAMPLE-09-boy-6-thumb-warts-before.jpg?v=1794537768&width=720",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#8"
+ },
+ {
+  "id": "we-4ab4f809a3",
+  "provider": "web",
+  "pid": "https://trywillomd.com/cdn/shop/files/rootout-how-to-v3.gif?v=1794362463&width=1280",
+  "name": "rootout-how-to-v3.gif",
+  "folder": "",
+  "size": null,
+  "kind": "image",
+  "url": "https://trywillomd.com/cdn/shop/files/rootout-how-to-v3.gif?v=1794362463&width=1280",
+  "source": "web-1",
+  "missing": false,
+  "frame_times": [
+   0.0
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#9"
+ },
+ {
+  "id": "we-28a1c81788",
+  "provider": "web",
+  "pid": "https://cdn.shopify.com/s/files/1/0849/7682/8665/files/rootout-how-to-v3.webm?v=1794362463",
+  "name": "rootout-how-to-v3.webm",
+  "folder": "",
+  "size": null,
+  "kind": "video",
+  "url": "https://cdn.shopify.com/s/files/1/0849/7682/8665/files/rootout-how-to-v3.webm?v=1794362463",
+  "source": "web-1",
+  "missing": false,
+  "duration": 7.12,
+  "res": "1080x1080",
+  "orient": "square",
+  "fps": 24.0,
+  "has_audio": false,
+  "frame_times": [
+   0.6,
+   1.8,
+   3.0,
+   4.2,
+   5.3,
+   6.5
+  ],
+  "sampled": "2026-11-21 08:12",
+  "sheet": "sheet_0004.jpg#10"
+ },
+ {
+  "id": "lo-614242ac9b",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/problem/openverse_b1f34280-d9d6-446c-8c23-_plantar-wart-treatment-case3a.jpg",
+  "name": "openverse_b1f34280-d9d6-446c-8c23-_plantar-wart-treatment-case3a.jpg",
+  "folder": "problem",
+  "size": 148172,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false,
+  "sample_error": "no frames could be read"
+ },
+ {
+  "id": "lo-2133fb5169",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/problem/wikimedia_2034162_wart-img-1676-jpg.jpg",
+  "name": "wikimedia_2034162_wart-img-1676-jpg.jpg",
+  "folder": "problem",
+  "size": 38205,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false,
+  "sample_error": "no frames could be read"
+ },
+ {
+  "id": "lo-2c011bdaa4",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/problem/wikimedia_6094572_large-plantar-warts-jpg.jpg",
+  "name": "wikimedia_6094572_large-plantar-warts-jpg.jpg",
+  "folder": "problem",
+  "size": 232711,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false
+ },
+ {
+  "id": "lo-d3b401b653",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/problem/wikimedia_6271698_deep-plantar-wart-jpg.jpg",
+  "name": "wikimedia_6271698_deep-plantar-wart-jpg.jpg",
+  "folder": "problem",
+  "size": 21485,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false,
+  "sample_error": "no frames could be read"
+ },
+ {
+  "id": "lo-1eaebe092d",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/problem/wikimedia_740282_veruca-right-foot-detail-jpg.jpg",
+  "name": "wikimedia_740282_veruca-right-foot-detail-jpg.jpg",
+  "folder": "problem",
+  "size": 49554,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false,
+  "sample_error": "no frames could be read"
+ },
+ {
+  "id": "lo-620dfe29b0",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/problem/wikimedia_99820355_30-year-old-plantar-wart-jpg.jpg",
+  "name": "wikimedia_99820355_30-year-old-plantar-wart-jpg.jpg",
+  "folder": "problem",
+  "size": 106248,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false,
+  "sample_error": "no frames could be read"
+ },
+ {
+  "id": "lo-6b42c523fc",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/problem/wikimedia_99820805_plantar-wart-at-heel-jpg.jpg",
+  "name": "wikimedia_99820805_plantar-wart-at-heel-jpg.jpg",
+  "folder": "problem",
+  "size": 131271,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false,
+  "sample_error": "no frames could be read"
+ },
+ {
+  "id": "lo-5fac4f9f09",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/problem/wikimedia_99821509_painful-plantar-warts-jpg.jpg",
+  "name": "wikimedia_99821509_painful-plantar-warts-jpg.jpg",
+  "folder": "problem",
+  "size": 99156,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false,
+  "sample_error": "no frames could be read"
+ },
+ {
+  "id": "lo-bc7c32cf01",
+  "provider": "local",
+  "pid": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo/science/openverse_6c4a0235-d753-4a43-8c0e-_verruca-vulgaris.jpg",
+  "name": "openverse_6c4a0235-d753-4a43-8c0e-_verruca-vulgaris.jpg",
+  "folder": "science",
+  "size": 353602,
+  "kind": "image",
+  "source": "local-2",
+  "missing": false,
+  "sample_error": "no frames could be read"
+ }
+]

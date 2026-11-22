@@ -82,6 +82,29 @@ VOICE_ENHANCE = ("highpass=f=80,afftdn=nf=-25:tn=1,deesser=i=0.4,"
                  "acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2")
 
 
+def sfx_chain(fx):
+    """ffmpeg filter chain (no labels) that places one sound effect: optional trim (`in`, `dur`), fades
+    (`fade_in`, `fade_out`), stereo `pan` (-1 left .. 1 right), `gain_db`, then a delay to `at` seconds."""
+    f = ["aresample=48000", "aformat=channel_layouts=stereo"]
+    rate = float(fx.get("rate", 1) or 1)
+    if abs(rate - 1) > 1e-4:  # pitch/speed variation; in/dur/fades below are in the varied file's time
+        f.append(f"asetrate={48000 * rate:.0f},aresample=48000")
+    start, dur = float(fx.get("in", 0) or 0), fx.get("dur")
+    if start > 0 or dur:
+        f.append(f"atrim=start={start:.3f}" + (f":duration={float(dur):.3f}" if dur else "") + ",asetpts=PTS-STARTPTS")
+    if fx.get("fade_in"):
+        f.append(f"afade=t=in:d={float(fx['fade_in']):.3f}")
+    if fx.get("fade_out") and dur:
+        fo = min(float(fx["fade_out"]), float(dur))
+        f.append(f"afade=t=out:st={float(dur) - fo:.3f}:d={fo:.3f}")
+    pan = max(-1.0, min(1.0, float(fx.get("pan", 0) or 0)))
+    if pan:
+        f.append(f"pan=stereo|c0={min(1, 1 - pan):.3f}*c0|c1={min(1, 1 + pan):.3f}*c1")
+    f.append(f"volume={float(fx.get('gain_db', -6))}dB")
+    f.append(f"adelay={int(max(float(fx['at']), 0) * 1000)}:all=1")
+    return ",".join(f)
+
+
 def die(msg, code=1):
     print(f"error: {msg}", file=sys.stderr)
     sys.exit(code)

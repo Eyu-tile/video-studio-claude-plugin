@@ -1,0 +1,10 @@
+# downloaded stock media (re-fetch from credits.json page_url)
+*.mp4
+*.webm
+*.mkv
+*.ogv
+*.mov
+*.jpg
+*.png
+*.part
+!**/CREDITS.md

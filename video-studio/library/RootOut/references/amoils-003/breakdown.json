@@ -1,0 +1,108 @@
+{
+ "id": "creative-amoils-warts-h-warts-20261110-4332672960298409",
+ "kind": "creatives",
+ "origin": "ai",
+ "data": {
+  "creative": "Mum and daughter compare painful freezing with painless drops \u00b7 4332672960298409",
+  "hook": "Her warts dried up, flaked off within three weeks time.",
+  "desire": "Get rid of my child's warts without the pain of freezing.",
+  "angle": "A mother reports the result, then her young daughter tells how freezing hurt and the drops do not.",
+  "belief_shift": "from wart removal for kids means painful freezing \u2192 to a home drop that does not hurt and (claim) keeps warts from coming back",
+  "script_structure": "Mum states result (3 weeks, never returned) \u2192 hand before-after \u2192 child recalls freezing pain (bee sting) \u2192 child says this does not hurt \u2192 'So you love it? Yes' \u2192 mum recommends \u2192 social-proof montage of other kids \u2192 Shop Now end card",
+  "mechanism_reveal": "None explained; only 'dried up, flaked off' (advertiser claim of result, no reason why).",
+  "proof": "Parent testimonial at open; before-after hand photos at 2-4s; child's own pain comparison 6-17s; montage of other families 21-24s; 'thousands of families' claim.",
+  "cta": "Tap Shop now to get yours today. (no offer stated in video)",
+  "why_it_works": "Interpretation of execution, not measured performance: The child's unscripted-sounding 'bee sting' line makes the pain of the old method vivid and believable in a way an adult claim would not. The result claim comes first, so the rest of the ad is proof of a promise already made.",
+  "transferable_move": "Let the end user who suffered the old method describe its pain in their own words, then have them try the new product on camera and say it does not hurt. Soften: talk about comfort and the routine, not removal or 'never returned'.",
+  "opening_visual": "Woman in her 30s talking to selfie camera in a home with kids' art on the wall; caption 'Her warts dried up'.",
+  "transition_to_product": "Bottle first seen in the child's hand at about 14s as she says 'This does not hurt at all'.",
+  "proof_placement": "Before-after photos follow the result claim (2-4s); child testimonial follows; family montage follows the recommendation, right before the CTA.",
+  "execution_family": "testimonial/UGC",
+  "variation_of": "",
+  "ad_role": "acquisition",
+  "url": "https://www.facebook.com/ads/library/?id=4332672960298409",
+  "source_status": "Analyzed from transcript",
+  "transcript": "Automatic transcript (en) from the original ad audio (Whisper, run locally 2026-11-10). Recognition errors may remain in names; numbers and claims are the advertiser's.\n[0.0\u20133.8] Her warts dried up, flaked off within three weeks time.\n[3.8\u20135.5] Her warts have never returned.\n[5.5\u20138.2] We've tried freezing it off, right, and that hurt, right?\n[8.2\u20139.7] It hurt so much.\n[9.7\u201311.8] It hurts so bad it felt like a bee was stinging it.\n[11.8\u201313.0] It hurt very much.\n[13.0\u201316.4] This does not hurt at all.\n[16.4\u201317.4] So you love it?\n[17.4\u201318.9] Yes, thank you.\n[18.9\u201320.4] I would recommend it to anyone.\n[20.4\u201322.2] Join thousands of families who've already\n[22.2\u201323.8] solved their wart problem.\n[23.8\u201326.7] Tap Shop now to get yours today."
+ },
+ "detail": {
+  "batch": "reused from brand benchmark amoils-com-20261110 (#4 there) \u00b7 top 50 \u00b7 2026-11-10 \u00b7 Meta top by impressions",
+  "attribution": "brand",
+  "avatar": "Parents of young children with hand warts who have already tried freezing at the doctor and watched their child cry through it.",
+  "angle": "failed effort \u2014 freezing hurt the child; the drops are the painless alternative",
+  "duration": 28.1,
+  "duplicate_of": "",
+  "timestamps_approximate": false,
+  "scenes": [
+   {
+    "start": 0,
+    "end": 2,
+    "dialogue": "Her warts dried up,",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Mum talking to selfie camera at home.",
+    "analysis": "Result-first hook from a parent."
+   },
+   {
+    "start": 2,
+    "end": 5,
+    "dialogue": "flaked off within three weeks time.",
+    "on_screen_text": "flaked off withing 3 weeks time",
+    "visual": "Before and after photos of a child's palm with a red arrow, over blurred mum.",
+    "analysis": "Visual proof of the claimed result (before-after claim)."
+   },
+   {
+    "start": 5,
+    "end": 6.5,
+    "dialogue": "Her warts have never returned.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Mum to camera.",
+    "analysis": "Addresses the recurrence fear named in the ad copy."
+   },
+   {
+    "start": 6.5,
+    "end": 13,
+    "dialogue": "We've tried freezing it off, right, and that hurt, right? It hurts so bad it felt like a bee was stinging it. It hurt very much.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Young girl on a sofa, mum's arm in frame, talking about freezing.",
+    "analysis": "Failed-effort beat told by the child; makes the old method's pain concrete."
+   },
+   {
+    "start": 13,
+    "end": 19,
+    "dialogue": "But this does not hurt at all. So you love it? Yes, thank you.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Girl holding the amber dropper bottle, smiling.",
+    "analysis": "Product entry as the contrast to freezing; the child endorses it."
+   },
+   {
+    "start": 19,
+    "end": 20.4,
+    "dialogue": "I would recommend it to anyone.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Mum to camera.",
+    "analysis": "Parent recommendation closes the testimonial."
+   },
+   {
+    "start": 20.4,
+    "end": 23.8,
+    "dialogue": "Join thousands of families who've already solved their wart problem.",
+    "on_screen_text": "who've already solved their wart problem",
+    "visual": "Other mum with son on a porch; boy holding a large bottle toward camera.",
+    "analysis": "Montage widens one story into a crowd (numeric claim)."
+   },
+   {
+    "start": 23.8,
+    "end": 28.1,
+    "dialogue": "Tap Shop now to get yours today.",
+    "on_screen_text": "Shop Now!",
+    "visual": "Girl in heart sweater holding small bottle and pointing to her smile; arrow down.",
+    "analysis": "Clean end card CTA."
+   }
+  ]
+ },
+ "media": {
+  "content_type": "video/mp4",
+  "url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-4332672960298409/media",
+  "poster_url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-4332672960298409/poster",
+  "sha256": "ce0369f80b2e8a6f69c8fb4c1d46bc3a279a84371d96bdeb61c984e1fddc1e3b"
+ }
+}

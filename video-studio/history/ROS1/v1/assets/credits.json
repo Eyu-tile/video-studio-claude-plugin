@@ -1,0 +1,38 @@
+{
+ "assets": [
+  {
+   "provider": "incompetech",
+   "id": "Relaxing Piano Music",
+   "title": "Relaxing Piano Music - Kevin MacLeod",
+   "author": "Kevin MacLeod",
+   "author_url": null,
+   "page_url": "https://incompetech.com/music/royalty-free/music.html",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "attribution_required": true,
+   "credit_line": "\"Relaxing Piano Music\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/",
+   "file": "/home/user/video-studio-claude-plugin/video-studio/projects/rootout-set1/assets/music/incompetech_relaxing-piano-music_relaxing-piano-music-kevin-mac.mp3",
+   "kind": "music",
+   "source": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Relaxing%20Piano%20Music.mp3",
+   "downloaded": "2026-11-21T12:09:30Z",
+   "query": "gentle piano hopeful"
+  },
+  {
+   "provider": "incompetech",
+   "id": "Promises to Keep",
+   "title": "Promises to Keep - Kevin MacLeod",
+   "author": "Kevin MacLeod",
+   "author_url": null,
+   "page_url": "https://incompetech.com/music/royalty-free/music.html",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "attribution_required": true,
+   "credit_line": "\"Promises to Keep\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/",
+   "file": "/home/user/video-studio-claude-plugin/video-studio/projects/rootout-set1/assets/music/incompetech_promises-to-keep_promises-to-keep-kevin-macleod.mp3",
+   "kind": "music",
+   "source": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Promises%20to%20Keep.mp3",
+   "downloaded": "2026-11-21T12:09:30Z",
+   "query": "gentle piano hopeful"
+  }
+ ]
+}

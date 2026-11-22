@@ -67,7 +67,7 @@
   "riser": {
     "file": "riser.mp3",
     "duration": 10.03,
-    "description": "Long cinematic riser (~10s build, peak at the end). Trigger at (climax_time − 10.03s) so it crests exactly on the reveal."
+    "description": "Cinematic riser: builds for ~3s, crests at ~3.0s, silent after ~4.5s (the file is 10.03s long). Trigger at (climax_time − 3.0s) so it crests exactly on the reveal."
   },
   "sparkle": {
     "file": "sparkle.mp3",

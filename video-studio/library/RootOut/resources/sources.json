@@ -1,0 +1,14 @@
+[
+ {
+  "name": "web-1",
+  "provider": "web",
+  "link": "https://trywillomd.com/products/rootout",
+  "added": "2026-11-21"
+ },
+ {
+  "name": "local-2",
+  "provider": "local",
+  "link": "/home/user/video-studio-claude-plugin/video-studio/library/RootOut/stock/assets/photo",
+  "added": "2026-11-21"
+ }
+]

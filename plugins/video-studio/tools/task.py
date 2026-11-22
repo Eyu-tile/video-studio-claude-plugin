@@ -186,6 +186,22 @@ def cmd_deliver(a):
     left = open_feedback(t)
     if left:
         print(f"still open: {len(left)} feedback item(s); mark handled ones: vs task done {t['code']} <#> --how ...")
+    offers = []
+    if files and pref("review_page") != "never":
+        offers.append(f"a review page for comments (/video-review: vs present {files[0]['path']} "
+                      f"--project {t.get('project') or '<P>'} --task {t['code']} --version {version})")
+    if files and pref("social_post") != "never":
+        offers.append("posting to social media (/social-post; nothing posts without approving the plan)")
+    if offers:
+        print("next: ask the person, in one question set, about " + " and ".join(offers))
+
+
+def pref(key):
+    f = workspace() / "settings.json"
+    try:
+        return load_json(f).get(key, "ask") if f.exists() else "ask"
+    except (OSError, ValueError, SystemExit):
+        return "ask"
 
 
 def cmd_feedback(a):
@@ -202,6 +218,12 @@ def cmd_feedback(a):
     t["status"] = "revising"
     save(t)
     print(f"{t['code']}: {len(items)} feedback item(s) on {on or '-'} logged (#{start + 1}–#{start + len(items)})")
+    if t.get("client"):
+        import lessons
+        new = [{"id": f["id"], "text": f["text"]} for f in t["feedback"][start:]]
+        for n, les, scope in lessons.record_notes(t["client"], new, t.get("project"), f"task {t['code']}"):
+            print(f"REPEAT: feedback #{n['id']} is something we already learned ({scope} {les['id']}: "
+                  f"{les['rule']}). Fix it and tighten the lesson (a --check, or --must).")
     pd = proj_dir(t)
     edl = pd / "work" / "edl.json" if pd else None
     if any(re.search(r"\b\d{1,2}:\d{2}\b", x) for x in items):

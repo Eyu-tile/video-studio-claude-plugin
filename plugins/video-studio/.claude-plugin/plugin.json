@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "video-studio",
-  "version": "2.15.0",
+  "version": "2.16.0",
   "description": "Agentic video editing for Claude Code: talking heads, shorts, YouTube, podcasts and multicam, montages and music videos, screen recordings, ads, slideshows. Transcript- and beat-driven cutting, deterministic ffmpeg renders with transitions, speed, zooms, grades, text, captions, music and SFX, automated QA, platform exports, media from the free internet (Internet Archive, Wikipedia, CC YouTube, Openverse) and stock libraries plus import of any editor-provided files or links with licence tracking, background music sourcing and beat-accurate fitting, free GitHub sound packs, frame-accurate sound design with optional earshot listening, style learning from reference videos, HyperFrames motion graphics, and NLE handoff.",
   "author": { "name": "Nexa IT Solution" },
   "keywords": ["video", "video-editing", "ffmpeg", "whisper", "captions", "shorts", "reels", "podcast", "multicam", "montage", "hyperframes"],

@@ -1,0 +1,84 @@
+{
+ "id": "creative-amoils-warts-h-warts-20261110-929748905821441",
+ "kind": "creatives",
+ "origin": "ai",
+ "data": {
+  "creative": "Mom lists failed fixes, then day-7 and two-week result \u00b7 929748905821441",
+  "hook": "He had a big plantar wart and he had it for a long time, like months.",
+  "desire": "End my son's painful plantar wart after everything else failed",
+  "angle": "Failed-effort list (pads, freezing, apple cider vinegar) followed by a fast timeline",
+  "belief_shift": "from nothing works on this plantar wart \u2192 to after pads, freezing and vinegar failed, this one shrank in a week",
+  "script_structure": "Long-lasting painful wart (foot illustration) \u2192 tried pads \u2717, freezing \u2717, vinegar \u2717 \u2192 nothing worked \u2192 finally got H-Warts \u2192 day 7 tiny \u2192 two weeks almost gone \u2192 hasn't come back in months \u2192 go get yours today",
+  "mechanism_reveal": "None",
+  "proof": "Mom testimonial with red-X list of failed alternatives (8-12s) and green-check timeline (21-32s); claim of no return after months",
+  "cta": "So go get yours today. No offer stated.",
+  "why_it_works": "Interpretation of execution, not measured performance: Red-X captions for each failed remedy match what the viewer has likely tried, so the switch to green checks reads as a turning point. The day-by-day timeline makes the claim feel specific.",
+  "transferable_move": "List the alternatives the viewer already tried with a red X each, then switch to green checks for a dated timeline after your product. Soften: say 'it got smaller and smaller' rather than 'gone' or 'cured'.",
+  "opening_visual": "Mom in a teal beanie with her son by a wood stove, split with a cartoon foot illustration marking a sole wart; caption 'He Had A Big Plantar Wart And He Had It For A Long Time'",
+  "transition_to_product": "13.8s 'And so, finally we got the H-Warts formula' (named in caption with a clover emoji)",
+  "proof_placement": "Failed-remedy list before product; result timeline after product; no-return claim right before CTA",
+  "execution_family": "testimonial/UGC",
+  "variation_of": "",
+  "ad_role": "acquisition",
+  "url": "https://www.facebook.com/ads/library/?id=929748905821441",
+  "source_status": "Analyzed from transcript",
+  "transcript": "Automatic transcript (en) from the original ad audio (Whisper, run locally 2026-11-10). Recognition errors may remain in names; numbers and claims are the advertiser's.\n[0.0\u20134.3] He had a big plantar wart and he had it for a long time, like months.\n[4.3\u20136.5] Each day it just got bigger and bigger and more painful.\n[6.5\u20137.5] We tried a bunch of things.\n[7.5\u20139.2] We tried the little sticky pads.\n[9.2\u201310.8] We tried the freezing stuff.\n[10.8\u201312.8] We did apple cider vinegar.\n[12.8\u201313.8] Nothing worked.\n[13.8\u201319.0] And so, finally we got the H-Warts Formula and within a week it was like maybe what, like\n[19.0\u201320.0] half one?\n[20.0\u201321.0] Yeah.\n[21.0\u201322.0] And by the way, by the 7th day.\n[22.0\u201324.5] It was about like this tiny.\n[24.5\u201328.2] And then maybe like two weeks it was almost pretty much gone.\n[28.2\u201330.7] It's the last little and it hasn't come back.\n[30.7\u201332.8] It's been a couple months since it's gone.\n[32.8\u201333.8] Works good?\n[33.8\u201334.8] Right.\n[34.8\u201335.0] So go get yours today."
+ },
+ "detail": {
+  "batch": "long-runner / high reach \u00b7 added 2026-11-10",
+  "attribution": "brand",
+  "avatar": "Parents of a child with a painful plantar wart who have already tried pads, freezing and home remedies",
+  "angle": "failed effort \u2014 pads, freezing and vinegar all failed",
+  "duration": 35.1,
+  "duplicate_of": "",
+  "timestamps_approximate": false,
+  "scenes": [
+   {
+    "start": 0,
+    "end": 6.5,
+    "dialogue": "He had a big plantar wart and he had it for a long time, like months. Each day it just got bigger and bigger and more painful.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Mom and son; cartoon foot with wart for first 3s",
+    "analysis": "Problem and duration"
+   },
+   {
+    "start": 6.5,
+    "end": 13.8,
+    "dialogue": "We tried a bunch of things. We tried the little sticky pads. We tried the freezing stuff. We did apple cider vinegar. Nothing worked.",
+    "on_screen_text": "We Tried A Bunch Of Things / \u2717 We Tried The Little Sticky Pads / \u2717 We Tried The Freezing Stuff / \u2717 We Did Apple Cider Vinegar / Nothing Worked",
+    "visual": "Mom talking to camera",
+    "analysis": "Failed-alternatives list"
+   },
+   {
+    "start": 13.8,
+    "end": 20,
+    "dialogue": "And so, finally we got the H-Warts formula and within a week it was like maybe what, like half one?",
+    "on_screen_text": "And So Um Finally We Got The H-Warts Formula / And Within A Week It Was Like Maybe What?",
+    "visual": "Mom looking at son",
+    "analysis": "Product entry"
+   },
+   {
+    "start": 20,
+    "end": 28.2,
+    "dialogue": "Yeah. And by the way, by the 7th day it was about like this tiny. And then maybe like two weeks it was almost pretty much gone.",
+    "on_screen_text": "\u2713 By The 7th Day It Was About Like This Tiny / And Then Maybe Like Two Weeks / \u2713 It Was Almost Pretty Much Gone",
+    "visual": "Mom gestures size; son listens",
+    "analysis": "Timeline proof"
+   },
+   {
+    "start": 28.2,
+    "end": 35.1,
+    "dialogue": "It's the last little and it hasn't come back. It's been a couple months since it's gone. Works good? Right. So go get yours today.",
+    "on_screen_text": "Just The Last Little And Hasn't Come Back / \u2713 It's Been A Couple Months Since It's Gone Works Good? / Right?",
+    "visual": "Mom and son",
+    "analysis": "No-return claim and CTA"
+   }
+  ]
+ },
+ "media": {
+  "content_type": "video/mp4",
+  "url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-929748905821441/media",
+  "poster_url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-929748905821441/poster",
+  "sha256": "e020477cb7dd0bf5a83c47b96b9ef3dca952eaa41d3b575f6dc5d1719b1c76e7"
+ }
+}

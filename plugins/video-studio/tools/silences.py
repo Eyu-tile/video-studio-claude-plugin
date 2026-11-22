@@ -31,7 +31,7 @@ def main():
     info = probe(args.input)
     if not info["has_audio"]:
         print("no audio stream; nothing to detect", file=sys.stderr)
-    p = run(["ffmpeg", "-hide_banner", "-nostats", "-i", args.input, "-af",
+    p = run(["ffmpeg", "-hide_banner", "-nostats", "-i", args.input, "-vn", "-sn", "-dn", "-af",
              f"silencedetect=noise={args.db}dB:d={args.min}", "-f", "null", "-"])
     starts = [float(x) for x in re.findall(r"silence_start: (-?[\d.]+)", p.stderr)]
     ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", p.stderr)]

@@ -55,11 +55,35 @@ vs fetch search "warm acoustic uplifting" --type music --project P      # openve
 vs fetch search "whoosh transition" --type sfx --max-dur 3 --project P
 vs fetch search "team meeting office" --type photo --provider unsplash,pexels --project P
 vs fetch search "1950s city traffic" --type video --provider archive --project P          # archival film
-vs fetch get <archive results.json> 2 --section 1:35-1:50                                  # only those 15 s of a 20-min film
+vs fetch inspect <archive results.json> 2                                                  # LOOK first: scenes + keyframe sheet
+vs fetch get <archive results.json> 2 --section 1:35-1:50                                  # only those 15 s, verified, provenance
 vs fetch search "Golden Gate Bridge" --type photo --provider wikipedia --project P        # the real thing being talked about
 vs fetch search "drone flight over forest" --type video --provider youtube --project P   # CC-licensed uploads only
 vs fetch get <youtube results.json> 1 --section 30-42
 ```
+
+### Internet Archive footage: look before you cut
+Archive films are long, and the title rarely says what is on screen at a given minute. Never cut from a title alone:
+1. **Search with a plain brief** of what is visible: `vs fetch search "children eating bananas black and white"
+   --provider archive`. Shot words (footage, b-roll, cinematic, 4k) are dropped; "1950s" becomes a year filter;
+   "black and white" prefers B&W prints. All words must match first (title, subject, description, shotlist); only
+   if that finds too few does it accept any word. Ranking: title > subject > shotlist, trusted collections
+   (Prelinger, NASA tier 1; stock_footage, feature_films tier 2), popularity, h.264 available. The `why` column says
+   what matched. `--collection prelinger,nasa` narrows it.
+2. **Inspect** the pick: `vs fetch inspect <results.json> <n>` (or `archive:<identifier>`) reads the film over HTTPS
+   (no download), detects scenes in the first 15 min (`--window 15:00-30:00` for later), and writes
+   `inspect_<id>.md` (scenes, the archive's shotlist, licence) and `.png` (one keyframe per scene, numbered with
+   times). **Read the PNG** and choose the shot by what you see. Items that hold many separate clips (stock footage
+   reels) list the clips with thumbnails instead (`--page 2` for more); inspect one with `--file <name>`.
+3. **Cut** only those seconds: `vs fetch get <results.json> <n> --section 4:47-4:55 [--file <name>] [--no-audio]`.
+   The cut is re-encoded (a stream copy snaps to keyframes: 8 s can come back as 11 s), must be within 0.1 s of the
+   asked length with zero decode errors, and gets a `.provenance.json` beside it: item, file and its MD5, exact
+   segment, data server, time, licence, attribution text. The credits ledger records the segment too.
+
+Licences come from an exact URL table (PD, CC0, PD Mark, CC BY/BY-SA/BY-ND/BY-NC… 1.0–4.0); anything else is
+`unrecognized` / `unknown` with commercial use `unknown`, never guessed. NC and ND are excluded unless `--allow-nc`.
+Items with only a rights statement: tell the person and check the item page before publishing.
+
 YouTube rules: default search uses YouTube's Creative Commons filter and keeps only CC BY uploads (credit line
 required, logged automatically). `--allow-any-license` lists everything, marked "rights not cleared": those
 can be downloaded only `--as ref` (to study), or with `--i-have-rights` when the person owns or licensed the

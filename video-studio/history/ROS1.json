@@ -1,0 +1,87 @@
+{
+ "code": "ROS1",
+ "title": "RootOut Set 1 (R1 A1) Freeze-refusal parent, 3 hooks",
+ "client": "WilloMD",
+ "project": "rootout-set1",
+ "brief": "",
+ "status": "delivered",
+ "created": "2026-11-21 11:26",
+ "versions": [
+  {
+   "version": "v1",
+   "date": "2026-11-21 12:44",
+   "note": "v1 draft: Set 1 H1/H2/H3, 1:53-1:56, 9:16. Soul + Seedance 2.5 720p + ElevenLabs (Higgsfield WilloMd, 805 credits). Testimonials changed to no-result lines. Music: Promises to Keep, Kevin MacLeod, CC BY 4.0.",
+   "link": null,
+   "files": [
+    {
+     "path": "out/WilloMD_RootOut_Set1_H1_9x16.mp4",
+     "bytes": 31681959,
+     "sha256": "376180b3fd290801f6db7124a96851f50f39c57c8387c9d8ec4aae32d4ccdebf",
+     "duration": 113.44
+    },
+    {
+     "path": "out/WilloMD_RootOut_Set1_H2_9x16.mp4",
+     "bytes": 32449442,
+     "sha256": "ec0f3d524ef77770d88336b46db1215ec477e83a357b8411610fa74bde5774dc",
+     "duration": 115.67
+    },
+    {
+     "path": "out/WilloMD_RootOut_Set1_H3_9x16.mp4",
+     "bytes": 32041346,
+     "sha256": "5ebb420ba2244bd3713ae7f3bb4e29dafc906b8646478d46fef21434026e28b7",
+     "duration": 114.54
+    }
+   ],
+   "snapshot_files": 6
+  },
+  {
+   "version": "v2",
+   "date": "2026-11-21 13:22",
+   "note": "v2: captions throughout, AI-customer text removed, new b05, sound bed + phone-camera finish; H2/H3 in out/",
+   "link": null,
+   "files": [
+    {
+     "path": "out/WilloMD_RootOut_Set1_H1_9x16_v2.mp4",
+     "bytes": 27022936,
+     "sha256": "b47265da628490cb1040b2c0432cff31cff726c053d72a4f783485f7ba2a6075",
+     "duration": 113.5
+    }
+   ],
+   "snapshot_files": 20
+  },
+  {
+   "version": "v3",
+   "date": "2026-11-21 22:15",
+   "note": "v3: urgency CTA (mom to camera + moving offer/end cards), 3D motion skin animations like Amoils #004; H2/H3 in out/",
+   "link": null,
+   "files": [
+    {
+     "path": "out/WilloMD_RootOut_Set1_H1_9x16_v3.mp4",
+     "bytes": 34090331,
+     "sha256": "b50d64658ced2a25df6795c96b6129568f8708770d58d063b183363d68b4e9e5",
+     "duration": 116.97
+    }
+   ],
+   "snapshot_files": 20
+  },
+  {
+   "version": "v4",
+   "date": "2026-11-22 13:24",
+   "note": "v4: real RootOut bottle in the reframe shot (0:18-0:21); H2/H3 in out/",
+   "link": null,
+   "files": [
+    {
+     "path": "out/WilloMD_RootOut_Set1_H1_9x16_v4.mp4",
+     "bytes": 34037569,
+     "sha256": "6b257267ef0cab54d88807de256f54e7778077a5a45facfac3e5f0f98b6b6bd3",
+     "duration": 117.0
+    }
+   ],
+   "snapshot_files": 20,
+   "review": "https://claude.ai/artifact/YM5KvDaY3YfwEwXAPXk7C6"
+  }
+ ],
+ "feedback": [],
+ "notes": [],
+ "updated": "2026-11-22 15:27"
+}

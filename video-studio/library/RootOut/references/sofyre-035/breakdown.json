@@ -1,0 +1,108 @@
+{
+ "id": "creative-sofyre-com-20261118-1642965773253625",
+ "kind": "creatives",
+ "origin": "ai",
+ "data": {
+  "creative": "Four things mice can't tolerate, ranked weakest to strongest \u00b7 1642965773253625",
+  "hook": "There are only four things mice physically can't tolerate, ranked from weakest to strongest.",
+  "desire": "Find a pouch that actually makes mice leave, instead of one they ignore after a week.",
+  "angle": "A ranked countdown of ingredients that reveals most pouches stop at the two weakest ones.",
+  "belief_shift": "from 'peppermint pouches are all the same' \u2192 to 'most pouches only use the two weakest ingredients; the strong two are what's missing'",
+  "script_structure": "ranked-list hook \u2192 'number four is why 99% fail' tease \u2192 #1 peppermint, #2 cinnamon (weak) \u2192 #3 castor oil, #4 cedarwood (strong) \u2192 most pouches stop at two \u2192 Sofyre has all four, 'exterminators use it' \u2192 two days, 90 days, safe \u2192 Buy 2 Get 1",
+  "mechanism_reveal": "Advertiser claim: peppermint and cinnamon are tolerated; castor oil causes 'respiratory issues, skin irritation'; cedarwood 'triggers a full nervous system response'; together 'they don't get used to it'.",
+  "proof": "Ranked ingredient demos; AI body animations (lungs, nervous system); 'same stuff exterminators use in their own homes' authority claim; '99% of mouse pouches fail' statistic; checkout screenshot.",
+  "cta": "Just try it out in the link below. Buy 2 Get 1 Free.",
+  "why_it_works": "Interpretation of execution, not measured performance: The ranked list creates a reason to keep watching until number four, and conceding that the popular ingredients are weak makes the product's extra two feel like the real difference. It reframes competitors without naming them.",
+  "transferable_move": "Rank the category's common ingredients from weakest to strongest, admit the popular ones are weak, and show that rivals stop before the strong ones. Do not copy '99% fail', 'what exterminators use' or respiratory claims without a source.",
+  "opening_visual": "Four-panel split of mint, cinnamon stick, oil dropper and pine cones with red label 'THE 4 THINGS MICE CAN'T TOLERATE'.",
+  "transition_to_product": "53.7 s, 'Sofyre has all four in one bag' with the bag held up.",
+  "proof_placement": "Body animations sit in the #3 and #4 beats (32\u201340 s); exterminator claim follows product entry (59 s); checkout screenshot in the offer close (74.7 s).",
+  "execution_family": "listicle/reasons",
+  "variation_of": "",
+  "ad_role": "acquisition",
+  "url": "https://www.facebook.com/ads/library/?id=1642965773253625",
+  "source_status": "Analyzed from transcript",
+  "transcript": "Automatic transcript (en) from the original ad audio (Whisper, run locally 2026-11-18). Recognition errors may remain in names; numbers and claims are the advertiser's.\n[0.0\u20135.0] There are only four things mice physically can't tolerate, ranked from weakest to strongest.\n[5.0\u20139.1] Number four is exactly why 99% of mouse pouches fail.\n[9.1\u201312.9] Number one, peppermint. Mice don't like this smell. It's annoying to them,\n[12.9\u201316.3] but this is just like a bad air freshener. They'll tolerate it for a few days,\n[16.3\u201321.1] then go right back to normal. Number two, cinnamon. This smell is stronger than peppermint.\n[21.1\u201325.1] It makes them uncomfortable, but still not enough to make them leave. They'll push through it,\n[25.1\u201329.1] especially in winter. Number three, castor oil. Now we're talking.\n[29.1\u201334.0] This is not just a smell. Their bodies react to it. Respiratory issues, skin irritation.\n[34.0\u201339.8] They can't adapt to it. Number four, cedarwood. This one triggers a full nervous system response.\n[39.8\u201344.6] They physically cannot stay near it. Their survival instincts tell them to get out immediately.\n[44.6\u201349.8] Now most mouse pouches stop at only two ingredients, peppermint and cinnamon. It's not enough,\n[49.8\u201354.9] and that's why mice come back after a week. Sofyre has all four in one bag, peppermint,\n[54.9\u201360.0] cinnamon, plus castor oil and cedarwood. It's the same stuff exterminators use in their own homes.\n[60.0\u201364.3] That combo is something mice physically can't tolerate. They don't get used to it. They don't\n[64.3\u201368.9] wait it out. They just leave. Place them around your house, and two days later, you won't see a\n[68.9\u201374.5] single mouse. Each pouch lasts 90 days, and it's totally safe around kids and pets. Right now,\n[74.5\u201378.6] Sofyre is having buy two get one free. Just try it out in the link below."
+ },
+ "detail": {
+  "batch": "top 60 \u00b7 2026-11-18 \u00b7 BrandSearch historical winner",
+  "attribution": "brand",
+  "avatar": "Homeowner who has tried peppermint pouches and saw mice come back after a week.",
+  "angle": "failed effort \u2014 past pouches failed because they only had the weak ingredients.",
+  "duration": 78.6,
+  "duplicate_of": "",
+  "timestamps_approximate": false,
+  "scenes": [
+   {
+    "start": 0,
+    "end": 9.1,
+    "dialogue": "There are only four things mice physically can't tolerate, ranked from weakest to strongest. Number four is exactly why 99% of mouse pouches fail.",
+    "on_screen_text": "THE 4 THINGS MICE CAN'T TOLERATE; captions",
+    "visual": "Four-ingredient split; hand holding an essential-oil bottle; pine cones.",
+    "analysis": "Ranked-list hook with a curiosity tease."
+   },
+   {
+    "start": 9.1,
+    "end": 16.3,
+    "dialogue": "Number one, peppermint. Mice don't like this smell... just like a bad air freshener. They'll tolerate it for a few days, then go right back to normal.",
+    "on_screen_text": "1; captions",
+    "visual": "Mint plant; hand at a window; jar of mint leaves.",
+    "analysis": "Concedes the most common ingredient is weak."
+   },
+   {
+    "start": 16.3,
+    "end": 25.1,
+    "dialogue": "Number two, cinnamon. This smell is stronger than peppermint. It makes them uncomfortable, but still not enough... They'll push through it, especially in winter.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Mouse near spice shelf; cinnamon jar; cinnamon powder on tile; mice walking in snow.",
+    "analysis": "Second weak ingredient."
+   },
+   {
+    "start": 25.1,
+    "end": 34,
+    "dialogue": "Number three, castor oil. Now we're talking. This is not just a smell. Their bodies react to it. Respiratory issues, skin irritation. They can't adapt to it.",
+    "on_screen_text": "3 CASTOR OIL; captions",
+    "visual": "Castor oil jar; castor plant seeds in hand; AI mouse with glowing lungs and brain.",
+    "analysis": "Escalation to 'strong' ingredients with body claims."
+   },
+   {
+    "start": 34,
+    "end": 44.6,
+    "dialogue": "Number four, cedarwood. This one triggers a full nervous system response. They physically cannot stay near it. Their survival instincts tell them to get out immediately.",
+    "on_screen_text": "4; captions",
+    "visual": "Cedar branch; glowing nerve animation; mice in grass; mouse beside a pouch on a step.",
+    "analysis": "Peak of the list."
+   },
+   {
+    "start": 44.6,
+    "end": 53.7,
+    "dialogue": "Now most mouse pouches stop at only two ingredients, peppermint and cinnamon. It's not enough, and that's why mice come back after a week.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Generic mesh sachet of spices; mint and cinnamon split; mouse on a bread loaf.",
+    "analysis": "Competitor reframe without names."
+   },
+   {
+    "start": 53.7,
+    "end": 68.9,
+    "dialogue": "Sofyre has all four in one bag, peppermint, cinnamon, plus castor oil and cedarwood. It's the same stuff exterminators use in their own homes. That combo is something mice physically can't tolerate... They just leave. Place them around your house, and two days later, you won't see a single mouse.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Bag held up; back panel; man in cap placing pouch at a door; green-tinted mouse by pouch; mice running away.",
+    "analysis": "Product as the full-list answer; authority and result claims."
+   },
+   {
+    "start": 68.9,
+    "end": 78.6,
+    "dialogue": "Each pouch lasts 90 days, and it's totally safe around kids and pets. Right now, Sofyre is having buy two get one free. Just try it out in the link below.",
+    "on_screen_text": "captions; CLICK SHOP NOW",
+    "visual": "Pouch under bed; white dog sniffing pouch; checkout page 'NEW YEARS SALE' with bundle tiers; bag with button.",
+    "analysis": "Safety, duration and offer close."
+   }
+  ]
+ },
+ "media": {
+  "content_type": "video/mp4",
+  "url": "/api/benchmarks/sofyre-com-20261118/creatives/creative-sofyre-com-20261118-1642965773253625/media",
+  "poster_url": "/api/benchmarks/sofyre-com-20261118/creatives/creative-sofyre-com-20261118-1642965773253625/poster",
+  "sha256": "4142771c00d54cc0eaaef57359c7819dee7b5382f7030933a9fe61d96d4d1804"
+ }
+}

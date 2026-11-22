@@ -1,0 +1,92 @@
+{
+ "id": "creative-amoils-warts-h-warts-20261110-4217474961875639",
+ "kind": "creatives",
+ "origin": "ai",
+ "data": {
+  "creative": "Boy's burned-off-seven-times wart testimonial with dad \u00b7 4217474961875639",
+  "hook": "I've had my warts burnt off seven times, nothing happened.",
+  "desire": "Stop being embarrassed at school and get rid of warts without pain",
+  "angle": "A kid who failed seven burn-off treatments says this small bottle worked with no pain",
+  "belief_shift": "from 'warts keep coming back even after burning' \u2192 to 'a little bottle cleared them with no pain'",
+  "script_structure": "Failed treatments (7 times) \u2192 school embarrassment \u2192 bottle show + applicator \u2192 one month result with foot photo \u2192 hands too \u2192 no pain (dad confirms) \u2192 'unbelievable' \u2192 Shop Now end card",
+  "mechanism_reveal": "NO EVIDENCE",
+  "proof": "Child testimonial, inset before/after foot photos at 0:11-0:14, parent confirmation 'no burning, no pain', bottle in hand.",
+  "cta": "End card: 'Shop Now!' sticker with arrow on bottle close-up. Button: Shop Now to amoils.com/products/warts.",
+  "why_it_works": "Interpretation of execution, not measured performance: A child stating 'seven times' gives a hard, believable failure count, and the school embarrassment makes it emotional. The dad stepping in to confirm 'no pain' adds an adult witness and speaks to the parent watching.",
+  "transferable_move": "Open with a user stating an exact count of failed attempts, cut in a quick before/after insert, then bring in a second witness to confirm the main fear (pain) didn't happen. Soften: avoid 'gone' promises; say 'cleared up for us'.",
+  "opening_visual": "Boy about 11 in a Cowboys rugby shirt against a white door, holding an applicator; caption 'I've had my warts burned off 7 times'.",
+  "transition_to_product": "0:07.8 'Just the little bottle right here' \u2014 boy holds the bottle up at 0:08.",
+  "proof_placement": "Before/after foot photos follow the 'maybe a month' line; dad's no-pain confirmation follows the result claims.",
+  "execution_family": "testimonial/UGC",
+  "variation_of": "",
+  "ad_role": "acquisition",
+  "url": "https://www.facebook.com/ads/library/?id=4217474961875639",
+  "source_status": "Analyzed from transcript",
+  "transcript": "Automatic transcript (en) from the original ad audio (Whisper, run locally 2026-11-10). Recognition errors may remain in names; numbers and claims are the advertiser's.\n[0.0\u20133.6] I've had my warts burnt off seven times, nothing happened.\n[3.6\u20135.4] No results at school.\n[5.4\u20136.9] I was embarrassed about it.\n[6.9\u20137.8] I couldn't do anything.\n[7.8\u20139.0] Just the little bottle right here\n[9.0\u201310.8] with a little bit of that gets it off.\n[10.8\u201314.2] And maybe a month, I've lost the wart on my feet.\n[14.2\u201317.3] I've lost all the ones in my hands,\n[17.3\u201319.6] that they were gone just from this little bottle.\n[19.6\u201321.0] No burning, no pain.\n[21.0\u201322.1] No, there's no pain.\n[22.1\u201323.8] The stuff is unbelievable.\n[23.8\u201324.6] No joke."
+ },
+ "detail": {
+  "batch": "reused from brand benchmark amoils-com-20261110 (#41 there) \u00b7 top 50 \u00b7 2026-11-10 \u00b7 BrandSearch historical winner",
+  "attribution": "brand",
+  "avatar": "Parents of school-age kids with many warts on hands and feet after repeated freezing or burning.",
+  "angle": "failed effort \u2014 seven burn-off treatments with no result.",
+  "duration": 28.5,
+  "duplicate_of": "",
+  "timestamps_approximate": false,
+  "scenes": [
+   {
+    "start": 0,
+    "end": 3.6,
+    "dialogue": "I've had my warts burnt off seven times, nothing happened.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Boy in rugby shirt talking, holds applicator",
+    "analysis": "Hard failure count as hook."
+   },
+   {
+    "start": 3.6,
+    "end": 7.8,
+    "dialogue": "No results. At school I was embarrassed about it. I couldn't do anything.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Same boy, looking down",
+    "analysis": "Emotional stake: embarrassment."
+   },
+   {
+    "start": 7.8,
+    "end": 10.8,
+    "dialogue": "Just the little bottle right here, with a little bit of that gets it off.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Boy holds up the bottle and applicator",
+    "analysis": "Product entry in user's hands."
+   },
+   {
+    "start": 10.8,
+    "end": 19.6,
+    "dialogue": "And maybe a month, I've lost the wart on my feet. I've lost all the ones in my hands, they're all gone, just from this little bottle.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Inset photos of foot sole with many warts, then a cleared sole; boy shows hands",
+    "analysis": "Before/after proof and multi-site result."
+   },
+   {
+    "start": 19.6,
+    "end": 24.6,
+    "dialogue": "No burning, no pain. No, there's no pain. The stuff is unbelievable. No joke.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Dad in Storm rugby shirt joins and speaks beside the boy",
+    "analysis": "Second witness confirms no pain."
+   },
+   {
+    "start": 24.6,
+    "end": 28.5,
+    "dialogue": "(no speech)",
+    "on_screen_text": "Shop Now!",
+    "visual": "Close-up of fingers holding 33ml H-Warts bottle with red Shop Now sticker and arrow",
+    "analysis": "Clear end-card CTA."
+   }
+  ]
+ },
+ "media": {
+  "content_type": "video/mp4",
+  "url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-4217474961875639/media",
+  "poster_url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-4217474961875639/poster",
+  "sha256": "ef00f6f2806dd0e5a625d6cba11b03012a12f7da7aac264005cddf30d6e35be6"
+ }
+}

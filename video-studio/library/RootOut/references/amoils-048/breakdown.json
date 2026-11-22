@@ -1,0 +1,108 @@
+{
+ "id": "creative-amoils-warts-h-warts-20261110-719197644509837",
+ "kind": "creatives",
+ "origin": "ai",
+ "data": {
+  "creative": "Aussie boy: warts burned off 7 times, then a little bottle \u00b7 719197644509837",
+  "hook": "I've had my warts burned off seven times, nothing happened.",
+  "desire": "Get rid of my kid's warts after repeated burning did nothing, without pain.",
+  "angle": "A boy who failed seven clinical burn-offs vs a little bottle at home.",
+  "belief_shift": "from 'burning them off is the only option, even if it keeps failing' \u2192 to 'a little bottle at home cleared them in about a month without pain' (advertiser's claim)",
+  "script_structure": "Boy: burned off 7 times, embarrassed at school \u2192 little bottle, a bit of that \u2192 foot photos, lost them in a month \u2192 dad: no burning, no pain, unbelievable \u2192 VO: works on all wart types (animation, hand, face) \u2192 'thousands of Aussie moms', 1-2 weeks \u2192 kids love it, no sting, at home \u2192 guarantee \u2192 PDP review scroll \u2192 CTA",
+  "mechanism_reveal": "None beyond 'works on all types of warts'.",
+  "proof": "Boy's failed-effort testimonial at 0:00-0:19; foot photos at 0:10-0:13; dad's endorsement at 0:20-0:24; wart-type visuals at 0:25-0:30; 'thousands of Aussie moms' and 1-2 weeks claim at 0:29-0:34; guarantee at 0:38; PDP before/after and review scroll with 'thousands of 5-star reviews' at 0:42-0:46.",
+  "cta": "'Check out H-Warts Formula today and help your kids be wart-free.' 90-day money-back guarantee.",
+  "why_it_works": "Interpretation of execution, not measured performance: A specific number of failed treatments ('seven times') makes the pain of past effort concrete, and hearing it from a kid with his dad beside him is hard to dismiss. The voiceover half then widens it to many families and adds the guarantee.",
+  "transferable_move": "Open with the end user stating exactly how many times the standard fix failed, add a second family member's one-line endorsement, then switch to voiceover for coverage, social proof and guarantee. Soften: 'skin looks clearer' rather than 'wart-free'.",
+  "opening_visual": "Boy in a Cowboys rugby jersey holding a cotton bud and bottle against a white wall; caption 'I've had my warts burned off 7 times'.",
+  "transition_to_product": "0:07.6-0:10 'Just a little bottle right here with a little bit of that gets it off', bottle held up.",
+  "proof_placement": "Foot photos follow 'maybe a month'; dad's line follows 'all gone'; crowd claim and reviews follow the wart-types beat; guarantee precedes the review scroll.",
+  "execution_family": "testimonial/UGC",
+  "variation_of": "",
+  "ad_role": "acquisition",
+  "url": "https://www.facebook.com/ads/library/?id=719197644509837",
+  "source_status": "Analyzed from transcript",
+  "transcript": "Automatic transcript (en) from the original ad audio (Whisper, run locally 2026-11-10). Recognition errors may remain in names; numbers and claims are the advertiser's.\n[0.0\u20133.4] I've had my warts burned off seven times, nothing happened.\n[3.4\u20135.2] No results at school.\n[5.2\u20136.8] I was embarrassed about it.\n[6.8\u20137.6] I couldn't do anything.\n[7.6\u20139.9] Just a little bottle right here with a little bit of that\n[9.9\u201310.8] gets it off.\n[10.8\u201314.0] And maybe a month, I've lost the wart to my feet.\n[14.0\u201317.1] I've lost all the ones on my hands, knees,\n[17.1\u201319.5] they're all gone just from this little bottle.\n[19.5\u201320.8] No burning, no pain.\n[20.8\u201321.9] No, there's no pain.\n[21.9\u201323.6] This stuff is unbelievable.\n[23.6\u201324.4] No joke.\n[24.4\u201327.0] H-Warts Formula works on all types of warts,\n[27.0\u201329.4] on hands, plantar, flat and even facial.\n[29.4\u201331.6] Thousands of Aussie moms say their kids' warts\n[31.6\u201334.0] start flaking off in just one to two weeks.\n[34.0\u201337.0] Kids love it because it doesn't sting, doesn't hurt,\n[37.0\u201338.4] and can be used right at home.\n[38.4\u201340.8] Plus, there's a 90-day money back guarantee.\n[40.8\u201342.4] They're that confident it works.\n[42.4\u201344.3] With thousands of five-star reviews,\n[44.3\u201346.7] it's time to give your family the relief they deserve.\n[46.7\u201348.4] Check out H-Warts Formula today\n[48.4\u201350.2] and help your kids be wart-free."
+ },
+ "detail": {
+  "batch": "long-runner / high reach \u00b7 added 2026-11-10",
+  "attribution": "brand",
+  "avatar": "Australian parents of school kids whose warts survived repeated burning or freezing and who feel embarrassed at school.",
+  "angle": "failed effort \u2014 burned off seven times with no result.",
+  "duration": 49.9,
+  "duplicate_of": "",
+  "timestamps_approximate": false,
+  "scenes": [
+   {
+    "start": 0,
+    "end": 7.6,
+    "dialogue": "I've had my warts burned off seven times, nothing happened. No results. At school I was embarrassed about it. I couldn't do anything.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Boy in jersey against a white wall, holding a cotton bud.",
+    "analysis": "Failed effort and social pain."
+   },
+   {
+    "start": 7.6,
+    "end": 10.8,
+    "dialogue": "Just a little bottle right here with a little bit of that gets it off.",
+    "on_screen_text": "with a little bit of that",
+    "visual": "Bottle held to camera.",
+    "analysis": "Product entry."
+   },
+   {
+    "start": 10.8,
+    "end": 19.5,
+    "dialogue": "And maybe a month, I've lost the wart to my feet. I've lost all the ones on my hands, knees, they're all gone just from this little bottle.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Inset photos of a foot sole and toes; boy shows hands.",
+    "analysis": "Result claim with photos."
+   },
+   {
+    "start": 19.5,
+    "end": 24.4,
+    "dialogue": "No burning, no pain. No, there's no pain. This stuff is unbelievable. No joke.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Dad in Storm jersey beside the boy, holding the bottle.",
+    "analysis": "Second-person endorsement."
+   },
+   {
+    "start": 24.4,
+    "end": 29.4,
+    "dialogue": "H-Warts formula works on all types of warts, on hands, plantar, flat and even facial.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Skin-layer animation; hand with wart; woman's face with a circled spot.",
+    "analysis": "Coverage, self-selection."
+   },
+   {
+    "start": 29.4,
+    "end": 38.4,
+    "dialogue": "Thousands of Aussie moms say their kids' warts start flaking off in just one to two weeks. Kids love it because it doesn't sting, doesn't hurt, and can be used right at home.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Mums with kids; boy cheering with arms up; boy in glasses with bottle.",
+    "analysis": "Crowd claim and kid-friendly benefits."
+   },
+   {
+    "start": 38.4,
+    "end": 42.4,
+    "dialogue": "Plus, there's a 90-day money back guarantee. They're that confident it works.",
+    "on_screen_text": "captions of dialogue",
+    "visual": "Boy outdoors pushing the bottle toward camera.",
+    "analysis": "Risk reversal."
+   },
+   {
+    "start": 42.4,
+    "end": 49.9,
+    "dialogue": "With thousands of five-star reviews, it's time to give your family the relief they deserve. Check out H-Warts Formula today and help your kids be wart-free.",
+    "on_screen_text": "captions of dialogue + PDP: Results You Can See! Before / After; Verified Buyer reviews; ADD TO CART",
+    "visual": "Phone scroll of PDP before/after and reviews; heart-sweater girl with bottle and arrow.",
+    "analysis": "Review proof and CTA."
+   }
+  ]
+ },
+ "media": {
+  "content_type": "video/mp4",
+  "url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-719197644509837/media",
+  "poster_url": "/api/benchmarks/amoils-warts-h-warts-20261110/creatives/creative-amoils-warts-h-warts-20261110-719197644509837/poster",
+  "sha256": "6f926c489d007767709ab227286facbc779c031abfee64e9b8e1cdae84f70d99"
+ }
+}
