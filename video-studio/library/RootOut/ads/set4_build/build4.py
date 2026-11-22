@@ -90,14 +90,14 @@ def plan(hook):
                         ("clip", C / "i06_towels.mp4", 0.6, {"in": 2.2, "label": "AI placeholder"}), ("clip", C / "i09_clay_root.mp4", 1.25, {"homeo": 1})]),
         ("mom", "m11", {"chip": "#4  RootOut", "pins": {**pins("1", "2", "3"), "4": {"slot": 4, "drop_at": rel("m11", "together"), "drop_dur": 0.9}}, "bumps3": 1, "fill8x": [-2, -1]}),
         ("mom", "m12", {"pins": pins("1", "2", "3", "4"), "bumps3": 1, "fill8x": [-2, -1]}),
-        ("vo", "v07b", [("clip", C / "i10_couch.mp4", 1.0, {"in": 0.1, "seg": {"zoom": 1.75, "focus": [0.66, 0.2]}})]),
+        ("vo", "v07b", [("clip", C / "i10_toes.mp4", 1.0, {"in": 0.2}), ("cut", {"pins": pins("1", "2", "3", "4"), "bumps3": 1, "board": 1}, 1.0)]),
         # File / Soak / Cover = the brand's own how-to macro (real footage, site video), cut to the words
         ("vo", "v08a", [("clip", C / "i11_file.mp4", 2.7, {"in": 0.2}), ("gfx", G / "g_howto.mp4", 4.8, {"in": 0.0, "out": 2.15}),
                         ("gfx", G / "g_howto.mp4", 2.45, {"in": 2.15, "out": 4.7}), ("gfx", G / "g_howto.mp4", 2.55, {"in": 4.7, "out": 7.1}),
                         ("clip", C / "i14_lamp.mp4", 1.75, {"in": 0.6})]),
         ("mom", "m13", {"pins": pins("1", "2", "3", "4"), "bumps3": 1, "clock": [0.0, 2.6]}),
         ("vo", "v09", [("gfx", G / "g_calendar.mp4", 1.0), ("cut", {"pins": pins("4"), "bumps3": 1, "smooth_at": 0.4, "board": 1, "board_all": 1}, 1.0)]),
-        ("mom", "m14", {"pins": {**{k: dict(PL[k], flick_at=rel("m14", "skip") + 0.12 * i) for i, k in enumerate("123")}, "4": dict(PL["4"])},
+        ("mom", "m14", {"pins": {**{k: {"slot": int(k), "drop_at": rel("m14", "stuck") + 0.1 * i, "flick_at": rel("m14", "skip") + 0.12 * i} for i, k in enumerate("123")}, "4": dict(PL["4"])},
                         "smooth_at": -5}),
         ("vo", "v10b", [("clip", C / "i16_bottles.mp4", 1.0), ("gfx", G / "g_offer.mp4", 1.4)]),
         ("gfx", G / "g_end.mp4", 3.2),
@@ -127,14 +127,16 @@ def scene_file(name, sc, d):
     if out.exists() and key.exists() and json.loads(key.read_text()) == sc: return out
     cutaway.render(sc, out); key.write_text(json.dumps(sc)); return out
 
+GEOM = {"m07_agon": (0.46, 292, 1090), "m08_nobody": (0.46, 292, 1090)}  # Seedance zoomed in on these: shrink to match the others
 def mom_comp(k, sc):
     f = C / f"{MOM[k][0]}.mp4"; s0, s1 = window(f); name = f"{MOM[k][0]}"
+    sc_, gx, gy = GEOM.get(name, (0.78, 119, 740))
     bg = scene_file(f"bg_{name}", sc, s1 - s0)
     out = CMP / f"{name}.mp4"; CMP.mkdir(parents=True, exist_ok=True)
-    stamp = CMP / f"{name}.stamp"; sig = json.dumps([sc, s0, s1, bg.stat().st_mtime])
+    stamp = CMP / f"{name}.stamp"; sig = json.dumps([sc, s0, s1, bg.stat().st_mtime, GEOM.get(name)])
     if not out.exists() or not stamp.exists() or stamp.read_text() != sig:
         subprocess.run([sys.executable, str(B / "composite.py"), str(f), str(bg), str(out), "--ss", f"{s0:.3f}", "--to", f"{s1:.3f}",
-                        "--y", "740", "--x", "119", "--scale", "0.78"], check=True)
+                        "--y", str(gy), "--x", str(gx), "--scale", str(sc_)], check=True)
         stamp.write_text(sig)
     return out, s1 - s0
 
@@ -166,7 +168,7 @@ def build(hook, render_only=False):
                 if s[0] == "cut":
                     f = scene_file(f"vo_{hook}_{vid}_{j}", s[1], d); segs.append(seg(f, 0, d, mute=True, note=f"cut {vid}")); scene_hits(s[1], t + used)
                     if opts.get("card"): ovs.append(card_overlay(opts["card"], t + used, d))
-                    if opts.get("dagger"): texts.append(small("†Based on our manufacturer's absorption testing against a regular cream.", t + used, t + used + d))
+                    if opts.get("dagger"): texts.append(small("†Based on our manufacturer's absorption testing against a regular cream.", t + used, t + used + d, pos="center"))
                 else:
                     if render_only:
                         used += d; continue
@@ -182,7 +184,7 @@ def build(hook, render_only=False):
                     else: segs.append(seg(f, a, a + d, mute=True, note=f.stem, **ex))
                     if opts.get("card"): ovs.append(card_overlay(opts["card"], t + used, d))
                     if opts.get("label"): texts.append(small(opts["label"], t + used, t + used + d, pos="top"))
-                    if opts.get("homeo"): texts.append(small("*Homeopathic claims are based on traditional homeopathic practice, not accepted medical evidence,\nand are not FDA evaluated. Results vary.", t + used, t + used + d))
+                    if opts.get("homeo"): texts.append(small("*Homeopathic claims are based on traditional homeopathic practice, not accepted medical evidence,\nand are not FDA evaluated. Results vary.", t + used, t + used + d, pos="center"))
                     for nm, off, g in CLIP_FOLEY.get(Path(f).stem, []): HITS.append((nm, t + used + off, g))
                 pos.append((s[0], f"{vid}:{j}", t + used, d)); used += d
             t += L

@@ -9,13 +9,14 @@ import build4
 L = {l["id"]: l for l in json.loads((B / "SCRIPT_LOCK.json").read_text())["lines"]}
 NUM = {"3": "three", "2": "two", "4": "four", "1": "one", "15": "fifteen", "14": "fourteen", "8": "eight"}
 def n2(ws): return [NUM.get(w, w).replace("wort", "wart").replace("hardtop", "hard top") for w in ws]
-for k, (clip, vid) in build4.MOM.items():
-    f = C / f"{clip}.mp4"
-    if not f.exists(): continue
-    tx = P / "work/tx_clips" / f"{clip}.json"
-    got = " ".join(n2(norm(" ".join(w["w"] for w in json.loads(tx.read_text())["words"])))) if tx.exists() else None
-    if got is None:
-        build4.words(f); got = " ".join(n2(norm(" ".join(w["w"] for w in json.loads(tx.read_text())["words"]))))
-    want = " ".join(n2(norm(L[vid]["text"]))).replace("hard top", "hard top")
-    ok = got.replace(" ", "") == want.replace(" ", "")
-    print(f"{'OK ' if ok else 'BAD'} {clip:14} {'' if ok else chr(10)+'   want: '+want+chr(10)+'   got:  '+got}")
+if __name__ == "__main__":
+    for k, (clip, vid) in build4.MOM.items():
+        f = C / f"{clip}.mp4"
+        if not f.exists(): continue
+        tx = P / "work/tx_clips" / f"{clip}.json"
+        got = " ".join(n2(norm(" ".join(w["w"] for w in json.loads(tx.read_text())["words"])))) if tx.exists() else None
+        if got is None:
+            build4.words(f); got = " ".join(n2(norm(" ".join(w["w"] for w in json.loads(tx.read_text())["words"]))))
+        want = " ".join(n2(norm(L[vid]["text"]))).replace("hard top", "hard top")
+        ok = got.replace(" ", "") == want.replace(" ", "")
+        print(f"{'OK ' if ok else 'BAD'} {clip:14} {'' if ok else chr(10)+'   want: '+want+chr(10)+'   got:  '+got}")
