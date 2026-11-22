@@ -1,0 +1,11 @@
+{
+ "dand_snap": {
+  "file": "assets/broll/archive_deathtow1947_death-to-weeds_1146.00-1156.50.mp4",
+  "in": 4.6,
+  "seg": {
+   "fit": "blur"
+  },
+  "source": "https://archive.org/details/DeathtoW1947",
+  "licence": "Public domain"
+ }
+}
