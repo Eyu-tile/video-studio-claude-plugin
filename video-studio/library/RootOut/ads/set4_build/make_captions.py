@@ -24,6 +24,30 @@ for i, w in enumerate(W):
         w["w"] = "8x" + W[i + 1]["w"].strip()[5:]; W[i + 1]["_drop"] = True
 for w in W:
     if not w.get("_drop"): out.append(w)
+# ---- force the caption words to be the locked script: align, drop stray words, insert missed ones ----
+import difflib
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from check_script import norm
+from check_clips import n2
+L = json.loads((Path(__file__).resolve().parent / "SCRIPT_LOCK.json").read_text())["lines"]
+hook = {"h1": ["h1"], "h2": ["h2a", "h2b"], "h3": ["h3"]}[h]
+script_tokens = " ".join(l["text"] for l in L if l["id"] in hook or not l["id"].startswith("h")).split()
+key = lambda tok: "".join(n2(norm(tok))) or tok.lower()
+got_k = [key(w["w"]) for w in out]; want_k = [key(t) for t in script_tokens]
+sm = difflib.SequenceMatcher(a=got_k, b=want_k, autojunk=False); aligned = []
+for op, a0, a1, b0, b1 in sm.get_opcodes():
+    if op == "equal":
+        for i, j in zip(range(a0, a1), range(b0, b1)): aligned.append(dict(out[i], w=script_tokens[j]))
+    elif op in ("replace", "insert"):
+        src = out[a0:a1]
+        t0 = src[0]["s"] if src else (aligned[-1]["e"] if aligned else 0.0)
+        t1 = src[-1]["e"] if src else (out[a1]["s"] if a1 < len(out) else t0 + 0.4 * (b1 - b0))
+        n = b1 - b0; step = max((t1 - t0) / max(n, 1), 0.12)
+        for k, j in enumerate(range(b0, b1)): aligned.append({"w": script_tokens[j], "s": round(t0 + k * step, 3), "e": round(t0 + (k + 1) * step, 3)})
+        if op == "replace" or not src: print("caption fix:", " ".join(w["w"] for w in src) or "(missed)", "->", " ".join(script_tokens[b0:b1]))
+    else:
+        print("caption drop (not in script):", " ".join(w["w"] for w in out[a0:a1]))
+out = aligned
 edl = json.loads((P / f"work/ads/set4_{h}.edl.json").read_text())
 # shot windows on the edit clock -> caption y (centre-bottom anchor)
 win, t = [], 0.0
