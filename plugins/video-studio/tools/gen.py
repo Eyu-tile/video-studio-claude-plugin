@@ -122,15 +122,20 @@ def cmd_plan(a):
                        f"phone-shot b-roll, real hands and real places, natural light, smooth slight handheld motion. "
                        f"No text, no watermark, no logos except the product's own.",
                 aspect=aspect, line=i, expect_seconds=round(est(ln.get("say", "x x x")) + 0.5, 1))
-    from higgsfield import active
-    acct = a.account or s.get("account") or active(a.project)
+    from higgsfield import active_state, billing_check
+    st = active_state(a.project)
+    acct = a.account or s.get("account") or st["account"]
+    wsid = s.get("workspace_id") or (st["workspace_id"] if acct == st["account"] else None)
     doc = {"variant": v, "script": a.script, "aspect": aspect, "presenter": p, "lines": lines,
-           "account": acct, "tool_prefix": f"mcp__{acct}__",
+           "account": acct, "workspace_id": wsid, "tool_prefix": f"mcp__{acct}__",
+           "before_billing": billing_check(acct, wsid),
            "created": time.strftime("%Y-%m-%d %H:%M"), "jobs": jobs}
     out = Path(a.out or Path(a.script).with_name(f"{v}.jobs.json"))
     save_json(out, doc)
     gens = sum(j["status"] == "todo" for j in jobs)
-    print(f"{len(jobs)} jobs ({gens} generations) -> {out}; account {acct} (tools mcp__{acct}__*)")
+    print(f"{len(jobs)} jobs ({gens} generations) -> {out}; account {acct}"
+          f"{' team workspace ' + wsid if wsid else ''} (tools mcp__{acct}__*)")
+    print(f"Before the first generation: {doc['before_billing']}.")
     for j in jobs:
         print(f"  {j['id']:<10} {j['kind']:<9} needs {','.join(j['needs']) or '-':<16} {j.get('tool', '')}")
     print("Confirm the plan and the provider's price estimate with the person before generating.")
@@ -158,7 +163,8 @@ def cmd_next(a):
     for j in r:
         print(json.dumps(resolve(doc, j), indent=1, ensure_ascii=False))
     if doc.get("account"):
-        print(f"\nUse the {doc['account']} connection (tools {doc['tool_prefix']}*), not another Higgsfield account.")
+        print(f"\nUse the {doc['account']} connection (tools {doc['tool_prefix']}*), not another Higgsfield account."
+              + (f" Bill team workspace {doc['workspace_id']}." if doc.get("workspace_id") else ""))
     print(f"\n{len(r)} job(s) ready. Run each with the generator, then: vs gen done {a.jobs} <id> --url <result>")
 
 

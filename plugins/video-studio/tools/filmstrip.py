@@ -14,6 +14,7 @@ Usage:
 """
 import argparse
 import math
+import os
 import shutil
 import sys
 import tempfile
@@ -56,10 +57,13 @@ def main():
     td = Path(tempfile.mkdtemp())
     try:
         label = "drawtext=text='%s':x=8:y=8:fontsize=h/12:fontcolor=white:box=1:boxcolor=black@0.6"
-        for i, t in enumerate(times):
-            run(["ffmpeg", "-y", "-v", "error", "-ss", f"{t:.3f}", "-i", args.input, "-frames:v", "1",
+        def grab(i, t):  # each frame is its own seek: run them side by side on every core
+            run(["ffmpeg", "-y", "-v", "error", "-threads", "2", "-ss", f"{t:.3f}", "-i", args.input, "-frames:v", "1",
                  "-vf", f"scale={args.width}:-2," + label % fmt_ts(t).replace(":", r"\:"),
                  str(td / f"f{i:03d}.png")])
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(max_workers=max(2, min(8, os.cpu_count() or 2))) as ex:
+            list(ex.map(lambda it: grab(*it), enumerate(times)))
         cols = min(args.cols, len(times))
         rows = math.ceil(len(times) / cols)
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)

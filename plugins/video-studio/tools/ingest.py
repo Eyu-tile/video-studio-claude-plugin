@@ -70,7 +70,8 @@ def main():
         flags = ",".join(x for x, on in (("HDR", c.get("hdr")), ("VFR", c.get("vfr")),
                                           (f"rot{c.get('rotation')}", c.get("rotation"))) if on)
         rows.append(f"| {i} | {Path(c['file']).name} | {c['kind']} | {fmt_ts(c['duration'])} | {c['width']}x{c['height']} | "
-                    f"{orient} | {c['fps']:g if c['width'] else '-'} | {'yes' if c['has_audio'] else 'no'} | "
+                    f"{orient} | {format(c['fps'], 'g') if c['width'] and c['fps'] else '-'} | "
+                    f"{'yes' if c['has_audio'] else 'no'} | "
                     f"{int(100 * c.get('sound_ratio', 0))}% | {flags} |")
     md = [f"# Media in {args.folder}", f"{len(clips)} files, {fmt_ts(total)} of video/audio.", "",
           *rows, "", "Contact sheets: " + str(sheets) + "/<clip>.png (Read the ones you need)."]

@@ -10,6 +10,7 @@ Run both the automated checks and a visual pass. Never show a draft that FAILs.
 ## Automated
 ```bash
 vs qa out/draft.mp4 --edl work/edl.json --transcript work/transcript.json --preset reels --max-length 60 -o work/qa.json
+# client work: add --brand <Client> [--captions work/captions.ass] to check the lessons learned from feedback
 ```
 | check | FAIL / WARN means | fix |
 |-------|-------------------|-----|

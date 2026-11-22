@@ -8,6 +8,7 @@ accounts never needs a new login. The plugin also ships a default connection cal
   vs higgsfield add brand-a            create the connection `higgsfield-brand-a` (then sign in: /mcp)
   vs higgsfield list                   connections and their status (connected / needs sign-in)
   vs higgsfield use brand-a [--project P]   the account this workspace (or project) generates with
+  vs higgsfield use brand-a --workspace <id>   ... billed to a client's team workspace on that account
   vs higgsfield current [--project P]  which account is active, and its MCP tool prefix
   vs higgsfield remove brand-a         delete the connection (sign-out happens in /mcp)
 """
@@ -60,11 +61,31 @@ def state_file(project=None):
     return (Path(project) if project else workspace()) / ".higgsfield.json"
 
 
-def active(project=None):
+def active_state(project=None):
+    """{"account": ..., "workspace_id": ... or None} for the project, else the workspace, else the default."""
     for f in ([state_file(project)] if project else []) + [state_file()]:
         if f.exists():
-            return load_json(f).get("account", DEFAULT)
-    return DEFAULT
+            d = load_json(f)
+            return {"account": d.get("account", DEFAULT), "workspace_id": d.get("workspace_id")}
+    return {"account": DEFAULT, "workspace_id": None}
+
+
+def active(project=None):
+    return active_state(project)["account"]
+
+
+def billing_check(name, workspace_id):
+    """What Claude does before the first billable call on this account."""
+    steps = []
+    if workspace_id:
+        steps.append(f"call mcp__{name}__list_workspaces; if {workspace_id} is not is_selected, call "
+                     f"mcp__{name}__select_workspace(workspace_id='{workspace_id}') (the selection persists across "
+                     "sessions and projects, so check every time)")
+    else:
+        steps.append(f"call mcp__{name}__list_workspaces; if a team workspace is selected, call "
+                     f"mcp__{name}__select_workspace(clear=true) so this project bills the private workspace")
+    steps.append(f"call mcp__{name}__balance and say in one line which account/workspace and how many credits")
+    return "; then ".join(steps)
 
 
 def statuses():
@@ -106,19 +127,31 @@ def cmd_list(a):
         note = "  (the plugin's own connection: shown in /mcp, sign in there)"
     else:
         note = "" if cur in have else "  (not set up in Claude Code yet: vs higgsfield add " + cur[len(DEFAULT) + 1:] + ")"
-    print(f"active: {cur}{note}")
+    ws = active_state(a.project)["workspace_id"]
+    print(f"active: {cur}{note}" + (f"  team workspace {ws}" if ws else ""))
 
 
 def cmd_use(a):
     name = server(a.name)
+    if a.workspace and not re.fullmatch(r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
+                                         a.workspace):
+        die("--workspace takes a workspace UUID from list_workspaces")
     f = state_file(a.project)
-    save_json(f, {"account": name})
-    print(f"{'project' if a.project else 'workspace'} now generates with {name} (tools mcp__{name}__*) -> {f}")
+    state = {"account": name}
+    if a.workspace:
+        state["workspace_id"] = a.workspace
+        if a.workspace_name:
+            state["workspace_name"] = a.workspace_name
+    save_json(f, state)
+    where = f", team workspace {a.workspace_name or a.workspace}" if a.workspace else ""
+    print(f"{'project' if a.project else 'workspace'} now generates with {name}{where} (tools mcp__{name}__*) -> {f}")
 
 
 def cmd_current(a):
-    name = active(a.project)
-    print(json.dumps({"account": name, "tool_prefix": f"mcp__{name}__", "url": URL}))
+    st = active_state(a.project)
+    name = st["account"]
+    print(json.dumps({"account": name, "workspace_id": st["workspace_id"], "tool_prefix": f"mcp__{name}__",
+                      "url": URL, "before_billing": billing_check(name, st["workspace_id"])}))
 
 
 def cmd_remove(a):
@@ -142,6 +175,8 @@ def main():
     s = sub.add_parser("use")
     s.add_argument("name")
     s.add_argument("--project")
+    s.add_argument("--workspace", help="bill a client's team workspace on this account (UUID from list_workspaces)")
+    s.add_argument("--workspace-name")
     s = sub.add_parser("current")
     s.add_argument("--project")
     s = sub.add_parser("remove")

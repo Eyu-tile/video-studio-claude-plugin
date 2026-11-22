@@ -20,6 +20,13 @@ rather than assuming. In the Claude app: Settings → Connectors → custom conn
 generated results. Other generators (HeyGen via `/media-use`, Veo, Kling...) work the same way: the job
 file doesn't care which provider ran it, only what came back.
 
+**Before the first billable call in a session or project** (generation, upload, upscale): run
+`vs higgsfield current --project $P` and do its `before_billing` steps. If a client's team workspace is set,
+`list_workspaces`, then `select_workspace` when it isn't selected; without one, clear a leftover team selection. The
+selection persists across sessions and projects, so check every time. Then call `balance` and say which account,
+workspace and credits will pay ("Billing Acme's team workspace on higgsfield-acme, 2,140 credits"). After switching
+accounts, re-upload reference media: ids don't carry across accounts.
+
 ## 1. Script → jobs
 Write `$P/work/gen/<v>.script.json` from the ad plan (`/ugc-ads` step 3): the presenter (`look` detailed
 enough to repeat, `voice`, `setting`, `consent`), and one entry per line: `say`, `show` (`talking` or `broll`),

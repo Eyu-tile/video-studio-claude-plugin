@@ -14,6 +14,9 @@ Usage:
   python3 video-studio/scripts/transcribe.py RAW.mp4 -o work/transcript --model large-v3 --lang en
 """
 import argparse
+import os
+import json
+import hashlib
 import importlib.util
 import subprocess
 import sys
@@ -37,7 +40,7 @@ def extract_audio(src, dst):
          "-c:a", "pcm_s16le", str(dst)])
 
 
-def via_faster_whisper(wav, model, lang, prompt):
+def via_faster_whisper(wav, model, lang, prompt, fast=False):
     from faster_whisper import WhisperModel
     import wave
     import numpy as np
@@ -45,10 +48,17 @@ def via_faster_whisper(wav, model, lang, prompt):
     # Pass samples, not a path: faster-whisper's own decoder (PyAV) breaks on some PyAV releases.
     with wave.open(str(wav), "rb") as wf:
         audio = np.frombuffer(wf.readframes(wf.getnframes()), np.int16).astype(np.float32) / 32768.0
-    segs, info = m.transcribe(
-        audio, language=lang, word_timestamps=True, vad_filter=False,
-        initial_prompt=prompt, condition_on_previous_text=False,
-    )
+    if fast:  # batched greedy decoding: 2.5x faster on CPU, but mishears a word now and then and word times can be
+        # ~100 ms off (95th percentile): for reading/searching long recordings, never for cutting or captions
+        from faster_whisper import BatchedInferencePipeline
+        segs, info = BatchedInferencePipeline(model=m).transcribe(
+            audio, language=lang, word_timestamps=True, batch_size=8, beam_size=1,
+            initial_prompt=prompt, condition_on_previous_text=False)
+    else:
+        segs, info = m.transcribe(
+            audio, language=lang, word_timestamps=True, vad_filter=False,
+            initial_prompt=prompt, condition_on_previous_text=False,
+        )
     words, segments = [], []
     for s in segs:
         segments.append({"s": round(s.start, 3), "e": round(s.end, 3), "text": s.text.strip()})
@@ -85,6 +95,10 @@ def main():
     ap.add_argument("--lang", default=None, help="language code, e.g. en (auto-detect if omitted)")
     ap.add_argument("--prompt", default=None,
                     help="vocabulary hint: brand names, jargon (e.g. 'Acme, Supabase, Kubernetes')")
+    ap.add_argument("--fast", action="store_true",
+                    help="2.5x faster draft (faster-whisper batched): for reading/finding moments in long recordings; "
+                         "word times can be ~0.1 s off, so never cut or caption from it")
+    ap.add_argument("--no-cache", action="store_true", help="transcribe again even if this exact file was done")
     args = ap.parse_args()
 
     src = Path(args.input)
@@ -96,6 +110,23 @@ def main():
             "(or pip install faster-whisper)")
 
     info = probe(src)
+    st = src.stat()
+    key = hashlib.sha1(json.dumps([str(src.resolve()), st.st_size, int(st.st_mtime), backend, args.model, args.lang,
+                                   args.prompt, args.fast]).encode()).hexdigest()[:20]
+    cache = Path(os.environ.get("XDG_CACHE_HOME", Path.home() / ".cache")) / "video-studio" / "transcripts" / f"{key}.json"
+    if cache.exists() and not args.no_cache:  # same file, same settings: reuse (transcribing 3 min took ~40 s on CPU)
+        cached = json.loads(cache.read_text())
+        words, segments, lang = cached["words"], cached["segments"], cached["language"]
+        print(f"{src.name}: same file and settings as an earlier run, reusing its transcript (--no-cache to redo)",
+              file=sys.stderr)
+    else:
+        words, segments, lang = run_backend(src, backend, args, info)
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(json.dumps({"words": words, "segments": segments, "language": lang}))
+    write_outputs(src, info, backend, args, words, segments, lang)
+
+
+def run_backend(src, backend, args, info):
     with tempfile.TemporaryDirectory() as td:
         wav = Path(td) / "audio.wav"
         extract_audio(src, wav)
@@ -103,7 +134,7 @@ def main():
               file=sys.stderr)
         try:
             if backend == "faster-whisper":
-                words, segments, lang = via_faster_whisper(wav, args.model, args.lang, args.prompt)
+                words, segments, lang = via_faster_whisper(wav, args.model, args.lang, args.prompt, args.fast)
             else:
                 mod = __import__(MODULES[backend])
                 words, segments, lang = via_openai_style(mod, wav, args.model, args.lang, args.prompt)
@@ -114,11 +145,18 @@ def main():
                 hint = ("\nThe first run downloads the model from Hugging Face: huggingface.co and *.hf.co must be "
                         "reachable (cloud sessions: allow them in the environment's network settings).")
             die(f"{backend} failed: {type(e).__name__}: {e}{hint}")
+    return words, segments, lang
 
+
+def write_outputs(src, info, backend, args, words, segments, lang):
     out = Path(args.out)
+    # "-o work/talk.transcript" -> work/talk.transcript.json / .md (the skills read <name>.transcript.json); a plain
+    # "-o work/talk" or "-o work/talk.json" keeps working
+    if out.suffix not in ("", ".json", ".md"):
+        out = out.with_name(out.name + ".json")
     data = {
         "source": str(src), "duration": info["duration"], "language": lang,
-        "backend": backend, "model": args.model, "words": words, "segments": segments,
+        "backend": backend, "model": args.model, "fast": bool(args.fast), "words": words, "segments": segments,
     }
     save_json(out.with_suffix(".json"), data)
     subprocess.run([sys.executable, str(Path(__file__).parent / "pack.py"),

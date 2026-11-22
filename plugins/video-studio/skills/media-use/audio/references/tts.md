@@ -51,6 +51,10 @@ to HeyGen sign-in. Read the Gemini section for its credential requirement.
 npx hyperframes tts "Welcome to HyperFrames" -o narration.wav
 ```
 
+Per-project keys: get `$ELEVENLABS_API_KEY` from `vs keys check elevenlabs --project <P>` and run the
+call inside `vs keys exec --project <P> -- bash -c '...'`. If it is missing, `vs keys ask elevenlabs --project <P>`
+opens a pop-up for it. Never ask for the key in chat.
+
 ## Self-contained HeyGen (no CLI) — `scripts/heygen-tts.mjs`
 
 The published `hyperframes tts` CLI synthesizes locally with Kokoro only. When you

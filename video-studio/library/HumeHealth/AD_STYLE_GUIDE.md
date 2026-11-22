@@ -2,6 +2,8 @@
 
 v0 is built only from the Notion SOP, the Strategy OS and the winner-library metrics. Measured numbers (shot length, wpm, loudness, caption specs) will be added after the footage, previous-ads and winning-ads analysis. Full detail is in `00_sop_notion/SOP_DIGEST.md`; claim limits are in `04_do_not_use/DO_NOT_USE.md`.
 
+> **Client MUST rules are in `EDITING_RULES.md`.** Rule 1: whenever a metric is mentioned, show that metric's real app screen from the resources, with a red mark on its row. They override anything below.
+
 ## The one-line brief
 A belief-change ad, not a feature list: **hook in ≤2 s (≤1.5 s on Meta) → one old→new belief shift → one proof (an app screen that matches the spoken metric, the product, a testimonial or a graph) by ~5 s → CTA.**
 
@@ -35,7 +37,7 @@ A belief-change ad, not a feature list: **hook in ≤2 s (≤1.5 s on Meta) → 
 - VO: Fish Audio. Clear pauses at sentence ends. Use punctuation for emphasis. Test "Hume Pod / Hume Band 2.0 / Prof AI" pronunciation first.
 
 ## Deliverables
-First review: a 9:16 full edit + a render of all hooks (≥3 brief hooks). Finals after approval: 1:1, 9:16, 16:9 by default (4:5 when the task Size field asks). Hume Ad Namer file names, no spaces, same base name across revisions.
+First review: a 9:16 full edit + a render of all hooks (≥3 brief hooks). Finals after approval: 1:1, 9:16, 16:9 by default (4:5 when the task Size field asks). **16:9 house method:** the approved 4:5 (or 9:16) centred at full height, over the same video enlarged to fill the frame, blurred and slightly darkened; every graphic stays inside the centre column (producer, Muscle Imbalance 16:9). Hume Ad Namer file names, no spaces, same base name across revisions.
 
 ## Measured targets (166 previously shipped Hume ads, medians; see `02_previous_ads/README.md`)
 | Lever | Target | Range seen (p25–p75) |

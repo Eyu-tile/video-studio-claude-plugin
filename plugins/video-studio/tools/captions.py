@@ -14,11 +14,12 @@ Usage:
   vs captions work/transcript.json work/edl.json -o work/captions --style bold-pop --aspect 9:16 --accent "#FFD400"
 """
 import argparse
+import os
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from vs_common import ASPECTS, HARD_FILLERS, is_image, load_json, norm_word, timeline  # noqa: E402
+from vs_common import ASPECTS, HARD_FILLERS, is_image, load_json, norm_word, save_json, timeline  # noqa: E402
 
 
 
@@ -44,7 +45,7 @@ def srt_ts(t):
     return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
 
 
-def remap(words, edl, tsrc):
+def remap(words, edl, tsrc, keep_fillers=False):
     """Map source word times onto the output timeline (speed and transitions included).
     Words outside kept segments are dropped; segments from other sources only advance the clock."""
     out = []
@@ -61,8 +62,9 @@ def remap(words, edl, tsrc):
             a, b = it["start"], it["end"]
         sp, o = it["speed"], it["out_start"]
         for w in words:
-            if w["s"] >= a - 0.02 and w["e"] <= b + 0.02 and norm_word(w["w"]) not in HARD_FILLERS:
-                out.append({"w": w["w"], "s": o + max(w["s"] - a, 0) / sp, "e": o + (min(w["e"], b) - a) / sp})
+            if w["s"] >= a - 0.02 and w["e"] <= b + 0.02 and (keep_fillers or norm_word(w["w"]) not in HARD_FILLERS):
+                out.append({"w": w["w"], "s": o + max(w["s"] - a, 0) / sp, "e": o + (min(w["e"], b) - a) / sp,
+                            "filler": norm_word(w["w"]) in HARD_FILLERS})
     out.sort(key=lambda w: w["s"])
     return out
 
@@ -188,6 +190,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     out.parent.mkdir(parents=True, exist_ok=True)
     out.with_suffix(".ass").write_text(header + "\n".join(events) + "\n", encoding="utf-8")
     out.with_suffix(".srt").write_text("\n".join(srt), encoding="utf-8")
+    # how these captions were made, so `vs fix --render` can remake them after an edit with the same look
+    save_json(out.with_suffix(".captions.json"), {"argv": sys.argv[1:], "cwd": os.getcwd()})
     print(f"{len(chunks)} caption cards ({args.style}, {W}x{H}) -> {out.with_suffix('.ass')}, {out.with_suffix('.srt')}")
 
 

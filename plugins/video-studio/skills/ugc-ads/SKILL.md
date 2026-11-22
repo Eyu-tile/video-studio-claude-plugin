@@ -11,6 +11,10 @@ the house standard with the sources behind it.
 
 Project folder `$P` as in `/video-edit` (`vs new <client>-<product>`).
 
+Task code: start or resume the client task first (`/task-history`): `vs task new <CODE> ...`, or `vs task resume <CODE>`
+when returning to one. After delivering, `vs task deliver <CODE> --file ... --note ...`; log client comments with
+`vs task feedback`.
+
 ## 1. Brief → GATE (never open a timeline without it)
 ```bash
 vs ads brief $P/work/brief.json          # writes a template the first time

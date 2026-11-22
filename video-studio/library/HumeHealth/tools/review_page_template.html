@@ -1,0 +1,666 @@
+<meta charset="utf-8">
+<title>Perimenopause v6 Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a dark screening-room review desk. Cut list | player + timeline | notes rail. Single dark look on purpose so colour is judged on a neutral dark surround. */
+:root{
+  --ground:#0d0f14; --panel:#151821; --raise:#1d2130; --line:#272c3b; --line-2:#343a4d;
+  --ink:#e9ebf2; --ink-2:#a3a9bd; --ink-3:#6f7690;
+  --accent:#1882ff; --accent-ink:#ffffff; --accent-soft:rgba(24,130,255,.16);
+  --done:#3cc98a; --done-soft:rgba(60,201,138,.14); --warn:#ff4b4b;
+  --f-ui:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-tc:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:8px;
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--ground);color:var(--ink);font-family:var(--f-ui);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--panel)}
+button,select,textarea,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+[hidden]{display:none!important}
+.tc{font-family:var(--f-tc);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+
+.shell{display:flex;flex-direction:column;height:100%}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--panel);border-bottom:1px solid var(--line);
+  padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top .proj{display:flex;flex-direction:column;min-width:0;flex:1 1 280px}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.top h1{margin:0;font-size:16px;font-weight:600;text-wrap:balance}
+.top .actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{background:var(--raise);border:1px solid var(--line-2);border-radius:6px;padding:6px 12px;font-size:13px}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.btn.primary:disabled{opacity:.45;cursor:default}
+.store-note{font-size:12px;color:var(--ink-3)}
+
+.app{flex:1;min-height:0;display:grid;grid-template-columns:232px minmax(0,1fr) 360px}
+/* cut list */
+.cuts{border-right:1px solid var(--line);background:var(--panel);overflow:auto;padding:14px 10px;display:flex;flex-direction:column;gap:16px}
+.cuts h2{margin:0 6px 6px;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
+.cut-group{display:flex;flex-direction:column;gap:4px}
+.cut{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;text-align:left;background:none;border:1px solid transparent;border-radius:var(--r);padding:6px}
+.cut:hover{background:var(--raise)}
+.cut[aria-current="true"]{background:var(--accent-soft);border-color:rgba(24,130,255,.45)}
+.cut img{width:40px;height:71px;object-fit:cover;border-radius:4px;background:var(--raise);display:block}
+.cut img.r45{height:50px}
+.cut img.r169{height:23px}
+.cut .meta{min-width:0;display:flex;flex-direction:column}
+.cut .name{font-weight:500}
+.cut .sub{font-size:12px;color:var(--ink-3)}
+.badge{min-width:22px;height:20px;padding:0 6px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-size:11px;font-weight:600;display:inline-grid;place-items:center}
+.badge.zero{background:var(--raise);color:var(--ink-3)}
+
+/* stage */
+.stage{display:flex;flex-direction:column;min-width:0;min-height:0}
+.stage-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:12px 20px 0}
+.stage-head .file{font-family:var(--f-tc);font-size:12px;color:var(--ink-3);overflow-wrap:anywhere;min-width:0}
+.stage-head .title{font-size:15px;font-weight:600}
+.screen{flex:1;min-height:0;position:relative}
+.screen video{position:absolute;top:12px;left:20px;width:calc(100% - 40px);height:calc(100% - 24px);object-fit:contain;background:transparent;display:block}
+.bigplay{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;border:0;background:rgba(13,15,20,.72);display:grid;place-items:center}
+.bigplay svg{width:26px;height:26px;fill:#fff;margin-left:4px}
+
+.deck{border-top:1px solid var(--line);background:var(--panel);padding:10px 20px 14px;display:flex;flex-direction:column;gap:10px}
+.timeline{position:relative;height:34px;cursor:pointer;touch-action:none}
+.track{position:absolute;left:0;right:0;bottom:6px;height:6px;border-radius:3px;background:var(--raise)}
+.buffered{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--line-2)}
+.played{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--accent)}
+.hoverline{position:absolute;bottom:0;width:1px;height:22px;background:var(--ink-3);pointer-events:none}
+.hovertc{position:absolute;bottom:26px;transform:translateX(-50%);font-size:11px;background:var(--raise);border:1px solid var(--line-2);border-radius:4px;padding:1px 5px;pointer-events:none;white-space:nowrap}
+.head{position:absolute;bottom:2px;width:2px;height:16px;margin-left:-1px;background:#fff;border-radius:1px;pointer-events:none}
+.mk{position:absolute;top:0;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--accent);border:2px solid var(--panel);padding:0}
+.mk.done{background:var(--done)}
+.mk:hover,.mk.hot{transform:scale(1.25)}
+.transport{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ico{width:34px;height:34px;border-radius:6px;border:1px solid transparent;background:none;display:grid;place-items:center}
+.ico:hover{background:var(--raise)}
+.ico svg{width:18px;height:18px;fill:var(--ink)}
+.clock{font-size:13px;color:var(--ink);padding:0 8px}
+.clock span{color:var(--ink-3)}
+.spacer{flex:1}
+.rate{background:var(--raise);border:1px solid var(--line-2);border-radius:6px;padding:5px 6px;font-size:12px}
+.keys{font-size:12px;color:var(--ink-3)}
+kbd{font-family:var(--f-tc);font-size:11px;border:1px solid var(--line-2);border-bottom-width:2px;border-radius:4px;padding:0 4px;color:var(--ink-2)}
+
+/* notes rail */
+.cc{border-top:1px solid var(--line);padding:10px 12px;display:flex;flex-direction:column;gap:8px;background:var(--panel)}
+.cc-stamp{margin:0;font-family:var(--f-tc);font-size:13px;color:var(--ink);background:var(--ground);border:1px solid var(--line);border-radius:6px;padding:6px 8px}
+.cc-hint{margin:0;font-size:12px;color:var(--ink-3)}
+.cc .btn{align-self:flex-start}
+.notes{border-left:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-height:0;min-width:0}
+.notes-head{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.notes-head h2{margin:0;font-size:14px;font-weight:600;flex:1}
+.seg{display:inline-flex;background:var(--ground);border:1px solid var(--line);border-radius:6px;padding:2px}
+.seg button{border:0;background:none;padding:3px 10px;border-radius:4px;font-size:12px;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--raise);color:var(--ink)}
+.list{flex:1;min-height:0;overflow:auto;padding:8px;display:flex;flex-direction:column;gap:6px}
+.empty{margin:auto;padding:24px 18px;text-align:center;color:var(--ink-3);max-width:30ch}
+.empty strong{display:block;color:var(--ink-2);font-weight:500;margin-bottom:4px}
+.note{border:1px solid var(--line);border-radius:var(--r);background:var(--ground);padding:10px 12px;display:flex;flex-direction:column;gap:6px;cursor:pointer}
+.note:hover{border-color:var(--line-2)}
+.note.hot{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.note.done{opacity:.62}
+.note-top{display:flex;align-items:center;gap:8px;min-width:0}
+.stamp{background:var(--accent-soft);color:#7cb8ff;border-radius:4px;padding:1px 6px;font-size:12px}
+.note.done .stamp{background:var(--done-soft);color:var(--done)}
+.who{font-size:12px;color:var(--ink-2);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.when{font-size:11px;color:var(--ink-3)}
+.note-body{white-space:pre-wrap;overflow-wrap:anywhere}
+.note-act{display:flex;gap:6px}
+.note-act button{background:none;border:1px solid var(--line-2);border-radius:5px;padding:2px 8px;font-size:12px;color:var(--ink-2)}
+.note-act button:hover{color:var(--ink);border-color:var(--ink-3)}
+.note-act .confirm{border-color:var(--warn);color:var(--warn)}
+
+.composer{border-top:1px solid var(--line);padding:12px 14px calc(12px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px}
+.composer-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pin{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);cursor:pointer}
+.pin input{accent-color:var(--accent)}
+.composer textarea{width:100%;min-height:72px;resize:vertical;background:var(--ground);border:1px solid var(--line-2);border-radius:var(--r);padding:9px 10px;line-height:1.4}
+.composer textarea:focus{border-color:var(--accent);outline:none}
+.hint{font-size:11px;color:var(--ink-3);flex:1}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--raise);border:1px solid var(--line-2);border-radius:6px;padding:8px 14px;font-size:13px;z-index:20}
+.copybox{width:100%;height:120px;background:var(--ground);border:1px solid var(--line-2);border-radius:6px;font-family:var(--f-tc);font-size:12px;padding:8px}
+
+@media (max-width:1100px){
+  .app{grid-template-columns:minmax(0,1fr) 340px;grid-template-rows:auto minmax(0,1fr)}
+  .cuts{grid-column:1/-1;flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:8px 12px;gap:12px}
+  .cuts h2{display:none}
+  .cut-group{flex-direction:row}
+  .cut{grid-template-columns:28px max-content max-content;padding:4px 8px;flex-shrink:0}
+  .cut .sub{white-space:nowrap}
+  .cut img{width:28px;height:50px}
+  .cut img.r45{height:35px}
+}
+@media (max-width:760px){
+  html,body{height:auto}
+  .shell{height:auto}
+  .app{display:flex;flex-direction:column}
+  .cuts{padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px))}
+  .screen{height:62vh;padding:10px max(16px,env(safe-area-inset-left,0px)) 10px max(16px,env(safe-area-inset-right,0px))}
+  .stage-head,.deck{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .notes{border-left:0;border-top:1px solid var(--line)}
+  .list{max-height:none;overflow:visible}
+  .keys{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="shell" id="shell">
+  <header class="top">
+    <div class="proj">
+      <span class="eyebrow">Hume Band · Longevity 40+ · Perimenopause · Round 5</span>
+      <h1>Perimenopause v6 (9:16, Hooks 1–3) for review</h1>
+    </div>
+    <div class="actions">
+      <span class="store-note" id="storeNote">Connecting comments…</span>
+      <button class="btn" id="refresh" type="button" title="Reload the comments">Refresh</button>
+      <button class="btn" id="copyAll" type="button">Copy all notes</button>
+    </div>
+  </header>
+
+  <main class="app" id="app">
+    <nav class="cuts" id="cuts" aria-label="Cuts"></nav>
+
+    <section class="stage" id="stage">
+      <div class="stage-head">
+        <span class="title" id="cutTitle">Hook 1 · 9:16</span>
+        <span class="file" id="cutFile"></span>
+      </div>
+      <div class="screen">
+        <video id="vid" playsinline preload="auto"></video>
+        <div id="loadMsg" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.72);color:#fff;padding:10px 16px;border-radius:10px;font:600 14px/1.3 system-ui,sans-serif;pointer-events:none" hidden>Loading video…</div>
+        <button class="bigplay" id="bigplay" type="button" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M6 4l15 8-15 8z"/></svg></button>
+      </div>
+      <div class="deck">
+        <div class="timeline" id="tl" role="slider" aria-label="Playhead" tabindex="0" aria-valuemin="0">
+          <div class="track"><div class="buffered" id="buf"></div><div class="played" id="played"></div></div>
+          <div id="markers"></div>
+          <div class="head" id="head"></div>
+          <div class="hoverline" id="hoverline" hidden></div>
+          <div class="hovertc tc" id="hovertc" hidden></div>
+        </div>
+        <div class="transport">
+          <button class="ico" id="back" type="button" aria-label="Back one frame" title="Back one frame (←)"><svg viewBox="0 0 24 24"><path d="M11 6v12L3 12zM20 6v12l-8-6z"/></svg></button>
+          <button class="ico" id="play" type="button" aria-label="Play" title="Play / pause (Space)"><svg viewBox="0 0 24 24" id="playIco"><path d="M7 4l13 8-13 8z"/></svg></button>
+          <button class="ico" id="fwd" type="button" aria-label="Forward one frame" title="Forward one frame (→)"><svg viewBox="0 0 24 24"><path d="M13 6v12l8-6zM4 6v12l8-6z"/></svg></button>
+          <span class="clock tc" id="clock">00:00:00:00 <span>/ 00:00:00:00</span></span>
+          <span class="spacer"></span>
+          <span class="keys"><kbd>Space</kbd> play · <kbd>←</kbd><kbd>→</kbd> frame · <kbd>C</kbd> comment</span>
+          <select class="rate" id="rate" aria-label="Playback speed">
+            <option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option>
+          </select>
+          <button class="ico" id="mute" type="button" aria-label="Mute" title="Mute (M)"><svg viewBox="0 0 24 24" id="muteIco"><path d="M4 9h4l5-4v14l-5-4H4zM16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12" stroke="#e9ebf2" stroke-width="1.6" fill="none"/><path d="M4 9h4l5-4v14l-5-4H4z"/></svg></button>
+          <button class="ico" id="fs" type="button" aria-label="Full screen" title="Full screen (F)"><svg viewBox="0 0 24 24"><path d="M4 4h6v2H6v4H4zM14 4h6v6h-2V6h-4zM4 14h2v4h4v2H4zM18 14h2v6h-6v-2h4z"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="notes" aria-label="Comments">
+      <div class="notes-head">
+        <h2 id="notesTitle">Comments</h2>
+        <div class="seg" role="group" aria-label="Show">
+          <button type="button" data-f="open" aria-pressed="true">Open</button>
+          <button type="button" data-f="done" aria-pressed="false">Resolved</button>
+          <button type="button" data-f="all" aria-pressed="false">All</button>
+        </div>
+      </div>
+      <div class="list" id="list"></div>
+      <div class="cc" id="ccBox" hidden>
+        <p class="cc-stamp" id="ccStamp">Hook 1 · 00:00:00:00</p>
+        <button class="btn primary" id="ccBtn" type="button">Comment on this frame</button>
+        <p class="cc-hint" id="ccHint">Pause on the frame, then press the button: your comment is posted in this page's Comments with this cut and timecode, and the owner gets it. You need to be signed in to Claude with comment access.</p>
+      </div>
+      <div class="cc" id="sendBox" hidden>
+        <p class="cc-hint" id="sendWhy" style="color:var(--ink-2)"></p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn primary" id="sendMail" type="button">Email my notes</button>
+          <button class="btn" id="sendCopy" type="button">Copy my notes</button>
+        </div>
+      </div>
+      <form class="composer" id="composer">
+        <div class="composer-row">
+          <label class="pin"><input type="checkbox" id="pinTc" checked> Pin to <span class="stamp tc" id="pinStamp">00:00:00</span></label>
+        </div>
+        <textarea id="noteText" placeholder="Leave a note at this frame…" aria-label="Comment"></textarea>
+        <div class="composer-row">
+          <span class="hint">Enter to post · Shift+Enter for a new line</span>
+          <button class="btn primary" id="post" type="submit" disabled>Post</button>
+        </div>
+      </form>
+    </aside>
+  </main>
+</div>
+
+<script>
+(function(){
+const FPS = 30;
+const MASTER = "VIDEO_BAND_Longevity_40Plus_Perimenopause_ROHIT_NEBA_121126_2026Week46_";
+const CUTS = [
+  {id:"h1", src:"peri_h1v6", hook:"Hook 1", ar:"9:16", ver:"v6", dur:153.9, file:MASTER+"H1_9x16_v6.mp4"},
+  {id:"h2", src:"peri_h2v6", hook:"Hook 2", ar:"9:16", ver:"v6", dur:154.2, file:MASTER+"H2_9x16_v6.mp4"},
+  {id:"h3", src:"peri_h3v6", hook:"Hook 3", ar:"9:16", ver:"v6", dur:154.8, file:MASTER+"H3_9x16_v6.mp4"},
+];
+const $ = id => document.getElementById(id);
+const vid = $("vid");
+let cur = CUTS[0], comments = [], filter = "open", myId = null, isOwner = false, canWrite = true;
+let names = {}, userNs = null, mode = "local", dbNs = null, pendingDelete = null;
+
+/* ---------- timecode ---------- */
+function fr(t){ return Math.max(0, Math.round(t * FPS)); }
+function tc(t, short){
+  const f = fr(t), ff = f % FPS, s = Math.floor(f / FPS), ss = s % 60, m = Math.floor(s / 60) % 60, h = Math.floor(s / 3600);
+  const p = n => String(n).padStart(2, "0");
+  return short ? `${p(m)}:${p(ss)}:${p(ff)}` : `${p(h)}:${p(m)}:${p(ss)}:${p(ff)}`;
+}
+function ago(ms){
+  const d = (Date.now() - ms) / 1000;
+  if (d < 60) return "just now";
+  if (d < 3600) return Math.floor(d / 60) + " min ago";
+  if (d < 86400) return Math.floor(d / 3600) + " h ago";
+  return new Date(ms).toLocaleDateString(undefined, {month:"short", day:"numeric"});
+}
+function toast(msg){
+  const t = document.createElement("div"); t.className = "toast"; t.textContent = msg;
+  document.body.appendChild(t); setTimeout(() => t.remove(), 2200);
+}
+
+/* ---------- cut list ---------- */
+function renderCuts(){
+  const nav = $("cuts"); nav.textContent = "";
+  for (const ar of [...new Set(CUTS.map(c => c.ar))]) {
+    const g = document.createElement("div"); g.className = "cut-group";
+    const h = document.createElement("h2"); h.textContent = ar === "9:16" ? "9:16 · Reels / TikTok" : ar === "16:9" ? "16:9 · Landscape" : "4:5 · Feed";
+    g.appendChild(h);
+    for (const c of CUTS.filter(c => c.ar === ar)) {
+      const b = document.createElement("button"); b.type = "button"; b.className = "cut";
+      b.setAttribute("aria-current", c === cur ? "true" : "false");
+      const img = document.createElement("img"); img.src = "v/" + c.src + ".jpg"; img.alt = "";
+      if (ar === "4:5") img.className = "r45"; if (ar === "16:9") img.className = "r169";
+      const m = document.createElement("span"); m.className = "meta";
+      const n = document.createElement("span"); n.className = "name"; n.textContent = c.hook;
+      const s = document.createElement("span"); s.className = "sub tc"; s.textContent = `${c.ar} · ${c.ver} · ${tc(c.dur, true).slice(0, 5)}`;
+      m.append(n, s);
+      const open = comments.filter(x => x.cut === c.id && !x.done).length;
+      const bd = document.createElement("span"); bd.className = "badge" + (open ? "" : " zero"); bd.textContent = open;
+      bd.title = open + " open comment" + (open === 1 ? "" : "s");
+      b.append(img, m, bd);
+      b.addEventListener("click", () => { location.hash = c.id; });
+      g.appendChild(b);
+    }
+    nav.appendChild(g);
+  }
+}
+
+function selectCut(id){
+  const c = CUTS.find(x => x.id === id) || CUTS[0];
+  const changed = c !== cur || !vid.src;
+  cur = c;
+  if (changed) {
+    vid.pause(); vid.poster = "v/" + c.src + ".jpg"; loadVideo(c);
+  }
+  $("stage").className = "stage " + (c.ar === "9:16" ? "ratio-916" : "ratio-45");
+  $("cutTitle").textContent = `${c.hook} · ${c.ar} · ${c.ver}`;
+  $("cutFile").textContent = c.file + " · 540p review proxy";
+  renderCuts(); renderNotes(); renderMarkers(); tick();
+}
+
+/* ---------- video loading: whole file into a blob URL so any timecode can be reached ---------- */
+const blobs = {}; let loadSeq = 0, pendingT = null;
+async function loadVideo(c){
+  const my = ++loadSeq, msg = $("loadMsg");
+  if (blobs[c.id]) { vid.src = blobs[c.id]; vid.playbackRate = parseFloat($("rate").value); msg.hidden = true; return; }
+  msg.hidden = false; msg.textContent = "Loading video…";
+  try {
+    const r = await fetch("v/" + c.src + ".mp4"); if (!r.ok || !r.body) throw new Error("http " + r.status);
+    const total = +r.headers.get("content-length") || 0, rd = r.body.getReader(), parts = []; let got = 0;
+    for (;;) { const {done, value} = await rd.read(); if (done) break; parts.push(value); got += value.length;
+      if (my === loadSeq && total) msg.textContent = "Loading video " + Math.round(got / total * 100) + "%"; }
+    blobs[c.id] = URL.createObjectURL(new Blob(parts, {type: "video/mp4"}));
+    if (my !== loadSeq) return;
+    vid.src = blobs[c.id];
+  } catch (e) { if (my !== loadSeq) return; vid.src = "v/" + c.src + ".mp4"; }
+  vid.playbackRate = parseFloat($("rate").value); msg.hidden = true;
+}
+vid.addEventListener("loadedmetadata", () => { if (pendingT != null) { const t = pendingT; pendingT = null; seek(t); } });
+
+/* ---------- player ---------- */
+function dur(){ return isFinite(vid.duration) && vid.duration > 0 ? vid.duration : cur.dur; }
+function tick(){
+  const d = dur(), t = vid.currentTime || 0, pct = Math.min(100, t / d * 100);
+  $("played").style.width = pct + "%"; $("head").style.left = pct + "%";
+  $("clock").firstChild.nodeValue = tc(t) + " ";
+  $("clock").lastElementChild.textContent = "/ " + tc(d);
+  $("pinStamp").textContent = tc(t, true);
+  $("tl").setAttribute("aria-valuemax", d.toFixed(2)); $("tl").setAttribute("aria-valuenow", t.toFixed(2));
+  $("tl").setAttribute("aria-valuetext", tc(t));
+  try { if (vid.buffered.length) $("buf").style.width = (vid.buffered.end(vid.buffered.length - 1) / d * 100) + "%"; } catch (e) {}
+  // highlight notes near the playhead
+  document.querySelectorAll(".note[data-t]").forEach(el => el.classList.toggle("hot", Math.abs(parseFloat(el.dataset.t) - t) < 0.5));
+  document.querySelectorAll(".mk").forEach(el => el.classList.toggle("hot", Math.abs(parseFloat(el.dataset.t) - t) < 0.5));
+}
+function setPlayIcon(){
+  const playing = !vid.paused;
+  $("playIco").innerHTML = playing ? '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>' : '<path d="M7 4l13 8-13 8z"/>';
+  $("play").setAttribute("aria-label", playing ? "Pause" : "Play");
+  $("bigplay").hidden = playing || vid.currentTime > 0.05;
+}
+function toggle(){ if (vid.paused) { const p = vid.play(); if (p) p.catch(() => {}); } else vid.pause(); }
+function seek(t){ if (vid.readyState < 1) { pendingT = t; return; } vid.currentTime = Math.max(0, Math.min(dur() - 0.001, t)); tick(); }
+function step(n){ vid.pause(); seek((fr(vid.currentTime) + n) / FPS + 0.001); }
+
+vid.addEventListener("timeupdate", tick);
+vid.addEventListener("seeked", tick);
+vid.addEventListener("progress", tick);
+vid.addEventListener("loadedmetadata", () => { renderMarkers(); tick(); });
+vid.addEventListener("play", setPlayIcon); vid.addEventListener("pause", setPlayIcon); vid.addEventListener("ended", setPlayIcon);
+vid.addEventListener("click", toggle);
+$("bigplay").addEventListener("click", toggle);
+$("play").addEventListener("click", toggle);
+$("back").addEventListener("click", () => step(-1));
+$("fwd").addEventListener("click", () => step(1));
+$("rate").addEventListener("change", e => { vid.playbackRate = parseFloat(e.target.value); });
+$("mute").addEventListener("click", () => { vid.muted = !vid.muted; $("mute").style.opacity = vid.muted ? .45 : 1; $("mute").setAttribute("aria-label", vid.muted ? "Unmute" : "Mute"); });
+$("fs").addEventListener("click", () => { try { const p = vid.requestFullscreen ? vid.requestFullscreen() : vid.webkitEnterFullscreen && vid.webkitEnterFullscreen(); if (p && p.catch) p.catch(() => toast("Full screen is not available here")); } catch (e) { toast("Full screen is not available here"); } });
+// rAF while playing so the playhead moves smoothly
+(function loop(){ if (!vid.paused) tick(); requestAnimationFrame(loop); })();
+
+/* timeline scrub */
+const tl = $("tl");
+function tAt(x){ const r = tl.getBoundingClientRect(); return Math.max(0, Math.min(1, (x - r.left) / r.width)) * dur(); }
+let dragging = false;
+tl.addEventListener("pointerdown", e => { if (e.target.classList.contains("mk")) return; dragging = true; tl.setPointerCapture(e.pointerId); vid.pause(); seek(tAt(e.clientX)); });
+tl.addEventListener("pointermove", e => {
+  const r = tl.getBoundingClientRect(), x = Math.max(0, Math.min(r.width, e.clientX - r.left));
+  $("hoverline").hidden = false; $("hovertc").hidden = false;
+  $("hoverline").style.left = x + "px"; $("hovertc").style.left = Math.max(30, Math.min(r.width - 30, x)) + "px";
+  $("hovertc").textContent = tc(tAt(e.clientX), true);
+  if (dragging) seek(tAt(e.clientX));
+});
+tl.addEventListener("pointerup", () => { dragging = false; });
+tl.addEventListener("pointerleave", () => { if (!dragging) { $("hoverline").hidden = true; $("hovertc").hidden = true; } });
+tl.addEventListener("keydown", e => {
+  if (e.key === "ArrowLeft") { e.preventDefault(); e.stopPropagation(); step(e.shiftKey ? -FPS : -1); }
+  if (e.key === "ArrowRight") { e.preventDefault(); e.stopPropagation(); step(e.shiftKey ? FPS : 1); }
+});
+
+/* ---------- comments ---------- */
+function forCut(){ return comments.filter(c => c.cut === cur.id).sort((a, b) => (a.t ?? -1) - (b.t ?? -1) || a.at - b.at); }
+function renderMarkers(){
+  const box = $("markers"); box.textContent = "";
+  const d = dur();
+  for (const c of forCut()) {
+    if (c.t == null) continue;
+    const b = document.createElement("button"); b.type = "button";
+    b.className = "mk" + (c.done ? " done" : ""); b.style.left = Math.min(100, c.t / d * 100) + "%";
+    b.dataset.t = c.t; b.title = tc(c.t, true) + "  " + c.text;
+    b.setAttribute("aria-label", "Comment at " + tc(c.t, true));
+    b.addEventListener("click", e => { e.stopPropagation(); vid.pause(); seek(c.t); const el = document.querySelector(`.note[data-id="${c.id}"]`); if (el) el.scrollIntoView({block:"nearest"}); });
+    box.appendChild(b);
+  }
+}
+function renderNotes(){
+  const all = forCut();
+  const open = all.filter(c => !c.done).length, done = all.length - open;
+  $("notesTitle").textContent = `Comments · ${open} open${done ? ", " + done + " resolved" : ""}`;
+  const shown = all.filter(c => filter === "all" || (filter === "open" ? !c.done : c.done));
+  const list = $("list"); list.textContent = "";
+  if (!shown.length) {
+    const e = document.createElement("div"); e.className = "empty";
+    const s = document.createElement("strong");
+    if (filter === "done") { s.textContent = "Nothing resolved yet"; e.append(s, "Resolved notes on this cut show here."); }
+    else { s.textContent = all.length ? "All notes on this cut are resolved" : "No notes on this cut yet"; e.append(s, "Pause on a frame, type below, and press Enter. The note is pinned to that timecode."); }
+    list.appendChild(e);
+  }
+  for (const c of shown) {
+    const el = document.createElement("article"); el.className = "note" + (c.done ? " done" : ""); el.dataset.id = c.id;
+    if (c.t != null) el.dataset.t = c.t;
+    const top = document.createElement("div"); top.className = "note-top";
+    const st = document.createElement("span"); st.className = "stamp tc"; st.textContent = c.t == null ? "General" : tc(c.t, true);
+    const who = document.createElement("span"); who.className = "who"; who.dataset.uid = c.by || "";
+    who.textContent = c.by && c.by === myId ? "You" : (names[c.by] || (mode === "local" ? "You" : "Someone"));
+    const when = document.createElement("span"); when.className = "when"; when.textContent = ago(c.at);
+    top.append(st, who, when);
+    const body = document.createElement("div"); body.className = "note-body"; body.textContent = c.text;
+    const act = document.createElement("div"); act.className = "note-act";
+    if (canWrite) {
+      const r = document.createElement("button"); r.type = "button"; r.textContent = c.done ? "Reopen" : "Resolve";
+      r.addEventListener("click", e => { e.stopPropagation(); patch(c.id, {done: !c.done}); });
+      act.appendChild(r);
+      if (mode === "local" || isOwner || (c.by && c.by === myId)) {
+        const del = document.createElement("button"); del.type = "button";
+        const arm = pendingDelete === c.id;
+        del.textContent = arm ? "Confirm delete" : "Delete"; if (arm) del.className = "confirm";
+        del.addEventListener("click", e => { e.stopPropagation(); if (pendingDelete === c.id) { pendingDelete = null; remove(c.id); } else { pendingDelete = c.id; renderNotes(); setTimeout(() => { if (pendingDelete === c.id) { pendingDelete = null; renderNotes(); } }, 4000); } });
+        act.appendChild(del);
+      }
+    }
+    el.append(top, body, act);
+    el.addEventListener("click", () => { if (c.t != null) { vid.pause(); seek(c.t); } });
+    list.appendChild(el);
+  }
+  resolveNames(); tick();
+}
+async function resolveNames(){
+  if (!userNs || typeof userNs.profiles !== "function") return;
+  const ids = [...new Set(comments.map(c => c.by).filter(Boolean))].filter(id => id !== myId && !(id in names));
+  if (!ids.length) return;
+  try {
+    const ps = await userNs.profiles(ids);
+    for (const id of ids) names[id] = (ps && ps[id] && ps[id].name) || "";
+    document.querySelectorAll(".who[data-uid]").forEach(el => { const id = el.dataset.uid; if (id && id !== myId && names[id]) el.textContent = names[id]; });
+  } catch (e) {}
+}
+function renderAll(){ renderCuts(); renderNotes(); renderMarkers(); }
+
+document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f;
+  document.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+  renderNotes();
+}));
+
+/* ---------- storage: shared comments when this viewer can write, Claude's comments otherwise, this device last ---------- */
+let cmNs = null, unsub = null, unsent = false;
+const NOTES_TO = "";   // inbox for "Email my notes" (empty: the viewer types it)
+function loadLocal(){ if (mode === "local") return; comments = []; mode = "none"; }
+function useClaudeComments(){ $("composer").hidden = true; $("sendBox").hidden = true; $("ccBox").hidden = false; $("ccBtn").hidden = false; $("storeNote").textContent = "Comment with \u201cComment on this frame\u201d"; ccSync(); }
+const DKEY = "review-notes-" + MASTER;
+function loadDrafts(){ try { return JSON.parse(localStorage.getItem(DKEY) || "[]"); } catch (e) { return []; } }
+function saveDrafts(){ try { localStorage.setItem(DKEY, JSON.stringify(comments)); } catch (e) {} }
+const SHELL_TIP = "Signed in to Claude? You can also use Claude's own Comment button at the top of this page: click it, click the video and type your note with the timecode, and it reaches the editor directly.";
+function draftsNote(){ $("storeNote").textContent = comments.length ? "Notes NOT sent yet: press Email my notes" : "Notes stay on this device until you send them"; }
+function useDrafts(why){
+  mode = "local"; comments = loadDrafts(); canWrite = true; unsent = comments.length > 0;
+  $("ccBox").hidden = true; $("composer").hidden = false; $("sendBox").hidden = false;
+  $("noteText").disabled = false; $("noteText").placeholder = "Write your note for this frame…";
+  $("sendWhy").textContent = (why ? why + " " : "") + "Your notes are NOT sent yet: they are kept on this device only. When you're done, press Email my notes (or Copy my notes and send them to the editor). " + SHELL_TIP + " (" + diagText() + ")";
+  draftsNote(); renderAll();
+}
+window.addEventListener("beforeunload", e => { if (mode === "local" && unsent) { e.preventDefault(); e.returnValue = ""; } });
+function cannotWrite(){
+  canWrite = false;
+  if (cmNs) { useClaudeComments(); return "claude"; }
+  useDrafts(userNs ? "Your access lets you view this page but not post to its comment list." : NOT_INVITED); return "local";
+}
+async function add(c){
+  if (mode === "db") {
+    try { await dbNs.collection("comments").doc().set(c); return true; }
+    catch (e) {
+      lastErr = (e && e.code) || "write";
+      if (e && (e.code === "invalid_argument" || e.code === "not_granted" || e.code === "permission_denied")) {
+        if (cannotWrite() === "claude") { toast("Use “Comment on this frame”: your note goes to the page's Comments."); return false; }
+        c.id = "n" + Date.now(); comments.push(c); saveDrafts(); unsent = true; draftsNote(); renderAll(); return true;
+      }
+      toast("The comment didn't save. Try again."); return false; }
+  }
+  c.id = "n" + Date.now(); comments.push(c); saveDrafts(); unsent = true; draftsNote(); renderAll(); return true;
+}
+async function patch(id, p){
+  if (mode === "db") { try { await dbNs.doc("comments/" + id).update(p); } catch (e) { toast("That change didn't save."); } }
+  else { const c = comments.find(x => x.id === id); if (c) Object.assign(c, p); saveDrafts(); renderAll(); }
+}
+async function remove(id){
+  if (mode === "db") { try { await dbNs.doc("comments/" + id).delete(); } catch (e) { toast("Couldn't delete that comment."); } }
+  else { comments = comments.filter(x => x.id !== id); saveDrafts(); unsent = comments.length > 0; draftsNote(); renderAll(); }
+}
+function stamp(){ return new Date().toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}); }
+function subscribe(){
+  const note = $("storeNote");
+  if (unsub) { try { unsub(); } catch (e) {} unsub = null; }
+  return new Promise(resolve => {
+    let first = true;
+    const t = setTimeout(() => { if (first) { first = false; resolve(false); } }, 10000);
+    try {
+      unsub = dbNs.collection("comments").onSnapshot(snap => {
+        if (mode === "local") return;
+        mode = "db";
+        comments = snap.docs.map(d => Object.assign({id: d.id}, d.data()));
+        if (canWrite || isOwner) note.textContent = "Comments are shared and live · updated " + stamp();
+        renderAll();
+        if (first) { first = false; clearTimeout(t); resolve(true); }
+      }, err => {
+        lastErr = (err && err.code) || "connect"; note.textContent = "Comments couldn't connect. Press Refresh to try again.";
+        if (first) { first = false; clearTimeout(t); resolve(false); }
+      });
+    } catch (e) { if (first) { first = false; clearTimeout(t); resolve(false); } }
+  });
+}
+let diag = {}, lastErr = null;
+const NOT_INVITED = "Claude doesn’t recognise you as invited to this page: you may be signed in with a different email than the invitation, or you opened the plain link. Sign in to Claude with the invited email and open the link in the invitation email, then reload.";
+function diagText(){ return "Access check: " + Object.entries(diag).map(([k, v]) => k + "=" + v).join(" · ") + (lastErr ? " · error=" + lastErr : ""); }
+async function connect(){
+  const note = $("storeNote");
+  mode = "none";   // the page starts in "local"; shared comments must be able to take over (the old pages never left "local")
+  diag.claude = !!(window.claude && window.claude.use);
+  if (!diag.claude) { useDrafts(""); return; }
+  const safe = n => Promise.resolve().then(() => window.claude.use(n)).catch(e => { diag[n + "Err"] = (e && e.code) || "error"; return null; });
+  const [db, u, cm] = await Promise.all([safe("db"), safe("user"), safe("comments")]);
+  cmNs = cm; userNs = u;
+  let w = null;
+  if (u) {
+    try { const me = await u.me(); myId = me && me.id; } catch (e) {}
+    try { isOwner = !!(await u.isOwner()); } catch (e) {}
+    try { w = await u.can("data.write"); } catch (e) {}
+    try { diag.editor = await u.canEdit(); } catch (e) {}
+  }
+  Object.assign(diag, {db: !!db, user: !!u, comments: !!cm, owner: isOwner, write: w});
+  if (db) {
+    dbNs = db; canWrite = isOwner || w !== false;
+    const ok = await subscribe();
+    if (isOwner) {
+      $("composer").hidden = false; $("sendBox").hidden = true; $("ccBox").hidden = false; $("ccBtn").hidden = !cmNs;
+      $("ccHint").textContent = "Clients who can't post here use Claude's Comment button: those comments are in Claude's comment panel (the speech-bubble icon at the top), not in this list. Press Refresh to reload this list.";
+      ccSync(); return;
+    }
+    if (!ok) { if (cmNs) useClaudeComments(); else useDrafts("Comments couldn't connect."); return; }
+    if (!canWrite) { if (cmNs) useClaudeComments(); else useDrafts(u ? "Your access lets you view this page but not post to its comment list." : NOT_INVITED); return; }
+    $("composer").hidden = false; $("sendBox").hidden = true; $("ccBox").hidden = true; return;
+  }
+  if (cmNs) { useClaudeComments(); note.textContent = "Comment with “Comment on this frame”"; return; }
+  useDrafts(u ? "" : "You're not signed in to Claude, so your notes can't be shared from here.");
+}
+$("refresh").addEventListener("click", async () => {
+  if (mode === "local") { comments = loadDrafts(); renderAll(); toast("Notes on this device reloaded"); return; }
+  if (!dbNs) { location.reload(); return; }
+  const ok = await subscribe(); toast(ok ? "Comments refreshed · " + stamp() : "Couldn't reach the comments. Try again.");
+});
+
+/* ---------- composer ---------- */
+const ta = $("noteText");
+ta.addEventListener("focus", () => vid.pause());
+ta.addEventListener("input", () => { $("post").disabled = !ta.value.trim(); });
+ta.addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("composer").requestSubmit(); } });
+$("pinTc").addEventListener("change", e => { $("pinStamp").style.opacity = e.target.checked ? 1 : .4; });
+$("composer").addEventListener("submit", async e => {
+  e.preventDefault();
+  const text = ta.value.trim(); if (!text) return;
+  const c = {cut: cur.id, file: cur.file, t: $("pinTc").checked ? Math.round((vid.currentTime || 0) * 1000) / 1000 : null,
+             tc: $("pinTc").checked ? tc(vid.currentTime || 0) : null, text: text.slice(0, 4000), by: myId || null, at: Date.now(), done: false};
+  $("post").disabled = true;
+  const ok = await add(c);
+  if (ok) { ta.value = ""; toast((mode === "local" ? "Note saved at " : "Comment posted at ") + (c.t == null ? "no timecode" : tc(c.t, true)) + (mode === "local" ? ". Send with Email my notes." : "")); }
+  else $("post").disabled = false;
+});
+
+/* ---------- copy notes ---------- */
+$("copyAll").addEventListener("click", () => {
+  const lines = [];
+  for (const c of CUTS) {
+    const cs = comments.filter(x => x.cut === c.id).sort((a, b) => (a.t ?? -1) - (b.t ?? -1));
+    if (!cs.length) continue;
+    lines.push(`${c.hook} ${c.ar} ${c.ver}  (${c.file})`);
+    for (const x of cs) lines.push(`  ${x.t == null ? "general " : tc(x.t, true)}  ${x.text.replace(/\n/g, " / ")}${x.done ? "  [resolved]" : ""}`);
+    lines.push("");
+  }
+  const txt = (lines.join("\n").trim() || "No comments yet.") + (mode === "local" ? "\n\n" + diagText() : "");
+  const fallback = () => {
+    const box = document.createElement("textarea"); box.className = "copybox"; box.value = txt; box.readOnly = true;
+    $("list").prepend(box); box.focus(); box.select(); toast("Select all and copy the notes above");
+    setTimeout(() => box.remove(), 20000);
+  };
+  try { navigator.clipboard.writeText(txt).then(() => toast("All notes copied"), fallback); } catch (e) { fallback(); }
+});
+
+/* ---------- send my notes (viewers without comment access) ---------- */
+function notesText(){
+  const lines = [document.title, ""];
+  for (const c of CUTS) {
+    const cs = comments.filter(x => x.cut === c.id).sort((a, b) => (a.t ?? -1) - (b.t ?? -1));
+    if (!cs.length) continue;
+    lines.push(`${c.hook} ${c.ar} ${c.ver}  (${c.file})`);
+    for (const x of cs) lines.push(`  ${x.t == null ? "general " : tc(x.t)}  ${x.text.replace(/\n/g, " / ")}`);
+    lines.push("");
+  }
+  return lines.join("\n").trim() + (mode === "local" ? "\n\n" + diagText() : "");
+}
+$("sendCopy").addEventListener("click", () => { unsent = false; $("copyAll").click(); });
+$("sendMail").addEventListener("click", () => {
+  if (!comments.length) { toast("Write a note first."); return; }
+  const a = document.createElement("a");
+  unsent = false; a.href = "mailto:" + encodeURIComponent(NOTES_TO) + "?subject=" + encodeURIComponent("Notes: " + document.title) + "&body=" + encodeURIComponent(notesText().slice(0, 6000));
+  a.target = "_blank"; a.rel = "noopener"; document.body.appendChild(a); a.click(); a.remove();
+  toast("If no email window opened, use Copy my notes and paste them.");
+});
+
+/* ---------- keys ---------- */
+document.addEventListener("keydown", e => {
+  if (e.target.closest && e.target.closest("textarea,input,select")) { if (e.key === "Escape") e.target.blur(); return; }
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === " " || e.key === "k") { e.preventDefault(); toggle(); }
+  else if (e.key === "ArrowLeft" || e.key === ",") { e.preventDefault(); step(e.shiftKey ? -FPS : -1); }
+  else if (e.key === "ArrowRight" || e.key === ".") { e.preventDefault(); step(e.shiftKey ? FPS : 1); }
+  else if (e.key === "c") { e.preventDefault(); if ($("composer").hidden) $("ccBtn").click(); else ta.focus(); }
+  else if (e.key === "m") $("mute").click();
+  else if (e.key === "f") $("fs").click();
+});
+
+/* ---------- routing ---------- */
+function route(){ selectCut((location.hash || "").slice(1)); }
+window.addEventListener("hashchange", route);
+route(); setPlayIcon();
+
+/* ---------- claude.ai comment threads: how viewers who can't post here comment ---------- */
+function ccText(){ return `${cur.hook} · ${cur.ar} ${cur.ver} · ${tc(vid.currentTime || 0)}`; }
+function ccSync(){ const el = $("ccStamp"); if (el && !$("ccBox").hidden) el.textContent = ccText(); }
+vid.addEventListener("timeupdate", ccSync); vid.addEventListener("seeked", ccSync);
+$("ccBtn").addEventListener("click", async () => {
+  vid.pause(); ccSync();
+  if (!cmNs) { useDrafts("Commenting through Claude isn't available on your link."); return; }
+  const el = $("ccStamp"), r = document.createRange(); r.selectNodeContents(el);
+  try {
+    const res = await cmNs.openComposer({range: r});
+    if (res && res.opened === false) { toast("Click once on the page, then press the button again."); return; }
+    toast("Type your note in the comment box and post it: it is pinned to " + tc(vid.currentTime || 0, true));
+  } catch (e) {
+    if (e && e.code === "rate_limited") { toast("Wait a moment, then try again."); return; }
+    useDrafts("Your link lets you view but not comment in Claude.");
+  }
+});
+connect();
+setInterval(renderNotes, 60000);
+})();
+/* review_fix4 */ /* review_fix5 */ /* review_fix6 */
+</script>

@@ -3,6 +3,8 @@
 Brand: **Hume Health**. Two separate product tracks, **Hume Pod** (body composition) and **Hume Band 2.0** (wearable), plus an explicitly briefed **Pod + Band ecosystem** lane. Keep them separate in every brief, edit and file name (POD / BAND / PODBAND).
 
 ## Read order
+0. **`EDITING_RULES.md`: client-confirmed MUST rules. Rule 1: every spoken metric gets its matching app screen with a red mark. STRICT: the product is always fully in frame in every size, and product-use shots start at the moment of use. Apply to every ad.**
+0b. **`comments/README.md`: the client comments gallery. Every review round per project (note, fix, lesson) and the lessons checklist to run before planning and before every delivery. Log each new round there before changing anything.**
 1. `AD_STYLE_GUIDE.md`: house style (v0 from the SOP; measured numbers come later).
 2. `04_do_not_use/DO_NOT_USE.md`: claim red lines and banned visuals (preliminary).
 3. `00_sop_notion/SOP_DIGEST.md`: the full editor SOP: editing bar, captions, VO, brand, sizes, naming, workflow, QA.

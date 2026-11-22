@@ -14,6 +14,10 @@ Run `npx hyperframes auth status` to see what's configured and which engines a w
 
 `hyperframes auth login` (browser OAuth) is the recommended setup: one sign-in, every project, no per-repo `.env`. An OAuth login is sent as `Authorization: Bearer`; an API key as `X-Api-Key`; only OAuth is tagged with `X-HeyGen-Source: cli`. The server decides HyperFrames eligibility and charges; API keys use API billing. An expired or foreign OAuth session requires refresh/sign-in and never selects a saved API key. With no HeyGen credential, voice/BGM run fully locally (Kokoro / MusicGen) — `hyperframes auth status` and `hyperframes doctor` both report whether those local deps are installed.
 
+With the video-studio plugin, keys can be saved per project: `vs keys ask elevenlabs --project <P>` (pop-up,
+hidden field), then run calls with `vs keys exec --project <P> -- <command>`. A project key overrides the
+environment variable and the machine-wide key.
+
 ## Model caches & system dependencies
 
 Each command downloads its own model on first run and caches it under `~/.cache/hyperframes/`:

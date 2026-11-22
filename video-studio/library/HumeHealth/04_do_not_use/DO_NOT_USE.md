@@ -24,5 +24,9 @@ Status: **seeded from the Notion SOP and Proof & Claims Bank only.** The client'
 - Gradients only for tests and backgrounds.
 - AI tool name: always "Prof AI".
 
+## Footage we may not have rights to
+- **Never use footage from a Drive folder marked "NO USAGE"** (e.g. `02 — Raw & Reusable Footage/Influencer /2024/JULY/ECKO - NO USAGE/`, which holds Alyssa Madrid and Laura Flusche). Treat it as do-not-use until the client confirms otherwise. Before picking a clip, check the `path` in its `.json` sidecar; a clip pulled from such a folder is out even if the same person appears in an allowed folder.
+- Clips found in that folder so far: `os33` (Alyssa Madrid 3.mov from t=11 s), `pa47` and `pa49` (Laura Flusche). Removed from DEXA v6; `os33` is still in the Cassidy Muscle Recomp 4:5 v3 at about 0:09–0:15 and needs replacing.
+
 ## Known conflict to raise with the strategist
 Past winners in the Notion Winner Ad Library use heart-attack framing ("I run marathons yet I was two weeks from a fatal heart attack", Band, $268k spend; "Cardiac Health Authority / Heart Attack Before Symptoms" sub-angles) and DEXA-equivalence language ("Same as DEXA Scans", "same data as DEXA"). These **break the current Claims Bank red lines (#2, #4).** Don't copy that wording into new edits without explicit approval.

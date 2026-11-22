@@ -38,11 +38,27 @@ Everything is in the EDL and applied at render time, so it is non-destructive.
 
 ## Sound effects
 Full workflow (find every moment, place real recordings, stems, earshot scoring): `/video-sound-design`.
-Manual: `"sfx": [{"file", "at", "gain_db"}]` at output times. Whoosh under transitions/whips (start 0.1 s before
-the cut), pop/click on text pops, riser into a reveal, impact on the drop. Keep them −6 to −12 dB and
-sparse (one per 5–10 s in talking content). Free SFX ship with the `media-use` skill (`audio/assets/sfx/`).
+Manual: `"sfx": [{"file", "at", "gain_db", "in", "dur", "fade_in", "fade_out", "pan"}]` at output times (only
+`file` and `at` are required). `at` is when the file starts, so measure the sound first (`vs sfx analyse x.wav`):
+a whoosh's crest, an impact's hit and a click's onset go on the frame (`at = frame − anchor`), and files differ by
+up to 30 dB, so use the `norm` column as the base gain. Prefer `vs sfx plan --style <style>`, which does this;
+numbers in `/video-sound-design` → `references/cue-sheet.md`. Free SFX ship with the `media-use` skill
+(`audio/assets/sfx/`).
 
 ## Loudness & delivery
 - Targets (integrated / true peak): social & YouTube −14 LUFS / −1 dBTP, podcasts −16, broadcast −23.
   Presets set it; `--loudnorm <LUFS>` overrides. `vs qa` measures it.
 - Audio-only: `vs convert out/final.mp4 -o out/final.mp3` (or `.wav` for masters).
+
+## Paid voice and audio API keys (per project)
+ElevenLabs, HeyGen API, OpenAI and Gemini keys can belong to a different account for each project.
+Before the first paid call in a project, run `vs keys check <provider> --project <P>`:
+- **available**: run the call through `vs keys exec --project <P> -- <command>` so that project's key is
+  in the environment (`$ELEVENLABS_API_KEY`, `$HEYGEN_API_KEY`, `$OPENAI_API_KEY`, `$GEMINI_API_KEY`).
+  Never `echo` or print a key.
+- **missing**: run `vs keys ask <provider> --project <P>`. It opens a pop-up with a hidden field; tell the person
+  one line first ("a window is asking for the ElevenLabs key for this project") and wait for it to finish.
+  If it exits 3 (no desktop, e.g. SSH), ask them to type `! vs keys set <provider> --project <P>` in the prompt,
+  which asks for the key hidden in their terminal. In a Claude Code cloud session, use the secure credential
+  form for the API host instead.
+- Never ask for a key in chat, and never put one in a file inside the workspace.
