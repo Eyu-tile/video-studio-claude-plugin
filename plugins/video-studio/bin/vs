@@ -27,7 +27,7 @@ init_ws() {
 cmd="${1:-help}"
 shift || true
 case "$cmd" in
-  transcribe|pack|propose_cuts|silences|render|captions|filmstrip|qa|export_edl|ingest|scenes|beats|sync|multicam|convert|thumbs|sfx|packs|music|proxy|breakdown|edl|notes|review|ai|translate|ads|watch|gen|higgsfield|task|learn|present|social|lessons|fix)
+  transcribe|pack|propose_cuts|silences|render|captions|filmstrip|qa|export_edl|ingest|scenes|beats|sync|multicam|convert|thumbs|sfx|packs|music|proxy|breakdown|edl|notes|review|ai|translate|ads|watch|gen|higgsfield|task|learn|present|social|lessons|fix|deliver)
     exec "$py" "$tools/$cmd.py" "$@" ;;
   cuts) exec "$py" "$tools/propose_cuts.py" "$@" ;;
   fetch) exec "$py" "$tools/assets.py" "$@" ;;
@@ -87,6 +87,8 @@ vs <command>                                         video-studio plugin
   lessons brief|add|learn|check|list|retire --brand <Client>   what feedback taught us, applied and QA-checked
   present <final.mp4> --project P [--task CODE --version v2]   Frame.io-style review page: comments pinned to frames
   present notes <comments.json|csv> -o notes.txt | present link <dir> <url> | present pref [ask|always|never]
+  deliver setup <Drive folder link> --name N   one-time: delivery target + its Apps Script (any file size, no local copy)
+  deliver plan <project> [--to N]   latest version of every file -> request | deliver upload <project> <res.json> | deliver verify <project> <listing.json>
   social prep <final.mp4> --platforms tiktok,reels,shorts,youtube,linkedin,x --project P   files + captions to approve
   social check <post.json> | social log <post.json> <platform> --url U | social pref [ask|never]   (posts via Composio)
   add <files|folders|zips|URLs>... --project P [--as broll|music|sfx|logo|font|lut|ref|raw] | --library
