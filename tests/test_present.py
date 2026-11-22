@@ -100,6 +100,9 @@ class PresentTest(unittest.TestCase):
         d = self.ws / "projects" / "demo" / "out" / "review" / "v9"
         p = sh("node", Path(__file__).with_name("review_page_check.js"), d, ok=False)
         self.assertEqual(p.returncode, 0, p.stdout + p.stderr[-1500:])
+        # who can post: owner and editor reach the shared list; view-only and unlinked viewers keep notes, marked NOT sent
+        p = sh("node", Path(__file__).with_name("review_access_check.js"), d, ok=False)
+        self.assertEqual(p.returncode, 0, p.stdout + p.stderr[-1500:])
 
     def test_pref_and_link(self):
         self.assertEqual(self.vs("present", "pref").stdout.strip(), "ask")
