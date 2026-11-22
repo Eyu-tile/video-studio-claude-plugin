@@ -7,7 +7,7 @@ WilloMD RootOut™ Advanced Wart, Corn & Callus Oil: a brush-on bedtime oil, **F
 2. `CLAIMS.md`: every claim on the site with its risk and the disclaimers (`*`, `†`) that must travel with it.
 3. `BRAND_GUIDE.md`: palette (navy `#0B2A5B`, blue `#1763B8`, ice `#EEF4FA`, CTA orange `#E04E18`), Newsreader + Inter,
    look, voice, current offer.
-4. `ads/ROUND1_SCRIPTS.md`: the client's Round 1 scripts (locked Sets 1, 4, 5, 13, 17, 18, 19, 20), footage needs
+4. `ads/SET13_BRIEF.md` (Set 13 script, verbatim) + `ads/set13_build/` (shot plan, job ids, builder, web-insert credits). `ads/ROUND1_SCRIPTS.md`: the client's Round 1 scripts (locked Sets 1, 4, 5, 13, 17, 18, 19, 20), footage needs
    mapped to this library, and the claim checks to clear first. `references/REFERENCES.md`: every swipe ad behind
    them (video, scene breakdown, frame sheet, what to steal, what not to copy) + `references/PLAYBOOKS.md`.
    `ads/AD_ANGLES.md`: the angles the PDP uses (site-derived, not tested winners).
