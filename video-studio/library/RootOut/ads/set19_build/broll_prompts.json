@@ -1,0 +1,227 @@
+{
+ "requests": [
+  {
+   "index": 24,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Small kids' rubber flip-flops sitting on a wet white shower floor while the shower runs, water splashing around them, close-up at floor level."
+   }
+  },
+  {
+   "index": 25,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Bedtime, warm lamp: an adult's hands pull clean white socks onto a child's small feet on a bed with a dinosaur blanket, pajama legs only, no face."
+   }
+  },
+  {
+   "index": 26,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Morning, 7:15 on a microwave clock in the background: a mom's hands press a cartoon-print adhesive bandage onto a child's heel, a school backpack waiting by the front door, only hands and foot in frame."
+   }
+  },
+  {
+   "index": 27,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Slow pan along a bathroom cabinet shelf crowded with half-used plain unbranded wart freeze spray cans, small drugstore boxes and cotton pads, no readable brand names, slightly messy."
+   }
+  },
+  {
+   "index": 29,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. School hallway with lockers: a row of kids' sneakers on small feet of children sitting on a bench outside the nurse's office door, filmed from the knees down only, kids swinging their feet. No faces."
+   }
+  },
+  {
+   "index": 30,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Ground-level macro in a real backyard lawn, late afternoon: a woman's hand pinches a yellow dandelion growing out of dry, cracked, pale-brown soil and pulls; the stem snaps off at the soil line and the stub stays in the ground."
+   }
+  },
+  {
+   "index": 31,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Ground-level macro of the same spot of dry cracked soil in a backyard lawn: a fresh yellow dandelion has grown back in the exact same spot, gently moving in a breeze."
+   }
+  },
+  {
+   "index": 32,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Top-down view of a white tiled bathroom floor after bath time: wet bare footprints cross the tiles, two small child-size trails and one big adult trail, water glistening, slow drift of the camera."
+   }
+  },
+  {
+   "index": 33,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 6,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Clean glossy 3D medical animation, side cutaway block of human skin on a soft ice-blue background: a thick pale cracked hard top layer over pink skin, a grey wart with a long white root reaching down. A yellow lemon-colored oil drop lands on the hard top, the top softens and a small round door opens in it. Smooth slow camera push."
+   }
+  },
+  {
+   "index": 34,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 6,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Clean glossy 3D medical animation, same side cutaway block of skin with a little open door in the hard top layer: a clear thin oil drop slides down through the door carrying two small green drops on its back, sinks deep down the long white root, and the root cracks and breaks apart into pieces. Ice-blue background, smooth camera."
+   }
+  },
+  {
+   "index": 35,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Bedtime in a girl's room, pink fairy lights: a little girl's bare foot in pink pajama pants rests on a pillow and wiggles its toes happily, side view, only foot and pajama leg in frame."
+   }
+  },
+  {
+   "index": 36,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 5,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Light comedy: three pairs of bare feet lined up in a row on the edge of a white bathtub, two small children's pairs in pajama pants and one big hairy adult man's pair in plaid pajama pants, toes wiggling, a mom's hands moving down the line. Only legs and feet in frame."
+   }
+  },
+  {
+   "index": 37,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Close-up of a child's foot on a towel, side view: a mom's hand gives two light strokes with a small single-use emery file only on the rough hard top of a tiny wart on the ball of the foot. Gentle, clean, only hands and foot in frame."
+   }
+  },
+  {
+   "index": 38,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Close-up: a mom unscrews the cap of the exact amber RootOut bottle from the reference image, label readable and not mirrored, and paints a little clear oil onto a tiny spot on a child's foot with the small brush attached to the cap. Only hands, bottle and foot in frame.",
+    "mode": "omni_reference",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "811f8013-517f-4d39-a6a9-95bce6eee45c"
+     }
+    ]
+   }
+  },
+  {
+   "index": 39,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Close-up of a child's foot on a towel: a mom's fingertip presses a small clear round transparent dot sticker over a tiny spot on the ball of the foot and smooths it down. Only hands and foot in frame."
+   }
+  },
+  {
+   "index": 40,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Three of the exact amber RootOut bottles from the reference image standing in a row on a white bathroom counter, labels facing camera and readable, each with a small strip of masking tape on the cap; slow push-in, daylight.",
+    "mode": "omni_reference",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "811f8013-517f-4d39-a6a9-95bce6eee45c"
+     }
+    ]
+   }
+  },
+  {
+   "index": 41,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Bath time: children's small feet and hands kicking and splashing in a bathtub full of white bubbles, rubber duck floating, only feet, hands and bubbles in frame, joyful."
+   }
+  },
+  {
+   "index": 42,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Ankle-level camera in a home hallway with wooden floor: three children's small bare feet run past the camera and down the hall, laughing off camera, only feet and ankles in frame."
+   }
+  },
+  {
+   "index": 43,
+   "params": {
+    "model": "seedance_2_5",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "bitrate_mode": "high",
+    "prompt": "Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, no logos. Close-up of the sole of a child's foot resting on a white towel, side view with heel, arch and toes, navy pajama pant leg: smooth, healthy, clean skin, no spots; a mom's thumb gently runs over the ball of the foot. Soft daylight."
+   }
+  }
+ ]
+}
