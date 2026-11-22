@@ -1,0 +1,87 @@
+{
+ "D1": {
+  "path": "raw/gen/clips/D1.mp4"
+ },
+ "D2": {
+  "path": "raw/gen/clips/D2.mp4"
+ },
+ "M1": {
+  "path": "raw/gen/clips/M1.mp4"
+ },
+ "b1": {
+  "path": "raw/gen/clips/b1_legs.mp4"
+ },
+ "b2": {
+  "path": "raw/gen/clips/b2_routine.mp4"
+ },
+ "dand_snap": {
+  "path": "raw/gen/clips/b3_dand_snap.mp4",
+  "in": 0.0
+ },
+ "dand_root": {
+  "path": "raw/stock/1280px-Paardenbloem_(Taraxacum_officinale).jpg",
+  "kb": 1
+ },
+ "dand_back": {
+  "path": "raw/stock/1920px-Weeds_in_cracks_between_concrete_slabs_in_Tuntorp.jpg",
+  "kb": 1
+ },
+ "lemon": {
+  "path": "raw/stock/mixkit-cutting-through-a-lemon-with-a-knife-22899.mp4",
+  "in": 2.0
+ },
+ "cream": {
+  "path": "raw/stock/mixkit-caring-for-hands-with-moisturiser-45161.mp4",
+  "in": 3.6
+ },
+ "teatree": {
+  "path": "raw/stock/1920px-Melaleuca_alternifolia_flowers.jpg",
+  "kb": 1
+ },
+ "pokeweed": {
+  "path": "raw/stock/1920px-Phytolacca_americana_cluster_-_single.jpg",
+  "kb": 1
+ },
+ "cedar": {
+  "path": "raw/stock/1920px-Thuja_occidentalis_foliage.jpg",
+  "kb": 1
+ },
+ "kids_feet": {
+  "path": "raw/stock/mixkit-little-boy-and-girl-running-through-the-grass-on-a-48169.mp4",
+  "in": 1.0
+ },
+ "kids_feet2": {
+  "path": "raw/stock/mixkit-legs-of-a-child-walking-barefoot-on-play-bridge-47451.mp4",
+  "in": 4.0
+ },
+ "p_sole": {
+  "path": "work/gfx/p_sole.mp4"
+ },
+ "p_heel": {
+  "path": "work/gfx/p_heel.mp4"
+ },
+ "t_lemon": {
+  "path": "work/gfx/t_lemon.mp4"
+ },
+ "t_tea": {
+  "path": "work/gfx/t_tea.mp4"
+ },
+ "t_root": {
+  "path": "work/gfx/t_root.mp4"
+ },
+ "t_night": {
+  "path": "work/gfx/t_night.mp4"
+ },
+ "g_sticky": {
+  "path": "work/gfx/g_sticky.mp4"
+ },
+ "g_towels": {
+  "path": "work/gfx/g_towels.mp4"
+ },
+ "g_offer": {
+  "path": "work/gfx/g_offer.mp4"
+ },
+ "g_end": {
+  "path": "work/gfx/g_end.mp4"
+ }
+}

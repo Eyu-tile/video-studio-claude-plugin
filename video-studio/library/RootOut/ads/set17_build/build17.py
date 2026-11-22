@@ -21,7 +21,7 @@ def T(t, line, k=0, at=0.0): a, _ = take(t, line, k); return a - at   # take off
 LINES = [
  ("L01", [(0, "D1", T("D1", "L01"), None)]),
  ("L02", [(0, "M1", T("M1", "L02"), None), (1.55, "p_sole", 0, None)]),
- ("L03", [(0, "D1", T("D1", "L03"), None), (1.35, "dand_snap", None, None), (4.3, "dand_stub", None, None), (7.2, "dand_back", None, None)]),
+ ("L03", [(0, "D1", T("D1", "L03"), None), (1.35, "dand_snap", None, None), (7.0, "dand_root", None, None), (9.3, "dand_back", None, None)]),
  ("L04", [(0, "M1", T("M1", "L04"), None), (2.3, "b1", 0.0, None)]),
  ("L05", [(0, "D1", T("D1", "L05"), None), (2.0, "lemon", None, None), (2.75, "t_lemon", 0.6, None)]),
  ("L06", [(0, "M1", T("M1", "L06"), None)]),
@@ -29,11 +29,13 @@ LINES = [
  ("L08", [(0, "b1", 4.0, "w_wiki_pain")]),
  ("L09", [(0, "D1", T("D1", "L09"), None), (1.9, "pokeweed", None, None), (3.1, "cedar", None, None), (4.0, "t_root", 0.4, None)]),
  ("L10", [(0, "M1", T("M1", "L10"), None), (0.95, "p_heel", 0.2, None)]),
- ("L11", [(0, "D1", T("D1", "L11"), None), (2.0, "blurD1", 0, "w_pubmed_result"), (9.0, "kids_feet", None, None),
+ ("L11", [(0, "D1", T("D1", "L11"), None), (2.0, "blurD1", 0, "w_pubmed_result"), (5.4, "blurD1", 3.4, "w_pubmed_zoom"), (9.0, "kids_feet", None, None),
           (10.2, "D1", T("D1", "L11", 1, at=10.3), None)]),
  ("L12", [(0, "M1", T("M1", "L12"), None)]),
  ("L13", [(0, "D1", T("D1", "L13"), None), (4.1, "b1", 6.0, None), (6.5, "kids_feet2", None, None)]),
- ("L14", [(0, "M1", T("M1", "L14"), None)]),                       # plant flashes added as overlays below
+ ("L14", [(0, "M1", T("M1", "L14"), None), (0.84, "lemon", None, None), (1.3, "M1", T("M1", "L14", at=1.3), None), (1.86, "teatree", None, None),
+          (2.4, "M1", T("M1", "L14", at=2.4), None), (2.78, "pokeweed", None, None), (3.4, "M1", T("M1", "L14", at=3.4), None),
+          (3.76, "cedar", None, None), (4.45, "M1", T("M1", "L14", at=4.45), None)]),
  ("L15", [(0, "D2", T("D2", "L15"), None)]),
  ("L16fix", [(0, "b2", 0.0, None), (3.1, "b2", 3.0, None), (6.0, "b2", 7.0, None), (7.8, "t_night", 0.2, None),
              (9.15, "D2", T("D2", "L16fix", at=9.15), None)]),
@@ -48,7 +50,12 @@ def norm(name, src, a, d, out, card=None, blur=False):
     vf = "scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,setsar=1,fps=30"
     if s.get("crop"): vf = s["crop"] + "," + vf
     if blur: vf += ",boxblur=18:2,eq=brightness=-0.06"
-    inp = f"-ss {a:.3f} -t {d:.3f} -i '{p}'" if p.suffix in (".mp4", ".webm", ".mov", ".ogv") else f"-loop 1 -t {d:.3f} -i '{p}'"
+    vid = p.suffix in (".mp4", ".webm", ".mov", ".ogv")
+    inp = f"-ss {a:.3f} -t {d:.3f} -i '{p}'" if vid else f"-loop 1 -framerate 30 -t {d:.3f} -i '{p}'"
+    if not vid and s.get("kb"):
+        n = int(d * 30) + 1
+        vf = ("scale=1440:2560:force_original_aspect_ratio=increase,crop=1440:2560,"
+              f"zoompan=z='1+0.10*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=720x1280:fps=30,setsar=1")
     if card:
         c = P / f"assets/graphics/{card}_card.png"
         ov = ("[1]scale=660:-1[c];[v][c]overlay=(W-w)/2:'if(lt(h,1150),(H-h)/2,(H-h)/2-(h-1150)/2*sin(min(t/%.2f,1)*PI/2)*2+ (h-1150)/2)':shortest=1" % max(d - 1.0, 1.0))

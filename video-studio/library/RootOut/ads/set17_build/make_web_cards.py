@@ -10,8 +10,10 @@ CARDS = {  # name: (host, crop y0, y1 in source px)
  "w_wiki_pain": ("en.wikipedia.org", 250, 1045),
  "w_aad_spread": ("aad.org", 790, 1675),
  "w_aad_freeze": ("aad.org", 330, 1060),
+ "w_pubmed_zoom": ("pubmed.ncbi.nlm.nih.gov", 1290, 1900),
 }
 def card(src, out, host, y0, y1):
+    src = str(src).replace("w_pubmed_zoom", "w_pubmed_result")
     shot = Image.open(src).convert("RGB"); shot = shot.crop((0, y0, shot.width, min(y1, shot.height)))
     s = (W - 2 * PAD) / shot.width; shot = shot.resize((W - 2 * PAD, int(shot.height * s)), Image.LANCZOS)
     H = BAR + shot.height + PAD
