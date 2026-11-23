@@ -135,7 +135,9 @@ def calendar(t, k):
     f = F(INTER.format("Bold"), 48)
     if k > 0.5: d.text((x0, y0 + 4 * cw + 90), "about 2 weeks", font=f, fill=NAVY)
     if k > 0.9: d.text((x0 + 470, y0 + 4 * cw + 90), "+ 14 nights", font=f, fill=ORANGE)
-    return im
+    z = 1 + 0.06 * k  # continuous push-in so the finished calendar never reads as a held frame
+    big = im.resize((int(W * z), int(H * z)), Image.LANCZOS); ox, oy = (big.width - W) // 2, (big.height - H) // 2
+    return big.crop((ox, oy, ox + W, oy + H))
 
 
 def endcard(t, k):

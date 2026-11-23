@@ -66,3 +66,6 @@ Owner approved ~1,200 credit ceiling (23 Nov). Balance at start: 7,308.15. Job i
   (vo03_h2, `BODY_VARIANT=h2` → body_h2.mp4, 5.4 s shorter). H3 (flashlight over the socked foot, 8 s, 56 cr); the real
   black-dot photo shows only on "like little splinters?" (make_hook window 3.75–5.45), she's on camera for "Grab his foot".
 - Set 20 total ≈ 718 credits.
+- Delivered 23 Nov: `WilloMD_RootOut_Set20_H1_9x16_v4.mp4` (198.7 s), `…H2_9x16_v1.mp4` (195.4 s), `…H3_9x16_v1.mp4` (200.7 s),
+  all freezedetect PASS. H1 v4 = v3 + calendar push-in (it held ~0.4 s once fully ticked). Caption fixes: "your kid's foot"
+  vs "kids' formula", "10-second", "splinters? Grab", capitals after a pause.

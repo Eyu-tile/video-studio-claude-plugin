@@ -35,7 +35,7 @@ if not (T / "tx.json").exists():
                     "--prompt", "RootOut, plantar wart, callus, pumice, pumicing, pokeweed, white cedar, tea tree"], capture_output=True)
 words = json.load(open(T / "tx.json"))["words"]
 FIX = {"root out": "RootOut", "rootout": "RootOut", "planter": "plantar", "callous": "callus", "promising": "pumicing",
-       "route": "root", "ward": "wart", "kid's": "kids'"}
+       "route": "root", "ward": "wart"}
 toks = []
 i = 0
 while i < len(words):
@@ -54,6 +54,19 @@ while k < len(toks):
     if toks[k][0][:1] == "," and toks[k - 1][0][-1:].isdigit():
         toks[k - 1] = [toks[k - 1][0] + toks[k][0], toks[k - 1][1], toks[k][2]]; del toks[k]
     else: k += 1
+# "kids' formula" (script), but "your kid's foot" stays; "10 -second" -> "10-second"; sentence starts capitalised
+for k in range(len(toks) - 1):
+    if toks[k][0].lower() in ("kid's", "kids") and toks[k + 1][0].lower().startswith("formula"): toks[k][0] = "kids'"
+k = 1
+while k < len(toks):
+    if toks[k][0].startswith("-") and toks[k - 1][0][-1:].isalnum():
+        toks[k - 1] = [toks[k - 1][0] + toks[k][0], toks[k - 1][1], toks[k][2]]; del toks[k]
+    else: k += 1
+for k in range(len(toks) - 1):  # script punctuation whisper drops: "...like little splinters? Grab his foot."
+    if toks[k][0].lower().rstrip(",.") == "splinters" and toks[k + 1][0].lower() == "grab": toks[k][0] = "splinters?"
+for k in range(len(toks)):
+    starts = k == 0 or toks[k - 1][0][-1:] in ".?!" or (toks[k][1] - toks[k - 1][2] > 0.5 and toks[k - 1][0][-1:] != ",")  # pause, no comma = new sentence
+    if starts and toks[k][0][:1].islower(): toks[k][0] = toks[k][0][0].upper() + toks[k][0][1:]
 # 'picking out a wart' was a whisper slip; the VO says 'picking at a wart' (checked with large-v3)
 for k in range(len(toks) - 1):
     if toks[k][0].lower() == "picking" and toks[k + 1][0].lower() == "out": toks[k + 1][0] = "at"
