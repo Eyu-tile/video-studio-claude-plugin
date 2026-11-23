@@ -130,5 +130,37 @@
    "take_in": 16.1,
    "take_out": 24.4
   }
+ ],
+ "MH": [
+  {
+   "line": "Lh2a",
+   "src_in": 0,
+   "src_out": 4.164063,
+   "take_in": 0,
+   "take_out": 4.164
+  },
+  {
+   "line": "Lh3a",
+   "src_in": 0,
+   "src_out": 2.4660629999999997,
+   "take_in": 4.514,
+   "take_out": 6.98
+  }
+ ],
+ "DH": [
+  {
+   "line": "Lh2b",
+   "src_in": 0,
+   "src_out": 1.604063,
+   "take_in": 0,
+   "take_out": 1.604
+  },
+  {
+   "line": "Lh3b",
+   "src_in": 0,
+   "src_out": 2.0742499999999997,
+   "take_in": 1.954,
+   "take_out": 4.028
+  }
  ]
 }

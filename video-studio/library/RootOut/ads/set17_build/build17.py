@@ -4,7 +4,7 @@ graphics). Every segment is normalised to 720x1280/30 fps, concatenated, then VO
 Usage: python3 work/build17.py [h1]"""
 import json, subprocess, sys
 from pathlib import Path
-P = Path(__file__).resolve().parent.parent; W = P / "work"; SEG = W / "seg"; SEG.mkdir(exist_ok=True)
+P = Path(__file__).resolve().parent.parent; W = P / "work"; SEG = W / f"seg_{(sys.argv[1:] or ["h1"])[0]}"; SEG.mkdir(exist_ok=True)
 SRC = json.load(open(W / "sources.json"))           # name -> {"path":..., "in": optional offset}
 LS = json.load(open(W / "lipsync_map.json")); VOW = json.load(open(W / "vo_words.json"))
 GAP = 0.18                                            # breath between turns
@@ -12,8 +12,9 @@ def sh(c): subprocess.run(c, shell=True, check=True)
 def dur(p): return float(subprocess.check_output(f"ffprobe -v error -show_entries format=duration -of csv=p=0 '{p}'", shell=True))
 def take(t, line, k=0):
     m = [x for x in LS[t] if x["line"] == line][k]; return m["take_in"], m["take_out"]
-VOF = {n: (P / f"raw/vo/{n}.wav" if n == "L16fix" else P / f"raw/vo/{n}.mp3") for n in
-       [f"L{i:02d}" for i in range(1, 19) if i != 16] + ["L16fix"]}
+VOF = {n: (P / f"raw/vo/{n}.wav" if n in ("L16fix", "L03b") else P / f"raw/vo/{n}.mp3") for n in
+       [f"L{i:02d}" for i in range(1, 19) if i != 16] + ["L16fix", "L03b", "Lh2a", "Lh2b", "Lh3a", "Lh3b"]}
+HOOK = (sys.argv[1:] or ["h1"])[0]
 
 # Each line: (vo, [ (seconds_into_line, source, src_in, card) ... ]) — a segment runs until the next one starts (or line end).
 # source "D1"/"D2"/"M1" = lip-sync take, src_in = take time that lines up with seconds_into_line.
@@ -48,7 +49,7 @@ def exact(out, d):
     n = int(round(d * 30)); tmp = f"{out}.x.mp4"
     sh(f"ffmpeg -v error -y -i {out} -vf tpad=stop_mode=clone:stop_duration=1,fps=30 -frames:v {n} -c:v libx264 -crf 16 -preset veryfast {tmp} && mv {tmp} {out}")
 def norm(name, src, a, d, out, card=None, blur=False):
-    if src in ("D1", "D2", "M1") and not card and not blur:
+    if src in ("D1", "D2", "M1", "MH", "DH") and not card and not blur:
         warp(src, a, a + d, out); exact(out, d); return
     s = SRC[src]; p = P / s["path"] if not s["path"].startswith("/") else Path(s["path"])
     a = s.get("in", 0.0) if a is None else a
@@ -74,22 +75,29 @@ def norm(name, src, a, d, out, card=None, blur=False):
     if got < d - 0.05:  # source too short: freeze the last frame to fill
         sh(f"ffmpeg -v error -y -i {out} -vf tpad=stop_mode=clone:stop_duration={d-got+0.1:.3f} -t {d:.3f} -c:v libx264 -crf 17 -preset veryfast {out}.tmp.mp4 && mv {out}.tmp.mp4 {out}")
 
+def hook_lines():
+    if HOOK == "h2":   # mom's line + doctor's "That sounds like the root.", then row 2 from "Freezing, acid and shaving…"
+        return [("Lh2a", [(0, "MH", T("MH", "Lh2a"), None)]), ("Lh2b", [(0, "DH", T("DH", "Lh2b"), None)]),
+                ("L03b", [(0, "x2_freeze", 0.0, None), (3.85, "dand_snap", None, None), (5.6, "x3_cutaway", None, None)])] + LINES[3:]
+    if HOOK == "h3":
+        return [("Lh3a", [(0, "MH", T("MH", "Lh3a"), None)]), ("Lh3b", [(0, "DH", T("DH", "Lh3b"), None)])] + LINES[2:]
+    return LINES
 def main():
-    t = 0.0; segs = []; vo = []
-    for li, (line, plan) in enumerate(LINES):
+    t = 0.0; segs = []; vo = []; LINES_ = hook_lines()
+    for li, (line, plan) in enumerate(LINES_):
         ld = dur(VOF[line]) - 0.12; vo.append((line, t))
         for k, (at, src, a, card) in enumerate(plan):
-            end = plan[k + 1][0] if k + 1 < len(plan) else ld + GAP + (TAIL if li == len(LINES) - 1 else 0)
+            end = plan[k + 1][0] if k + 1 < len(plan) else ld + GAP + (TAIL if li == len(LINES_) - 1 else 0)
             qs, qe = round((t + at) * 30) / 30, round((t + end) * 30) / 30   # snap cuts to the frame grid: no drift
             d = qe - qs; blur = src.startswith("blur")
-            if a is not None and src in ("D1", "D2", "M1") : a += qs - (t + at)
+            if a is not None and src in ("D1", "D2", "M1", "MH", "DH") : a += qs - (t + at)
             srcn = src[4:] if blur else src
             out = SEG / f"{li:02d}_{k}_{src}.mp4"; norm(line, srcn, a, d, out, card, blur); segs.append(out)
         t += ld + GAP
     total = t + TAIL
     (SEG / "list.txt").write_text("".join(f"file '{s.name}'\n" for s in segs))
-    sh(f"cd {SEG} && ffmpeg -v error -y -f concat -safe 0 -i list.txt -c copy {W}/h1_video.mp4")
-    json.dump(vo, open(W / "h1_vo_times.json", "w"))
+    sh(f"cd {SEG} && ffmpeg -v error -y -f concat -safe 0 -i list.txt -c copy {W}/{HOOK}_video.mp4")
+    json.dump(vo, open(W / f"{HOOK}_vo_times.json", "w"))
     # audio: VO lines at their times, room tone, music bed ducked
     ins = " ".join(f"-i '{VOF[n]}'" for n, _ in vo); fl = []
     for k, (n, st) in enumerate(vo): fl.append(f"[{k}]aresample=48000,aformat=channel_layouts=mono,adelay={int(st*1000)}|{int(st*1000)},volume=1.0[v{k}]")
@@ -98,6 +106,6 @@ def main():
     fl.append(f"[{nv}]atrim=0:{total:.2f},afade=t=in:d=1.5,afade=t=out:st={total-2.5:.2f}:d=2.5,volume=0.11[mu]")
     fl.append("".join(f"[v{k}]" for k in range(nv)) + f"amix=inputs={nv}:normalize=0[vo]")
     fl.append("[vo][rt][mu]amix=inputs=3:normalize=0,aformat=channel_layouts=stereo[a]")
-    sh(f"ffmpeg -v error -y {ins} -i '{mus}' -filter_complex \"{';'.join(fl)}\" -map [a] -t {total:.2f} -c:a pcm_s16le {W}/h1_audio.wav")
+    sh(f"ffmpeg -v error -y {ins} -i '{mus}' -filter_complex \"{';'.join(fl)}\" -map [a] -t {total:.2f} -c:a pcm_s16le {W}/{HOOK}_audio.wav")
     print("total", round(total, 2))
 if __name__ == "__main__": main()

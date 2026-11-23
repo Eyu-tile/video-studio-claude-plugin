@@ -10,7 +10,7 @@ ins = [f"-i work/{hook}_video.mp4", f"-i work/{hook}_audio.wav"] + [f"-itsoffset
 fc = "[0]null[v0]"
 for k, (n, t) in enumerate(ov):
     fc += f";[v{k}][{k+2}]overlay=0:0:eof_action=pass[v{k+1}]"
-fc += f";[v{len(ov)}]scale=1080:1920:flags=lanczos,rgbashift=rh=1:bh=-1,noise=c0s=6:c0f=t+u,vignette=angle=PI/5:mode=forward,unsharp=3:3:0.25,format=yuv420p[v]"
+fc += f";[v{len(ov)}]scale=1080:1920:flags=lanczos,ass=work/captions_{hook}.ass,rgbashift=rh=1:bh=-1,noise=c0s=6:c0f=t+u,vignette=angle=PI/5:mode=forward,unsharp=3:3:0.25,format=yuv420p[v]"
 fc += ";[1]loudnorm=I=-14:TP=-2.2:LRA=11,alimiter=limit=0.75:level=false[a]"
 out = P / f"out/WilloMD_RootOut_Set17_{hook.upper()}_9x16_{ver}.mp4"
 cmd = (f"ffmpeg -v error -y {' '.join(ins)} -filter_complex \"{fc}\" -map [v] -map [a] -c:v libx264 -preset slow -crf 20 "

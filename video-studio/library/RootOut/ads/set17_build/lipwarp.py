@@ -10,7 +10,7 @@ def _load(p):
     return np.frombuffer(raw, np.int16).astype(np.float32) / 32768
 def words():
     out = json.load(open(CACHE)) if CACHE.exists() else {}
-    need = [(t, k, src) for t in ("D1", "D2", "M1") for k, src in (("clip", P / f"raw/gen/clips/{t}.mp4"), ("ls", P / f"work/ls/{t}_lipsync.wav")) if f"{t}_{k}" not in out]
+    need = [(t, k, src) for t in ("D1", "D2", "M1", "MH", "DH") for k, src in (("clip", P / f"raw/gen/clips/{t}.mp4"), ("ls", P / f"work/ls/{t}_lipsync.wav")) if f"{t}_{k}" not in out and src.exists()]
     if not need: return out
     from faster_whisper import WhisperModel
     m = WhisperModel("medium.en", device="cpu", compute_type="int8")

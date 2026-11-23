@@ -43,3 +43,13 @@ our lip-sync track and retimes the picture chunk by chunk; checked by warping th
 **Frame grid:** every cut snapped to 1/30 s in absolute time (was drifting ~0.3 s by the end).
 No "AI illustration" / FDA / † text on any b-roll (client rule, 23 Nov). The CTA keeps a small "Dramatization." only.
 Output: `out/WilloMD_RootOut_Set17_H1_9x16_v2.mp4` — 118.5 s, -13.9 LUFS, TP -2.4 dBFS, transcript 333/333 words = BRIEF.
+
+## H2 / H3 + captions (23 Nov)
+| id | job | what | credits |
+|---|---|---|---|
+| MH | 24c9f7fe-4632-447b-b4b4-c6c6545132da | mom hook take: Lh2a + Lh3a (8 s), start g8 | 56 |
+| DH | 0dc1cd74-65ee-48b3-b891-fa0c8279f89b | doctor hook take: Lh2b + Lh3b (5 s), start g7 | 35 |
+H2 drops "That sounds like the root." from row 2 (`L03b`, cut at 1.6 s) as the brief says; H3 runs row 2 whole.
+Captions throughout (client, 23 Nov): `make_captions17.py`, script text from BRIEF timed to VO word stamps, spoken word orange,
+off the CTA, dropped low under web cards. Hook text auto-fits the frame.
+Outputs: H1 v3 118.5 s · H2 v2 115.2 s · H3 v2 115.6 s — all -14 LUFS, TP -2.4 dBFS.

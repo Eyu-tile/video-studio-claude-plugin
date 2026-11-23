@@ -30,10 +30,12 @@ def pill(im, cx, cy, text, font, fg, bg, sc=1.0, alpha=1.0, padx=30, pady=16):
     im.alpha_composite(L, (int(cx - L.width / 2), int(cy - L.height / 2)))
 
 # 1) hook in the lower third, pop in, gentle float, out at 7.3 s
-def hook_fn(text):
-    f = F(SERIF, 64)
+def hook_fn(text, end=7.0):
+    size = 64
+    while ImageDraw.Draw(Image.new("RGB", (1, 1))).textlength(text, font=F(SERIF, size)) > W - 150: size -= 2
+    f = F(SERIF, size)
     def fn(t):
-        im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); a = ease((t - 0.2) / 0.25) * (1 - ease((t - 7.0) / 0.3))
+        im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); a = ease((t - 0.2) / 0.25) * (1 - ease((t - end) / 0.3))
         pill(im, W / 2, 1010 - 6 * math.sin(t * 2), text, f, NAVY, WHITE, back((t - 0.2) / 0.35), a, 34, 18); return im
     return fn
 
@@ -115,6 +117,7 @@ def cta(t):
     fd = F(IB, 20); s2 = "Dramatization."; d.text(((W - d.textlength(s2, font=fd)) / 2, 1238), s2, font=fd, fill=(90, 96, 110, int(200 * fa)))
     return im
 
-JOBS = {"hook_h1": (hook_fn('"It came back."'), 7.6), "plants": (plants, 8.4), "steps": (steps, 8.2), "callout": (callout, 4.2), "cta": (cta, 9.5)}
+JOBS = {"hook_h1": (hook_fn('"It came back."'), 7.6), "hook_h2": (hook_fn('"It always came back."', 6.9), 7.4),
+        "hook_h3": (hook_fn("His wart is back. Again.", 4.2), 4.7), "plants": (plants, 8.4), "steps": (steps, 8.2), "callout": (callout, 4.2), "cta": (cta, 9.5)}
 if __name__ == "__main__":
     for k in (sys.argv[1:] or JOBS): write(k, *JOBS[k])
