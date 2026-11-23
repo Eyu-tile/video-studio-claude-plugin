@@ -1,6 +1,66 @@
-{"account":"WilloMd","workspace":"ab6cddcc-4e64-4d4a-96e5-18b040dffc7d",
- "voice":{"mom_a_naomi":"caeba733-3c17-43db-863e-69c7025512cd","mom2_chloe":"e9cfbbf0-4476-46be-b396-596eb774b165","kids":"Seedance native voice (no preset)"},
- "media":{"bottle_front":"69203765-91d8-44ff-901b-4fb9f2d9c3e5","bottle_box_duo":"23e7befc-3d93-4483-a556-6ea55a918220"},
- "audio":{"a01":"ed9cfb7b-ddbd-4aef-8563-a153b6b598ad","a03":"cb1a0249-ddbd-4a09-821c-f58e662e53b2","a04":"a4e22235-d42f-4d76-a9f5-edb269a09472","a05":"cb498857-7ef5-4b10-8b56-7f37e0804ec3","a06":"330dca6a-41a0-4942-8d5d-29ca576f3dd8","a08":"8d5bf155-ca3e-41a4-bafa-cac4266eff37","a09":"cfffd631-932b-4d99-9edc-a3fd4d7af177","a11":"a1efa191-1b0d-4142-9e70-39cdcfd1823a","a12":"4555458f-18e3-4567-96c2-60a0071d858e","ah2":"f85b2161-e319-4cab-9e62-0fc962593cee","ah3b":"2159fed6-631f-4124-9d0d-367eaa0824c0"},
- "frames":{"f01a_soul_master":"8b244ef3-1f82-4adf-a87f-72c7ce2fc9a6","F01_hook":"cc51dfdd-8a7e-4edc-92e4-33787bec2564","F02_kid_bottle":"e700ae0b-79c0-44cc-9daf-7b767d4c3b50","F03_mom_phone":"54c89677-fc2a-4343-b5aa-ff27e245e400","F05_backyard":"0fcbb0e7-3465-4c16-87f4-581e46b457a0","F08_bedroom":"ec04ed36-97ef-4c8d-a1af-784f19e80ebe","F09_routine":"84ce9c85-bebd-4deb-9418-423435ec1a2a","F10_boy_sign":"3e7abc8a-74b3-403c-9e91-982a4b8f09e3","F11_mom2":"ff676244-6fd1-4727-82df-6fc1beea1f9a","F12_three_bottles":"9f6a82af-1ba2-49d1-bbfa-28c040f4f38d","FH2":"a14790d4-c3be-4c40-bae0-0d0d2f9bb064","FH3_girl_sign":"eb6630a0-467b-4bee-8b37-4dfb4ed651ba","M0_sidecut":"b53da070-ad1a-40c4-b35c-588b012e7e64","S1":"ff461828-4bb1-4909-ac03-a5a3a81baef1","S2":"f0f2e121-4e00-4b21-adc9-68c2a55bdb50","S3":"9666801c-9b0b-45f7-a403-90e92887f85e","S4":"9a9aca58-d45f-48ee-bf2e-8b8ae82b6b2e"},
- "video":{"c01":"1a0e63e5-7ebd-4e8b-ae6e-3fae16181f11","c02":"3550e7d3-3dd6-4055-9729-e1e4880adcb0","c03":"ae6c3571-d55f-4cf3-8e08-436fe9834576","c04":"187218fc-1e04-4ca5-97a2-bece79cd3c83","c05":"8094215a-7ef7-47d8-a4a7-8c42e6496892","c06":"d5e1421d-9b37-4084-95e7-9a1ffa2348d1","c08":"dcda6491-7b8c-4181-8233-c3477325597f","c09":"da61d7ce-9aea-4790-96ed-0f3603475b47","c10":"fcacb298-9d4b-4a47-98da-47ca596d14f3","c11":"5e6579e8-18ce-457f-80f5-3ab7d2983f40","c12":"e92e8c7e-1f33-478e-bba2-0ffac8c60ea4","h2":"925ef4e2-0ffa-4716-9c67-2ed0482945e8","h3a":"4ce86caf-57a1-4d53-8e3e-68e0dbd3f55f","h3b":"0ba9c4a6-ba56-40f3-99fe-5eba1d9f4a21","m1":"56f40499-4c72-420a-92df-73f2d9478481","m2":"1d651123-fe6e-403a-b673-629835a019d8"}}
+{
+ "account": "WilloMd",
+ "workspace": "ab6cddcc-4e64-4d4a-96e5-18b040dffc7d",
+ "voice": {
+  "mom_a_naomi": "caeba733-3c17-43db-863e-69c7025512cd",
+  "mom2_chloe": "e9cfbbf0-4476-46be-b396-596eb774b165",
+  "kids": "Seedance native voice (no preset)"
+ },
+ "media": {
+  "bottle_front": "69203765-91d8-44ff-901b-4fb9f2d9c3e5",
+  "bottle_box_duo": "23e7befc-3d93-4483-a556-6ea55a918220"
+ },
+ "audio": {
+  "a01": "ed9cfb7b-ddbd-4aef-8563-a153b6b598ad",
+  "a03": "cb1a0249-ddbd-4a09-821c-f58e662e53b2",
+  "a04": "a4e22235-d42f-4d76-a9f5-edb269a09472",
+  "a05": "cb498857-7ef5-4b10-8b56-7f37e0804ec3",
+  "a06": "330dca6a-41a0-4942-8d5d-29ca576f3dd8",
+  "a08": "8d5bf155-ca3e-41a4-bafa-cac4266eff37",
+  "a09": "cfffd631-932b-4d99-9edc-a3fd4d7af177",
+  "a11": "a1efa191-1b0d-4142-9e70-39cdcfd1823a",
+  "a12": "4555458f-18e3-4567-96c2-60a0071d858e",
+  "ah2": "f85b2161-e319-4cab-9e62-0fc962593cee",
+  "ah3b": "2159fed6-631f-4124-9d0d-367eaa0824c0"
+ },
+ "frames": {
+  "f01a_soul_master": "8b244ef3-1f82-4adf-a87f-72c7ce2fc9a6",
+  "F01_hook": "cc51dfdd-8a7e-4edc-92e4-33787bec2564",
+  "F02_kid_bottle": "e700ae0b-79c0-44cc-9daf-7b767d4c3b50",
+  "F03_mom_phone": "54c89677-fc2a-4343-b5aa-ff27e245e400",
+  "F05_backyard": "0fcbb0e7-3465-4c16-87f4-581e46b457a0",
+  "F08_bedroom": "ec04ed36-97ef-4c8d-a1af-784f19e80ebe",
+  "F09_routine": "84ce9c85-bebd-4deb-9418-423435ec1a2a",
+  "F10_boy_sign": "3e7abc8a-74b3-403c-9e91-982a4b8f09e3",
+  "F11_mom2": "ff676244-6fd1-4727-82df-6fc1beea1f9a",
+  "F12_three_bottles": "9f6a82af-1ba2-49d1-bbfa-28c040f4f38d",
+  "FH2": "a14790d4-c3be-4c40-bae0-0d0d2f9bb064",
+  "FH3_girl_sign": "eb6630a0-467b-4bee-8b37-4dfb4ed651ba",
+  "M0_sidecut": "b53da070-ad1a-40c4-b35c-588b012e7e64",
+  "S1": "ff461828-4bb1-4909-ac03-a5a3a81baef1",
+  "S2": "f0f2e121-4e00-4b21-adc9-68c2a55bdb50",
+  "S3": "9666801c-9b0b-45f7-a403-90e92887f85e",
+  "S4": "9a9aca58-d45f-48ee-bf2e-8b8ae82b6b2e",
+  "F01v2_hook_warm": "0044d22d-16cf-4f3a-b21e-0332a84961a8"
+ },
+ "video": {
+  "c01": "1a0e63e5-7ebd-4e8b-ae6e-3fae16181f11",
+  "c02": "3550e7d3-3dd6-4055-9729-e1e4880adcb0",
+  "c03": "ae6c3571-d55f-4cf3-8e08-436fe9834576",
+  "c04": "187218fc-1e04-4ca5-97a2-bece79cd3c83",
+  "c05": "8094215a-7ef7-47d8-a4a7-8c42e6496892",
+  "c06": "d5e1421d-9b37-4084-95e7-9a1ffa2348d1",
+  "c08": "dcda6491-7b8c-4181-8233-c3477325597f",
+  "c09": "da61d7ce-9aea-4790-96ed-0f3603475b47",
+  "c10": "fcacb298-9d4b-4a47-98da-47ca596d14f3",
+  "c11": "5e6579e8-18ce-457f-80f5-3ab7d2983f40",
+  "c12": "e92e8c7e-1f33-478e-bba2-0ffac8c60ea4",
+  "h2": "925ef4e2-0ffa-4716-9c67-2ed0482945e8",
+  "h3a": "4ce86caf-57a1-4d53-8e3e-68e0dbd3f55f",
+  "h3b": "0ba9c4a6-ba56-40f3-99fe-5eba1d9f4a21",
+  "m1": "56f40499-4c72-420a-92df-73f2d9478481",
+  "m2": "1d651123-fe6e-403a-b673-629835a019d8",
+  "c01_v2": "4501589d-10a7-4475-ac69-239c42e8986b",
+  "c01_v2a_dropped_words": "b3ecafc1-2694-4d95-b9d9-b72b61d215a4"
+ }
+}

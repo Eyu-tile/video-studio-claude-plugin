@@ -30,3 +30,11 @@ build did not submit (another session or user on the same workspace). Balance af
 - On-screen labels: finger photos "AI illustration"; end card "AI illustration."; † and * footnotes ride on the 8x and plant lines.
 - Real third-party pages (AAD, Cleveland Clinic) shown as quoted screenshots, no logos implying endorsement: legal to confirm.
 - Kid voices are Seedance's own voices (no adult voice actor); mouths never in frame.
+
+## v2 (23 Nov, owner notes)
+- 0:37 odd hand movement at the start of the four-plants shot: the 3D side cut now starts on the shot's first frame.
+- Removed the bottom "*Benefit claims… not FDA evaluated" footnote (owner request). The † 8x footnote stays.
+  Compliance note: CLAIMS.md asks for that disclaimer wherever the plants "break the wart down" — the client should confirm dropping it.
+- Hook redone: new warm start frame (gpt_image, 2 cr) + Seedance 8 s (56 cr; dropped "start to finish", kept as c01_v2a_dropped)
+  + reroll 9 s (63 cr, full line). Bigger two-tone title, before/after proof pop (zoomed on the wart, "AI illustration"), lighter grade.
+- Set 13 total now ~980 credits.

@@ -2,7 +2,7 @@
 """Set 13 builder. python3 work/build.py h1|h2|h3
 Each segment = one generated clip trimmed to its speech (whisper word times), at 1080x1920/30, with overlays cued on
 spoken words. Speaker audio is the clip's own lip-synced track (never VO over b-roll). Then concat, music bed, captions."""
-import json, subprocess, sys, wave
+import json, os, subprocess, sys, wave
 from pathlib import Path
 import numpy as np
 P = Path(__file__).resolve().parent.parent; C = P / "raw/gen/clips"; G = P / "work/gfx"; WEB = P / "raw/web"; T = P / "work/tmp"
@@ -62,15 +62,14 @@ BODY = [
     seg("c04", [("png", "gal_1.png", "look", "dry", {}), ("png", "gal_2.png", "dry", "dark", {}), ("png", "gal_3.png", "dark", "smooth", {}),
                 ("png", "gal_4.png", "smooth", None, {})]),
     seg("c05", [("png", "photo_cryo.png", "freezing", "like", {}), ("png", "w_comeback_card.png", "grows", None, {})]),
-    seg("c06", [("pip", "../gen/clips/m1.mp4", "four", "pokeweed", {"x": 40, "y": 120, "w": 1000, "h": 880}),
+    seg("c06", [("pip", "../gen/clips/m1.mp4", 0.0, "pokeweed", {"x": 40, "y": 120, "w": 1000, "h": 880}),
                 ("pip", "../gen/clips/m2.mp4", "pokeweed", 99, {"x": 40, "y": 120, "w": 1000, "h": 880}),
                 ("png", "plant_lemon.png", "lemon", 99, {}), ("png", "plant_teatree.png", "tea", 99, {}),
                 ("png", "plant_pokeweed.png", "pokeweed", 99, {}), ("png", "plant_cedar.png", "cedar", 99, {}),
                 ("png", "p_8x.png", "eight", "and", {}), ("png", "fn_dagger.png", "eight", "and", {}),
-                ("png", "fn_star.png", "pokeweed", 99, {}),
                 ("png", "photo_root.png", "root", None, {"nth": -1})], post=1.6),
     seg("c08", [("png", "w_kids4_card.png", "kid", None, {}), ("png", "p_kids.png", "kid", None, {"alt_for": "w_kids4_card.png"}),
-                ("png", "fn_star.png", "kid", None, {})]),
+]),
     seg("c09", [("png", "p_step1.png", "rub", "brush", {}), ("png", "p_step2.png", "brush", "clear", {}), ("png", "p_step3.png", "clear", None, {})], post=0.5),
     seg("c10", pre=0.25, post=0.45),
     seg("c11", [("png", "p_rootrule.png", "14", 3.7, {}),
@@ -78,8 +77,8 @@ BODY = [
     seg("c12", [("png", "w_offer_card.png", "buy", None, {}), ("png", "p_offer.png", "buy", None, {"alt_for": "w_offer_card.png"})], post=0.6),
 ]
 HOOKS = {
-    "h1": [seg("c01", [("png", "t_h1.png", 0.0, "about", {})])],
-    "h2": [seg("h2", [("png", "t_h2.png", 0.0, "then", {})])],
+    "h1": [seg("c01", [("png", "t_h1.png", 0.0, "about", {}), ("png", "ba.png", "flaked", "about", {})])],
+    "h2": [seg("h2", [("png", "t_h2.png", 0.0, "then", {}), ("png", "ba.png", "flaked", None, {})])],
     "h3": [seg("h3a", pre=0.2, post=0.35), seg("h3b")],
 }
 
@@ -119,10 +118,12 @@ def render_seg(i, s, tag):
     fc.append(f"[{last}]setpts=PTS/{sp},fps=30,format=yuv420p[vout]")
     fc.append(f"[0:a]aresample=48000,aformat=channel_layouts=stereo,atempo={sp},afade=in:d=0.04,afade=out:st={L/sp-0.08:.3f}:d=0.08,loudnorm=I=-16:TP=-2:LRA=9[aout]")
     out = T / f"{tag}_{i:02d}_{clip}.mp4"
-    run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "[aout]",
+    import os
+    if not (os.environ.get("REUSE") and out.exists()): run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "[aout]",
          "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-c:a", "aac", "-b:a", "192k", "-t", f"{L/sp:.3f}", str(out)])
     shifted = [{"w": w["w"], "s": (w["s"] - t0) / sp, "e": (w["e"] - t0) / sp} for w in ws if t0 - 0.05 <= w["s"] < t1]
-    if s["cut_after"]: shifted = [w for w in shifted if w["s"] <= (end_w - t0) / sp]
+    if s["cut_after"]: shifted = [w for w in shifted if w["s"] < (end_w - t0) / sp - 0.05]
+    for w in shifted: w["seg"] = i
     return out, L / sp, shifted
 
 def endcard(tag, L=3.0):
@@ -146,18 +147,20 @@ def captions(all_words, total, tag):
     # merge "Root" + "out" -> RootOut
     m = []
     for w in W:
-        if m and m[-1]["w"].lower() == "root" and w["w"].lower().startswith("out"): m[-1]["w"] = "RootOut" + w["w"][3:]; m[-1]["e"] = w["e"]
+        if m and m[-1]["w"].lower() == "root" and w["w"].lower().startswith("out") and m[-1].get("seg") == w.get("seg"): m[-1]["w"] = "RootOut" + w["w"][3:]; m[-1]["e"] = w["e"]
         else: m.append(w)
     lines, cur = [], []
     for w in m:
         cur.append(w)
-        if len(cur) == 3 or w["w"][-1:] in ".,!?" or (len(" ".join(x["w"] for x in cur)) > 16):
+        nxt = m[m.index(w) + 1] if m.index(w) + 1 < len(m) else None
+        if len(cur) == 3 or w["w"][-1:] in ".,!?" or (len(" ".join(x["w"] for x in cur)) > 16) or (nxt and nxt.get("seg") != w.get("seg")):
             lines.append(cur); cur = []
     if cur: lines.append(cur)
     ev = []
-    for ln in lines:
+    for li, ln in enumerate(lines):
+        nxt_start = lines[li + 1][0]["s"] if li + 1 < len(lines) else total
         for j, w in enumerate(ln):
-            a = w["s"]; b = ln[j + 1]["s"] if j + 1 < len(ln) else ln[-1]["e"] + 0.15
+            a = w["s"]; b = ln[j + 1]["s"] if j + 1 < len(ln) else min(ln[-1]["e"] + 0.15, nxt_start - 0.02)
             txt = " ".join(("{\\c&H00D4FF&}" + x["w"].upper() + "{\\c&HFFFFFF&}") if k == j else x["w"].upper() for k, x in enumerate(ln))
             ev.append(f"Dialogue: 0,{ass_time(a)},{ass_time(min(b, total - 3.0))},Cap,,0,0,0,,{txt}")
     p = T / f"captions_{tag}.ass"; p.write_text(hdr + "\n".join(ev) + "\n"); return p
@@ -167,15 +170,15 @@ def build(tag):
     parts, allw, t = [], [], 0.0
     for i, s in enumerate(segs):
         if not (C / f"{s['clip']}.mp4").exists(): print("  missing clip", s["clip"]); continue
-        out, L, ws = render_seg(i, s, tag); parts.append(out); allw += [dict(w, s=w["s"] + t, e=w["e"] + t) for w in ws]; t += L
+        out, L, ws = render_seg(i, s, tag); parts.append(out); allw += [dict(w, s=w["s"] + t, e=w["e"] + t, seg=i) for w in ws]; t += L
         print(f"  {s['clip']:5s} {L:5.2f}s  -> {t:6.2f}")
     e, L = endcard(tag); parts.append(e); t += L
     lst = T / f"{tag}_list.txt"; lst.write_text("".join(f"file '{p}'\n" for p in parts))
     raw = T / f"{tag}_raw.mp4"; run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(raw)])
     total = dur(raw); ass = captions(allw, total, tag)
     music = P / "assets/music/wholesome.mp3"
-    out = P / f"out/WilloMD_RootOut_Set13_{tag.upper()}_9x16_v1.mp4"; out.parent.mkdir(exist_ok=True)
-    fc = (f"[0:v]rgbashift=rh=1:bh=-1,noise=c0s=6:c0f=t+u,vignette=angle=PI/5,unsharp=3:3:0.25,"
+    out = P / f"out/WilloMD_RootOut_Set13_{tag.upper()}_9x16_{os.environ.get("VER", "v2")}.mp4"; out.parent.mkdir(exist_ok=True)
+    fc = (f"[0:v]rgbashift=rh=1:bh=-1,noise=c0s=6:c0f=t+u,vignette=angle=PI/8,eq=brightness=0.02:saturation=1.06,unsharp=3:3:0.25,"
           f"ass={ass}:fontsdir=/usr/share/fonts/opentype/inter[v];"
           f"[1:a]atrim=0:{total:.2f},volume=0.11,afade=in:d=1.2,afade=out:st={total-1.6:.2f}:d=1.6[m];"
           f"[0:a][m]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-2.2:LRA=11,alimiter=limit=0.75:level=false[a]")

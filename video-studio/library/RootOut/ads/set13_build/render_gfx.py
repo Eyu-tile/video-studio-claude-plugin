@@ -155,3 +155,30 @@ if rp.exists(): photo_card(rp, "photo_root.png", 520, "Photo: Wikimedia Commons"
 
 cp = WEB / "freezing/commons_wart_cryotherapy_toe_swab.jpg"
 if cp.exists(): photo_card(cp, "photo_cryo.png", 640, "Cryotherapy on a wart · Photo: Wikimedia Commons")
+
+# 9. v2 hook: bigger two-tone title + before/after proof pop (swipe #003 does its before/after at 2-4 s)
+def hook_title(l1, l2, name):
+    a = text_box([l1], 76, "ExtraBold", (20, 20, 24), (255, 255, 255), 34, 16, 22)
+    b = text_box([l2], 76, "ExtraBold", (255, 255, 255), ORANGE, 34, 16, 22)
+    img = Image.new("RGBA", (max(a.width, b.width), a.height + b.height + 10), (0, 0, 0, 0))
+    img.alpha_composite(a, ((img.width - a.width) // 2, 0)); img.alpha_composite(b, ((img.width - b.width) // 2, a.height + 10))
+    img = img.rotate(-2, resample=Image.BICUBIC, expand=True); place(img, W / 2, 270, name)
+hook_title("Flaked right off.", "No tears.", "t_h1.png")
+hook_title("Scared of anything", "touching it.", "t_h2.png")
+hook_title("She made the sign", "herself.", "t_h3.png")
+
+def before_after():
+    pw, ph = 420, 540; card = Image.new("RGBA", (2 * pw + 60, ph + 110), (255, 255, 255, 255)); d = ImageDraw.Draw(card)
+    for k, (src, lab) in enumerate(((FR / "S1.png", "Before"), (FR / "S4.png", "2 weeks later"))):
+        im = Image.open(src).convert("RGB"); sw, sh = im.size; cw_ = sw * 0.42; ch_ = cw_ * ph / pw
+        im = im.crop((int(sw * .55 - cw_ / 2), int(sh * .53 - ch_ / 2), int(sw * .55 + cw_ / 2), int(sh * .53 + ch_ / 2))).resize((pw, ph), Image.LANCZOS); x = 20 + k * (pw + 20)
+        card.paste(rounded(im, 22), (x, 20), rounded(im, 22))
+        f = font("Bold", 36); tw = d.textlength(lab, font=f)
+        d.rounded_rectangle((x + (pw - tw) / 2 - 20, ph + 36, x + (pw + tw) / 2 + 20, ph + 92), 28, fill=(NAVY if k == 0 else (21, 128, 61)))
+        d.text((x + (pw - tw) / 2, ph + 41), lab, font=f, fill=(255, 255, 255))
+    # arrow between
+    cx, cy = card.width // 2, 20 + ph // 2
+    d.ellipse((cx - 38, cy - 38, cx + 38, cy + 38), fill=ORANGE); d.polygon([(cx - 12, cy - 18), (cx + 18, cy), (cx - 12, cy + 18)], fill=(255, 255, 255))
+    lab = text_box(["AI illustration"], 22, "SemiBold", (255, 255, 255), (0, 0, 0), 12, 5, 8); card.alpha_composite(lab, (card.width - lab.width - 30, ph - lab.height + 6))
+    place(rounded(card, 34), W / 2, 820, "ba.png")
+before_after()
