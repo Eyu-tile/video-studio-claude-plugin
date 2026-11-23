@@ -61,7 +61,7 @@ BODY = [
     seg("c03"),
     seg("c04", [("png", "gal_1.png", "look", "dry", {}), ("png", "gal_2.png", "dry", "dark", {}), ("png", "gal_3.png", "dark", "smooth", {}),
                 ("png", "gal_4.png", "smooth", None, {})]),
-    seg("c05", [("png", "photo_cryo.png", "freezing", "like", {}), ("png", "w_comeback_card.png", "grows", None, {})]),
+    seg("c05", [("png", "photo_cryo.png", "freezing", "like", {})]),
     seg("c06", [("pip", "../gen/clips/m1.mp4", 0.0, "pokeweed", {"x": 0, "y": 0, "w": 1080, "h": 1920, "r": 0, "fit": 1}),
                 ("pip", "../gen/clips/m2.mp4", "pokeweed", 99, {"x": 0, "y": 0, "w": 1080, "h": 1920, "r": 0, "fit": 1}),
                 ("png", "plant_lemon.png", "lemon", 99, {}), ("png", "plant_teatree.png", "tea", 99, {}),

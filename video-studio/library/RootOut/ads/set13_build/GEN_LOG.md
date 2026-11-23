@@ -51,3 +51,4 @@ build did not submit (another session or user on the same workspace). Balance af
 - Rule saved as house lesson L1 (`video-studio/style/LESSONS.md`, MUST, banned_words check) and at the top of the RootOut
   DO_NOT_USE / README / CLAIMS / ROUND1_SCRIPTS / SET13_BRIEF.
 - CC BY / CC BY-SA photos and the music still need their credit lines in the post description (WEB_CREDITS.md).
+- v5: removed the Cleveland Clinic card at 0:36 (it flashed for under a second before the animation); "grows back" now cuts straight to the full-screen animation.
