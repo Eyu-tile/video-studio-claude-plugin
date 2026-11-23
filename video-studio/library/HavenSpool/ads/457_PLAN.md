@@ -80,3 +80,11 @@ VSL (`refs/drive_1jfs/`, voice reference only). Haven & Spool lessons: `vs lesso
 - Rolling on, women 55+: 2b31275e, 97eb2054, 6d1c337b (forehead), 7c60cde2 · 45-54: 015565e5, 8c625345 · applying 55+: e513d72d
 - Pouring into hands: 74c91fd4 (45-54, hands only), f3d839d8 · bottle on counter: 59fd99a8
 - Animation: castor bean pressed for oil d31c46b7 (row 4 option), oil on skin model d6147e71 (row 6 option)
+
+## Voiceover (done, verified by transcript)
+- Voice: Gemini TTS "Sulafat" (female, mature, warm; picked over ElevenLabs Laura = 205 wpm and Gemini Gacrux = too low).
+  Hyperscale's ElevenLabs voice list is partly stale: 5 of 6 IDs tried were rejected by the provider.
+- `raw/vo/vo_full_bf.wav` 2:12.9, 170 wpm overall, every script line present. `raw/vo/vo_cta_evergreen.wav` 14.2 s, 174 wpm.
+- Fix 1: 0:49 "So" was slurred ("site"): replace with `raw/vo/vo_pickup_so.wav` (clear "So", lower it ~2 dB to match).
+- Fix 2: 1:20-1:47 runs on at 180 wpm with no breaths: open 0.3-0.4 s pauses at sentence ends in the edit.
+- Target after fixes and gap trims: ~2:05-2:10.
