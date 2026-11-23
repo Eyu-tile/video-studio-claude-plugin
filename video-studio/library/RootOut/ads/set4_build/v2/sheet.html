@@ -1,0 +1,223 @@
+<title>RootOut Set 4 Working Sheet</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one production document, rules first, then the shot list as a wide scrolling table */
+:root { --bg:#F6F8FB; --panel:#FFFFFF; --fg:#13223D; --muted:#5A6678; --line:#DCE3EC; --navy:#0B2A5B; --blue:#1763B8; --orange:#E04E18;
+  --mom:#E8F0FB; --prod:#FDEBE3; --broll:#EAF5EC; --d3:#F2ECFA; --real:#FFF6D9; --reuse:#EEF0F3; --code:#E9F6F7;
+  --serif:"Newsreader", Georgia, serif; --sans:"Inter", system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0E1522; --panel:#152035; --fg:#E7EDF6; --muted:#9AA8BC; --line:#26344C; --navy:#9CC0F0; --blue:#6FA8EC; --orange:#F2875C;
+  --mom:#1C2D4A; --prod:#3A2418; --broll:#18301F; --d3:#2A2140; --real:#3A3216; --reuse:#232A36; --code:#173236; color-scheme:dark; } }
+:root[data-theme="dark"] { --bg:#0E1522; --panel:#152035; --fg:#E7EDF6; --muted:#9AA8BC; --line:#26344C; --navy:#9CC0F0; --blue:#6FA8EC; --orange:#F2875C;
+  --mom:#1C2D4A; --prod:#3A2418; --broll:#18301F; --d3:#2A2140; --real:#3A3216; --reuse:#232A36; --code:#173236; color-scheme:dark; }
+body { background:var(--bg); color:var(--fg); font-family:var(--sans); font-size:15px; line-height:1.5; }
+.wrap { max-width:1180px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:32px 64px; display:grid; gap:28px; }
+h1 { font-family:var(--serif); font-weight:600; font-size:clamp(28px,4vw,40px); letter-spacing:-.02em; line-height:1.1; margin:0; color:var(--navy); text-wrap:balance; }
+h2 { font-family:var(--serif); font-weight:600; font-size:24px; margin:0 0 12px; color:var(--navy); }
+.lede { color:var(--muted); max-width:70ch; margin:6px 0 0; }
+.meta { display:flex; flex-wrap:wrap; gap:8px 18px; font-size:13px; color:var(--muted); margin-top:12px; }
+.meta b { color:var(--fg); font-weight:600; }
+section { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:22px; min-width:0; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+.grid > div { min-width:0; }
+h3 { font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--blue); margin:0 0 6px; }
+ul { margin:0; padding-left:18px; display:grid; gap:4px; }
+.fix td:first-child { color:var(--muted); width:40%; }
+.scroll { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; font-size:13.5px; }
+th { text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); border-bottom:2px solid var(--line); padding:8px 10px; position:sticky; top:0; background:var(--panel); }
+td { border-bottom:1px solid var(--line); padding:8px 10px; vertical-align:top; }
+.shots table { min-width:1040px; }
+td.n { color:var(--muted); font-variant-numeric:tabular-nums; }
+td.t { white-space:nowrap; font-variant-numeric:tabular-nums; }
+td.t span { display:block; font-size:11.5px; color:var(--muted); }
+td.sec { font-weight:600; white-space:nowrap; }
+td.vo { font-family:var(--serif); font-size:15px; min-width:200px; }
+td.ost { color:var(--muted); font-size:12.5px; }
+.chip { display:inline-block; font-size:11.5px; font-weight:600; padding:3px 8px; border-radius:999px; white-space:nowrap; color:var(--fg); }
+.hf-mom { background:var(--mom); } .hf-product { background:var(--prod); } .hf-broll { background:var(--broll); } .hf-3d { background:var(--d3); }
+.real { background:var(--real); } .reuse { background:var(--reuse); } .code { background:var(--code); }
+.counts { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+.num { text-align:right; font-variant-numeric:tabular-nums; }
+tfoot td { font-weight:700; border-bottom:none; }
+.safe { display:grid; grid-template-columns:minmax(0,170px) minmax(0,1fr); gap:18px; align-items:start; }
+.phone { aspect-ratio:9/16; max-width:170px; border:2px solid var(--fg); border-radius:18px; position:relative; overflow:hidden; background:var(--bg); }
+.phone div { position:absolute; font-size:9px; font-weight:600; display:flex; align-items:center; justify-content:center; text-align:center; }
+.z-ui { background:color-mix(in srgb, var(--orange) 22%, transparent); color:var(--orange); }
+.z-ok { border:1.5px dashed var(--blue); color:var(--blue); }
+.ask { border-left:3px solid var(--orange); padding-left:12px; }
+@media (max-width:560px) { .safe { grid-template-columns:1fr; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior:auto; } }
+</style>
+<div class="wrap">
+<header>
+  <h1>RootOut Set 4 · v2 working sheet</h1>
+  <p class="lede">“Every wart fix, ranked.” A full rebuild of v1, cut to the reference ad's pace. Nothing gets generated until you approve this sheet. The spoken script is the client's brief, word for word: same voice, same lines, nothing added or removed.</p>
+  <div class="meta"><span><b>77</b> shots</span><span>median shot <b>1.8 s</b>, longest <b>3.0 s</b></span><span>runtime <b>~2:23</b> (H1)</span><span>9:16 · captions on</span><span>reference: SoFyre #035</span></div>
+</header>
+
+<section>
+  <h2>What changes from v1</h2>
+  <table class="fix"><tbody>
+  <tr><td>One cut-away animation held for long stretches</td><td>A new picture at least every 3 s. Each shot shows the words being said. The 3D skin animation appears in short 1–3 s bursts only, mixed with real footage and b-roll.</td></tr>
+  <tr><td>Mom keyed out of a green screen (rough edges)</td><td>No cut-outs. The mom is filmed whole inside Higgsfield in a real home (kitchen, car, sofa), and appears in short beats like a UGC host.</td></tr>
+  <tr><td>Product sometimes small, covered or cropped</td><td>Every product shot is made in Higgsfield with the real bottle as reference. Label always facing camera, cap and base in frame, hands never over the label. Any frame that breaks this gets re-rolled.</td></tr>
+  <tr><td>2:30–2:37 end card cut off the bottle's cap</td><td>New CTA: the real product page on a phone, a three-bottle shot, the offer circled like the reference, then a clean end card made in Higgsfield with the whole bottle and wide margins.</td></tr>
+  <tr><td>Glitches (edge fringing, keyed hair, zoomed-in takes)</td><td>Every clip comes from Higgsfield at one size, with no compositing. Each clip is checked frame by frame before the edit, and every talking clip is checked word for word against the script.</td></tr>
+  </tbody></table>
+</section>
+
+<section>
+  <h2>How the reference is cut (SoFyre #035, measured)</h2>
+  <div class="grid">
+    <div><h3>Pace</h3><ul><li>44 shots in 78.6 s, median 1.6 s</li><li>Hard cuts only, many with a slow push-in or pull-out</li><li>The first cut lands at 1.4 s</li></ul></div>
+    <div><h3>Structure</h3><ul><li>A hook banner sits on screen for the first 9 s</li><li>Each rank opens on a big number and name card</li><li>Every line is shown literally (“bad air freshener” = mint in a jar)</li></ul></div>
+    <div><h3>Mechanism and proof</h3><ul><li>One or two short “inside the body” 3D shots per rank</li><li>Product held, turned and placed, always fully in view</li><li>Ends on the real checkout page with the offer circled</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Rules for every frame</h2>
+  <div class="safe">
+    <div class="phone" aria-label="9:16 safe zone diagram">
+      <div class="z-ui" style="left:0;right:0;top:0;height:7%">top UI</div>
+      <div class="z-ui" style="right:0;top:7%;bottom:20%;width:13%;writing-mode:vertical-rl">buttons</div>
+      <div class="z-ui" style="left:0;right:0;bottom:0;height:20%">caption + CTA bar</div>
+      <div class="z-ok" style="left:7%;right:15%;top:12%;bottom:24%">text safe zone</div>
+    </div>
+    <div class="grid">
+      <div><h3>Text and headlines</h3><ul><li>All titles, rank cards, source cards and captions sit inside the safe zone: clear of the top bar, the right-hand buttons and the bottom 20%</li><li>Captions: 2–4 words, lower middle (as in the reference)</li><li>Hook banner and rank cards: upper third</li><li>Disclaimers (†, *) small, above the caption line</li></ul></div>
+      <div><h3>Product</h3><ul><li>The real RootOut bottle in every product shot (front + duo images as reference)</li><li>Label front-on and readable, never mirrored, nothing covering it</li><li>Whole bottle in frame, cap included, with margin on every side</li></ul></div>
+      <div><h3>Kids and claims</h3><ul><li>No child faces: feet, hands, sleeves, backs of heads only</li><li>Paper-towel test stays labelled “AI placeholder · proof needed”</li><li>Source cards quote the page unchanged, with no logos and nothing implying endorsement</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="shots">
+  <h2>Shot list · H1</h2>
+  <div class="counts"><span class="chip hf-broll">Higgsfield · b-roll · 25</span><span class="chip real">Real footage / page · 13</span><span class="chip hf-3d">Higgsfield · 3D skin · 13</span><span class="chip hf-product">Higgsfield · product · 10</span><span class="chip hf-mom">Higgsfield · mom · 9</span><span class="chip reuse">v1 Higgsfield clip · 6</span><span class="chip code">Code graphic · 1</span></div>
+  <div class="scroll"><table>
+  <thead><tr><th>#</th><th>Time (s)</th><th>Beat</th><th>Voice-over (locked)</th><th>Picture</th><th>Source</th><th>On screen</th></tr></thead>
+  <tbody><tr><td class="n">1</td><td class="t">0.0–1.5<span>1.5s</span></td><td class="sec">Hook</td><td class="vo">“There are only four ways”</td><td>Mom, kitchen table selfie (real home, filmed in Higgsfield, no cut-out), holds up four fingers</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">Banner: EVERY WART FIX, RANKED</td></tr>
+<tr><td class="n">2</td><td class="t">1.5–3.2<span>1.7s</span></td><td class="sec">Hook</td><td class="vo">“to get rid of a kid&#x27;s wart,”</td><td>Bathroom counter: duct tape, acid pads, freeze can and the RootOut bottle in a row, hand sweeps along them</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">banner</td></tr>
+<tr><td class="n">3</td><td class="t">3.2–4.6<span>1.4s</span></td><td class="sec">Hook</td><td class="vo">“ranked from weakest”</td><td>Hand lines up tape → pads → can, left to right, push-in</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">banner</td></tr>
+<tr><td class="n">4</td><td class="t">4.6–6.1<span>1.5s</span></td><td class="sec">Hook</td><td class="vo">“to strongest.”</td><td>RootOut bottle slides in at the end of the row, label facing camera, fully in frame</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">banner</td></tr>
+<tr><td class="n">5</td><td class="t">6.1–8.5<span>2.4s</span></td><td class="sec">Hook</td><td class="vo">“Most families never make it to number four.”</td><td>Mom, same take: small knowing shrug</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">banner</td></tr>
+<tr><td class="n">6</td><td class="t">8.5–9.9<span>1.4s</span></td><td class="sec">#1</td><td class="vo">“Number one,”</td><td>Real duct-tape roll on a table (CC photo), slow push-in</td><td><span class="chip real">Real footage / page</span></td><td class="ost">Rank card: 1 · DUCT TAPE</td></tr>
+<tr><td class="n">7</td><td class="t">9.9–11.6<span>1.7s</span></td><td class="sec">#1</td><td class="vo">“duct tape.”</td><td>Hand tears a strip off a plain grey roll, close-up</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">8</td><td class="t">11.6–13.2<span>1.6s</span></td><td class="sec">#1</td><td class="vo">“It sits on top of the wart for weeks.”</td><td>Small foot, side view: tape strip pressed over the bump, smoothed down</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">9</td><td class="t">13.2–14.7<span>1.5s</span></td><td class="sec">#1</td><td class="vo">“Rent free.”</td><td>A sock peeled off, the tape stuck inside it, wart unchanged (dry humour)</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">10</td><td class="t">14.7–16.6<span>1.9s</span></td><td class="sec">#1</td><td class="vo">“It never gets under the hard skin.”</td><td>3D skin cut-away: tape sits on the hard top, root untouched below</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">Source card: aafp.org “little documented evidence”</td></tr>
+<tr><td class="n">11</td><td class="t">16.6–17.9<span>1.3s</span></td><td class="sec">#2</td><td class="vo">“Number two,”</td><td>Macro of round foam acid pads on a sheet</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">Rank card: 2 · ACID PADS</td></tr>
+<tr><td class="n">12</td><td class="t">17.9–19.4<span>1.5s</span></td><td class="sec">#2</td><td class="vo">“acid pads.”</td><td>Fingers peel one pad off its backing</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">13</td><td class="t">19.4–20.2<span>0.8s</span></td><td class="sec">#2</td><td class="vo">“A bit stronger.”</td><td>Pad pressed onto the ball of a small foot</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">14</td><td class="t">20.2–21.8<span>1.6s</span></td><td class="sec">#2</td><td class="vo">“They peel it down”</td><td>Pad peeled back, skin white (v1 clip, keeps)</td><td><span class="chip reuse">v1 Higgsfield clip</span></td><td class="ost">—</td></tr>
+<tr><td class="n">15</td><td class="t">21.8–23.5<span>1.7s</span></td><td class="sec">#2</td><td class="vo">“till the black dots are gone.”</td><td>Real plantar wart whitened after salicylic acid (CC photo)</td><td><span class="chip real">Real footage / page</span></td><td class="ost">—</td></tr>
+<tr><td class="n">16</td><td class="t">23.5–25.3<span>1.8s</span></td><td class="sec">#2</td><td class="vo">“And it always seems to come back.”</td><td>NHS page: “may irritate your skin and do not always work”, phone screen, line highlighted</td><td><span class="chip real">Real footage / page</span></td><td class="ost">Source: nhs.uk</td></tr>
+<tr><td class="n">17</td><td class="t">25.3–26.8<span>1.5s</span></td><td class="sec">#3</td><td class="vo">“Number three,”</td><td>Macro: white cold vapour rolling across a dark surface</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">Rank card: 3 · FREEZING</td></tr>
+<tr><td class="n">18</td><td class="t">26.8–28.9<span>2.1s</span></td><td class="sec">#3</td><td class="vo">“freezing at the doctor&#x27;s.”</td><td>Clinic: gloved hand, unbranded can, cold puff on a small sole (v1 clip, punched in)</td><td><span class="chip reuse">v1 Higgsfield clip</span></td><td class="ost">—</td></tr>
+<tr><td class="n">19</td><td class="t">28.9–30.9<span>2.0s</span></td><td class="sec">#3</td><td class="vo">“The strongest one most of us know.”</td><td>Real wart being frozen with a cotton swab (public-domain photo)</td><td><span class="chip real">Real footage / page</span></td><td class="ost">—</td></tr>
+<tr><td class="n">20</td><td class="t">30.9–33.6<span>2.7s</span></td><td class="sec">#3</td><td class="vo">“Somebody held him still every time.”</td><td>Adult hands hold a small ankle on exam-table paper; small fingers grip the paper</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">21</td><td class="t">33.6–36.2<span>2.6s</span></td><td class="sec">#3</td><td class="vo">“It was agonizing for all of us.”</td><td>Mom in the parked car after the appointment, quiet, the joke gone</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">—</td></tr>
+<tr><td class="n">22</td><td class="t">36.2–38.0<span>1.8s</span></td><td class="sec">#3</td><td class="vo">“And after every visit,”</td><td>Clinic car park: small sneakers kicking in the back seat, appointment card on the dash</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">23</td><td class="t">38.0–39.5<span>1.5s</span></td><td class="sec">#3</td><td class="vo">“there were two or three more.”</td><td>Small sole, now three small warts</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">Source card: clevelandclinic.org “can reappear”</td></tr>
+<tr><td class="n">24</td><td class="t">39.5–41.4<span>1.9s</span></td><td class="sec">Reveal</td><td class="vo">“Here&#x27;s what nobody told me.”</td><td>Mom leans into the lens, sharing a secret</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">—</td></tr>
+<tr><td class="n">25</td><td class="t">41.4–42.7<span>1.3s</span></td><td class="sec">Reveal</td><td class="vo">“Freezing,”</td><td>3D skin: frost hits the hard top only</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">26</td><td class="t">42.7–44.2<span>1.5s</span></td><td class="sec">Reveal</td><td class="vo">“acid and shaving”</td><td>3D skin: an acid drop and a blade scrape the top only (same render, 2nd half)</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">27</td><td class="t">44.2–45.6<span>1.4s</span></td><td class="sec">Reveal</td><td class="vo">“only snap off the top,”</td><td>Real 1947 film: hand cuts a weed off at the ground (public domain)</td><td><span class="chip real">Real footage / page</span></td><td class="ost">—</td></tr>
+<tr><td class="n">28</td><td class="t">45.6–47.5<span>1.9s</span></td><td class="sec">Reveal</td><td class="vo">“like picking a dandelion.”</td><td>Ground level: hand pinches a dandelion, stem snaps at the soil line, stub stays</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">29</td><td class="t">47.5–49.8<span>2.3s</span></td><td class="sec">Reveal</td><td class="vo">“The root stays under the hard skin,”</td><td>Glass-sided soil box: snapped stub above, long white root still in the soil</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">30</td><td class="t">49.8–51.1<span>1.3s</span></td><td class="sec">Reveal</td><td class="vo">“so it grows back.”</td><td>Real dandelion back at a kerb (CC photo)</td><td><span class="chip real">Real footage / page</span></td><td class="ost">—</td></tr>
+<tr><td class="n">31</td><td class="t">51.1–53.2<span>2.1s</span></td><td class="sec">Reveal</td><td class="vo">“Every fix made it look done,”</td><td>Small sole looks smooth, a mom&#x27;s thumb rubs the spot, relieved</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">32</td><td class="t">53.2–55.4<span>2.2s</span></td><td class="sec">Reveal</td><td class="vo">“but the root never left.”</td><td>3D skin: camera dives under the smooth top, the root is still there, glowing</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">33</td><td class="t">55.4–56.8<span>1.4s</span></td><td class="sec">Reveal</td><td class="vo">“It was never our fault.”</td><td>Mom: small shrug, relieved smile</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">—</td></tr>
+<tr><td class="n">34</td><td class="t">56.8–58.4<span>1.6s</span></td><td class="sec">#4</td><td class="vo">“Number four”</td><td>RootOut bottle hero on a bright bathroom counter, slow push-in, label front</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">Rank card: 4 · ROOTOUT (gold)</td></tr>
+<tr><td class="n">35</td><td class="t">58.4–59.2<span>0.8s</span></td><td class="sec">#4</td><td class="vo">“gets the root.”</td><td>Real hand holding a whole dandelion with its long root (CC photo)</td><td><span class="chip real">Real footage / page</span></td><td class="ost">—</td></tr>
+<tr><td class="n">36</td><td class="t">59.2–61.3<span>2.1s</span></td><td class="sec">#4</td><td class="vo">“It&#x27;s RootOut, an oil with four plants,”</td><td>Mom holds the bottle beside her face, label clean and readable</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">—</td></tr>
+<tr><td class="n">37</td><td class="t">61.3–64.1<span>2.8s</span></td><td class="sec">#4</td><td class="vo">“and each one takes it a little deeper.”</td><td>Flat lay: bottle in the centre, lemon slice, tea-tree sprig, pokeweed berries, white-cedar twig around it</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">—</td></tr>
+<tr><td class="n">38</td><td class="t">64.1–66.0<span>1.9s</span></td><td class="sec">#4</td><td class="vo">“Lemon goes first”</td><td>Macro: lemon cut open, one drop falls</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">label: LEMON</td></tr>
+<tr><td class="n">39</td><td class="t">66.0–67.6<span>1.6s</span></td><td class="sec">#4</td><td class="vo">“and softens the hard top.”</td><td>3D skin: a yellow drop softens the hard top, a small door opens</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">40</td><td class="t">67.6–69.5<span>1.9s</span></td><td class="sec">#4</td><td class="vo">“Tea tree is a thin oil,”</td><td>Macro: thin golden tea-tree oil drips from a dropper</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">label: TEA TREE</td></tr>
+<tr><td class="n">41</td><td class="t">69.5–71.1<span>1.6s</span></td><td class="sec">#4</td><td class="vo">“so it sinks right in,”</td><td>3D skin: the thin oil slides down through the layers</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">42</td><td class="t">71.1–73.9<span>2.8s</span></td><td class="sec">#4</td><td class="vo">“up to 8x deeper than a regular cream,”</td><td>3-paper-towel test (v1 clip)</td><td><span class="chip reuse">v1 Higgsfield clip</span></td><td class="ost">8x† + “AI placeholder · proof needed”</td></tr>
+<tr><td class="n">43</td><td class="t">73.9–75.6<span>1.7s</span></td><td class="sec">#4</td><td class="vo">“and it carries the last two plants”</td><td>3D skin: two green droplets climb onto the golden oil</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">44</td><td class="t">75.6–77.0<span>1.4s</span></td><td class="sec">#4</td><td class="vo">“down with it.”</td><td>3D skin: they ride it down through the layers (same render, 2nd half)</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">45</td><td class="t">77.0–79.7<span>2.7s</span></td><td class="sec">#4</td><td class="vo">“Pokeweed and white cedar break the wart down from the”</td><td>Macro: pokeweed berries and a white-cedar twig, soft light</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">labels: POKEWEED · WHITE CEDAR</td></tr>
+<tr><td class="n">46</td><td class="t">79.7–82.3<span>2.6s</span></td><td class="sec">#4</td><td class="vo">“root, so there&#x27;s nothing left to grow back.”</td><td>3D skin: the root crumbles, the surface turns smooth</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">*homeopathic disclaimer</td></tr>
+<tr><td class="n">47</td><td class="t">82.3–84.0<span>1.7s</span></td><td class="sec">#4</td><td class="vo">“Any one of them alone”</td><td>3D skin: a single drop sets off alone</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">48</td><td class="t">84.0–85.6<span>1.6s</span></td><td class="sec">#4</td><td class="vo">“stops halfway.”</td><td>3D skin: it stalls halfway down (same render, 2nd half)</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">49</td><td class="t">85.6–87.2<span>1.6s</span></td><td class="sec">#4</td><td class="vo">“Together, they reach the root.”</td><td>3D skin: all four reach the root, warm glow (same render, 2nd half)</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">50</td><td class="t">87.2–89.9<span>2.7s</span></td><td class="sec">Safety</td><td class="vo">“And deep doesn&#x27;t mean harsh.”</td><td>Mom, calm, bottle held low near her chest, label in frame</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">—</td></tr>
+<tr><td class="n">51</td><td class="t">89.9–92.8<span>2.9s</span></td><td class="sec">Safety</td><td class="vo">“It&#x27;s a kids&#x27; formula, for ages 4 and up.”</td><td>Bottle on a kid&#x27;s nightstand beside a picture book, label front</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">—</td></tr>
+<tr><td class="n">52</td><td class="t">92.8–94.0<span>1.2s</span></td><td class="sec">Safety</td><td class="vo">“No acid,”</td><td>Hand drops an unbranded acid bottle into a bin</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">✕ ACID</td></tr>
+<tr><td class="n">53</td><td class="t">94.0–95.1<span>1.1s</span></td><td class="sec">Safety</td><td class="vo">“no freezing,”</td><td>Spray can follows it in, lid closes (same render, 2nd half)</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">✕ FREEZING</td></tr>
+<tr><td class="n">54</td><td class="t">95.1–96.4<span>1.3s</span></td><td class="sec">Safety</td><td class="vo">“no blister.”</td><td>Close side view of a smooth small sole, no blister</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">✕ BLISTER</td></tr>
+<tr><td class="n">55</td><td class="t">96.4–98.5<span>2.1s</span></td><td class="sec">Safety</td><td class="vo">“Just a little cool tingle.”</td><td>Toes wiggle on the couch (v1 clip, cropped)</td><td><span class="chip reuse">v1 Higgsfield clip</span></td><td class="ost">—</td></tr>
+<tr><td class="n">56</td><td class="t">98.5–100.3<span>1.8s</span></td><td class="sec">Safety</td><td class="vo">“And pediatricians recommend it.”</td><td>Pediatric office desk: stethoscope beside the bottle, label front</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">claim needs client proof</td></tr>
+<tr><td class="n">57</td><td class="t">100.3–101.9<span>1.6s</span></td><td class="sec">Routine</td><td class="vo">“At bedtime, it&#x27;s three steps.”</td><td>Nightstand under a warm lamp: bottle, files, dots</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">—</td></tr>
+<tr><td class="n">58</td><td class="t">101.9–104.1<span>2.2s</span></td><td class="sec">Routine</td><td class="vo">“File:”</td><td>RootOut&#x27;s own how-to video: 1 File</td><td><span class="chip real">Real footage / page</span></td><td class="ost">1 FILE</td></tr>
+<tr><td class="n">59</td><td class="t">104.1–106.1<span>2.0s</span></td><td class="sec">Routine</td><td class="vo">“rub the little file over it twice,”</td><td>Small foot on a pillow, file strokes (v1 clip)</td><td><span class="chip reuse">v1 Higgsfield clip</span></td><td class="ost">—</td></tr>
+<tr><td class="n">60</td><td class="t">106.1–107.8<span>1.7s</span></td><td class="sec">Routine</td><td class="vo">“just on the hard top.”</td><td>How-to video, file macro</td><td><span class="chip real">Real footage / page</span></td><td class="ost">—</td></tr>
+<tr><td class="n">61</td><td class="t">107.8–110.3<span>2.5s</span></td><td class="sec">Routine</td><td class="vo">“Soak: brush the oil on.”</td><td>How-to video: 2 Brush</td><td><span class="chip real">Real footage / page</span></td><td class="ost">2 SOAK</td></tr>
+<tr><td class="n">62</td><td class="t">110.3–112.4<span>2.1s</span></td><td class="sec">Routine</td><td class="vo">“Cover: a clear dot on top,”</td><td>How-to video: 3 Cover</td><td><span class="chip real">Real footage / page</span></td><td class="ost">3 COVER</td></tr>
+<tr><td class="n">63</td><td class="t">112.4–114.2<span>1.8s</span></td><td class="sec">Routine</td><td class="vo">“so it soaks all night.”</td><td>Bedroom window night to dawn time-lapse, bottle on the nightstand in frame</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">9 PM → 5 AM</td></tr>
+<tr><td class="n">64</td><td class="t">114.2–116.8<span>2.6s</span></td><td class="sec">Routine</td><td class="vo">“He&#x27;s asleep before I put the cap back on.”</td><td>Mom whispering, screws the cap on, bottle fully visible</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">—</td></tr>
+<tr><td class="n">65</td><td class="t">116.8–119.4<span>2.6s</span></td><td class="sec">Result</td><td class="vo">“Most spots, on a hand or a foot,”</td><td>A small hand and a small foot side by side on a blanket, no face</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">66</td><td class="t">119.4–121.5<span>2.1s</span></td><td class="sec">Result</td><td class="vo">“are gone in about two weeks.”</td><td>Fridge calendar: 14 days crossed off (drawn in code so numbers stay sharp)</td><td><span class="chip code">Code graphic</span></td><td class="ost">—</td></tr>
+<tr><td class="n">67</td><td class="t">121.5–123.4<span>1.9s</span></td><td class="sec">Result</td><td class="vo">“Then you do fourteen more nights,”</td><td>Small hand writes “+14” on the calendar</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">+14 NIGHTS</td></tr>
+<tr><td class="n">68</td><td class="t">123.4–125.4<span>2.0s</span></td><td class="sec">Result</td><td class="vo">“so the root is gone too.”</td><td>3D skin: clean layers, no root left</td><td><span class="chip hf-3d">Higgsfield · 3D skin</span></td><td class="ost">—</td></tr>
+<tr><td class="n">69</td><td class="t">125.4–126.5<span>1.1s</span></td><td class="sec">Result</td><td class="vo">“Nobody gets held down,”</td><td>Kid runs barefoot down a hallway, from behind</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">70</td><td class="t">126.5–128.2<span>1.7s</span></td><td class="sec">Result</td><td class="vo">“and there&#x27;s nothing to book.”</td><td>Mom&#x27;s thumb deletes a “Wart freeze” calendar event on her phone (screen text added in edit)</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">71</td><td class="t">128.2–130.7<span>2.5s</span></td><td class="sec">Close</td><td class="vo">“If your kid&#x27;s wart keeps coming back,”</td><td>Mom on the sofa, direct to camera</td><td><span class="chip hf-mom">Higgsfield · mom</span></td><td class="ost">—</td></tr>
+<tr><td class="n">72</td><td class="t">130.7–133.0<span>2.3s</span></td><td class="sec">Close</td><td class="vo">“you&#x27;ve been stuck at number three.”</td><td>Tape, pads and can swept into a drawer, drawer shuts</td><td><span class="chip hf-broll">Higgsfield · b-roll</span></td><td class="ost">—</td></tr>
+<tr><td class="n">73</td><td class="t">133.0–134.0<span>1.0s</span></td><td class="sec">Close</td><td class="vo">“Skip to number four.”</td><td>Bottle hero, gold light sweep</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">4 · ROOTOUT</td></tr>
+<tr><td class="n">74</td><td class="t">134.0–135.7<span>1.7s</span></td><td class="sec">CTA</td><td class="vo">“It&#x27;s at the link below.”</td><td>Real RootOut product page on a phone, finger taps the bundle</td><td><span class="chip real">Real footage / page</span></td><td class="ost">arrow ↓</td></tr>
+<tr><td class="n">75</td><td class="t">135.7–137.6<span>1.9s</span></td><td class="sec">CTA</td><td class="vo">“Three for the price of two.”</td><td>Three bottles on the counter, a hand sets the third down (v1 clip, labels clean, caps fully in frame)</td><td><span class="chip reuse">v1 Higgsfield clip</span></td><td class="ost">BUY 2, GET 1 FREE</td></tr>
+<tr><td class="n">76</td><td class="t">137.6–140.1<span>2.5s</span></td><td class="sec">CTA</td><td class="vo">“And if it&#x27;s not gone, you get your money back.”</td><td>Real product page: “Buy 2 Get 1 Free” circled, 90-day badge pops</td><td><span class="chip real">Real footage / page</span></td><td class="ost">90-DAY MONEY-BACK</td></tr>
+<tr><td class="n">77</td><td class="t">140.1–143.1<span>3.0s</span></td><td class="sec">CTA</td><td class="vo">“(no VO)”</td><td>End card: bottle slowly turning on a clean ice-blue set, full cap and label in frame, generous margins</td><td><span class="chip hf-product">Higgsfield · product</span></td><td class="ost">Not the top. The root. · Shop now · AI illustration.</td></tr></tbody></table></div>
+</section>
+
+<section>
+  <h2>H2 and H3 openings</h2>
+  <p class="lede" style="margin:0 0 10px">Everything after the hook is the H1 cut. Only the first 7–9 seconds change.</p>
+  <div class="scroll"><table><thead><tr><th>Hook</th><th>Voice-over (locked)</th><th>Picture</th><th>Source</th></tr></thead><tbody><tr><td class="sec">H2</td><td class="vo">“One wart turned into fifteen.”</td><td>Small foot on a towel, a cluster of small warts (v1 clip)</td><td><span class="chip reuse">REUSE</span></td></tr>
+<tr><td class="sec">H2</td><td class="vo">“So here&#x27;s every fix we tried, ranked from weakest to strongest.”</td><td>Crowded shelf of half-used remedies (v1 clip) → the counter line-up from shot 2</td><td><span class="chip reuse">REUSE + HF</span></td></tr>
+<tr><td class="sec">H2</td><td class="vo">“Only number four got the root.”</td><td>Mom holds the RootOut bottle up on “four” (no finger counting, so the four-finger mistake can&#x27;t recur)</td><td><span class="chip hf-mom">HF-MOM</span></td></tr>
+<tr><td class="sec">H3</td><td class="vo">“R.I.P., my kid&#x27;s wart.”</td><td>Bathroom counter: a small blank cardboard tombstone beside the remedies; “R.I.P. WART” added in edit</td><td><span class="chip hf-broll">HF-BROLL</span></td></tr>
+<tr><td class="sec">H3</td><td class="vo">“You will not be missed.”</td><td>Mom, deadpan, taps the tombstone over</td><td><span class="chip hf-mom">HF-MOM</span></td></tr>
+<tr><td class="sec">H3</td><td class="vo">“Here&#x27;s every fix we tried, ranked from weakest to strongest.”</td><td>Counter line-up (shots 2–4)</td><td><span class="chip hf-product">HF-PRODUCT</span></td></tr></tbody></table></div>
+</section>
+
+<section>
+  <h2>Look and sound</h2>
+  <div class="grid">
+    <div><h3>One story, one family</h3><ul><li>Same mom, same home, same kid (feet only) in every shot</li><li>Warm, natural phone look, matching the reference's warm grade</li><li>One 3D skin style frame, locked first and reused for every 3D shot</li></ul></div>
+    <div><h3>Edit</h3><ul><li>Cuts land on the voice phrase, as in the reference</li><li>A slow push-in or pull-out on most shots, no flashy transitions</li><li>Sound under every shot: room tone and a small effect on each action</li></ul></div>
+    <div><h3>Kept from v1</h3><ul><li>The locked voice (Quinn) and the word-for-word script checks</li><li>Seven v1 clips that passed review: pad, clinic, paper towels, toes, file, bottles, shelf/cluster</li><li>Real photos, the 1947 film, the brand how-to, the source pages</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <h2>Higgsfield quote (WilloMd)</h2>
+  <div class="scroll"><table><thead><tr><th>What</th><th>Amount</th><th class="num">Credits</th></tr></thead>
+  <tbody><tr><td>Mom clips, lip-synced, real home settings (8 lines + H2/H3)</td><td>10 clips · ~65 s</td><td class='num'>455</td></tr>
+<tr><td>Product shots with the real bottle as reference</td><td>9 clips · ~40 s</td><td class='num'>280</td></tr>
+<tr><td>3D skin animations (one locked style frame)</td><td>8 clips · 32 s</td><td class='num'>224</td></tr>
+<tr><td>B-roll</td><td>24 clips · 96 s</td><td class='num'>672</td></tr>
+<tr><td>Start frames (Soul) + style frame</td><td>~40 images</td><td class='num'>25</td></tr></tbody>
+  <tfoot><tr><td>First pass</td><td></td><td class="num">1,656</td></tr>
+  <tr><td>Re-roll budget (~25%, product and hands rules are strict)</td><td></td><td class="num">414</td></tr>
+  <tr><td>Ceiling</td><td></td><td class="num">2,070</td></tr></tfoot></table></div>
+  <p class="lede">Seedance 2.5 at 720p, high bitrate, 7 credits per second. Balance when this sheet was written: 4,259 credits, shared with the other sets' sessions on the same workspace.</p>
+</section>
+
+<section class="ask">
+  <h2>To confirm before I start</h2>
+  <ul>
+    <li><b>Approve this sheet and the credit ceiling.</b></li>
+    <li>“Text heading line has to be safe”: I read this as all on-screen text inside the platform safe zone (diagram above). Tell me if you meant something else.</li>
+    <li>The mom appears in 8 short beats (≤3 s each) and the rest is voice-over over b-roll, like the reference. Say if you want more or fewer of her.</li>
+    <li>Still open with the client: “pediatricians recommend it”, the kids' formula vs pokeweed/white cedar, real paper-towel test footage.</li>
+  </ul>
+</section>
+</div>
