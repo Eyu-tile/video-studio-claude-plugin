@@ -217,6 +217,20 @@ def phone_delete():
         im.convert("RGB").save(tmp / f"{i + 1:04d}.png")
     frames_to_mp4(tmp, OUT / "phone_delete.mp4", fps)
 
+def wide(name="P3_hero", sc=0.62, fy=330, out="P3_hero_wide"):
+    """Pull a product clip back in code: each frame shrinks to `sc`, its own edge pixels are replicated outward and blurred to
+    fill the 9:16 canvas, the sharp frame is feathered in. Leaves room for the rank card and caption above the bottle."""
+    import numpy as np
+    src = V2 / f"clips/{name}.mp4"; fw, fh = round(1080 * sc / 2) * 2, round(1920 * sc / 2) * 2; fx = (1080 - fw) // 2
+    m = Image.new("L", (fw, fh), 0); ImageDraw.Draw(m).rectangle((30, 30, fw - 30, fh - 30), fill=255); m = m.filter(ImageFilter.GaussianBlur(26))
+    tmp = OUT / "_wide"; shutil.rmtree(tmp, ignore_errors=True); tmp.mkdir()
+    subprocess.run(["ffmpeg", "-v", "error", "-i", str(src), "-vf", f"scale={fw}:{fh}", str(tmp / "s%04d.png")], check=True)
+    for i, f in enumerate(sorted(tmp.glob("s*.png"))):
+        fr = Image.open(f).convert("RGB"); a = np.asarray(fr)
+        bg = Image.fromarray(np.pad(a, ((fy, 1920 - fh - fy), (fx, 1080 - fw - fx), (0, 0)), mode="edge")).filter(ImageFilter.GaussianBlur(30))
+        bg.paste(fr, (fx, fy), m); bg.save(tmp / f"{i + 1:04d}.png"); f.unlink()
+    frames_to_mp4(tmp, OUT / f"{out}.mp4", 24)
+
 if __name__ == "__main__":
     import sys
     what = sys.argv[1:] or ["pngs", "srccards", "tombstone", "offer", "endcard", "phone_delete"]

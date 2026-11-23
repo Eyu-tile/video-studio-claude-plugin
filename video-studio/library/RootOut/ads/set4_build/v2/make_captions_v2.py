@@ -42,6 +42,10 @@ BOXED = ("offer", "R_pdp_scroll", "phone_delete", "g_calendar")
 boxwin = [(p[2], p[2] + p[3]) for p in pos if p[1] in BOXED]
 def ts(v):
     hh, mm, ss = v.split(":"); return int(hh) * 3600 + int(mm) * 60 + float(ss)
+# caption bottom edge per shot (y on 1080x1920); default 1330. Shots with the bottle low in frame get the caption above it.
+CAPY = {"P2_slidein": 760, "P3_hero_wide": 525, "P4_flatlay": 470, "M6b_safe": 1190, "P6_clinicdesk": 510, "P7_nightkit": 650,
+        "P8_timelapse": 740, "M7_cap": 520, "i16_bottles": 720}
+capwin = [(p[2], p[2] + p[3], CAPY[p[1]]) for p in pos if p[1] in CAPY]
 ass = cap.with_suffix(".ass"); lines = []
 for ln in ass.read_text().splitlines():
     if ln.startswith("Style: Cap,"):
@@ -49,6 +53,7 @@ for ln in ass.read_text().splitlines():
     if ln.startswith("Dialogue:"):
         f = ln.split(",", 9); st = ts(f[1])
         if any(a - 0.05 <= st < b for a, b in boxwin): f[3] = "CapBox"
-        f[9] = "{\\an2\\pos(491,1330)}" + re.sub(r"^\{\\an\d\\pos\([^)]*\)\}", "", f[9]); ln = ",".join(f)
+        y = next((yy for a, b, yy in capwin if a - 0.05 <= st < b), 1330)
+        f[9] = "{\\an2\\pos(491,%d)}" % y + re.sub(r"^\{\\an\d\\pos\([^)]*\)\}", "", f[9]); ln = ",".join(f)
     lines.append(ln)
 ass.write_text("\n".join(lines) + "\n"); print("captions", ass)
