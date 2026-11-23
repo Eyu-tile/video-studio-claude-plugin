@@ -94,6 +94,12 @@ VSL (`refs/drive_1jfs/`, voice reference only). Haven & Spool lessons: `vs lesso
 - s1_bathroom_counter (3862457a), s2_seeds_palm (14c8411d), s3_night_mirror (9dfa551f), s4_morning_cheek (32ab3d86),
   s5_product_hero (e306eaaf, label checked against the Products tab photos: exact).
 - Video: Seedance 2.5 720p, clip 1 (<=15 s, return_last_frame) -> clip 2 starts on that frame = one continuous scene.
-## Archive (assets/images/)
-- Ebers Papyrus `wikipedia_18511551_pebers-c41-bc-jpg.jpg` (CC BY-SA 3.0: credit "Einsamer Schütze / Photohound, CC BY-SA 3.0").
-- Tomb of Nakht paintings (TT52, public domain / CC0): wikipedia_2416321, 2416341, 2416357, 2416386, 2416389, 158375770.
+## Archive (assets/images/archive/, all logged in assets/CREDITS.md)
+- Row 4 papyrus: `ebers_papyrus_c1550bc_CC-BY-SA-3.0.jpg` (real Ebers Papyrus). On-screen credit, tiny, under the
+  "Ebers Papyrus, c. 1550 BC" source line: "Photo: Einsamer Schütze / Photohound, CC BY-SA 3.0".
+- Row 5 "for generations": `met_women_at_banquet_receiving_unguent_CC0.jpg` (Met 30.4.78, Tomb of Rekhmire: a servant
+  anointing seated women = the "women receiving unguent" Gabriel asked for) + `met_alabaster_unguent_vase_*_CC0.jpg` and
+  `met_unguent_jar_neferkhawet_CC0.jpg` (real Met alabaster jars). CC0, no credit needed. Source: Wikimedia Commons copies
+  of the Met's Open Access images (the Met's own image server blocks scripted downloads).
+- H1 collage cut-out: same banquet image, cropped to one woman.
+- Spares: Tomb of Nakht paintings (`nakht_*`, public domain / CC0).
