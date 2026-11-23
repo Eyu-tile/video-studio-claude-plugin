@@ -101,8 +101,8 @@ def gauge():
     x, y0, y1 = 930, 420, 1340
     d.rounded_rectangle((x - 40, y0, x + 40, y1), 40, fill=(255, 255, 255, 220), outline=NAVY, width=5)
     d.rounded_rectangle((x - 28, y0 + 14, x + 28, y1 - 14), 28, fill=BLUE)
-    d.rounded_rectangle((W - 330, y1 + 30, W - 50, y1 + 130), 30, fill=(255, 255, 255, 240))
-    d.text((W - 300, y1 + 46), "up to 8x deeper", font=F(INTER.format("Bold"), 40), fill=NAVY)
+    d.rounded_rectangle((W - 440, y1 + 30, W - 40, y1 + 130), 30, fill=(255, 255, 255, 240))
+    d.text((W - 405, y1 + 46), "up to 8x deeper", font=F(INTER.format("Bold"), 40), fill=NAVY)
     im.save(OUT / "gauge_8x.png")
 
 
