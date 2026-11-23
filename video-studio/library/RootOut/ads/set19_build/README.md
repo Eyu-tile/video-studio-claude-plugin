@@ -33,3 +33,4 @@ cutaway clips; brand how-to footage for the brush step; Mixkit real b-roll; musi
 - Real PubMed page in a paid ad: no NIH logo shown; legal to confirm.
 - Credit lines for the post copy: Music "Carefree" by Kevin MacLeod (incompetech.com), CC BY 4.0; photo "Painful plantar
   warts", Wikimedia Commons, CC BY-SA 4.0.
+- Review page (H1–H4 v3, one tab per hook, comments per hook in collections comments_H1..H4): https://claude.ai/artifact/5GAPigi1KyMvdJz82y4cAj
