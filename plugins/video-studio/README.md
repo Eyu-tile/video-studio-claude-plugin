@@ -57,6 +57,7 @@ Drop footage into `raw/` and talk to Claude:
 | `social-post` | Post a finished video to TikTok, Instagram Reels, YouTube/Shorts, LinkedIn or X through Composio: one checked upload per platform, platform captions, the exact plan approved before anything posts, links logged (`vs social`, `vs setup --social`) |
 | `video-delivery` | Deliver approved videos straight into a client's Google Drive folder at any size, with no local copy: one folder per video, the latest version of every file only, checked at full size in Drive and logged (`vs deliver`, a one-time Apps Script) |
 | `feedback-learning` | Learns from every note: per-brand lessons with machine checks, a brief before each edit, repeated feedback flagged, and `vs qa --brand` failing when a lesson is broken |
+| `hyperscale-briefs` | Work Hyperscale (hyperscale.ceo) briefs end to end: brief and review notes into a project, Library-first footage, generation only for gaps (price first), every hook/size/ending exported, metadata stripped and uploaded onto the brief (`vs hyperscale`, `/hyperscale`) |
 | `task-history` | Client task history by code: every delivered version (files, link, note, snapshot of the edit), client feedback with done/skipped tracking, and `vs task resume <CODE>` to pick up exactly where you left off |
 | `library-learning` | Learn a client's footage from Drive, Frame.io, Dropbox, OneDrive, web pages, links or a local drive without downloading it all: scan, network frame sampling into contact sheets, described atlas, search, fetch on demand, usage log (`vs learn`) |
 | `ugc-ads` | UGC and VSL ads from a brief: audience/emotion/awareness → hooks, beats, captions, music; variants; ad QA (hook, words on screen, stimulus, safe zones, CTA, loudness, compliance); client review page |
@@ -71,7 +72,7 @@ Drop footage into `raw/` and talk to Claude:
 
 **Agents**: `edit-planner`, `footage-logger`, `broll-researcher`, `motion-designer`, `video-qa-reviewer`.
 
-**CLI** (`vs help`): `setup doctor init new where add fetch keys credits probe ingest transcribe pack scenes
+**CLI** (`vs help`): `setup doctor init new where add fetch keys credits probe ingest transcribe pack scenes hyperscale
 silences filmstrip beats sync cuts multicam captions music packs sfx earshot render proxy watch breakdown rea edl review notes ai translate ads gen higgsfield qa convert thumbs export yt-dlp`.
 
 **Higgsfield accounts**: the plugin adds a `higgsfield` MCP connection (sign in once with /mcp; Higgsfield uses a
@@ -79,6 +80,13 @@ browser sign-in, there is no key to paste). `/connect-higgsfield` connects more 
 each (`higgsfield-<client>`), and picks the one a project generates with; `vs higgsfield list | use | remove`.
 A client's team workspace that your login was invited to works too: `vs higgsfield use <account> --workspace <id>`;
 before billing, Claude selects that workspace and states the account and credits.
+
+**Hyperscale**: with the Hyperscale connector (the team's ad studio) signed in, `/hyperscale 457` pulls brief #457 into
+`projects/hs-457-<title>/` (BRIEF.md, an ads brief, the export matrix with the next version numbers, a per-row
+Library search plan, review notes, task `HS-457`). After the edit, `vs hyperscale prep` strips metadata, checks
+every file and names it `<brief>_<hook>_<size>_v<N>[_<ending>].mp4`; `put` uploads each to its one-time link and
+`done` records it, so the ads land on the brief's card. `vs hyperscale notes` brings new review notes into
+`vs notes` and the task history.
 
 **Watch any link**: `vs watch <link>` downloads a video from YouTube, Instagram (public embed fallback when
 Instagram rate-limits), TikTok, X, Vimeo, ~1,800 yt-dlp sites, Google Drive, Dropbox or a direct file, then

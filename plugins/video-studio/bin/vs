@@ -27,7 +27,7 @@ init_ws() {
 cmd="${1:-help}"
 shift || true
 case "$cmd" in
-  transcribe|pack|propose_cuts|silences|render|captions|filmstrip|qa|export_edl|ingest|scenes|beats|sync|multicam|convert|thumbs|sfx|packs|music|proxy|breakdown|edl|notes|review|ai|translate|ads|watch|gen|higgsfield|task|learn|present|social|lessons|fix|deliver)
+  transcribe|pack|propose_cuts|silences|render|captions|filmstrip|qa|export_edl|ingest|scenes|beats|sync|multicam|convert|thumbs|sfx|packs|music|proxy|breakdown|edl|notes|review|ai|translate|ads|watch|gen|higgsfield|task|learn|present|social|lessons|fix|deliver|hyperscale)
     exec "$py" "$tools/$cmd.py" "$@" ;;
   cuts) exec "$py" "$tools/propose_cuts.py" "$@" ;;
   fetch) exec "$py" "$tools/assets.py" "$@" ;;
@@ -108,6 +108,7 @@ vs <command>                                         video-studio plugin
   ads brief work/brief.json | plan <brief> -o work/ads | qa <video> --edl e --brief b | sheet out/ads -o review.html   UGC/VSL ads
   learn source|scan|sample|next|tag|atlas|find|fetch|use|status <Library>   learn a client's footage from Drive, Frame.io, Dropbox, OneDrive, web pages, links or a folder
   task new|deliver|feedback|resume|done|note|restore|list <CODE>   client task history by code: versions, feedback, pick up where you left off
+  hyperscale pull <brief.json> [--brand B] | notes | shots | prep | put | done | status --project P   Hyperscale brief -> project -> upload
   higgsfield add <account> | list | use <account> [--project p] [--workspace id] | current | remove   one MCP connection per Higgsfield account
   gen plan <script.json> | next | done <jobs> <id> --url u | fetch --project p | edl -o e.json   AI presenter + b-roll via Higgsfield MCP
   proxy <files|folder> [--height 540]                                 light proxies for 4K/long sources (used by --preview)
