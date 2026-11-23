@@ -68,7 +68,7 @@ def pngs():
                          ("plus14", "+14 NIGHTS", {"bg": (245, 183, 0, 240), "fg": NAVY}),
                          ("b2g1", "BUY 2, GET 1 FREE", {"bg": (224, 78, 24, 240)}),
                          ("link", "LINK BELOW  ↓", {"bg": (224, 78, 24, 240)}),
-                         ("x8", "UP TO 8x DEEPER†", {"bg": (245, 183, 0, 240), "fg": NAVY}),
+                         ("x8", "UP TO 8x DEEPER", {"bg": (245, 183, 0, 240), "fg": NAVY}),
                          ("aiph", "AI placeholder · proof needed", {"size": 30, "weight": "sb", "bg": (0, 0, 0, 150), "pad": (22, 12)})):
         sizes[key] = save(pill(txt, **kw), key)
     return sizes

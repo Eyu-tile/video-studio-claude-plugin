@@ -18,7 +18,8 @@ BODY = ["v01a", "v01b", "v02a", "v02b", "v03a", "v03b", "v03c", "v03d", "v05a", 
         "v07a", "v07b", "v08a", "v08b", "v09", "v10a", "v10b"]
 HOOKS = {"h1": ["h1"], "h2": ["h2a", "h2b"], "h3": ["h3"]}
 MOMLINE = {"M1_h1": "h1", "M2_car": "v03c", "M3_nobody": "v05a", "M4r_fault": "v05c", "M5r_bottle": "v06a", "M6_safe": "v07a",
-           "M7_cap": "v08b", "M8_sofa": "v10a", "M9_h2b": "h2b", "M10_h3": "h3"}
+           "M7_cap": "v08b", "M8_sofa": "v10a", "M9_h2b": "h2b", "M10_h3": "h3",
+           "M1b_h1": "h1", "M11_h2a": "h2a", "M6b_safe": "v07a"}
 
 def c2(n, **o): return ("clip", C2 / f"{n}.mp4", o)
 def c1(n, **o): return ("clip", C1 / f"{n}.mp4", o)
@@ -29,13 +30,10 @@ PUSH, PULL = {"push": 1.07}, {"pull": 1.07}
 
 # (phrase, picture, overlays)  overlays: png names from v2/gfx (placed by OV), or ("text", ...) small disclaimers
 HOOK_SHOTS = {
- "h1": [("There are only", mom("M1_h1"), []),
-        ("four ways to get rid of a kid's wart,", c2("P1_lineup", in_=0.2), []),
-        ("ranked from weakest", c2("B1_lineup", in_=0.3, **PUSH), []),
+ "h1": [("There are only four ways to get rid of a kid's wart, ranked from weakest", mom("M1b_h1"), []),
         ("to strongest.", c2("P2_slidein", in_=0.6), []),
-        ("Most families never make it to number four.", mom("M1_h1"), [])],
- "h2": [("One wart turned into fifteen.", c1("i02_cluster", in_=0.3, **PUSH), []),
-        ("So here's every fix we tried,", c1("i01_shelf", in_=0.3, **PULL), []),
+        ("Most families never make it to number four.", mom("M1b_h1"), [])],
+ "h2": [("One wart turned into fifteen. So here's every fix we tried,", mom("M11_h2a"), []),
         ("ranked from weakest", c2("B1_lineup", in_=0.3, **PUSH), []),
         ("to strongest.", c2("P2_slidein", in_=0.6), []),
         ("Only number four got the root.", mom("M9_h2b"), [])],
@@ -52,7 +50,7 @@ BODY_SHOTS = [
  ("duct tape.", c2("K_test_tape", in_=0.3), ["rank1"]),
  ("It sits on top of the wart for weeks.", c2("B3_tapefoot", in_=0.2, **PUSH), []),
  ("Rent free.", c2("B4_sock", in_=0.3), []),
- ("It never gets under the hard skin.", c2("D1_tape3d", in_=0.3), ["card:w_tape"]),
+ ("It never gets under the hard skin.", c2("D1_tape3d", in_=0.3), []),
  ("Number two,", c2("B5_pads", in_=0.2, **PUSH), ["rank2"]),
  ("acid pads.", c2("B6_padpress", in_=0.2), ["rank2"]),
  ("A bit stronger.", c2("B6_padpress", in_=2.0), []),
@@ -64,7 +62,7 @@ BODY_SHOTS = [
  ("The strongest one most of us know.", g1("s_freeze"), ["card:w_freeze"]),
  ("Somebody held him still every time.", c2("B8_holdankle", in_=0.2, **PUSH), []),
  ("It was agonizing for all of us.", mom("M2_car"), []),
- ("And after every visit,", c2("B9_carpark", in_=0.2), []),
+ ("And after every visit,", c2("B9b_clinicfoot", in_=0.2, **PUSH), []),
  ("there were two or three more.", c2("B10_threewarts", in_=0.2, **PUSH), ["card:w_cryo"]),
  ("Here's what nobody told me.", mom("M3_nobody"), []),
  ("Freezing,", c2("D2_toponly", in_=0.0), []),
@@ -76,25 +74,24 @@ BODY_SHOTS = [
  ("Every fix made it look done,", c2("B13_thumbrub", in_=0.2), []),
  ("but the root never left.", c2("D3_rootstill", in_=1.2, **PUSH), []),
  ("It was never our fault.", mom("M4r_fault"), []),
- ("Number four", c2("P3_hero", in_=0.2, **PUSH), ["rank4"]),
- ("gets the root.", g1("s_dand_root"), ["rank4"]),
+ ("Number four gets the root.", c2("P3_hero", in_=0.2, **PUSH), ["rank4"]),
  ("It's RootOut, an oil with four plants,", mom("M5r_bottle"), []),
  ("and each one takes it a little deeper.", c2("P4_flatlay", in_=0.3, **PUSH), []),
  ("Lemon goes first", c2("B14_lemon", in_=0.2), ["lab_lemon"]),
  ("and softens the hard top.", c2("D4_lemon3d", in_=0.6), []),
  ("Tea tree is a thin oil,", c2("B15_teatree", in_=0.2), ["lab_tea"]),
  ("so it sinks right in,", c2("D5_sink", in_=0.6), []),
- ("up to 8x deeper than a regular cream,", c1("i06_towels", in_=0.3), ["x8", "aiph", ("text", DAG)]),
+ ("up to 8x deeper than a regular cream,", c1("i06_towels", in_=0.3), ["x8"]),
  ("and it carries the last two plants", c2("D6_carry", in_=0.0), []),
  ("down with it.", c2("D6_carry", in_=2.0), []),
  ("Pokeweed and white cedar break the wart down from the", c2("B16_pokeweed", in_=0.2, **PUSH), ["lab_poke"]),
- ("root, so there's nothing left to grow back.", c2("D7_crumble", in_=0.6), [("text", HOMEO)]),
+ ("root, so there's nothing left to grow back.", c2("D7_crumble", in_=0.6), []),
  ("Any one of them alone", c2("D8_together", in_=0.0), []),
  ("stops halfway.", c2("D8_together", in_=1.4), []),
  ("Together, they reach the root.", c2("D8_together", in_=2.4), []),
- ("And deep doesn't mean harsh.", mom("M6_safe"), []),
+ ("And deep doesn't mean harsh.", mom("M6b_safe"), []),
  ("It's a kids' formula,", c2("P5_nightbook", in_=0.4, **PUSH), []),
- ("for ages 4 and up.", mom("M6_safe"), []),
+ ("for ages 4 and up.", mom("M6b_safe"), []),
  ("No acid,", c2("B17_bin", in_=0.2), ["x_acid"]),
  ("no freezing,", c2("B17_bin", in_=2.0), ["x_freeze"]),
  ("no blister.", c2("B18_smoothsole", in_=0.2), ["x_blister"]),
@@ -229,7 +226,7 @@ def build(hook):
                 else: ovl.append(ov_png(ov, a, b))
     segs.append({"src": str(GX / "endcard.mp4"), "start": 0.0, "end": END, "mute": True, "note": "end card"}); pos.append(("end", "endcard", round(vo_end, 3), END, ""))
     total = vo_end + END
-    ovl.insert(0, {"file": str(GX / "banner.png"), "start": 0.0, "end": round(bounds[5] if hook == "h1" else bounds[4], 3), "w": 978, "x": 2, "y": 196,
+    ovl.insert(0, {"file": str(GX / "banner.png"), "start": 0.0, "end": round(bounds[len(HOOK_SHOTS[hook])], 3), "w": 978, "x": 2, "y": 196,
                    "fade_in": 0.0, "fade_out": 0.15})
     # banner sits above the frame top band: shift y into the safe zone
     ovl[0]["y"] = 214; ovl[0]["x"] = 491 - 978 // 2
