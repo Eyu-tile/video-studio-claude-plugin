@@ -267,9 +267,12 @@ input.name { background: var(--bg); border: 1px solid var(--line); border-radius
       const k = Math.min(s.count - 1, Math.floor(i * s.count / show));
       const span = document.createElement("span");
       span.style.backgroundImage = `url("${s.src}")`;
-      const scale = (el.clientHeight || 36) / s.h;
+      // fill each cell with exactly one frame (cover): scale to the cell's larger ratio, centre the frame in the cell
+      const cw = (el.clientWidth || tl.clientWidth) / show, ch = el.clientHeight || 36;
+      const scale = Math.max(cw / s.w, ch / s.h);
+      const ox = (cw - s.w * scale) / 2, oy = (ch - s.h * scale) / 2;
       span.style.backgroundSize = `${s.cols * s.w * scale}px auto`;
-      span.style.backgroundPosition = `-${(k % s.cols) * s.w * scale}px -${Math.floor(k / s.cols) * s.h * scale}px`;
+      span.style.backgroundPosition = `${ox - (k % s.cols) * s.w * scale}px ${oy - Math.floor(k / s.cols) * s.h * scale}px`;
       el.appendChild(span);
     }
   }
