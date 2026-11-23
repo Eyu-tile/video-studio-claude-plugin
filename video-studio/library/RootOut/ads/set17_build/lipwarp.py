@@ -32,6 +32,14 @@ def fmap(t, x):
     a = anchors(t); xs, ys = [p[0] for p in a], [p[1] for p in a]
     if x <= xs[-1]: return float(np.interp(x, xs, ys))
     return ys[-1] + (x - xs[-1])
+
+def clampspan(t, s0, want, dd):
+    """Speed limits for one chunk: gentle while she is talking, looser across a pause (mouth closed)."""
+    W = words(); cw = W[f"{t}_clip"]; s1 = s0 + want
+    speech = sum(max(0.0, min(e, s1) - max(b, s0)) for _, b, e in cw)
+    pause = speech < 0.3 * max(s1 - s0, 1e-6)           # mostly silence in the clip: mouth closed
+    lo, hi = (0.5, 2.2) if pause else (0.65, 1.6)
+    return min(max(want, dd * lo), dd * hi)
 def warp(t, t0, t1, out, vf_extra=""):
     clip = P / f"raw/gen/clips/{t}.mp4"; a = anchors(t)
     cuts = [t0] + [p[0] for p in a if t0 + 0.25 < p[0] < t1 - 0.25] + [t1]
@@ -40,7 +48,11 @@ def warp(t, t0, t1, out, vf_extra=""):
         if c - keep[-1] >= 0.35: keep.append(c)
     keep.append(t1); parts = []; tmp = Path(str(out) + "_parts"); tmp.mkdir(exist_ok=True)
     for i in range(len(keep) - 1):
-        x0, x1 = keep[i], keep[i + 1]; s0, s1 = fmap(t, x0), fmap(t, x1); dd = x1 - x0; sd = max(s1 - s0, 0.05)
+        x0, x1 = keep[i], keep[i + 1]; dd = x1 - x0; s0 = fmap(t, x0) if i == 0 else s1_prev
+        last_word = max(p[0] for p in a)
+        if x0 >= last_word: s1 = s0 + dd                      # silence after the last word: real time
+        else: s1 = s0 + clampspan(t, s0, fmap(t, x1) - fmap(t, x0), dd)
+        s1_prev = s1; sd = max(s1 - s0, 0.05)
         pp = tmp / f"{i:03d}.mp4"
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{s0:.3f}", "-t", f"{sd:.3f}", "-i", str(clip), "-vf",
             f"setpts=PTS*{dd/sd:.5f},scale=720:1280,setsar=1,fps=30{vf_extra},format=yuv420p", "-t", f"{dd:.3f}", "-an",

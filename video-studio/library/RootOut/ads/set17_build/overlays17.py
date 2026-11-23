@@ -71,7 +71,7 @@ def steps(t):
     for k, (n, txt, t0, t1) in enumerate(STEPS):
         a = ease((t - t0 - 0.1) / 0.25) * (1 - ease((t - 8.0) / 0.3))
         if a <= 0: continue
-        active = t0 <= t < t1; y = 1010 + k * 74 - 74 * len([s for s in STEPS if s[2] <= t]) + 74
+        active = t0 <= t < t1; y = 150 + k * 74
         d = ImageDraw.Draw(im); tw = d.textlength(txt, font=f); x = 40
         L = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dl = ImageDraw.Draw(L)
         bg = (BLUE if active else (245, 247, 250)); fg = (WHITE if active else NAVY)

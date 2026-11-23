@@ -53,3 +53,14 @@ H2 drops "That sounds like the root." from row 2 (`L03b`, cut at 1.6 s) as the b
 Captions throughout (client, 23 Nov): `make_captions17.py`, script text from BRIEF timed to VO word stamps, spoken word orange,
 off the CTA, dropped low under web cards. Hook text auto-fits the frame.
 Outputs: H1 v3 118.5 s · H2 v2 115.2 s · H3 v2 115.6 s — all -14 LUFS, TP -2.4 dBFS.
+
+## Fix pass (23 Nov): client notes 0:32, 1:02, 1:40 + 7 transitions — no new credits
+- Bug: `T(..., at=)` mapped mid-line pieces to the wrong take time ("So, don't wait" showed lips of another sentence; the
+  "Two minutes" piece asked for take time -4.2 s → a held frame). Now take_in + (at − src_in).
+- Warp speed limits: 0.65–1.6× while speaking, up to 2.2× across pauses (a chunk is a pause if <30% overlaps clip speech),
+  trailing silence at 1.0× (the 0:32 glitch was a 2.6× tail). `check_lips.py` QA on every on-camera piece: all ≤0.15 s mean.
+- L12 "He screams…" opens on the foot-curl cutaway (Seedance drags out "He…" too long to match without a visible speed-up).
+- 7 transitions (incoming shot): x2 zoomin · x3 fade · x5 slideleft · x6 circleopen · x8 fade · x9 smoothleft · x10 fadewhite;
+  0.35 s, the outgoing shot holds so the incoming one still starts on its line.
+- Step chips moved to the top (were under the captions).
+Outputs: H1 v4 · H2 v3 · H3 v3.

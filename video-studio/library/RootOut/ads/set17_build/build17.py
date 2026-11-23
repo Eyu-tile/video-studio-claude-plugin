@@ -18,7 +18,10 @@ HOOK = (sys.argv[1:] or ["h1"])[0]
 
 # Each line: (vo, [ (seconds_into_line, source, src_in, card) ... ]) — a segment runs until the next one starts (or line end).
 # source "D1"/"D2"/"M1" = lip-sync take, src_in = take time that lines up with seconds_into_line.
-def T(t, line, k=0, at=0.0): a, _ = take(t, line, k); return a - at   # take offset so line time `at` maps to the take
+def T(t, line, k=0, at=None):
+    """Take time that lines up with line time `at` (default: where this on-camera piece starts)."""
+    m = [x for x in LS[t] if x["line"] == line][k]
+    return m["take_in"] if at is None else m["take_in"] + (at - m["src_in"])
 LINES = [
  ("L01", [(0, "D1", T("D1", "L01"), None)]),
  ("L02", [(0, "M1", T("M1", "L02"), None), (1.55, "p_sole", 0, None)]),
@@ -30,9 +33,9 @@ LINES = [
  ("L08", [(0, "b1", 4.0, "w_wiki_pain")]),
  ("L09", [(0, "D1", T("D1", "L09"), None), (1.9, "x6_root", None, None)]),
  ("L10", [(0, "M1", T("M1", "L10"), None), (0.95, "p_heel", 0.2, None)]),
- ("L11", [(0, "D1", T("D1", "L11"), None), (2.0, "blurD1", 0, "w_pubmed_result"), (5.4, "blurD1", 3.4, "w_pubmed_zoom"), (9.0, "kids_feet", None, None),
-          (10.2, "D1", T("D1", "L11", 1, at=10.3), None)]),
- ("L12", [(0, "M1", T("M1", "L12"), None)]),
+ ("L11", [(0, "D1", T("D1", "L11"), None), (2.0, "blurD1", 1.2, "w_pubmed_result"), (5.4, "blurD1", 3.4, "w_pubmed_zoom"), (9.0, "kids_feet", None, None),
+          (10.2, "D1", T("D1", "L11", 1, at=10.2), None)]),
+ ("L12", [(0, "b1", 3.2, None), (0.9, "M1", T("M1", "L12", at=0.9), None)]),
  ("L13", [(0, "D1", T("D1", "L13"), None), (4.1, "b1", 6.0, None), (6.5, "kids_feet2", None, None)]),
  ("L14", [(0, "M1", T("M1", "L14"), None)]),
  ("L15", [(0, "D2", T("D2", "L15"), None)]),
@@ -41,16 +44,19 @@ LINES = [
  ("L17", [(0, "D2", T("D2", "L17"), None), (2.45, "x9_product", None, None)]),
  ("L18", [(0, "D2", T("D2", "L18"), None), (2.6, "x10_cta", None, None)]),
 ]
+TRANS = {"x2_freeze": "zoomin", "x3_cutaway": "fade", "x5_tea": "slideleft", "x6_root": "circleopen",
+         "x8_night": "fade", "x9_product": "smoothleft", "x10_cta": "fadewhite"}; TD = 0.35
 TAIL = 2.8   # the CTA shot holds after the last line (no separate end card)
 
 from lipwarp import warp
+TAKESEGS = []
 def exact(out, d):
     """Force exactly round(d*30) frames (pad by cloning the last frame, or cut)."""
     n = int(round(d * 30)); tmp = f"{out}.x.mp4"
     sh(f"ffmpeg -v error -y -i {out} -vf tpad=stop_mode=clone:stop_duration=1,fps=30 -frames:v {n} -c:v libx264 -crf 16 -preset veryfast {tmp} && mv {tmp} {out}")
 def norm(name, src, a, d, out, card=None, blur=False):
     if src in ("D1", "D2", "M1", "MH", "DH") and not card and not blur:
-        warp(src, a, a + d, out); exact(out, d); return
+        warp(src, a, a + d, out); exact(out, d); TAKESEGS.append((src, a, d)); return
     s = SRC[src]; p = P / s["path"] if not s["path"].startswith("/") else Path(s["path"])
     a = s.get("in", 0.0) if a is None else a
     vf = "scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,setsar=1,fps=30"
@@ -95,9 +101,19 @@ def main():
             out = SEG / f"{li:02d}_{k}_{src}.mp4"; norm(line, srcn, a, d, out, card, blur); segs.append(out)
         t += ld + GAP
     total = t + TAIL
+    merged = []
+    for s in segs:
+        src = s.stem.split("_", 2)[2]
+        if merged and src in TRANS:   # A holds its last frame for TD while B fades in: B still starts on time
+            A = merged[-1]; o = SEG / f"{s.stem}_x.mp4"; la = dur(A)
+            sh(f"ffmpeg -v error -y -i {A} -i {s} -filter_complex \"[0]tpad=stop_mode=clone:stop_duration={TD},fps=30,settb=AVTB[a];[1]fps=30,settb=AVTB[b];"
+               f"[a][b]xfade=transition={TRANS[src]}:duration={TD}:offset={la:.4f},format=yuv420p\" -c:v libx264 -crf 16 -preset veryfast {o}")
+            exact(o, la + dur(s)); merged[-1] = o
+        else: merged.append(s)
+    segs = merged
     (SEG / "list.txt").write_text("".join(f"file '{s.name}'\n" for s in segs))
     sh(f"cd {SEG} && ffmpeg -v error -y -f concat -safe 0 -i list.txt -c copy {W}/{HOOK}_video.mp4")
-    json.dump(vo, open(W / f"{HOOK}_vo_times.json", "w"))
+    json.dump(vo, open(W / f"{HOOK}_vo_times.json", "w")); json.dump(TAKESEGS, open(W / f"{HOOK}_take_segs.json", "w"))
     # audio: VO lines at their times, room tone, music bed ducked
     ins = " ".join(f"-i '{VOF[n]}'" for n, _ in vo); fl = []
     for k, (n, st) in enumerate(vo): fl.append(f"[{k}]aresample=48000,aformat=channel_layouts=mono,adelay={int(st*1000)}|{int(st*1000)},volume=1.0[v{k}]")
