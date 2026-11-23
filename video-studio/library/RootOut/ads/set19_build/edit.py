@@ -35,8 +35,8 @@ elif hook == "H4":
     a, e = speech("t03_h4_winter", pre=0.3); b.talk("t03_h4_winter.mp4", a, e)
 elif hook == "H3":
     b.vo("vo_h3", 0.0, w("vo_h3", "my", 0, "end") - 0.05 + 0.6, [
-        (C("b20_heels_tiles"), 1.8, w("vo_h3", "here")),
-        (C("b21_mason_sole"), 0.3, w("vo_h3", "one", 0)),
+        (C("b20_heels_tiles"), 1.8, 2.9),
+        (C("b21_mason_sole"), 0.3, w("vo_h3", "then", 0, "start")),
         (C("b22_lily_heel"), 0.3, w("vo_h3", "then", 1, "start")),
         (PHOTO_DAD, 0, None)], gap=0.1)
 
