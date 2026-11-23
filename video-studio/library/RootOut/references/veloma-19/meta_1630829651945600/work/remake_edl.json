@@ -1,0 +1,355 @@
+{
+ "_how": "Replace each SLOT_xx with a real file (and start/end inside it), then `vs render`. Lengths, moves, transitions and grade come from the reference.",
+ "aspect": "9:16",
+ "grade": "warm",
+ "segments": [
+  {
+   "src": "SLOT_01",
+   "start": 0,
+   "end": 2.033,
+   "note": "shot 1: 2.03s, pull out, moody look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.096
+     ],
+     [
+      2.033,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_02",
+   "start": 0,
+   "end": 2.0,
+   "note": "shot 2: 2.00s, push in, warm look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      2.0,
+      1.064
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_03",
+   "start": 0,
+   "end": 1.533,
+   "note": "shot 3: 1.53s, pull out, warm look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.052
+     ],
+     [
+      1.533,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_04",
+   "start": 0,
+   "end": 1.533,
+   "note": "shot 4: 1.53s, push in, warm look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      1.533,
+      1.048
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_05",
+   "start": 0,
+   "end": 5.667,
+   "note": "shot 5: 5.67s, static, warm look"
+  },
+  {
+   "src": "SLOT_06",
+   "start": 0,
+   "end": 2.9,
+   "note": "shot 6: 2.90s, static, natural look"
+  },
+  {
+   "src": "SLOT_07",
+   "start": 0,
+   "end": 1.667,
+   "note": "shot 7: 1.67s, push in, moody look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      1.667,
+      1.062
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_08",
+   "start": 0,
+   "end": 2.233,
+   "note": "shot 8: 2.23s, pull out, moody look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.105
+     ],
+     [
+      2.233,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_09",
+   "start": 0,
+   "end": 1.833,
+   "note": "shot 9: 1.83s, static, teal-orange look"
+  },
+  {
+   "src": "SLOT_10",
+   "start": 0,
+   "end": 1.167,
+   "note": "shot 10: 1.17s, static, warm look"
+  },
+  {
+   "src": "SLOT_11",
+   "start": 0,
+   "end": 2.833,
+   "note": "shot 11: 2.83s, push in, warm look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      2.833,
+      1.093
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_12",
+   "start": 0,
+   "end": 3.133,
+   "note": "shot 12: 3.13s, push in, warm look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      3.133,
+      1.185
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_13",
+   "start": 0,
+   "end": 1.933,
+   "note": "shot 13: 1.93s, static, warm look"
+  },
+  {
+   "src": "SLOT_14",
+   "start": 0,
+   "end": 1.0,
+   "note": "shot 14: 1.00s, pull out, warm look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.053
+     ],
+     [
+      1.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_15",
+   "start": 0,
+   "end": 1.867,
+   "note": "shot 15: 1.87s, push in, warm look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      1.867,
+      1.099
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_16",
+   "start": 0,
+   "end": 1.9,
+   "note": "shot 16: 1.90s, static, cool look"
+  },
+  {
+   "src": "SLOT_17",
+   "start": 0,
+   "end": 3.833,
+   "note": "shot 17: 3.83s, push in, warm look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      3.833,
+      1.111
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_18",
+   "start": 0,
+   "end": 4.0,
+   "note": "shot 18: 4.00s, push in, natural look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      4.0,
+      1.14
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_19",
+   "start": 0,
+   "end": 2.5,
+   "note": "shot 19: 2.50s, push in, natural look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.0
+     ],
+     [
+      2.5,
+      1.087
+     ]
+    ]
+   }
+  },
+  {
+   "src": "SLOT_20",
+   "start": 0,
+   "end": 3.633,
+   "note": "shot 20: 3.63s, static, warm look"
+  },
+  {
+   "src": "SLOT_21",
+   "start": 0,
+   "end": 1.7,
+   "note": "shot 21: 1.70s, static, warm look"
+  },
+  {
+   "src": "SLOT_22",
+   "start": 0,
+   "end": 1.7,
+   "note": "shot 22: 1.70s, static, warm look"
+  },
+  {
+   "src": "SLOT_23",
+   "start": 0,
+   "end": 4.367,
+   "note": "shot 23: 4.37s, static, warm look"
+  },
+  {
+   "src": "SLOT_24",
+   "start": 0,
+   "end": 0.633,
+   "note": "shot 24: 0.63s, static, warm look"
+  },
+  {
+   "src": "SLOT_25",
+   "start": 0,
+   "end": 0.633,
+   "note": "shot 25: 0.63s, static, teal-orange look"
+  },
+  {
+   "src": "SLOT_26",
+   "start": 0,
+   "end": 0.633,
+   "note": "shot 26: 0.63s, static, warm look"
+  },
+  {
+   "src": "SLOT_27",
+   "start": 0,
+   "end": 0.633,
+   "note": "shot 27: 0.63s, static, warm look"
+  },
+  {
+   "src": "SLOT_28",
+   "start": 0,
+   "end": 0.633,
+   "note": "shot 28: 0.63s, static, warm look"
+  },
+  {
+   "src": "SLOT_29",
+   "start": 0,
+   "end": 2.446,
+   "note": "shot 29: 2.45s, pull out, natural look",
+   "kf": {
+    "zoom": [
+     [
+      0,
+      1.154
+     ],
+     [
+      2.446,
+      1.0
+     ]
+    ]
+   }
+  }
+ ],
+ "music": {
+  "file": "SLOT_MUSIC",
+  "gain_db": -16,
+  "duck": true,
+  "_note": "reference tempo ~103 BPM; snap cuts with vs beats snap"
+ }
+}
