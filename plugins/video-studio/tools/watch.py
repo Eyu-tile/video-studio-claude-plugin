@@ -89,11 +89,11 @@ def fetch(src, folder, cookies=None, max_height=1080):
         http_get(url, dest, timeout=600)
         return dest, {"url": url, "title": dest.stem, "source": "direct link"}
     if "drive.google.com" in host or "docs.google.com" in host:
-        try:
-            import gdown
-        except ImportError:
+        import importlib.util
+        if not importlib.util.find_spec("gdown"):
             die("Google Drive links need gdown: vs setup")
-        out = gdown.download(url, output=str(folder) + "/", quiet=True, fuzzy=True)
+        from vs_common import gdrive_download
+        out = gdrive_download(url, folder)
         if not out:
             die("Google Drive refused the download (is the file shared as 'anyone with the link'?)")
         return Path(out), {"url": url, "title": Path(out).stem, "source": "google drive"}

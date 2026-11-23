@@ -48,7 +48,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from vs_common import IMAGE_EXT, die, fmt_ts, load_json, need, probe, run, save_json  # noqa: E402
+from vs_common import IMAGE_EXT, die, gdrive_download, fmt_ts, load_json, need, probe, run, save_json  # noqa: E402
 import archive as ia  # noqa: E402
 
 UA = "video-studio-claude-plugin/2.0 (+https://claude.com/claude-code)"
@@ -1019,7 +1019,7 @@ def fetch_url(url, a, added):
             if "/folders/" in url:
                 gdown.download_folder(url, output=str(td), quiet=False, use_cookies=False)
             else:
-                gdown.download(url, output=str(td) + "/", quiet=False, fuzzy=True)
+                gdrive_download(url, td, quiet=False)
         elif "dropbox.com" in host:
             u = re.sub(r"([?&])dl=0", r"\1dl=1", url)
             u = u if "dl=1" in u else u + ("&" if "?" in u else "?") + "dl=1"

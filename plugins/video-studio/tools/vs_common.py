@@ -1,5 +1,6 @@
 """Shared helpers for the video-studio tools. Stdlib only (numpy is imported lazily where needed)."""
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -420,3 +421,32 @@ def detect_cuts(path, threshold=0.3):
     p = run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(path), "-an", "-vf",
              f"scale=320:-2,select='gt(scene,{threshold})',showinfo", "-f", "null", "-"])
     return [float(x) for x in re.findall(r"pts_time:([\d.]+)", p.stderr)]
+
+
+def gdrive_download(url, out_dir, quiet=True):
+    """Download a Google Drive file link with any gdown version (6.x dropped `fuzzy`): pass the file id."""
+    import gdown
+    import os
+    ca = os.environ.get("REQUESTS_CA_BUNDLE") or os.environ.get("SSL_CERT_FILE")
+    kw = {"verify": ca} if ca and os.path.exists(ca) else {}
+    m = re.search(r"/d/([\w-]{20,})|[?&]id=([\w-]{20,})", url)
+    fid = (m.group(1) or m.group(2)) if m else None
+    if fid:
+        try:
+            return gdown.download(id=fid, output=str(out_dir) + "/", quiet=quiet, **kw)
+        except Exception as e:  # e.g. a TLS-inspecting proxy Python's requests rejects: curl uses the system CAs
+            if not shutil.which("curl"):
+                raise
+            before = set(Path(out_dir).iterdir()) if Path(out_dir).exists() else set()
+            Path(out_dir).mkdir(parents=True, exist_ok=True)
+            r = subprocess.run(["curl", "-sSL", "--fail", "-J", "-O",
+                                f"https://drive.usercontent.google.com/download?id={fid}&export=download&confirm=t"],
+                               cwd=str(out_dir), capture_output=True, text=True)
+            new = [p for p in Path(out_dir).iterdir() if p not in before]
+            if r.returncode or not new:
+                raise RuntimeError(f"Google Drive download failed ({e}); curl: {r.stderr.strip()[-200:]}")
+            return str(new[0])
+    try:
+        return gdown.download(url, output=str(out_dir) + "/", quiet=quiet, fuzzy=True, **kw)
+    except TypeError:
+        return gdown.download(url, output=str(out_dir) + "/", quiet=quiet, **kw)
