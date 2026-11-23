@@ -1,5 +1,7 @@
 # RootOut Set 18 · W1 "Leave it, it'll go away" · shot plan (H1 first, then H2/H3/H4 hook swaps)
 
+> **Superseded by `SHOT_MAP.md` (23 Nov):** captions on, selfie kept, 22 reused Higgsfield clips, real stock/YouTube/web cards. This file is kept for the first routing and cost notes.
+
 Script: `SCRIPT.md` (verbatim, VO never edited). Swipe: `../../references/pestlab-009/SWIPE.md`.
 Project folder (git-ignored): `video-studio/projects/rootout-set18/`. 9:16, ~3:14 with H1.
 Billing: Higgsfield `WilloMd` only (private workspace ab6cddcc…, Ultra, 7,424.44 credits on 22 Nov).
