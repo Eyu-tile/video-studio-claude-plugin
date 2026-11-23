@@ -64,3 +64,8 @@ Outputs: H1 v3 118.5 s · H2 v2 115.2 s · H3 v2 115.6 s — all -14 LUFS, TP -2
   0.35 s, the outgoing shot holds so the incoming one still starts on its line.
 - Step chips moved to the top (were under the captions).
 Outputs: H1 v4 · H2 v3 · H3 v3.
+
+## Review page (23 Nov)
+One page, three tabs (H1 v4 · H2 v3 · H3 v3): https://claude.ai/artifact/X4eY8egYcx9gqRSMrxj7cm
+Built from the plugin review page (`vs present` copies, 13.6 MB each) by `make_review_page.py`; comments per ad in db collections
+`comments_h1` / `comments_h2` / `comments_h3` (read back with ArtifactData list, then `vs present notes`). `#h2` in the link opens that ad.
