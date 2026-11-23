@@ -100,6 +100,29 @@ class HyperscaleTest(unittest.TestCase):
         self.assertEqual((h1["status"], h1["upload_id"]), ("attached", "u1"))
         self.assertIn("attached", self.hs("status", "--project", self.p.name).stdout)
 
+    def test_learn_builds_library(self):
+        lib = self.ws / "library" / "Brand" / "ads" / "briefs"
+        lib.mkdir(parents=True)
+        b450 = json.loads(BRIEF.read_text())
+        (lib / "450.json").write_text(json.dumps(b450))
+        other = {**b450, "number": 451, "stage": "Launched", "title": "Duplicate",
+                 "idea": "Remake: #450 took 27% of last week's spend; its hook is the model.",
+                 "reference": "https://www.instagram.com/reel/example/",
+                 "open_notes": [{"at": "0:05", "note": "Wow you killed this one", "by": "x@example.com"},
+                                {"at": "0:09", "note": "Captions too small, change to stroke", "by": "x@example.com"}]}
+        (lib / "451.json").write_text(json.dumps(other))
+        out = self.hs("learn", str(lib), "--brand", "Brand").stdout
+        self.assertIn("learned 2 briefs", out)
+        ads = lib.parent
+        self.assertIn("27% of last week's spend", (ads / "WINNER_SIGNALS.md").read_text())
+        notes = (ads / "REVIEW_NOTES.md").read_text()
+        self.assertIn("## Praise (what to keep doing) (1)", notes)
+        self.assertIn("Captions too small", notes)
+        self.assertNotIn("example.com", notes)  # reviewers' emails stay out of the library
+        self.assertIn("instagram.com/reel/example", (ads / "CATALOGUE.md").read_text())
+        self.assertIn("I have to show you guys this.", (ads / "HOOK_BANK.md").read_text())
+        self.assertEqual(len(json.loads((ads / "briefs_index.json").read_text())), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

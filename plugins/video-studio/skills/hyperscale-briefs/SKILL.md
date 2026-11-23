@@ -93,6 +93,22 @@ vs fix <P> "<time> <note>"   then   vs fix <P> --render
 Read linked feedback docs first. Then `prep` again (`--version` is the next one automatically, so v3 follows v2)
 and upload. Save lessons that apply to the brand: `vs lessons add --brand "<brand>"`.
 
+## 7. The brand library: learn from winners and past ads
+Each brand has its own folder, `<workspace>/library/<Brand>/` (e.g. `library/HavenSpool/`), built only from that
+brand's Hyperscale data. Never mix brands: another brand's playbook, hooks or rules don't apply here.
+- Refresh it: `list_briefs` for stages `launched` and `approved` (plus any brief a brief cites as a winner, e.g.
+  "#107 … $28.2k spent"), save each `get_brief` result to `library/<Brand>/ads/briefs/<number>.json` (many briefs:
+  split them across a few subagents), then
+  `vs hyperscale learn library/<Brand>/ads/briefs --brand "<Brand>"`. It writes `CATALOGUE.md`, `HOOK_BANK.md`,
+  `WINNER_SIGNALS.md` (every figure a strategist quoted about another ad), `REVIEW_NOTES.md` (corrections vs
+  praise, by editor and round), `EDITING_RULES.md` and `STATS.md`.
+- Then update the hand-written `AD_PLAYBOOK.md` and `WINNING_ADS.md` from those files, and turn repeated
+  corrections into brand lessons (`vs lessons add --brand "<Brand>"`), so `vs ads qa` catches them.
+- **Before every new brief**: read the brand's `AD_PLAYBOOK.md`, the brief's angle in `HOOK_BANK.md`, and
+  `REVIEW_NOTES.md` corrections for the same format, and say in two lines what you'll keep from the winners and
+  which past mistakes you'll avoid.
+- Figures in the library are the briefs' own words, not Meta data. Admins can confirm them with the Analytics tools.
+
 ## Rules
 1. Credits: quote and ask before every `generate`; never batch-spend without a yes.
 2. Strip metadata before any upload (prep does it); never upload a file that failed prep without the person's OK.

@@ -17,6 +17,9 @@ and prepares, uploads and records the finished files.
   vs hyperscale put --project P <name|hook> --url <upload_url> [--upload-id ID]   PUT the file to the one-time link
   vs hyperscale done --project P <name|hook> --upload-id ID                       mark it attached (finish_brief_upload)
   vs hyperscale status --project P                  exports planned / prepared / uploaded, open notes, next step
+  vs hyperscale learn <folder of <number>.json briefs> --brand "Haven & Spool"
+        the brand's ad history -> next to the folder: briefs_index.json, CATALOGUE.md, HOOK_BANK.md,
+        WINNER_SIGNALS.md, REVIEW_NOTES.md, EDITING_RULES.md, STATS.md (one brand only; nothing from other brands)
 """
 import argparse
 import hashlib
@@ -528,6 +531,16 @@ def cmd_status(a):
         print("all exports are on the brief")
 
 
+def cmd_learn(a):
+    from hs_learn import learn
+    r = learn(a.folder, a.brand or "")
+    print(f"learned {r['briefs']} briefs: {r['hooks']} hooks, {r['winner_refs']} ads cited with figures, "
+          f"{r['notes']} review notes -> {Path(a.folder).resolve().parent}")
+    print("  " + ", ".join(r["files"]))
+    print("next: read WINNER_SIGNALS.md, HOOK_BANK.md and EDITING_RULES.md, then write or update AD_PLAYBOOK.md "
+          "and WINNING_ADS.md by hand")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -559,11 +572,14 @@ def main():
     s.add_argument("--project", required=True)
     s.add_argument("--upload-id")
     s.add_argument("--note")
+    s = sub.add_parser("learn")
+    s.add_argument("folder")
+    s.add_argument("--brand")
     a = ap.parse_args()
     if a.cmd == "pull" and not shutil.which("ffmpeg"):
         print("warning: ffmpeg not found (vs setup)", file=sys.stderr)
     {"pull": cmd_pull, "notes": cmd_notes, "shots": cmd_shots, "prep": cmd_prep, "put": cmd_put, "done": cmd_done,
-     "status": cmd_status}[a.cmd](a)
+     "status": cmd_status, "learn": cmd_learn}[a.cmd](a)
 
 
 if __name__ == "__main__":
