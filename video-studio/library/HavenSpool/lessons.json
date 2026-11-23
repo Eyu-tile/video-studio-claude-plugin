@@ -1,0 +1,83 @@
+{
+ "version": 1,
+ "lessons": [
+  {
+   "id": "L1",
+   "rule": "Product at true size: the 50 ml roll-on sits in a palm. Prompt with a hand holding it and use the Products tab photos; check every product shot against them (#300 #355 #357 #395)",
+   "category": "framing",
+   "added": "2026-11-23 15:42",
+   "source": "inferred",
+   "seen": 1,
+   "repeats": 0,
+   "must": true
+  },
+  {
+   "id": "L2",
+   "rule": "Must pass as real phone footage: natural light, real skin texture, no studio look; cover long AI talking heads with b-roll under the voice (#227 #291 #357 #370)",
+   "category": "color",
+   "added": "2026-11-23 15:42",
+   "source": "inferred",
+   "seen": 1,
+   "repeats": 0,
+   "must": true
+  },
+  {
+   "id": "L3",
+   "rule": "Duplicates: copy the reference's structure, scenes, timing, captions and music; never add the product where the reference has none (#302 #366 #227)",
+   "category": "cuts",
+   "added": "2026-11-23 15:42",
+   "source": "inferred",
+   "seen": 2,
+   "repeats": 0,
+   "must": true
+  },
+  {
+   "id": "L4",
+   "rule": "Voice matches the reference (gender, age, accent); listen to the whole VO for pronunciation: numbers, years, HAY-vin & SPOOL, riss-in-oh-LAY-ik (#386 #297 #422)",
+   "category": "audio",
+   "added": "2026-11-23 15:42",
+   "source": "inferred",
+   "seen": 1,
+   "repeats": 0,
+   "must": true
+  },
+  {
+   "id": "L5",
+   "rule": "Watch every export frame by frame before upload: no blips, tweaks or stray bars (#309 #266)",
+   "category": "cuts",
+   "added": "2026-11-23 15:42",
+   "source": "inferred",
+   "seen": 1,
+   "repeats": 0,
+   "must": true
+  },
+  {
+   "id": "L6",
+   "rule": "Apply a strategist's copy change to every hook version, not only the one the note is on (#307 #332)",
+   "category": "text",
+   "added": "2026-11-23 15:42",
+   "source": "inferred",
+   "seen": 1,
+   "repeats": 0
+  },
+  {
+   "id": "L7",
+   "rule": "Say the angle keyword in the hook itself (e.g. 'Skin tags freezing kits vs...') (#423)",
+   "category": "text",
+   "added": "2026-11-23 15:42",
+   "source": "inferred",
+   "seen": 1,
+   "repeats": 0
+  },
+  {
+   "id": "L8",
+   "rule": "Castor seeds whole only; never chewing, crushing or rubbing a raw seed on skin (#457)",
+   "category": "text",
+   "added": "2026-11-23 15:42",
+   "source": "inferred",
+   "seen": 1,
+   "repeats": 0,
+   "must": true
+  }
+ ]
+}

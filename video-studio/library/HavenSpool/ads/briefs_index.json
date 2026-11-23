@@ -1,5 +1,425 @@
 [
  {
+  "number": 2,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Ours is better",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 7,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 10,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": null,
+  "awareness": null,
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 33,
+  "title": "Ours is better",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Moiz",
+  "strategist": null,
+  "angle": "Ours is better",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": null,
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 45,
+  "title": "Untitled brief",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": null,
+  "awareness": null,
+  "video_type": null,
+  "format": null,
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 58,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Ours is better",
+  "awareness": null,
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 78,
+  "title": "Timeline",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Avatar + B-roll",
+  "format": "Timeline",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 79,
+  "title": "Reverse Psychology",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Product aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Reverse Psychology",
+  "hooks": 2,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 106,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Anti-aging",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 107,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multi-use",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 108,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multi-use",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 127,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Thyroid",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 4,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 129,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Value",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 130,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Eyes",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 132,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 133,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multi-use",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 136,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Anti-aging",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 2,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 139,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Thyroid",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 3,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 141,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 143,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
   "number": 146,
   "title": "Duplicate",
   "stage": "Launched",
@@ -21,6 +441,27 @@
   "hypothesis": ""
  },
  {
+  "number": 149,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multi-use",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
   "number": 150,
   "title": "Duplicate",
   "stage": "Launched",
@@ -38,6 +479,95 @@
   ],
   "uploads": 1,
   "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 156,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "AI Animation",
+  "format": "Us vs Them",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 160,
+  "title": "Reverse Psychology",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Product aware",
+  "video_type": "Avatar + B-roll",
+  "format": "Reverse Psychology",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 5,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 181,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Value",
+  "awareness": "Product aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Us vs Them",
+  "hooks": 4,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 4,
+  "open_notes": 0,
+  "refs": [
+   22
+  ],
+  "hypothesis": "Brief #22 H+S: Price-escalation offer opener (\"When I dropped the price, you didn't buy it...\") into mechanism proof (cream sits on top vs castor oil ..."
+ },
+ {
+  "number": 189,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Abdulazeez",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "AI Animation",
+  "format": "Us vs Them",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 1,
   "refs": [],
   "hypothesis": ""
  },
@@ -82,6 +612,90 @@
   "open_notes": 6,
   "refs": [],
   "hypothesis": "The winning creative framework from a competitor has already proven that it resonates with this audience."
+ },
+ {
+  "number": 243,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Doctor",
+  "format": "Us vs Them",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 249,
+  "title": "Timeline",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Thyroid",
+  "awareness": "Solution aware",
+  "video_type": "Text on screen + broll",
+  "format": "Timeline",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": "imitating the competitor's old posts Here’s what you’d notice when you put organic castor oil on your neck consistently for a full month: 🔥 Thyroid te..."
+ },
+ {
+  "number": 254,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Thyroid",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 258,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Cysts/Fibroids",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
  },
  {
   "number": 266,
@@ -135,6 +749,74 @@
   "hypothesis": "Botox / age statics, backed by the Botox-as-enemy ads from Nothora and Frøya (128 days), Facelove's red-marker circles (92 days) and our Briefs #13/#1..."
  },
  {
+  "number": 273,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multi-use",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 285,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 3,
+  "pod": "Pod 1",
+  "editor": "Jerome",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Unaware",
+  "video_type": "AI Animation",
+  "format": "Storytelling",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 2,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 291,
+  "title": "Transformation",
+  "stage": "Approved",
+  "round": 2,
+  "pod": "Pod 2",
+  "editor": "Han",
+  "strategist": "Jared",
+  "angle": "Eyes",
+  "awareness": "Problem aware",
+  "video_type": "UGC",
+  "format": "Transformation",
+  "hooks": 3,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 4,
+  "open_notes": 8,
+  "refs": [
+   27
+  ],
+  "hypothesis": "Brief #27."
+ },
+ {
   "number": 294,
   "title": "Storytelling",
   "stage": "Launched",
@@ -164,6 +846,56 @@
   "hypothesis": "Brief #28."
  },
  {
+  "number": 295,
+  "title": "Problem into solution",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Problem into solution",
+  "hooks": 4,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 15,
+  "open_notes": 8,
+  "refs": [
+   29,
+   129,
+   156,
+   181
+  ],
+  "hypothesis": "Brief #29."
+ },
+ {
+  "number": 297,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 5,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Storytelling",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 6,
+  "open_notes": 5,
+  "refs": [],
+  "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
+ },
+ {
   "number": 299,
   "title": "Duplicate",
   "stage": "Launched",
@@ -183,6 +915,210 @@
   "open_notes": 6,
   "refs": [],
   "hypothesis": ""
+ },
+ {
+  "number": 300,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 4,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Anti-aging",
+  "awareness": "Unaware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 6,
+  "open_notes": 9,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 301,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Anti-aging",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 302,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Unaware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 8,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 303,
+  "title": "Ranking",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Han",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "Talking Head",
+  "format": "Ranking",
+  "hooks": 4,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 5,
+  "open_notes": 0,
+  "refs": [
+   31
+  ],
+  "hypothesis": "Brief #31."
+ },
+ {
+  "number": 304,
+  "title": "Reverse Psychology",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Anti-aging",
+  "awareness": "Product aware",
+  "video_type": "Avatar + B-roll",
+  "format": "Reverse Psychology",
+  "hooks": 1,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 3,
+  "open_notes": 10,
+  "refs": [
+   32,
+   129,
+   160
+  ],
+  "hypothesis": "Brief #32."
+ },
+ {
+  "number": 305,
+  "title": "Reverse Psychology",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 2",
+  "editor": "Han",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Reverse Psychology",
+  "hooks": 3,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 3,
+  "open_notes": 3,
+  "refs": [
+   33,
+   79
+  ],
+  "hypothesis": "Brief #33."
+ },
+ {
+  "number": 307,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 3",
+  "editor": "Max",
+  "strategist": "Aymon",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "AI Music Video",
+  "format": "Storytelling",
+  "hooks": 5,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 11,
+  "open_notes": 20,
+  "refs": [],
+  "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
+ },
+ {
+  "number": 308,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "product aware/value",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 309,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 2,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Storytelling",
+  "hooks": 5,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 10,
+  "open_notes": 24,
+  "refs": [],
+  "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
  },
  {
   "number": 310,
@@ -227,6 +1163,159 @@
   "hypothesis": ""
  },
  {
+  "number": 312,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Face Skincare",
+  "awareness": "Unaware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 313,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 314,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Lymph Nodes",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 315,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Belly Button",
+  "awareness": "Unaware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 3,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 316,
+  "title": "Ranking",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Abdulazeez",
+  "strategist": "Jared",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Talking Head",
+  "format": "Ranking",
+  "hooks": 2,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 6,
+  "open_notes": 0,
+  "refs": [
+   156,
+   303
+  ],
+  "hypothesis": "Ranking for AZ (Brief doc tab \"ranking for AZ\")."
+ },
+ {
+  "number": 318,
+  "title": "Symptom to Root Cause",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Unaware",
+  "video_type": "Visual Mechanism",
+  "format": "Symptom to Root Cause",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 319,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Rico",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Unaware",
+  "video_type": "Doctor",
+  "format": "Storytelling",
+  "hooks": 2,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
   "number": 320,
   "title": "3 Signs",
   "stage": "Launched",
@@ -248,6 +1337,299 @@
   "hypothesis": ""
  },
  {
+  "number": 321,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Abdulazeez",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Unaware",
+  "video_type": "AI Animation",
+  "format": "Storytelling",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 323,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Abdulazeez",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Unaware",
+  "video_type": "AI Animation",
+  "format": "Storytelling",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 326,
+  "title": "Symptom to Root Cause",
+  "stage": "Approved",
+  "round": 2,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Ai talking head",
+  "format": "Symptom to Root Cause",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 6,
+  "open_notes": 3,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 327,
+  "title": "Transformation",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 1",
+  "editor": "Rico",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Avatar + B-roll",
+  "format": "Transformation",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 6,
+  "open_notes": 3,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 328,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Period Cramps",
+  "awareness": "Problem aware",
+  "video_type": "UGC",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 5,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": "Duplicating TikTok video for periods"
+ },
+ {
+  "number": 329,
+  "title": "Problem into solution",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "Avatar + B-roll",
+  "format": "Problem into solution",
+  "hooks": 2,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [
+   45
+  ],
+  "hypothesis": "Black Friday (Brief doc tab \"Black Friday\", #45)."
+ },
+ {
+  "number": 331,
+  "title": "Transformation",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 2",
+  "editor": "Han",
+  "strategist": "Jared",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Transformation",
+  "hooks": 3,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 5,
+  "open_notes": 5,
+  "refs": [
+   44,
+   78,
+   156,
+   316
+  ],
+  "hypothesis": "Transformation (Brief doc tab \"Transformation\", #44)."
+ },
+ {
+  "number": 332,
+  "title": "Timeline",
+  "stage": "Approved",
+  "round": 3,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "UGC",
+  "format": "Timeline",
+  "hooks": 3,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 15,
+  "open_notes": 13,
+  "refs": [
+   47,
+   78,
+   156
+  ],
+  "hypothesis": "Brief #47 (Brief doc tab \"#47\")."
+ },
+ {
+  "number": 335,
+  "title": "Symptom Stacking",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Multiple",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Symptom Stacking",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 336,
+  "title": "Symptom Stacking",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Multiple",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Symptom Stacking",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 9,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 340,
+  "title": "Symptom to Root Cause",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 1",
+  "editor": "Rico",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "Comic AI Animation",
+  "format": "Symptom to Root Cause",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 341,
+  "title": "Promotion",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Product aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Promotion",
+  "hooks": 2,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 2,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 342,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Lymph Nodes",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
   "number": 343,
   "title": "Duplicate",
   "stage": "Launched",
@@ -257,6 +1639,48 @@
   "strategist": "Alex Richard",
   "angle": "Face Skincare",
   "awareness": "Unaware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 344,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 2,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 345,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Product aware",
   "video_type": null,
   "format": "Duplicate",
   "hooks": 3,
@@ -290,6 +1714,103 @@
   "hypothesis": ""
  },
  {
+  "number": 347,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "lymph drainage",
+  "awareness": "Solution aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 349,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Us vs Them",
+  "hooks": 3,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 7,
+  "open_notes": 4,
+  "refs": [
+   12,
+   78,
+   156,
+   181,
+   182,
+   188,
+   189,
+   332
+  ],
+  "hypothesis": "Brief #12 (Briefs for HS, tab #12)."
+ },
+ {
+  "number": 350,
+  "title": "Red Flags",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 3",
+  "editor": "Max",
+  "strategist": "Aymon",
+  "angle": null,
+  "awareness": "Product aware",
+  "video_type": "UGC",
+  "format": "Red Flags",
+  "hooks": 2,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
+ },
+ {
+  "number": 351,
+  "title": "Before/after",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Bloating",
+  "awareness": "Solution aware",
+  "video_type": null,
+  "format": "Before/after",
+  "hooks": 1,
+  "sizes": [
+   "4x5",
+   "1x1"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
+ },
+ {
   "number": 355,
   "title": "Us vs Them",
   "stage": "Launched",
@@ -311,6 +1832,27 @@
   "hypothesis": ""
  },
  {
+  "number": 356,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Anti-aging",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
   "number": 357,
   "title": "Duplicate",
   "stage": "Launched",
@@ -328,6 +1870,111 @@
   ],
   "uploads": 4,
   "open_notes": 2,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 358,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Face Skincare",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 359,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "product aware/value",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 360,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Dark Circles",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 361,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Armpits",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 362,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Face Skincare",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
   "refs": [],
   "hypothesis": ""
  },
@@ -374,6 +2021,199 @@
   "hypothesis": ""
  },
  {
+  "number": 369,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Ours is better",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 370,
+  "title": "Us vs Them",
+  "stage": "Approved",
+  "round": 3,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Skin",
+  "awareness": "Solution aware",
+  "video_type": "Talking Head",
+  "format": "Us vs Them",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 5,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 371,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Skin",
+  "awareness": "Solution aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Us vs Them",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 3,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 372,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 5,
+  "open_notes": 2,
+  "refs": [
+   15,
+   294,
+   303,
+   305
+  ],
+  "hypothesis": "\"1st song ad\" (Briefs for HS, Brief #15)."
+ },
+ {
+  "number": 373,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Han",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "AI Music Video",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [
+   16,
+   294,
+   303,
+   305
+  ],
+  "hypothesis": "\"RYZE ad 1\" (Briefs for HS, Brief #16)."
+ },
+ {
+  "number": 374,
+  "title": "Transformation",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Smooth neck",
+  "awareness": "Problem aware",
+  "video_type": "Avatar + B-roll",
+  "format": "Transformation",
+  "hooks": 4,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 375,
+  "title": "Symptom Stacking",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "AI Music Video",
+  "format": "Symptom Stacking",
+  "hooks": 2,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [
+   10,
+   17,
+   294,
+   303,
+   305
+  ],
+  "hypothesis": "\"RYZE ad 2\" (Briefs for HS, Brief #17)."
+ },
+ {
+  "number": 376,
+  "title": "Face Skincare",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Face Skincare",
+  "awareness": "Unaware",
+  "video_type": "AI Animation",
+  "format": null,
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 2,
+  "refs": [],
+  "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
+ },
+ {
   "number": 377,
   "title": "Storytelling",
   "stage": "Launched",
@@ -393,6 +2233,48 @@
   "open_notes": 3,
   "refs": [],
   "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
+ },
+ {
+  "number": 380,
+  "title": "Transformation",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Face Skincare",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Transformation",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
+ },
+ {
+  "number": 381,
+  "title": "Symptom to Root Cause",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "AI Animation",
+  "format": "Symptom to Root Cause",
+  "hooks": 4,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
  },
  {
   "number": 382,
@@ -421,6 +2303,27 @@
   "hypothesis": "(Briefs for HS, Brief #28)."
  },
  {
+  "number": 385,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
   "number": 386,
   "title": "Duplicate",
   "stage": "Launched",
@@ -438,6 +2341,90 @@
   ],
   "uploads": 2,
   "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 387,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": null,
+  "awareness": null,
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 388,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": null,
+  "awareness": null,
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 389,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Lymph Nodes",
+  "awareness": "Unaware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 392,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 2,
   "refs": [],
   "hypothesis": ""
  },
@@ -463,6 +2450,361 @@
   "hypothesis": ""
  },
  {
+  "number": 395,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 3,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 398,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Ai talking head",
+  "format": "Storytelling",
+  "hooks": 4,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 399,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Ai talking head",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 400,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 401,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Liver",
+  "awareness": "Problem aware",
+  "video_type": "Text on screen + broll",
+  "format": "Storytelling",
+  "hooks": 4,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 402,
+  "title": "Us vs Them",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Rico",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Talking Head",
+  "format": "Us vs Them",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 403,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Rico",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Us vs Them",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 404,
+  "title": "Us vs Them",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Rico",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Doctor",
+  "format": "Us vs Them",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 405,
+  "title": "Ranking",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Abdulazeez",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Whiteboard",
+  "format": "Ranking",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 6,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 406,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Abdulazeez",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Whiteboard",
+  "format": "Us vs Them",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 407,
+  "title": "Us vs Them",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Abdulazeez",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Doctor",
+  "format": "Us vs Them",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 408,
+  "title": "Us vs Them",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "lymph drainage",
+  "awareness": "Solution aware",
+  "video_type": "Doctor",
+  "format": "Us vs Them",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 411,
+  "title": "Timeline",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "Doctor",
+  "format": "Timeline",
+  "hooks": 1,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [
+   30,
+   243,
+   294,
+   295,
+   303,
+   305,
+   319,
+   329
+  ],
+  "hypothesis": "Brief #30."
+ },
+ {
+  "number": 415,
+  "title": "Problem into solution",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Doctor",
+  "format": "Problem into solution",
+  "hooks": 2,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 8,
+  "open_notes": 3,
+  "refs": [
+   25,
+   78,
+   156,
+   189,
+   243,
+   303,
+   316,
+   319,
+   331,
+   332,
+   349
+  ],
+  "hypothesis": "The ORA \"how to use castor oil on one spot\" authority format, swapped to skin tags and delivered by our ranking-winner money face (#303, scaling) with..."
+ },
+ {
+  "number": 421,
+  "title": "Timeline",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Timeline",
+  "hooks": 2,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 2,
+  "open_notes": 1,
+  "refs": [
+   40,
+   44,
+   78,
+   156,
+   189,
+   316,
+   331,
+   332,
+   349
+  ],
+  "hypothesis": "The Healo 3D x-ray reel (1.5k comments) makes the invisible visible: you watch the oil work inside her body, night by night."
+ },
+ {
   "number": 422,
   "title": "5 Places",
   "stage": "Launched",
@@ -480,6 +2822,27 @@
   ],
   "uploads": 2,
   "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 423,
+  "title": "Ranking",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Abdulazeez",
+  "strategist": "Johnny",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Talking Head",
+  "format": "Ranking",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 5,
   "refs": [],
   "hypothesis": ""
  },
@@ -526,6 +2889,117 @@
   "hypothesis": ""
  },
  {
+  "number": 442,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 447,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 2,
+  "pod": "Pod 5",
+  "editor": "Haseeb",
+  "strategist": "Gabriel",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 6,
+  "open_notes": 3,
+  "refs": [
+   156,
+   316
+  ],
+  "hypothesis": "the angle already wins; told as a brand mission, in a \"we\" voice, it can win in a second format."
+ },
+ {
+  "number": 448,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Avatar + B-roll",
+  "format": "Storytelling",
+  "hooks": 4,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 5,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 450,
+  "title": "Transformation",
+  "stage": "Ready for review",
+  "round": 3,
+  "pod": "Pod 5",
+  "editor": "Eyasu",
+  "strategist": "Gabriel",
+  "angle": "Skin Tags",
+  "awareness": "Solution aware",
+  "video_type": "UGC",
+  "format": "Transformation",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 6,
+  "open_notes": 1,
+  "refs": [
+   107,
+   316
+  ],
+  "hypothesis": "our winning skin tag angle (#316) will work in our winning UGC format (#107), with her real before and after on screen from the first frame."
+ },
+ {
+  "number": 455,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
   "number": 457,
   "title": "Storytelling",
   "stage": "In production",
@@ -547,6 +3021,48 @@
    107
   ],
   "hypothesis": "women 55+ tired of complicated, expensive anti-aging routines will try one ingredient they can keep using every night."
+ },
+ {
+  "number": 462,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Product aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 463,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
  },
  {
   "number": 464,
