@@ -38,3 +38,9 @@ build did not submit (another session or user on the same workspace). Balance af
 - Hook redone: new warm start frame (gpt_image, 2 cr) + Seedance 8 s (56 cr; dropped "start to finish", kept as c01_v2a_dropped)
   + reroll 9 s (63 cr, full line). Bigger two-tone title, before/after proof pop (zoomed on the wart, "AI illustration"), lighter grade.
 - Set 13 total now ~980 credits.
+
+## v3 (23 Nov, owner notes)
+- Before/after card in the hook: "AI illustration" label removed (owner request; the gallery photos at 0:16 and the end card keep it).
+- Four-plants beat (0:37–0:50): the 3D skin animation is now full screen (the mom is hidden), slowed to fill the beat
+  instead of looping; plant photo chips sit in the sky band, "8x deeper†" at the bottom, real root photo centred at the end.
+- No new generation (0 credits).

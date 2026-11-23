@@ -85,7 +85,7 @@ for k, (key, label) in enumerate((("lemon", "Lemon"), ("teatree", "Tea tree"), (
     src = WEB / f"plants/pick_{key}.jpg"
     if src.exists():
         c = canvas(); s = shadow(chip(src, label), 14, 6, 90); cx = 135 + k * 270
-        c.alpha_composite(s, (int(cx - s.width / 2), 1010)); c.save(G / f"plant_{key}.png"); print("plant", key)
+        c.alpha_composite(s, (int(cx - s.width / 2), 40)); c.save(G / f"plant_{key}.png"); print("plant", key)
 
 # 5. footnotes (CLAIMS.md: † travels with "8x deeper", * with the plants breaking the wart down)
 def foot(txt, name, y=1795, size=26):
@@ -105,7 +105,7 @@ foot("*Benefit claims. Homeopathic claims are based on traditional homeopathic p
 # 6. "8x" depth chip beside the side cut
 def pill(txt, bg, fg=(255, 255, 255), size=46, weight="ExtraBold"):
     return text_box([txt], size, weight, fg, bg, 34, 14, 40)
-place(pill("up to 8x deeper†", BLUE), W / 2, 1000, "p_8x.png")
+place(pill("up to 8x deeper†", BLUE), W / 2, 1640, "p_8x.png")
 place(pill("+14 nights after it looks gone", PEACH, NAVY, 42, "Bold"), W / 2, 330, "p_rootrule.png")
 place(pill("Buy 2, get 1 free  ·  90-day money-back", ORANGE, size=40), W / 2, 330, "p_offer.png")
 place(pill("Kids' formula · ages 4+", NAVY, size=42), W / 2, 330, "p_kids.png")
@@ -144,14 +144,14 @@ def end_card():
 end_card()
 
 # 8. real photo card (dandelion with its whole taproot, Wikimedia Commons CC) for "from the root"
-def photo_card(src, name, w=600, credit=""):
+def photo_card(src, name, w=600, credit="", top=120):
     im = Image.open(src).convert("RGB"); s = w / im.width; im = im.resize((w, int(im.height * s)), Image.LANCZOS)
     if im.height > 1000: im = im.crop((0, (im.height - 1000) // 2, w, (im.height - 1000) // 2 + 1000))
     card = Image.new("RGBA", (w + 24, im.height + 24 + (40 if credit else 0)), (255, 255, 255, 255)); card.paste(im, (12, 12))
     if credit: ImageDraw.Draw(card).text((16, im.height + 22), credit, font=font("Medium", 20), fill=SLATE)
-    c = canvas(); s_ = shadow(rounded(card, 28)); c.alpha_composite(s_, (int(W / 2 - s_.width / 2), 120)); c.save(G / name); print(name)
+    c = canvas(); s_ = shadow(rounded(card, 28)); c.alpha_composite(s_, (int(W / 2 - s_.width / 2), int(top))); c.save(G / name); print(name)
 rp = WEB / "dandelion/commons_dandelion_plant_with_root_zimmerling.jpg"
-if rp.exists(): photo_card(rp, "photo_root.png", 520, "Photo: Wikimedia Commons")
+if rp.exists(): photo_card(rp, "photo_root.png", 520, "Photo: Wikimedia Commons", 380)
 
 cp = WEB / "freezing/commons_wart_cryotherapy_toe_swab.jpg"
 if cp.exists(): photo_card(cp, "photo_cryo.png", 640, "Cryotherapy on a wart · Photo: Wikimedia Commons")
@@ -179,6 +179,5 @@ def before_after():
     # arrow between
     cx, cy = card.width // 2, 20 + ph // 2
     d.ellipse((cx - 38, cy - 38, cx + 38, cy + 38), fill=ORANGE); d.polygon([(cx - 12, cy - 18), (cx + 18, cy), (cx - 12, cy + 18)], fill=(255, 255, 255))
-    lab = text_box(["AI illustration"], 22, "SemiBold", (255, 255, 255), (0, 0, 0), 12, 5, 8); card.alpha_composite(lab, (card.width - lab.width - 30, ph - lab.height + 6))
     place(rounded(card, 34), W / 2, 820, "ba.png")
 before_after()

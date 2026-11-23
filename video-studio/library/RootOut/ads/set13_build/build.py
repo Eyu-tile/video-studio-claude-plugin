@@ -62,8 +62,8 @@ BODY = [
     seg("c04", [("png", "gal_1.png", "look", "dry", {}), ("png", "gal_2.png", "dry", "dark", {}), ("png", "gal_3.png", "dark", "smooth", {}),
                 ("png", "gal_4.png", "smooth", None, {})]),
     seg("c05", [("png", "photo_cryo.png", "freezing", "like", {}), ("png", "w_comeback_card.png", "grows", None, {})]),
-    seg("c06", [("pip", "../gen/clips/m1.mp4", 0.0, "pokeweed", {"x": 40, "y": 120, "w": 1000, "h": 880}),
-                ("pip", "../gen/clips/m2.mp4", "pokeweed", 99, {"x": 40, "y": 120, "w": 1000, "h": 880}),
+    seg("c06", [("pip", "../gen/clips/m1.mp4", 0.0, "pokeweed", {"x": 0, "y": 0, "w": 1080, "h": 1920, "r": 0, "fit": 1}),
+                ("pip", "../gen/clips/m2.mp4", "pokeweed", 99, {"x": 0, "y": 0, "w": 1080, "h": 1920, "r": 0, "fit": 1}),
                 ("png", "plant_lemon.png", "lemon", 99, {}), ("png", "plant_teatree.png", "tea", 99, {}),
                 ("png", "plant_pokeweed.png", "pokeweed", 99, {}), ("png", "plant_cedar.png", "cedar", 99, {}),
                 ("png", "p_8x.png", "eight", "and", {}), ("png", "fn_dagger.png", "eight", "and", {}),
@@ -103,15 +103,17 @@ def render_seg(i, s, tag):
             fc.append(f"[{last}][o{n}]overlay=0:0:enable='between(t,{ta:.2f},{tb:.2f})'[v{n}]")
         else:
             x, y, w, h = ex["x"], ex["y"], ex["w"], ex["h"]
-            mk = G / f"mask_{w}x{h}.png"
+            rr = ex.get("r", 44); mk = G / f"mask_{w}x{h}_r{rr}.png"
             if not mk.exists():
                 from PIL import Image, ImageDraw
-                mm = Image.new("L", (w, h), 0); ImageDraw.Draw(mm).rounded_rectangle((0, 0, w - 1, h - 1), 44, fill=255); mm.save(mk)
+                mm = Image.new("L", (w, h), 0); ImageDraw.Draw(mm).rounded_rectangle((0, 0, w - 1, h - 1), rr, fill=255) if rr else mm.paste(255, (0, 0, w, h)); mm.save(mk)
             ss = ["-ss", str(ex["ss"])] if ex.get("ss") else []
-            inputs += ["-stream_loop", "-1", *ss, "-t", f"{L:.3f}", "-i", str(pip_src(f)), "-loop", "1", "-t", f"{L:.3f}", "-i", str(mk)]
-            fc.append(f"[{n}:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},fps=30,setpts=PTS-STARTPTS+{ta:.2f}/TB,format=rgba[p{n}]")
+            fit = ex.get("fit"); k = ((tb - ta) / dur(pip_src(f))) if fit else 1.0
+            loop = [] if fit else ["-stream_loop", "-1"]
+            inputs += [*loop, *ss, "-t", f"{L:.3f}", "-i", str(pip_src(f)), "-loop", "1", "-t", f"{L:.3f}", "-i", str(mk)]
+            fc.append(f"[{n}:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},setpts=(PTS-STARTPTS)*{k:.4f}+{ta:.2f}/TB,fps=30,format=rgba[p{n}]")
             fc.append(f"[{n+1}:v]scale={w}:{h},format=gray[m{n}]"); fc.append(f"[p{n}][m{n}]alphamerge[q{n}]")
-            fc.append(f"[{last}][q{n}]overlay={x}:{y}:enable='between(t,{ta:.2f},{tb:.2f})':eof_action=pass[v{n}]")
+            fc.append(f"[{last}][q{n}]overlay={x}:{y}:enable='between(t,{ta:.2f},{tb:.2f})':eof_action=repeat[v{n}]")
             last = f"v{n}"; n += 2; continue
         last = f"v{n}"; n += 1
     sp = s["speed"]
