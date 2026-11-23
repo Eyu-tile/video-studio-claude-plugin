@@ -114,3 +114,11 @@ VSL (`refs/drive_1jfs/`, voice reference only). Haven & Spool lessons: `vs lesso
   recommended) / `char_gpt_b.png` (bf14f5df). Messy hair, glasses on head, real skin, worn cardigan, lived-in bathroom.
 - Plan: rebuild start frames with her (GPT Image 2.5), short 4-6 s clips, faces brief, real motion via Kling 3.0
   Motion Control ($0.10/s of the source clip) when a real phone clip of the action is available.
+- DECISION (editor): character lock = `char_gpt_b.png` (bf14f5df), copied to `locks/char_LOCK.png`. A read too clean.
+
+## S1 v2 5 s test (frame a93295f8 -> Seedance 2.5 720p bdf9890d, charged $0.98) -> raw/gen/s1_v2_5s.mp4
+- Realism: big step up. Same ordinary woman throughout, small real behaviours (glance, half smile, hair tuck at 2 s,
+  leaning on the counter), lived-in set, phone feel.
+- Action: the "sweep" is only a small push (3-4 s); the counter stays mostly full. Bottle stays standing, label fine,
+  turns slightly at 4.5 s. A fast blurred hand at 1.5 s.
+- Learned: real-person prompts + an ordinary-woman frame fix the robotic look; big actions need their own short clip.
