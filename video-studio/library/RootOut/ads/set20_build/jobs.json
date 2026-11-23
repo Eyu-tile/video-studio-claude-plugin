@@ -7,7 +7,33 @@
  },
  "audio": {
   "vo_h1_juno": "7e96dc19-c9fe-43fe-8561-d67921c8753a",
-  "vo_h1_maeve_alt": "7b1ab21f-91ae-4fb4-b50a-98f23df75b06"
+  "vo_h1_maeve_alt": "7b1ab21f-91ae-4fb4-b50a-98f23df75b06",
+  "vo01": "f9042b2c-1a30-4c86-aaeb-dc6a68a67a7d",
+  "vo02": "8b3da4e5-bc59-4064-a703-1c79d5151f77",
+  "vo03": "ab759329-704f-4123-88e3-69ed4b245814",
+  "vo04": "354ba174-7ff8-4775-904f-d830a703536b",
+  "vo05": "79fc00b2-f9f0-411d-a8a9-9191b1e657b7",
+  "vo06": "cd27f6f3-bcbf-4400-b63d-6263155c5fd0",
+  "vo07": "c417a138-2479-43af-bb6d-23809a539d1f",
+  "vo08": "dfa63775-2ebd-4ac1-bffb-1ea08d433e8b",
+  "vo09": "f3fa7f59-9a19-4819-8fdd-fde7cb252970",
+  "vo10": "4240863b-6934-414b-9bae-88ca07fe85d2",
+  "vo11": "dee01837-1cca-413f-925e-e26cc5f1e560",
+  "vo12": "0e9f1f37-f5c1-4689-a17e-bf91f86da77c",
+  "vo13": "e8f9bda5-2cdb-4527-8521-3494e8ab318f",
+  "vo14": "035e07f4-3f4b-49ff-a920-1af217f18d2e",
+  "vo15": "279e5b8e-9e0f-4864-8f56-6bb138ef5821",
+  "vo16": "b79644ca-f5fd-4c09-9caf-39e24b435ce9",
+  "vo17": "fcb80010-852a-4235-a8e9-2d20498babad",
+  "vo18": "e7e22c4e-b6a8-45e6-b74d-76c5ec072b13",
+  "vo19": "36d614df-c7cd-4279-8444-ed42bd846b7b",
+  "vo20": "66358a04-24b0-4424-901f-1fd90608dc80",
+  "vo21": "d487dfc9-b8e3-418f-a825-a457987a55ab",
+  "vo22": "985b7c9a-f4db-40ed-9019-7946d8639b0f",
+  "vo23": "aadbc498-17d2-48f8-b1b8-16941213c80e",
+  "vo24": "0c93116d-5b24-401b-ae0d-b38aa0bbe803",
+  "vo25": "170f66f7-82b0-4b6f-8bf1-a0f8549e345c",
+  "vo26": "2ffa6bb1-ea99-4bd5-b36e-2adb218903e1"
  },
  "frames": {
   "mom_ref_f01a": "c0ea9e4d-1a3e-4e0b-a1ab-19a45f259e67",
@@ -19,9 +45,36 @@
  },
  "video": {
   "h1_draft_BLOCKED_refunded": "55d4bfce-a9ee-459d-bca0-6ac5c57009ca",
-  "t01_h1_talk": "c77f2bbf-7ad4-4dbe-883a-89c4afcd916c"
+  "t01_h1_talk": "c77f2bbf-7ad4-4dbe-883a-89c4afcd916c",
+  "t01_b02": "1c8706ed-d133-42e3-85b8-dacf33dd0ee2",
+  "t04_b04": "06c9a8bf-fb97-4603-81db-3e1c5014c944",
+  "t09_b05": "d68c72e1-4f15-4fe1-857d-fdd0d8ed1fb6",
+  "t10_b06": "bc35e8e9-3e8f-474c-819d-62ae63b6d0ae",
+  "t13_b08": "825136c1-80b2-47c6-8ec2-3e30a83b583a",
+  "t15_b09": "d2e8e879-8ccd-4c43-bc6a-12f5aa51a6a8",
+  "t17_b10_bottle": "2f499ea0-22f2-48ff-8254-d28e8d902529",
+  "t23_b15": "ffb04e98-0c3d-420f-9a45-40617f3b891e",
+  "t24_b16_bottle": "55e3af23-5513-415a-9f3e-ce5abdba19f7",
+  "g02_walk": "5b408ca8-5d44-48a8-bcd2-b469c16b1604",
+  "g03_counter": "d16f4a38-66cd-406d-8cda-0a85ec4a3238",
+  "g04_squeeze": "66b36e48-7d43-458b-ab1a-3d90041c0db4",
+  "g07_drawer": "9d5dc14b-5eda-43b2-912a-25ad46a13282",
+  "g07_sister": "2800c067-4f42-4c39-a5e3-9cf567574b8d",
+  "g12_feetup": "bedc70f4-39b5-42d3-b173-ae246a12c153",
+  "g14_run": "ee26b25b-9b85-4590-ba32-0ccfbc32ef68"
  },
  "real_inserts": {
   "h1_black_dots": "assets/broll/b04_check_macro/wm_veruca-right-foot-detail.jpg (Wikimedia, CC BY-SA 3.0, Simon Nuttall assumed)"
+ },
+ "reused_free": {
+  "s1_dand_snap": "3e99af22-7ed2-4363-974c-b514b272784d",
+  "s1_dand_back": "644d4a63-e98c-498a-8dcf-8c9d13fd2e46",
+  "s1_dand_root": "b747a959-ca82-4164-94f5-9ab77ea5ca38",
+  "s19_skin_lemon": "e4b5d4f8-f30a-4a88-9348-79ff409245d5",
+  "s19_skin_teatree": "6cdb0c90-ddf6-4cb4-9260-48fa93ad402f",
+  "s19_file_kid": "757ba2f9-da4b-468b-b89d-dfbf9b1b16b4",
+  "s19_three_bottles": "d2ec83d6-82a8-4468-a6f1-7ab5fa7184d2",
+  "s19_socks_bed": "5100f730-0d12-40d5-84de-26273dc6f24e",
+  "bottle_ref_media": "811f8013-517f-4d39-a6a9-95bce6eee45c"
  }
 }

@@ -30,3 +30,19 @@ Owner approved ~1,200 credit ceiling (23 Nov). Balance at start: 7,308.15. Job i
 ## Spend
 - This build so far: 43.08 cr (Seedance 42, voices 0.6, Soul 0.48; the blocked draft refunded). Balance 2,012.73 on
   23 Nov 18:31 — other sessions are spending on the same WilloMd account (7,308 → 2,013 in a day). Check `transactions`.
+
+## Body (23 Nov)
+- Voice: 26 Juno lines, one per script sentence group (on-camera anchors are their own lines so they lip-sync alone).
+  All checked word for word: whisper medium flagged "picking out" and "promising a callus"; large-v3 with a prompt hears
+  "picking at" and "pumicing" → the audio is right. Numbers written as words for TTS ("eight times", "fifteen hundred").
+- 9 talking clips (Seedance omni_reference, f01a + the line; t17/t24 add the real bottle photo 811f8013…): 46 s, 322 cr.
+- 7 new inserts, kid in socks/pajamas only, none blocked: walk on the foot's edge, bathroom counter tools, squeeze through
+  the sock, drawer, sister's pink socks, feet back up, kids running in the backyard from far behind (29 s, 203 cr).
+- Reused free (account's own jobs): Set 1 dandelion snap/back/root; Set 19 3D skin lemon + tea tree, file step on a
+  school-age foot, socks + picture book, three bottles. Brand how-to video for brush (2.35 s) and cover (4.75 s), cropped
+  below its step labels.
+- Real stills (Wikimedia CC): callus, heel spot, black dots, skin lines, toe, cryotherapy on a toe, dandelion taproot,
+  pumice, tweezers. Credits go in the post description (no on-screen credits, house rule L1).
+- Code: checklist (3 signs), heel side cut (root / two arrows / root breaking), 14+14 calendar, 8x gauge, offer, end card.
+- Music: "Wholesome", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit line in the post.
+- Spend this build: H1 43.08 + body ~533 (voice ~8, talking 322, inserts 203) ≈ 576 of the ~1,200 ceiling.
