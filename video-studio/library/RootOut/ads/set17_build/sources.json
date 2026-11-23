@@ -16,7 +16,7 @@
  },
  "dand_snap": {
   "path": "raw/gen/clips/b3_dand_snap.mp4",
-  "in": 0.0
+  "in": 0.3
  },
  "dand_root": {
   "path": "raw/stock/1280px-Paardenbloem_(Taraxacum_officinale).jpg",
@@ -83,5 +83,34 @@
  },
  "g_end": {
   "path": "work/gfx/g_end.mp4"
+ },
+ "x2_freeze": {
+  "path": "work/gfx/e_top.mp4"
+ },
+ "x3_cutaway": {
+  "path": "raw/gen/clips/x3_cutaway.mp4"
+ },
+ "x4_lemon": {
+  "path": "work/gfx/e_lemon.mp4"
+ },
+ "x5_tea": {
+  "path": "raw/stock/mixkit-water-dropper-on-the-lab-17493.mp4",
+  "in": 2.4
+ },
+ "x6_root": {
+  "path": "raw/gen/clips/x6_root3d.mp4"
+ },
+ "x8_night": {
+  "path": "work/gfx/e_night.mp4"
+ },
+ "x9_product": {
+  "path": "raw/gen/clips/x9_product.mp4"
+ },
+ "x10_cta": {
+  "path": "raw/gen/clips/x10_cta.mp4"
+ },
+ "towels": {
+  "path": "raw/gen/frames/f4_towels.png",
+  "kb": 1
  }
 }

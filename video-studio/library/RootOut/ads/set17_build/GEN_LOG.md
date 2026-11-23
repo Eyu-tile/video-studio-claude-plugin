@@ -24,3 +24,22 @@ that were not made by this build (another session on the same account). Balance 
 ## Output
 `projects/rootout-set17/out/WilloMD_RootOut_Set17_H1_9x16_v1.mp4` — 1080x1920, 118.9 s, -14.0 LUFS, TP -2.5 dBFS.
 Transcript of the render vs `BRIEF.md`: 333/333 words, no differences.
+
+## v2 (23 Nov) — client fixes 1–10, lip-sync, no labels on b-roll
+| id | job | what | credits | verdict |
+|---|---|---|---|---|
+| D2 redo | 1130dc95-5d14-42c5-8b5d-2fce0223dccf | bottle take; start = frame of old D2 with bottle up (`8209086f…`), audio ref only | 119 | OK — old D2 had ignored the audio (gibberish speech) |
+| g20 / g21 | 50f771dd-d524-4f82-bde5-9dfbcba2f710 / 0459c33d-7aa1-4250-a627-e8821f3e0615 | 3D skin block before / healed (gpt_image_2_6) | 4 | OK, base for the explainers |
+| x3 cutaway | ee317059-f193-4812-a2f9-3066d78009cf | soil cutaway: stub on top, root alive, dandelion regrows (#3) | 28 | OK |
+| x6 root 3D | 692c7031-49df-42a0-8c29-7b75826f9008 | green drops reach root, root breaks, skin heals (#6) | 35 | OK |
+| x9 product | 04796e0c-f595-4ad0-9afd-5d5b844a0dd0 | hand sets the real bottle on the exam counter, push-in (#9) | 35 | OK |
+| x10 CTA hero | 5e57f5fc-7598-4519-9320-ab8c47a3f6e2 | 3 real bottles, hand adds the third, light sweep (#10) | 56 | OK |
+| blocked | d402b065 (freeze/acid/shave), 4f2d3fe0 (lemon), 93c866ff (tea tree), 40eb7f8e (night) | Higgsfield content filter on the skin+wart start image | refunded? check ledger | not retried (no prompt rewording around the filter) → code explainers on the 3D render instead |
+Fixes made in code (free): #1 hook moved to lower third with pop-in · #2 `e_top` (freeze/acid/shave hit only the top, root stays) then the
+snap lands on "like picking a dandelion" · #4 `e_lemon` · #5 real footage (cream blob + amber oil drop, Mixkit) · #7 mom stays on camera +
+animated arrow list with real-plant circles (`plants`) · #8 `e_night` · routine step chips · product callout · CTA overlay; separate end card removed.
+**Lip-sync:** Seedance re-voices the reference audio with its own timing (drift up to ~1 s). `lipwarp.py` word-aligns each take's own speech to
+our lip-sync track and retimes the picture chunk by chunk; checked by warping the clip speech the same way: mean word error 0.04–0.10 s.
+**Frame grid:** every cut snapped to 1/30 s in absolute time (was drifting ~0.3 s by the end).
+No "AI illustration" / FDA / † text on any b-roll (client rule, 23 Nov). The CTA keeps a small "Dramatization." only.
+Output: `out/WilloMD_RootOut_Set17_H1_9x16_v2.mp4` — 118.5 s, -13.9 LUFS, TP -2.4 dBFS, transcript 333/333 words = BRIEF.

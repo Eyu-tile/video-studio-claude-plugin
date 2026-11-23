@@ -21,30 +21,35 @@ def T(t, line, k=0, at=0.0): a, _ = take(t, line, k); return a - at   # take off
 LINES = [
  ("L01", [(0, "D1", T("D1", "L01"), None)]),
  ("L02", [(0, "M1", T("M1", "L02"), None), (1.55, "p_sole", 0, None)]),
- ("L03", [(0, "D1", T("D1", "L03"), None), (1.35, "dand_snap", None, None), (7.0, "dand_root", None, None), (9.3, "dand_back", None, None)]),
+ ("L03", [(0, "D1", T("D1", "L03"), None), (1.35, "x2_freeze", None, None), (5.45, "dand_snap", None, None), (7.2, "x3_cutaway", None, None)]),
  ("L04", [(0, "M1", T("M1", "L04"), None), (2.3, "b1", 0.0, None)]),
- ("L05", [(0, "D1", T("D1", "L05"), None), (2.0, "lemon", None, None), (2.75, "t_lemon", 0.6, None)]),
+ ("L05", [(0, "D1", T("D1", "L05"), None), (2.0, "lemon", None, None), (2.75, "x4_lemon", None, None)]),
  ("L06", [(0, "M1", T("M1", "L06"), None)]),
- ("L07", [(0, "D1", T("D1", "L07"), None), (3.4, "cream", None, None), (4.0, "teatree", None, None), (4.7, "t_tea", 1.6, None), (8.3, "g_towels", 0.6, None)]),
+ ("L07", [(0, "D1", T("D1", "L07"), None), (3.4, "cream", None, None), (4.0, "x5_tea", None, None), (8.3, "towels", None, None)]),
  ("L08", [(0, "b1", 4.0, "w_wiki_pain")]),
- ("L09", [(0, "D1", T("D1", "L09"), None), (1.9, "pokeweed", None, None), (3.1, "cedar", None, None), (4.0, "t_root", 0.4, None)]),
+ ("L09", [(0, "D1", T("D1", "L09"), None), (1.9, "x6_root", None, None)]),
  ("L10", [(0, "M1", T("M1", "L10"), None), (0.95, "p_heel", 0.2, None)]),
  ("L11", [(0, "D1", T("D1", "L11"), None), (2.0, "blurD1", 0, "w_pubmed_result"), (5.4, "blurD1", 3.4, "w_pubmed_zoom"), (9.0, "kids_feet", None, None),
           (10.2, "D1", T("D1", "L11", 1, at=10.3), None)]),
  ("L12", [(0, "M1", T("M1", "L12"), None)]),
  ("L13", [(0, "D1", T("D1", "L13"), None), (4.1, "b1", 6.0, None), (6.5, "kids_feet2", None, None)]),
- ("L14", [(0, "M1", T("M1", "L14"), None), (0.84, "lemon", None, None), (1.3, "M1", T("M1", "L14", at=1.3), None), (1.86, "teatree", None, None),
-          (2.4, "M1", T("M1", "L14", at=2.4), None), (2.78, "pokeweed", None, None), (3.4, "M1", T("M1", "L14", at=3.4), None),
-          (3.76, "cedar", None, None), (4.45, "M1", T("M1", "L14", at=4.45), None)]),
+ ("L14", [(0, "M1", T("M1", "L14"), None)]),
  ("L15", [(0, "D2", T("D2", "L15"), None)]),
- ("L16fix", [(0, "b2", 0.0, None), (3.1, "b2", 3.0, None), (6.0, "b2", 7.0, None), (7.8, "t_night", 0.2, None),
+ ("L16fix", [(0, "b2", 0.0, None), (3.1, "b2", 3.0, None), (6.0, "b2", 7.0, None), (7.8, "x8_night", None, None),
              (9.15, "D2", T("D2", "L16fix", at=9.15), None)]),
- ("L17", [(0, "D2", T("D2", "L17"), None), (2.45, "g_sticky", 0.0, None)]),
- ("L18", [(0, "D2", T("D2", "L18"), None), (2.6, "g_offer", 0.0, None), (6.8, "D2", T("D2", "L18", at=6.8), None)]),
+ ("L17", [(0, "D2", T("D2", "L17"), None), (2.45, "x9_product", None, None)]),
+ ("L18", [(0, "D2", T("D2", "L18"), None), (2.6, "x10_cta", None, None)]),
 ]
-END = ("g_end", 3.2)
+TAIL = 2.8   # the CTA shot holds after the last line (no separate end card)
 
+from lipwarp import warp
+def exact(out, d):
+    """Force exactly round(d*30) frames (pad by cloning the last frame, or cut)."""
+    n = int(round(d * 30)); tmp = f"{out}.x.mp4"
+    sh(f"ffmpeg -v error -y -i {out} -vf tpad=stop_mode=clone:stop_duration=1,fps=30 -frames:v {n} -c:v libx264 -crf 16 -preset veryfast {tmp} && mv {tmp} {out}")
 def norm(name, src, a, d, out, card=None, blur=False):
+    if src in ("D1", "D2", "M1") and not card and not blur:
+        warp(src, a, a + d, out); exact(out, d); return
     s = SRC[src]; p = P / s["path"] if not s["path"].startswith("/") else Path(s["path"])
     a = s.get("in", 0.0) if a is None else a
     vf = "scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,setsar=1,fps=30"
@@ -63,6 +68,8 @@ def norm(name, src, a, d, out, card=None, blur=False):
         sh(f"ffmpeg -v error -y {inp} -loop 1 -i '{c}' -filter_complex \"{fc}\" -t {d:.3f} -an -c:v libx264 -crf 17 -preset veryfast {out}")
     else:
         sh(f"ffmpeg -v error -y {inp} -vf \"{vf},format=yuv420p\" -t {d:.3f} -an -c:v libx264 -crf 17 -preset veryfast {out}")
+    exact(out, d)
+    return
     got = dur(out)
     if got < d - 0.05:  # source too short: freeze the last frame to fill
         sh(f"ffmpeg -v error -y -i {out} -vf tpad=stop_mode=clone:stop_duration={d-got+0.1:.3f} -t {d:.3f} -c:v libx264 -crf 17 -preset veryfast {out}.tmp.mp4 && mv {out}.tmp.mp4 {out}")
@@ -72,12 +79,14 @@ def main():
     for li, (line, plan) in enumerate(LINES):
         ld = dur(VOF[line]) - 0.12; vo.append((line, t))
         for k, (at, src, a, card) in enumerate(plan):
-            end = plan[k + 1][0] if k + 1 < len(plan) else ld + GAP
-            d = end - at; blur = src.startswith("blur")
+            end = plan[k + 1][0] if k + 1 < len(plan) else ld + GAP + (TAIL if li == len(LINES) - 1 else 0)
+            qs, qe = round((t + at) * 30) / 30, round((t + end) * 30) / 30   # snap cuts to the frame grid: no drift
+            d = qe - qs; blur = src.startswith("blur")
+            if a is not None and src in ("D1", "D2", "M1") : a += qs - (t + at)
             srcn = src[4:] if blur else src
             out = SEG / f"{li:02d}_{k}_{src}.mp4"; norm(line, srcn, a, d, out, card, blur); segs.append(out)
         t += ld + GAP
-    out = SEG / "99_end.mp4"; norm("end", END[0], 0, END[1], out); segs.append(out); total = t + END[1]
+    total = t + TAIL
     (SEG / "list.txt").write_text("".join(f"file '{s.name}'\n" for s in segs))
     sh(f"cd {SEG} && ffmpeg -v error -y -f concat -safe 0 -i list.txt -c copy {W}/h1_video.mp4")
     json.dump(vo, open(W / "h1_vo_times.json", "w"))
