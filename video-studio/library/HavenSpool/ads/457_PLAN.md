@@ -73,6 +73,10 @@ VSL (`refs/drive_1jfs/`, voice reference only). Haven & Spool lessons: `vs lesso
    `vs hyperscale prep`, upload.
 
 ## Open questions for Gabriel
-- The YouTube reference (`WAYkP-f1rjc`, "Ancient Secrets of Castor Oil", Egyptian papyrus footage) is blocked here
-  (YouTube bot check). Is it meant as an archive-footage source? If so, a downloaded copy or another link helps.
-- Music: Editor's Choice; the references use a soft ~140 BPM bed. OK to pick a warm, unobtrusive track?
+- (YouTube reference dropped by the editor: not needed.)
+- Music: decided. Original Suno instrumental (`assets/music/457_bed_suno_v1.mp3`, 1:59, no drums, warm/dark), fit to the edit length on a downbeat at about -20 dB under the voice.
+
+## Footage pulled from the Library (assets/broll/, credit "Hyperscale Library")
+- Rolling on, women 55+: 2b31275e, 97eb2054, 6d1c337b (forehead), 7c60cde2 · 45-54: 015565e5, 8c625345 · applying 55+: e513d72d
+- Pouring into hands: 74c91fd4 (45-54, hands only), f3d839d8 · bottle on counter: 59fd99a8
+- Animation: castor bean pressed for oil d31c46b7 (row 4 option), oil on skin model d6147e71 (row 6 option)
