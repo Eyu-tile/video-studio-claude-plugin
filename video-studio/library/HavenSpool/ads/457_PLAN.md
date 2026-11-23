@@ -88,3 +88,12 @@ VSL (`refs/drive_1jfs/`, voice reference only). Haven & Spool lessons: `vs lesso
 - Fix 1: 0:49 "So" was slurred ("site"): replace with `raw/vo/vo_pickup_so.wav` (clear "So", lower it ~2 dB to match).
 - Fix 2: 1:20-1:47 runs on at 180 wpm with no breaths: open 0.3-0.4 s pauses at sentence ends in the edit.
 - Target after fixes and gap trims: ~2:05-2:10.
+
+## Locks (Seedream 5.0 Pro, assets/images/locks/, ~$0.43)
+- char_margaret (gen 9a042131): the one woman for S1, S3, S4. Pass her as a reference image in every Seedance clip.
+- s1_bathroom_counter (3862457a), s2_seeds_palm (14c8411d), s3_night_mirror (9dfa551f), s4_morning_cheek (32ab3d86),
+  s5_product_hero (e306eaaf, label checked against the Products tab photos: exact).
+- Video: Seedance 2.5 720p, clip 1 (<=15 s, return_last_frame) -> clip 2 starts on that frame = one continuous scene.
+## Archive (assets/images/)
+- Ebers Papyrus `wikipedia_18511551_pebers-c41-bc-jpg.jpg` (CC BY-SA 3.0: credit "Einsamer Schütze / Photohound, CC BY-SA 3.0").
+- Tomb of Nakht paintings (TT52, public domain / CC0): wikipedia_2416321, 2416341, 2416357, 2416386, 2416389, 158375770.
