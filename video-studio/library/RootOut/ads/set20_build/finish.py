@@ -85,23 +85,29 @@ ass = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920"
 # product-safe zones from the body timeline (times are body-relative; the hook comes first)
 HK = dur(hook); tl = {x["line"]: x for x in json.load(open(P / "work/body/timeline.json"))}
 LOW = [(HK + tl["b11"]["start"] + 4.9, HK + tl["b11"]["start"] + 8.1)]          # bottle photo: captions drop low
-NONE = [(HK + tl["b16c"]["start"] - 0.05, D + 1)]             # end card: no captions
+NONE = [(HK + tl["b16c"]["start"] - 0.05, D + 1)]
+HIGH = [(HK + tl["b16b"]["start"] - 0.05, HK + tl["b16c"]["start"])]  # offer: bottles fill the lower frame             # end card: no captions
 for j, g in enumerate(groups):
     s = g[0][1]; e = groups[j + 1][0][1] if j + 1 < len(groups) and groups[j + 1][0][1] - g[-1][2] < 0.6 else g[-1][2] + 0.15
     text = " ".join(x[0] for x in g).rstrip(",")
     if any(a <= s < b for a, b in NONE): continue
-    mv = 240 if any(a <= s < b for a, b in LOW) else 0
-    for a, b in NONE:
-        if s < a < e: e = a - 0.02  # never run onto the end card
+    mv = 240 if any(a <= s < b for a, b in LOW) else (1390 if any(a <= s < b for a, b in HIGH) else 0)
+    for a, b in NONE + HIGH + LOW:
+        if s < a < e: e = a - 0.02  # never run onto the end card or into a product shot
     ass.append(f"Dialogue: 0,{ts(s)},{ts(min(e, D))},Cap,,0,0,{mv},,{text}")
 (T / "captions.ass").write_text("\n".join(ass) + "\n")
 
 # 3. music bed under the voice (sidechain ducking), fade out; captions burn; light phone-camera finish; loudness
-fc = (f"[1:a]aloop=loop=-1:size=2e9,atrim=0:{D:.2f},volume=0.22,afade=t=in:d=1.5,afade=t=out:st={D - 3:.2f}:d=3[m];"
+TRANS = ["b02a", "b04a", "b07", "b08a", "b10a", "b12", "b16a"]  # punch-in transitions (build_body "tin")
+WH = Path("/home/user/video-studio-claude-plugin/video-studio/library/assets/sfx/uisfx/swipe__studio.mp3")
+wt = [HK + tl[n]["start"] - 0.06 for n in TRANS]
+wins = "".join(f"[{2 + k}:a]adelay={int(t * 1000)}|{int(t * 1000)},volume=0.35[w{k}];" for k, t in enumerate(wt))
+wmix = "".join(f"[w{k}]" for k in range(len(wt))) + f"amix=inputs={len(wt)}:normalize=0[wh];"
+fc = (wins + wmix + f"[1:a]aloop=loop=-1:size=2e9,atrim=0:{D:.2f},volume=0.22,afade=t=in:d=1.5,afade=t=out:st={D - 3:.2f}:d=3[m];"
       f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=400[md];"
-      f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"
+      f"[vo][md][wh]amix=inputs=3:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"
       f"[0:v]ass={T / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/5,unsharp=5:5:0.3[v]")
-run(["-i", str(cat), "-i", str(MUSIC), "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
+run(["-i", str(cat), "-i", str(MUSIC), *sum((["-i", str(WH)] for _ in wt), []), "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
      "-c:v", "libx264", "-crf", "20", "-maxrate", "10M", "-bufsize", "20M", "-preset", "slow", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
      "-map_metadata", "-1", "-movflags", "+faststart", str(out)])
 print(out, round(dur(out), 2), "s,", len(groups), "caption groups")

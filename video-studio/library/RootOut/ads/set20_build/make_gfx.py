@@ -106,15 +106,15 @@ def gauge():
     im.save(OUT / "gauge_8x.png")
 
 
-def offer():
+def offer(y0=1260, name="offer"):
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     f1, f2 = F(NEWS, 76), F(INTER.format("SemiBold"), 44)
     t1, t2 = "Grab 2, get a 3rd free", "90-day money-back"
-    w1 = d.textlength(t1, font=f1); d.rounded_rectangle(((W - w1) / 2 - 50, 1260, (W + w1) / 2 + 50, 1380), 60, fill=ORANGE)
-    d.text(((W - w1) / 2, 1272), t1, font=f1, fill=WHITE)
-    w2 = d.textlength(t2, font=f2); d.rounded_rectangle(((W - w2) / 2 - 36, 1410, (W + w2) / 2 + 36, 1490), 40, fill=(255, 255, 255, 240))
-    d.text(((W - w2) / 2, 1422), t2, font=f2, fill=NAVY)
-    im.save(OUT / "offer.png")
+    w1 = d.textlength(t1, font=f1); d.rounded_rectangle(((W - w1) / 2 - 50, y0, (W + w1) / 2 + 50, y0 + 120), 60, fill=ORANGE)
+    d.text(((W - w1) / 2, y0 + 12), t1, font=f1, fill=WHITE)
+    w2 = d.textlength(t2, font=f2); d.rounded_rectangle(((W - w2) / 2 - 36, y0 + 150, (W + w2) / 2 + 36, y0 + 230), 40, fill=(255, 255, 255, 240))
+    d.text(((W - w2) / 2, y0 + 162), t2, font=f2, fill=NAVY)
+    im.save(OUT / f"{name}.png")
 
 
 def calendar(t, k):
@@ -162,7 +162,7 @@ def endcard(t, k):
 
 if __name__ == "__main__":
     for n in range(4): checklist(n)
-    gauge(); offer()
+    gauge(); offer(); offer(130, "offer_top")
     video("sidecut_root", 3.0, lambda t, k: heel(t, k, "root"))
     video("sidecut_arrows", 3.5, lambda t, k: heel(t, k, "arrows"))
     video("sidecut_break", 6.0, lambda t, k: heel(t, k, "break"))

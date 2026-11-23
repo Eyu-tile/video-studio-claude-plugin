@@ -46,3 +46,15 @@ Owner approved ~1,200 credit ceiling (23 Nov). Balance at start: 7,308.15. Job i
 - Code: checklist (3 signs), heel side cut (root / two arrows / root breaking), 14+14 calendar, 8x gauge, offer, end card.
 - Music: "Wholesome", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit line in the post.
 - Spend this build: H1 43.08 + body ~533 (voice ~8, talking 322, inserts 203) ≈ 576 of the ~1,200 ceiling.
+
+## v2 (23 Nov) — client notes 1–6 + reused animations + 7 transitions
+- 0:15 AAD pebbles card → real beach feet (Mixkit free) · 1:08 flat side cut → S13 m2 3D root (1d651123…) · 1:13 comment card
+  over a new silent mom-on-phone clip, blurred (97b21737…, 28 cr) for 3 s, then real Coverr calendar (the adult-foot clip
+  3b653e65… was blocked by the safety filter; not reworded) · 1:23 AAD card + study card removed → S19 footprints, sister's
+  socks, toe photo, S19 school sneakers, Mixkit kids on a pier · 1:52 arrows → S13 m1 door (56f40499…) · 2:25 static bottle →
+  S17 x9 bottle in a pediatric exam room (04796e0c…).
+- Also reused: S17 x3 soil cutaway on "The root stayed" (ee317059…), S17 x6 3D root breaks (692c7031…) on "pokeweed and white
+  cedar…", S17 x10 hand adds the third bottle (5e57f5fc…) on the offer (pill + captions moved above the bottles).
+- 7 punch-in transitions with a whoosh: hook→body, the check, "The root stayed" section, "A friend said", RootOut reveal,
+  routine, close. Captions clamp at product shots and the end card.
+- Out: `out/WilloMD_RootOut_Set20_H1_9x16_v2.mp4` (198.7 s), freezedetect PASS. v2 spend 28 cr; Set 20 total ≈ 606.

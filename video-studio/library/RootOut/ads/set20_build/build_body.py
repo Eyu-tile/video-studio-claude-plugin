@@ -34,13 +34,16 @@ def overlay_chain(ovs, base="[v0]"):
     return s, cur
 
 
-def piece(kind, src, d, out, ss=0.0, ovs=(), crop=None):
+def piece(kind, src, d, out, ss=0.0, ovs=(), crop=None, bg=None, tin=False):
+    global TIN; TIN = tin
     ovin = sum((["-loop", "1", "-i", str(o)] for o in ovs), [])
     if kind == "clip":
         avail = dur(src) - ss; f = min(1.0, avail / d)
         if f < 0.7: sys.exit(f"{src}: needs {d:.2f}s, has {avail:.2f}s (would freeze/over-slow)")
         pre = f"crop={crop}," if crop else ""
-        g = f"[0:v]trim=start={ss},setpts=(PTS-STARTPTS)/{f:.4f},{pre}{COVER},fps={FPS}[v0]"
+        tin = (",scale=w='trunc(1080*(1+0.16*max(0,1-t/0.28))/2)*2':h=-2:eval=frame,crop=1080:1920,"
+               "eq=brightness='0.22*max(0,1-t/0.18)':eval=frame,setsar=1") if TIN else ""
+        g = f"[0:v]trim=start={ss},setpts=(PTS-STARTPTS)/{f:.4f},{pre}{COVER},fps={FPS}{tin}[v0]"
         s, cur = overlay_chain(ovs); run(["-i", str(src), *ovin, "-filter_complex", g + s, "-map", cur, "-t", f"{d:.3f}", "-an", *ENC, str(out)])
     elif kind == "photo":  # real still: blurred self as moving bg + card with slow push-in (no on-screen credit)
         n = int(d * FPS) + 2
@@ -64,6 +67,10 @@ def piece(kind, src, d, out, ss=0.0, ovs=(), crop=None):
             s += f";{cur}[{i + 2}:v]overlay=0:0[o{i}]"; cur = f"[o{i}]"
         run(["-stream_loop", "-1", "-i", str(GX / "bg_soft.mp4"), "-loop", "1", "-i", str(src), *ov2, "-filter_complex", g + s,
              "-map", cur, "-t", f"{d:.3f}", *ENC, str(out)])
+    elif kind == "cardclip":  # card over the same scene blurred and still playing
+        g = (f"[0:v]{COVER},fps={FPS},gblur=sigma=26,eq=brightness=-0.08[bg];[1:v]format=rgba,"
+             f"scale=w='trunc(min(1000,iw)*(0.96+0.04*t/{d:.2f})/2)*2':h=-2:eval=frame[c];[bg][c]overlay=x='(W-w)/2':y='(H-h)/2-60':shortest=1[v0]")
+        run(["-i", str(bg), "-loop", "1", "-i", str(src), "-filter_complex", g, "-map", "[v0]", "-t", f"{d:.3f}", "-an", *ENC, str(out)])
     else:
         sys.exit(kind)
 
@@ -72,12 +79,12 @@ def piece(kind, src, d, out, ss=0.0, ovs=(), crop=None):
 ck = lambda n: GX / f"checklist_{n}.png"
 B4, B8 = BR / "b04_check_macro", BR / "b08_dandelion"
 LINES = [
-    ("b02a", ("clip", CL / "t01.mp4", 5.0), [("clip", CL / "t01.mp4", 2.95, {}), ("clip", CL / "g02_walk.mp4", None, {})]),
+    ("b02a", ("clip", CL / "t01.mp4", 5.0), [("clip", CL / "t01.mp4", 2.95, {"tin": True}), ("clip", CL / "g02_walk.mp4", None, {})]),
     ("b02b", ("vo", AU / "vo02.mp3"), [("photo", B4 / "wm_plantar-wart-at-heel.jpg", 2.4, {}), ("photo", B4 / "wm_calluses.jpg", 2.0, {}),
-                                       ("card", GX / "w2_pebbles_aad_card.png", None, {})]),
+                                       ("clip", BR / "b02_side_of_foot/mk_feet-walking-on-the-beach-1013.mp4", None, {})]),
     ("b03", ("vo", AU / "vo03.mp3"), [("clip", CL / "g03_counter.mp4", 3.4, {}), ("photo", BR / "b03_pumice_tweezers/wm_pumice-stone.jpg", 2.6, {}),
                                       ("photo", BR / "b03_pumice_tweezers/wm_tweezers-variety.jpg", 2.4, {}), ("photo", B4 / "wm_a-callus.jpg", None, {})]),
-    ("b04a", ("clip", CL / "t04.mp4", 5.0), [("clip", CL / "t04.mp4", None, {})]),
+    ("b04a", ("clip", CL / "t04.mp4", 5.0), [("clip", CL / "t04.mp4", None, {"tin": True})]),
     ("b04b", ("vo", AU / "vo05.mp3"), [("photo", B4 / "wm_evolucion-de-un-callo.jpg", 3.4, {"ovs": [ck(0)]}),
                                        ("card", GX / "w1_dots_nhs_card.png", 3.4, {"ovs": [ck(1)]}),
                                        ("photofull", B4 / "wm_largeplanterwart.jpg", None, {"ovs": [ck(1)]})]),
@@ -85,31 +92,33 @@ LINES = [
     ("b04d", ("vo", AU / "vo07.mp3"), [("photo", B4 / "wm_plantar-warts-1.jpg", 4.2, {"ovs": [ck(3)]}), ("photo", B4 / "wm_painful-plantar-warts.jpg", None, {"ovs": [ck(3)]})]),
     ("b05a", ("vo", AU / "vo08.mp3"), [("photo", B4 / "wm_painful-deep-plantar-wart.jpg", 1.7, {"ovs": [ck(3)]}), ("photo", B4 / "wm_deep-plantar-wart.jpg", 1.6, {"ovs": [ck(3)]}),
                                        ("photofull", B4 / "wm_large-plantar-warts.jpg", None, {"ovs": [ck(3)]})]),
-    ("b05b", ("clip", CL / "t09.mp4", 4.0), [("clip", CL / "t09.mp4", 2.55, {}), ("clip", GX / "sidecut_root.mp4", None, {})]),
+    ("b05b", ("clip", CL / "t09.mp4", 4.0), [("clip", CL / "t09.mp4", 2.55, {}), ("clip", RU / "s13_m2_root.mp4", None, {"ss": 0.8})]),
     ("b06a", ("clip", CL / "t10.mp4", 4.0), [("clip", CL / "t10.mp4", None, {})]),
-    ("b06b", ("vo", AU / "vo11.mp3"), [("card", GX / "c_comment_card.png", None, {})]),
-    ("b07", ("vo", AU / "vo12.mp3"), [("clip", CL / "g07_drawer.mp4", 4.6, {}), ("card", GX / "w3_nopick_aad_card.png", 3.4, {}),
-                                      ("clip", CL / "g07_sister.mp4", 2.6, {}), ("photo", BR / "b07_sister_toe/wm_toe-plantar-wart-0147.jpg", 2.0, {}),
-                                      ("card", GX / "c_study_card.png", None, {})]),
-    ("b08a", ("clip", CL / "t13.mp4", 4.0), [("clip", CL / "t13.mp4", None, {})]),
+    ("b06b", ("vo", AU / "vo11.mp3"), [("cardclip", GX / "c_comment_card.png", 3.0, {"bg": CL / "g06_mom_phone.mp4"}), ("clip", BR / "b13_calendar/cv_july-calendar-vtfce5hrof.mp4", None, {})]),
+    ("b07", ("vo", AU / "vo12.mp3"), [("clip", CL / "g07_drawer.mp4", 4.48, {"tin": True}), ("clip", RU / "s17_x3_soil.mp4", 1.2, {"ss": 0.3}),
+                                      ("clip", RU / "s19_footprints.mp4", 2.17, {}), ("clip", CL / "g07_sister.mp4", 1.55, {}),
+                                      ("photo", BR / "b07_sister_toe/wm_toe-plantar-wart-0147.jpg", 1.35, {}),
+                                      ("clip", RU / "s19_sneakers.mp4", 4.85, {}),
+                                      ("clip", BR / "b14_barefoot_backyard/mk_three-kids-running-in-a-wooden-pier-48264.mp4", None, {})]),
+    ("b08a", ("clip", CL / "t13.mp4", 4.0), [("clip", CL / "t13.mp4", None, {"tin": True})]),
     ("b08b", ("vo", AU / "vo14.mp3"), [("photo", BR / "b08_freeze/wm_wart-cryotherapy.jpg", 1.8, {}), ("clip", RU / "s1_dand_snap.mp4", 2.4, {}),
                                        ("photo", B8 / "wm_taraxacum-officinale-15-p-bot-tara-offi-62.jpg", 2.4, {}), ("clip", RU / "s1_dand_back.mp4", None, {})]),
-    ("b09a", ("clip", CL / "t15.mp4", 5.0), [("clip", CL / "t15.mp4", 1.9, {}), ("clip", GX / "sidecut_arrows.mp4", None, {})]),
+    ("b09a", ("clip", CL / "t15.mp4", 5.0), [("clip", CL / "t15.mp4", 1.9, {}), ("clip", RU / "s13_m1_door.mp4", None, {"ss": 0.6})]),
     ("b09b", ("vo", AU / "vo16.mp3"), [("clip", RU / "s1_dand_root.mp4", None, {})]),
-    ("b10a", ("clip", CL / "t17.mp4", 5.0), [("clip", CL / "t17.mp4", None, {})]),
+    ("b10a", ("clip", CL / "t17.mp4", 5.0), [("clip", CL / "t17.mp4", None, {"tin": True})]),
     ("b10b", ("vo", AU / "vo18.mp3"), [("clip", RU / "s19_skin_lemon.mp4", 5.2, {}), ("clip", RU / "s19_skin_teatree.mp4", 6.2, {"ovs": [GX / "gauge_8x.png"]}),
-                                       ("clip", GX / "sidecut_break.mp4", None, {})]),
-    ("b11", ("vo", AU / "vo19.mp3"), [("clip", RU / "s19_socks_bed.mp4", 5.0, {}), ("photo", L / "brand/images/pdp/A01-bottle-front-white.jpg", 3.0, {}),
+                                       ("clip", RU / "s17_x6_root3d.mp4", None, {})]),
+    ("b11", ("vo", AU / "vo19.mp3"), [("clip", RU / "s19_socks_bed.mp4", 5.0, {}), ("clip", RU / "s17_x9_product.mp4", 3.0, {"ss": 1.0}),
                                       ("card", GX / "q_flinch_card.png", None, {})]),
-    ("b12", ("vo", AU / "vo20.mp3"), [("clip", RU / "s19_file_kid.mp4", 4.4, {}),
+    ("b12", ("vo", AU / "vo20.mp3"), [("clip", RU / "s19_file_kid.mp4", 4.4, {"tin": True}),
                                       ("clip", HOWTO, 2.6, {"ss": 2.35, "crop": "540:960:200:120"}),
                                       ("clip", HOWTO, 2.4, {"ss": 4.75, "crop": "540:960:270:120"}),
                                       ("clip", CL / "g12_feetup.mp4", None, {})]),
     ("b13", ("vo", AU / "vo21.mp3"), [("clip", GX / "calendar.mp4", 3.9, {}), ("card", GX / "q_dots_card.png", None, {})]),
     ("b14", ("vo", AU / "vo22.mp3"), [("clip", CL / "g14_run.mp4", None, {})]),
     ("b15", ("clip", CL / "t23.mp4", 8.0), [("clip", CL / "t23.mp4", None, {})]),
-    ("b16a", ("clip", CL / "t24.mp4", 6.0), [("clip", CL / "t24.mp4", None, {})]),
-    ("b16b", ("vo", AU / "vo25.mp3"), [("clip", RU / "s19_three_bottles.mp4", None, {"ovs": [GX / "offer.png"]})]),
+    ("b16a", ("clip", CL / "t24.mp4", 6.0), [("clip", CL / "t24.mp4", None, {"tin": True})]),
+    ("b16b", ("vo", AU / "vo25.mp3"), [("clip", RU / "s17_x10_bottles.mp4", None, {"ss": 2.6, "ovs": [GX / "offer_top.png"]})]),
     ("b16c", ("vo", AU / "vo26.mp3"), [("clip", GX / "endcard.mp4", None, {})]),
 ]
 LEAD, TAIL = 0.08, 0.22
@@ -128,7 +137,7 @@ def build_line(i, name, audio, vis):
     parts = []
     for j, (k, s, d, o) in enumerate(vis):
         d = d or rest / len(free); out = TMP / f"{i:02d}_{name}_{j}.mp4"
-        piece(k, s, d, out, ss=o.get("ss", 0.0), ovs=o.get("ovs", ()), crop=o.get("crop")); parts.append(out)
+        piece(k, s, d, out, ss=o.get("ss", 0.0), ovs=o.get("ovs", ()), crop=o.get("crop"), bg=o.get("bg"), tin=o.get("tin", False)); parts.append(out)
     ins = sum((["-i", str(p)] for p in parts), [])
     vcat = "".join(f"[{j}:v]" for j in range(len(parts))) + f"concat=n={len(parts)}:v=1:a=0[v]"
     na = len(parts)
