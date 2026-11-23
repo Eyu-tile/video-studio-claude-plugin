@@ -111,7 +111,39 @@ def http_json(url, headers=None, params=None):
             raise RuntimeError(f"cannot reach {urllib.parse.urlsplit(url).netloc}: {e.reason}")
 
 
+WIKI_THUMBS = (1920, 1280, 960)  # Wikimedia's standard thumbnail widths (https://w.wiki/GHai)
+
+
+def wiki_thumb(url, width):
+    """upload.wikimedia.org original -> its standard-width thumbnail URL, or None."""
+    m = re.match(r"https://upload\.wikimedia\.org/(wikipedia/[^/]+/)(?!thumb/)([0-9a-f]/[0-9a-f]{2}/)([^/?#]+)(?:[?#].*)?$",
+                 url)
+    if not m or not re.search(r"\.(jpe?g|png|tiff?|webp|gif)$", m.group(3), re.I):
+        return None
+    name = m.group(3)
+    tail = f"{width}px-{name}" + (".jpg" if re.search(r"\.tiff?$", name, re.I) else "")
+    return f"https://thumb.wikimedia.org/{m.group(1)}thumb/{m.group(2)}{name}/{tail}"
+
+
 def download(url, dest, headers=None, max_mb=4096):
+    """Fetch url to dest. Wikimedia often refuses originals with 429 and asks for standard thumbnails: on a 429
+    for an upload.wikimedia.org original image, fall back to its largest standard thumbnail."""
+    last = None
+    for attempt, u in enumerate([url] + [t for w in WIKI_THUMBS if (t := wiki_thumb(url, w))]):
+        try:
+            return _download(u, dest, headers, max_mb)
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code == 429 and "upload.wikimedia.org" in url:
+                time.sleep(1 + attempt)
+                continue
+            if e.code == 400 and attempt and "upload.wikimedia.org" in url:  # thumb wider than the original
+                continue
+            raise
+    raise last
+
+
+def _download(url, dest, headers=None, max_mb=4096):
     dest = Path(dest)
     dest.parent.mkdir(parents=True, exist_ok=True)
     req = urllib.request.Request(url, headers={"User-Agent": UA, **(headers or {})})
