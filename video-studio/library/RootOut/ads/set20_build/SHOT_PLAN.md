@@ -40,7 +40,7 @@ Source key: **R** real internet file · **W** real screenshot card · **C** code
 | 14 | 200–207 | boy runs barefoot across backyard, golden hour, sister follows (knees down) | G 5 (real Coverr feet clip as backup) | 5 |
 | 15 | 207–217.5 | mom to camera, warm shrug | L 8 | 8 |
 | 16 | 217.5–232 | mom holds bottle by her face, points down to the link | L 10 (bottle ref) | 10 |
-| end | 232–235 | end card: bottle + snapped-vs-whole dandelion icon + heel icon with three black dots; "AI illustration. Testimonials are AI examples." | C | 0 |
+| end | 232–235 | end card: bottle + snapped-vs-whole dandelion icon + heel icon with three black dots; "Check for the black dots. · Grab 2, get a 3rd free · 90-day money-back" (no AI/disclaimer line: owner rule 23 Nov) | C | 0 |
 
 Captions: burned in throughout (client's Set 1 note), kept off cards and the bottle. Sound bed + foley under every AI shot,
 phone-camera finish, loudnorm (Set 1 `finish.sh`). Music: free CC track, credited.
@@ -58,6 +58,16 @@ phone-camera finish, loudnorm (Set 1 `finish.sh`). Music: free CC track, credite
 | **Ceiling** | | **~1,350 of 7,308** |
 Free: all screenshots/cards, side cuts, checklist, calendar, end card, captions, the Set 1 3D skin clips, real b-roll.
 
+## House rules that override the brief (owner + client, 23 Nov; DO_NOT_USE.md, style/LESSONS.md L1)
+- No disclaimer-type text on screen: drop the brief's end-card line "AI illustration. Testimonials are AI examples.",
+  no `*`/`†` marks, no photo-credit captions (credits go in the post description). Disclosure = platform AI label.
+- Each b-roll clip once per ad (run `ads/set19_build/qa_unique.py`); no frozen b-roll (`qa_freeze.py`): real stills get
+  continuous push-ins, never a held last frame.
+- A lip-synced clip only plays with its own line. Kids look school-age (5+). Captions in the middle safe zone,
+  including over screenshots.
+- Swipe pace (see `references/veloma-19/SWIPE.md`): insert every 2–3 s while she explains; mom on camera for anchor
+  lines only (~40 s lip-sync instead of 74 s), ~20 s more generated inserts. Revised: first pass ~905, ceiling ~1,200.
+
 ## Open claim checks (carry from ROUND1_SCRIPTS.md)
 "Recommended by pediatricians" (beat 11) has no proof yet · kids' formula vs pokeweed/white cedar (beat 10 + 11) ·
-"8x deeper" needs its † footnote on screen · "gone in about two weeks" and both quote cards are [proof needed].
+"8x deeper" (no † on screen now: footnote goes in the post description) · "gone in about two weeks" and both quote cards are [proof needed].
