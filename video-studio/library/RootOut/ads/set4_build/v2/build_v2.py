@@ -113,7 +113,7 @@ BODY_SHOTS = [
  ("and there's nothing to book.", gx("phone_delete", in_=0.0), []),
  ("If your kid's wart keeps coming back,", mom("M8_sofa"), []),
  ("you've been stuck at number three.", c2("B23_drawer", in_=0.2), []),
- ("Skip to number four.", gx("P3_hero_wide", in_=2.0, **PUSH), ["rank4"]),
+ ("Skip to number four.", gx("P3_hero_wide", in_=0.3), ["rank4"]),
  ("It's at the link below.", c2("R_pdp_scroll", in_=0.0), ["link"]),
  ("Three for the price of two.", c1("i16_bottles", in_=0.3), ["b2g1"]),
  ("And if it's not gone, you get your money back.", gx("offer", in_=0.0), []),
