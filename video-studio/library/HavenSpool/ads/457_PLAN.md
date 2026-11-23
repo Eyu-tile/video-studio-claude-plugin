@@ -103,3 +103,8 @@ VSL (`refs/drive_1jfs/`, voice reference only). Haven & Spool lessons: `vs lesso
   of the Met's Open Access images (the Met's own image server blocks scripted downloads).
 - H1 collage cut-out: same banquet image, cropped to one woman.
 - Spares: Tomb of Nakht paintings (`nakht_*`, public domain / CC0).
+
+## S1 test (Seedance 2.5 720p, gen 147ce096, 15 s, charged $2.92) -> raw/gen/s1_counter_a.mp4
+- Keep 0-10 s: same woman throughout, real look, sweep + only our bottle stands + $90 jar pushed away (H2 + all-hooks jar beat).
+- Reject 11-15 s: label garbles in the push-in ("& Spuck"). Bottle-in-palm close-up -> real Library clip or reference-mode generation.
+- Notes: sweep is fast (0.3 s, motion blur); a frown 2-11 s (heavier than the brief's tone). Seedance takes a start frame OR references, not both.
