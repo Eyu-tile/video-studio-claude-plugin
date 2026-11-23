@@ -186,7 +186,7 @@ def g_end(t):
     d.rounded_rectangle((cxp - pw, cyp - ph, cxp + pw, cyp + ph), 60, fill=ORANGE)
     d.text((cxp, cyp), "Buy 2, get 1 free", font=F(IB, 54), fill=WHITE, anchor="mm")
     d.text((W // 2, 1660), "90-day money-back", font=F(ISB, 46), fill=NAVY, anchor="mm")
-    foot = ("AI illustration. *Benefit claims. Homeopathic claims are based on traditional homeopathic practice,\n"
+    foot = ("*Benefit claims. Homeopathic claims are based on traditional homeopathic practice,\n"
             "not accepted medical evidence, and are not FDA evaluated. Results vary.")
     d.multiline_text((W // 2, 1820), foot, font=F(IM, 22), fill=(110, 115, 125), anchor="mm", align="center")
     return im

@@ -43,3 +43,15 @@ Owner approved a ceiling of ~1,650 credits (H1–H4, captions throughout). Job i
   feet on the tub edge); dot step = brand how-to "Cover" macro. Writing an age into a bare-foot kid prompt trips the safety
   filter (3 blocks); describing "kindergartner … fuzzy socks", "long kid foot", "dinosaur pajamas" passes.
 - v2 re-roll spend ≈ 230 credits (8 submitted, 4 usable). Set 19 total ≈ 1,530 of the 1,650 ceiling.
+
+## v3 (23 Nov) — client notes: captions in the middle on the study page, no "AI illustration" text, every b-roll once
+- Study page (1:00–1:10): captions back in the middle safe zone (top placement removed).
+- **Rule:** no "AI illustration" text anywhere (skin cut-aways and the end-card footnote). The `*` homeopathic and `†` 8x
+  disclaimers stay.
+- **Rule:** each b-roll source is used once per ad. `qa_unique.py` must PASS on every hook (talking clips and code cards
+  excluded). Swaps: kit shelf (r7) → b61 hand sweeps kits into a basket; "Mason's came right back" → b60 wart back on a
+  school-age sole; school walk only in r9; skin tea-tree first half → brand 1v1 cross-section, RootOut half only, cropped
+  clear of its labels (+ our 8x gauge and †); bottles only at "Everybody has their own bottle", r9 → real bottle photo
+  (A01), r13 "tap the link" → real 60-night flat-lay photo; hands-around-legs (tub line) only in the routine, r11 → the
+  calendar alone, r13 "check every foot" → b55 mom's hand on a kid's foot; H3 hook → b20 from 1.8 s (no toddler).
+- Spend: 2 clips ≈ 56 credits. Set 19 total ≈ 1,590 of the 1,650 ceiling.

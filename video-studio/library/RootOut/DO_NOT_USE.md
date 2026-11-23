@@ -24,3 +24,11 @@ These come from what the site itself labels and from claim risk. Client rules, w
 - How-to video bottle (`rootout-how-to-v3.*`): a plain amber bottle with only "WilloMD" small, not the labelled
   RootOut bottle. Fine as a how-to; for a product moment use the labelled renders.
 - Gore: warts/corns are close-ups of skin; keep them clean and mild (no bleeding, peeling flesh or pus).
+
+## Client edit rules (from Set 19 review, 23 Nov 2026) — apply to every set
+- **No "AI illustration" (or any "AI …") text on screen.** Keep the claim disclaimers (`*`, `†`).
+- **Each b-roll clip once per ad.** No repeats of the same footage, real or generated (check with `ads/set19_build/qa_unique.py`).
+- **No frozen b-roll.** Never hold a last frame; stretch ≤ 0.7x or add coverage (`ads/set19_build/qa_freeze.py`).
+- **Lip sync:** a talking clip only ever plays with its own line; never reuse it as b-roll under other VO.
+- **Kids look school-age (≈ 5+), never babies or toddlers.**
+- Captions stay in the middle safe zone, including over screenshots.
