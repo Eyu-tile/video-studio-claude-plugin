@@ -1,0 +1,572 @@
+[
+ {
+  "number": 146,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 7,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 150,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Anti-aging",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 226,
+  "title": "Transformation",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Pod 3",
+  "editor": "Max",
+  "strategist": "Aymon",
+  "angle": "Acne Scarring",
+  "awareness": "Solution aware",
+  "video_type": "UGC",
+  "format": "Transformation",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 4,
+  "refs": [],
+  "hypothesis": "The winning creative framework from a competitor has already proven that it resonates with this audience."
+ },
+ {
+  "number": 227,
+  "title": "Transformation",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Acne Scarring",
+  "awareness": "Solution aware",
+  "video_type": "UGC",
+  "format": "Transformation",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 6,
+  "refs": [],
+  "hypothesis": "The winning creative framework from a competitor has already proven that it resonates with this audience."
+ },
+ {
+  "number": 266,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Eyes",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Us vs Them",
+  "hooks": 4,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 11,
+  "open_notes": 13,
+  "refs": [],
+  "hypothesis": "Modelled on Nothora's \"Botox is the worst way to get rid of eye wrinkles\" (live 419 days; their whole funnel runs on Botox as the enemy, and Frøya sca..."
+ },
+ {
+  "number": 272,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": null,
+  "strategist": "Jared",
+  "angle": "Anti-aging",
+  "awareness": "Problem aware",
+  "video_type": "Text on screen + broll",
+  "format": "Us vs Them",
+  "hooks": 3,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [
+   13,
+   14
+  ],
+  "hypothesis": "Botox / age statics, backed by the Botox-as-enemy ads from Nothora and Frøya (128 days), Facelove's red-marker circles (92 days) and our Briefs #13/#1..."
+ },
+ {
+  "number": 294,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Bloating",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 4,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 8,
+  "open_notes": 12,
+  "refs": [
+   28,
+   106,
+   108,
+   181
+  ],
+  "hypothesis": "Brief #28."
+ },
+ {
+  "number": 299,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 6,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 310,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Dark Circles",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 2,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 311,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "lymph drainage",
+  "awareness": "Unaware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 320,
+  "title": "3 Signs",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Pod 1",
+  "editor": "Rico",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Unaware",
+  "video_type": "Visual Mechanism",
+  "format": "3 Signs",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 343,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Face Skincare",
+  "awareness": "Unaware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 346,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Bloating",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 355,
+  "title": "Us vs Them",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Pod 1",
+  "editor": "Rico",
+  "strategist": "Johnny",
+  "angle": "Bloating",
+  "awareness": "Solution aware",
+  "video_type": "Avatar + B-roll",
+  "format": "Us vs Them",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 7,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 357,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 4,
+  "open_notes": 2,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 363,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multi-use",
+  "awareness": "Problem aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 366,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": "Skin",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 2,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 377,
+  "title": "Storytelling",
+  "stage": "Launched",
+  "round": 3,
+  "pod": "Pod 3",
+  "editor": "Jerome",
+  "strategist": "Aymon",
+  "angle": "Face Skincare",
+  "awareness": "Problem aware",
+  "video_type": "AI Animation",
+  "format": "Storytelling",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 3,
+  "refs": [],
+  "hypothesis": "We’re iterating on a script from Lymphoria that’s currently scaling."
+ },
+ {
+  "number": 382,
+  "title": "Problem into solution",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 2",
+  "editor": "Lliana Umer",
+  "strategist": "Jared",
+  "angle": "Multiple",
+  "awareness": "Problem aware",
+  "video_type": "UGC",
+  "format": "Problem into solution",
+  "hooks": 1,
+  "sizes": [
+   "1x1",
+   "4x5",
+   "9x16",
+   "16x9"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [
+   28
+  ],
+  "hypothesis": "(Briefs for HS, Brief #28)."
+ },
+ {
+  "number": 386,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 2,
+  "pod": "Duplicates",
+  "editor": "Shiv",
+  "strategist": "Alex Richard",
+  "angle": null,
+  "awareness": null,
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 393,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Product aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 422,
+  "title": "5 Places",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Lymph Nodes",
+  "awareness": "Solution aware",
+  "video_type": "Avatar + B-roll",
+  "format": "5 Places",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 2,
+  "open_notes": 1,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 424,
+  "title": "5 Places",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Pod 1",
+  "editor": "Max",
+  "strategist": "Johnny",
+  "angle": "Lymph Nodes",
+  "awareness": "Solution aware",
+  "video_type": "Green screen",
+  "format": "5 Places",
+  "hooks": 1,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 426,
+  "title": "Duplicate",
+  "stage": "Launched",
+  "round": 1,
+  "pod": "Duplicates",
+  "editor": "Muhammad Abubakar",
+  "strategist": "Alex Richard",
+  "angle": "Multiple",
+  "awareness": "Solution aware",
+  "video_type": null,
+  "format": "Duplicate",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 1,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ },
+ {
+  "number": 457,
+  "title": "Storytelling",
+  "stage": "In production",
+  "round": 1,
+  "pod": "Pod 5",
+  "editor": "Eyasu",
+  "strategist": "Gabriel",
+  "angle": "Anti-aging",
+  "awareness": "Solution aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 0,
+  "open_notes": 0,
+  "refs": [
+   107
+  ],
+  "hypothesis": "women 55+ tired of complicated, expensive anti-aging routines will try one ingredient they can keep using every night."
+ },
+ {
+  "number": 464,
+  "title": "Storytelling",
+  "stage": "Approved",
+  "round": 1,
+  "pod": "Pod 4",
+  "editor": "Sharjeel",
+  "strategist": "Sharjeel",
+  "angle": "Skin Tags",
+  "awareness": "Problem aware",
+  "video_type": "Voiceover + B-roll",
+  "format": "Storytelling",
+  "hooks": 3,
+  "sizes": [
+   "9x16"
+  ],
+  "uploads": 3,
+  "open_notes": 0,
+  "refs": [],
+  "hypothesis": ""
+ }
+]
