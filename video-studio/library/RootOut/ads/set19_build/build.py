@@ -37,7 +37,7 @@ def vf_for(src):
     return f"scale={W}:{H}:flags=lanczos,setsar=1,fps={FPS}"
 
 
-def shot_clip(src, src_in, d, out, overlay=None, label=None, speed=1.0, blur=None):
+def shot_clip(src, src_in, d, out, overlay=None, label=None, speed=1.0, blur=None, push=False):
     """render d seconds of video-only from src starting at src_in."""
     src = Path(src)
     if not src.exists():  # placeholder while a clip is still rendering
@@ -54,8 +54,14 @@ def shot_clip(src, src_in, d, out, overlay=None, label=None, speed=1.0, blur=Non
         vf = vf_for(src)
         if speed != 1.0: vf += f",setpts=PTS/{speed}"
         avail = (L - src_in) * speed
-        if avail < d:  # hold the last frame
-            vf += f",tpad=stop_mode=clone:stop_duration={d - avail + 0.1:.3f}"
+        if avail < d - 0.02:  # never freeze: stretch the motion a little instead
+            ratio = avail / d
+            if ratio < 0.7:
+                raise ValueError(f"shot too long for its clip: {src.name} needs {d:.2f}s, has {avail:.2f}s; add coverage")
+            vf += f",setpts=PTS*{d / avail + 0.002:.4f}"
+        if push:  # slow push-in so a still-ish source never reads as frozen
+            n = int(d * FPS) + 1
+            vf += f",zoompan=z='1.0+0.14*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS}"
         cmd = ["ffmpeg", "-v", "error", "-y", "-ss", f"{src_in:.3f}", "-i", str(src), "-t", f"{d:.3f}", "-vf", vf]
     cmd += ["-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "17", "-pix_fmt", "yuv420p", "-r", str(FPS), str(out)]
     run(cmd)
@@ -107,16 +113,17 @@ def amb_clip(src, sin, d, gain):
 class Build:
     def __init__(self, name):
         self.name = name; self.dir = P / "work/build" / name; self.dir.mkdir(parents=True, exist_ok=True)
-        self.parts = []; self.amb = []; self.n = 0; self.t = 0.0; self.words = []; self.nocap = []; self.captop = []  # caption-free zones
+        self.parts = []; self.amb = []; self.n = 0; self.t = 0.0; self.words = []; self.nocap = []; self.captop = []; self.shots = []  # caption-free zones
 
     def _p(self, ext): self.n += 1; return self.dir / f"p{self.n:03d}{ext}"
 
     def talk(self, clip, a, b, gap=0.0, label=None):
         """on-camera piece: video + own audio. Words from whisper of the clip are aligned later."""
-        clip = CL / clip; d = b - a + gap
+        clip = CL / clip; b = min(b, dur(clip) - 0.04); d = b - a + gap
         v = self._p(".mp4"); shot_clip(clip, a, d, v, label=label)
         au = self._p(".wav"); audio_cut(clip, a, b, au)
         if gap: self._pad(au, gap)
+        self.shots.append((round(self.t, 3), round(self.t + d, 3), clip.name))
         self.amb.append(silence(d, self._p(".wav")))
         self.parts.append((v, au, d)); self.words.append(("talk", str(clip), a, b, self.t)); self.t += d
 
@@ -129,9 +136,10 @@ class Build:
             src, sin = s[0], s[1]; opts = s[3] if len(s) > 3 else {}
             sd = cuts[k + 1] - cuts[k]
             if sd <= 0.05: continue
-            v = self._p(".mp4"); shot_clip(src, sin, sd, v, overlay=opts.get("overlay"), label=opts.get("label"), speed=opts.get("speed", 1.0), blur=opts.get("blur"))
+            v = self._p(".mp4"); shot_clip(src, sin, sd, v, overlay=opts.get("overlay"), label=opts.get("label"), speed=opts.get("speed", 1.0), blur=opts.get("blur"), push=opts.get("push", False))
             ambs.append(amb_clip(src, sin, sd, opts.get("amb", 0.0 if "/clips/t" in str(src) else 1.0)))
             vids.append(v)
+            self.shots.append((round(self.t + cuts[k] - a, 3), round(self.t + cuts[k + 1] - a, 3), Path(src).name))
             if opts.get("nocap"): self.nocap.append((self.t + cuts[k] - a, self.t + cuts[k + 1] - a))
             if opts.get("captop"): self.captop.append((self.t + cuts[k] - a, self.t + cuts[k + 1] - a))
         v = self._p(".mp4"); self._concat_v(vids, v)
@@ -164,6 +172,6 @@ class Build:
         run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c:a", "pcm_s16le", str(acat)])
         lst = self.dir / "amb.txt"; lst.write_text("".join(f"file '{x}'\n" for x in self.amb))
         run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c:a", "pcm_s16le", str(self.dir / "amb.wav")])
-        json.dump({"pieces": self.words, "nocap": self.nocap, "captop": self.captop, "length": self.t}, open(self.dir / "timeline.json", "w"), indent=1)
+        json.dump({"pieces": self.words, "nocap": self.nocap, "captop": self.captop, "shots": self.shots, "length": self.t}, open(self.dir / "timeline.json", "w"), indent=1)
         print(self.name, f"{self.t:.2f}s", "->", vcat)
         return vcat, acat
