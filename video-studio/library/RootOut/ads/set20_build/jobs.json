@@ -1,0 +1,27 @@
+{
+ "account": "WilloMd",
+ "workspace": "ab6cddcc-4e64-4d4a-96e5-18b040dffc7d",
+ "voices": {
+  "narrator_juno": "a3ce02fe-4d3e-55bc-b4d4-a4801b9acdb4",
+  "alt_maeve": "64cf4f1a-61c8-5938-9aea-83d12b2e1d13"
+ },
+ "audio": {
+  "vo_h1_juno": "7e96dc19-c9fe-43fe-8561-d67921c8753a",
+  "vo_h1_maeve_alt": "7b1ab21f-91ae-4fb4-b50a-98f23df75b06"
+ },
+ "frames": {
+  "mom_ref_f01a": "c0ea9e4d-1a3e-4e0b-a1ab-19a45f259e67",
+  "rejected": {
+   "f01b": "44519d60-3171-4136-b1c4-a1a002e4b866",
+   "f01c": "06b81ce0-ae25-4112-b7da-78a4ae8a7109",
+   "f01d": "b28f5465-58e1-490d-bb3f-963f8eb5ebbc"
+  }
+ },
+ "video": {
+  "h1_draft_BLOCKED_refunded": "55d4bfce-a9ee-459d-bca0-6ac5c57009ca",
+  "t01_h1_talk": "c77f2bbf-7ad4-4dbe-883a-89c4afcd916c"
+ },
+ "real_inserts": {
+  "h1_black_dots": "assets/broll/b04_check_macro/wm_veruca-right-foot-detail.jpg (Wikimedia, CC BY-SA 3.0, Simon Nuttall assumed)"
+ }
+}
