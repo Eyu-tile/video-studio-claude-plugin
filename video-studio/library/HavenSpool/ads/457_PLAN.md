@@ -108,3 +108,9 @@ VSL (`refs/drive_1jfs/`, voice reference only). Haven & Spool lessons: `vs lesso
 - Keep 0-10 s: same woman throughout, real look, sweep + only our bottle stands + $90 jar pushed away (H2 + all-hooks jar beat).
 - Reject 11-15 s: label garbles in the push-in ("& Spuck"). Bottle-in-palm close-up -> real Library clip or reference-mode generation.
 - Notes: sweep is fast (0.3 s, motion blur); a frown 2-11 s (heavier than the brief's tone). Seedance takes a start frame OR references, not both.
+
+## Character v2 (GPT Image 2.5, editor's choice of image model from here on)
+- Seedream lock read as a model ("AI slop" on video). New ordinary-woman lock: `locks/char_gpt_a.png` (gen c8ca8def,
+  recommended) / `char_gpt_b.png` (bf14f5df). Messy hair, glasses on head, real skin, worn cardigan, lived-in bathroom.
+- Plan: rebuild start frames with her (GPT Image 2.5), short 4-6 s clips, faces brief, real motion via Kling 3.0
+  Motion Control ($0.10/s of the source clip) when a real phone clip of the action is available.
