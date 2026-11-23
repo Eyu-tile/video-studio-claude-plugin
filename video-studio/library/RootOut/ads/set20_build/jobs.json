@@ -33,7 +33,10 @@
   "vo23": "aadbc498-17d2-48f8-b1b8-16941213c80e",
   "vo24": "0c93116d-5b24-401b-ae0d-b38aa0bbe803",
   "vo25": "170f66f7-82b0-4b6f-8bf1-a0f8549e345c",
-  "vo26": "2ffa6bb1-ea99-4bd5-b36e-2adb218903e1"
+  "vo26": "2ffa6bb1-ea99-4bd5-b36e-2adb218903e1",
+  "vo_h2": "918f4b1c-6f00-4a44-ba59-dd8837229c47",
+  "vo_h3": "6855b49c-b64a-48f2-922b-d57aaeb286ae",
+  "vo03_h2_body": "75299c35-14fa-4b63-93cc-bace32bd2dfb"
  },
  "frames": {
   "mom_ref_f01a": "c0ea9e4d-1a3e-4e0b-a1ab-19a45f259e67",
@@ -61,7 +64,11 @@
   "g07_drawer": "9d5dc14b-5eda-43b2-912a-25ad46a13282",
   "g07_sister": "2800c067-4f42-4c39-a5e3-9cf567574b8d",
   "g12_feetup": "bedc70f4-39b5-42d3-b173-ae246a12c153",
-  "g14_run": "ee26b25b-9b85-4590-ba32-0ccfbc32ef68"
+  "g14_run": "ee26b25b-9b85-4590-ba32-0ccfbc32ef68",
+  "t_h2_pumice": "363c472d-ad99-432d-a0c1-907ff541d3a1",
+  "t_h3_flashlight": "ff44c9d3-450e-484f-adfa-5d0ba4c2484a",
+  "g06_mom_phone_v2": "97b21737-e42c-4e20-83c7-555242ac427a",
+  "BLOCKED_adult_foot": "3b653e65-055c-4eac-9e88-ca47461f3bc1"
  },
  "real_inserts": {
   "h1_black_dots": "assets/broll/b04_check_macro/wm_veruca-right-foot-detail.jpg (Wikimedia, CC BY-SA 3.0, Simon Nuttall assumed)"

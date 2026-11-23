@@ -6,7 +6,7 @@ import subprocess, sys, tempfile
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-talk, vo, cut, photo, text, out = sys.argv[1:7]; cut = float(cut)
+talk, vo, cut, photo, text, out = sys.argv[1:7]; cut = cut if "-" in cut else float(cut)
 NEWS = str(Path.home() / ".fonts/Newsreader-SemiBold.ttf"); NAVY = (11, 42, 91)
 tmp = Path(tempfile.mkdtemp())
 
@@ -42,9 +42,30 @@ sh = sh.filter(ImageFilter.GaussianBlur(22)); sh.paste(card, (60, 60), card); sh
 
 dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", talk]))
 vod = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", vo]))
+WIN = None
+if isinstance(cut, str):  # "a-b": card only inside that window, talking before and after
+    a_, b_ = (float(x) for x in sys.argv[3].split("-")); WIN = (a_, b_); cut = a_
 end = min(dur, vod + 0.6); pd = end - cut
-# simpler, explicit: show sharp clip before cut, blurred+card after
+if WIN:
+    a_, b_ = WIN; wd = b_ - a_
+    fc = (f"[0:v]scale=1080:1920:flags=lanczos,setsar=1,trim=0:{end},setpts=PTS-STARTPTS,split=3[a][b][c];"
+          f"[b]gblur=sigma=28,eq=brightness=-0.06,trim={a_}:{b_},setpts=PTS-STARTPTS[bl];"
+          f"[2:v]format=rgba,scale=w='iw*(0.94+0.06*t/{wd:.2f})':h=-2:eval=frame[cd];"
+          f"[bl][cd]overlay=x='(W-w)/2':y='(H-h)/2-120':shortest=1[pc];"
+          f"[a]trim=0:{a_},setpts=PTS-STARTPTS[t0];[c]trim={b_}:{end},setpts=PTS-STARTPTS[t2];"
+          f"[t0][pc][t2]concat=n=3:v=1:a=0[cat];[cat][1:v]overlay=0:0[v]")
+CARD_FIRST = len(sys.argv) > 7 and sys.argv[7] == "card_first"
+fc_win = fc if WIN else None
+# default: sharp clip before cut, blurred+card after. card_first: blurred+card first, then the sharp clip
 fc = (
+    f"[0:v]scale=1080:1920:flags=lanczos,setsar=1,trim=0:{end},setpts=PTS-STARTPTS,split[a][b];"
+    f"[b]gblur=sigma=28,eq=brightness=-0.06,trim=0:{cut},setpts=PTS-STARTPTS[bl];"
+    f"[2:v]format=rgba,scale=w='iw*(0.94+0.06*t/{cut:.2f})':h=-2:eval=frame[cd];"
+    f"[bl][cd]overlay=x='(W-w)/2':y='(H-h)/2-120':shortest=1[pc];"
+    f"[a]trim={cut}:{end},setpts=PTS-STARTPTS[t1];"
+    f"[pc][t1]concat=n=2:v=1:a=0[cat];"
+    f"[cat][1:v]overlay=0:0[v]"
+) if CARD_FIRST else (
     f"[0:v]scale=1080:1920:flags=lanczos,setsar=1,trim=0:{end},setpts=PTS-STARTPTS,split[a][b];"
     f"[b]gblur=sigma=28,eq=brightness=-0.06,trim={cut}:{end},setpts=PTS-STARTPTS[bl];"
     f"[2:v]format=rgba,scale=w='iw*(0.94+0.06*t/{pd:.2f})':h=-2:eval=frame[cd];"
@@ -53,6 +74,7 @@ fc = (
     f"[t0][pc]concat=n=2:v=1:a=0[cat];"
     f"[cat][1:v]overlay=0:0[v]"
 )
+if WIN: fc = fc_win
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", talk, "-loop", "1", "-i", str(tmp / "hook.png"),
                 "-loop", "1", "-framerate", "30", "-i", str(tmp / "card.png"), "-i", vo,
                 "-filter_complex", fc, "-map", "[v]", "-map", "3:a", "-t", f"{end:.2f}", "-r", "30",

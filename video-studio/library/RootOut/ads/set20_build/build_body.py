@@ -24,6 +24,16 @@ def run(args):
 
 
 COVER = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1"
+EASE = "(1-pow(1-min(1,t/{d}),3))"
+TRANS_FX = {  # 7 different incoming transitions (first shot of a line), all ~0.3 s, no sound
+    "punch": "scale=w='trunc(1080*(1+0.16*max(0,1-t/0.28))/2)*2':h=-2:eval=frame,crop=1080:1920",
+    "whip": "pad=2160:1920:1080:0:black,crop=1080:1920:x='1080*" + EASE.format(d=0.26) + "':y=0",
+    "dip": "fade=t=in:st=0:d=0.32",
+    "flash": "eq=brightness='0.55*max(0,1-t/0.24)':eval=frame",
+    "blur": "split[s0][s1];[s1]gblur=sigma=28,format=rgba,fade=t=out:st=0:d=0.4:alpha=1[s2];[s0][s2]overlay=format=auto,format=yuv420p",
+    "slide": "pad=1080:3840:0:1920:black,crop=1080:1920:x=0:y='1920*" + EASE.format(d=0.28) + "'",
+    "spin": "scale=1242:2208,rotate=a='0.14*pow(max(0,1-t/0.32),2)':fillcolor=black,crop=1080:1920",
+}
 
 
 def overlay_chain(ovs, base="[v0]"):
@@ -41,8 +51,7 @@ def piece(kind, src, d, out, ss=0.0, ovs=(), crop=None, bg=None, tin=False):
         avail = dur(src) - ss; f = min(1.0, avail / d)
         if f < 0.7: sys.exit(f"{src}: needs {d:.2f}s, has {avail:.2f}s (would freeze/over-slow)")
         pre = f"crop={crop}," if crop else ""
-        tin = (",scale=w='trunc(1080*(1+0.16*max(0,1-t/0.28))/2)*2':h=-2:eval=frame,crop=1080:1920,"
-               "eq=brightness='0.22*max(0,1-t/0.18)':eval=frame,setsar=1") if TIN else ""
+        tin = "," + TRANS_FX[TIN] + ",setsar=1" if TIN else ""
         g = f"[0:v]trim=start={ss},setpts=(PTS-STARTPTS)/{f:.4f},{pre}{COVER},fps={FPS}{tin}[v0]"
         s, cur = overlay_chain(ovs); run(["-i", str(src), *ovin, "-filter_complex", g + s, "-map", cur, "-t", f"{d:.3f}", "-an", *ENC, str(out)])
     elif kind == "photo":  # real still: blurred self as moving bg + card with slow push-in (no on-screen credit)
@@ -79,12 +88,12 @@ def piece(kind, src, d, out, ss=0.0, ovs=(), crop=None, bg=None, tin=False):
 ck = lambda n: GX / f"checklist_{n}.png"
 B4, B8 = BR / "b04_check_macro", BR / "b08_dandelion"
 LINES = [
-    ("b02a", ("clip", CL / "t01.mp4", 5.0), [("clip", CL / "t01.mp4", 2.95, {"tin": True}), ("clip", CL / "g02_walk.mp4", None, {})]),
+    ("b02a", ("clip", CL / "t01.mp4", 5.0), [("clip", CL / "t01.mp4", 2.95, {"tin": "punch"}), ("clip", CL / "g02_walk.mp4", None, {})]),
     ("b02b", ("vo", AU / "vo02.mp3"), [("photo", B4 / "wm_plantar-wart-at-heel.jpg", 2.4, {}), ("photo", B4 / "wm_calluses.jpg", 2.0, {}),
                                        ("clip", BR / "b02_side_of_foot/mk_feet-walking-on-the-beach-1013.mp4", None, {})]),
     ("b03", ("vo", AU / "vo03.mp3"), [("clip", CL / "g03_counter.mp4", 3.4, {}), ("photo", BR / "b03_pumice_tweezers/wm_pumice-stone.jpg", 2.6, {}),
                                       ("photo", BR / "b03_pumice_tweezers/wm_tweezers-variety.jpg", 2.4, {}), ("photo", B4 / "wm_a-callus.jpg", None, {})]),
-    ("b04a", ("clip", CL / "t04.mp4", 5.0), [("clip", CL / "t04.mp4", None, {"tin": True})]),
+    ("b04a", ("clip", CL / "t04.mp4", 5.0), [("clip", CL / "t04.mp4", None, {"tin": "whip"})]),
     ("b04b", ("vo", AU / "vo05.mp3"), [("photo", B4 / "wm_evolucion-de-un-callo.jpg", 3.4, {"ovs": [ck(0)]}),
                                        ("card", GX / "w1_dots_nhs_card.png", 3.4, {"ovs": [ck(1)]}),
                                        ("photofull", B4 / "wm_largeplanterwart.jpg", None, {"ovs": [ck(1)]})]),
@@ -95,32 +104,39 @@ LINES = [
     ("b05b", ("clip", CL / "t09.mp4", 4.0), [("clip", CL / "t09.mp4", 2.55, {}), ("clip", RU / "s13_m2_root.mp4", None, {"ss": 0.8})]),
     ("b06a", ("clip", CL / "t10.mp4", 4.0), [("clip", CL / "t10.mp4", None, {})]),
     ("b06b", ("vo", AU / "vo11.mp3"), [("cardclip", GX / "c_comment_card.png", 3.0, {"bg": CL / "g06_mom_phone.mp4"}), ("clip", BR / "b13_calendar/cv_july-calendar-vtfce5hrof.mp4", None, {})]),
-    ("b07", ("vo", AU / "vo12.mp3"), [("clip", CL / "g07_drawer.mp4", 4.48, {"tin": True}), ("clip", RU / "s17_x3_soil.mp4", 1.2, {"ss": 0.3}),
+    ("b07", ("vo", AU / "vo12.mp3"), [("clip", CL / "g07_drawer.mp4", 4.48, {"tin": "dip"}), ("clip", RU / "s17_x3_soil.mp4", 1.2, {"ss": 0.3}),
                                       ("clip", RU / "s19_footprints.mp4", 2.17, {}), ("clip", CL / "g07_sister.mp4", 1.55, {}),
                                       ("photo", BR / "b07_sister_toe/wm_toe-plantar-wart-0147.jpg", 1.35, {}),
                                       ("clip", RU / "s19_sneakers.mp4", 4.85, {}),
                                       ("clip", BR / "b14_barefoot_backyard/mk_three-kids-running-in-a-wooden-pier-48264.mp4", None, {})]),
-    ("b08a", ("clip", CL / "t13.mp4", 4.0), [("clip", CL / "t13.mp4", None, {"tin": True})]),
+    ("b08a", ("clip", CL / "t13.mp4", 4.0), [("clip", CL / "t13.mp4", None, {"tin": "flash"})]),
     ("b08b", ("vo", AU / "vo14.mp3"), [("photo", BR / "b08_freeze/wm_wart-cryotherapy.jpg", 1.8, {}), ("clip", RU / "s1_dand_snap.mp4", 2.4, {}),
                                        ("photo", B8 / "wm_taraxacum-officinale-15-p-bot-tara-offi-62.jpg", 2.4, {}), ("clip", RU / "s1_dand_back.mp4", None, {})]),
     ("b09a", ("clip", CL / "t15.mp4", 5.0), [("clip", CL / "t15.mp4", 1.9, {}), ("clip", RU / "s13_m1_door.mp4", None, {"ss": 0.6})]),
     ("b09b", ("vo", AU / "vo16.mp3"), [("clip", RU / "s1_dand_root.mp4", None, {})]),
-    ("b10a", ("clip", CL / "t17.mp4", 5.0), [("clip", CL / "t17.mp4", None, {"tin": True})]),
+    ("b10a", ("clip", CL / "t17.mp4", 5.0), [("clip", CL / "t17.mp4", None, {"tin": "blur"})]),
     ("b10b", ("vo", AU / "vo18.mp3"), [("clip", RU / "s19_skin_lemon.mp4", 5.2, {}), ("clip", RU / "s19_skin_teatree.mp4", 6.2, {"ovs": [GX / "gauge_8x.png"]}),
                                        ("clip", RU / "s17_x6_root3d.mp4", None, {})]),
     ("b11", ("vo", AU / "vo19.mp3"), [("clip", RU / "s19_socks_bed.mp4", 5.0, {}), ("clip", RU / "s17_x9_product.mp4", 3.0, {"ss": 1.0}),
                                       ("card", GX / "q_flinch_card.png", None, {})]),
-    ("b12", ("vo", AU / "vo20.mp3"), [("clip", RU / "s19_file_kid.mp4", 4.4, {"tin": True}),
+    ("b12", ("vo", AU / "vo20.mp3"), [("clip", RU / "s19_file_kid.mp4", 4.4, {"tin": "slide"}),
                                       ("clip", HOWTO, 2.6, {"ss": 2.35, "crop": "540:960:200:120"}),
                                       ("clip", HOWTO, 2.4, {"ss": 4.75, "crop": "540:960:270:120"}),
                                       ("clip", CL / "g12_feetup.mp4", None, {})]),
     ("b13", ("vo", AU / "vo21.mp3"), [("clip", GX / "calendar.mp4", 3.9, {}), ("card", GX / "q_dots_card.png", None, {})]),
     ("b14", ("vo", AU / "vo22.mp3"), [("clip", CL / "g14_run.mp4", None, {})]),
     ("b15", ("clip", CL / "t23.mp4", 8.0), [("clip", CL / "t23.mp4", None, {})]),
-    ("b16a", ("clip", CL / "t24.mp4", 6.0), [("clip", CL / "t24.mp4", None, {"tin": True})]),
+    ("b16a", ("clip", CL / "t24.mp4", 6.0), [("clip", CL / "t24.mp4", None, {"tin": "spin"})]),
     ("b16b", ("vo", AU / "vo25.mp3"), [("clip", RU / "s17_x10_bottles.mp4", None, {"ss": 2.6, "ovs": [GX / "offer_top.png"]})]),
     ("b16c", ("vo", AU / "vo26.mp3"), [("clip", GX / "endcard.mp4", None, {})]),
 ]
+import os
+VAR = os.environ.get("BODY_VARIANT", "")  # "h2": the brief drops the pumice sentence from beat 3 (the hook already said it)
+if VAR == "h2":
+    LINES = [("b03h2", ("vo", AU / "vo03_h2.mp3"), [("clip", CL / "g03_counter.mp4", 3.0, {}),
+              ("photo", BR / "b03_pumice_tweezers/wm_tweezers-variety.jpg", 2.2, {}), ("photo", B4 / "wm_a-callus.jpg", None, {})])
+             if n == "b03" else (n, a, v) for (n, a, v) in LINES]
+SUF = f"_{VAR}" if VAR else ""
 LEAD, TAIL = 0.08, 0.22
 
 
@@ -162,7 +178,7 @@ if __name__ == "__main__":
             out, d = build_line(i, name, audio, vis)
         log.append({"line": name, "start": round(t, 2), "dur": round(d, 2)}); outs.append(out); t += d
         print(f"{name:5s} {t - d:7.2f} +{d:5.2f}")
-    (TMP / "list.txt").write_text("".join(f"file '{o}'\n" for o in outs))
-    run(["-f", "concat", "-safe", "0", "-i", str(TMP / "list.txt"), "-c", "copy", str(TMP / "body.mp4")])
-    json.dump(log, open(TMP / "timeline.json", "w"), indent=1)
-    print("body", round(t, 2), "s ->", TMP / "body.mp4")
+    (TMP / f"list{SUF}.txt").write_text("".join(f"file '{o}'\n" for o in outs))
+    run(["-f", "concat", "-safe", "0", "-i", str(TMP / f"list{SUF}.txt"), "-c", "copy", str(TMP / f"body{SUF}.mp4")])
+    json.dump(log, open(TMP / f"timeline{SUF}.json", "w"), indent=1)
+    print("body", round(t, 2), "s ->", TMP / f"body{SUF}.mp4")

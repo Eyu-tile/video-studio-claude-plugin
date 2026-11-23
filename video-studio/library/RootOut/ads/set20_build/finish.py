@@ -4,8 +4,8 @@ finish, loudness -14 LUFS / TP -2. Usage: finish.py <hook.mp4> <out.mp4>"""
 import json, re, subprocess, sys
 from pathlib import Path
 
-P = Path(__file__).resolve().parent.parent; T = P / "work/finish"; T.mkdir(parents=True, exist_ok=True)
-hook, out = Path(sys.argv[1]), Path(sys.argv[2])
+P = Path(__file__).resolve().parent.parent; hook, out = Path(sys.argv[1]), Path(sys.argv[2]); SUF = f"_{sys.argv[3]}" if len(sys.argv) > 3 and sys.argv[3] else ""
+T = P / f"work/finish{sys.argv[4] if len(sys.argv) > 4 else SUF}"; T.mkdir(parents=True, exist_ok=True)
 VS = "/home/user/video-studio-claude-plugin/plugins/video-studio/bin/vs"
 MUSIC = P / "assets/music/Wholesome.mp3"
 
@@ -21,7 +21,7 @@ def dur(f):
 
 # 1. hook + body, same format
 cat = T / "cat.mp4"
-run(["-i", str(hook), "-i", str(P / "work/body/body.mp4"), "-filter_complex",
+run(["-i", str(hook), "-i", str(P / f"work/body/body{SUF}.mp4"), "-filter_complex",
      "[0:v]fps=30,setsar=1[v0];[0:a]aresample=48000,aformat=channel_layouts=stereo[a0];"
      "[1:v]fps=30,setsar=1[v1];[1:a]aresample=48000,aformat=channel_layouts=stereo[a1];"
      "[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]", "-map", "[v]", "-map", "[a]",
@@ -83,7 +83,7 @@ ass = ["[Script Info]", "ScriptType: v4.00+", "PlayResX: 1080", "PlayResY: 1920"
        "Style: Cap,Inter,62,&H00141414,&H00141414,&H00FFFFFF,&H00FFFFFF,-1,0,0,0,100,100,0,0,3,14,0,2,90,90,760,1",
        "", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
 # product-safe zones from the body timeline (times are body-relative; the hook comes first)
-HK = dur(hook); tl = {x["line"]: x for x in json.load(open(P / "work/body/timeline.json"))}
+HK = dur(hook); tl = {x["line"]: x for x in json.load(open(P / f"work/body/timeline{SUF}.json"))}
 LOW = [(HK + tl["b11"]["start"] + 4.9, HK + tl["b11"]["start"] + 8.1)]          # bottle photo: captions drop low
 NONE = [(HK + tl["b16c"]["start"] - 0.05, D + 1)]
 HIGH = [(HK + tl["b16b"]["start"] - 0.05, HK + tl["b16c"]["start"])]  # offer: bottles fill the lower frame             # end card: no captions
@@ -98,16 +98,11 @@ for j, g in enumerate(groups):
 (T / "captions.ass").write_text("\n".join(ass) + "\n")
 
 # 3. music bed under the voice (sidechain ducking), fade out; captions burn; light phone-camera finish; loudness
-TRANS = ["b02a", "b04a", "b07", "b08a", "b10a", "b12", "b16a"]  # punch-in transitions (build_body "tin")
-WH = Path("/home/user/video-studio-claude-plugin/video-studio/library/assets/sfx/uisfx/swipe__studio.mp3")
-wt = [HK + tl[n]["start"] - 0.06 for n in TRANS]
-wins = "".join(f"[{2 + k}:a]adelay={int(t * 1000)}|{int(t * 1000)},volume=0.35[w{k}];" for k, t in enumerate(wt))
-wmix = "".join(f"[w{k}]" for k in range(len(wt))) + f"amix=inputs={len(wt)}:normalize=0[wh];"
-fc = (wins + wmix + f"[1:a]aloop=loop=-1:size=2e9,atrim=0:{D:.2f},volume=0.22,afade=t=in:d=1.5,afade=t=out:st={D - 3:.2f}:d=3[m];"
+fc = (f"[1:a]aloop=loop=-1:size=2e9,atrim=0:{D:.2f},volume=0.22,afade=t=in:d=1.5,afade=t=out:st={D - 3:.2f}:d=3[m];"
       f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=400[md];"
-      f"[vo][md][wh]amix=inputs=3:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"
+      f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"
       f"[0:v]ass={T / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/5,unsharp=5:5:0.3[v]")
-run(["-i", str(cat), "-i", str(MUSIC), *sum((["-i", str(WH)] for _ in wt), []), "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
+run(["-i", str(cat), "-i", str(MUSIC), "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
      "-c:v", "libx264", "-crf", "20", "-maxrate", "10M", "-bufsize", "20M", "-preset", "slow", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
      "-map_metadata", "-1", "-movflags", "+faststart", str(out)])
 print(out, round(dur(out), 2), "s,", len(groups), "caption groups")

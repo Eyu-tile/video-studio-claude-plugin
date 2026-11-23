@@ -58,3 +58,11 @@ Owner approved ~1,200 credit ceiling (23 Nov). Balance at start: 7,308.15. Job i
 - 7 punch-in transitions with a whoosh: hook→body, the check, "The root stayed" section, "A friend said", RootOut reveal,
   routine, close. Captions clamp at product shots and the end card.
 - Out: `out/WilloMD_RootOut_Set20_H1_9x16_v2.mp4` (198.7 s), freezedetect PASS. v2 spend 28 cr; Set 20 total ≈ 606.
+
+## v3 + H2/H3 (23 Nov)
+- Client: no SFX on transitions; seven different transitions (punch-in, whip, dip from black, white flash, blur-in, slide up,
+  small spin) on b02a, b04a, b07, b08a, b10a, b12, b16a. Whoosh removed from finish.py.
+- H2 (pumice stone, 8 s, 56 cr) + Juno vo_h2; per the brief the H2 body's beat 3 starts at "I went at it with tweezers…"
+  (vo03_h2, `BODY_VARIANT=h2` → body_h2.mp4, 5.4 s shorter). H3 (flashlight over the socked foot, 8 s, 56 cr); the real
+  black-dot photo shows only on "like little splinters?" (make_hook window 3.75–5.45), she's on camera for "Grab his foot".
+- Set 20 total ≈ 718 credits.
