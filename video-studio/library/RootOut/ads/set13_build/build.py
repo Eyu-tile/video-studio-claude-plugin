@@ -66,7 +66,7 @@ BODY = [
                 ("pip", "../gen/clips/m2.mp4", "pokeweed", 99, {"x": 0, "y": 0, "w": 1080, "h": 1920, "r": 0, "fit": 1}),
                 ("png", "plant_lemon.png", "lemon", 99, {}), ("png", "plant_teatree.png", "tea", 99, {}),
                 ("png", "plant_pokeweed.png", "pokeweed", 99, {}), ("png", "plant_cedar.png", "cedar", 99, {}),
-                ("png", "p_8x.png", "eight", "and", {}), ("png", "fn_dagger.png", "eight", "and", {}),
+                ("png", "p_8x.png", "eight", "and", {}),
                 ("png", "photo_root.png", "root", None, {"nth": -1})], post=1.6),
     seg("c08", [("png", "w_kids4_card.png", "kid", None, {}), ("png", "p_kids.png", "kid", None, {"alt_for": "w_kids4_card.png"}),
 ]),

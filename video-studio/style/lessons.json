@@ -1,0 +1,37 @@
+{
+ "version": 1,
+ "lessons": [
+  {
+   "id": "L1",
+   "rule": "No disclaimer-type text on screen in any generated image, clip or edit: no 'AI illustration' / 'AI-generated' labels, no footnotes or footnote marks (*, †), no 'FDA' / 'not evaluated' / 'results vary' lines, no photo-credit captions. Disclosures go in the platform AI label and the post description, never in the video.",
+   "category": "text",
+   "added": "2026-11-23 12:48",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "check": {
+    "banned_words": [
+     "AI illustration",
+     "AI-generated",
+     "illustration",
+     "footnote",
+     "FDA",
+     "evaluated",
+     "results vary",
+     "†",
+     "Photo:",
+     "Wikimedia",
+     "Dramatization"
+    ]
+   },
+   "must": true,
+   "keywords": [
+    "ai illustration",
+    "fda",
+    "footnote",
+    "disclaimer",
+    "label"
+   ]
+  }
+ ]
+}

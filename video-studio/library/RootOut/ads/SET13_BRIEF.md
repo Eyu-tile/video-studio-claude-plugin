@@ -1,5 +1,7 @@
 # Set 13 · P3 · Kids it worked for (proof) · "My daughter's wart flaked right off"
 
+> **Owner rule (23 Nov 2026, overrides the briefs and CLAIMS.md):** no disclaimer-type text in our videos or generations: no "AI illustration" / AI-generated labels, no footnotes or marks (`*`, `†`), no FDA / "not evaluated" / "results vary" lines, no photo-credit captions. Disclosures go in the platform AI label and the post description. House lesson L1 (`style/LESSONS.md`), checked by `vs qa`.
+
 Verbatim from the client's "Round 1 scripts" doc (pasted in chat 2026-11-22). **The spoken script is locked word for
 word.** Do not edit lines; only the visuals may be adapted.
 

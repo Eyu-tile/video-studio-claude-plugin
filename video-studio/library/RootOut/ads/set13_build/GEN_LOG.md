@@ -44,3 +44,10 @@ build did not submit (another session or user on the same workspace). Balance af
 - Four-plants beat (0:37–0:50): the 3D skin animation is now full screen (the mom is hidden), slowed to fill the beat
   instead of looping; plant photo chips sit in the sky band, "8x deeper†" at the bottom, real root photo centred at the end.
 - No new generation (0 credits).
+
+## v4 final (23 Nov, owner rule)
+- Removed every disclaimer-type text: "AI illustration" on the gallery photos and end card, the † mark and footnote,
+  photo-credit captions on the cryotherapy and root cards. Footnote rendering deleted from render_gfx.py.
+- Rule saved as house lesson L1 (`video-studio/style/LESSONS.md`, MUST, banned_words check) and at the top of the RootOut
+  DO_NOT_USE / README / CLAIMS / ROUND1_SCRIPTS / SET13_BRIEF.
+- CC BY / CC BY-SA photos and the music still need their credit lines in the post description (WEB_CREDITS.md).

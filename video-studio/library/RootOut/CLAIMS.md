@@ -1,5 +1,7 @@
 # RootOut claims register (from the official site, 2026-11-21)
 
+> **Owner rule (23 Nov 2026, overrides the briefs and CLAIMS.md):** no disclaimer-type text in our videos or generations: no "AI illustration" / AI-generated labels, no footnotes or marks (`*`, `†`), no FDA / "not evaluated" / "results vary" lines, no photo-credit captions. Disclosures go in the platform AI label and the post description. House lesson L1 (`style/LESSONS.md`), checked by `vs qa`.
+
 Every claim the site makes, with its risk. **Nothing here is approved for ads yet**: the site using a line is not proof.
 Warts and corns are medical conditions, and the formula lists homeopathic actives, so FTC/FDA rules apply. Before a line
 goes into an ad, the client confirms the proof and the disclaimer, or the line is cut.

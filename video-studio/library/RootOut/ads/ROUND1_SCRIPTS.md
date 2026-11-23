@@ -1,5 +1,7 @@
 # RootOut Round 1 scripts: digest, footage needs, claim checks
 
+> **Owner rule (23 Nov 2026, overrides the briefs and CLAIMS.md):** no disclaimer-type text in our videos or generations: no "AI illustration" / AI-generated labels, no footnotes or marks (`*`, `†`), no FDA / "not evaluated" / "results vary" lines, no photo-credit captions. Disclosures go in the platform AI label and the post description. House lesson L1 (`style/LESSONS.md`), checked by `vs qa`.
+
 Source: the client's "Round 1 scripts" doc (pasted in chat 2026-11-21; full text with every beat lives in the client's
 doc and its "Set N · brief" sub-tabs). Swipes: `../references/REFERENCES.md`.
 

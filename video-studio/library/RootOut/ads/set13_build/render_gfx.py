@@ -45,8 +45,6 @@ def gallery(i, src):
     ph = ImageOps.fit(Image.open(src).convert("RGB"), (cw, 900), Image.LANCZOS, centering=(0.45, 0.55)); card.paste(ph, (0, 92))
     for k in range(4):
         x = cw / 2 - 45 + k * 30; d.ellipse((x, 1022, x + 14, 1036), fill=(NAVY if k == i - 1 else (200, 206, 214)))
-    lab = text_box(["AI illustration"], 24, "SemiBold", (255, 255, 255), (0, 0, 0), 14, 6, 10); lab.putalpha(lab.split()[3].point(lambda v: int(v * .7)))
-    card.alpha_composite(lab, (cw - lab.width - 18, 92 + 900 - lab.height - 18))
     return rounded(card, 44)
 stages = [FR / f"S{k}.png" for k in (1, 2, 3, 4)]
 for i, s in enumerate(stages, 1):
@@ -87,7 +85,7 @@ for k, (key, label) in enumerate((("lemon", "Lemon"), ("teatree", "Tea tree"), (
         c = canvas(); s = shadow(chip(src, label), 14, 6, 90); cx = 135 + k * 270
         c.alpha_composite(s, (int(cx - s.width / 2), 40)); c.save(G / f"plant_{key}.png"); print("plant", key)
 
-# 5. footnotes (CLAIMS.md: † travels with "8x deeper", * with the plants breaking the wart down)
+# 5. (removed) on-screen footnotes/disclaimers: owner rule 23 Nov, no disclaimer text in our videos
 def foot(txt, name, y=1795, size=26):
     f = font("Medium", size); d0 = ImageDraw.Draw(Image.new("RGB", (1, 1))); words, lines, cur = txt.split(), [], ""
     for w_ in words:
@@ -99,13 +97,11 @@ def foot(txt, name, y=1795, size=26):
         tw = d.textlength(l, font=f); x = (W - tw) / 2; yy = y + i * (size + 6)
         d.text((x, yy), l, font=f, fill=(255, 255, 255, 235), stroke_width=3, stroke_fill=(0, 0, 0, 150))
     c.save(G / name); print(name)
-foot("†Up to 8x deeper: based on our manufacturer's absorption testing against a regular cream.", "fn_dagger.png")
-foot("*Benefit claims. Homeopathic claims are based on traditional homeopathic practice, not accepted medical evidence, and are not FDA evaluated. Results vary.", "fn_star.png", 1760)
 
 # 6. "8x" depth chip beside the side cut
 def pill(txt, bg, fg=(255, 255, 255), size=46, weight="ExtraBold"):
     return text_box([txt], size, weight, fg, bg, 34, 14, 40)
-place(pill("up to 8x deeper†", BLUE), W / 2, 1640, "p_8x.png")
+place(pill("up to 8x deeper", BLUE), W / 2, 1640, "p_8x.png")
 place(pill("+14 nights after it looks gone", PEACH, NAVY, 42, "Bold"), W / 2, 330, "p_rootrule.png")
 place(pill("Buy 2, get 1 free  ·  90-day money-back", ORANGE, size=40), W / 2, 330, "p_offer.png")
 place(pill("Kids' formula · ages 4+", NAVY, size=42), W / 2, 330, "p_kids.png")
@@ -139,7 +135,6 @@ def end_card():
     c.alpha_composite(shadow(b, 26, 18, 70), (int((W - b.width) / 2) - 78, 560))
     btn = pill("Buy 2, get 1 free", ORANGE, size=54); c.alpha_composite(shadow(btn), (int((W - btn.width) / 2) - 66, 1290))
     f = font("SemiBold", 34); t = "90-day money-back  ·  trywillomd.com"; d.text(((W - d.textlength(t, font=f)) / 2, 1470), t, font=f, fill=NAVY)
-    f = font("Medium", 26); t = "AI illustration."; d.text(((W - d.textlength(t, font=f)) / 2, 1840), t, font=f, fill=SLATE)
     c.convert("RGB").save(G / "endcard.png"); print("endcard.png")
 end_card()
 
@@ -151,10 +146,10 @@ def photo_card(src, name, w=600, credit="", top=120):
     if credit: ImageDraw.Draw(card).text((16, im.height + 22), credit, font=font("Medium", 20), fill=SLATE)
     c = canvas(); s_ = shadow(rounded(card, 28)); c.alpha_composite(s_, (int(W / 2 - s_.width / 2), int(top))); c.save(G / name); print(name)
 rp = WEB / "dandelion/commons_dandelion_plant_with_root_zimmerling.jpg"
-if rp.exists(): photo_card(rp, "photo_root.png", 520, "Photo: Wikimedia Commons", 380)
+if rp.exists(): photo_card(rp, "photo_root.png", 520, "", 380)
 
 cp = WEB / "freezing/commons_wart_cryotherapy_toe_swab.jpg"
-if cp.exists(): photo_card(cp, "photo_cryo.png", 640, "Cryotherapy on a wart · Photo: Wikimedia Commons")
+if cp.exists(): photo_card(cp, "photo_cryo.png", 640, "")
 
 # 9. v2 hook: bigger two-tone title + before/after proof pop (swipe #003 does its before/after at 2-4 s)
 def hook_title(l1, l2, name):
