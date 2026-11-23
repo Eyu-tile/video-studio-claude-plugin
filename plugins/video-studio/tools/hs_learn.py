@@ -22,6 +22,7 @@ FIG = re.compile(r"(\$\s?\d[\d,.]*\s?[kKmM]?(?:\s?(?:spent|spend|in spend))?|\d+
                  r"spend|hook rate|ctr|thumb-?stop|hold rate)?|roas\s*(?:of\s*)?\d+(?:\.\d+)?|\d+(?:\.\d+)?\s?roas|"
                  r"\d+(?:\.\d+)?x\s?roas|cpa\s*\$?\d+(?:\.\d+)?)", re.I)
 REF = re.compile(r"#(\d{2,4})\b")
+WIN = re.compile(r"\bwinn(er|ers|ing)\b|\bproven\b|\bscal(ing|ed|e)\b|\bbest\b|\btop\b|our .{0,20}#\d", re.I)
 PRAISE = re.compile(r"great|killed|love|nice|perfect|amazing|awesome|good job|well done|fire|🔥|💯|beautiful|clean", re.I)
 FIXWORD = re.compile(r"\b(but|change|fix|remove|missing|wrong|instead|should|need|please|too|don't|not)\b", re.I)
 
@@ -70,7 +71,7 @@ def signals(briefs):
     for b in briefs:
         for sent in re.split(r"(?<=[.;\n])\s+", text_of(b)):
             refs = REF.findall(sent)
-            if refs and FIG.search(sent):
+            if refs and (FIG.search(sent) or WIN.search(sent)):
                 for r in set(refs):
                     if int(r) != b["number"]:
                         out[int(r)].append((b["number"], re.sub(r"\s+", " ", sent.strip())[:300]))
@@ -141,7 +142,8 @@ def learn(folder, brand=""):
     # winner signals
     sig = signals(briefs)
     L = [head % "winner signals", "",
-         "Every sentence in a brief that names another ad (#number) together with a figure. These are the "
+         "Every sentence in a brief that names another ad (#number) with a figure or a word like winner, proven, "
+         "scaling or best. These are the "
          "strategists' own numbers, not Meta exports: check them in Analytics before relying on them.", ""]
     for ref in sorted(sig, key=lambda r: -len(sig[r])):
         rb = by_num.get(ref)
