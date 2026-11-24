@@ -6,6 +6,7 @@ Usage: python3 build18v2.py   -> out/WilloMD_RootOut_Set18_H1_9x16_v2.mp4"""
 import json, os, re, subprocess, sys, difflib
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent)); import timeline as TLm
+TLm.NUM.update({"4": "four", "1500": "fifteenhundred"})
 P = TLm.P; RE = P / "raw/reuse"; ST = P / "raw/stock"; GEN = P / "raw/gen"; G = P / "assets/graphics"; V2 = P / "raw/vo2"
 LIB = Path("/home/user/video-studio-claude-plugin/video-studio/library/RootOut")
 PDP = LIB / "brand/images/pdp"; SITE = LIB / "resources/site_videos"
@@ -173,7 +174,7 @@ def build():
         t1 = cuts[k + 1][0] if k + 1 < len(cuts) else TOTAL; n = fr(t1) - fr(t0); out = SH / f"s{k + 1:03d}.mp4"
         cin = 0.0
         if src == "TAKE": cin = it["a"] + (t0 - it["t0"])
-        render(out, src, o, n, it["src"] if it else None, cin)
+        render(out, src, o, n, (it or {}).get("src"), cin)
         shots.append(dict(n=k + 1, t0=round(t0, 3), t1=round(t1, 3), src=str(src), take=(it or {}).get("src"), opts={a: str(b) for a, b in o.items()}))
     (SH / "l.txt").write_text("".join(f"file 's{s['n']:03d}.mp4'\n" for s in shots))
     ff("-f", "concat", "-safe", "0", "-i", SH / "l.txt", "-c", "copy", OUT / "picture.mp4")
