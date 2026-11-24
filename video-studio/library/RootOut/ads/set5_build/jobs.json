@@ -1,0 +1,173 @@
+{
+ "frames": {
+  "F0": "4b838684-cc5b-4b33-9938-f212740e784e",
+  "F1": "82051730-cebd-42c4-bd98-5ee51f676300",
+  "F3": "af793d06-e5c6-4c61-96b3-e27311f272ea",
+  "F10": "1d908398-9217-426a-bff1-74edf31ef65b",
+  "F14": "c9719e07-7542-4bb7-9811-ca4e8f16b6c2",
+  "M1": "ee4f39bc-64dd-4dd2-b435-f142f227e047",
+  "M2": "c073d5aa-7a69-4de2-98ce-317a981ca935",
+  "M3": "353c16d6-1599-4a91-a5a3-e2a4a674fc74",
+  "I2": "f9f2894d-ebda-4b2e-ba1b-d77ca8572e38",
+  "I3": "74a34fb5-92bc-444e-9af8-f48c4689f10f",
+  "I4": "d2e095b5-c071-4016-96a0-369aa849263b",
+  "I5_rejected_girlroom": "03501256-1134-49e6-8375-26fdc0a1b122",
+  "I5b": "cc23bf81-cd48-42c3-bf67-ec61aecb1b0a",
+  "W1": "90e7a017-24fb-429f-a6c5-31cd97219b6a",
+  "W3": "3ced4abb-c641-4055-846f-6e209c6e6d5c",
+  "W7": "60594fd3-a096-4710-863e-1cff00c6fd54",
+  "W14": "d18fc313-5c27-42ed-a637-bfcce15ab688"
+ },
+ "media": {
+  "bottle_front": "811f8013-517f-4d39-a6a9-95bce6eee45c",
+  "wart_base_r16": "371320fa-d067-456d-b27c-916b5af9c471",
+  "t06_combo": "eadbb826-38b3-4858-9293-1b08d6aeb9d0",
+  "t27_combo": "10391323-0a87-4f80-9902-4558df1218a7",
+  "t13_pad": "8ef85ce0-67f3-4b8a-acb8-7aa649045333",
+  "skin_door_open": "e4fedcc8-14f3-4d83-b885-930f0d51d765"
+ },
+ "video": {
+  "t01": "f2e88e3f-f50b-4b43-bae5-bff63cfc6737",
+  "t06": "75820456-3661-4f3c-90ac-34082120078a",
+  "t19": "cd0210c7-70a5-4065-9ce4-ce86395e87c5",
+  "t27": "b9a5ff24-1f57-47fa-9502-b42db38d5c90",
+  "m1": "d25538e7-781f-4390-96a2-36044ca03372",
+  "m2": "ee441821-88c2-472b-9cb3-4e8993ac94d2",
+  "m3": "6f5c6b2a-3dd2-4653-bffe-33594da1196b",
+  "t13": "f23f3659-1b66-4dce-b0b6-c27ca538dcab",
+  "i02_kidbrush": "109b33ee-a158-4b18-9653-053252beee6b",
+  "i03_flipflops": "03eaed44-9d0d-4e5d-be52-1fd241c41a9d",
+  "i04_tap": "07611de3-c17a-4199-95aa-74ec21e32c1e",
+  "i05_calX": "8370adb9-8a3c-4322-b4b8-0143de1a1551",
+  "w03_BLOCKED_nsfw_not_reworded": "2b83f34a-507c-453c-8a22-d9056216c9f3",
+  "w07_BLOCKED_nsfw_not_reworded": "83b1752c-d265-4486-b449-b26bb058e872",
+  "x01_teatree_BLOCKED_nsfw_not_reworded": "4b063508-7eac-488f-a89c-ac4b38d1a87f",
+  "t13_voice_change_test_unused": "1a9ba9ab-ee8d-4588-97c5-8a8b8c127091"
+ },
+ "voices": {
+  "narrator_helena": "3c2b83c0-2e0a-5ae8-998a-a5fe71b7eccd",
+  "mom1_willow": "f878bf3f-115b-5842-8934-c789c7947733",
+  "mom2_livia": "984ddbed-83d3-5388-84ce-02fe6c24befa",
+  "mom3_hallie": "10274bf1-fb93-554f-b59f-d620a920fd36"
+ },
+ "vo": {
+  "v01": [
+   "071201_45a0a743-9df9-4787-9a7f-75d7a245ab75",
+   "One brush of this on my son's wart at bedtime. He's asleep in two minutes. The wart isn't. Here's what happened over the next fourteen nights."
+  ],
+  "v02": [
+   "071308_c4885ccd-386e-4a6e-baa3-d92755d0c8bc",
+   "Night one."
+  ],
+  "v03": [
+   "071600_ab3be412-f787-4dfc-aa11-0b182034c622",
+   "Two light rubs with the little file, just on the hard top."
+  ],
+  "v04": [
+   "071309_ce1bd938-b1b7-4eab-a4da-726a346bd22d",
+   "Brush the oil on. A clear dot on top."
+  ],
+  "v06": [
+   "071309_559332f5-f9ae-4aa0-9bde-72f02cb80112",
+   "Two minutes. He didn't even look up from his book. He said it feels a little cool. That's it."
+  ],
+  "v07": [
+   "071309_e6aeb9ad-1867-48e6-b607-cc92f3a8226a",
+   "Here's what's going on in there tonight."
+  ],
+  "v08": [
+   "071309_ff86c85c-24cc-462a-91d7-732d78ddfa8a",
+   "The lemon softens that hard skin on top, so the oil can get in."
+  ],
+  "v09": [
+   "071309_1a1544cb-ea78-4d2c-9a9d-2578678d112f",
+   "The tea tree is a thin oil. It sinks in, up to eight times deeper than a regular cream, and carries the pokeweed and white cedar down with it."
+  ],
+  "v10": [
+   "071309_ef0add35-5dd0-4c24-bfb2-0709f14350ed",
+   "The dot keeps it all soaking till morning."
+  ],
+  "v11": [
+   "071347_dac3cb58-6299-403b-9f8a-8fe8edfc6b0a",
+   "Night three. The little black dots are fading."
+  ],
+  "v13": [
+   "071309_553f27bb-1a35-4b92-8b84-182d051bb8d4",
+   "That's all the freeze would have gotten."
+  ],
+  "v14": [
+   "071309_1b777c5b-6ba1-4f30-b0af-e77a9d60db74",
+   "Freezing, acid and shaving only snap off the top, like picking a dandelion. The root stays under the hard skin, so it grows back."
+  ],
+  "v16": [
+   "071346_3cba9eed-6dd8-4371-a8fb-4f542d06552c",
+   "Night seven. It's flatter."
+  ],
+  "v17": [
+   "071312_ebf7a57d-1de7-471b-8fcc-69e1d2e2f0f6",
+   "Pokeweed and white cedar are down at the root now, breaking the wart down from there, so it can't grow back."
+  ],
+  "v18": [
+   "071312_1a9d1d0a-0fe9-4bbf-98d9-e99b2a3c025d",
+   "And now he wants to do the brush himself."
+  ],
+  "v19": [
+   "071347_58305ada-d879-4b34-9670-7685f64d05c2",
+   "Night ten. He went barefoot at the pool. I only noticed on the drive home."
+  ],
+  "v20": [
+   "071312_9c8476e8-0a65-4895-a039-6395aea7a27f",
+   "Night fourteen. It's gone. Just smooth skin."
+  ],
+  "v21": [
+   "071312_4f40240b-20b8-4089-89e6-25d7e91e2874",
+   "Most spots are gone in about two weeks. But we keep going fourteen more nights, so the root is gone too."
+  ],
+  "v22": [
+   "071312_b708b2cd-88d1-445c-a030-d0b228863aa7",
+   "One little bottle, two minutes at bedtime. No freezing, no acid, no blister."
+  ],
+  "v23": [
+   "071312_8ab1cd3c-af60-4552-8c4e-74973c930280",
+   "It's a kids' formula, for ages four and up, and pediatricians recommend it."
+  ],
+  "v24": [
+   "071312_1e1fd5d5-27de-45ca-b5f2-53d4a9898406",
+   "She's four, and I was nervous. No crying, no fuss. She calls it her bedtime paint."
+  ],
+  "v25": [
+   "071312_c4249852-3315-4eae-bcdf-f6230a9356bd",
+   "The doctor wanted to freeze it. I asked to try this first. Two weeks, and it was gone."
+  ],
+  "v26": [
+   "071312_328028af-3ec8-4283-94e1-a313254a1a0a",
+   "We did the fourteen extra nights, like it says. It never came back."
+  ],
+  "v27": [
+   "071312_9ff3f2ef-f7a8-44ee-abda-79d96685406c",
+   "So before you book the freeze, try this first. It's at the link below. Get two, and the third one's free."
+  ],
+  "v29": [
+   "071312_eb3bead2-041a-4906-b809-458db6f19b55",
+   "And if it's not gone, you get your money back. That's a ninety-day guarantee."
+  ]
+ },
+ "reused_free": {
+  "r00_s19_file_kid": "757ba2f9",
+  "r02_s19_dot": "686ace6f",
+  "r03_s13_skin_door": "56f40499",
+  "r04_s17_root3d": "692c7031",
+  "r05_s13_root_dot": "1d651123",
+  "r06_s1_dand_snap": "3e99af22",
+  "r07_s17_soil_cutaway": "ee317059",
+  "r08_s1_dand_back": "644d4a63",
+  "r09_s17_three_bottles": "5e57f5fc",
+  "r10_s1_clinic": "2eadbf23",
+  "r11_s1_acid": "a3012671",
+  "r12_s19_clear_sole": "d24782f6",
+  "r13_s19_mason_sole": "07db7f0f",
+  "r14_s20_feetup": "bedc70f4",
+  "r18_s19_three_bottles": "d2ec83d6",
+  "r19_s1_towels": "ce962fe0"
+ }
+}
