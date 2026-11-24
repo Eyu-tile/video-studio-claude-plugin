@@ -21,3 +21,17 @@ Music: "Investigations", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit l
 - QA (`qa18.py`): transcript 489/489 script words (only formatting differences), no frozen frames ≥ 0.5 s, every b-roll
   source used once, -14.1 LUFS.
 - Not used (no licence/download here): the 4 YouTube picks; free fallbacks in their place.
+
+## v2 (24 Nov) — client: "his audio seems off, not natural, not syncing; more b-roll, faster; energetic music"
+- **Voice rebuilt:** on camera = each Seedance take's OWN audio (lips and voice generated together → no drift, no retiming);
+  off camera = **Seed Audio 1.0 cloned from the dad's takes** (`audio_references` = 63 s of K1+K2b+K3 speech, media 4a70d5a1…),
+  19 chunks (~21 cr), every chunk checked word for word. Pitch 118 Hz vs takes 124 Hz (old ElevenLabs preset: 113 Hz).
+  Higgsfield `create_voice` refused (account voice limit; the two saved voices belong to other sets — not deleted); the
+  connected ElevenLabs key is speech-to-text only.
+- **More b-roll, faster:** 82 shots (was 71), median 1.9 s, dad on screen 32 % (was 50 %); cutaways over his long lines;
+  new sources: Mixkit 17475 doctor, 31411 sleeping kid; S19 b60, b32, b39; S17 x9; brand site videos (how-to brush,
+  freezing-vs-oil cross-section, cropped below labels); PDP "vs freezing" and "Buy 2 / 90 days" cards. Gaps 0.02–0.15 s;
+  whole ad at 1.1× (take audio and lips sped together, pitch kept): **152.9 s** (was 172.2).
+- **Music:** "Pamgaea", Kevin MacLeod (incompetech.com), CC BY 4.0 (was "Investigations"), ducked under the voice.
+- QA: transcript 489/489 (formatting only), no frozen frames, each b-roll once, -14.1 LUFS.
+- Out: `out/WilloMD_RootOut_Set18_H1_9x16_v2.mp4` (122 MB). Builder: `build18v2.py`.
