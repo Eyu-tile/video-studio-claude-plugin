@@ -59,3 +59,9 @@ Music: "Investigations", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit l
   "And the 'it'll go away' part…" (t06_h3; doctor + wart close b-roll). Hook boxes: hook_h2.png, hook_h3.png.
 - Builder: `HOOK=H2|H3 python3 build18v3.py` (shared content-keyed shot cache); QA: `HOOK=Hn python3 qa_hook.py`.
 - QA: H2 473/473 words, -14.1 LUFS, 151 s · H3 464/464 words, -14.1 LUFS, 144.5 s, no freezes.
+
+## H4 (24 Nov) — client: "I forgot hook 4, do that first"
+- Take H4 9 s (s3 start frame, hook voice as timbre reference): words exact, 104.6 Hz. ~63 cr. Body as H1.
+- Hook boxes: H4 "We stopped leaving it." (the full line clipped at 1080); H3 box rebuilt smaller (was 1252 px wide,
+  clipped at the edges in the first H3 delivery) and H3 re-rendered.
+- QA: H4 485/485 words, no freezes, -14.1 LUFS, 153.5 s · H3 re-check 464/464, no freezes, -14.1 LUFS.

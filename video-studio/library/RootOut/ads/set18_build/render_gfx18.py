@@ -152,6 +152,9 @@ if __name__ == "__main__":
     web_card(WEB / "w3_aad_goaway.png", G / "w3_card.png", "aad.org", crop=(0, 780, 1030, 1330))
     web_card(WEB / "w4_aad_repeat.png", G / "w4_card.png", "aad.org", crop=(0, 860, 1030, 1330))
     hook_box("The doctor said leave it.", G / "hook_h1.png")
+    hook_box("\"Leave it. It'll go away.\"", G / "hook_h2.png")
+    pill("Twice as likely for the other kids", G / "hook_h3.png", ORANGE, WHITE, 52, "ExtraBold", 36, 26, r=22)  # long line: smaller so it fits 1080
+    hook_box("We stopped leaving it.", G / "hook_h4.png")
     for n, t in (("week1", "Week 1"), ("week3", "Week 3"), ("week6", "Week 6"), ("x2", "2× as likely"), ("kids4", "Kids' formula · 4+"),
                  ("plus14", "+14 nights"), ("offer", "Get 2, the 3rd is on us")):
         pill(t, G / f"chip_{n}.png", NAVY if n != "offer" else ORANGE, WHITE, 58)
