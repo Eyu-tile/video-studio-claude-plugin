@@ -34,3 +34,4 @@ cutaway clips; brand how-to footage for the brush step; Mixkit real b-roll; musi
 - Credit lines for the post copy: Music "Carefree" by Kevin MacLeod (incompetech.com), CC BY 4.0; photo "Painful plantar
   warts", Wikimedia Commons, CC BY-SA 4.0.
 - Review page (H1–H4 v3, one tab per hook, comments per hook in collections comments_H1..H4): https://claude.ai/artifact/5GAPigi1KyMvdJz82y4cAj
+- **Delivered 2026-11-24:** v3 H1–H4 (9:16) to WilloMD Drive `WilloMD/WilloMD_RootOut_Set19` (https://drive.google.com/drive/folders/1OT17hpS4mqtIVVzu0I1A_XByHB-HOwV4), all 4 verified at full size.
