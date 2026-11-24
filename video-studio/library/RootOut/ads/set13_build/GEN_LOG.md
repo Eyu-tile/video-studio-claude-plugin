@@ -52,3 +52,4 @@ build did not submit (another session or user on the same workspace). Balance af
   DO_NOT_USE / README / CLAIMS / ROUND1_SCRIPTS / SET13_BRIEF.
 - CC BY / CC BY-SA photos and the music still need their credit lines in the post description (WEB_CREDITS.md).
 - v5: removed the Cleveland Clinic card at 0:36 (it flashed for under a second before the animation); "grows back" now cuts straight to the full-screen animation.
+- Delivered 24 Nov: H1/H2/H3 v5 to WilloMD/WilloMD_RootOut_Set13 (https://drive.google.com/drive/folders/10nIbVgr_cSV5dI3AjUClBQirNIUT6qhD), verified at full size (40.0 / 39.2 / 39.1 MB).
