@@ -24,7 +24,7 @@ w1 = shot_of("w1_card")[0]; ov.append((G / "chip_x2.png", wt("r06", "twice as li
 s47 = [s for s in SHOTS if s["kind"] == "talk" and "plants" in s["opts"].get("ov", "")][0]; ov.append((G / "plants.png", s47["t0"] + 0.25, s47["t1"], "c", 980))
 for name, ph in (("chip_kids4", "A kids' formula"), ("chip_noacid", "No acid"), ("chip_nofreeze", "no freezing"), ("chip_noblister", "no blister")):
     t0 = wt("r14", ph); end = wt("r14", "Just a little cool tingle")
-    y = {"chip_kids4": 960, "chip_noacid": 1080, "chip_nofreeze": 1080, "chip_noblister": 1080}[name]
+    y = {"chip_kids4": 780, "chip_noacid": 900, "chip_nofreeze": 900, "chip_noblister": 900}[name]
     x = {"chip_kids4": "c", "chip_noacid": 70, "chip_nofreeze": 360, "chip_noblister": 720}[name]
     ov.append((G / f"{name}.png", t0, end + 1.2, x, y))
 ov.append((G / "chip_plus14.png", wt("r16", "fourteen more nights"), shot_of("N10")[0]["t1"] + 3.0, "c", 980))
