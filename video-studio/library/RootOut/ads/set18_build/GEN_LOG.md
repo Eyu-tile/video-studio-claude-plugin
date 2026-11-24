@@ -65,3 +65,8 @@ Music: "Investigations", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit l
 - Hook boxes: H4 "We stopped leaving it." (the full line clipped at 1080); H3 box rebuilt smaller (was 1252 px wide,
   clipped at the edges in the first H3 delivery) and H3 re-rendered.
 - QA: H4 485/485 words, no freezes, -14.1 LUFS, 153.5 s · H3 re-check 464/464, no freezes, -14.1 LUFS.
+
+## Delivered (24 Nov, approved by the client: "push all 4 hooks to the drive")
+- WilloMD Drive › WilloMD_RootOut_Set18 (https://drive.google.com/drive/folders/1ALqQGyAR7lVGRlRKok0Km2Udfq625sZ6):
+  H1/H2/H3/H4 `_9x16_v3.mp4`, all verified at full size (110.6 / 109.6 / 104.1 / 111.4 MB). Request id
+  rootout-set18_20261124195156_3232.
