@@ -79,6 +79,8 @@ if HOOK == "H3":
     ITEMS[_idx("K1c")] = ("take", TK("K1c_h3"), "She's wanted everything her brother had since she could walk. This, she got.", 0.4, [(None, M, {})])
     ITEMS[_idx("t06")] = ("tts", VO("t06_h3"), "And the 'it'll go away' part is half right. About half of kids' warts go on their own within a year. Half don't.", 0.1,
         [(None, ST / "b03_doctor/mixkit_32176_doctor-putting-on-a-stethoscope.mp4", {"in": 6.0}), ("About half of", RE / "26_S19_b60_wart_back.mp4", {"in": 1.0})])
+if HOOK == "H4":  # winter-break hook replaces H1; the body runs as written
+    ITEMS[0] = ("take", TK("H4"), "We left our son's wart alone all fall, like the doctor said. Over winter break, we stopped leaving it. Here's why.", 0.15, [(None, M, {"hook": 1})])
 if HOOK != "H1":
     FINAL = P / f"out/WilloMD_RootOut_Set18_{HOOK}_9x16_v3.mp4"; OUT = P / f"work/build/{HOOK}v3"; OUT.mkdir(parents=True, exist_ok=True)  # shots cache shared (content-keyed)
     os.environ.setdefault("HOOKPNG", f"hook_{HOOK.lower()}.png")
