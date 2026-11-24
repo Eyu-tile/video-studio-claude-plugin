@@ -82,5 +82,17 @@
   "K2b": "ababc38a-eea3-4208-909e-1865d0b8f323",
   "Y2": "d8fee57c-0b2a-4681-aeda-20f5592836f1",
   "K3": "4f1c58e9-c30b-42d7-8154-701278297c2b"
+ },
+ "v3_native": {
+  "voice_lock_media": "8f5f8e12-e02c-4f5d-ab81-670833e05943",
+  "K1a": "f36030f0-2128-4674-9c6a-6961ce70c325",
+  "K1b_voiceref_test": "ab90914a-a1a0-485f-9ecb-3eabef29db31",
+  "K1c": "f6ad24a9-1aa7-42db-ab21-0ae0ac4126da",
+  "K1d": "c5f5c5c6-6072-4f7e-98e3-8105f08f8151",
+  "K2a": "4d99f645-e96a-478f-835e-c3357f5b41ff",
+  "Y1": "b2142ae7-e1fc-424c-b397-c1f59821308b",
+  "K2b1": "9872ec14-aa26-4e23-a3ea-4bd84d550c2e",
+  "K2b2": "ee1a1e8b-bb81-43d2-b429-c53273972776",
+  "K2b3": "b98e21c3-44d5-4152-96f7-6cfee725c57b"
  }
 }
