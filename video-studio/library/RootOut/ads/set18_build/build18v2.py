@@ -237,8 +237,8 @@ def finish(L, shots, TOTAL):
     for s in shots:
         o = s["opts"]; it = None
         if "chip" in o:
-            name = o["chip"]; y = {"offer": 300, "kids4": 820}.get(name, 980)
-            ov.append((G / f"chip_{name}.png", s["t0"] + 0.15, s["t1"], "c", y))
+            name = o["chip"]; y = {"offer": 300, "kids4": 820, "x2": 1440}.get(name, 980)
+            ov.append((G / f"chip_{name}.png", float(o.get("chip_t", s["t0"] + 0.15)), s["t1"], "c", y))
         if "plants" in o: ov.append((G / "plants.png", s["t0"] + 0.2, s["t1"], "c", 960))
         if "chip_at" in o:
             ph, name = eval(o["chip_at"]); itm = next(i for i in L if i["kind"] == "tts" and i["src"] == "t06")
