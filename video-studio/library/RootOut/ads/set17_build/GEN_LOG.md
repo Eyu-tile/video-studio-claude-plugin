@@ -69,3 +69,8 @@ Outputs: H1 v4 · H2 v3 · H3 v3.
 One page, three tabs (H1 v4 · H2 v3 · H3 v3): https://claude.ai/artifact/X4eY8egYcx9gqRSMrxj7cm
 Built from the plugin review page (`vs present` copies, 13.6 MB each) by `make_review_page.py`; comments per ad in db collections
 `comments_h1` / `comments_h2` / `comments_h3` (read back with ArtifactData list, then `vs present notes`). `#h2` in the link opens that ad.
+
+## Delivered (24 Nov) — WilloMD Drive
+Folder `WilloMD/WilloMD_RootOut_Set17`: https://drive.google.com/drive/folders/1b6iixDgArvapSbf5MWW-7UWB7aRzDsUX
+H1_9x16_v4 54,681,023 B · H2_9x16_v3 53,638,474 B · H3_9x16_v3 53,844,988 B — `vs deliver verify`: all at full size.
+Older versions moved to `out/old/` before planning so only the finals were picked.
