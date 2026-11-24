@@ -113,7 +113,7 @@ SECTIONS = [
         (("He", 0), "talk", "N1T", {}),
         (("lemon", 0, 1), "split", R("r03_s13_skin_door.mp4"), {"top": ("clip", SV / "mixkit_lemon-tree_966.mp4")}),
         (("so", 0), "clip", R("r03_s13_skin_door.mp4"), {"ss": 1.1}),
-        (("tea", 0, 1), "split", R("r03_s13_skin_door.mp4"), {"ss": 3.0, "top": ("photo", SP / "flickr_melaleuca-snow-in-summer_tatters.jpg")}),
+        (("tea", 0, 1), "split", R("r03_s13_skin_door.mp4"), {"ss": 2.6, "top": ("photo", SP / "flickr_melaleuca-snow-in-summer_tatters.jpg")}),
         (("sinks", 0, 1), "clip", R("r19_s1_towels.mp4"), {"ss": 0.3, "ovs": [GX / "gauge_8x.png"]}),
         (("carries", 0, 1), "split", R("r05_s13_root_dot.mp4"), {"top": ("photo", SP / "flickr_pokeweed-berries_rkramer62.jpg")}),
         (("dot", 1, 1), "clip", R("r05_s13_root_dot.mp4"), {"ss": 2.5, "clock": True}),
