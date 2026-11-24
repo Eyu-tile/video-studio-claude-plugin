@@ -145,7 +145,8 @@ def render(out, src, o, n, take=None, cin=0.0):
     s = str(src)
     if o.get("card"):
         vf = (f"[0]scale={W*1.1:.0f}:{H*1.1:.0f}:force_original_aspect_ratio=increase,crop={W}:{H},boxblur=18:2,eq=brightness=-0.12,setsar=1[bg];"
-              f"[1]scale=1000:-1[c];[bg][c]overlay=x=(W-w)/2:y='(H-h)/2-140+max(0,260*(1-t/0.3))',fps={FPS}")
+              f"[1]scale=1000:-1[c];[bg][c]overlay=x=(W-w)/2:y='(H-h)/2-140+max(0,260*(1-t/0.3))',fps={FPS},"
+              f"zoompan=z='1+0.07*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS}")
         return ff("-loop", "1", "-i", GEN / "frames/F_K1.png", "-loop", "1", "-i", src, "-filter_complex", vf, "-frames:v", n, *ENC, out)
     if s.endswith((".png", ".jpg")):
         z0, z1 = o.get("push", (1.0, 1.08))
@@ -275,8 +276,10 @@ def finish(L, shots, TOTAL):
         j = k + 2; ins += ["-i", f]; fl.append(f"[{j}]aresample=48000,aformat=channel_layouts=stereo,volume={db}dB,adelay={max(0, int(t * 1000))}:all=1[x{j}]"); mix.append(f"[x{j}]")
     fl.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0,atrim=0:{TOTAL:.3f},loudnorm=I=-14:TP=-2.0:LRA=8[aout]")
     ff(*ins, "-filter_complex", ";".join(fl), "-map", "[aout]", "-ar", "48000", T / "mix.wav")
-    ff("-i", T / "picture_fin.mp4", "-i", T / "mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
-       "-shortest", "-movflags", "+faststart", "-map_metadata", "-1", FINAL)
-    print("out", FINAL, round(TOTAL, 2), "s,", len(shots), "shots")
+    SP = float(os.environ.get("SPEED", "1.1"))  # client: faster; lips + take audio speed up together, pitch kept
+    ff("-i", T / "picture_fin.mp4", "-i", T / "mix.wav", "-filter_complex", f"[0:v]setpts=PTS/{SP},fps=30[v];[1:a]atempo={SP}[a]",
+       "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "21", "-maxrate", "9M", "-bufsize", "18M", "-preset", "medium",
+       "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-map_metadata", "-1", FINAL)
+    print("out", FINAL, round(TOTAL / float(os.environ.get("SPEED", "1.1")), 2), "s,", len(shots), "shots")
 
 if __name__ == "__main__": build()
