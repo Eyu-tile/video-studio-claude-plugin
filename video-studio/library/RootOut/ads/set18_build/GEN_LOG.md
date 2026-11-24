@@ -35,3 +35,4 @@ Music: "Investigations", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit l
 - **Music:** "Pamgaea", Kevin MacLeod (incompetech.com), CC BY 4.0 (was "Investigations"), ducked under the voice.
 - QA: transcript 489/489 (formatting only), no frozen frames, each b-roll once, -14.1 LUFS.
 - Out: `out/WilloMD_RootOut_Set18_H1_9x16_v2.mp4` (122 MB). Builder: `build18v2.py`.
+- v2 audio pass (24 Nov, client): **all sound effects removed** (whooshes, pops, lamp click, end-card whoosh) and the room-tone bed; voice + music only. Transcript 489/489, -14.1 LUFS, no freezes.
