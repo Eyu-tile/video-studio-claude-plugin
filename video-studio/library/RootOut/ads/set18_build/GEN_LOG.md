@@ -50,3 +50,12 @@ Music: "Investigations", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit l
 - QA: transcript 489/489 (formatting only), no freezes ≥ 0.5 s, each b-roll once, -14.1 LUFS, 153 s, 39 shots.
 - Cost: sync-method takes started before the client's note (~660 cr, kept only for comparison) + native takes ~760 cr
   + VO ~20 cr. Out: `out/WilloMD_RootOut_Set18_H1_9x16_v3.mp4`.
+
+## H2 / H3 (24 Nov) — client: "this good, let's do the rest 2 hooks"
+- Takes (Seedance 2.5 720p, s3 start frame, hook voice as timbre reference, line in the prompt): H2 9 s (air quotes,
+  slow blink), H3 10 s (one finger, then two), K1c_h3 7 s ("She's wanted everything… This, she got." on camera, so the dad
+  segment stays ≥ 4 s once H3 drops the study). ~180 cr. Words exact; pitch 105–113 Hz (hook 109).
+- Per SCRIPT.md: H2 row 3 = "My son had one wart on his heel. One." (t03_h2, heel close-up); H3 row 6 starts at
+  "And the 'it'll go away' part…" (t06_h3; doctor + wart close b-roll). Hook boxes: hook_h2.png, hook_h3.png.
+- Builder: `HOOK=H2|H3 python3 build18v3.py` (shared content-keyed shot cache); QA: `HOOK=Hn python3 qa_hook.py`.
+- QA: H2 473/473 words, -14.1 LUFS, 151 s · H3 464/464 words, -14.1 LUFS, 144.5 s, no freezes.
