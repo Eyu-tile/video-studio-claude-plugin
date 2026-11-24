@@ -233,7 +233,7 @@ def captions(L, shots, TOTAL, path):
 def finish(L, shots, TOTAL):
     T = OUT / "fin"; T.mkdir(exist_ok=True)
     words = captions(L, shots, TOTAL, T / "cap.ass"); json.dump(words, open(T / "caption_words.json", "w"))
-    ov = [(G / "hook_h1.png", 0.12, 3.0, "c", 150)]
+    ov = [(G / os.environ.get("HOOKPNG", "hook_h1.png"), 0.12, 3.0, "c", 150)]
     for s in shots:
         o = s["opts"]; it = None
         if "chip" in o:

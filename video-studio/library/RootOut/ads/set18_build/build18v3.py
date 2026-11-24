@@ -67,6 +67,22 @@ ITEMS = [
  ("take", TK("K3"), "Link's below. Get two and the third one's on us, so every kid has their own. And you've got 90 days. If it's not gone, every penny comes back. Or, you know, leave it. See how that goes.", 0.4,
    [(None, M, {"chip_at": ("Get two", "offer")}), ("And you've got", PDP / "pdp-09-offer-guarantee-v11.jpg", {"card": 1}), ("every penny", M, {})]),
 ]
+# ---- hook variants (SCRIPT.md: H2 drops the doctor's line from row 3; H3 drops the study from row 6) ----
+HOOK = os.environ.get("HOOK", "H1")
+def _idx(src): return next(i for i, it in enumerate(ITEMS) if Path(it[1]).stem == src)
+if HOOK == "H2":
+    ITEMS[0] = ("take", TK("H2"), "Our doctor said, 'Leave it. It'll go away eventually.' So we left it. It did not go away. It brought friends.", 0.15, [(None, M, {"hook": 1})])
+    ITEMS[_idx("t03")] = ("tts", VO("t03_h2"), "My son had one wart on his heel. One.", 0.1, [(None, RE / "27_S19_b21_mason_sole.mp4", {"push": 1.1})])
+if HOOK == "H3":
+    ITEMS[0] = ("take", TK("H3"), "One kid in your house gets a wart, and the other kids are about twice as likely to get one. We left it, and let the other kid get it.", 0.15, [(None, M, {"hook": 1})])
+    i = _idx("v05"); del ITEMS[i]
+    ITEMS[_idx("K1c")] = ("take", TK("K1c_h3"), "She's wanted everything her brother had since she could walk. This, she got.", 0.4, [(None, M, {})])
+    ITEMS[_idx("t06")] = ("tts", VO("t06_h3"), "And the 'it'll go away' part is half right. About half of kids' warts go on their own within a year. Half don't.", 0.1,
+        [(None, ST / "b03_doctor/mixkit_32176_doctor-putting-on-a-stethoscope.mp4", {"in": 6.0}), ("About half of", RE / "26_S19_b60_wart_back.mp4", {"in": 1.0})])
+if HOOK != "H1":
+    FINAL = P / f"out/WilloMD_RootOut_Set18_{HOOK}_9x16_v3.mp4"; OUT = P / f"work/build/{HOOK}v3"; OUT.mkdir(parents=True, exist_ok=True)  # shots cache shared (content-keyed)
+    os.environ.setdefault("HOOKPNG", f"hook_{HOOK.lower()}.png")
+
 END = 3.0
 
 def piece(kind, f, text):
