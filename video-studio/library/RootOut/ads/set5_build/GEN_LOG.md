@@ -52,5 +52,6 @@ transitions; still push-ins with a sine drift jittered.
 - Edit (`build6.py`): each night = one take, shots start on the word they show; 24 fps end to end; straight cuts (only the
   NIGHT stamps ease in); stills rendered 2x then one linear push-in; slowed shots frame-blended; calendar/end card
   re-rendered at 24 fps with fading X's. Talking shots are never jump-cut.
+- Mix: music only under the voice (no SFX or room tone, per the client note on Set 18).
 - QA v3: 131.98 s, 53 shots; transcript 351/351 ("hardtop" spacing only); stutter frames 45 → 0; frozen spans 0;
   −14.5 LUFS, peak −1.6 dBFS.

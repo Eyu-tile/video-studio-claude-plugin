@@ -243,9 +243,8 @@ if __name__ == "__main__":
     cat = TMP / "cut.mp4"; run(["-f", "concat", "-safe", "0", "-i", str(TMP / "list.txt"), "-c", "copy", str(cat)])
     D = dur(cat); n = captions(tl, D)
     fc = (f"[1:a]atrim=0:{D:.2f},volume=0.20,afade=t=in:d=1.2,afade=t=out:st={D - 2.5:.2f}:d=2.5[m];"
-          f"anoisesrc=c=pink:a=0.004:d={D:.2f},lowpass=f=1800[rt];"
           f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=450[md];"
-          f"[vo][md][rt]amix=inputs=3:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"
+          f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"   # no SFX / room tone (client note, Set 18)
           f"[0:v]ass={TMP / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/5[v]")
     final = P / "out/WilloMD_RootOut_Set5_H1_9x16_v3.mp4"
     run(["-i", str(cat), "-i", str(P / "assets/music/Dreamer.mp3"), "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(FPS),
