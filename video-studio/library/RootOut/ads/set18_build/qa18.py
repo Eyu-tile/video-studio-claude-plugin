@@ -23,7 +23,7 @@ for o in ops[:20]: print("  ", o[0], want[o[1]:o[2]], "->", g2[o[3]:o[4]])
 fr = subprocess.run(["ffmpeg", "-i", str(f), "-vf", "freezedetect=n=0.003:d=0.5", "-map", "0:v", "-f", "null", "-"], capture_output=True, text=True).stderr
 fz = re.findall(r"freeze_start: ([\d.]+).*?freeze_duration: ([\d.]+)", fr, re.S)
 print("freezes >=0.5s:", [(round(float(a), 1), round(float(b), 1)) for a, b in fz] or "none")
-tl = json.load(open(P / "work/build/H1/timeline.json"))
-srcs = [Path(s["src"]).stem for s in tl["shots"] if s["kind"] in ("clip", "still", "card", "anim")]
+tl = json.load(open(sys.argv[2] if len(sys.argv) > 2 else P / "work/build/H1/timeline.json"))
+srcs = [Path(s["src"]).stem for s in tl["shots"] if s.get("kind", "x") in ("clip", "still", "card", "anim", "x") and s["src"] != "TAKE"]
 dup = {s for s in srcs if srcs.count(s) > 1}
 print("b-roll used more than once:", dup or "none")
