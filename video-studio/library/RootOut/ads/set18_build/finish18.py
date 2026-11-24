@@ -99,7 +99,7 @@ def main():
     fl.append(f"[{last}][g]overlay=x=770:y=520:enable='between(t,{gauge['t0'] + 0.2:.2f},{gauge['t1']:.2f})'[vg]")
     fl.append(f"[vg]subtitles={T / 'captions.ass'}:fontsdir=/usr/share/fonts/opentype/inter,"
               "noise=alls=7:allf=t,vignette=PI/5.5,unsharp=5:5:0.35,format=yuv420p[vout]")
-    ff(*ins, "-filter_complex", ";".join(fl), "-map", "[vout]", "-t", f"{TOTAL:.3f}", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-r", "30", T / "picture_fin.mp4")
+    ff(*ins, "-filter_complex", ";".join(fl), "-map", "[vout]", "-t", f"{TOTAL:.3f}", "-c:v", "libx264", "-crf", "21", "-maxrate", "9M", "-bufsize", "18M", "-preset", "medium", "-r", "30", T / "picture_fin.mp4")
     # ---- sound ----
     sfx = []
     for s in SHOTS:
