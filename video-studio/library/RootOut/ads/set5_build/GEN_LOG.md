@@ -55,3 +55,14 @@ transitions; still push-ins with a sine drift jittered.
 - Mix: music only under the voice (no SFX or room tone, per the client note on Set 18).
 - QA v3: 131.98 s, 53 shots; transcript 351/351 ("hardtop" spacing only); stutter frames 45 → 0; frozen spans 0;
   −14.5 LUFS, peak −1.6 dBFS.
+
+## v4 (24 Nov) — client workflow: Soul → GPT Image 2.6 → Seedance 2.5 720p, no Sync
+- Mom: Soul 2.0 base (momD, locked) → GPT Image 2.6 scene edits (hook with bottle, night 3 with book, car, close in cream
+  sweater) → Seedance 2.5 omni_reference 720p, start frame locked, native audio. First clip (night 1) = voice lock;
+  the others used a 9.4 s sample of it as audio reference. All verbatim (medium.en).
+- Voice: cloning the lock voice was refused (account custom-voice limit 3/3). Per the client's choice, the account's
+  existing "S7 RootOut mom" voice is used everywhere: voice_change on her 5 on-camera clips (envelope match 0.97–0.99,
+  0 ms shift, so lips stay synced) + ElevenLabs takes in that voice for her off-camera lines (raw/v4/vo).
+- Testimonials: Seedance native voices (m1 re-rolled: the first take dropped "She's four").
+- Builder: build7.py (sections = VO blocks + talking clips back to back; talking shots cut from the clip whose audio plays).
+- QA: 351/351 script words, no frozen spans, 2 single repeated frames at cuts, −14.2 LUFS. Job ids: work/v4_jobs.json.
