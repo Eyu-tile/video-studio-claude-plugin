@@ -36,3 +36,17 @@ Music: "Investigations", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit l
 - QA: transcript 489/489 (formatting only), no frozen frames, each b-roll once, -14.1 LUFS.
 - Out: `out/WilloMD_RootOut_Set18_H1_9x16_v2.mp4` (122 MB). Builder: `build18v2.py`.
 - v2 audio pass (24 Nov, client): **all sound effects removed** (whooshes, pops, lamp click, end-card whoosh) and the room-tone bed; voice + music only. Transcript 489/489, -14.1 LUFS, no freezes.
+
+## v3 (24 Nov) — client: "skin/lighting robotic → Soul character, GPT 2.6 for props; natural casual acting; no sync forcing"
+- **Character:** Soul 2 base (s3, job 3314f013) → GPT Image 2.6 scene edits (props, bottle, three bottles, backyard, coffee).
+- **Takes:** Seedance 2.5 720p, each scene image locked as start frame, the line written in the prompt, natural casual
+  direction, his own native voice (no audio-reference lip sync). 11 takes (K1a–K1d, K2a, Y1, K2b1–3, Y2, K3); K1b and K2a
+  re-shot (cut-off word / skipped sentence) with the hook's voice as a timbre-only reference. All words match the script.
+- **Voice lock:** first take (K1a) = the voice; all 16 off-camera lines re-cloned from it with Seed Audio (raw/vo4, gaps
+  tightened by `compact_vo.py`). Bedtime line re-recorded once ("a little file" → "the little file").
+- **Edit (`build18v3.py`):** 0–7 s dad only; every dad segment ≥ 4 s with a slow push-in; b-roll runs split into equal
+  ~3 s shots (2.7–3.8 s; soil cutaway 4.2 s, one move); one study card (van Haalen) + real b-roll (sneakers, doctor,
+  wart close); no infant clips (b35/b37/b55/31411 out; S17 b2 routine, S1 b11 nightstand, S19 b52 socks in).
+- QA: transcript 489/489 (formatting only), no freezes ≥ 0.5 s, each b-roll once, -14.1 LUFS, 153 s, 39 shots.
+- Cost: sync-method takes started before the client's note (~660 cr, kept only for comparison) + native takes ~760 cr
+  + VO ~20 cr. Out: `out/WilloMD_RootOut_Set18_H1_9x16_v3.mp4`.
