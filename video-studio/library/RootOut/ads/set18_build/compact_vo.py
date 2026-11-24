@@ -2,7 +2,8 @@
 """Tighten Seed Audio lines: cut flubbed words, cap silent gaps (cut mid-gap), trim head/tail. -> raw/vo3/c/<name>.wav"""
 import json, subprocess, sys
 from pathlib import Path
-D = Path("/home/user/video-studio-claude-plugin/video-studio/projects/rootout-set18/raw/vo3")
+import os
+D = Path(os.environ.get("VODIR", "/home/user/video-studio-claude-plugin/video-studio/projects/rootout-set18/raw/vo3"))
 DROP = {"K2a": ["Wart?"], "Y2": ["ran,"]}
 CAP = 0.42
 def run(name):

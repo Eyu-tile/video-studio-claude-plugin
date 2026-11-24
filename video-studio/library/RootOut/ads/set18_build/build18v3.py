@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import build18v2 as V2
 from build18v2 import ff, stt, find, dur, fr, W, H, FPS, COVER, ENC, P, RE, ST, GEN, G, PDP, SITE
 V2.TLm.NUM.update({"4": "four", "1500": "fifteenhundred", "8": "eight", "90": "ninety", "14": "fourteen"})
-C3 = GEN / "clips3"; VO4 = P / "raw/vo4"
+C3 = GEN / "clips3"; VO4 = P / "raw/vo4/c"
 OUT = P / "work/build/H1v3"; SH = OUT / "shots"; SH.mkdir(parents=True, exist_ok=True)
 FINAL = P / "out/WilloMD_RootOut_Set18_H1_9x16_v3.mp4"
 SPEED = float(os.environ.get("SPEED", "1.1")); MIN_M = 4.0 * SPEED; BR = (2.4 * SPEED, 3.8 * SPEED)
