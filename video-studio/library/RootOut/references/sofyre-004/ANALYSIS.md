@@ -2,7 +2,7 @@
 
 Watched 24 Nov 2026: every cut detected (ffmpeg scdet), one frame per shot looked at by eye (80 shots for #004, 88 for #002),
 voice transcribed word by word (faster-whisper small.en), audio levels measured. Per-shot data: `shots.json` here and
-`../sofyre-002/shots.json` (start, end, length, words spoken over the shot). Videos and frames stay local (git-ignored).
+`../sofyre-002/shots.json` (start, end, length, words spoken over the shot; kept local, git-ignored). Videos and frames stay local (git-ignored).
 
 ## 1. The numbers
 | | #004 (main swipe) | #002 (sister cut) | **Set 5 brief (H1)** |
