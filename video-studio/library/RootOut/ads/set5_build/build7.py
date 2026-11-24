@@ -7,7 +7,7 @@ trimmed to speech; talking shots cut from the same clip at the same time as thei
 - Every shot starts on the word it illustrates (anchors in the take's word timings).
 - Smoothness: 24 fps end to end (the sources are 24), straight cuts (only the NIGHT stamps blur in), stills rendered at
   2x then a single linear push-in (no jitter), slowed clips frame-blended, no jump cuts inside talking shots.
-Usage: build7.py  -> out/WilloMD_RootOut_Set5_H1_9x16_v4.mp4"""
+Usage: build7.py  -> out/WilloMD_RootOut_Set5_H1_9x16_v5.mp4"""
 import json, re, subprocess, sys, difflib
 from pathlib import Path
 
@@ -23,6 +23,8 @@ FONT = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
 COVER = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1"
 norm = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
 V4 = P / "raw/v4"
+VOM = P / "work/match"   # VO takes matched to her on-camera voice (pitch + tone): work/match/match.py
+MUSIC = 0.11            # music bed level (v4 was 0.20; client: too loud)
 SCRIPT = {k: v[1] for k, v in json.load(open(P / "work/vo_lines.json")).items()}
 
 
@@ -163,15 +165,15 @@ SECTIONS = [
 # block key -> (file, script lines, is_talking_clip)
 BLK = {
     "E1": (V4 / "s7/E1_hook.mp4", ["v01"], True),
-    "N1a": (V4 / "vo/N1a.mp3", ["v02", "v03", "v04"], False),
+    "N1a": (VOM / "N1a_m.wav", ["v02", "v03", "v04"], False),
     "N1T": (V4 / "s7/c_n1.mp4", ["v06", "v07"], True),
-    "N1b": (V4 / "vo/N1b.mp3", ["v08", "v09", "v10"], False),
-    "N3a": (V4 / "vo/N3a.mp3", ["v11"], False),
+    "N1b": (VOM / "N1b_m.wav", ["v08", "v09", "v10"], False),
+    "N3a": (VOM / "N3a_m.wav", ["v11"], False),
     "E3": (V4 / "s7/E3_n3.mp4", ["v13"], True),
-    "N3b": (V4 / "vo/N3b.mp3", ["v14"], False),
-    "N7": (V4 / "vo/N7.mp3", ["v16", "v17", "v18"], False),
+    "N3b": (VOM / "N3b_m.wav", ["v14"], False),
+    "N7": (VOM / "N7_m.wav", ["v16", "v17", "v18"], False),
     "E4": (V4 / "s7/E4_car.mp4", ["v19"], True),
-    "N14": (V4 / "vo/N14.mp3", ["v20", "v21", "v22", "v23"], False),
+    "N14": (VOM / "N14_m.wav", ["v20", "v21", "v22", "v23"], False),
     "M1": (V4 / "m1.mp4", ["v24"], True),
     "M2": (V4 / "m2.mp4", ["v25"], True),
     "M3": (V4 / "m3.mp4", ["v26"], True),
@@ -302,13 +304,13 @@ if __name__ == "__main__":
     (TMP / "list.txt").write_text("".join(f"file '{o}'\n" for o in outs))
     cat = TMP / "cut.mp4"; run(["-f", "concat", "-safe", "0", "-i", str(TMP / "list.txt"), "-c", "copy", str(cat)])
     D = dur(cat); n = captions(tl, D)
-    fc = (f"[1:a]atrim=0:{D:.2f},volume=0.20,afade=t=in:d=1.2,afade=t=out:st={D - 2.5:.2f}:d=2.5[m];"
+    fc = (f"[1:a]atrim=0:{D:.2f},volume={MUSIC},afade=t=in:d=1.2,afade=t=out:st={D - 2.5:.2f}:d=2.5[m];"
           f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=450[md];"
           f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"   # no SFX / room tone (client note, Set 18)
           f"[0:v]ass={TMP / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/5[v]")
-    final = P / "out/WilloMD_RootOut_Set5_H1_9x16_v4.mp4"
+    final = P / "out/WilloMD_RootOut_Set5_H1_9x16_v5.mp4"
     run(["-i", str(cat), "-i", str(P / "assets/music/Dreamer.mp3"), "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(FPS),
          "-c:v", "libx264", "-crf", "18", "-maxrate", "10M", "-bufsize", "20M", "-preset", "slow", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-map_metadata", "-1", "-movflags", "+faststart", str(final)])
     shots = sum(len(s[3]) for s in SECTIONS) + 1
-    print("H1 v4", round(dur(final), 2), "s,", shots, "shots,", n, "caption cards ->", final)
+    print("H1 v5", round(dur(final), 2), "s,", shots, "shots,", n, "caption cards ->", final)
