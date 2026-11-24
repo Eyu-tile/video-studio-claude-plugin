@@ -174,7 +174,7 @@ def build():
         t1 = cuts[k + 1][0] if k + 1 < len(cuts) else TOTAL; n = fr(t1) - fr(t0); out = SH / f"s{k + 1:03d}.mp4"
         cin = 0.0
         if src == "TAKE": cin = it["a"] + (t0 - it["t0"])
-        render(out, src, o, n, (it or {}).get("src"), cin)
+        if not out.exists() or os.environ.get("REBUILD"): render(out, src, o, n, (it or {}).get("src"), cin)
         shots.append(dict(n=k + 1, t0=round(t0, 3), t1=round(t1, 3), src=str(src), take=(it or {}).get("src"), opts={a: str(b) for a, b in o.items()}))
     (SH / "l.txt").write_text("".join(f"file 's{s['n']:03d}.mp4'\n" for s in shots))
     ff("-f", "concat", "-safe", "0", "-i", SH / "l.txt", "-c", "copy", OUT / "picture.mp4")
@@ -187,7 +187,7 @@ def build():
         mix.append(f"[a{j}]")
     fl.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0,acompressor=threshold=-22dB:ratio=3:attack=5:release=120,apad=whole_dur={TOTAL:.3f}[vo]")
     ff(*ins, "-filter_complex", ";".join(fl), "-map", "[vo]", "-t", f"{TOTAL:.3f}", "-c:a", "pcm_s16le", OUT / "vo.wav")
-    json.dump(dict(total=TOTAL, items=[{k: v for k, v in i.items() if k != "words"} for i in L], shots=shots), open(OUT / "timeline.json", "w"), indent=1)
+    json.dump(dict(total=TOTAL, items=[{k: v for k, v in i.items() if k != "words"} for i in L], shots=shots), open(OUT / "timeline.json", "w"), indent=1, default=str)
     finish(L, shots, TOTAL)
 
 # ---------------- finish: overlays, captions, music, grade ----------------
