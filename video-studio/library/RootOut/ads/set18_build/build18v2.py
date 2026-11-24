@@ -266,12 +266,13 @@ def finish(L, shots, TOTAL):
         if o.get("dark"): sfx.append((SFX / "click-soft.mp3", s["t1"] - 0.5, -6))
     for png, t0, *_ in ov[1:]: sfx.append((SFX / "pop.mp3", t0, -13))
     sfx.append((SFX / "whoosh-cinematic.mp3", TOTAL - END - 0.1, -10))
+    if os.environ.get("SFX", "0") != "1": sfx = []  # client 24 Nov: no sound effects anywhere
     ins = ["-i", OUT / "vo.wav", "-i", MUSIC]
-    fl = [f"anoisesrc=color=brown:amplitude=0.02:d={TOTAL:.2f},lowpass=f=400,volume=-14dB,aformat=channel_layouts=stereo[room]",
+    fl = ([f"anoisesrc=color=brown:amplitude=0.02:d={TOTAL:.2f},lowpass=f=400,volume=-14dB,aformat=channel_layouts=stereo[room]"] if sfx else []) + [
           "[0]aresample=48000,aformat=channel_layouts=stereo,asplit=2[vo][vok]",
           f"[1]atrim=0:{TOTAL:.2f},asetpts=N/SR/TB,volume=-14dB,afade=t=out:st={TOTAL - 1.2:.2f}:d=1.2,aformat=channel_layouts=stereo[mus]",
           "[mus][vok]sidechaincompress=threshold=0.04:ratio=5:attack=15:release=300[duck]"]
-    mix = ["[vo]", "[duck]", "[room]"]
+    mix = ["[vo]", "[duck]"] + (["[room]"] if sfx else [])
     for k, (f, t, db) in enumerate(sfx):
         j = k + 2; ins += ["-i", f]; fl.append(f"[{j}]aresample=48000,aformat=channel_layouts=stereo,volume={db}dB,adelay={max(0, int(t * 1000))}:all=1[x{j}]"); mix.append(f"[x{j}]")
     fl.append("".join(mix) + f"amix=inputs={len(mix)}:normalize=0,atrim=0:{TOTAL:.3f},loudnorm=I=-14:TP=-2.0:LRA=8[aout]")
