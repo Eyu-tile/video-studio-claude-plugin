@@ -123,7 +123,9 @@ SECTIONS = [
         (("little", 0, 1), "photo", FR / "W3.png", {}),
         (("are", 0), "cardclip", GX / "c_dots.png", {"bg": FR / "W1.png", "bk": "photo"}),
         (("That's", 0), "talk", "E3", {}),
-        (("Freezing", 0), "clip", R("r06_s1_dand_snap.mp4"), {}),
+        (("Freezing", 0), "clip", R("r16_s19_wart_back.mp4"), {"grey": True}),   # v5: the fixes, greyed (swipe grammar)
+        (("snap", 0), "clip", R("r06_s1_dand_snap.mp4"), {}),
+        (("like", 0), "clip", SV / "mixkit_dandelion-closeup_45332.mp4", {}),   # v5: slower VO needs a 2nd shot here
         (("root", 0, 1), "clip", R("r07_s17_soil_cutaway.mp4"), {"ss": 0.2}),
         (("so", 0), "clip", R("r08_s1_dand_back.mp4"), {"ss": 0.4}),
         ("END", "cardclip", GX / "c_repeat.png", {"bg": SV / "mixkit_dandelion-meadow_33321.mp4"})]),
