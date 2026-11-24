@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 P = Path("/home/user/video-studio-claude-plugin/video-studio/projects/rootout-set5")
 L = Path("/home/user/video-studio-claude-plugin/video-studio/library/RootOut")
 WEB = L / "ads/set5_build/web"; OUT = P / "assets/graphics"; OUT.mkdir(parents=True, exist_ok=True)
-W, H, FPS = 1080, 1920, 30
+W, H, FPS = 1080, 1920, 24
 CRAYON = str(P / "assets/fonts/CaveatBrush-Regular.ttf"); NEWS = str(P / "assets/fonts/Newsreader.ttf")
 INTER_B = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"; INTER_M = "/usr/share/fonts/opentype/inter/Inter-Medium.otf"
 NAVY, BLUE, ICE, ORANGE = (11, 42, 91), (23, 99, 184), (238, 244, 250), (224, 78, 24)
@@ -139,14 +139,15 @@ def calendar14(dur=5.2):
     plus = crayon_text("+14", 190, color=(30, 120, 60), seed=99, rot=-8)
     def draw(t, k):
         im = base.copy().convert("RGBA")
-        nx = min(14, int(t / 0.17) + 1)
-        for i in range(nx):
+        for i in range(14):  # each X fades in over 0.15 s, one every 0.17 s
+            a = min(1.0, max(0.0, (t - i * 0.17) / 0.15))
+            if a <= 0: break
             r, c = divmod(i, 7); x = px + 30 + c * cw + cw / 2 - xs[i].width / 2; y = py + 130 + r * chh + chh / 2 - xs[i].height / 2
-            im.alpha_composite(xs[i], (int(x), int(y)))
+            xi = xs[i].copy(); xi.putalpha(xi.split()[3].point(lambda v, a=a: int(v * a))); im.alpha_composite(xi, (int(x), int(y)))
         if t > 3.0:
             a = min(1, (t - 3.0) / 0.5); pl = plus.copy(); pl.putalpha(pl.split()[3].point(lambda v: int(v * a)))
             im.alpha_composite(pl, (px + 30 + int(2 * cw), int(py + 130 + 2 * chh)))
-        z = 1 + 0.03 * t / dur  # slow push-in (never a held frame)
+        z = 1 + 0.07 * t / dur  # steady push-in (never a held frame)
         im = im.resize((int(W * z), int(H * z)), Image.BICUBIC); ox, oy = (im.width - W) // 2, (im.height - H) // 2
         return im.crop((ox, oy, ox + W, oy + H))
     pipe("calendar14", dur, draw)

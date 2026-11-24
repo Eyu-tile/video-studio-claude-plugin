@@ -24,7 +24,12 @@
   "t06_combo": "eadbb826-38b3-4858-9293-1b08d6aeb9d0",
   "t27_combo": "10391323-0a87-4f80-9902-4558df1218a7",
   "t13_pad": "8ef85ce0-67f3-4b8a-acb8-7aa649045333",
-  "skin_door_open": "e4fedcc8-14f3-4d83-b885-930f0d51d765"
+  "skin_door_open": "e4fedcc8-14f3-4d83-b885-930f0d51d765",
+  "ls_h1": "bb81c421-45e6-41b6-b4f0-fdf86cad8f79",
+  "ls_n1": "de80f0b3-941d-49b5-a26c-334a81856298",
+  "ls_n3": "122408d4-83a2-4509-a0bb-b100249d8bb1",
+  "ls_n10": "59104a3b-048c-4754-ab63-975f1900fe82",
+  "ls_cl": "1f7cae31-139a-4abc-b390-3d034311f612"
  },
  "video": {
   "t01": "f2e88e3f-f50b-4b43-bae5-bff63cfc6737",
@@ -169,5 +174,24 @@
   "r14_s20_feetup": "bedc70f4",
   "r18_s19_three_bottles": "d2ec83d6",
   "r19_s1_towels": "ce962fe0"
+ },
+ "lipsync_v3": {
+  "t01": "377f27c0-8715-4eb9-80d1-3dc1a40cddb3",
+  "t06": "f2f52f45-758e-4c01-bb73-e0e4a5e05ad9",
+  "t13": "732df911-4eb4-4b70-a7ff-e10a57a3fb08",
+  "t19": "5d72efac-5539-4078-8fc6-e1306d069ed8",
+  "t27": "cf935239-a663-479f-8611-ffd044965d42",
+  "m1": "5ca5d7e2-df1a-42a6-837a-18e7553c6f43",
+  "m2": "19d64eff-a43f-48e1-84e0-7f7b2acb0563",
+  "m3": "4e6eedab-037e-4f2f-ac98-11e02763680b"
+ },
+ "vo3_takes": {
+  "n1": "dd59e561-b3ad-4ea0-9dc3-618a75b417d7",
+  "n1_rejected_a_little_file": "2b18ef0d-5aab-426f-bb0b-c946ba40d82d",
+  "n3": "1835897f-0e9e-48e3-8c0b-bd76ed34fdd8",
+  "n7": "273c4e5a-974f-47ce-9c0d-fc384ff47de2",
+  "n10": "33a46569-f10a-4abb-94be-204cfbe8a1e2",
+  "n14": "fd22f52b-dc60-4332-9bbc-d464a63334e7",
+  "cl": "1a5633f3-de7e-4c14-bd92-f03c395bb390"
  }
 }

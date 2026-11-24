@@ -39,3 +39,18 @@ credit line in the post copy.
 - Night 14 "It's gone" on a foot vs the PDP's "Weeks 4–8: feet and corns take longer" (kept verbatim, flagged).
 - "Recommended by pediatricians", kids' formula vs pokeweed/white cedar, 8x proof (towel test is an AI placeholder).
 - AAD screenshots in a paid ad: client legal to confirm.
+
+## v3 (24 Nov) — client: "the woman feels robotic, not syncing, some parts glitch; make the flow smoother"
+Causes found: the mom's voice was 25 separately generated snippets, then time-stretched word by word onto Seedance clips
+(Seedance re-voices the reference, so its lips followed a different, slower read) → choppy intonation and drifting lips;
+the edit ran at 30 fps from 24 fps sources (repeated frames); slowed shots repeated frames; jump cuts and zoom/whip/spin
+transitions; still push-ins with a sine drift jittered.
+- Voice: re-recorded as one continuous ElevenLabs take per night (Helena; 6 takes + 2 night-1 retakes, n1 retake kept
+  because the first read "a little file"), pauses capped at 0.5 s, nothing stretched. Verbatim check 351/351.
+- Lip-sync: the 8 talking clips re-synced with **Sync Lipsync 3** (`sync_so`, cut_off) to the exact slice of the take they
+  play under (testimonials to their own lines). ~4 cr/s, ~260 credits.
+- Edit (`build6.py`): each night = one take, shots start on the word they show; 24 fps end to end; straight cuts (only the
+  NIGHT stamps ease in); stills rendered 2x then one linear push-in; slowed shots frame-blended; calendar/end card
+  re-rendered at 24 fps with fading X's. Talking shots are never jump-cut.
+- QA v3: 131.98 s, 53 shots; transcript 351/351 ("hardtop" spacing only); stutter frames 45 → 0; frozen spans 0;
+  −14.5 LUFS, peak −1.6 dBFS.
