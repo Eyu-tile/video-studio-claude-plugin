@@ -66,3 +66,12 @@ transitions; still push-ins with a sine drift jittered.
 - Testimonials: Seedance native voices (m1 re-rolled: the first take dropped "She's four").
 - Builder: build7.py (sections = VO blocks + talking clips back to back; talking shots cut from the clip whose audio plays).
 - QA: 351/351 script words, no frozen spans, 2 single repeated frames at cuts, −14.2 LUFS. Job ids: work/v4_jobs.json.
+
+## v5 (24 Nov) — one voice: hers
+- Client: "take out the main woman's audio, clone it, make the VO match — no voice change between VO and the woman".
+- Cloning in Higgsfield still refused (voice limit 3/3, nothing deleted on the WilloMD account); the ElevenLabs key in this
+  session has no voices_write permission. Used Seed Audio 1.0 (seed_audio) with her own Seedance voice-lock clip
+  (media f06ac05f…, 9.4 s from c_n1) as audio_references: no voice slot needed.
+- Speaker similarity to her real voice (resemblyzer, ref = 36 s of her Seedance clips): new VO 0.82–0.93, her own car
+  clip 0.89, old S7 VO 0.65. Picks in work/clone/pick (pauses capped at 0.5 s); all verbatim.
+- On-camera shots back to her untouched Seedance audio (no voice_change). Music bed 0.20 → 0.11 (client: too loud).

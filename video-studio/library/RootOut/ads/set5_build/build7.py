@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Set 5 H1 v4 — client workflow (24 Nov): mom = Higgsfield Soul base -> GPT Image 2.6 scene edits -> Seedance 2.5 720p,
-no Sync. Her on-camera shots play their own Seedance audio, voice-changed to the account's "S7 RootOut mom" voice
-(timing kept, so lips stay in sync); her off-camera lines are ElevenLabs takes in that same voice (raw/v4/vo).
+no Sync. Her on-camera shots play their own Seedance audio (her native voice, untouched); her off-camera lines are
+Seed Audio 1.0 reads with her voice-lock clip as the voice reference, so VO and on-camera are the same voice.
 Testimonial moms: their own Seedance voices. Each section's audio = its blocks (VO takes / talking clips) back to back,
 trimmed to speech; talking shots cut from the same clip at the same time as their audio.
 - Every shot starts on the word it illustrates (anchors in the take's word timings).
@@ -23,7 +23,7 @@ FONT = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
 COVER = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1"
 norm = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
 V4 = P / "raw/v4"
-VOM = P / "work/match"   # VO takes matched to her on-camera voice (pitch + tone): work/match/match.py
+VOC = P / "work/clone/pick"   # VO in her own voice: Seed Audio 1.0 with her Seedance voice-lock clip as the reference
 MUSIC = 0.11            # music bed level (v4 was 0.20; client: too loud)
 SCRIPT = {k: v[1] for k, v in json.load(open(P / "work/vo_lines.json")).items()}
 
@@ -164,20 +164,20 @@ SECTIONS = [
 # ---------------- audio blocks: each section = its blocks back to back (VO takes in the S7 voice / talking clips) -------
 # block key -> (file, script lines, is_talking_clip)
 BLK = {
-    "E1": (V4 / "s7/E1_hook.mp4", ["v01"], True),
-    "N1a": (VOM / "N1a_m.wav", ["v02", "v03", "v04"], False),
-    "N1T": (V4 / "s7/c_n1.mp4", ["v06", "v07"], True),
-    "N1b": (VOM / "N1b_m.wav", ["v08", "v09", "v10"], False),
-    "N3a": (VOM / "N3a_m.wav", ["v11"], False),
-    "E3": (V4 / "s7/E3_n3.mp4", ["v13"], True),
-    "N3b": (VOM / "N3b_m.wav", ["v14"], False),
-    "N7": (VOM / "N7_m.wav", ["v16", "v17", "v18"], False),
-    "E4": (V4 / "s7/E4_car.mp4", ["v19"], True),
-    "N14": (VOM / "N14_m.wav", ["v20", "v21", "v22", "v23"], False),
+    "E1": (V4 / "E1_hook.mp4", ["v01"], True),
+    "N1a": (VOC / "N1a.wav", ["v02", "v03", "v04"], False),
+    "N1T": (V4 / "c_n1.mp4", ["v06", "v07"], True),
+    "N1b": (VOC / "N1b.wav", ["v08", "v09", "v10"], False),
+    "N3a": (VOC / "N3a.wav", ["v11"], False),
+    "E3": (V4 / "E3_n3.mp4", ["v13"], True),
+    "N3b": (VOC / "N3b.wav", ["v14"], False),
+    "N7": (VOC / "N7.wav", ["v16", "v17", "v18"], False),
+    "E4": (V4 / "E4_car.mp4", ["v19"], True),
+    "N14": (VOC / "N14.wav", ["v20", "v21", "v22", "v23"], False),
     "M1": (V4 / "m1.mp4", ["v24"], True),
     "M2": (V4 / "m2.mp4", ["v25"], True),
     "M3": (V4 / "m3.mp4", ["v26"], True),
-    "E5": (V4 / "s7/E5_close.mp4", ["v27", "v29"], True),
+    "E5": (V4 / "E5_close.mp4", ["v27", "v29"], True),
 }
 TAKES = {"h1": ["E1"], "n1": ["N1a", "N1T", "N1b"], "n3": ["N3a", "E3", "N3b"], "n7": ["N7"], "n10": ["E4"],
          "n14": ["N14"], "m1": ["M1"], "m2": ["M2"], "m3": ["M3"], "cl": ["E5"]}
