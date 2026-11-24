@@ -2,7 +2,7 @@
 
 - Client: WilloMD
 - Project folder: `projects/rootout-set1`
-- Status: **delivered**  (created 2026-11-21 11:26, updated 2026-11-22 15:27)
+- Status: **delivered**  (created 2026-11-21 11:26, updated 2026-11-22 18:25)
 
 ## Versions
 - **v1** 2026-11-21 12:44: v1 draft: Set 1 H1/H2/H3, 1:53-1:56, 9:16. Soul + Seedance 2.5 720p + ElevenLabs (Higgsfield WilloMd, 805 credits). Testimonials changed to no-result lines. Music: Promises to Keep, Kevin MacLeod, CC BY 4.0.

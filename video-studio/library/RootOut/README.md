@@ -58,6 +58,10 @@ to check price/offer changes.
   account + credits, and get the person's yes on the cost. `vs higgsfield use` can't name this connector (it only knows
   `higgsfield-<name>`), so this README is the record.
 
+## Delivery (Google Drive)
+Approved WilloMD ads go to the **WilloMD** Drive folder with `vs deliver --to willomd` (target saved in
+`video-studio/style/delivery.json`). Steps, folder ids and rules: `delivery/README.md`. Deliver only after approval.
+
 ## Open questions for the client
 - Logo: the site uses a text wordmark only. Vector logo / packaging files?
 - Real footage: product B-roll, UGC creators, real customer before/afters and reviews (the site's are illustrative)?

@@ -1,0 +1,12 @@
+{
+ "targets": {
+  "willomd": {
+   "root_id": "1m2sQXAQhtQNiO8CGfr6fy2akLstLjUv7",
+   "root_name": "WilloMD",
+   "inbox": "_claude_uploads",
+   "inbox_id": "1lu-C8LikH2zp4jDXRKbC0Ot2DI5CBZod",
+   "folder_url": "https://drive.google.com/drive/folders/1m2sQXAQhtQNiO8CGfr6fy2akLstLjUv7"
+  }
+ },
+ "default": "willomd"
+}
