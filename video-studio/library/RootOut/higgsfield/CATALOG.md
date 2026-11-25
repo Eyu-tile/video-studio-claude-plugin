@@ -5,9 +5,9 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1498 generations (1198 video, 200 image, 100 audio). RootOut era (from 21 Nov 2026): 684.
+Totals: 1500 generations (1199 video, 201 image, 100 audio). RootOut era (from 21 Nov 2026): 686.
 
-## RootOut-era video (440; 138 named by a set)
+## RootOut-era video (441; 197 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
@@ -187,10 +187,10 @@ Totals: 1498 generations (1198 video, 200 image, 100 audio). RootOut era (from 2
 | 2026-11-23 | `24e5d40d` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the first reference image and keeps ex |
 | 2026-11-23 | `0d061720` |  | kling3_0 | Unedited real iPhone video at night, macro close-up, natural dim lamp light, camera nearly still, no cinematic |
 | 2026-11-23 | `58ac11c7` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
-| 2026-11-23 | `f039ca3a` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
-| 2026-11-23 | `343c2033` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
-| 2026-11-23 | `c0ff0483` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
-| 2026-11-23 | `b959c1ff` |  | kling3_0 | Vertical phone video in a pediatric clinic, soft daylight: close-up of a small foot in a rolled-down sock rest |
+| 2026-11-23 | `f039ca3a` | Set 4 · s4_M1b_h1 | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: h1 |
+| 2026-11-23 | `343c2033` | Set 4 · s4_M11_h2a | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: h2a |
+| 2026-11-23 | `c0ff0483` | Set 4 · s4_M6b_safe | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: safe |
+| 2026-11-23 | `b959c1ff` | Set 4 · s4_B9b_clinicfoot | kling3_0 | Set 4 v2 b-roll: clinicfoot |
 | 2026-11-23 | `4501589d` | Set 13 · c01_v2 | seedance_2_5 | Handheld vertical iPhone selfie video, warm golden morning kitchen light, amateur UGC. The woman speaks the EN |
 | 2026-11-23 | `b3ecafc1` | Set 13 · c01_v2a_dropped_words | seedance_2_5 | Handheld vertical iPhone selfie video, warm golden morning kitchen light, amateur UGC. The woman talks to the  |
 | 2026-11-23 | `5100f730` | Set 20 · s19_socks_bed | seedance_2_5 | Vertical phone video, a girl's bedroom at bedtime with pink fairy lights. A kindergartner in pink pajamas and  |
@@ -200,66 +200,66 @@ Totals: 1498 generations (1198 video, 200 image, 100 audio). RootOut era (from 2
 | 2026-11-23 | `686ace6f` | Set 19 · b55_dot_v2_unused | seedance_2_5 | Vertical phone video, bedtime, warm lamp. A five-year-old school-age kid (not a baby: long slim kid foot) in d |
 | 2026-11-23 | `2295b2a5` |  | kling3_0 | Unedited real iPhone video, evening living room, natural warm lamp light and TV glow, camera still with tiny h |
 | 2026-11-23 | `01c1eb39` |  | reframe |  |
-| 2026-11-23 | `71b60d06` |  | kling3_0 | Vertical phone video for a skincare ad, soft morning light: a parent's hand gently holds a child's small hand, |
+| 2026-11-23 | `71b60d06` | Set 4 · s4_B19r_handfoot | kling3_0 | Set 4 v2 b-roll: handfoot |
 | 2026-11-23 | `15a5d802` |  | kling3_0 | Realistic home video, warm lamp light, camera nearly still. Her foot slowly strokes once along the top of his  |
-| 2026-11-23 | `aa4f967e` |  | kling3_0 | Vertical handheld phone video on a bright white bathroom counter, morning daylight: a woman's hand places a ro |
-| 2026-11-23 | `c9a3a938` |  | seedance_2_5 | Vertical overhead product video on a light marble surface in soft daylight: the small amber RootOut bottle wit |
-| 2026-11-23 | `48b8370e` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen.  |
-| 2026-11-23 | `a24a8355` |  | seedance_2_5 | Vertical premium product end-card video: the small amber RootOut bottle with the tall white cap from the refer |
-| 2026-11-23 | `e3cfa940` |  | seedance_2_5 | Vertical phone video at bedtime, warm bedside lamp: on a nightstand the amber RootOut bottle with the tall whi |
-| 2026-11-23 | `2ca62c5c` |  | seedance_2_5 | Vertical handheld phone video in a kid's bedroom, warm lamp light: on a small wooden nightstand the amber Root |
-| 2026-11-23 | `fdf032c9` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen.  |
-| 2026-11-23 | `dc26ac1e` |  | seedance_2_5 | Vertical time-lapse video of a kid's bedroom from night to dawn: deep blue night light through the window slow |
-| 2026-11-23 | `0982a17d` |  | seedance_2_5 | Vertical phone video in a bright pediatric clinic office: on a clean white desk a stethoscope lies beside the  |
+| 2026-11-23 | `aa4f967e` | Set 4 · s4_B1_lineup | kling3_0 | Set 4 v2 b-roll: lineup |
+| 2026-11-23 | `c9a3a938` | Set 4 · s4_P4_flatlay | seedance_2_5 | Set 4 v2 RootOut bottle product shot: flatlay |
+| 2026-11-23 | `48b8370e` | Set 4 · s4_M10_h3 | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: h3 |
+| 2026-11-23 | `a24a8355` | Set 4 · s4_P9_endcard | seedance_2_5 | Set 4 v2 RootOut bottle product shot: endcard |
+| 2026-11-23 | `e3cfa940` | Set 4 · s4_P7_nightkit | seedance_2_5 | Set 4 v2 RootOut bottle product shot: nightkit |
+| 2026-11-23 | `2ca62c5c` | Set 4 · s4_P5_nightbook | seedance_2_5 | Set 4 v2 RootOut bottle product shot: nightbook |
+| 2026-11-23 | `fdf032c9` | Set 4 · s4_M9_h2b | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: h2b |
+| 2026-11-23 | `dc26ac1e` | Set 4 · s4_P8_timelapse | seedance_2_5 | Set 4 v2 RootOut bottle product shot: timelapse |
+| 2026-11-23 | `0982a17d` | Set 4 · s4_P6_clinicdesk | seedance_2_5 | Set 4 v2 RootOut bottle product shot: clinicdesk |
 | 2026-11-23 | `6276dbb5` |  | hf_mult_replace_object | Replace the long white spatula with the exact tool in the reference image: a SHORT palm-sized scraper with a R |
-| 2026-11-23 | `d8d2be71` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. First a single small glossy drop sinks alone an |
-| 2026-11-23 | `3ca33dac` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. Glowing green oil wraps around the long white r |
-| 2026-11-23 | `c8b506d4` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. A thin, clear golden oil seeps down through an  |
-| 2026-11-23 | `80da1c88` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. The wart and the long white root fade away comp |
-| 2026-11-23 | `e1c706fd` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. Two small glossy green droplets join a stream o |
-| 2026-11-23 | `e211dc9d` |  | kling3_0 | Vertical close-up phone video: a paper wall calendar on a fridge door with fourteen days already crossed off i |
-| 2026-11-23 | `f93467c8` |  | kling3_0 | Vertical phone video in a family home hallway with wooden floor, daylight: a young kid in shorts runs barefoot |
-| 2026-11-23 | `f1cf23e1` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. A glossy yellow lemon-oil drop lands on the yel |
-| 2026-11-23 | `c6009f6b` |  | kling3_0 | Vertical close-up phone video: a woman's thumb on her phone screen swipes a calendar appointment to the left a |
-| 2026-11-23 | `01f6210d` |  | kling3_0 | Vertical phone video, bright white bathroom counter, morning light: a tiny handmade cardboard tombstone, plain |
-| 2026-11-23 | `41c510bb` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. A puff of icy white frost hits the wart and whi |
-| 2026-11-23 | `8f469553` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. The wart on top shrinks until the surface looks |
-| 2026-11-23 | `c28de416` |  | kling3_0 | Vertical handheld phone video in a bathroom: a woman's arm sweeps a roll of grey duct tape, a pack of round be |
-| 2026-11-23 | `47877405` |  | kling3_0 | Vertical phone video, educational garden demo: a clear glass-sided box of dark soil seen from the side on a ga |
-| 2026-11-23 | `0bd6fdf0` |  | kling3_0 | Vertical close-up phone video for a skincare ad, soft daylight: side view of the smooth, healthy sole of a sma |
-| 2026-11-23 | `cc05bcb3` |  | kling3_0 | Vertical handheld phone video in a bright bathroom: a woman's hand drops a small plain unbranded white wart-ac |
-| 2026-11-23 | `e20edf28` |  | kling3_0 | Vertical macro video, soft daylight: a few thin golden drops of tea tree oil fall from a glass dropper beside  |
-| 2026-11-23 | `b6cdaa58` |  | kling3_0 | Vertical macro video, soft natural light on a light wooden board: a sprig of pokeweed with dark purple berries |
-| 2026-11-23 | `5ac712ad` |  | kling3_0 | Vertical handheld phone video for a skincare ad, soft daylight on a couch. Close side view of a small foot wit |
-| 2026-11-23 | `ad286b2b` |  | kling3_0 | Vertical macro video on a white kitchen counter in bright daylight: a fresh lemon is sliced in half, then sque |
-| 2026-11-23 | `b07fe1d8` |  | kling3_0 | Vertical handheld phone video for a skincare ad. A child's grey sock is peeled off a small foot over a bathroo |
-| 2026-11-23 | `9b0d39d5` |  | kling3_0 | Vertical phone video in a pediatric exam room, cool light. On an exam table covered in crinkled white paper, a |
-| 2026-11-23 | `c18a77ab` |  | kling3_0 | Vertical handheld phone video for a skincare ad, daylight. Close side view of a small foot resting on a white  |
-| 2026-11-23 | `43718ffa` |  | kling3_0 | Vertical handheld phone video for a skincare ad, daylight in a bathroom. Close side view of the sole of a smal |
-| 2026-11-23 | `ad5703ae` |  | kling3_0 | Vertical ground-level phone video in a backyard lawn, late-afternoon light. A woman's hand pinches a yellow da |
-| 2026-11-23 | `469d8ff5` |  | kling3_0 | Vertical macro video: thick white cold vapour from liquid nitrogen rolls slowly across a dark steel tray in a  |
-| 2026-11-23 | `72b5db09` |  | kling3_0 | Vertical handheld phone video from the front seat looking back: in the back seat of a family car parked in a c |
-| 2026-11-23 | `d53ddae3` |  | kling3_0 | Vertical macro phone video, daylight on a white bathroom counter: a sheet of small round beige foam corn pads; |
-| 2026-11-23 | `990e01d1` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. A short strip of grey duct tape floats down and |
-| 2026-11-23 | `81c385c3` |  | kling3_0 | Vertical handheld phone video for a skincare ad, warm living-room lamp light. Close side view of a small foot  |
-| 2026-11-23 | `187a29a5` |  | seedance_2_5 | Vertical phone selfie video. The same woman as the reference image, same face, hair and oatmeal sweater, sits  |
-| 2026-11-23 | `7af5ab87` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
-| 2026-11-23 | `9b8a10bb` |  | seedance_2_5 | Vertical phone selfie video at night. The same woman as the first reference image, same face, hair and oatmeal |
-| 2026-11-23 | `c7f282d8` |  | seedance_2_5 | Vertical phone selfie video. The same woman as the reference image, same face, hair and oatmeal sweater, sits  |
-| 2026-11-23 | `e326b57a` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
-| 2026-11-23 | `09450eb0` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
+| 2026-11-23 | `d8d2be71` | Set 4 · s4_D8_together | kling3_0 | Set 4 v2 3D skin cross-section: together |
+| 2026-11-23 | `3ca33dac` | Set 4 · s4_D7_crumble | kling3_0 | Set 4 v2 3D skin cross-section: crumble |
+| 2026-11-23 | `c8b506d4` | Set 4 · s4_D5_sink | kling3_0 | Set 4 v2 3D skin cross-section: sink |
+| 2026-11-23 | `80da1c88` | Set 4 · s4_D9_clean | kling3_0 | Set 4 v2 3D skin cross-section: clean |
+| 2026-11-23 | `e1c706fd` | Set 4 · s4_D6_carry | kling3_0 | Set 4 v2 3D skin cross-section: carry |
+| 2026-11-23 | `e211dc9d` | Set 4 · s4_B20_plus14 | kling3_0 | Set 4 v2 b-roll: plus14 |
+| 2026-11-23 | `f93467c8` | Set 4 · s4_B21_hallway | kling3_0 | Set 4 v2 b-roll: hallway |
+| 2026-11-23 | `f1cf23e1` | Set 4 · s4_D4_lemon3d | kling3_0 | Set 4 v2 3D skin cross-section: lemon3d |
+| 2026-11-23 | `c6009f6b` | Set 4 · s4_B22_phonedelete | kling3_0 | Set 4 v2 b-roll: phonedelete (rejected: garbled AI phone text) |
+| 2026-11-23 | `01f6210d` | Set 4 · s4_B24_tombstone | kling3_0 | Set 4 v2 b-roll: tombstone |
+| 2026-11-23 | `41c510bb` | Set 4 · s4_D2_toponly | kling3_0 | Set 4 v2 3D skin cross-section: toponly |
+| 2026-11-23 | `8f469553` | Set 4 · s4_D3_rootstill | kling3_0 | Set 4 v2 3D skin cross-section: rootstill |
+| 2026-11-23 | `c28de416` | Set 4 · s4_B23_drawer | kling3_0 | Set 4 v2 b-roll: drawer |
+| 2026-11-23 | `47877405` | Set 4 · s4_B12_soilbox | kling3_0 | Set 4 v2 b-roll: soilbox |
+| 2026-11-23 | `0bd6fdf0` | Set 4 · s4_B18_smoothsole | kling3_0 | Set 4 v2 b-roll: smoothsole |
+| 2026-11-23 | `cc05bcb3` | Set 4 · s4_B17_bin | kling3_0 | Set 4 v2 b-roll: bin |
+| 2026-11-23 | `e20edf28` | Set 4 · s4_B15_teatree | kling3_0 | Set 4 v2 b-roll: teatree |
+| 2026-11-23 | `b6cdaa58` | Set 4 · s4_B16_pokeweed | kling3_0 | Set 4 v2 b-roll: pokeweed |
+| 2026-11-23 | `5ac712ad` | Set 4 · s4_B13_thumbrub | kling3_0 | Set 4 v2 b-roll: thumbrub |
+| 2026-11-23 | `ad286b2b` | Set 4 · s4_B14_lemon | kling3_0 | Set 4 v2 b-roll: lemon |
+| 2026-11-23 | `b07fe1d8` | Set 4 · s4_B4_sock | kling3_0 | Set 4 v2 b-roll: sock |
+| 2026-11-23 | `9b0d39d5` | Set 4 · s4_B8_holdankle | kling3_0 | Set 4 v2 b-roll: holdankle |
+| 2026-11-23 | `c18a77ab` | Set 4 · s4_B6_padpress | kling3_0 | Set 4 v2 b-roll: padpress |
+| 2026-11-23 | `43718ffa` | Set 4 · s4_B10_threewarts | kling3_0 | Set 4 v2 b-roll: threewarts |
+| 2026-11-23 | `ad5703ae` | Set 4 · s4_B11_snap | kling3_0 | Set 4 v2 b-roll: snap |
+| 2026-11-23 | `469d8ff5` | Set 4 · s4_B7_vapour | kling3_0 | Set 4 v2 b-roll: vapour |
+| 2026-11-23 | `72b5db09` | Set 4 · s4_B9_carpark | kling3_0 | Set 4 v2 b-roll: carpark (rejected: client: kid in car looked off) |
+| 2026-11-23 | `d53ddae3` | Set 4 · s4_B5_pads | kling3_0 | Set 4 v2 b-roll: pads |
+| 2026-11-23 | `990e01d1` | Set 4 · s4_D1_tape3d | kling3_0 | Set 4 v2 3D skin cross-section: tape3d |
+| 2026-11-23 | `81c385c3` | Set 4 · s4_B3_tapefoot | kling3_0 | Set 4 v2 b-roll: tapefoot |
+| 2026-11-23 | `187a29a5` | Set 4 · s4_M8_sofa | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: sofa |
+| 2026-11-23 | `7af5ab87` | Set 4 · s4_M5r_bottle | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: bottle |
+| 2026-11-23 | `9b8a10bb` | Set 4 · s4_M7_cap | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: cap |
+| 2026-11-23 | `c7f282d8` | Set 4 · s4_M2_car | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: car |
+| 2026-11-23 | `e326b57a` | Set 4 · s4_M4r_fault | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: fault |
+| 2026-11-23 | `09450eb0` | Set 4 · s4_M6_safe | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: safe (rejected: hand looks wrong (three fingers)) |
 | 2026-11-23 | `9ddc2ea8` |  | seedance_2_5 | Real phone footage, same close-up, locked camera. Her fingers with white nails grip the top edge of the navy k |
 | 2026-11-23 | `755b8a96` |  | hf_mult_replace_object | Replace the white plastic spatula in the gloved hand with the stainless steel spoon-shaped callus scraper with |
 | 2026-11-23 | `1399ac55` |  | kling3_0 | Realistic home video, warm lamp light, camera nearly still. Her foot gently rubs along the top of his foot onc |
 | 2026-11-23 | `528f8253` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
-| 2026-11-23 | `73a94ecc` |  | kling3_0 | Vertical handheld phone video, close-up in a home kitchen, warm daylight: a woman's hands pull and tear a stri |
-| 2026-11-23 | `d6783aad` |  | seedance_2_5 | Vertical phone front-camera selfie video. The same woman as the reference image (same face, hair and oatmeal s |
-| 2026-11-23 | `7a84c998` |  | seedance_2_5 | Vertical product video. The small amber RootOut bottle with the tall white cap from the reference images stand |
-| 2026-11-23 | `5edbff6d` |  | seedance_2_5 | Vertical phone front-camera selfie video. The same woman as the reference image (same face, hair and oatmeal s |
-| 2026-11-23 | `b5365ce0` |  | seedance_2_5 | Vertical handheld phone video on a bright white family bathroom counter, morning daylight. Four things stand i |
-| 2026-11-23 | `7df26a04` |  | seedance_2_5 | Vertical handheld phone video, close on a bright white bathroom counter, morning daylight. A roll of plain gre |
-| 2026-11-23 | `68aff48c` |  | seedance_2_5 | Vertical phone front-camera selfie video. The same woman as the reference image (same face, light brown hair i |
-| 2026-11-23 | `6ac60226` |  | seedance_2_5 | Vertical phone front-camera selfie video. The same woman as the first reference image (same face, hair and oat |
+| 2026-11-23 | `73a94ecc` | Set 4 · s4_K_test_tape | kling3_0 | Set 4 v2 b-roll test: test_tape |
+| 2026-11-23 | `d6783aad` | Set 4 · s4_M4_fault | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: fault (rejected: different kitchen) |
+| 2026-11-23 | `7a84c998` | Set 4 · s4_P3_hero | seedance_2_5 | Set 4 v2 RootOut bottle product shot: hero |
+| 2026-11-23 | `5edbff6d` | Set 4 · s4_M3_nobody | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: nobody |
+| 2026-11-23 | `b5365ce0` | Set 4 · s4_P1_lineup | seedance_2_5 | Set 4 v2 RootOut bottle product shot: lineup |
+| 2026-11-23 | `7df26a04` | Set 4 · s4_P2_slidein | seedance_2_5 | Set 4 v2 RootOut bottle product shot: slidein |
+| 2026-11-23 | `68aff48c` | Set 4 · s4_M1_h1 | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: h1 (rejected: shows five fingers on "four") |
+| 2026-11-23 | `6ac60226` | Set 4 · s4_M5_bottle | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: bottle (rejected: replaced by M5r) |
 | 2026-11-23 | `f7a44a43` |  | kling3_0 | Unedited real iPhone video, bright soft morning daylight, no cinematic look. The camera, held low near the flo |
 | 2026-11-23 | `488703bc` |  | kling3_0 | Realistic home video, warm lamp light, slight handheld drift. The man's foot on the right slowly slides over t |
 | 2026-11-23 | `c1a8838d` |  | seedance_2_5 | The same single real shot, leading straight into the existing video with no cut: the same woman, the same kitc |
@@ -451,8 +451,9 @@ Totals: 1498 generations (1198 video, 200 image, 100 audio). RootOut era (from 2
 | 2026-11-21 | `ce962fe0` | Set 1 · b10_towels | seedance_2_5 | Top-down handheld iPhone footage on a kitchen counter: a hand lifts the paper-towel squares on the right one b |
 | 2026-11-21 | `b747a959` | Set 20 · s1_dand_root | seedance_2_5 | Handheld iPhone footage: the woman's hand lifts the whole dandelion toward the lens and turns it slightly so t |
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
+| 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (144; 28 named by a set)
+## RootOut-era image (145; 29 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
@@ -600,6 +601,7 @@ Totals: 1498 generations (1198 video, 200 image, 100 audio). RootOut era (from 2
 | 2026-11-21 | `ef29798e` |  | text2image_soul_v2 | A centered product photo shows a cylindrical amber-brown glass bottle with a smooth, rounded shoulder, capped  |
 | 2026-11-21 | `5d7880d3` |  | text2image_soul_v2 | Vertical phone photo, close side view in a pediatric clinic exam room under cold blue-white light. A small chi |
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
+| 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
 ## RootOut-era audio (100; 0 named by a set)
 
