@@ -5,12 +5,13 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1604 generations (1218 video, 264 image, 122 audio). RootOut era (from 21 Nov 2026): 790.
+Totals: 1605 generations (1219 video, 264 image, 122 audio). RootOut era (from 21 Nov 2026): 791.
 
-## RootOut-era video (460; 246 named by a set)
+## RootOut-era video (461; 247 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `ad56e80b` | Set 2 · T1_row2 | seedance_2_5 | Set 2 narrator take (voice lock): 'Freezing, pads, acid, clippers. You've tried at least one. It grew back.' s |
 | 2026-11-25 | `281451bc` | Set 6 · K1_hook_h1 | seedance_2_5 | Set 6 mom at kitchen counter, daylight, says the H1 hook word for word (11 s), lifts the real RootOut bottle a |
 | 2026-11-25 | `2af822f3` | Set 7 · s7_g4_aisle |  | Seedance 720p 4s from 03473b8f: grey-sleeve hand takes a freeze can off a drugstore shelf, puts it back |
 | 2026-11-25 | `31306546` | Set 7 · s7_g2_pick |  | Seedance 720p 4s: fingernail hovers at a black dot on a kid's heel (almost picks it); little motion |
