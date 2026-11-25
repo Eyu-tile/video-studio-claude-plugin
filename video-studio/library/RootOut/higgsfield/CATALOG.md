@@ -5,12 +5,13 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1590 generations (1217 video, 251 image, 122 audio). RootOut era (from 21 Nov 2026): 776.
+Totals: 1604 generations (1218 video, 264 image, 122 audio). RootOut era (from 21 Nov 2026): 790.
 
-## RootOut-era video (459; 245 named by a set)
+## RootOut-era video (460; 246 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `281451bc` | Set 6 · K1_hook_h1 | seedance_2_5 | Set 6 mom at kitchen counter, daylight, says the H1 hook word for word (11 s), lifts the real RootOut bottle a |
 | 2026-11-25 | `2af822f3` | Set 7 · s7_g4_aisle |  | Seedance 720p 4s from 03473b8f: grey-sleeve hand takes a freeze can off a drugstore shelf, puts it back |
 | 2026-11-25 | `31306546` | Set 7 · s7_g2_pick |  | Seedance 720p 4s: fingernail hovers at a black dot on a kid's heel (almost picks it); little motion |
 | 2026-11-25 | `370f474f` | Set 7 · s7_g1_bath |  | Seedance 720p 5s: mom dries foot with towel, thumb stops by the black-dot wart (H1 hook picture) |
@@ -471,18 +472,31 @@ Totals: 1590 generations (1217 video, 251 image, 122 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (195; 80 named by a set)
+## RootOut-era image (208; 93 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
 | 2026-11-25 | `4be26c88` | Set 7 · s7_g3_callus |  | GPT 2.6: adult heel with smooth yellow callus, no dots (callus vs wart) |
 | 2026-11-25 | `77c3c4aa` | Set 7 · s7_g2_pick_frame |  | GPT 2.6 edit of e98ca8e9: kid heel with black-dot wart, fingernail about to pick a dot |
 | 2026-11-25 | `93577073` | Set 7 · s7_g1_bath_frame |  | GPT 2.6: bath time, boy in navy hooded towel knees down, mom's hands lift foot, thumb by wart with black dots |
+| 2026-11-25 | `4c859dd3` | Set 6 · N7_fridge_card | gpt_image_2_6 | blank clinic reminder card on the fridge, no text |
+| 2026-11-25 | `6ddd5d40` | Set 6 · N6_shoe_pile | gpt_image_2_6 | shoe pile at a friend's door, his sneakers still on |
+| 2026-11-25 | `d7ee7fcf` | Set 6 · N5_soccer_bench | gpt_image_2_6 | boy alone on the soccer bench from behind, team plays |
+| 2026-11-25 | `d6e750aa` | Set 6 · N4_two_spots_heel | gpt_image_2_6 | heel on a towel, two warts side by side, navy pajamas |
+| 2026-11-25 | `56952fc2` | Set 6 · N3_tweezers_flashlight | gpt_image_2_6 | tweezers + phone flashlight over a kid's sole, dino pajamas |
+| 2026-11-25 | `ecb59073` | Set 6 · N2_shoe_sink | gpt_image_2_6 | mom's hand shakes a kid's sneaker over the sink, nothing falls |
+| 2026-11-25 | `0c2f00ce` | Set 6 · N1_sneakers_door | gpt_image_2_6 | two pairs of kids' sneakers by the front door + backpack |
 | 2026-11-25 | `e32fc596` | Set 2 · s2_narrator_row2 | gpt_image_2_6 | GPT 2.6 edit of 775f8138: narrator at kitchen table with unbranded wart boxes, silver freeze can, foam pads, n |
 | 2026-11-25 | `fb0a325f` | Set 2 · s2_mom3_soul | soul_2 | Set 2 MOM 3 identity (Soul 2): mid-50s, silver bob, navy cardigan, glasses on a cord, hallway by the front doo |
 | 2026-11-25 | `a3b27f60` | Set 2 · s2_mom2_soul | soul_2 | Set 2 MOM 2 identity (Soul 2): mid-40s, short dark curly hair, rust-orange tee, kitchen daylight selfie |
 | 2026-11-25 | `5e41eba1` | Set 2 · s2_mom1_soul | soul_2 | Set 2 MOM 1 identity (Soul 2): early-30s, messy bun, cream hoodie, sofa, lamp + TV glow; hoodie has garbled te |
 | 2026-11-25 | `775f8138` | Set 2 · s2_narrator_soul | soul_2 | Set 2 narrator identity (Soul 2): mid-40s mom, dark-blonde shoulder hair, sage-green sweater, bright kitchen t |
+| 2026-11-25 | `c1ae75fa` | Set 6 · mom_bottle_B | gpt_image_2_6 | Set 6 start frame for on-camera takes, real bottle in hand |
+| 2026-11-25 | `e5b43ab6` | Set 6 · mom_bottle_A | gpt_image_2_6 | Set 6 start frame for on-camera takes, real bottle in hand |
+| 2026-11-25 | `dbc1310c` | Set 6 · mom_soul_2_IDENTITY | soul_2 | Set 6 mom identity option (kitchen counter, daylight) |
+| 2026-11-25 | `aee21248` | Set 6 · mom_soul_3 | soul_2 | Set 6 mom identity option (kitchen counter, daylight) |
+| 2026-11-25 | `16deaad4` | Set 6 · mom_soul_1 | soul_2 | Set 6 mom identity option (kitchen counter, daylight) |
+| 2026-11-25 | `77f0a066` | Set 6 · mom_soul_0 | soul_2 | Set 6 mom identity option (kitchen counter, daylight) |
 | 2026-11-25 | `312b9008` | Set 16 · s16_F3_smooth | gpt_image_2_6 | GPT 2.6 edit of E1: spot gone, smooth skin, her thumb on it, relieved smile |
 | 2026-11-25 | `50c62011` | Set 16 · s16_F2_flaking | gpt_image_2_6 | GPT 2.6 edit of E1: dry top flaking at the edges, pink skin at the rim (about two weeks) |
 | 2026-11-25 | `6409ec72` | Set 16 · s16_F1_week1_dry | gpt_image_2_6 | GPT 2.6 edit of E1: same couch shot, the spot dry, dull, darker, her finger points (week one) |
