@@ -12,7 +12,8 @@
     "F1_week1_dry": "6409ec72-0956-4f03-8f9b-c382d70b74db",
     "F2_flaking": "50c62011-baa0-4209-b6ec-d6cffefde9fe",
     "F3_smooth": "312b9008-b039-4349-a4bb-8256afe8d9ba",
-    "bottle_ref": "2c52c56e-9f2f-4f40-9fda-4caa813e7578"
+    "bottle_ref": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+    "m0_sidecut_S13": "b53da070-ad1a-40c4-b35c-588b012e7e64"
   },
   "reuse": {
     "pad_peel": "b0c06de8-1e17-4f5f-9695-55cdc6c68b1f",
@@ -28,6 +29,46 @@
     "dot_S19_b55": "686ace6f-7764-42e0-a7ed-294d2f6d7d21",
     "three_bottles_S17_x10": "5e57f5fc-7598-4519-9320-ab8c47a3f6e2"
   },
-  "audio": {},
-  "videos": {}
+  "audio": {
+    "voice": "Cora preset 8c4760aa-b4d2-5313-90a9-01f2d3eecd20 (kid lines: Pixie 0178ef57)",
+    "a01_h1": "2920f2c3-5388-46ec-9c13-dbf1dd23a18c",
+    "a02_tried": "1a90fc27-6943-4302-9929-aa80037d5447",
+    "a03_q1": "b5be3d29-3345-400b-bec7-60ffbab5b3bf",
+    "a04_mechanism": "92f822a5-ffb7-4a79-aab1-5d1b4e20d0b8",
+    "a05_safety": "5b28d8d6-4d6e-480a-998f-b4fd6a57f22e",
+    "a06_routine": "40c1f9b5-ece2-41e3-8b9f-2556a6473ca0",
+    "a07_week": "7a670e1b-6ea8-46b7-a7a6-282ddf0626c5",
+    "a08_run": "0a6420e3-f37c-4209-b81f-d1f7674511ae",
+    "a09_close": "73f33456-a184-4152-afb3-2733dfed5dc5",
+    "a10_h2": "52d3cff1-61d4-4cda-8ffc-1f322f52eed6",
+    "a11_h3": "b9a5d5ec-70ac-4728-8fdd-46efe3be46c5",
+    "music_bed": "3104bae9-c57d-4392-abb8-fa1900d98546",
+    "uploaded_take_refs": {
+      "h1": "d927780e-4f49-4b39-9b11-56139966528d",
+      "q1": "16bb5c03-2880-48e5-ab4e-7360846e115d",
+      "yard": "bae31e11-e29b-4697-8930-deae4e50a081",
+      "safe": "ad7815a6-c8d8-4d83-8911-13e2d0205c45",
+      "week": "3547c179-0aa9-42af-9ea0-bff0ab0219e5",
+      "root": "0f0dff9a-54a6-47bc-a6ff-0fd8f06a4ca0",
+      "run": "34d5a468-b59b-43ce-8b46-67bfb1de05db",
+      "close": "469ec87c-f228-4eac-9c04-2f3cc1cf7835",
+      "h2": "fd8a6aa9-eb7e-433e-a407-fe293381ce6f",
+      "h3": "37eaca56-98d0-49f4-a78c-ca1f8b1dd475"
+    }
+  },
+  "videos": {
+    "M1_h1": "a026d221-0f1d-483d-bd3f-dcc8a9cc388f",
+    "M3_q1": "fd05a7bb-cfa7-4c97-bca6-591e44e87faf",
+    "M5a_yard": "7b1a4ec3-289c-42fa-939e-2138af7c4e60",
+    "M6_safe": "71c53011-37ea-4a77-a1ea-cf57253e0844",
+    "M9_week": "1cb0db13-6274-411a-bdc6-919cc2ace638",
+    "M11_root": "23073b46-1183-4335-b59f-082932398880",
+    "M12_run": "239b0a36-f384-4b6f-a518-d3873acc8507",
+    "M13_close": "44b79314-f8ea-4188-b301-161ffeec045b",
+    "G11_vinegar": "015201ef-a196-41d4-935e-705f8e0bd230",
+    "G12_yard_bottle": "8bedca75-3093-486d-9e88-0250acb8eebe",
+    "G13_bedroom": "73f9c865-3228-42fb-a34a-1a0fc74594ff",
+    "G14_flake": "2d86ec74-87f2-4ba0-8aa1-725f60ae5b78",
+    "G15_smooth": "8073e4d5-8a5c-4bde-a553-02dcfddcb53f"
+  }
 }

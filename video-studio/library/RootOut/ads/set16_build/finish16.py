@@ -39,6 +39,11 @@ while i < len(words):
         toks.append(["8x", s, words[i + 1]["e"]]); i += 2; continue
     if core in FIX: w = w.lower().replace(core, FIX[core]) if core != "kid's" or nxt.startswith("formula") else w
     toks.append([w, s, e]); i += 1
+for k in range(2, len(toks)):  # whisper slips, checked by ear against the VO
+    if toks[k][0].lower().startswith("stop") and toks[k - 1][0].lower() == "to" and toks[k - 2][0].lower() == "hurt":
+        toks[k][0] = "step" + toks[k][0][4:]
+for t in toks:
+    t[0] = t[0].replace("wort", "wart").replace("Wort", "Wart")
 groups, cur = [], []
 for t in toks:
     cur.append(t)

@@ -28,15 +28,17 @@ def src(name):
 VF = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1"
 
 
-def shot(i, name, s_in, dur):
-    f, o = src(name), W / f"{HOOK}_{i:02d}_{name}.mp4"
+def shot(i, name, s_in, nf):
+    f, o, dur = src(name), W / f"{HOOK}_{i:02d}_{name}.mp4", nf / 30
     if f.suffix == ".png":  # still -> slow continuous push-in (never a held frame)
         n = int(dur * 30) + 1
         ff("-loop", "1", "-i", f, "-t", f"{dur:.3f}", "-vf",
            f"scale=2160:-2,zoompan=z='1+0.10*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s=1080x1920:fps=30,setsar=1",
-           "-an", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", o)
+           "-frames:v", nf, "-an", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", o)
     else:
-        ff("-ss", f"{s_in:.3f}", "-i", f, "-t", f"{dur:.3f}", "-vf", VF, "-an", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", o)
+        have = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(f)]))
+        if s_in + dur > have + 0.02: sys.exit(f"{name}: needs {s_in + dur:.2f}s, source has {have:.2f}s (no held frames, L4)")
+        ff("-ss", f"{s_in:.3f}", "-i", f, "-vf", VF + ",tpad=stop_mode=clone:stop_duration=1", "-frames:v", nf, "-an", "-c:v", "libx264", "-crf", "16", "-pix_fmt", "yuv420p", o)
     return o
 
 
@@ -63,17 +65,17 @@ BLOCKS = [
                   ("sole", 0.4, 5.95, 8.50), ("e1", 0, 8.50, 10.19)]] if HOOK != "h2" else
      [("pad_peel", 1.4, 0, 2.85 - 1.88 + 0.6), ("kit_shelf", 0.3, 2.85 - 1.88 + 0.6, 4.20 - 1.88), ("G11_vinegar", 0.2, 4.20 - 1.88, 5.95 - 1.88),
       ("sole", 0.4, 5.95 - 1.88, 8.50 - 1.88), ("e1", 0, 8.50 - 1.88, 10.19 - 1.88)], 0.30),
-    ([(T("M3_q1"), 0, 5.00, 0)], [("M3_q1", 0, 0, 5.00)], 0.25),
+    ([(T("M3_q1"), 0, 4.79, 0)], [("M3_q1", 0, 0, 4.79)], 0.25),
     ([(T("M5a_yard"), 0, 3.85, 0), (V("a04"), 3.85, 31.95, 3.85)],
      [("M5a_yard", 0, 0, 3.85), ("dand_snap", 0, 3.85, 5.90), ("soil_cut", 0.2, 5.90, 9.65), ("G12_yard_bottle", 1.9, 9.65, 11.75),
       ("m0_sidecut", 0, 11.75, 13.95), ("skin_m1", 0, 13.95, 18.35), ("depth_sink", 0, 18.35, 21.35), ("depth_label", 0, 21.35, 24.15),
-      ("root_x6", 0, 24.15, 29.15), ("root_m2", 2.2, 29.15, 31.95)], 0.35),
+      ("root_x6", 0, 24.15, 29.15), ("root_m2", 1.8, 29.15, 31.95)], 0.35),
     ([(T("M6_safe"), 0, 7.95, 0), (V("a05"), 7.95, 11.96, 7.95)], [("M6_safe", 0, 0, 7.95), ("e2", 0, 7.95, 11.96)], 0.35),
     ([(V("a06"), 0, 12.49, 0)],
      [("file", 0, 0, 4.0), ("brush", 2.0, 4.0, 6.6), ("dot", 0.6, 6.6, 10.4), ("G13_bedroom", 2.4, 10.4, 12.49)], 0.30),
     ([(T("M9_week"), 0, 3.30, 0), (V("a07"), 3.30, 8.55, 3.30), (T("M11_root"), 0, 5.40, 8.55)],
      [("M9_week", 0, 0, 3.30), ("G14_flake", 1.0, 3.30, 5.75), ("G15_smooth", 0.6, 5.75, 8.55), ("M11_root", 0, 8.55, 13.95)], 0.30),
-    ([(T("M12_run"), 0, 4.00, 0)], [("M12_run", 0, 0, 4.00)], 0.30),
+    ([(T("M12_run"), 0, 3.76, 0)], [("M12_run", 0, 0, 3.76)], 0.30),
     ([(T("M13_close"), 0, 7.05, 0)], [("M13_close", 0, 0, 7.05)], 0.0),
 ]
 
@@ -85,7 +87,8 @@ for bi, (aud, shots, gap) in enumerate(BLOCKS):
         r1e = r1 + (gap if k == len(shots) - 1 else 0)  # the last shot covers the breath after the block
         if name in used and not name.startswith("M"): sys.exit(f"source used twice: {name}")
         used.add(name)
-        segs.append(shot(len(segs), name, s_in, r1e - r0)); tl.append({"block": bi, "src": name, "start": round(t + r0, 3), "end": round(t + r1e, 3)})
+        nf = round((t + r1e) * 30) - round((t + r0) * 30)
+        segs.append(shot(len(segs), name, s_in, nf)); tl.append({"block": bi, "src": name, "start": round(t + r0, 3), "end": round(t + r1e, 3)})
     t += max(r1 for (_, _, _, r1) in shots) + gap
 end = G / "endcard.mp4"; segs.append(end); tl.append({"block": len(BLOCKS), "src": "endcard", "start": round(t, 3), "end": round(t + 3.2, 3)})
 total = t + 3.2
