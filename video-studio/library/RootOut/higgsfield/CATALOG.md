@@ -5,7 +5,7 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1538 generations (1201 video, 226 image, 111 audio). RootOut era (from 21 Nov 2026): 724.
+Totals: 1543 generations (1201 video, 231 image, 111 audio). RootOut era (from 21 Nov 2026): 729.
 
 ## RootOut-era video (443; 212 named by a set)
 
@@ -55,37 +55,37 @@ Totals: 1538 generations (1201 video, 226 image, 111 audio). RootOut era (from 2
 | 2026-11-25 | `cea1d70f` |  | seedance_2_5 | ONE single continuous real selfie shot, never cut. The video starts exactly on the first reference image and k |
 | 2026-11-25 | `15c45b39` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the first reference image and keeps ex |
 | 2026-11-25 | `7b4f7b8b` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the first reference image and keeps ex |
-| 2026-11-24 | `b69c9911` | Set 18 · H4 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `5a1270cf` | Set 18 · K1c_h3 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `ead6caf3` | Set 18 · H2 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `e338c7e8` | Set 18 · H3 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `b69c9911` | Set 18 · H4 | seedance_2_5 | Dad: H4 winter-break hook 'We left our son's wart alone all fall...' |
+| 2026-11-24 | `5a1270cf` | Set 18 · K1c_h3 | seedance_2_5 | Dad: 'She's wanted everything her brother had... This, she got.' |
+| 2026-11-24 | `ead6caf3` | Set 18 · H2 | seedance_2_5 | Dad: H2 'Our doctor said, Leave it... It brought friends.' air quotes, slow blink |
+| 2026-11-24 | `e338c7e8` | Set 18 · H3 | seedance_2_5 | Dad: H3 'One kid in your house gets a wart... twice as likely' one finger then two |
 | 2026-11-24 | `e39895ab` |  | voice_change_merge |  |
 | 2026-11-24 | `3e00e6e2` |  | voice_change_merge |  |
 | 2026-11-24 | `0651342b` |  | voice_change_merge |  |
 | 2026-11-24 | `f59dbc1d` |  | voice_change_merge |  |
 | 2026-11-24 | `460b7e4b` |  | voice_change_merge |  |
-| 2026-11-24 | `44891fd2` | Set 18 · K2a_v2_voiceref | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `90086911` | Set 18 · K1b_v2_voiceref | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `191b4920` | Set 18 · K3 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `99636ecd` | Set 18 · Y2 | seedance_2_5 | Real handheld vertical phone selfie video in a sunny backyard, a lawn sprinkler running behind him, a dad film |
-| 2026-11-24 | `9872ec14` | Set 18 · K2b1 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `ee1a1e8b` | Set 18 · K2b2 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `4d99f645` | Set 18 · K2a | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `b98e21c3` | Set 18 · K2b3 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `b2142ae7` | Set 18 · Y1 | seedance_2_5 | Real handheld vertical phone selfie video in a backyard, a dad crouched on the lawn filming himself with the f |
-| 2026-11-24 | `c5f5c5c6` | Set 18 · K1d | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `f6ad24a9` | Set 18 · K1c | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `44891fd2` | Set 18 · K2a_v2_voiceref | seedance_2_5 | Dad with box/acid/duct tape: 'Congratulations. You've got a wart subscription... Same wart.' |
+| 2026-11-24 | `90086911` | Set 18 · K1b_v2_voiceref | seedance_2_5 | Dad: 'So we left it... checking it against a Cheerio', holds cereal ring to lens |
+| 2026-11-24 | `191b4920` | Set 18 · K3 | seedance_2_5 | Dad with three bottles: 'Link's below. Get two... See how that goes.' eats a cereal ring |
+| 2026-11-24 | `99636ecd` | Set 18 · Y2 | seedance_2_5 | Dad in sunny yard with coffee: 'Last Saturday they both ran barefoot through the sprinkler...' |
+| 2026-11-24 | `9872ec14` | Set 18 · K2b1 | seedance_2_5 | Dad holds real bottle: 'You have to get under that hard skin... That's what RootOut does...' |
+| 2026-11-24 | `ee1a1e8b` | Set 18 · K2b2 | seedance_2_5 | Dad holds bottle: 'Tea tree is a thin oil. It sinks in up to eight times deeper...' |
+| 2026-11-24 | `4d99f645` | Set 18 · K2a | seedance_2_5 | K2a first try: skipped 'You've got a wart subscription' |
+| 2026-11-24 | `b98e21c3` | Set 18 · K2b3 | seedance_2_5 | Dad holds bottle: 'And it's made for kids. A kids' formula, ages four and up...' |
+| 2026-11-24 | `b2142ae7` | Set 18 · Y1 | seedance_2_5 | Dad crouched on lawn: 'Every one of those has the same problem. Freezing, acid and shaving only snap off the t |
+| 2026-11-24 | `c5f5c5c6` | Set 18 · K1d | seedance_2_5 | Dad: 'We got the other half. So let me save you some time and money.' |
+| 2026-11-24 | `f6ad24a9` | Set 18 · K1c | seedance_2_5 | Dad: 'This, she got. Turns out there's a real study on this.' deadpan |
 | 2026-11-24 | `b171942e` | Set 5 · s5_mom_car_talk | seedance_2_5 | Seedance 2.5 talking in car at dusk: 'Night ten. He went barefoot at the pool...' |
 | 2026-11-24 | `d928e112` | Set 5 · s5_mom_hook_talk | seedance_2_5 | Seedance 2.5 talking, holds bottle: 'One brush of this on my son's wart at bedtime...' (H1 hook) |
 | 2026-11-24 | `41de5bc7` | Set 5 · s5_mom_n3_talk | seedance_2_5 | Seedance 2.5 talking: 'That's all the freeze would have gotten.' |
 | 2026-11-24 | `ea43d2fd` | Set 5 · s5_mom_close_talk | seedance_2_5 | Seedance 2.5 offer close, points down, lifts bottle: 'So before you book the freeze, try this first...' |
 | 2026-11-24 | `865c63b2` | Set 5 · s5_testimonial_m1 | seedance_2_5 | Young mom on kid's bedroom carpet: 'She's four, and I was nervous... bedtime paint.' |
-| 2026-11-24 | `ab90914a` | Set 18 · K1b_voiceref_test | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `ab90914a` | Set 18 · K1b_voiceref_test | seedance_2_5 | K1b first try: last word cut off ('Cheery') |
 | 2026-11-24 | `ab16f2ea` |  | seedance_2_5 | Casual real selfie video, phone held at arm's length with natural hand shake. The young mom sitting on the kid |
 | 2026-11-24 | `741c98ca` | Set 5 · s5_testimonial_m3 | seedance_2_5 | Mom early 30s in hallway: 'We did the fourteen extra nights... never came back.' |
 | 2026-11-24 | `fb80df10` | Set 5 · s5_testimonial_m2 | seedance_2_5 | Mom 40s in parked car with bottle: 'The doctor wanted to freeze it...' |
 | 2026-11-24 | `2a5dff3e` | Set 5 · s5_mom_n1_voicelock | seedance_2_5 | Seedance 2.5 talking clip, native voice = the locked Set 5 mom voice: 'Two minutes. He didn't even look up...' |
-| 2026-11-24 | `f36030f0` | Set 18 · K1a | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `f36030f0` | Set 18 · K1a | seedance_2_5 | Dad selfie, native voice (Set 18 voice lock): H1 hook 'If your kid's doctor said, Leave the wart...' |
 | 2026-11-24 | `4f1c58e9` | Set 18 · K3 | seedance_2_5 | Real handheld vertical phone selfie video. The man from the start image talks into the front camera held at ar |
 | 2026-11-24 | `d8fee57c` | Set 18 · Y2 | seedance_2_5 | Real handheld vertical phone selfie video in a sunny backyard, a lawn sprinkler running behind him. The man fr |
 | 2026-11-24 | `0f4770eb` | Set 18 · K1 | seedance_2_5 | Real handheld vertical phone selfie video. The man from the start image talks into the front camera held at ar |
@@ -455,7 +455,7 @@ Totals: 1538 generations (1201 video, 226 image, 111 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (170; 55 named by a set)
+## RootOut-era image (175; 60 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
@@ -467,6 +467,11 @@ Totals: 1538 generations (1201 video, 226 image, 111 audio). RootOut era (from 2
 | 2026-11-25 | `4771c08b` | Set 5 · s5_mom_car_frame |  | GPT 2.6 edit: mom in parked car at dusk, damp hair, navy hoodie |
 | 2026-11-25 | `0f6a1ff5` | Set 5 · s5_mom_n3_frame |  | GPT 2.6 edit: mom, green henley, picture book on the dinosaur duvet |
 | 2026-11-25 | `a2d300ba` | Set 5 · s5_mom_hook_frame |  | GPT 2.6 edit: mom on kid's bed at night, grey sweatshirt, RootOut bottle by her cheek, dinosaur duvet |
+| 2026-11-25 | `a2483608` | Set 18 · s18_dad_coffee_sprinkler | gpt_image_2_6 | GPT 2.6 edit of s3: sunny backyard, coffee mug, sprinkler behind |
+| 2026-11-25 | `711a5c06` | Set 18 · s18_dad_backyard | gpt_image_2_6 | GPT 2.6 edit of s3: crouched on backyard lawn, dandelions, evening |
+| 2026-11-25 | `0dc98c56` | Set 18 · s18_dad_three_bottles | gpt_image_2_6 | GPT 2.6 edit of s3: three RootOut bottles on counter (ref e2d50d17) |
+| 2026-11-25 | `88aede61` | Set 18 · s18_dad_bottle | gpt_image_2_6 | GPT 2.6 edit of s3: holds real RootOut bottle to lens (ref 811f8013) |
+| 2026-11-25 | `8b7afdfd` | Set 18 · s18_dad_props | gpt_image_2_6 | GPT 2.6 edit of s3: white box, brown acid bottle, duct tape on counter |
 | 2026-11-25 | `9a9aca58` | Set 13 · s13_S4_finger_smooth |  | same finger, smooth skin, wart gone (stage 4) |
 | 2026-11-25 | `9666801c` | Set 13 · s13_S3_finger_flaking |  | same finger, wart edges flaking off (stage 3) |
 | 2026-11-25 | `f0f2e121` | Set 13 · s13_S2_finger_dry |  | same finger, wart dry and darker (stage 2) |
@@ -525,7 +530,7 @@ Totals: 1538 generations (1201 video, 226 image, 111 audio). RootOut era (from 2
 | 2026-11-24 | `0b4b211b` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
 | 2026-11-24 | `79721067` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
 | 2026-11-24 | `0faf8414` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
-| 2026-11-24 | `3314f013` | Set 18 · s3_K1 | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
+| 2026-11-24 | `3314f013` | Set 18 · s3_K1 | text2image_soul_v2 | Set 18 dad master (Soul 2): late-30s ginger beard, grey tee, glasses on head, night kitchen selfie, Cheerio bo |
 | 2026-11-24 | `0d01d442` |  | nano_banana_2 | Edit this real phone selfie video frame. Keep the exact framing, camera distance, living-room background, ligh |
 | 2026-11-24 | `bf2b562a` |  | nano_banana_2 | Edit this real phone selfie video frame. Keep the exact framing, camera distance, kitchen background, window l |
 | 2026-11-24 | `512d0d2c` |  | nano_banana_2 | Edit this real phone selfie video frame. Keep the exact framing, camera distance, outdoor patio setting with p |
