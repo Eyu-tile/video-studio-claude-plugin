@@ -364,7 +364,7 @@ if __name__ == "__main__":
     D = dur(cat); n = captions(tl, D)
     fc = (f"[1:a]atrim=0:{D:.2f},volume={MUSIC},afade=t=in:d=1.2,afade=t=out:st={D - 2.5:.2f}:d=2.5[m];"
           f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=450[md];"
-          f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"   # no SFX / room tone (client note, Set 18)
+          f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9,alimiter=limit=0.79:level=false[a];"   # no SFX / room tone (client note, Set 18)
           f"[0:v]ass={TMP / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/5[v]")
     final = P / ("out/WilloMD_RootOut_Set5_H1_9x16_v6.mp4" if not HOOK else f"out/WilloMD_RootOut_Set5_{HOOK}_9x16_v1.mp4")
     run(["-i", str(cat), "-i", str(MUSIC_FILE), "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(FPS),

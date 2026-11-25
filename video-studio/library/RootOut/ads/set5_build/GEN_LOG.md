@@ -93,3 +93,14 @@ transitions; still push-ins with a sine drift jittered.
   First take (a449a025…) rejected: it faded out from 112 s, under the offer. Music is ours, so no credit line needed.
 - Level 0.12 with voice ducking: music ~8 dB under her voice. −14.8 LUFS, TP −1.8. Words 351/351 (Whisper "until" for
   "till" only). build7.py --remix redoes only music/captions/mix from the last cut.
+
+## Hooks H2 / H3 / H4 v1 (25 Nov) — on the v6 body (client chose v6 over v7's music)
+- Frames (GPT Image 2.6, refs: Soul momD 1e4c170c…, H1 bedroom a2d300ba…, bottle 811f8013…): H2 bed edge + blank card at the
+  drawer (141bb690…), H3 foot with wart on a pillow + her hand setting the bottle down (ef0c0424…, from W1), H4 winter
+  sweater, fairy lights, snow (887791dd…).
+- Seedance 2.5 720p with her voice-lock clip as voice reference: H2 33bb83b0… (verbatim, sim 0.89), H4 1b2a5f8d…
+  (verbatim, sim 0.94); H3 foot insert c855773d… (no audio) + Seed Audio VO (raw/hooks/H3_vo.wav, sim 0.90, verbatim).
+- Titles: H2 "Before you book the freeze", H3 "Don't book the freeze yet" (brief); H4 "14 nights of winter break" (ours —
+  the brief gives H4 no title). build7.py --hook H2|H3|H4 builds the hook and reuses the v6 body sections.
+- QA: H2 346/346, H4 348/348, H3 all words present (long-form Whisper skipped two lines; re-checked by section).
+  No freezes. −14.5 to −15.1 LUFS; added alimiter −2 dB after loudnorm (H2 had peaked at +0.5 dBFS → −1.7).
