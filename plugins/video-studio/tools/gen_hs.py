@@ -12,6 +12,7 @@ The method, in order:
   6. talk<n>    the still talks with its slice (OmniHuman 1.5: photo + audio)       [HeyGen Avatar 6]
      broll<n>   hands / props / place from the still, 5 s, one action, keep 1-2 s (Seedance 2.5) [HeyGen Video 1]
      motion<n>  a silent moment of the character from the still (Seedance 2.5) for music-only ads
+     (show: still)  no clip: the still itself goes in the cut (frozen selfies, a photo on screen)
   7. edl        cut on the lines: each line whole in its own shot, the read laid back under, pauses trimmed
 
 Claude runs every generation with the Hyperscale MCP (quote first, then generate, then check_generation);
@@ -202,6 +203,8 @@ def plan(s, a):
             job(f"talk{n}", "talking", [f"still{n}", "slices"], model=TALK, line=i, image=f"still{n}",
                 audio=f"slice{n}", prompt=talk_prompt(ln),
                 note="Quote first (price per second of audio). Image = the still's url, audio = this line's slice url.")
+        elif show == "still":
+            pass  # a frozen still in the cut (e.g. the reel's old selfies): no video job
         elif show in ("broll", "motion"):
             job(f"{show}{n}", show, [f"still{n}"], model=VIDEO, line=i, aspect=aspect, duration=5,
                 resolution="720p", audio=False, start_frame=f"still{n}", usd=PRICE["video5"],
@@ -290,6 +293,8 @@ def edl(doc, a):
     for j in doc["jobs"]:
         if j["kind"] in ("talking", "broll", "motion") and j.get("local"):
             by_line[j["line"]] = j
+        elif j["kind"] == "still" and j.get("local") and lines[j["line"]].get("show") == "still":
+            by_line[j["line"]] = j
     sl = {s["line"]: s for s in next((j.get("result", {}).get("slices", []) for j in doc["jobs"]
                                       if j["id"] == "slices"), [])}
     segs, voice, t, missing = [], [], 0.0, []
@@ -298,7 +303,8 @@ def edl(doc, a):
         if not j:
             missing.append(f"line {i + 1} ({ln.get('show')}): {ln.get('still') or ln.get('broll') or ''}"[:90])
             continue
-        clip_d = probe(j["local"])["duration"]
+        still = j["kind"] == "still"
+        clip_d = 1e9 if still else probe(j["local"])["duration"]
         if i in sl:
             need = sl[i]["seconds"] + a.gap
         else:
@@ -307,6 +313,8 @@ def edl(doc, a):
         st = float(ln.get("in", 0.0))
         if st + d > clip_d:
             st = max(clip_d - d, 0.0)
+        if still:
+            st = 0.0
         segs.append({"src": j["local"], "start": round(st, 3), "end": round(st + d, 3), "mute": True,
                      "note": (ln.get("say") or ln.get("caption") or ln.get("still") or "")[:40]})
         if i in sl:
