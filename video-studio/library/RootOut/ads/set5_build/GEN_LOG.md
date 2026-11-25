@@ -104,3 +104,7 @@ transitions; still push-ins with a sine drift jittered.
   the brief gives H4 no title). build7.py --hook H2|H3|H4 builds the hook and reuses the v6 body sections.
 - QA: H2 346/346, H4 348/348, H3 all words present (long-form Whisper skipped two lines; re-checked by section).
   No freezes. −14.5 to −15.1 LUFS; added alimiter −2 dB after loudnorm (H2 had peaked at +0.5 dBFS → −1.7).
+
+## Delivered (25 Nov, client: "lets push it to drive")
+- WilloMD Drive → WilloMD/WilloMD_RootOut_Set5 (folder 1AewKUC21IwAOx7T3hiezy1zl90mbv3UF): H1 v6 (client-chosen over v7),
+  H2 v1, H3 v1, H4 v1 — all verified in Drive at exact size (request rootout-set5_20261125082718_90f4).
