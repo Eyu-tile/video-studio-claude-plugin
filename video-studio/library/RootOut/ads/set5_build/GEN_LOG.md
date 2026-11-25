@@ -75,3 +75,14 @@ transitions; still push-ins with a sine drift jittered.
 - Speaker similarity to her real voice (resemblyzer, ref = 36 s of her Seedance clips): new VO 0.82–0.93, her own car
   clip 0.89, old S7 VO 0.65. Picks in work/clone/pick (pauses capped at 0.5 s); all verbatim.
 - On-camera shots back to her untouched Seedance audio (no voice_change). Music bed 0.20 → 0.11 (client: too loud).
+
+## v6 (25 Nov) — client: "too slow, cut the space"; shot notes
+- Her lines (VO + on-camera) play 10% faster (atempo / setpts together, lips stay synced); VO pauses capped at 0.25 s;
+  block gap 0.08 s; section tails 0.1–0.35 s. 147.5 s → 120.0 s, no speech gap over 0.48 s.
+- 1:01–1:04 dandelion: new Seedance clip from r06's first frame (raw/v5/dand_a.mp4, job 67b04547…): flower snapped off,
+  stub stays in the soil; replaces r06 + the blurry seed-head close-up.
+- 1:08 "it grows back" card removed. 1:25 flip-flops now cover "I only noticed on the drive home" (her 1.3 s flash cut).
+- 1:19 kid brush: start frame I2 re-edited in GPT Image 2.6 (natural foot, job 9b128f4e…) → Seedance (raw/v5/kid_a.mp4,
+  job 59792279…).
+- Whisper tail hallucinations dropped from word timings (clean_words). QA: 351/351 words, no freezes, 1 repeated frame at
+  a cut, −15.2 LUFS.
