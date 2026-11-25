@@ -110,6 +110,65 @@ class GenTest(unittest.TestCase):
         sh(sys.executable, TOOLS / "render.py", "proj/work/ads/v1.edl.json", "-o", "proj/out.mp4", "--preview",
            "--no-loudnorm")
 
+    def test_hyperscale_character_method(self):
+        """provider hyperscale: character -> sheet -> master -> one still per line -> one read cut at the
+        pauses -> talking / b-roll / motion -> one shot per line with the read under it."""
+        hs = {"variant": "hs1", "aspect": "9:16", "provider": "hyperscale",
+              "character": {"name": "June", "age": 65, "look": "short silver hair", "flaws": "crow's feet, sun spots",
+                            "wardrobe": "lilac cardigan", "consent": "fictional"},
+              "product": {"name": "Roll On", "photos": [f"{self.base}/frame.png"]},
+              "voice": {"model": "eleven-tts-v2", "voice": "v123"},
+              "rooms": {"bathroom": "small bathroom at night, one warm bulb"},
+              "lines": [{"say": "I'm sixty five and I used to do nine steps.", "room": "bathroom",
+                         "still": "close to the mirror", "perform": "small shrug"},
+                        {"say": "Now I do one.", "show": "broll", "room": "bathroom", "product": True,
+                         "still": "her hand by the roller", "action": "fingers pick up the roller"},
+                        {"show": "motion", "room": "bedroom", "still": "in bed by the lamp",
+                         "action": "she switches off the lamp", "seconds": 1.5, "caption": "Works while you sleep"}]}
+        Path("proj/work/gen/hs1.script.json").write_text(json.dumps(hs))
+        J = "proj/work/gen/hs1.jobs.json"
+        out = gen("plan", "proj/work/gen/hs1.script.json").stdout
+        self.assertIn("Hyperscale", out)
+        jobs = {j["id"]: j for j in json.loads(Path(J).read_text())["jobs"]}
+        self.assertEqual(list(jobs)[:3], ["character", "sheet", "product"])
+        self.assertIn("master_bathroom", jobs)            # two lines share the bathroom
+        self.assertNotIn("master_bedroom", jobs)
+        self.assertEqual(jobs["still1"]["needs"][0], "master_bathroom")
+        self.assertIn("product", jobs["still2"]["needs"])
+        self.assertIn("No face", jobs["still2"]["prompt"])
+        self.assertEqual(jobs["talk1"]["model"], "omnihuman-1-5")
+        self.assertEqual(jobs["broll2"]["model"], "seedance-2-5")
+        self.assertEqual(jobs["motion3"]["needs"], ["still3"])
+        self.assertIn("65-year-old", jobs["character"]["prompt"])
+        self.assertIn("not a model", jobs["character"]["prompt"])
+        # One read with two pauses' worth of lines: tone, silence, tone.
+        sh("ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "sine=f=300:d=1.4", "-f", "lavfi", "-i",
+           "anullsrc=r=44100:cl=mono:d=0.6", "-f", "lavfi", "-i", "sine=f=500:d=0.8", "-filter_complex",
+           "[0][1][2]concat=n=3:v=0:a=1", "srv/read.wav")
+        for jid in ("character", "sheet", "master_bathroom", "still1", "still2", "still3"):
+            gen("done", J, jid, "--url", f"{self.base}/frame.png")
+        gen("done", J, "read", "--url", f"{self.base}/read.wav")
+        gen("fetch", J, "--project", "proj")
+        r = gen("slice", J, "--project", "proj").stdout
+        self.assertIn("2 slices", r)
+        doc = json.loads(Path(J).read_text())
+        sl = next(j for j in doc["jobs"] if j["id"] == "slices")["result"]["slices"]
+        self.assertAlmostEqual(sl[0]["seconds"], 1.4, delta=0.2)
+        self.assertAlmostEqual(sl[1]["seconds"], 0.8, delta=0.2)
+        self.assertIn('"id": "talk1"', gen("next", J).stdout)
+        gen("done", J, "talk1", "--url", f"{self.base}/talk.mp4")
+        gen("done", J, "broll2", "--url", f"{self.base}/broll.mp4")
+        gen("done", J, "motion3", "--url", f"{self.base}/broll.mp4")
+        gen("fetch", J, "--project", "proj")
+        gen("edl", J, "-o", "proj/work/ads/hs1.edl.json")
+        edl = json.loads(Path("proj/work/ads/hs1.edl.json").read_text())
+        self.assertEqual(len(edl["segments"]), 3)
+        self.assertTrue(all(s["mute"] for s in edl["segments"]))
+        self.assertAlmostEqual(edl["segments"][2]["end"] - edl["segments"][2]["start"], 1.5, delta=0.01)
+        self.assertEqual(len(edl["tracks"][0]["clips"]), 2)
+        sh(sys.executable, TOOLS / "render.py", "proj/work/ads/hs1.edl.json", "-o", "proj/hs1.mp4", "--preview",
+           "--no-loudnorm")
+
     def test_consent_required(self):
         s = dict(SCRIPT, presenter={**SCRIPT["presenter"], "consent": ""})
         Path("proj/work/gen/nc.script.json").write_text(json.dumps(s))

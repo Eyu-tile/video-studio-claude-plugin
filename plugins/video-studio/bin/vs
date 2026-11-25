@@ -110,7 +110,7 @@ vs <command>                                         video-studio plugin
   task new|deliver|feedback|resume|done|note|restore|list <CODE>   client task history by code: versions, feedback, pick up where you left off
   hyperscale pull <brief.json> [--brand B] | notes | shots | prep | put | done | status --project P   Hyperscale brief -> project -> upload
   higgsfield add <account> | list | use <account> [--project p] [--workspace id] | current | remove   one MCP connection per Higgsfield account
-  gen plan <script.json> | next | done <jobs> <id> --url u | fetch --project p | edl -o e.json   AI presenter + b-roll via Higgsfield MCP
+  gen plan <script.json> [--provider hyperscale] | next | done <jobs> <id> --url u | fetch --project p | slice --project p | edl -o e.json   generated footage as jobs (Higgsfield, or Hyperscale: /phone-ugc)
   proxy <files|folder> [--height 540]                                 light proxies for 4K/long sources (used by --preview)
   ai track <edl> --aspect 9:16 | match <ref> <clip> -o x.cube | stems | cutout | upscale | interpolate | status   (AI with fallbacks)
  music & sound design

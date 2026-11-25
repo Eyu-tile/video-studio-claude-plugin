@@ -92,6 +92,14 @@ if [ $stems = 1 ] && [ $check = 0 ]; then
       && pipi "demucs>=4.0" && ok "demucs installed (vs ai stems)" || bad "demucs install failed"
   else bad "run vs setup first (no venv yet)"; fi
 fi
+# Another package can pull in opencv-python 5.x next to the headless build, shadowing it with a cv2 that lacks
+# CascadeClassifier (vs ai track, vs thumbs). Keep only the pinned headless build.
+if [ $check = 0 ] && "$py" -c "import importlib.metadata as m; m.version('opencv-python')" 2>/dev/null; then
+  if command -v uv >/dev/null && [ -x "$venv/bin/python" ]; then uv pip uninstall -q --python "$venv/bin/python" opencv-python
+  else "$py" -m pip uninstall -q -y opencv-python; fi
+  pipi --reinstall --no-deps "opencv-python-headless>=4.8,<5" 2>/dev/null || pipi --force-reinstall --no-deps "opencv-python-headless>=4.8,<5"
+  ok "opencv: removed a conflicting opencv-python, kept opencv-python-headless"
+fi
 for m in cv2:opencv scenedetect:PySceneDetect librosa:librosa rembg:rembg demucs:demucs; do
   "$py" -c "import ${m%%:*}" 2>/dev/null && ok "${m#*:} (vs ai)" || info "${m#*:} not installed (optional: vs setup --ai / --stems; fallback in use)"
 done

@@ -81,6 +81,10 @@ def video_prompt(p, lines, aspect):
 
 def cmd_plan(a):
     s = load_json(a.script)
+    if (a.provider or s.get("provider")) == "hyperscale":
+        import gen_hs
+        gen_hs.plan(s, a)
+        return
     p, lines = s.get("presenter", {}), s.get("lines", [])
     if not lines:
         die("script has no lines")
@@ -162,7 +166,10 @@ def cmd_next(a):
         return
     for j in r:
         print(json.dumps(resolve(doc, j), indent=1, ensure_ascii=False))
-    if doc.get("account"):
+    if doc.get("provider") == "hyperscale":
+        print("\nRun each with the Hyperscale MCP: quote, get a yes, generate, check_generation. Reference ids in "
+              "'refs'/'image'/'start_frame' are earlier jobs: use their result urls (inputs below).")
+    elif doc.get("account"):
         print(f"\nUse the {doc['account']} connection (tools {doc['tool_prefix']}*), not another Higgsfield account."
               + (f" Bill team workspace {doc['workspace_id']}." if doc.get("workspace_id") else ""))
     print(f"\n{len(r)} job(s) ready. Run each with the generator, then: vs gen done {a.jobs} <id> --url <result>")
@@ -225,9 +232,11 @@ def cmd_fetch(a):
     problems, n = [], 0
     for j in doc["jobs"]:
         r = j.get("result", {})
-        if j["status"] != "done" or j["kind"] not in ("talking", "broll", "frame", "speech"):
+        import gen_hs
+        ext = {"talking": ".mp4", "broll": ".mp4", "frame": ".png", "speech": ".wav"}.get(j["kind"]) or \
+            gen_hs.fetch_ext(j["kind"])
+        if j["status"] != "done" or not ext:
             continue
-        ext = {"talking": ".mp4", "broll": ".mp4", "frame": ".png", "speech": ".wav"}[j["kind"]]
         if r.get("file") and Path(r["file"]).exists():
             src = Path(r["file"])
             f = dest_dir / f"{doc['variant']}_{j['id']}{src.suffix or ext}"
@@ -242,7 +251,7 @@ def cmd_fetch(a):
             continue
         j["local"] = str(f)
         n += 1
-        if j["kind"] in ("talking", "broll"):
+        if j["kind"] in ("talking", "broll", "motion"):
             info = probe(str(f))
             if not info["has_video"]:
                 problems.append(f"{j['id']}: no video stream")
@@ -292,6 +301,10 @@ def line_times(clip_file, lines, idx, transcript=None):
 
 def cmd_edl(a):
     doc = load_json(a.jobs)
+    if doc.get("provider") == "hyperscale":
+        import gen_hs
+        gen_hs.edl(doc, a)
+        return
     lines = doc["lines"]
     talks = [j for j in doc["jobs"] if j["kind"] == "talking"]
     if not talks:
@@ -345,6 +358,8 @@ def main():
     p.add_argument("--max-clip", type=float, default=MAX_CLIP)
     p.add_argument("--account", help="Higgsfield connection to use (default: vs higgsfield current)")
     p.add_argument("--project", help="project folder, for its active account")
+    p.add_argument("--provider", choices=["higgsfield", "hyperscale"],
+                   help="hyperscale: the shot-on-phone character method on Hyperscale models (see gen_hs.py)")
     for name in ("next", "list"):
         sub.add_parser(name).add_argument("jobs")
     d = sub.add_parser("done")
@@ -371,7 +386,18 @@ def main():
     e.add_argument("-o", "--out", required=True)
     e.add_argument("--force", action="store_true")
     e.add_argument("--no-transcribe", action="store_true")
+    e.add_argument("--gap", type=float, default=0.12, help="hyperscale: beat left between spoken lines (s)")
+    sl = sub.add_parser("slice", help="hyperscale: cut the one read at its pauses, one slice per spoken line")
+    sl.add_argument("jobs")
+    sl.add_argument("--project", required=True)
+    sl.add_argument("--db", type=float, default=-35.0)
+    sl.add_argument("--min", type=float, default=0.25, help="shortest pause that can separate two lines (s)")
+    sl.add_argument("--pad", type=float, default=0.06, help="keep this much silence around each slice (s)")
     args = ap.parse_args()
+    if args.cmd == "slice":
+        import gen_hs
+        gen_hs.cmd_slice(args)
+        return
     {"plan": cmd_plan, "next": cmd_next, "list": cmd_list, "done": cmd_done, "fail": cmd_fail, "retry": cmd_retry,
      "fetch": cmd_fetch, "edl": cmd_edl}[args.cmd](args)
 

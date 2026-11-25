@@ -413,9 +413,15 @@ def detect_cuts(path, threshold=0.3):
     import re
     if importlib.util.find_spec("scenedetect") and not __import__("os").environ.get("VS_NO_AI"):
         try:
-            from scenedetect import AdaptiveDetector, detect
+            from scenedetect import AdaptiveDetector, ThresholdDetector, detect
             scenes = detect(str(path), AdaptiveDetector(adaptive_threshold=1.5 + 10 * threshold))
-            return [s[0].get_seconds() for s in scenes[1:]]
+            cuts = [s[0].get_seconds() for s in scenes[1:]]
+            # The adaptive detector skips fades through black (no single-frame jump); add those cuts.
+            for s in detect(str(path), ThresholdDetector(threshold=12))[1:]:
+                t = s[0].get_seconds()
+                if all(abs(t - c) > 0.4 for c in cuts):
+                    cuts.append(t)
+            return sorted(cuts)
         except Exception as e:  # noqa: BLE001 - fall back to ffmpeg on any detector problem
             print(f"warning: PySceneDetect failed ({e}); using ffmpeg", file=sys.stderr)
     p = run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(path), "-an", "-vf",

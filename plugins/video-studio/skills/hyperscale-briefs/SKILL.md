@@ -58,6 +58,8 @@ vs hyperscale shots --project hs-457-storytelling
   `check_generation` until done → `vs add <url> --project P --as broll`. Daily credit limits are per person.
   A result the person likes: offer `save_to_library`. Follow the brief's realism rule ("could a real crew film
   this?"); no plastic faces, no surreal shots.
+- People the Library doesn't have (a character, a creator, the same woman in every shot): `/phone-ugc` -
+  character → nine-angle sheet → one still per line → clips, planned with `vs gen plan --provider hyperscale`.
 - AI voiceover (e.g. "AI voiceover, female, 50-60"): ElevenLabs through Hyperscale's audio models (quote first)
   or `/video-audio`. Match the brief's pace and pronunciation notes; never speed the voice up to fit.
 
