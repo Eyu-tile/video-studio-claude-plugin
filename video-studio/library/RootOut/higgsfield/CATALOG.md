@@ -5,7 +5,7 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1502 generations (1201 video, 201 image, 100 audio). RootOut era (from 21 Nov 2026): 688.
+Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 21 Nov 2026): 716.
 
 ## RootOut-era video (443; 199 named by a set)
 
@@ -399,9 +399,9 @@ Totals: 1502 generations (1201 video, 201 image, 100 audio). RootOut era (from 2
 | 2026-11-22 | `25668707` |  | seedance_2_5 | Vertical phone video propped on a counter in a bright pediatric exam room. The tired, wry mom on the chair tal |
 | 2026-11-22 | `13cd338e` | Set 17 · b2_routine | seedance_2_5 | real RootOut bottle, brush in the cap, oil on the spot |
 | 2026-11-22 | `187218fc` | Set 13 · c04 | seedance_2_5 | Handheld vertical iPhone selfie video in a bright family kitchen, amateur UGC, fully clothed woman in a knit s |
-| 2026-11-22 | `1d651123` | Set 13 · m2 | seedance_2_5 | Clean 3D medical explainer animation, close on the skin cross-section block. The purple and green droplets hav |
+| 2026-11-22 | `1d651123` | Set 13 · s13_m2_root_dissolves | seedance_2_5 | 3D skin side cut: purple+green drops at the root, root cracks and dissolves bottom-up, wart shrinks, clear dot |
 | 2026-11-22 | `0ba9c4a6` | Set 13 · h3b | seedance_2_5 | Handheld vertical iPhone selfie video, kitchen daylight, amateur UGC. The woman talks to the lens, lips perfec |
-| 2026-11-22 | `56f40499` | Set 13 · m1 | seedance_2_5 | Clean 3D medical explainer animation, slow push-in on the skin cross-section block. The lemon-yellow droplet f |
+| 2026-11-22 | `56f40499` | Set 13 · s13_m1_lemon_door_teatree | seedance_2_5 | 3D skin side cut: lemon drop softens hard top, door opens, clear tea tree drop carries purple+green down towar |
 | 2026-11-22 | `d5e1421d` | Set 13 · c06 | seedance_2_5 | Vertical phone video propped on a patio table, sunny backyard, amateur UGC. The woman, still crouched on the l |
 | 2026-11-22 | `fcacb298` | Set 13 · c10 | seedance_2_5 | Vertical amateur phone video, sunny living room. The boy keeps the hand-written sign in front of his face the  |
 | 2026-11-22 | `925ef4e2` | Set 13 · h2 | seedance_2_5 | Handheld vertical iPhone selfie video, kitchen daylight, amateur UGC. The woman talks to the lens, lips perfec |
@@ -455,10 +455,27 @@ Totals: 1502 generations (1201 video, 201 image, 100 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (145; 29 named by a set)
+## RootOut-era image (162; 46 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `9a9aca58` | Set 13 · s13_S4_finger_smooth |  | same finger, smooth skin, wart gone (stage 4) |
+| 2026-11-25 | `9666801c` | Set 13 · s13_S3_finger_flaking |  | same finger, wart edges flaking off (stage 3) |
+| 2026-11-25 | `f0f2e121` | Set 13 · s13_S2_finger_dry |  | same finger, wart dry and darker (stage 2) |
+| 2026-11-25 | `ff461828` | Set 13 · s13_S1_finger_wart |  | phone photo: child's index finger on wooden table with a small common wart (stage 1 of 4) |
+| 2026-11-25 | `b53da070` | Set 13 · s13_M0_sidecut_style |  | 3D skin cross-section block (hard yellow top, wart with long root) with lemon/clear/purple/green drops above;  |
+| 2026-11-25 | `eb6630a0` | Set 13 · s13_FH3_girl_sign |  | girl in lavender holding hand-written sign 'MY WART FELL OFF AND IT DIDN'T HURT!' covering her face, kitchen |
+| 2026-11-25 | `a14790d4` | Set 13 · s13_FH2_hand_pulls_away |  | Set 13 mom worried, child's hand with wart pulling away from hers (no face) |
+| 2026-11-25 | `9f6a82af` | Set 13 · s13_F12_three_bottles |  | Set 13 mom at kitchen table with three real RootOut bottles in a row (offer) |
+| 2026-11-25 | `ff676244` | Set 13 · s13_F11_mom2 |  | MOM 2: curly dark-blonde hair, denim shirt, kitchen counter selfie, kid hand in fruit bowl behind |
+| 2026-11-25 | `3e7abc8a` | Set 13 · s13_F10_boy_sign |  | boy 6, plain green tee, hand-written sign 'MINE FELL OFF!' covering his face, thumbs up, living room |
+| 2026-11-25 | `84ce9c85` | Set 13 · s13_F09_routine |  | bedtime: mom with nail file at child's hand on her knee (no face), RootOut bottle on nightstand |
+| 2026-11-25 | `ec04ed36` | Set 13 · s13_F08_bedroom_bottle |  | Set 13 mom on girl's bed at bedtime (lamp, string lights, lavender bedding) holding real RootOut bottle up to  |
+| 2026-11-25 | `0fcbb0e7` | Set 13 · s13_F05_backyard |  | Set 13 mom crouched on a sunny backyard lawn reaching for a yellow dandelion, fence behind |
+| 2026-11-25 | `54c89677` | Set 13 · s13_F03_mom_phone |  | Set 13 mom alone at kitchen table holding her phone, talking |
+| 2026-11-25 | `e700ae0b` | Set 13 · s13_F02_kid_bottle |  | girl 7 in lavender long-sleeve, chin-down framing (no face), holding the real RootOut bottle at kitchen table |
+| 2026-11-25 | `0044d22d` | Set 13 · s13_F01v2_hook_warm |  | same mom, warm golden morning kitchen light, gently holding daughter's hand flat toward lens; best Set 13 hook |
+| 2026-11-25 | `cc51dfdd` | Set 13 · s13_F01_hook |  | mom (brunette ponytail, oat sweater) at kitchen table, crayon drawings behind, holding daughter's hand with in |
 | 2026-11-25 | `2c06da3f` |  | nano_banana_2 | Change only one thing in image 1: the woman now holds the navy pump bottle from image 2 in her right hand, rai |
 | 2026-11-25 | `284665a3` |  | text2image_soul_v2 | Still from her own YouTube video at home in Bali, centred waist-up shot: she sits upright on a cream sofa, arm |
 | 2026-11-25 | `747136d2` |  | text2image_soul_v2 | Still from her own YouTube sit-down video filmed at home in Bali. She sits centred and upright on a cream line |
@@ -605,10 +622,21 @@ Totals: 1502 generations (1201 video, 201 image, 100 audio). RootOut era (from 2
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
 | 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
-## RootOut-era audio (100; 0 named by a set)
+## RootOut-era audio (111; 11 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `2159fed6` | Set 13 · s13_ah3b |  | ElevenLabs v4 Naomi (Set 13 mom): She made that sign herself. About two weeks, start to finish. |
+| 2026-11-25 | `f85b2161` | Set 13 · s13_ah2_hook |  | ElevenLabs v4 Naomi (Set 13 mom): My daughter was scared of anything that touched her wart. Then it flaked rig |
+| 2026-11-25 | `4555458f` | Set 13 · s13_a12_offer |  | ElevenLabs v4 Naomi (Set 13 mom): Get yours from the link below. Buy two, we'll send three. And if it's not go |
+| 2026-11-25 | `a1efa191` | Set 13 · s13_a11_mom2 |  | ElevenLabs v4 Chloe (MOM 2): We kept going fourteen nights after it looked gone. It never came back. |
+| 2026-11-25 | `cfffd631` | Set 13 · s13_a09_routine |  | ElevenLabs v4 Naomi (Set 13 mom): Rub the little file over it, twice. Brush the oil on. A clear dot on top. |
+| 2026-11-25 | `8d5bf155` | Set 13 · s13_a08_safety |  | ElevenLabs v4 Naomi (Set 13 mom): Deep doesn't mean harsh. It's a kids' formula, for ages four and up. No acid |
+| 2026-11-25 | `330dca6a` | Set 13 · s13_a06_four_plants |  | ElevenLabs v4 Naomi (Set 13 mom): RootOut is just four plants in an oil. Lemon... Tea tree... up to eight time |
+| 2026-11-25 | `cb498857` | Set 13 · s13_a05_dandelion |  | ElevenLabs v4 Naomi (Set 13 mom): Freezing, acid and shaving only snap off the top, like picking a dandelion.  |
+| 2026-11-25 | `a4e22235` | Set 13 · s13_a04 |  | ElevenLabs v4 Naomi (Set 13 mom): Look. Dry, then dark, then it flaked off. Smooth skin underneath. No blister |
+| 2026-11-25 | `cb1a0249` | Set 13 · s13_a03 |  | ElevenLabs v4 Naomi (Set 13 mom): I used to think if it's not hurting, it's not working. So I took pictures. |
+| 2026-11-25 | `ed9cfb7b` | Set 13 · s13_a01_hook |  | ElevenLabs v4 Naomi (Set 13 mom): My daughter's wart flaked right off. And she didn't cry once. About two week |
 | 2026-11-25 | `fa01d56c` |  | seed_audio | Five minutes on... it dried, and the file did all the work. Every time. Okay. |
 | 2026-11-25 | `574ef93e` |  | seed_audio | Five minutes on, it dried, and the file did all the work. Every time. Okay. |
 | 2026-11-25 | `614fa7e9` |  | text2speech_v2 | You don't repeat a year because of what happened to you... You repeat it because of what you left open. So clo |
