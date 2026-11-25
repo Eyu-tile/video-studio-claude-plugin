@@ -5,9 +5,9 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 21 Nov 2026): 716.
+Totals: 1538 generations (1201 video, 226 image, 111 audio). RootOut era (from 21 Nov 2026): 724.
 
-## RootOut-era video (443; 199 named by a set)
+## RootOut-era video (443; 212 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
@@ -24,9 +24,9 @@ Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 2
 | 2026-11-25 | `4ef28304` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps exactly its  |
 | 2026-11-25 | `b0d39444` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
 | 2026-11-25 | `a72f2324` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
-| 2026-11-25 | `c855773d` |  | seedance_2_5 | Real handheld phone video at night, close on the kid's bed. The adult hand finishes setting the RootOut bottle |
-| 2026-11-25 | `33bb83b0` |  | seedance_2_5 | Casual real phone video, phone propped on the dresser at night, still camera with tiny natural wobble. The wom |
-| 2026-11-25 | `1b2a5f8d` |  | seedance_2_5 | Casual real phone video, phone propped on a kid's nightstand at night, still camera with tiny natural wobble.  |
+| 2026-11-25 | `c855773d` | Set 5 · s5_h3_foot | seedance_2_5 | Bottle set down by foot with wart on pillow, toes wiggle, push-in, no audio (H3 hook) |
+| 2026-11-25 | `33bb83b0` | Set 5 · s5_h2_talk | seedance_2_5 | Seedance 2.5 H2 hook: card into drawer, holds bottle: 'The doctor said, We can freeze it...' |
+| 2026-11-25 | `1b2a5f8d` | Set 5 · s5_h4_talk | seedance_2_5 | Seedance 2.5 H4 hook: 'Winter break is two weeks at home...' |
 | 2026-11-25 | `b62b060b` |  | seedance_2_5 | Extreme macro close-up, soft bedroom lamp light: an adult's hand gently glides a thin white single-use emery f |
 | 2026-11-25 | `e62624d6` |  | seedance_2_5 | Handheld phone video, warm evening bathroom light. A mom's hand opens a mirrored bathroom cabinet and takes ou |
 | 2026-11-25 | `d87a55aa` |  | seedance_2_5 | Close tabletop shot on a light wooden kitchen counter in soft morning window light. The small amber RootOut bo |
@@ -39,9 +39,9 @@ Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 2
 | 2026-11-25 | `cee97598` |  | seedance_2_5 | Reference map: the start image is the first frame and wins over everything; the reference video is for real ta |
 | 2026-11-25 | `82fcad54` |  | seedance_2_5 | The hand opens and lets go: the metal foot file, the pumice stone and the pink grater fall straight down into  |
 | 2026-11-25 | `f79a8b4e` |  | seedance_2_5 | Real iPhone video, handheld. Immediately, in the first half second, the frustrated woman slams the white cream |
-| 2026-11-25 | `59792279` |  | seedance_2_5 | Real handheld phone video at night, close on a bed. The small boy's hand dabs the brush onto the ball of his o |
+| 2026-11-25 | `59792279` | Set 5 · s5_kidbrush | seedance_2_5 | Child dabs the brush on his own foot, adult hand on sleeve, bottle on duvet, no faces ('he wants to do the bru |
 | 2026-11-25 | `7b0abf25` |  | seedance_2_5 | Real phone video at bedtime, handheld, close on the duvet. The child's hand slowly paints the little brush acr |
-| 2026-11-25 | `67b04547` |  | seedance_2_5 | Real handheld phone video continuing from the start image, same garden, same dry cracked soil, same golden eve |
+| 2026-11-25 | `67b04547` | Set 5 · s5_dandelion_snap | seedance_2_5 | Hand snaps a dandelion flower off; broken stem stub stays in cracked soil (for 'snap off the top, like picking |
 | 2026-11-25 | `c081e951` |  | seedance_2_5 | Real handheld phone video continuing from the start image, same garden, cracked dry soil, golden evening light |
 | 2026-11-25 | `8c9180b5` |  | voice_change_merge |  |
 | 2026-11-25 | `435c6955` |  | voice_change_merge |  |
@@ -75,16 +75,16 @@ Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 2
 | 2026-11-24 | `b2142ae7` | Set 18 · Y1 | seedance_2_5 | Real handheld vertical phone selfie video in a backyard, a dad crouched on the lawn filming himself with the f |
 | 2026-11-24 | `c5f5c5c6` | Set 18 · K1d | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
 | 2026-11-24 | `f6ad24a9` | Set 18 · K1c | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
-| 2026-11-24 | `b171942e` |  | seedance_2_5 | Casual real phone video from a phone on the dashboard of a parked car at dusk, small natural wobble. The woman |
-| 2026-11-24 | `d928e112` |  | seedance_2_5 | Casual real phone video, iPhone propped on a kid's nightstand at night, the camera is still with tiny natural  |
-| 2026-11-24 | `41de5bc7` |  | seedance_2_5 | Casual real phone video, iPhone propped on a kid's nightstand at night, still camera with tiny natural wobble. |
-| 2026-11-24 | `ea43d2fd` |  | seedance_2_5 | Casual real phone video, iPhone propped on a kid's nightstand at night, still camera with tiny natural wobble. |
-| 2026-11-24 | `865c63b2` |  | seedance_2_5 | Casual real selfie video, phone held at arm's length with natural hand shake. The young mom sitting on the kid |
+| 2026-11-24 | `b171942e` | Set 5 · s5_mom_car_talk | seedance_2_5 | Seedance 2.5 talking in car at dusk: 'Night ten. He went barefoot at the pool...' |
+| 2026-11-24 | `d928e112` | Set 5 · s5_mom_hook_talk | seedance_2_5 | Seedance 2.5 talking, holds bottle: 'One brush of this on my son's wart at bedtime...' (H1 hook) |
+| 2026-11-24 | `41de5bc7` | Set 5 · s5_mom_n3_talk | seedance_2_5 | Seedance 2.5 talking: 'That's all the freeze would have gotten.' |
+| 2026-11-24 | `ea43d2fd` | Set 5 · s5_mom_close_talk | seedance_2_5 | Seedance 2.5 offer close, points down, lifts bottle: 'So before you book the freeze, try this first...' |
+| 2026-11-24 | `865c63b2` | Set 5 · s5_testimonial_m1 | seedance_2_5 | Young mom on kid's bedroom carpet: 'She's four, and I was nervous... bedtime paint.' |
 | 2026-11-24 | `ab90914a` | Set 18 · K1b_voiceref_test | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
 | 2026-11-24 | `ab16f2ea` |  | seedance_2_5 | Casual real selfie video, phone held at arm's length with natural hand shake. The young mom sitting on the kid |
-| 2026-11-24 | `741c98ca` |  | seedance_2_5 | Casual real selfie video in a home hallway, phone held at arm's length with natural hand shake. The mom in her |
-| 2026-11-24 | `fb80df10` |  | seedance_2_5 | Casual real selfie video filmed in a parked car, phone held at arm's length with natural hand shake. The mom i |
-| 2026-11-24 | `2a5dff3e` |  | seedance_2_5 | Casual real phone video, iPhone propped on a kid's nightstand at night, the camera is still with tiny natural  |
+| 2026-11-24 | `741c98ca` | Set 5 · s5_testimonial_m3 | seedance_2_5 | Mom early 30s in hallway: 'We did the fourteen extra nights... never came back.' |
+| 2026-11-24 | `fb80df10` | Set 5 · s5_testimonial_m2 | seedance_2_5 | Mom 40s in parked car with bottle: 'The doctor wanted to freeze it...' |
+| 2026-11-24 | `2a5dff3e` | Set 5 · s5_mom_n1_voicelock | seedance_2_5 | Seedance 2.5 talking clip, native voice = the locked Set 5 mom voice: 'Two minutes. He didn't even look up...' |
 | 2026-11-24 | `f36030f0` | Set 18 · K1a | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
 | 2026-11-24 | `4f1c58e9` | Set 18 · K3 | seedance_2_5 | Real handheld vertical phone selfie video. The man from the start image talks into the front camera held at ar |
 | 2026-11-24 | `d8fee57c` | Set 18 · Y2 | seedance_2_5 | Real handheld vertical phone selfie video in a sunny backyard, a lawn sprinkler running behind him. The man fr |
@@ -455,10 +455,18 @@ Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (162; 46 named by a set)
+## RootOut-era image (170; 55 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `887791dd` | Set 5 · s5_h4_frame |  | GPT 2.6: Set 5 mom in red/cream holiday sweater, fairy lights, snowy window, bottle by cheek |
+| 2026-11-25 | `ef0c0424` | Set 5 · s5_h3_frame |  | GPT 2.6: child's sole with wart on a pillow, adult hand setting the RootOut bottle down |
+| 2026-11-25 | `141bb690` | Set 5 · s5_h2_frame |  | GPT 2.6: Set 5 mom on bed edge, blank doctor card at nightstand drawer |
+| 2026-11-25 | `9b128f4e` | Set 5 · s5_kidbrush_frame_fixed |  | GPT 2.6: child's hand brushes oil on own foot (natural foot, five toes), dinosaur pajamas, RootOut bottle |
+| 2026-11-25 | `a8f6109d` | Set 5 · s5_mom_close_frame |  | GPT 2.6 edit: mom in cream cable sweater, bottle on nightstand |
+| 2026-11-25 | `4771c08b` | Set 5 · s5_mom_car_frame |  | GPT 2.6 edit: mom in parked car at dusk, damp hair, navy hoodie |
+| 2026-11-25 | `0f6a1ff5` | Set 5 · s5_mom_n3_frame |  | GPT 2.6 edit: mom, green henley, picture book on the dinosaur duvet |
+| 2026-11-25 | `a2d300ba` | Set 5 · s5_mom_hook_frame |  | GPT 2.6 edit: mom on kid's bed at night, grey sweatshirt, RootOut bottle by her cheek, dinosaur duvet |
 | 2026-11-25 | `9a9aca58` | Set 13 · s13_S4_finger_smooth |  | same finger, smooth skin, wart gone (stage 4) |
 | 2026-11-25 | `9666801c` | Set 13 · s13_S3_finger_flaking |  | same finger, wart edges flaking off (stage 3) |
 | 2026-11-25 | `f0f2e121` | Set 13 · s13_S2_finger_dry |  | same finger, wart dry and darker (stage 2) |
@@ -513,7 +521,7 @@ Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 2
 | 2026-11-24 | `e6cd2741` |  | text2image_soul_v2 | Vertical phone selfie video frame, front camera propped on a kid's nightstand at night, slightly low angle. An |
 | 2026-11-24 | `9412ceb2` |  | text2image_soul_v2 | Vertical phone selfie video frame, front camera propped on a kid's nightstand at night, slightly low angle. An |
 | 2026-11-24 | `5f46cb9b` |  | text2image_soul_v2 | Vertical phone selfie video frame, front camera propped on a kid's nightstand at night, slightly low angle. An |
-| 2026-11-24 | `1e4c170c` |  | text2image_soul_v2 | Vertical phone selfie video frame, front camera propped on a kid's nightstand at night, slightly low angle. An |
+| 2026-11-24 | `1e4c170c` | Set 5 · s5_mom_soul_locked | text2image_soul_v2 | Soul 2.0 base of the Set 5 mom (mid-30s, wavy blonde hair), locked character for every scene edit |
 | 2026-11-24 | `0b4b211b` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
 | 2026-11-24 | `79721067` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
 | 2026-11-24 | `0faf8414` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
@@ -622,7 +630,7 @@ Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 2
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
 | 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
-## RootOut-era audio (111; 11 named by a set)
+## RootOut-era audio (111; 12 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
@@ -675,7 +683,7 @@ Totals: 1530 generations (1201 video, 218 image, 111 audio). RootOut era (from 2
 | 2026-11-25 | `74a37f59` |  | seed_audio | I've been a pedicurist for seventeen years, and I've watched all three fail thousands of times. Okay. |
 | 2026-11-25 | `1884599d` |  | seed_audio | And the one thing that actually works. Okay. |
 | 2026-11-25 | `6571b708` |  | seed_audio | There are three mistakes almost every woman makes with her heels. Okay. |
-| 2026-11-25 | `ba6f195f` |  | elevenlabs_music_v2_5 | Instrumental music for a high-converting direct-response video ad, 130 seconds, no vocals, NO fade-out. 0-10s: |
+| 2026-11-25 | `ba6f195f` | Set 5 · s5_music_dr_build | elevenlabs_music_v2_5 | ElevenLabs Music v2.5 instrumental, 117.5 BPM, builds soft to full by 50 s, full energy to end, no fade (v7, n |
 | 2026-11-25 | `8d087a0e` |  | elevenlabs_music_v2_5 | Instrumental background bed for a talking-head health ad, 108 BPM steady pulse from the very first second, war |
 | 2026-11-25 | `247adf4e` |  | elevenlabs_music_v2_5 | Instrumental music bed for a fast-paced direct-response video ad (UGC style), 120 seconds, no vocals. 0-10s: l |
 | 2026-11-25 | `a449a025` |  | elevenlabs_music_v2_5 | Instrumental music bed for a fast-paced direct-response video ad (UGC style), 120 seconds, no vocals. 0-10s: l |
