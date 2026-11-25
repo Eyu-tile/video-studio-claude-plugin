@@ -5,7 +5,7 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1579 generations (1214 video, 243 image, 122 audio). RootOut era (from 21 Nov 2026): 765.
+Totals: 1584 generations (1214 video, 248 image, 122 audio). RootOut era (from 21 Nov 2026): 770.
 
 ## RootOut-era video (456; 225 named by a set)
 
@@ -468,10 +468,15 @@ Totals: 1579 generations (1214 video, 243 image, 122 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (187; 72 named by a set)
+## RootOut-era image (192; 77 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `e32fc596` | Set 2 · s2_narrator_row2 | gpt_image_2_6 | GPT 2.6 edit of 775f8138: narrator at kitchen table with unbranded wart boxes, silver freeze can, foam pads, n |
+| 2026-11-25 | `fb0a325f` | Set 2 · s2_mom3_soul | soul_2 | Set 2 MOM 3 identity (Soul 2): mid-50s, silver bob, navy cardigan, glasses on a cord, hallway by the front doo |
+| 2026-11-25 | `a3b27f60` | Set 2 · s2_mom2_soul | soul_2 | Set 2 MOM 2 identity (Soul 2): mid-40s, short dark curly hair, rust-orange tee, kitchen daylight selfie |
+| 2026-11-25 | `5e41eba1` | Set 2 · s2_mom1_soul | soul_2 | Set 2 MOM 1 identity (Soul 2): early-30s, messy bun, cream hoodie, sofa, lamp + TV glow; hoodie has garbled te |
+| 2026-11-25 | `775f8138` | Set 2 · s2_narrator_soul | soul_2 | Set 2 narrator identity (Soul 2): mid-40s mom, dark-blonde shoulder hair, sage-green sweater, bright kitchen t |
 | 2026-11-25 | `312b9008` | Set 16 · s16_F3_smooth | gpt_image_2_6 | GPT 2.6 edit of E1: spot gone, smooth skin, her thumb on it, relieved smile |
 | 2026-11-25 | `50c62011` | Set 16 · s16_F2_flaking | gpt_image_2_6 | GPT 2.6 edit of E1: dry top flaking at the edges, pink skin at the rim (about two weeks) |
 | 2026-11-25 | `6409ec72` | Set 16 · s16_F1_week1_dry | gpt_image_2_6 | GPT 2.6 edit of E1: same couch shot, the spot dry, dull, darker, her finger points (week one) |
