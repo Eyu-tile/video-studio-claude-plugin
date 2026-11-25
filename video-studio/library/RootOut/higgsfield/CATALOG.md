@@ -5,7 +5,7 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1543 generations (1201 video, 231 image, 111 audio). RootOut era (from 21 Nov 2026): 729.
+Totals: 1555 generations (1201 video, 243 image, 111 audio). RootOut era (from 21 Nov 2026): 741.
 
 ## RootOut-era video (443; 212 named by a set)
 
@@ -455,10 +455,22 @@ Totals: 1543 generations (1201 video, 231 image, 111 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (175; 60 named by a set)
+## RootOut-era image (187; 72 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `312b9008` | Set 16 · s16_F3_smooth | gpt_image_2_6 | GPT 2.6 edit of E1: spot gone, smooth skin, her thumb on it, relieved smile |
+| 2026-11-25 | `50c62011` | Set 16 · s16_F2_flaking | gpt_image_2_6 | GPT 2.6 edit of E1: dry top flaking at the edges, pink skin at the rim (about two weeks) |
+| 2026-11-25 | `6409ec72` | Set 16 · s16_F1_week1_dry | gpt_image_2_6 | GPT 2.6 edit of E1: same couch shot, the spot dry, dull, darker, her finger points (week one) |
+| 2026-11-25 | `6c8fbd58` | Set 16 · s16_E7_foot_macro | gpt_image_2_6 | GPT 2.6 kid foot macro: blocked by the safety filter (nsfw); use edits of E1 instead |
+| 2026-11-25 | `13e99855` | Set 16 · s16_E6_vinegar_counter | gpt_image_2_6 | GPT 2.6: bathroom counter, apple cider vinegar bottle (plain label), cotton balls, duct tape |
+| 2026-11-25 | `3db65f39` | Set 16 · s16_E5_bedroom_comic | gpt_image_2_6 | GPT 2.6 edit: son's bedroom at night, comic book hides his face, foot in mom's lap, real bottle on nightstand |
+| 2026-11-25 | `104aaa51` | Set 16 · s16_E4_front_yard | gpt_image_2_6 | GPT 2.6 edit: mom crouched on front-yard lawn, cracked soil, dandelion, selfie, late afternoon |
+| 2026-11-25 | `5a4495bc` | Set 16 · s16_E3_couch_three_bottles | gpt_image_2_6 | GPT 2.6 edit: mom alone on couch, three real RootOut bottles on the coffee table (offer) |
+| 2026-11-25 | `6f857629` | Set 16 · s16_E2_couch_bottle | gpt_image_2_6 | GPT 2.6 edit: couch, son's feet in lap, she holds the real RootOut bottle (ref 2c52c56e) label to lens |
+| 2026-11-25 | `baf4fec4` | Set 16 · s16_E1_couch_sole | gpt_image_2_6 | GPT 2.6 edit of s16 mom: couch, son's feet in lap (knees down), she turns the sole to the lens: wart with blac |
+| 2026-11-25 | `baa92d44` | Set 16 · s16_mom_soul_alt | text2image_soul_v2 | Set 16 mom alt (profile, not facing camera); not used |
+| 2026-11-25 | `44740e3a` | Set 16 · s16_mom_soul_locked | text2image_soul_v2 | Soul 2 base of the Set 16 mom (~35, Latina, dark-brown wavy hair, gold hoops, sage waffle henley, oatmeal couc |
 | 2026-11-25 | `887791dd` | Set 5 · s5_h4_frame |  | GPT 2.6: Set 5 mom in red/cream holiday sweater, fairy lights, snowy window, bottle by cheek |
 | 2026-11-25 | `ef0c0424` | Set 5 · s5_h3_frame |  | GPT 2.6: child's sole with wart on a pillow, adult hand setting the RootOut bottle down |
 | 2026-11-25 | `141bb690` | Set 5 · s5_h2_frame |  | GPT 2.6: Set 5 mom on bed edge, blank doctor card at nightstand drawer |
