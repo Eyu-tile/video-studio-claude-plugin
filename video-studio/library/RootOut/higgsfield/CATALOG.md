@@ -5,7 +5,7 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1605 generations (1219 video, 264 image, 122 audio). RootOut era (from 21 Nov 2026): 791.
+Totals: 1643 generations (1219 video, 275 image, 149 audio). RootOut era (from 21 Nov 2026): 829.
 
 ## RootOut-era video (461; 247 named by a set)
 
@@ -473,10 +473,21 @@ Totals: 1605 generations (1219 video, 264 image, 122 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (208; 93 named by a set)
+## RootOut-era image (219; 104 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `0b6315d8` | Set 1B · s1b_f01_reject | soul_2 | Hook frame attempt: lower face visible, dirty sole smudge |
+| 2026-11-25 | `cf0bfb91` | Set 1B · s1b_g01_reject | soul_2 | Hook frame attempt: boy profile face visible (nose, lips) |
+| 2026-11-25 | `e8eb69ba` | Set 1B · s1b_g10_run | soul_2 | Start frame N10 (H2): boy knees-down running on sidewalk, green shorts, white sneakers |
+| 2026-11-25 | `99f6c7a3` | Set 1B · s1b_g05_thumbs | soul_2 | Start frame N05: kid's hand thumbs-up over dinosaur blanket, tablet glow |
+| 2026-11-25 | `a4ef8baa` | Set 1B · s1b_g08_mom2 | soul_2 | Mom 2 Soul character: early-30s mom selfie in kitchen, cream sweater, daughter's foot in pink pajamas on lap |
+| 2026-11-25 | `853b4625` | Set 1B · s1b_g07_girl_bottle | gpt_image_2_6 | Start frame N07: girl shoulders-down on sofa, lavender sweater, holds real RootOut bottle to the lens (label c |
+| 2026-11-25 | `d550d43b` | Set 1B · s1b_g03_mom_bottle | gpt_image_2_6 | Start frame N03: mom chest-down on kid's bed edge holds the real RootOut bottle (label correct), dino bedding, |
+| 2026-11-25 | `cdb8e619` | Set 1B · s1b_g09_schoolyard | gpt_image_2_6 | Start frame N09: boy chest-down in school yard with red ball, plain navy hoodie |
+| 2026-11-25 | `8951ea56` | Set 1B · s1b_g06_trash | gpt_image_2_6 | Start frame N06: open kitchen bin with plain spray can + plain bottle, kid's hand in dino sleeve on lid, no la |
+| 2026-11-25 | `2640df75` | Set 1B · s1b_g04_dandelion | gpt_image_2_6 | Start frame N04: boy collar-down in backyard holds whole dandelion with long white root |
+| 2026-11-25 | `d7dd89bd` | Set 1B · s1b_g02_car | gpt_image_2_6 | Start frame N02: car back seat at dusk, small hand wipes jaw, green dino tee, no face, no text |
 | 2026-11-25 | `4be26c88` | Set 7 · s7_g3_callus |  | GPT 2.6: adult heel with smooth yellow callus, no dots (callus vs wart) |
 | 2026-11-25 | `77c3c4aa` | Set 7 · s7_g2_pick_frame |  | GPT 2.6 edit of e98ca8e9: kid heel with black-dot wart, fingernail about to pick a dot |
 | 2026-11-25 | `93577073` | Set 7 · s7_g1_bath_frame |  | GPT 2.6: bath time, boy in navy hooded towel knees down, mom's hands lift foot, thumb by wart with black dots |
@@ -686,10 +697,37 @@ Totals: 1605 generations (1219 video, 264 image, 122 audio). RootOut era (from 2
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
 | 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
-## RootOut-era audio (122; 23 named by a set)
+## RootOut-era audio (149; 50 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `751e45fd` | Set 1B · s1b_t03 | seed_audio | Boy 2 testimonial (Miles, Seed Speech): It was gone in like two weeks. Now I run at recess. |
+| 2026-11-25 | `5b4d562b` | Set 1B · s1b_t02 | elevenlabs_v4 | Mom 2 testimonial (Maya), voice sample for her Seedance take: My daughter's six. She hated the freeze... |
+| 2026-11-25 | `d5d9c03c` | Set 1B · s1b_t01 | elevenlabs_v4 | Girl testimonial (Annie): It's like Chapstick for my wart. Just a little cold. |
+| 2026-11-25 | `be3e2411` | Set 1B · s1b_m08 | elevenlabs_v4 | Mom (Emily): Get yours from the link below. Buy two, the third's free. And if it's not gone, you get your mone |
+| 2026-11-25 | `1f40053b` | Set 1B · s1b_m07 | elevenlabs_v4 | Mom (Emily): Then a clear dot seals it in, so it keeps soaking all night. |
+| 2026-11-25 | `9cd7f093` | Set 1B · s1b_m06 | elevenlabs_v4 | Mom (Emily): Then you brush the oil on. |
+| 2026-11-25 | `78c57894` | Set 1B · s1b_m05 | elevenlabs_v4 | Mom (Emily): At bedtime, two light strokes with the file. That opens up the hard top. |
+| 2026-11-25 | `96030e03` | Set 1B · s1b_m04 | elevenlabs_v4 | Mom (Emily): Deep doesn't mean harsh. Kids' formula, ages four and up. No blister. Recommended by pediatrician |
+| 2026-11-25 | `50cadfab` | Set 1B · s1b_m03 | elevenlabs_v4 | Mom (Emily): That's what RootOut does... four plants... up to eight times deeper than a regular cream. |
+| 2026-11-25 | `5f5286d7` | Set 1B · s1b_m02 | elevenlabs_v4 | Mom (Emily): Dandelion UMP, word for word. |
+| 2026-11-25 | `f461cb7a` | Set 1B · s1b_m01 | elevenlabs_v4 | Mom (Emily): It wasn't his fault. Or mine. Here's what the freeze missed. |
+| 2026-11-25 | `98f76ca7` | Set 1B · s1b_k16 | seed_audio | Boy (Cody): Mom cancelled my freeze appointment. |
+| 2026-11-25 | `dcd8c358` | Set 1B · s1b_k15 | seed_audio | Boy (Cody): No spray. No acid. Nobody holds me down. |
+| 2026-11-25 | `97e818fb` | Set 1B · s1b_k14 | seed_audio | Boy (Cody): Mom paints it on at bedtime. I just keep watching my show. |
+| 2026-11-25 | `2fe6ed76` | Set 1B · s1b_k13 | seed_audio | Boy (Cody): It's cold for like one second. Kinda tingly. That's it. |
+| 2026-11-25 | `ec560248` | Set 1B · s1b_k12 | seed_audio | Boy (Cody): It just scratches the hard part. It doesn't even hurt. |
+| 2026-11-25 | `6517540a` | Set 1B · s1b_k11 | seed_audio | Boy (Cody): Then pokeweed and white cedar break the wart down. From the root! |
+| 2026-11-25 | `f19f3e2b` | Set 1B · s1b_k10 | seed_audio | Boy (Cody): So it's like a weed. You have to get the root. |
+| 2026-11-25 | `f5b2b182` | Set 1B · s1b_k09 | seed_audio | Boy (Cody): Then my mom found out why. |
+| 2026-11-25 | `27f894ed` | Set 1B · s1b_k08 | seed_audio | Boy (Cody): So the doctor froze it. Mom had to hold my foot still. The freezing spray burned. I cried. And it  |
+| 2026-11-25 | `2ef3eb12` | Set 1B · s1b_k07 | seed_audio | Boy (Cody): I had it on the bottom of my foot for a whole year. The wart stuff from the store stung really bad |
+| 2026-11-25 | `218d7420` | Set 1B · s1b_k06 | seed_audio | Boy (Cody): It didn't. (H3 bridge) |
+| 2026-11-25 | `06818b50` | Set 1B · s1b_k05 | seed_audio | Boy (Cody): Grown-ups said my wart would go away by itself. (H3) |
+| 2026-11-25 | `23d8b873` | Set 1B · s1b_k04 | seed_audio | Boy (Cody): Mom's tried everything. (H2 bridge) |
+| 2026-11-25 | `50327849` | Set 1B · s1b_k03 | seed_audio | Boy (Cody): My wart feels like a pebble when I run. (H2) |
+| 2026-11-25 | `7f1fa7af` | Set 1B · s1b_k02 | seed_audio | Boy (Cody): Last time, I cried the whole ride home. (whole way home was blocked by the filter) |
+| 2026-11-25 | `196007ca` | Set 1B · s1b_k01 | seed_audio | Boy (Cody, Seed Speech): I'm never letting them freeze my wart again. |
 | 2026-11-25 | `b9a5d5ec` | Set 16 · s16_a11_h3 | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): It hurt to step on. I thought it was a splinter. It was a pl |
 | 2026-11-25 | `52d3cff1` | Set 16 · s16_a10_h2 | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): My poor kid had a plantar wart that was getting bigger by th |
 | 2026-11-25 | `73f33456` | Set 16 · s16_a09_close | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): Get yours from the link below. Two in your cart, and a third |
