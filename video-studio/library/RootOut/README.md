@@ -4,6 +4,8 @@
 
 > **Lessons (25 Nov 2026):** `LESSONS.md` here holds what the client's notes taught us on every set (real bottle, ~3 s b-roll on the words, captions, music to the end, motion 3D, real web cards, kids' faces, delivery). Run `vs lessons brief --brand RootOut` before planning and `vs lessons check <edl> --brand RootOut` before delivery.
 
+> **Shared Higgsfield library (25 Nov 2026):** `higgsfield/CATALOG.md` + `catalog.jsonl` list every WilloMd generation from every session (1,498 at start: 440 RootOut-era videos). Search before you generate (`python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`), add every new job right after you make it, and push. RootOut lesson L12.
+
 WilloMD RootOut™ Advanced Wart, Corn & Callus Oil: a brush-on bedtime oil, **File · Soak · Cover**.
 "Freezing burns the top. This oil soaks down to the root.*" Brand: WilloMD (Alderion LLC). Read before any RootOut edit:
 

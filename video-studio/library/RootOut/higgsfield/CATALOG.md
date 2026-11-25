@@ -1,0 +1,711 @@
+# Higgsfield (WilloMd) generation catalogue
+
+Every generation on the WilloMd account, so each RootOut session can reuse what the others made (0 credits).
+Full data (prompt, references) is in `catalog.jsonl`; get a download link with jobs_wait on the id; search it with
+`python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
+**Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
+
+Totals: 1498 generations (1198 video, 200 image, 100 audio). RootOut era (from 21 Nov 2026): 684.
+
+## RootOut-era video (440; 138 named by a set)
+
+| date | id (8) | set · name | model | what it is (prompt start) |
+|---|---|---|---|---|
+| 2026-11-25 | `980d299f` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
+| 2026-11-25 | `09a5e3dc` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
+| 2026-11-25 | `154b8603` |  | seedance_2_5 | References: the start image is the first frame and wins over everything. Image reference 1 is her character sh |
+| 2026-11-25 | `525898f3` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
+| 2026-11-25 | `1c0a9cf6` |  | seedance_2_5 | References: the start image is the first frame and wins over everything. Image reference 1 is her character sh |
+| 2026-11-25 | `ce970d9a` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
+| 2026-11-25 | `d41b6e98` |  | intone | She sits on the cream sofa in her Bali living room and talks warmly straight into the camera, like a lifestyle |
+| 2026-11-25 | `98fded6b` |  | seedance_2_5 | Reference map: the start image is the first frame and wins over everything; the reference audio is EXACTLY wha |
+| 2026-11-25 | `4ef28304` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps exactly its  |
+| 2026-11-25 | `b0d39444` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
+| 2026-11-25 | `a72f2324` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
+| 2026-11-25 | `c855773d` |  | seedance_2_5 | Real handheld phone video at night, close on the kid's bed. The adult hand finishes setting the RootOut bottle |
+| 2026-11-25 | `33bb83b0` |  | seedance_2_5 | Casual real phone video, phone propped on the dresser at night, still camera with tiny natural wobble. The wom |
+| 2026-11-25 | `1b2a5f8d` |  | seedance_2_5 | Casual real phone video, phone propped on a kid's nightstand at night, still camera with tiny natural wobble.  |
+| 2026-11-25 | `b62b060b` |  | seedance_2_5 | Extreme macro close-up, soft bedroom lamp light: an adult's hand gently glides a thin white single-use emery f |
+| 2026-11-25 | `e62624d6` |  | seedance_2_5 | Handheld phone video, warm evening bathroom light. A mom's hand opens a mirrored bathroom cabinet and takes ou |
+| 2026-11-25 | `d87a55aa` |  | seedance_2_5 | Close tabletop shot on a light wooden kitchen counter in soft morning window light. The small amber RootOut bo |
+| 2026-11-25 | `3d200597` |  | seedance_2_5 | Vertical handheld phone video, same woman, same room and same props as the start image. She talks straight int |
+| 2026-11-25 | `0f424a24` |  | seedance_2_5 | Vertical handheld phone video, same woman, same room and same props as the start image. She talks straight int |
+| 2026-11-25 | `3c838e69` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps exactly its  |
+| 2026-11-25 | `ca19dbe8` |  | seedance_2_5 | References: the start image is the first frame and wins over everything. Image reference 1 is her character sh |
+| 2026-11-25 | `cfb31166` |  | seedance_2_5 | References: the start image is the first frame and wins over everything. Image reference 1 is her character sh |
+| 2026-11-25 | `c4cde6d2` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps exactly its  |
+| 2026-11-25 | `cee97598` |  | seedance_2_5 | Reference map: the start image is the first frame and wins over everything; the reference video is for real ta |
+| 2026-11-25 | `82fcad54` |  | seedance_2_5 | The hand opens and lets go: the metal foot file, the pumice stone and the pink grater fall straight down into  |
+| 2026-11-25 | `f79a8b4e` |  | seedance_2_5 | Real iPhone video, handheld. Immediately, in the first half second, the frustrated woman slams the white cream |
+| 2026-11-25 | `59792279` |  | seedance_2_5 | Real handheld phone video at night, close on a bed. The small boy's hand dabs the brush onto the ball of his o |
+| 2026-11-25 | `7b0abf25` |  | seedance_2_5 | Real phone video at bedtime, handheld, close on the duvet. The child's hand slowly paints the little brush acr |
+| 2026-11-25 | `67b04547` |  | seedance_2_5 | Real handheld phone video continuing from the start image, same garden, same dry cracked soil, same golden eve |
+| 2026-11-25 | `c081e951` |  | seedance_2_5 | Real handheld phone video continuing from the start image, same garden, cracked dry soil, golden evening light |
+| 2026-11-25 | `8c9180b5` |  | voice_change_merge |  |
+| 2026-11-25 | `435c6955` |  | voice_change_merge |  |
+| 2026-11-25 | `35d58d77` |  | seedance_2_5 | Handheld iPhone front-camera selfie video, real and unedited. The woman sitting on her kitchen floor in a whit |
+| 2026-11-25 | `2156da5d` |  | seedance_2_5 | Handheld iPhone front-camera selfie video, real and unedited. The woman sitting on her kitchen floor in a whit |
+| 2026-11-25 | `2898c761` |  | seedance_2_5 | Real iPhone front-camera selfie video, slight natural handheld movement. The curly-haired woman looks into the |
+| 2026-11-25 | `4e10e21a` |  | seedance_2_5 | Real iPhone video, close-up, slight handheld. The pedicurist's thumb slowly glides along the smooth soft heel  |
+| 2026-11-25 | `f3806651` |  | seedance_2_5 | Real iPhone selfie video, slight natural handheld movement. The woman at the kitchen table lifts the plain whi |
+| 2026-11-25 | `4d780d47` |  | seedance_2_5 | Real iPhone selfie video on a stand, slight natural movement. The white-haired woman with glasses taps the fol |
+| 2026-11-25 | `2fa3d786` |  | seedance_2_5 | Real iPhone video, slight handheld. The woman in the pedicure chair glances down at her feet, then looks back  |
+| 2026-11-25 | `cea1d70f` |  | seedance_2_5 | ONE single continuous real selfie shot, never cut. The video starts exactly on the first reference image and k |
+| 2026-11-25 | `15c45b39` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the first reference image and keeps ex |
+| 2026-11-25 | `7b4f7b8b` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the first reference image and keeps ex |
+| 2026-11-24 | `b69c9911` | Set 18 · H4 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `5a1270cf` | Set 18 · K1c_h3 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `ead6caf3` | Set 18 · H2 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `e338c7e8` | Set 18 · H3 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `e39895ab` |  | voice_change_merge |  |
+| 2026-11-24 | `3e00e6e2` |  | voice_change_merge |  |
+| 2026-11-24 | `0651342b` |  | voice_change_merge |  |
+| 2026-11-24 | `f59dbc1d` |  | voice_change_merge |  |
+| 2026-11-24 | `460b7e4b` |  | voice_change_merge |  |
+| 2026-11-24 | `44891fd2` | Set 18 · K2a_v2_voiceref | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `90086911` | Set 18 · K1b_v2_voiceref | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `191b4920` | Set 18 · K3 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `99636ecd` | Set 18 · Y2 | seedance_2_5 | Real handheld vertical phone selfie video in a sunny backyard, a lawn sprinkler running behind him, a dad film |
+| 2026-11-24 | `9872ec14` | Set 18 · K2b1 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `ee1a1e8b` | Set 18 · K2b2 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `4d99f645` | Set 18 · K2a | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `b98e21c3` | Set 18 · K2b3 | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `b2142ae7` | Set 18 · Y1 | seedance_2_5 | Real handheld vertical phone selfie video in a backyard, a dad crouched on the lawn filming himself with the f |
+| 2026-11-24 | `c5f5c5c6` | Set 18 · K1d | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `f6ad24a9` | Set 18 · K1c | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `b171942e` |  | seedance_2_5 | Casual real phone video from a phone on the dashboard of a parked car at dusk, small natural wobble. The woman |
+| 2026-11-24 | `d928e112` |  | seedance_2_5 | Casual real phone video, iPhone propped on a kid's nightstand at night, the camera is still with tiny natural  |
+| 2026-11-24 | `41de5bc7` |  | seedance_2_5 | Casual real phone video, iPhone propped on a kid's nightstand at night, still camera with tiny natural wobble. |
+| 2026-11-24 | `ea43d2fd` |  | seedance_2_5 | Casual real phone video, iPhone propped on a kid's nightstand at night, still camera with tiny natural wobble. |
+| 2026-11-24 | `865c63b2` |  | seedance_2_5 | Casual real selfie video, phone held at arm's length with natural hand shake. The young mom sitting on the kid |
+| 2026-11-24 | `ab90914a` | Set 18 · K1b_voiceref_test | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `ab16f2ea` |  | seedance_2_5 | Casual real selfie video, phone held at arm's length with natural hand shake. The young mom sitting on the kid |
+| 2026-11-24 | `741c98ca` |  | seedance_2_5 | Casual real selfie video in a home hallway, phone held at arm's length with natural hand shake. The mom in her |
+| 2026-11-24 | `fb80df10` |  | seedance_2_5 | Casual real selfie video filmed in a parked car, phone held at arm's length with natural hand shake. The mom i |
+| 2026-11-24 | `2a5dff3e` |  | seedance_2_5 | Casual real phone video, iPhone propped on a kid's nightstand at night, the camera is still with tiny natural  |
+| 2026-11-24 | `f36030f0` | Set 18 · K1a | seedance_2_5 | Real handheld vertical phone selfie video, a dad filming himself in his kitchen at night with the front camera |
+| 2026-11-24 | `4f1c58e9` | Set 18 · K3 | seedance_2_5 | Real handheld vertical phone selfie video. The man from the start image talks into the front camera held at ar |
+| 2026-11-24 | `d8fee57c` | Set 18 · Y2 | seedance_2_5 | Real handheld vertical phone selfie video in a sunny backyard, a lawn sprinkler running behind him. The man fr |
+| 2026-11-24 | `0f4770eb` | Set 18 · K1 | seedance_2_5 | Real handheld vertical phone selfie video. The man from the start image talks into the front camera held at ar |
+| 2026-11-24 | `ababc38a` | Set 18 · K2b | seedance_2_5 | Real handheld vertical phone selfie video. The man from the start image talks into the front camera held at ar |
+| 2026-11-24 | `6204f558` | Set 18 · K2a | seedance_2_5 | Real handheld vertical phone selfie video. The man from the start image talks into the front camera held at ar |
+| 2026-11-24 | `60686e35` |  | seedance_2_5 | @Image1 is the first frame: a 52-year-old American woman filming a casual phone selfie on her patio. She talks |
+| 2026-11-24 | `6e2898a0` |  | seedance_2_5 | @Image1 is the first frame: a 52-year-old American woman filming a casual phone selfie on her patio. She talks |
+| 2026-11-24 | `05d81e83` |  | seedance_2_5 | @Image1 is the first frame: a 58-year-old American woman filming a casual phone selfie in her living room. She |
+| 2026-11-24 | `15eb2211` |  | seedance_2_5 | @Image1 is the first frame: a 66-year-old American woman filming a casual phone selfie in her kitchen. She tal |
+| 2026-11-24 | `a7d3ddef` |  | seedance_2_5 | @Image1 is the first frame: a 52-year-old American woman filming a casual phone selfie on her patio. She talks |
+| 2026-11-24 | `c8032178` |  | seedance_2_5 | Real handheld phone macro video, natural light, no cuts. The thumb and index finger of the top hand pinch the  |
+| 2026-11-24 | `f5b032d9` |  | seedance_2_5 | Unedited handheld iPhone video, morning light, looking down at the foot of the bed. A woman's hand (around 60, |
+| 2026-11-24 | `1a00bdab` |  | kling3_0 | Static camera, clean medical 3D cross-section of a thick callus made of stacked dead-skin layers over pink liv |
+| 2026-11-24 | `936e6f38` |  | gemini_omni_flash_1_2 | Handheld phone POV at chest height, exactly as in the start image: the man's arms in red-and-black flannel cuf |
+| 2026-11-24 | `c68f0314` |  | gemini_omni_flash_1_2 | Continue the same friendly selfie video in the clothing shop's back room: the same man in the grey beanie and  |
+| 2026-11-24 | `6a546543` |  | gemini_omni_flash_1_2 | Same handheld selfie shot, same man, same voice, same shop. He keeps talking into the lens right away at a nor |
+| 2026-11-24 | `4e9eb0c0` |  | seedance_2_5 | @Image1 is the first frame. Static phone shot, no camera move. The woman relaxes on her sofa with her feet up  |
+| 2026-11-24 | `7963e0a0` |  | gemini_omni_flash_1_2 | Same handheld selfie shot, same man, same voice, same shop. He keeps talking into the lens right away, a littl |
+| 2026-11-24 | `21094637` |  | gemini_omni_flash_1_2 | Continue the same selfie shot: the same man, same voice, same grey beanie and red-and-black flannel, same back |
+| 2026-11-24 | `ac1ab4f4` |  | gemini_omni_flash_1_2 | Top-down handheld phone shot, exactly as in the start image: the man's hand in a red-and-black flannel cuff sl |
+| 2026-11-24 | `20d62ee3` |  | gemini_omni_flash_1_2 | Handheld phone at chest height, exactly as in the start image: the man's two hands in red-and-black flannel cu |
+| 2026-11-24 | `8ec5e3df` |  | gemini_omni_flash_1_2 | Static low phone shot, exactly as in the start image: the man's hands in red-and-black flannel cuffs (no face) |
+| 2026-11-24 | `7e535bfa` |  | gemini_omni_flash_1_2 | Top-down handheld phone shot, exactly as in the start image: the man's two hands in red-and-black flannel cuff |
+| 2026-11-24 | `ca69b931` |  | gemini_omni_flash_1_2 | Same handheld selfie shot, same man, same voice, same shop. He keeps talking into the lens right away, matter- |
+| 2026-11-24 | `285cc384` |  | gemini_omni_flash_1_2 | Handheld phone walking slowly along the sidewalk past the line of young people waiting outside the vintage sho |
+| 2026-11-24 | `464e2f3b` |  | gemini_omni_flash_1_2 | Phone filming out of the open passenger window of a car rolling slowly down the street, exactly as in the star |
+| 2026-11-24 | `198d5fa9` |  | gemini_omni_flash_1_2 | Extreme macro, exactly as in the start image: the thumb and index finger slowly pinch and roll the fuzzy pills |
+| 2026-11-24 | `9995f3a4` |  | gemini_omni_flash_1_2 | iPhone front-camera selfie video. Exactly ONE man, the man in the start image (face, beard, grey knit beanie,  |
+| 2026-11-24 | `3b9173b9` |  | gemini_omni_flash_1_2 | Handheld phone video walking slowly into the busy vintage shop. Customers browse racks, slide hangers, one you |
+| 2026-11-24 | `e42df992` |  | gemini_omni_flash_1_2 | Handheld front-camera selfie video, slight natural arm shake. The man talks straight into the lens from the fi |
+| 2026-11-24 | `1f02cae4` |  | gemini_omni_flash_1_2 | Handheld phone video, slow push in toward the pile of full black trash bags of used clothes by the open back d |
+| 2026-11-24 | `2040d5fd` |  | gemini_omni_flash_1_2 | Handheld phone video. The two hands lift the faded washed-out grey hoodie a little higher and give it a small  |
+| 2026-11-24 | `ab55e334` |  | gemini_omni_flash_1_2 | Handheld phone video. The woman in the doorway keeps her arms crossed, glances down the street, slowly shakes  |
+| 2026-11-24 | `3e891729` |  | gemini_omni_flash_1_2 | Close-up handheld phone video. The thumb slowly rubs across the pilled grey hoodie sleeve, the small fuzz ball |
+| 2026-11-24 | `d97277d2` |  | gemini_omni_flash_1_2 | Handheld phone video looking down at the sorting table. The man's two hands dig through the heap of used hoodi |
+| 2026-11-24 | `afadbe2f` |  | gemini_omni_flash_1_2 | Handheld phone video from across the street, slow slight pan toward the line of people waiting outside the vin |
+| 2026-11-24 | `8f9a0d60` |  | seedance_2_5 | Edit the reference video. Her bare foot sole must look dry, rough and cracked in EVERY frame where any part of |
+| 2026-11-24 | `1fa33956` |  | hf_mult_replace_object | Replace the white lotion pump bottle in the hands with the navy blue Melt-Off pump bottle from the reference i |
+| 2026-11-24 | `c4886a6e` |  | seedance_2_5 | @Image1 is the first frame. Static phone on a dresser, no camera move. The woman sits on the edge of her bed i |
+| 2026-11-24 | `9e587856` |  | seedance_2_5 | Edit the reference video. Change only the skin on the sole of her bare foot: from the moment she lifts the foo |
+| 2026-11-24 | `4ddac127` |  | seedance_2_5 | @Image1 is the first frame: a 62-year-old woman in a plum cardigan sitting on the edge of her bathtub, filming |
+| 2026-11-24 | `1a9ba9ab` | Set 5 · t13_voice_change_test_unused | voice_change_merge |  |
+| 2026-11-24 | `8370adb9` | Set 5 · i05_calX | seedance_2_5 | Real handheld phone video at night: the woman's hand finishes drawing a big wobbly orange crayon X on the firs |
+| 2026-11-24 | `07611de3` | Set 5 · i04_tap | seedance_2_5 | Real phone video on a kid's nightstand at night, fixed camera with tiny wobble. The woman's index finger taps  |
+| 2026-11-24 | `03eaed44` | Set 5 · i03_flipflops | seedance_2_5 | Real handheld phone video, back seat of a parked car at dusk, the camera drifts slowly closer to the small wet |
+| 2026-11-24 | `109b33ee` | Set 5 · i02_kidbrush | seedance_2_5 | Real handheld phone video at night, close on a bed. The small boy's hand dabs the brush from the cap onto the  |
+| 2026-11-24 | `f23f3659` | Set 5 · t13 | seedance_2_5 | Real phone video, iPhone propped on a kid's nightstand at night, fixed camera, tiny wobble. The woman says one |
+| 2026-11-24 | `ee441821` | Set 5 · m2 | seedance_2_5 | Real selfie testimonial video filmed in a parked car, phone held at arm's length with natural hand shake. The  |
+| 2026-11-24 | `d25538e7` | Set 5 · m1 | seedance_2_5 | Real selfie testimonial video, phone held at arm's length with natural hand shake. The young mom sitting on th |
+| 2026-11-24 | `6f5c6b2a` | Set 5 · m3 | seedance_2_5 | Real selfie testimonial video in a home hallway by the front door, phone held at arm's length with natural han |
+| 2026-11-24 | `cd0210c7` | Set 5 · t19 | seedance_2_5 | Real phone video from a phone on the dashboard of a parked car at dusk, small handheld-like wobble. The woman  |
+| 2026-11-24 | `f2e88e3f` | Set 5 · t01 | seedance_2_5 | Real phone video, iPhone propped on a kid's nightstand at night, fixed camera with tiny natural wobble. The wo |
+| 2026-11-24 | `b9a5ff24` | Set 5 · t27 | seedance_2_5 | Real phone video, iPhone propped on a kid's nightstand at night, fixed camera with tiny natural wobble. The wo |
+| 2026-11-24 | `75820456` | Set 5 · t06 | seedance_2_5 | Real phone video, iPhone propped on a kid's nightstand at night, fixed camera with tiny natural wobble. The wo |
+| 2026-11-24 | `98279cf8` |  | kling3_0 | 3D medical cross-section animation. The steel foot file scrapes back and forth inside the groove through the y |
+| 2026-11-24 | `3d2ff402` |  | gemini_omni_flash_1_2 | The woman in the image, sitting in her parked car with her seatbelt on and both hands on the steering wheel, t |
+| 2026-11-24 | `e8587e65` |  | gemini_omni_flash_1_2 | The same woman, sitting in her parked car with her seatbelt on, talks straight to the phone on the dashboard,  |
+| 2026-11-24 | `fe79487f` |  | gemini_omni_flash_1_2 | Handheld phone video at a family Sunday lunch table: the dish of roasted potatoes moves across the table as it |
+| 2026-11-24 | `18d747dd` |  | gemini_omni_flash_1_2 | Handheld phone video across the dinner table: the man laughs openly and easily, shoulders shaking a little, he |
+| 2026-11-24 | `8c15c8b6` |  | voice_change_merge |  |
+| 2026-11-24 | `c094af99` |  | seedance_2_5 | Handheld iPhone front-camera selfie video, real and unedited. The woman sitting on her kitchen floor in a whit |
+| 2026-11-24 | `43bf22ba` | Set 18 · K3 | seedance_2_5 | Handheld vertical phone selfie video, the man from the start image talks into the front camera held at arm's l |
+| 2026-11-24 | `a4efe197` | Set 18 · Y2 | seedance_2_5 | Handheld vertical phone selfie video on a sunny morning in a backyard, the man from the start image holding a  |
+| 2026-11-24 | `784dcb7a` | Set 18 · G1 | seedance_2_5 | Vertical phone video looking down at a kitchen counter at night: a man's hand pulls the wooden drawer fully op |
+| 2026-11-24 | `6052fb52` | Set 18 · K2a | seedance_2_5 | Handheld vertical phone selfie video, the man from the start image talks into the front camera held at arm's l |
+| 2026-11-24 | `3863b342` | Set 18 · K2b | seedance_2_5 | Handheld vertical phone selfie video, the man from the start image talks into the front camera held at arm's l |
+| 2026-11-24 | `0dbc4c2e` | Set 18 · Y1 | seedance_2_5 | Handheld vertical phone selfie video at dusk in a backyard, the crouched man from the start image talks into t |
+| 2026-11-24 | `34af4946` | Set 18 · K1 | seedance_2_5 | Handheld vertical phone selfie video, the man from the start image talks straight into the front camera held a |
+| 2026-11-24 | `e2178f7d` |  | kling3_0 | Unedited real iPhone video, early morning, natural soft daylight, no cinematic look, camera still with tiny ha |
+| 2026-11-24 | `8db9632e` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the first reference image and keeps ex |
+| 2026-11-24 | `562409cc` |  | seedance_2_5 | ONE single continuous real selfie shot, never cut. The video starts exactly on the first reference image and k |
+| 2026-11-23 | `ff44c9d3` | Set 20 · t_h3_flashlight | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `363c472d` | Set 20 · t_h2_pumice | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `97b21737` | Set 20 · g06_mom_phone_v2 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `55e3af23` | Set 20 · t24_b16_bottle | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the first reference image (sam |
+| 2026-11-23 | `9d5dc14b` | Set 20 · g07_drawer | seedance_2_5 | Vertical amateur phone video, close-up of an open bathroom drawer, warm evening light. A woman's hand in a cre |
+| 2026-11-23 | `66b36e48` | Set 20 · g04_squeeze | seedance_2_5 | Vertical amateur phone video, close-up on a beige couch in the evening, lamp light. A woman's hands in a cream |
+| 2026-11-23 | `bedc70f4` | Set 20 · g12_feetup | seedance_2_5 | Vertical amateur phone video, beige living-room couch in the evening, soft blue TV glow and a warm lamp. Two f |
+| 2026-11-23 | `ee26b25b` | Set 20 · g14_run | seedance_2_5 | Vertical amateur phone video of a suburban backyard lawn at golden hour, warm low sun, long shadows. Wide shot |
+| 2026-11-23 | `5b408ca8` | Set 20 · g02_walk | seedance_2_5 | Vertical amateur phone video, low angle at floor level in a home kitchen in the evening, warm light. A pair of |
+| 2026-11-23 | `d16f4a38` | Set 20 · g03_counter | seedance_2_5 | Vertical amateur phone video, bathroom counter close-up in the evening, warm vanity light. On the white counte |
+| 2026-11-23 | `2800c067` | Set 20 · g07_sister | seedance_2_5 | Vertical amateur phone video, looking down at a fluffy white bath mat on a tiled bathroom floor in the evening |
+| 2026-11-23 | `bc35e8e9` | Set 20 · t10_b06 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `d68c72e1` | Set 20 · t09_b05 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `825136c1` | Set 20 · t13_b08 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `d2e8e879` | Set 20 · t15_b09 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `06c9a8bf` | Set 20 · t04_b04 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `ffb04e98` | Set 20 · t23_b15 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `2f499ea0` | Set 20 · t17_b10_bottle | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the first reference image (sam |
+| 2026-11-23 | `1c8706ed` | Set 20 · t01_b02 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `24c9f7fe` |  | seedance_2_5 | Vertical phone video propped on a counter in a bright pediatric exam room. The tired, wry mom on the chair spe |
+| 2026-11-23 | `0dc1cd74` |  | seedance_2_5 | Same woman doctor on the rolling stool in the bright pediatric exam room, phone video propped on a counter. Sh |
+| 2026-11-23 | `c77f2bbf` | Set 20 · t01_h1_talk | seedance_2_5 | Vertical amateur phone video, phone propped on a coffee table, slight handheld micro-wobble. The woman from th |
+| 2026-11-23 | `5e57f5fc` | Set 17 · x10_three_bottles | seedance_2_5 | real RootOut bottles, a hand sets the third down |
+| 2026-11-23 | `ee317059` | Set 17 · x3_soil_cutaway | seedance_2_5 | cutaway: stub on top, root alive underground, flower regrows |
+| 2026-11-23 | `692c7031` | Set 17 · x6_root_3d | seedance_2_5 | green drops reach the root, it breaks, skin heals |
+| 2026-11-23 | `1130dc95` |  | seedance_2_5 | Same woman doctor on the rolling stool in the bright pediatric exam room, phone video propped on a counter. Sh |
+| 2026-11-23 | `04796e0c` |  | seedance_2_5 | Real handheld phone video, bright pediatric exam room counter by a window, soft daylight. A doctor's hand in a |
+| 2026-11-23 | `b18b5a5c` | Set 19 · b61_shelf_sweep | seedance_2_5 | Vertical phone video, family bathroom, daylight, handheld. A woman's hand in an oatmeal cardigan sleeve sweeps |
+| 2026-11-23 | `28fafd4b` | Set 19 · b60_wart_back | seedance_2_5 | Vertical phone video, family bathroom floor, evening light. A grade-schooler in navy pajama pants sits on the  |
+| 2026-11-23 | `24e5d40d` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the first reference image and keeps ex |
+| 2026-11-23 | `0d061720` |  | kling3_0 | Unedited real iPhone video at night, macro close-up, natural dim lamp light, camera nearly still, no cinematic |
+| 2026-11-23 | `58ac11c7` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
+| 2026-11-23 | `f039ca3a` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
+| 2026-11-23 | `343c2033` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
+| 2026-11-23 | `c0ff0483` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
+| 2026-11-23 | `b959c1ff` |  | kling3_0 | Vertical phone video in a pediatric clinic, soft daylight: close-up of a small foot in a rolled-down sock rest |
+| 2026-11-23 | `4501589d` | Set 13 · c01_v2 | seedance_2_5 | Handheld vertical iPhone selfie video, warm golden morning kitchen light, amateur UGC. The woman speaks the EN |
+| 2026-11-23 | `b3ecafc1` | Set 13 · c01_v2a_dropped_words | seedance_2_5 | Handheld vertical iPhone selfie video, warm golden morning kitchen light, amateur UGC. The woman talks to the  |
+| 2026-11-23 | `5100f730` | Set 20 · s19_socks_bed | seedance_2_5 | Vertical phone video, a girl's bedroom at bedtime with pink fairy lights. A kindergartner in pink pajamas and  |
+| 2026-11-23 | `e3aaede2` | Set 19 · b50_scrub | seedance_2_5 | Vertical phone video, family bathroom, daylight, handheld. Close-up of a mom's hands in yellow rubber gloves s |
+| 2026-11-23 | `d0432c1f` | Set 19 · b53_splash_v2 | seedance_2_5 | Vertical phone video, family bathroom, bath time. Two school-age kids, about five and eight years old (not bab |
+| 2026-11-23 | `757ba2f9` | Set 20 · s19_file_kid | seedance_2_5 | Vertical phone video, bedtime, warm lamp. A five-year-old school-age kid (not a baby: long slim kid foot) in d |
+| 2026-11-23 | `686ace6f` | Set 19 · b55_dot_v2_unused | seedance_2_5 | Vertical phone video, bedtime, warm lamp. A five-year-old school-age kid (not a baby: long slim kid foot) in d |
+| 2026-11-23 | `2295b2a5` |  | kling3_0 | Unedited real iPhone video, evening living room, natural warm lamp light and TV glow, camera still with tiny h |
+| 2026-11-23 | `01c1eb39` |  | reframe |  |
+| 2026-11-23 | `71b60d06` |  | kling3_0 | Vertical phone video for a skincare ad, soft morning light: a parent's hand gently holds a child's small hand, |
+| 2026-11-23 | `15a5d802` |  | kling3_0 | Realistic home video, warm lamp light, camera nearly still. Her foot slowly strokes once along the top of his  |
+| 2026-11-23 | `aa4f967e` |  | kling3_0 | Vertical handheld phone video on a bright white bathroom counter, morning daylight: a woman's hand places a ro |
+| 2026-11-23 | `c9a3a938` |  | seedance_2_5 | Vertical overhead product video on a light marble surface in soft daylight: the small amber RootOut bottle wit |
+| 2026-11-23 | `48b8370e` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen.  |
+| 2026-11-23 | `a24a8355` |  | seedance_2_5 | Vertical premium product end-card video: the small amber RootOut bottle with the tall white cap from the refer |
+| 2026-11-23 | `e3cfa940` |  | seedance_2_5 | Vertical phone video at bedtime, warm bedside lamp: on a nightstand the amber RootOut bottle with the tall whi |
+| 2026-11-23 | `2ca62c5c` |  | seedance_2_5 | Vertical handheld phone video in a kid's bedroom, warm lamp light: on a small wooden nightstand the amber Root |
+| 2026-11-23 | `fdf032c9` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen.  |
+| 2026-11-23 | `dc26ac1e` |  | seedance_2_5 | Vertical time-lapse video of a kid's bedroom from night to dawn: deep blue night light through the window slow |
+| 2026-11-23 | `0982a17d` |  | seedance_2_5 | Vertical phone video in a bright pediatric clinic office: on a clean white desk a stethoscope lies beside the  |
+| 2026-11-23 | `6276dbb5` |  | hf_mult_replace_object | Replace the long white spatula with the exact tool in the reference image: a SHORT palm-sized scraper with a R |
+| 2026-11-23 | `d8d2be71` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. First a single small glossy drop sinks alone an |
+| 2026-11-23 | `3ca33dac` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. Glowing green oil wraps around the long white r |
+| 2026-11-23 | `c8b506d4` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. A thin, clear golden oil seeps down through an  |
+| 2026-11-23 | `80da1c88` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. The wart and the long white root fade away comp |
+| 2026-11-23 | `e1c706fd` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. Two small glossy green droplets join a stream o |
+| 2026-11-23 | `e211dc9d` |  | kling3_0 | Vertical close-up phone video: a paper wall calendar on a fridge door with fourteen days already crossed off i |
+| 2026-11-23 | `f93467c8` |  | kling3_0 | Vertical phone video in a family home hallway with wooden floor, daylight: a young kid in shorts runs barefoot |
+| 2026-11-23 | `f1cf23e1` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. A glossy yellow lemon-oil drop lands on the yel |
+| 2026-11-23 | `c6009f6b` |  | kling3_0 | Vertical close-up phone video: a woman's thumb on her phone screen swipes a calendar appointment to the left a |
+| 2026-11-23 | `01f6210d` |  | kling3_0 | Vertical phone video, bright white bathroom counter, morning light: a tiny handmade cardboard tombstone, plain |
+| 2026-11-23 | `41c510bb` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. A puff of icy white frost hits the wart and whi |
+| 2026-11-23 | `8f469553` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. The wart on top shrinks until the surface looks |
+| 2026-11-23 | `c28de416` |  | kling3_0 | Vertical handheld phone video in a bathroom: a woman's arm sweeps a roll of grey duct tape, a pack of round be |
+| 2026-11-23 | `47877405` |  | kling3_0 | Vertical phone video, educational garden demo: a clear glass-sided box of dark soil seen from the side on a ga |
+| 2026-11-23 | `0bd6fdf0` |  | kling3_0 | Vertical close-up phone video for a skincare ad, soft daylight: side view of the smooth, healthy sole of a sma |
+| 2026-11-23 | `cc05bcb3` |  | kling3_0 | Vertical handheld phone video in a bright bathroom: a woman's hand drops a small plain unbranded white wart-ac |
+| 2026-11-23 | `e20edf28` |  | kling3_0 | Vertical macro video, soft daylight: a few thin golden drops of tea tree oil fall from a glass dropper beside  |
+| 2026-11-23 | `b6cdaa58` |  | kling3_0 | Vertical macro video, soft natural light on a light wooden board: a sprig of pokeweed with dark purple berries |
+| 2026-11-23 | `5ac712ad` |  | kling3_0 | Vertical handheld phone video for a skincare ad, soft daylight on a couch. Close side view of a small foot wit |
+| 2026-11-23 | `ad286b2b` |  | kling3_0 | Vertical macro video on a white kitchen counter in bright daylight: a fresh lemon is sliced in half, then sque |
+| 2026-11-23 | `b07fe1d8` |  | kling3_0 | Vertical handheld phone video for a skincare ad. A child's grey sock is peeled off a small foot over a bathroo |
+| 2026-11-23 | `9b0d39d5` |  | kling3_0 | Vertical phone video in a pediatric exam room, cool light. On an exam table covered in crinkled white paper, a |
+| 2026-11-23 | `c18a77ab` |  | kling3_0 | Vertical handheld phone video for a skincare ad, daylight. Close side view of a small foot resting on a white  |
+| 2026-11-23 | `43718ffa` |  | kling3_0 | Vertical handheld phone video for a skincare ad, daylight in a bathroom. Close side view of the sole of a smal |
+| 2026-11-23 | `ad5703ae` |  | kling3_0 | Vertical ground-level phone video in a backyard lawn, late-afternoon light. A woman's hand pinches a yellow da |
+| 2026-11-23 | `469d8ff5` |  | kling3_0 | Vertical macro video: thick white cold vapour from liquid nitrogen rolls slowly across a dark steel tray in a  |
+| 2026-11-23 | `72b5db09` |  | kling3_0 | Vertical handheld phone video from the front seat looking back: in the back seat of a family car parked in a c |
+| 2026-11-23 | `d53ddae3` |  | kling3_0 | Vertical macro phone video, daylight on a white bathroom counter: a sheet of small round beige foam corn pads; |
+| 2026-11-23 | `990e01d1` |  | kling3_0 | Premium 3D medical animation continuing this exact skin block. A short strip of grey duct tape floats down and |
+| 2026-11-23 | `81c385c3` |  | kling3_0 | Vertical handheld phone video for a skincare ad, warm living-room lamp light. Close side view of a small foot  |
+| 2026-11-23 | `187a29a5` |  | seedance_2_5 | Vertical phone selfie video. The same woman as the reference image, same face, hair and oatmeal sweater, sits  |
+| 2026-11-23 | `7af5ab87` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
+| 2026-11-23 | `9b8a10bb` |  | seedance_2_5 | Vertical phone selfie video at night. The same woman as the first reference image, same face, hair and oatmeal |
+| 2026-11-23 | `c7f282d8` |  | seedance_2_5 | Vertical phone selfie video. The same woman as the reference image, same face, hair and oatmeal sweater, sits  |
+| 2026-11-23 | `e326b57a` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
+| 2026-11-23 | `09450eb0` |  | seedance_2_5 | Vertical phone front-camera selfie video continuing from the first frame: the same woman in the same kitchen,  |
+| 2026-11-23 | `9ddc2ea8` |  | seedance_2_5 | Real phone footage, same close-up, locked camera. Her fingers with white nails grip the top edge of the navy k |
+| 2026-11-23 | `755b8a96` |  | hf_mult_replace_object | Replace the white plastic spatula in the gloved hand with the stainless steel spoon-shaped callus scraper with |
+| 2026-11-23 | `1399ac55` |  | kling3_0 | Realistic home video, warm lamp light, camera nearly still. Her foot gently rubs along the top of his foot onc |
+| 2026-11-23 | `528f8253` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
+| 2026-11-23 | `73a94ecc` |  | kling3_0 | Vertical handheld phone video, close-up in a home kitchen, warm daylight: a woman's hands pull and tear a stri |
+| 2026-11-23 | `d6783aad` |  | seedance_2_5 | Vertical phone front-camera selfie video. The same woman as the reference image (same face, hair and oatmeal s |
+| 2026-11-23 | `7a84c998` |  | seedance_2_5 | Vertical product video. The small amber RootOut bottle with the tall white cap from the reference images stand |
+| 2026-11-23 | `5edbff6d` |  | seedance_2_5 | Vertical phone front-camera selfie video. The same woman as the reference image (same face, hair and oatmeal s |
+| 2026-11-23 | `b5365ce0` |  | seedance_2_5 | Vertical handheld phone video on a bright white family bathroom counter, morning daylight. Four things stand i |
+| 2026-11-23 | `7df26a04` |  | seedance_2_5 | Vertical handheld phone video, close on a bright white bathroom counter, morning daylight. A roll of plain gre |
+| 2026-11-23 | `68aff48c` |  | seedance_2_5 | Vertical phone front-camera selfie video. The same woman as the reference image (same face, light brown hair i |
+| 2026-11-23 | `6ac60226` |  | seedance_2_5 | Vertical phone front-camera selfie video. The same woman as the first reference image (same face, hair and oat |
+| 2026-11-23 | `f7a44a43` |  | kling3_0 | Unedited real iPhone video, bright soft morning daylight, no cinematic look. The camera, held low near the flo |
+| 2026-11-23 | `488703bc` |  | kling3_0 | Realistic home video, warm lamp light, slight handheld drift. The man's foot on the right slowly slides over t |
+| 2026-11-23 | `c1a8838d` |  | seedance_2_5 | The same single real shot, leading straight into the existing video with no cut: the same woman, the same kitc |
+| 2026-11-23 | `00c5230d` |  | seedance_2_5 | The same single real shot, leading straight into the existing video with no cut: the same woman, the same kitc |
+| 2026-11-23 | `72822182` |  | seedance_2_5 | Locked-off tripod shot, real phone footage feel. The woman in the grey robe sits relaxed on the bathtub edge,  |
+| 2026-11-23 | `448dd29c` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
+| 2026-11-23 | `4af18f46` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
+| 2026-11-23 | `98546455` |  | seedance_2_5 | The same single real shot, leading straight into the existing video with no cut: the same woman, the same kitc |
+| 2026-11-23 | `661b33af` |  | seedance_2_5 | The same single real shot, leading straight into the existing video with no cut: the same woman, the same kitc |
+| 2026-11-23 | `6c5cb27d` |  | seedance_2_5 | Realistic phone video, same scene as the start image: a bare heel resting on a white towel, one hand holds a r |
+| 2026-11-23 | `89140d21` |  | hf_mult_replace_object | Replace the white plastic spatula with the steel scraper from the reference image: a round brushed-steel paddl |
+| 2026-11-23 | `e83997c9` |  | hf_mult_replace_object | Replace the white squeeze bottle in the gloved hand with the reference bottle: the exact WilloMD Melt-Off navy |
+| 2026-11-23 | `4c1def64` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `2ce9b563` |  | kling3_0 | Unedited real iPhone video, evening living room, natural warm lamp light and TV glow, camera still with tiny h |
+| 2026-11-23 | `a538251e` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, static camera. Inside the yellow call |
+| 2026-11-23 | `05727648` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `4d95a62a` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, slow push-in. Tiny milky-white drople |
+| 2026-11-23 | `ad32c25e` |  | hf_mult_replace_object | Replace the white lotion pump bottle with the reference bottle: the exact WilloMD Melt-Off navy pump bottle wi |
+| 2026-11-23 | `fb3d68c7` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same woman in the same kitchen. She talks to the camera  |
+| 2026-11-23 | `67dc6ee0` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still, no cinematic look. Her hand presses |
+| 2026-11-23 | `ad40b24e` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same woman in the same room with the warm lamp light. Sh |
+| 2026-11-23 | `1868c6b5` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same man on the same couch in the dim living room with t |
+| 2026-11-23 | `10911abd` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
+| 2026-11-23 | `878746bc` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
+| 2026-11-23 | `19a689d0` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, static camera. The amber glue lines b |
+| 2026-11-23 | `747beb10` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, slow push-in. Tiny glowing milky-whit |
+| 2026-11-23 | `2207b312` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same woman in the same kitchen. She talks to the camera  |
+| 2026-11-23 | `ca47d23a` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same woman in the same room with the warm lamp light. Sh |
+| 2026-11-23 | `eb5f4bbb` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same man on the same couch in the dim living room with t |
+| 2026-11-23 | `6a6b7a26` |  | kling3_0 | Clean medical 3D animation, same cutaway, static camera. The skin reacts to the scraping: thick new hard yello |
+| 2026-11-23 | `ae021b53` |  | hf_mult_replace_object | Replace the navy lotion pump bottle held in the hand with the reference bottle: the exact WilloMD Melt-Off nav |
+| 2026-11-23 | `85af42eb` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
+| 2026-11-23 | `24ff8030` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, slow steady camera. A metal foot file |
+| 2026-11-23 | `90f58c30` |  | seedance_2_5 | Keep this exact photo: the same older woman in the armchair, the same cozy living room, her feet up on the ott |
+| 2026-11-23 | `ee855ac0` |  | seedance_2_5 | Keep this exact photo: the same two hands, the same bare heel on the white towel, the same round cotton pad he |
+| 2026-11-23 | `807a3b6b` |  | seedance_2_5 | One continuous real phone video, handheld close-up, same child's foot, same light. The mother's hand holds the |
+| 2026-11-23 | `87667780` |  | seedance_2_5 | One continuous real phone video, handheld close-up, same child's foot, same light. The mother's hand holds the |
+| 2026-11-23 | `4900ec0c` |  | seedance_2_5 | One continuous real phone video, handheld, a very slow gentle push-in toward the three small bottles on the ba |
+| 2026-11-23 | `2e659cd5` |  | kling3_0 | Clean medical 3D animation, slow smooth camera push-in and slight orbit. One after another, new thin dry dead- |
+| 2026-11-23 | `3462e9f0` |  | hf_mult_replace_object | Replace the dark bottle with the black cap held in the hand with the small RootOut bottle from the reference i |
+| 2026-11-23 | `bf27f921` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `6c52a639` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `007f9d13` |  | voice_change_merge |  |
+| 2026-11-23 | `2c024363` |  | kling3_0 | Unedited real iPhone video, early morning, natural soft daylight, no cinematic look, camera still with tiny ha |
+| 2026-11-23 | `325d72e5` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, no cinematic look, camera still with tiny hand sh |
+| 2026-11-23 | `f37ebf8e` |  | kling3_0 | Unedited real iPhone video in a pharmacy, phone held with tiny natural shake, natural fluorescent light, no ci |
+| 2026-11-23 | `098057df` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `056d3378` |  | kling3_0 | Unedited real iPhone video at night, phone held still with tiny natural hand shake, natural dim lamp light, no |
+| 2026-11-23 | `b93f05c0` |  | kling3_0 | Unedited real iPhone video at night, phone held still by hand with tiny natural shake, natural lamp light, no  |
+| 2026-11-23 | `d1418a24` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `d99cc7e6` |  | kling3_0 | Macro close-up, warm lamp light, static camera. Right from the start the whole foot slides steadily to the lef |
+| 2026-11-23 | `e47af408` |  | kling3_0 | Macro close-up, warm lamp light, camera almost still. The rough dry heel slowly drags sideways across the smoo |
+| 2026-11-23 | `c895080e` |  | seedance_2_5 | One continuous real phone video, handheld, slight natural sway, at a kids' soccer game, same people and field  |
+| 2026-11-23 | `8a0f08eb` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `bf64d6f6` |  | reframe |  |
+| 2026-11-23 | `8a870d50` |  | kling3_0 | Realistic home video, warm lamp light, slight handheld drift. She glances back at her sleeping husband for a m |
+| 2026-11-23 | `b3943b09` |  | hf_mult_replace_object | Replace the white plastic spatula held by the gloved hand with the reference tool: a stainless steel spoon-sha |
+| 2026-11-23 | `fdda06cd` |  | seedance_2_5 | One continuous real phone video, handheld, slight natural sway, at a kids' soccer game, same people and field  |
+| 2026-11-23 | `1ac82f66` |  | kling3_0 | Realistic home video, warm lamp light, slight handheld drift. The man's foot on the right touches the woman's  |
+| 2026-11-23 | `1827d91e` |  | seedance_2_5 | Two relaxed adult woman's hands come in from the top of the frame holding an empty navy cotton heel sleeve. Th |
+| 2026-11-23 | `5604a739` |  | hf_mult_replace_object | Replace the white plastic spatula held by the gloved hand with the reference tool: a stainless steel spoon-sha |
+| 2026-11-23 | `dec47a18` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `002dcd0d` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `a9348e0c` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `79f0b3d8` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `5412bf12` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `abf890fe` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `aa43466d` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `f60d6ad6` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `a3bb28d0` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps its look, co |
+| 2026-11-23 | `e80894f7` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps its look, co |
+| 2026-11-23 | `66e92a85` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps its look, co |
+| 2026-11-22 | `98c207d7` |  | seedance_2_5 | Vertical phone video, late-afternoon backyard light, ground-level macro close-up on dry, cracked, pale-brown s |
+| 2026-11-22 | `e4b5d4f8` | Set 20 · s19_skin_lemon | seedance_2_5 | Vertical video. Clean glossy 3D science explainer animation on a soft ice-blue background: a soft pink layered |
+| 2026-11-22 | `cefc594e` | Set 19 · b26_bandaid | seedance_2_5 | Vertical phone video, real family home, morning light. A child sits on the kitchen floor in pajama pants by th |
+| 2026-11-22 | `18e77103` | Set 19 · b38_brush_unused | seedance_2_5 | Vertical phone video, family bathroom, daylight, handheld close-up. A mom holds the exact amber RootOut bottle |
+| 2026-11-22 | `af2e1c95` | Set 19 · b41_splash | seedance_2_5 | Vertical phone video, real family bathroom, natural light, handheld. Bath time: small feet in a bathtub kick a |
+| 2026-11-22 | `d24782f6` | Set 19 · b43_clear_sole | seedance_2_5 | Vertical phone close-up video. The bottom of a boy's foot in navy pajama pants resting on a folded bath towel, |
+| 2026-11-22 | `d2ec83d6` | Set 20 · s19_three_bottles | seedance_2_5 | Vertical phone video, real family bathroom, daylight, handheld. Three of the exact amber RootOut bottles from  |
+| 2026-11-22 | `a7c915b3` | Set 19 · b39_dot | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `c93049ba` |  | seedance_2_5 | Vertical phone video, real family bathroom, natural light, handheld. Close-up: a mom unscrews the black cap of |
+| 2026-11-22 | `fd8c6277` |  | seedance_2_5 | Handheld phone video, slow push-in on the small foot resting on the folded towel on the tub edge, side view. T |
+| 2026-11-22 | `9aaeca41` | Set 19 · b37_file | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `e2efa595` | Set 19 · b35_pillow | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `03a614af` | Set 19 · b36_tub_line | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `6cdb0c90` | Set 20 · s19_skin_teatree | seedance_2_5 | Vertical video. Clean glossy 3D medical animation, side cutaway block of human skin with a thick pale hard top |
+| 2026-11-22 | `05a72af1` |  | seedance_2_5 | Handheld phone video, slow tired pan across this crowded bathroom shelf of half-used plain white remedy boxes, |
+| 2026-11-22 | `a86d027c` |  | seedance_2_5 | Handheld phone video, soft evening lamp light. The small foot rests relaxed on the grey couch cushion, side vi |
+| 2026-11-22 | `19ab1ef7` |  | seedance_2_5 | Handheld phone video at bedtime. The small foot with a little clear round dot on the ball of the foot rests on |
+| 2026-11-22 | `1aa14826` |  | seedance_2_5 | Vertical handheld phone video on a clean white bathroom counter in soft morning daylight, a mirror and a folde |
+| 2026-11-22 | `75707330` | Set 19 · b31_dand_back | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `4e5d8db8` | Set 19 · b32_footprints | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `d65ce695` |  | seedance_2_5 | Handheld phone video at bedtime, warm lamp light. The small foot rests on the pillow, side view. A parent's fi |
+| 2026-11-22 | `5b435a30` | Set 19 · b30_dand_snap | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `991d4d67` | Set 19 · b29_sneakers_nurse | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `4778db5b` | Set 19 · b27_kit_shelf | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `0a5aa94f` |  | seedance_2_5 | Handheld phone video at bedtime, warm lamp light. The small foot rests on the pillow, side view. A parent's ha |
+| 2026-11-22 | `702fa6df` |  | seedance_2_5 | Handheld phone video at bedtime, warm lamp light. The small foot rests on the pillow, side view. A parent's ha |
+| 2026-11-22 | `ca35a172` | Set 19 · b25_socks | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `1923a22a` |  | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `be71d703` | Set 19 · b24_flipflops_shower | seedance_2_5 | Vertical phone video, real lived-in family home, handheld, natural light, real textures. No text, no captions, |
+| 2026-11-22 | `c717030d` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame says every word of the reference audio  |
+| 2026-11-22 | `de2ddb3a` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame says every word of the reference audio  |
+| 2026-11-22 | `4d831173` | Set 19 · b22_lily_heel | seedance_2_5 | Vertical phone close-up video in a family bathroom. A mom's hands roll down a fuzzy pink sock on a little girl |
+| 2026-11-22 | `bd17f724` | Set 19 · b23_towels | seedance_2_5 | Vertical phone video, slow pan across a family bathroom wall: four colorful bath towels hanging on four separa |
+| 2026-11-22 | `c09ee8e4` | Set 19 · t11_offer | seedance_2_5 | Vertical phone UGC video, phone propped on the bathroom counter. The same woman from the first reference image |
+| 2026-11-22 | `e0826a6e` | Set 19 · t09_couch | seedance_2_5 | Vertical phone-selfie UGC video. The same woman from the first reference image sits on a family living-room co |
+| 2026-11-22 | `78839a7f` | Set 19 · t10_mom2 | seedance_2_5 | Vertical phone-selfie UGC video. The woman from the reference image (short dark bob with bangs, navy puffer ve |
+| 2026-11-22 | `07db7f0f` | Set 19 · b21_mason_sole | seedance_2_5 | Vertical phone close-up macro video. The sole of a boy's foot in navy pajama pants resting on a folded bath to |
+| 2026-11-22 | `45874fd0` | Set 19 · b20_heels_tiles | seedance_2_5 | Vertical phone video, ankle-level camera on a family bathroom floor of white hex tiles. Two pairs of small chi |
+| 2026-11-22 | `a561e82e` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `950fc74d` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `27245454` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `e5abdd1b` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `6c936d44` | Set 19 · t06_car | seedance_2_5 | Vertical phone-selfie UGC video inside a family car parked in a school pickup line, afternoon sun through the  |
+| 2026-11-22 | `81adec88` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `f4da91ab` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame leans a little closer to the lens and t |
+| 2026-11-22 | `1541abb1` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `386906b5` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `f9abbb25` | Set 19 · t07_awful | seedance_2_5 | Vertical phone UGC video, phone propped on a bathroom counter. The same woman from the reference image sits qu |
+| 2026-11-22 | `cbbd687f` | Set 19 · t08_rootout | seedance_2_5 | Vertical phone UGC video in the family bathroom. The same woman from the first reference image holds up the ex |
+| 2026-11-22 | `3c166f80` | Set 19 · t05_towels | seedance_2_5 | Vertical phone UGC video, phone propped on the bathroom counter. The same woman from the reference image sits  |
+| 2026-11-22 | `067419c5` | Set 19 · t04_three_fingers | seedance_2_5 | Vertical phone UGC video, phone propped on a bathroom counter. The same woman from the reference image stands  |
+| 2026-11-22 | `ca5f3aab` | Set 19 · t01_h1_bleach | seedance_2_5 | Vertical handheld phone-selfie UGC video, real and unpolished. The same woman from the reference image (same f |
+| 2026-11-22 | `63638025` | Set 19 · t02_h2_door | seedance_2_5 | Vertical handheld phone-selfie UGC video. The same woman from the reference image stands in her front entryway |
+| 2026-11-22 | `f3fc5d56` | Set 19 · t03_h4_winter | seedance_2_5 | Vertical phone-selfie UGC video, phone propped on a bathroom counter. The same woman from the reference image  |
+| 2026-11-22 | `f9844f12` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `09522441` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `d39ae9b5` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `6c4ceab9` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `2eb519cf` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `528e5f00` |  | seedance_2_5 | Same vertical phone video, same pediatric exam room and same woman doctor on the rolling stool, lip-syncing ex |
+| 2026-11-22 | `2b4a1b05` |  | seedance_2_5 | Handheld-steady vertical phone video propped on a counter in a bright pediatric exam room. The woman doctor on |
+| 2026-11-22 | `b27d0791` | Set 17 · b1_glove_wart | seedance_2_5 | exam table, kid's shorts + feet, blue glove taps the sole spot |
+| 2026-11-22 | `25668707` |  | seedance_2_5 | Vertical phone video propped on a counter in a bright pediatric exam room. The tired, wry mom on the chair tal |
+| 2026-11-22 | `13cd338e` | Set 17 · b2_routine | seedance_2_5 | real RootOut bottle, brush in the cap, oil on the spot |
+| 2026-11-22 | `187218fc` | Set 13 · c04 | seedance_2_5 | Handheld vertical iPhone selfie video in a bright family kitchen, amateur UGC, fully clothed woman in a knit s |
+| 2026-11-22 | `1d651123` | Set 13 · m2 | seedance_2_5 | Clean 3D medical explainer animation, close on the skin cross-section block. The purple and green droplets hav |
+| 2026-11-22 | `0ba9c4a6` | Set 13 · h3b | seedance_2_5 | Handheld vertical iPhone selfie video, kitchen daylight, amateur UGC. The woman talks to the lens, lips perfec |
+| 2026-11-22 | `56f40499` | Set 13 · m1 | seedance_2_5 | Clean 3D medical explainer animation, slow push-in on the skin cross-section block. The lemon-yellow droplet f |
+| 2026-11-22 | `d5e1421d` | Set 13 · c06 | seedance_2_5 | Vertical phone video propped on a patio table, sunny backyard, amateur UGC. The woman, still crouched on the l |
+| 2026-11-22 | `fcacb298` | Set 13 · c10 | seedance_2_5 | Vertical amateur phone video, sunny living room. The boy keeps the hand-written sign in front of his face the  |
+| 2026-11-22 | `925ef4e2` | Set 13 · h2 | seedance_2_5 | Handheld vertical iPhone selfie video, kitchen daylight, amateur UGC. The woman talks to the lens, lips perfec |
+| 2026-11-22 | `4ce86caf` | Set 13 · h3a | seedance_2_5 | Vertical amateur phone video, kitchen daylight. The girl keeps holding the hand-written sign in front of her f |
+| 2026-11-22 | `e92e8c7e` | Set 13 · c12 | seedance_2_5 | Vertical phone video propped at the kitchen table, daylight, amateur UGC. The woman talks to the lens, lips pe |
+| 2026-11-22 | `1647f046` |  | seedance_2_5 | Moody phone video in a cold blue exam room, near silhouette. The gloved hand sprays a short puff of white cold |
+| 2026-11-22 | `20e8c324` |  | seedance_2_5 | Charming stop-motion claymation over this illustrated skin cross-section. Two tiny green clay drops with cute  |
+| 2026-11-22 | `a74ce34b` |  | seedance_2_5 | Charming stop-motion claymation over this illustrated skin cross-section. A small round door is open in the pa |
+| 2026-11-22 | `b0c06de8` |  | seedance_2_5 | Handheld phone macro video. The parent's fingers slowly peel the round beige foam pad off the small foot, reve |
+| 2026-11-22 | `c46818ba` |  | seedance_2_5 | Handheld phone video, close side view of the small foot on the couch cushion. The parent's hand lays the strip |
+| 2026-11-22 | `079e7673` |  | seedance_2_5 | Charming stop-motion claymation over this illustrated skin cross-section (pale cracked hard skin on top, grey  |
+| 2026-11-22 | `810c34d1` |  | seedance_2_5 | Top-down phone video on the kitchen counter. A hand lifts the top paper towel of each stack in turn: on the le |
+| 2026-11-22 | `da61d7ce` | Set 13 · c09 | seedance_2_5 | Vertical phone video propped on a nightstand, girl's bedroom at bedtime, warm lamp. The woman talks softly, li |
+| 2026-11-22 | `5e6579e8` | Set 13 · c11 | seedance_2_5 | Handheld vertical iPhone selfie video, bright morning kitchen, amateur UGC testimonial. The curly-haired woman |
+| 2026-11-22 | `3550e7d3` | Set 13 · c02 | seedance_2_5 | Vertical phone video at a kitchen table, daylight, amateur UGC. A 7-year-old girl framed from the chin down (h |
+| 2026-11-22 | `dcda6491` | Set 13 · c08 | seedance_2_5 | Vertical phone video propped on a nightstand, cozy girl's bedroom at bedtime, warm lamp light. The woman sits  |
+| 2026-11-22 | `8094215a` | Set 13 · c05 | seedance_2_5 | Vertical phone video propped on a patio table, sunny backyard, amateur UGC. The woman crouches on the lawn and |
+| 2026-11-22 | `1a0e63e5` | Set 13 · c01 | seedance_2_5 | Handheld vertical iPhone selfie video, amateur UGC, natural kitchen daylight. The woman talks straight to the  |
+| 2026-11-22 | `ae6c3571` | Set 13 · c03 | seedance_2_5 | Handheld vertical iPhone selfie video, amateur UGC, kitchen daylight. The woman talks to the lens, lips perfec |
+| 2026-11-22 | `b24ea20d` |  | seedance_2_5 | Vertical phone front-camera video. The same woman from the first frame talks straight into the lens, lips sync |
+| 2026-11-22 | `fd51d751` |  | seedance_2_5 | Front phone-camera selfie UGC. The tired woman exhales, speaks the audio line with lips in sync, then lifts th |
+| 2026-11-21 | `9d811e6b` |  | seedance_2_5 | Photorealistic 3D medical animation of a human skin cross-section block in exactly the style of the reference  |
+| 2026-11-21 | `f7f0ab6a` |  | seedance_2_5 | Photorealistic 3D medical animation of a human skin cross-section block in the style of the reference (callus  |
+| 2026-11-21 | `d6a635db` |  | seedance_2_5 | Photorealistic 3D medical animation continuing from this frame. The glowing golden oil surrounds the dark root |
+| 2026-11-21 | `54e0a6ac` |  | seedance_2_5 | Photorealistic 3D medical animation of a human skin cross-section block in exactly the style of the reference  |
+| 2026-11-21 | `66f71352` |  | seedance_2_5 | Front phone-camera selfie UGC. The woman reaches down, picks up the small amber RootOut bottle with the tall w |
+| 2026-11-21 | `69410575` |  | seedance_2_5 | Handheld iPhone footage in a daylight bathroom, very slow natural push-in on the small foot resting on the fol |
+| 2026-11-21 | `6c9f2fc2` |  | seedance_2_5 | Handheld iPhone close-up at bedtime in warm lamp light: the adult's fingers give two light strokes of the flat |
+| 2026-11-21 | `5aafa8ad` |  | seedance_2_5 | Handheld iPhone close-up at bedtime in warm lamp light: the adult's fingers hold the tall white cap and paint  |
+| 2026-11-21 | `78296b9a` |  | seedance_2_5 | Handheld iPhone front-camera selfie on a sofa in the evening, natural small shakes. The mom speaks the audio l |
+| 2026-11-21 | `3b42d090` |  | seedance_2_5 | Handheld iPhone front-camera selfie in a child's bedroom in the evening, natural small shakes. The mom speaks  |
+| 2026-11-21 | `b6ae0b58` |  | seedance_2_5 | Handheld iPhone footage in a cold-lit clinic: the gloved hand sprays a short burst of white freezing vapour at |
+| 2026-11-21 | `073ee01c` |  | seedance_2_5 | Handheld iPhone footage in a daylight kitchen: the hand lets go of the plain silver aerosol can and the small  |
+| 2026-11-21 | `33d9199a` |  | seedance_2_5 | Handheld iPhone front-camera selfie in a kitchen, natural small shakes. The mom speaks the audio line to the l |
+| 2026-11-21 | `e61f9d58` |  | seedance_2_5 | Handheld iPhone footage on a sofa in the evening, floor-lamp light: the dad's hands brush a little oil onto th |
+| 2026-11-21 | `ecfa98c4` |  | seedance_2_5 | Handheld iPhone footage in a daylight bathroom, a very slow push-in on the small foot resting on the towel, th |
+| 2026-11-21 | `c6eca83f` |  | seedance_2_5 | Handheld iPhone footage in a dim kid's bedroom: the woman's hand clicks the bedside lamp off and the room drop |
+| 2026-11-21 | `740eb281` |  | seedance_2_5 | Handheld iPhone close-up at bedtime in warm lamp light: the fingertip presses the clear round dot sticker onto |
+| 2026-11-21 | `60b58a11` | Set 1 · c04_reframe | seedance_2_5 | Handheld iPhone front-camera selfie with natural small shakes. The same tired mom on the edge of the bed exhal |
+| 2026-11-21 | `2fafd844` | Set 1 · c14_hook_h3 | seedance_2_5 | Handheld iPhone front-camera selfie with natural small shakes. The same tired mom on the edge of the bed speak |
+| 2026-11-21 | `968f378c` | Set 1 · b08_dand_water | seedance_2_5 | Handheld iPhone footage: the green watering can pours a steady stream onto the dry cracked soil around the dan |
+| 2026-11-21 | `644d4a63` | Set 20 · s1_dand_back | seedance_2_5 | Handheld iPhone footage at ground level, a week later: the fresh yellow dandelion sways gently in a light bree |
+| 2026-11-21 | `3e99af22` | Set 20 · s1_dand_snap | seedance_2_5 | Handheld iPhone footage at ground level in late-afternoon backyard light: the woman's hand pulls the yellow da |
+| 2026-11-21 | `2eadbf23` | Set 1 · b04_clinic_a | seedance_2_5 | Handheld iPhone footage in a clinic under cold light: the adult's hands hold the child's knee and ankle firmly |
+| 2026-11-21 | `cb3812ef` | Set 1 · c12_hook_h2 | seedance_2_5 | Handheld iPhone front-camera selfie with natural small shakes. The same tired mom on the edge of the bed speak |
+| 2026-11-21 | `e73e0ad5` | Set 1 · b17_hallway | seedance_2_5 | Low-angle handheld iPhone footage down a home hallway in daylight: the boy, seen only from behind, runs barefo |
+| 2026-11-21 | `6472258d` | Set 1 · b11_nightstand | seedance_2_5 | Handheld iPhone footage in a kid's bedroom at night under a warm bedside lamp: the small amber bottle with the |
+| 2026-11-21 | `a3012671` | Set 1 · b03_bathroom | seedance_2_5 | Handheld iPhone footage in a daylight bathroom, slow natural push-in toward the child's foot resting on the fo |
+| 2026-11-21 | `ce962fe0` | Set 1 · b10_towels | seedance_2_5 | Top-down handheld iPhone footage on a kitchen counter: a hand lifts the paper-towel squares on the right one b |
+| 2026-11-21 | `b747a959` | Set 20 · s1_dand_root | seedance_2_5 | Handheld iPhone footage: the woman's hand lifts the whole dandelion toward the lens and turns it slightly so t |
+| 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
+
+## RootOut-era image (144; 28 named by a set)
+
+| date | id (8) | set · name | model | what it is (prompt start) |
+|---|---|---|---|---|
+| 2026-11-25 | `2c06da3f` |  | nano_banana_2 | Change only one thing in image 1: the woman now holds the navy pump bottle from image 2 in her right hand, rai |
+| 2026-11-25 | `284665a3` |  | text2image_soul_v2 | Still from her own YouTube video at home in Bali, centred waist-up shot: she sits upright on a cream sofa, arm |
+| 2026-11-25 | `747136d2` |  | text2image_soul_v2 | Still from her own YouTube sit-down video filmed at home in Bali. She sits centred and upright on a cream line |
+| 2026-11-25 | `3937bc78` |  | text2image_soul_v2 | Still from her own YouTube sit-down video filmed at home in Bali. She sits centred and upright on a cream line |
+| 2026-11-25 | `3988a21e` |  | text2image_soul_v2 | A straight-on medium shot features a young Caucasian woman with long, dark brown hair, sitting comfortably on  |
+| 2026-11-25 | `4548fe87` |  | text2image_soul_v2 | Still from her own YouTube video at home in Bali, centred waist-up shot: she sits upright on a cream sofa, arm |
+| 2026-11-25 | `610916d8` |  | text2image_soul_v2 | A straight-on medium shot depicts a young Caucasian woman sitting at the center of a neutral-toned, upholstere |
+| 2026-11-25 | `23a2d51d` |  | text2image_soul_v2 | A straight-on, medium close-up shot features a young Caucasian woman seated in a sunlit indoor setting, framed |
+| 2026-11-25 | `b50561bc` |  | nano_banana_2 | Change the person into a 55-year-old American woman of European descent: chin-length silver-blonde bob with so |
+| 2026-11-25 | `030323a4` |  | text2image_soul_v2 | Beautiful, flattering still from her own YouTube sit-down video at home in Bali. She sits on a cream linen sof |
+| 2026-11-25 | `600d4a92` |  | text2image_soul_v2 | Beautiful, flattering still from her own YouTube sit-down video at home in Bali. She sits on a cream linen sof |
+| 2026-11-25 | `145ee290` |  | text2image_soul_v2 | Beautiful, flattering still from her own YouTube sit-down video at home in Bali, the same look as a confident  |
+| 2026-11-25 | `cc931954` |  | text2image_soul_v2 | Beautiful, flattering still from her own YouTube sit-down video at home in Bali. Medium close-up from mid-ches |
+| 2026-11-25 | `e8a78fee` |  | nano_banana_2 | Fix only one thing in this photo: remove the white text 'SUPPLEMENTS I TAKE AS A DERMATOLOGIST IN MY 60S' comp |
+| 2026-11-25 | `66a889d6` |  | nano_banana_2 | Change the person into a completely different woman: a 56-year-old white American dermatologist with a differe |
+| 2026-11-25 | `0a734e79` |  | nano_banana_2 | Character sheet of the woman in the image, same person, same clothes, photographed in the same kitchen with th |
+| 2026-11-25 | `ba72b28f` |  | nano_banana_2 | Fix only these things in this photo: 1) the dark letters on the pink wall above the shelves: remove them so th |
+| 2026-11-25 | `417c618c` |  | nano_banana_2 | Fix only two things in this photo: 1) remove the white text 'SUPPLEMENTS I TAKE AS A DERMATOLOGIST IN MY 60S'  |
+| 2026-11-25 | `bec717a2` |  | nano_banana_2 | Change only these things in this photo: 1) The woman becomes a different 49-year-old American woman, a nurse j |
+| 2026-11-25 | `2d49af9e` |  | nano_banana_2 | Change the woman into a 52-year-old Korean woman: dark brown-black hair with a few grey strands at the temples |
+| 2026-11-25 | `800c80c8` |  | nano_banana_2 | Change the person into a completely different woman: a 56-year-old white American dermatologist with a differe |
+| 2026-11-25 | `8daa4afc` |  | nano_banana_2 | Edit this real photo only: replace the grey pumice stone in her hands with a plain white round heel-cream jar  |
+| 2026-11-25 | `bc7711f3` |  | nano_banana_2 | Realistic iPhone photo, vertical: the exact same woman from the reference (same face, same wavy shoulder-lengt |
+| 2026-11-25 | `94d00f81` |  | nano_banana_2 | Edit this real photo only: put a neatly folded pair of soft grey wool socks on the wooden table in front of he |
+| 2026-11-25 | `f7296bf5` |  | nano_banana_2 | Realistic iPhone photo, vertical, close-up in a cozy nail salon: a woman's bare foot resting on a pedicure foo |
+| 2026-11-25 | `387f62cd` |  | nano_banana_2 | Edit this real selfie only: remove the metal scraper and the hand holding it, so only her face and shoulders s |
+| 2026-11-25 | `fd35d1ff` |  | nano_banana_2 | Fix only the tool in her hand: make it exactly the blunt scraper from the second image: a flat brushed stainle |
+| 2026-11-25 | `6b6d7b6b` |  | nano_banana_2 | Replace the person with a completely different 55-year-old white American woman: shoulder-length straight hone |
+| 2026-11-25 | `1c3aba90` |  | nano_banana_2 | Replace the person with a completely different 63-year-old white American woman: chin-length grey bob with sil |
+| 2026-11-25 | `5c3c33ea` |  | nano_banana_2 | Replace the person with a completely different 48-year-old white American woman: dark brown wavy shoulder-leng |
+| 2026-11-25 | `fec313e9` |  | nano_banana_2 | Edit this real photo only: add a thick glossy dollop of white heel cream sitting on top of the dry cracked hee |
+| 2026-11-24 | `bef1e51f` |  | text2image_soul_v2 | Vertical arm's-length selfie video frame in a narrow home hallway by the front door, late afternoon window lig |
+| 2026-11-24 | `9bff55b2` |  | text2image_soul_v2 | Vertical arm's-length selfie video frame filmed inside a parked car. A mom in her mid-40s, short dark hair wit |
+| 2026-11-24 | `7f013e20` |  | text2image_soul_v2 | Vertical arm's-length selfie video frame. A young mom, late 20s, round friendly face, natural skin, no makeup, |
+| 2026-11-24 | `e6cd2741` |  | text2image_soul_v2 | Vertical phone selfie video frame, front camera propped on a kid's nightstand at night, slightly low angle. An |
+| 2026-11-24 | `9412ceb2` |  | text2image_soul_v2 | Vertical phone selfie video frame, front camera propped on a kid's nightstand at night, slightly low angle. An |
+| 2026-11-24 | `5f46cb9b` |  | text2image_soul_v2 | Vertical phone selfie video frame, front camera propped on a kid's nightstand at night, slightly low angle. An |
+| 2026-11-24 | `1e4c170c` |  | text2image_soul_v2 | Vertical phone selfie video frame, front camera propped on a kid's nightstand at night, slightly low angle. An |
+| 2026-11-24 | `0b4b211b` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
+| 2026-11-24 | `79721067` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
+| 2026-11-24 | `0faf8414` |  | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
+| 2026-11-24 | `3314f013` | Set 18 · s3_K1 | text2image_soul_v2 | Candid front-camera phone selfie video still, arm's length, slightly below eye level. A regular American dad i |
+| 2026-11-24 | `0d01d442` |  | nano_banana_2 | Edit this real phone selfie video frame. Keep the exact framing, camera distance, living-room background, ligh |
+| 2026-11-24 | `bf2b562a` |  | nano_banana_2 | Edit this real phone selfie video frame. Keep the exact framing, camera distance, kitchen background, window l |
+| 2026-11-24 | `512d0d2c` |  | nano_banana_2 | Edit this real phone selfie video frame. Keep the exact framing, camera distance, outdoor patio setting with p |
+| 2026-11-24 | `47229cd8` |  | nano_banana_2 | The same woman as the first reference (same face, short wavy white-grey hair, age 62, plum cardigan, white t-s |
+| 2026-11-24 | `9528bdf7` |  | nano_banana_2 | The same woman as the first reference (same face, short wavy white-grey hair, 62, plum cardigan over white t-s |
+| 2026-11-24 | `522a0d6a` |  | nano_banana_2 | Same woman as the reference (same face, same short wavy white-grey hair, same age 62), now early the next morn |
+| 2026-11-24 | `7b3821b6` |  | nano_banana_2 | Edit this real phone selfie video frame. Keep the exact same framing, camera distance, phone angle, slight wid |
+| 2026-11-24 | `c65d2515` |  | nano_banana_2 | Edit image 1 only. Change ONLY the skin on the sole of the bare foot she is holding up to the camera: make it  |
+| 2026-11-23 | `06b81ce0` | Set 20 · f01c | text2image_soul_v2 | A close-up medium shot shows a young Caucasian woman in her late 20s to early 30s with model-like symmetrical  |
+| 2026-11-23 | `b28f5465` | Set 20 · f01d | text2image_soul_v2 | A medium close-up candid shot captures a young adult Caucasian woman with honey-blonde hair in a softly parted |
+| 2026-11-23 | `44519d60` | Set 20 · f01b | text2image_soul_v2 | Vertical phone video still, amateur UGC look, phone propped low on a coffee table. A calm American mom in her  |
+| 2026-11-23 | `c0ea9e4d` | Set 20 · mom_ref_f01a | text2image_soul_v2 | Vertical phone video still, amateur UGC look, phone propped low on a coffee table. A calm American mom in her  |
+| 2026-11-23 | `1edb48bf` |  | nano_banana_2 | Fix only one thing in this photo: she now holds up, in her right hand near her shoulder, the exact callus scra |
+| 2026-11-23 | `2657663a` |  | nano_banana_2 | Fix only one thing in this photo: she now holds a small, worn, grey oval pumice stone loosely in her right han |
+| 2026-11-23 | `5f23fd81` |  | nano_banana_2 | Replace the person with a completely different 56-year-old Italian-American woman who does not resemble the or |
+| 2026-11-23 | `d01f00c7` |  | nano_banana_2 | Change the person into a 71-year-old white American woman: short soft white hair, thin gold-rimmed glasses, de |
+| 2026-11-23 | `5fedc5e2` |  | nano_banana_2 | Change the person into a 55-year-old American woman with olive skin: shoulder-length dark brown curly hair wit |
+| 2026-11-23 | `19492ee6` |  | nano_banana_2 | Change the person into a 63-year-old white American woman: chin-length grey bob with natural silver and darker |
+| 2026-11-23 | `28af628b` |  | nano_banana_2 | Edit this real phone selfie only as described; keep the room, the framed pictures, the warm lamp light, the ca |
+| 2026-11-23 | `4b8d65ee` |  | nano_banana_2 | Edit this real phone selfie only as described; keep the kitchen, the light, the camera angle, the grain and so |
+| 2026-11-23 | `a28d3c03` |  | nano_banana_2 | Edit this real phone photo only as described; keep the beige tiled bathroom, the door, the light, the camera a |
+| 2026-11-23 | `26d0f170` |  | nano_banana_2 | Edit this real phone selfie only as described; keep the dim living room, the purple TV light, the couch, the l |
+| 2026-11-23 | `565144ae` |  | outpaint |  |
+| 2026-11-23 | `c67e7d35` |  | outpaint |  |
+| 2026-11-23 | `c758ac09` |  | nano_banana_2 | Keep this photo exactly the same, but make the three bottles less than half their current size, true to their  |
+| 2026-11-23 | `2bfc0a71` |  | nano_banana_2 | Edit the first image (a real phone photo of a white bathroom shelf on a white tiled wall) only as described; k |
+| 2026-11-23 | `e98ca8e9` |  | nano_banana_2 | Edit the first image (a real phone photo of a child's foot with a small wart) only as described; keep the foot |
+| 2026-11-23 | `26b3d127` |  | nano_banana_2 | Edit this real phone photo only as described, keep everything else exactly the same (same field, same light, s |
+| 2026-11-23 | `03473b8f` |  | nano_banana_2 | A vertical phone photo taken by a shopper standing in the foot-care aisle of an ordinary American drugstore at |
+| 2026-11-23 | `968cbedc` |  | nano_banana_2 | Character sheet of the woman in the image, photographed in the same kitchen with the same warm late-night ceil |
+| 2026-11-23 | `5cc096e8` |  | nano_banana_2 | Change the woman into a 36-year-old American mom of two: shoulder-length dark brown hair pulled into a loose m |
+| 2026-11-22 | `4f3387d2` |  | text2image_soul_v2 | Candid iPhone selfie video still, vertical. A different American mom, early 40s, short dark bob, navy puffer v |
+| 2026-11-22 | `86c034fa` |  | text2image_soul_v2 | Phone photo looking down into a family hall closet floor: four pairs of rubber flip-flops in different sizes ( |
+| 2026-11-22 | `a7e0b70c` | Set 19 · mom_ref_soul | text2image_soul_v2 | Candid iPhone selfie video still, vertical. A real American mom, mid-30s, mother of three, warm and a little w |
+| 2026-11-22 | `335d1b56` |  | text2image_soul_v2 | Full-frame vertical phone video still: a 7-year-old child's bare lower legs and feet in navy shorts sitting on |
+| 2026-11-22 | `988f17dc` |  | text2image_soul_v2 | Full-frame vertical video still taken by a phone camera (the phone itself is not visible) propped on a counter |
+| 2026-11-22 | `6415a781` |  | text2image_soul_v2 | Vertical phone photo of a real family bathroom shelf above the sink, crowded and a little messy: many small ha |
+| 2026-11-22 | `20cc197a` |  | text2image_soul_v2 | Vertical phone photo of a real family bathroom shelf above the sink, crowded and a little messy: many small ha |
+| 2026-11-22 | `a7c06540` |  | text2image_soul_v2 | Vertical phone photo for a skincare product ad. Side view of a small foot resting relaxed on a grey couch cush |
+| 2026-11-22 | `344fe672` |  | text2image_soul_v2 | Vertical phone photo for a skincare product ad. Side view of a small foot resting on a folded white bath towel |
+| 2026-11-22 | `7b7ad009` |  | text2image_soul_v2 | Vertical phone macro photo for a skincare product ad. Side view of a small foot on a white towel, pajama cuff  |
+| 2026-11-22 | `5a3d7968` |  | text2image_soul_v2 | Vertical phone photo for a skincare product ad, bedtime. Side view of a small foot resting on a white pillow,  |
+| 2026-11-22 | `675d2c45` |  | text2image_soul_v2 | Vertical phone photo for a skincare product ad. Side view of a small foot on a grey couch cushion, cuff of din |
+| 2026-11-22 | `4a2f44c8` |  | text2image_soul_v2 | Vertical close-up phone video still: a 7-year-old child's bare feet and lower legs in navy shorts resting on a |
+| 2026-11-22 | `c496fa46` |  | text2image_soul_v2 | Vertical top-down phone photo on a light wooden kitchen counter: two small stacks of three white paper towel s |
+| 2026-11-22 | `1066a2fd` |  | text2image_soul_v2 | Vertical phone video still in the same bright pediatric exam room, pale mint walls, window daylight. A tired b |
+| 2026-11-22 | `cc754a2d` |  | text2image_soul_v2 | Vertical phone video still, shot from a phone propped on a counter in a bright pediatric exam room, daylight f |
+| 2026-11-22 | `464a1b69` |  | text2image_soul_v2 | Vertical phone photo, real family bathroom. A small white wall shelf above the sink crowded with half-used pla |
+| 2026-11-22 | `5cf7eef9` |  | text2image_soul_v2 | Vertical phone photo, top-down on a light kitchen counter: two small stacks of three white paper towels side b |
+| 2026-11-22 | `1e712dad` |  | text2image_soul_v2 | Vertical phone video still in a pediatric exam room, cold blue light, almost silhouette. A child's small bare  |
+| 2026-11-22 | `fd0131b0` |  | text2image_soul_v2 | A close-up, slightly angled selfie features a young Caucasian woman in her late 20s with tanned skin, striking |
+| 2026-11-22 | `8fd62b6c` |  | text2image_soul_v2 | Vertical phone front-camera selfie video still. An ordinary American mom, late 30s, plain oatmeal crew-neck kn |
+| 2026-11-22 | `008ea77c` |  | text2image_soul_v2 | Vertical phone front-camera selfie video still. An ordinary American mom, late 30s, plain oatmeal crew-neck kn |
+| 2026-11-22 | `c2bd9587` |  | text2image_soul_v2 | Vertical phone front-camera selfie video still. An ordinary American mom, late 30s, plain oatmeal crew-neck kn |
+| 2026-11-22 | `16d6fa2a` |  | text2image_soul_v2 | Vertical phone front-camera selfie video still. An ordinary American mom, late 30s, plain oatmeal crew-neck kn |
+| 2026-11-22 | `4820b14c` |  | text2image_soul_v2 | A straight-on medium close-up selfie captures an adult Caucasian woman in her late 20s seated next to a young  |
+| 2026-11-22 | `1d4cdd9f` |  | text2image_soul_v2 | A medium, eye-level selfie shows a young adult woman and a young adult girl, both of ambiguous ethnicity with  |
+| 2026-11-22 | `5f8e34db` |  | text2image_soul_v2 | Vertical phone selfie video still, amateur UGC, natural daylight from a kitchen window. A real-looking America |
+| 2026-11-22 | `8b244ef3` | Set 13 · f01a_soul_master | text2image_soul_v2 | Vertical phone selfie video still, amateur UGC, natural daylight from a kitchen window. A real-looking America |
+| 2026-11-21 | `20485724` |  | text2image_soul_v2 | A straight-on, detailed macro shot of a vertical cross-section of human skin layers sculpted as a highly reali |
+| 2026-11-21 | `ba6c8890` |  | text2image_soul_v2 | A straight-on, eye-level close-up depicts a highly realistic, stylized cross-section of human skin rendered as |
+| 2026-11-21 | `84c77e83` |  | text2image_soul_v2 | A sharp, straight-on close-up photograph captures a vertical cross-section of a stylized slice of human skin,  |
+| 2026-11-21 | `f74904d2` |  | text2image_soul_v2 | photorealistic 3D medical animation render, side cross-section block of human skin like a slice of layered cak |
+| 2026-11-21 | `039d3e94` |  | text2image_soul_v2 | This is a close-up, slightly low-angle selfie of a young white woman in her late 20s to early 30s, with clear, |
+| 2026-11-21 | `f59bbaba` |  | text2image_soul_v2 | photorealistic 3D medical animation render, close vertical cross-section of the skin of a foot sole, pink and  |
+| 2026-11-21 | `a11e879b` |  | text2image_soul_v2 | photorealistic 3D medical animation render, close vertical cross-section of the skin of a foot sole at night:  |
+| 2026-11-21 | `43377447` |  | text2image_soul_v2 | photorealistic 3D medical animation render, close vertical cross-section of the skin of a foot sole: a thick p |
+| 2026-11-21 | `18036778` |  | text2image_soul_v2 | photorealistic 3D medical animation render, close vertical cross-section of the skin of a foot sole: thick pal |
+| 2026-11-21 | `d986ee77` |  | text2image_soul_v2 | Unedited iPhone photo in a bathroom in daylight, close side view: a small foot resting on a folded white towel |
+| 2026-11-21 | `15e1f3ac` |  | text2image_soul_v2 | Unedited iPhone photo at bedtime, warm bedside lamp light, close-up, slightly out-of-focus edges: an adult's f |
+| 2026-11-21 | `a53d6199` |  | image_background_remover |  |
+| 2026-11-21 | `89f762ed` |  | text2image_soul_v2 | Unedited iPhone photo at bedtime, warm lamp light, close-up: an adult's thumb and finger hold a thin flat whit |
+| 2026-11-21 | `4c949f17` |  | text2image_soul_v2 | Unedited iPhone photo at bedtime, warm lamp light, close-up: an adult's thumb and finger hold a thin flat whit |
+| 2026-11-21 | `9eddb590` | Set 1 · f14 | text2image_soul_v2 | Unedited iPhone photo at bedtime in warm lamp light, close-up: an adult fingertip presses a small clear round  |
+| 2026-11-21 | `47898ddd` | Set 1 · f05 | text2image_soul_v2 | Unedited iPhone photo in a daylight bathroom: close side view of a small child's foot on a folded white towel  |
+| 2026-11-21 | `2c4c6744` | Set 1 · f18 | text2image_soul_v2 | Unedited iPhone photo in a living room in the evening, floor-lamp light: close on a dad's hands painting clear |
+| 2026-11-21 | `bf088698` | Set 1 · f16 | text2image_soul_v2 | Unedited iPhone photo in an ordinary kitchen in daylight: a hand drops a plain all-silver aerosol can with no  |
+| 2026-11-21 | `22c760ef` | Set 1 · f15 | text2image_soul_v2 | Unedited iPhone photo of a dim kid's bedroom at night: close on a nightstand, a woman's hand reaching to switc |
+| 2026-11-21 | `d017846c` | Set 1 · f13 | text2image_soul_v2 | Unedited iPhone photo at bedtime in warm lamp light, close-up: an adult's fingers hold a tall glossy plain whi |
+| 2026-11-21 | `23bfa01e` | Set 1 · f12 | text2image_soul_v2 | Unedited iPhone photo at bedtime in warm lamp light: close side view of a small child's foot on a pillow, the  |
+| 2026-11-21 | `90d2fb1c` | Set 1 · f02 | text2image_soul_v2 | Unedited iPhone photo in a pediatric clinic with cold blue-white fluorescent light: close side view of a small |
+| 2026-11-21 | `9773c070` | Set 1 · f21 | text2image_soul_v2 | Unedited iPhone front-camera selfie still on a living-room sofa in the evening: an American mom in her late 30 |
+| 2026-11-21 | `d9a7fbc0` | Set 1 · f17 | text2image_soul_v2 | Unedited iPhone photo, low angle down a home hallway with wooden floor and family photos on the wall in daylig |
+| 2026-11-21 | `c94c84f3` | Set 1 · f20 | text2image_soul_v2 | Unedited iPhone front-camera selfie still, held at arm's length in an ordinary home kitchen in daylight: an Am |
+| 2026-11-21 | `658ffc61` | Set 1 · f22 | text2image_soul_v2 | Unedited iPhone front-camera selfie still in a child's bedroom in the evening: an American mom in her early 40 |
+| 2026-11-21 | `42130b2c` |  | text2image_soul_v2 | Unedited iPhone photo in an ordinary kitchen in daylight: a hand drops a plain unlabeled silver aerosol can an |
+| 2026-11-21 | `29359e86` |  | text2image_soul_v2 | Unedited iPhone photo of a kid's bedroom at night: a woman's hand reaching to click off a warm bedside lamp on |
+| 2026-11-21 | `d10dd03a` | Set 1 · f10 | text2image_soul_v2 | Unedited iPhone photo, top-down on a light wooden kitchen counter in daylight: two small stacks of three white |
+| 2026-11-21 | `44b907b5` |  | text2image_soul_v2 | Unedited iPhone photo at bedtime, warm bedside lamp light: side view of a 6-year-old boy's bare foot on a pill |
+| 2026-11-21 | `cbd9d5e6` | Set 1 · f07 | text2image_soul_v2 | Unedited iPhone photo, ground-level close-up in a suburban backyard in late-afternoon sun: a single fresh yell |
+| 2026-11-21 | `95894135` | Set 1 · f11 | text2image_soul_v2 | Unedited iPhone photo of a kid's bedroom at night lit by a warm bedside lamp: on the nightstand a glass of wat |
+| 2026-11-21 | `3e270dfb` | Set 1 · f08 | text2image_soul_v2 | Unedited iPhone photo, ground-level close-up in a backyard in late-afternoon sun: a green plastic watering can |
+| 2026-11-21 | `cdbc8544` |  | text2image_soul_v2 | Unedited iPhone photo at bedtime, warm bedside lamp light: side view of a 6-year-old boy's bare foot resting o |
+| 2026-11-21 | `b0ab92b1` | Set 1 · f06 | text2image_soul_v2 | Unedited iPhone photo, ground-level close-up in a suburban backyard in late-afternoon sun. A woman's hand pinc |
+| 2026-11-21 | `d399d13d` |  | text2image_soul_v2 | Unedited iPhone photo, handheld, in a small pediatric clinic exam room with cold fluorescent light. Close side |
+| 2026-11-21 | `a4298441` | Set 1 · f04 | text2image_soul_v2 | Unedited iPhone photo in a pediatric clinic under cold blue-white light. An adult's two hands: one pressing on |
+| 2026-11-21 | `aa0db9a8` | Set 1 · f03 | text2image_soul_v2 | Unedited iPhone photo, ordinary American bathroom in daylight. Side view of a 6-year-old boy's bare foot resti |
+| 2026-11-21 | `8efe2471` | Set 1 · f09 | text2image_soul_v2 | Unedited iPhone photo in a backyard in late-afternoon sun: a woman's hand holds up to the lens a whole dandeli |
+| 2026-11-21 | `56e3b940` |  | text2image_soul_v2 | Unedited iPhone photo, same ordinary bathroom in daylight, weeks later: a 6-year-old boy's bare foot side view |
+| 2026-11-21 | `ef29798e` |  | text2image_soul_v2 | A centered product photo shows a cylindrical amber-brown glass bottle with a smooth, rounded shoulder, capped  |
+| 2026-11-21 | `5d7880d3` |  | text2image_soul_v2 | Vertical phone photo, close side view in a pediatric clinic exam room under cold blue-white light. A small chi |
+| 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
+
+## RootOut-era audio (100; 0 named by a set)
+
+| date | id (8) | set · name | model | what it is (prompt start) |
+|---|---|---|---|---|
+| 2026-11-25 | `fa01d56c` |  | seed_audio | Five minutes on... it dried, and the file did all the work. Every time. Okay. |
+| 2026-11-25 | `574ef93e` |  | seed_audio | Five minutes on, it dried, and the file did all the work. Every time. Okay. |
+| 2026-11-25 | `614fa7e9` |  | text2speech_v2 | You don't repeat a year because of what happened to you... You repeat it because of what you left open. So clo |
+| 2026-11-25 | `ff8dc978` |  | seed_audio | Since I found this, that's over. Okay. |
+| 2026-11-25 | `16aeee3e` |  | seed_audio | Look at them now. Soft. I still can't believe it. Okay. |
+| 2026-11-25 | `daa24655` |  | seed_audio | I kept my clogs on in the break room. Okay. |
+| 2026-11-25 | `e2bbed02` |  | seed_audio | Most people scrub it or slather on cream. Scrubbing only sands the top. Cream sits on top. A soak goes all the |
+| 2026-11-25 | `fccb5f57` |  | seed_audio | Filing every Sunday, and it's back by Wednesday? That's callus, growing back thicker. Okay. |
+| 2026-11-25 | `ad1093bc` |  | seed_audio | Cracks that open the minute the heating comes on? That's also callus. Okay. |
+| 2026-11-25 | `70e2d704` |  | seed_audio | Hear your heels scratch the sheets at night? That's callus. Okay. |
+| 2026-11-25 | `dbfc5eb8` |  | seed_audio | Cream that never seems to sink in? That's callus. Okay. |
+| 2026-11-25 | `0b5c166c` |  | seed_audio | Heels going grey and rough, like mine were? That's callus too. Okay. |
+| 2026-11-25 | `c08e818a` |  | seed_audio | They said filing keeps callus down. They were wrong. Watch. Okay. |
+| 2026-11-25 | `9f556a4b` |  | seed_audio | It's the softening wrap good salons do, at home, without the salon bill. Okay. |
+| 2026-11-25 | `e92c40f0` |  | seed_audio | Twenty-five years of Sunday filing, and it always came back. Watch this. Okay. |
+| 2026-11-25 | `7537e06f` |  | seed_audio | Women who kept their socks on for years, even in bed, go barefoot now. Okay. |
+| 2026-11-25 | `40a859bb` |  | seed_audio | A tiny carrier that slips in three hundred twelve percent deeper than heel cream. Okay. |
+| 2026-11-25 | `01dcb0c3` |  | seed_audio | Throw out the file. Okay. |
+| 2026-11-25 | `3683fa89` |  | seed_audio | Buy one, get one free. Ninety days to try it, so there's zero risk. Okay. |
+| 2026-11-25 | `b13dfc94` |  | seed_audio | Melt-Off's Korean formula has three parts. Okay. |
+| 2026-11-25 | `eff32961` |  | seed_audio | Nothing got sanded, so nothing rushes back. Your heels can stay soft for up to six months. Okay. |
+| 2026-11-25 | `29ed9444` |  | seed_audio | Don't freak out at how much comes off. That's years of callus. Okay. |
+| 2026-11-25 | `568441b3` |  | seed_audio | Now just watch. Sleeve off. One slow pass. Okay. |
+| 2026-11-25 | `afd5b28e` |  | seed_audio | A cuticle-strength softener that melts the glue, and yoo-REE-uh to keep it soft. Okay. |
+| 2026-11-25 | `4e93b34c` |  | seed_audio | Those cracks aren't in your skin. They're in the callus, dead skin stuck on in layers, like food dried onto a  |
+| 2026-11-25 | `f09bd253` |  | seed_audio | If your kid has a wart, don't book the freeze yet. Here's what this does in fourteen nights at bedtime. |
+| 2026-11-25 | `f4e5d6d4` |  | seed_audio | If your kid has a wart, don't book the freeze yet. Here's what this does in fourteen nights at bedtime. |
+| 2026-11-25 | `305c68cb` |  | seed_audio | The Korean lotion causing women to throw away their foot files is softening years of callus in one sitting. Ok |
+| 2026-11-25 | `8b2e9bc3` |  | seed_audio | Wait till you see how much comes off. Okay. |
+| 2026-11-25 | `309fb1f9` |  | seed_audio | Every pass of a file just tells your heel to build it back, thicker. Okay. |
+| 2026-11-25 | `c7849742` |  | seed_audio | No more Sunday filing. No pumice, no grater, no arm workout. Okay. |
+| 2026-11-25 | `b8dfe581` |  | seed_audio | It's a lotion held on a dry heel under a sleeve for fifteen minutes. Okay. |
+| 2026-11-25 | `4f8bd3d1` |  | seed_audio | The callus melts soft. One pass of a blunt scraper, and it's off. Okay. |
+| 2026-11-25 | `9496997d` |  | seed_audio | Callus is dead skin stuck on in layers, like food dried onto a pan. Okay. |
+| 2026-11-25 | `b18d8ef3` |  | seed_audio | A file scratches it, and it grows back thicker. Don't scrub it. Soak it. Okay. |
+| 2026-11-25 | `74a37f59` |  | seed_audio | I've been a pedicurist for seventeen years, and I've watched all three fail thousands of times. Okay. |
+| 2026-11-25 | `1884599d` |  | seed_audio | And the one thing that actually works. Okay. |
+| 2026-11-25 | `6571b708` |  | seed_audio | There are three mistakes almost every woman makes with her heels. Okay. |
+| 2026-11-25 | `ba6f195f` |  | elevenlabs_music_v2_5 | Instrumental music for a high-converting direct-response video ad, 130 seconds, no vocals, NO fade-out. 0-10s: |
+| 2026-11-25 | `8d087a0e` |  | elevenlabs_music_v2_5 | Instrumental background bed for a talking-head health ad, 108 BPM steady pulse from the very first second, war |
+| 2026-11-25 | `247adf4e` |  | elevenlabs_music_v2_5 | Instrumental music bed for a fast-paced direct-response video ad (UGC style), 120 seconds, no vocals. 0-10s: l |
+| 2026-11-25 | `a449a025` |  | elevenlabs_music_v2_5 | Instrumental music bed for a fast-paced direct-response video ad (UGC style), 120 seconds, no vocals. 0-10s: l |
+| 2026-11-25 | `3104bae9` |  | elevenlabs_music_v2_5 | Instrumental background bed for a talking-to-camera testimonial ad, in the style of top-performing Facebook an |
+| 2026-11-25 | `8cf73465` |  | elevenlabs_music_v2_5 | Original instrumental bed for a spoken direct-response health video ad, in the style of top-scaling Facebook e |
+| 2026-11-25 | `54b91a8b` |  | elevenlabs_music_v2_5 | Instrumental only. Modern upbeat pop hip-hop beat for a 2-minute social video ad, 96 BPM, steady from start to |
+| 2026-11-25 | `9a8490d2` |  | elevenlabs_music_v2_5 | Original instrumental background bed for a warm, hopeful at-home skincare video ad. Steady 104 BPM groove from |
+| 2026-11-25 | `3da84338` |  | seed_audio | It's a lotion held on a dry heel under a sleeve for fifteen minutes. ... Okay. |
+| 2026-11-25 | `a263d6c5` |  | seed_audio | Melt-Off's Korean formula has three parts. ... Okay. |
+| 2026-11-25 | `cd45b78f` |  | seed_audio | Buy one, get one free. Ninety days to try it, so there's zero risk. ... Okay. |
+| 2026-11-25 | `719ceb45` |  | seed_audio | A cuticle-strength softener that melts the glue, and yoo-REE-uh to keep it soft. ... Okay. |
+| 2026-11-25 | `7218db40` |  | seed_audio | They said filing keeps callus down. They were wrong. Watch. Okay. |
+| 2026-11-25 | `412d91ad` |  | seed_audio | Twenty-five years of Sunday filing, and it always came back. Watch this. Okay. |
+| 2026-11-25 | `7d4f3032` |  | seed_audio | Throw out the file. Okay. |
+| 2026-11-25 | `2fbf08c7` |  | seed_audio | No more Sunday filing. No pumice, no grater, no arm workout. Okay. |
+| 2026-11-25 | `206517ec` |  | seed_audio | So don't ask why fifteen minutes. Ask why five ever seemed like enough. Okay. |
+| 2026-11-25 | `94342aef` |  | seed_audio | Two for the price of one, and ninety days to decide. Okay. |
+| 2026-11-25 | `5b357ea7` |  | seed_audio | Then sit back for fifteen minutes. Okay. |
+| 2026-11-25 | `eafd1653` |  | seed_audio | And because nothing got filed, there's nothing to grow back. Soft for up to six months. Okay. |
+| 2026-11-25 | `66b426f0` |  | seed_audio | Callus is dead skin in hard layers. A few minutes only softens the top. Okay. |
+| 2026-11-25 | `1d318e7a` |  | seed_audio | I thought that's just my feet now. Okay. |
+| 2026-11-25 | `6e4cc052` |  | seed_audio | Melt-Off stays wet on your heel for fifteen minutes, so it soaks all the way down. Three hundred twelve percen |
+| 2026-11-25 | `8a187e46` |  | seed_audio | Like a burnt pan: you don't scrub it, you soak it. Okay. |
+| 2026-11-25 | `2e290329` |  | seed_audio | One pass of the blunt scraper. Look at that pile. That's skin, not gel. Okay. |
+| 2026-11-25 | `d8d009f2` |  | seed_audio | Files, creams, five callus gels. Nothing happened. Okay. |
+| 2026-11-25 | `3c1f06f0` |  | seed_audio | I wore socks to bed so my husband wouldn't feel my heels. Okay. |
+| 2026-11-25 | `d1ce33c2` |  | seed_audio | Five minutes on, it dried, and the file did all the work. Every time. Okay. |
+| 2026-11-25 | `6398f499` |  | seed_audio | Here's how. Dry your heel. Put on the cotton, pour the lotion, pull the sleeve over. Okay. |
+| 2026-11-25 | `034a7a27` |  | seed_audio | It was never you. It was never on long enough. Okay. |
+| 2026-11-25 | `863f6c69` |  | seed_audio | The Korean lotion causing women to throw away their foot files is softening years of callus in one sitting. Ok |
+| 2026-11-25 | `947e7a54` |  | seed_audio | Wait till you see how much comes off. Okay. |
+| 2026-11-25 | `e72963d1` |  | seed_audio | Nothing got sanded, so nothing rushes back. Your heels can stay soft for up to six months. Okay. |
+| 2026-11-25 | `a7eba64f` |  | seed_audio | Buy one, get one free. Ninety days to try it, so there's zero risk. Okay. |
+| 2026-11-25 | `d985fe32` |  | seed_audio | It's the softening wrap good salons do, at home, without the salon bill. Okay. |
+| 2026-11-25 | `3ef2c5e8` |  | seed_audio | A tiny carrier that slips in three hundred twelve percent deeper than heel cream. Okay. |
+| 2026-11-25 | `6654cbd6` |  | seed_audio | Don't freak out at how much comes off. That's years of callus. Okay. |
+| 2026-11-25 | `331b96c2` |  | seed_audio | Women who kept their socks on for years, even in bed, go barefoot now. Okay. |
+| 2026-11-25 | `1a1a0c31` |  | seed_audio | Callus is dead skin stuck on in layers, like food dried onto a pan. Okay. |
+| 2026-11-25 | `2635ef49` |  | seed_audio | Every pass of a file just tells your heel to build it back, thicker. Okay. |
+| 2026-11-25 | `7bdaaa89` |  | seed_audio | Now just watch. Sleeve off. One slow pass. Okay. |
+| 2026-11-25 | `95da8af5` |  | seed_audio | The callus melts soft. One pass of a blunt scraper, and it's off. Okay. |
+| 2026-11-25 | `d6f45ac0` |  | seed_audio | A file scratches it, and it grows back thicker. Don't scrub it. Soak it. Okay. |
+| 2026-11-25 | `1fb22772` |  | seed_audio | Melt-Off's Korean formula has three parts. Okay. |
+| 2026-11-25 | `afcfe453` |  | seed_audio | It's a lotion held on a dry heel under a sleeve for fifteen minutes. Okay. |
+| 2026-11-25 | `c0c8fba3` |  | seed_audio | No more Sunday filing. No PEWMISS, no grater, no arm workout. Okay. |
+| 2026-11-25 | `3152ba8d` |  | seed_audio | A cuticle-strength softener that melts the glue, and urea to keep it soft. Okay. |
+| 2026-11-25 | `e5480471` |  | text2speech_v2 | You stand at the mirror and say it out loud: "I trust myself." And somewhere in the back of your mind, a quiet |
+| 2026-11-25 | `0b49abae` |  | seed_audio | That foot file in your drawer is doing more harm than YOU know. |
+| 2026-11-25 | `8f7fe82b` |  | seed_audio | That foot file in your drawer? It's doing more harm than you know. |
+| 2026-11-25 | `bda3fc84` |  | seed_audio | Your heel didn't hurt while you filed. It hurts the next morning. Here's why. |
+| 2026-11-25 | `90fc2241` |  | seed_audio | That foot file in your drawer is doing more harm than you know. |
+| 2026-11-25 | `c797dfdd` |  | elevenlabs_music_v2_5 | Instrumental background bed for a direct-response health video ad with a woman narrating. Minor key (C minor), |
+| 2026-11-25 | `02477a0a` |  | elevenlabs_music_v2_5 | Instrumental background bed for a direct-response health video ad with a woman narrating. Minor key (C minor), |
+| 2026-11-25 | `5083a9b2` |  | elevenlabs_music_v2_5 | Instrumental background music for a viral TikTok / Instagram Reels product ad: upbeat, bright and catchy moder |
+| 2026-11-25 | `de705330` |  | elevenlabs_music_v2_5 | Instrumental background music for a viral TikTok / Instagram Reels product ad: upbeat, bright and catchy moder |
+| 2026-11-25 | `9a34f291` |  | elevenlabs_music_v2_5 | Instrumental underscore for a direct-response video ad with a woman's voice-over on top. 116 BPM, steady drivi |
+| 2026-11-25 | `049a1c46` |  | seed_audio | Here's the test. |
+| 2026-11-25 | `77f78c04` |  | seed_audio | I haven't touched a file since summer. |
+| 2026-11-25 | `0cf26414` |  | seed_audio | Nothing sharp, nothing sore. It just came off. |
+| 2026-11-25 | `3c82a362` |  | seed_audio | My file left me limping on Mondays. Not anymore. |
+| 2026-11-25 | `929e3a84` |  | elevenlabs_music_v2_5 | Instrumental background music for a direct-response video ad about soft heels: warm and curious, soft felt pia |
+
+## Before 21 Nov (other WilloMd products)
+
+814 generations, listed only in `catalog.jsonl` (`search --before 2026-11-21`).

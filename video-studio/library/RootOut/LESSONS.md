@@ -3,6 +3,7 @@
 Learned from feedback. Apply before planning; `vs qa --brand` checks the ones marked checked.
 
 ## assets
+- [L12] Shared Higgsfield library: before generating any clip, image or voice, search library/RootOut/higgsfield/catalog.py (every WilloMd generation from all sessions, with prompt, references and download URL) and reuse a fitting one first (0 credits). Right after every new generation, add it: catalog.py add <job_id> --type video --name <short> --set 'Set N' --notes '<what it shows>' [--verdict use|backup|reject], then commit and push to rootout-library so every session sees it. To pick up generations a session forgot to log, page mcp__WilloMd__show_generations (type video/image/audio, size 100) into files and run catalog.py build <files>.  (MUST)
 - [L8] Mechanism animations move: 3D skin cross-sections like the Amoils #004 reference (hard top, wart, root; drops, door, root dissolving), never flat static diagrams. Reuse the shared clips first (library/RootOut/ads/set18_build/REUSE.md and the other sets' jobs.json, 0 credits) before generating.  (MUST)
 - [L9] Web screenshots only from real public pages (AAD, NHS, Cleveland Clinic, PubMed, the WilloMD site), text quoted unchanged with the line highlighted, no third-party logos; log the source. Never fake reviews, Reddit posts or comments.  (MUST)
 

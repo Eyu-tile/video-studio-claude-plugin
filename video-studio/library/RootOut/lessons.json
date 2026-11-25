@@ -168,6 +168,23 @@
     "deliver",
     "push to drive"
    ]
+  },
+  {
+   "id": "L12",
+   "rule": "Shared Higgsfield library: before generating any clip, image or voice, search library/RootOut/higgsfield/catalog.py (every WilloMd generation from all sessions, with prompt, references and download URL) and reuse a fitting one first (0 credits). Right after every new generation, add it: catalog.py add <job_id> --type video --name <short> --set 'Set N' --notes '<what it shows>' [--verdict use|backup|reject], then commit and push to rootout-library so every session sees it. To pick up generations a session forgot to log, page mcp__WilloMd__show_generations (type video/image/audio, size 100) into files and run catalog.py build <files>.",
+   "category": "assets",
+   "added": "2026-11-25 10:00",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "higgsfield",
+    "reuse",
+    "catalog",
+    "previous clips",
+    "generated"
+   ]
   }
  ]
 }
