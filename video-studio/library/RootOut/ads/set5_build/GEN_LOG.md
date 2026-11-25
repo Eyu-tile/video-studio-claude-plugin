@@ -86,3 +86,10 @@ transitions; still push-ins with a sine drift jittered.
   job 59792279…).
 - Whisper tail hallucinations dropped from word timings (clean_words). QA: 351/351 words, no freezes, 1 repeated frame at
   a cut, −15.2 LUFS.
+
+## v7 (25 Nov) — client: music that builds, energetic, direct-response feel
+- New bed: ElevenLabs Music v2.5 via Higgsfield, instrumental, 117.5 BPM (job ba6f195f…, assets/music/dr_build.mp3).
+  Builds soft → full by ~50 s, short breakdown ~70 s, full energy through the offer, no fade (cut with a 0.6 s tail).
+  First take (a449a025…) rejected: it faded out from 112 s, under the offer. Music is ours, so no credit line needed.
+- Level 0.12 with voice ducking: music ~8 dB under her voice. −14.8 LUFS, TP −1.8. Words 351/351 (Whisper "until" for
+  "till" only). build7.py --remix redoes only music/captions/mix from the last cut.

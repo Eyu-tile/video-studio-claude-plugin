@@ -7,7 +7,7 @@ trimmed to speech; talking shots cut from the same clip at the same time as thei
 - Every shot starts on the word it illustrates (anchors in the take's word timings).
 - Smoothness: 24 fps end to end (the sources are 24), straight cuts (only the NIGHT stamps blur in), stills rendered at
   2x then a single linear push-in (no jitter), slowed clips frame-blended, no jump cuts inside talking shots.
-Usage: build7.py  -> out/WilloMD_RootOut_Set5_H1_9x16_v6.mp4"""
+Usage: build7.py  -> out/WilloMD_RootOut_Set5_H1_9x16_v7.mp4"""
 import json, re, subprocess, sys, difflib
 from pathlib import Path
 
@@ -24,7 +24,8 @@ COVER = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar
 norm = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
 V4 = P / "raw/v4"
 VOC = P / "work/clone/pick"   # VO in her own voice: Seed Audio 1.0 with her Seedance voice-lock clip as the reference
-MUSIC = 0.11            # music bed level (v4 was 0.20; client: too loud)
+MUSIC = 0.12            # music bed level (v4 was 0.20; client: too loud)
+MUSIC_FILE = P / "assets/music/dr_build.mp3"   # v7: energetic build-up bed (ElevenLabs Music v2.5), cut on the beat at the end
 SCRIPT = {k: v[1] for k, v in json.load(open(P / "work/vo_lines.json")).items()}
 
 
@@ -309,24 +310,26 @@ def captions(tl, D):
 
 
 if __name__ == "__main__":
+    REMIX = "--remix" in sys.argv   # reuse the last cut (picture + voice) and only redo music, captions and the final mix
     outs, tl, t = [], [], 0.0
-    for si, sec in enumerate(SECTIONS):
+    for si, sec in enumerate([] if REMIX else SECTIONS):
         out, d, words, starts = build_section(si, sec)
         tl.append({"sec": sec[0], "take": sec[1], "start": round(t, 3), "dur": round(d, 3), "words": [list(w) for w in words], "shots": [round(x, 2) for x in starts]})
         outs.append(out); t += d; print(f"{sec[0]:4s} {t - d:7.2f} +{d:6.2f}  shots {len(starts)}")
     end = TMP / "sec_99_end.mp4"
+    if REMIX: tl = json.load(open(TMP / "timeline.json")); outs = [TMP / l.split("'")[1] for l in (TMP / "list.txt").read_text().splitlines()][:-1]
     run(["-i", str(GX / "endcard.mp4"), "-f", "lavfi", "-t", "3.2", "-i", "anullsrc=r=48000:cl=stereo", "-vf", f"fps={FPS}", "-t", "3.2", *ENC, "-c:a", "aac", "-b:a", "192k", "-shortest", str(end)])
     outs.append(end); json.dump(tl, open(TMP / "timeline.json", "w"), indent=1)
     (TMP / "list.txt").write_text("".join(f"file '{o}'\n" for o in outs))
     cat = TMP / "cut.mp4"; run(["-f", "concat", "-safe", "0", "-i", str(TMP / "list.txt"), "-c", "copy", str(cat)])
     D = dur(cat); n = captions(tl, D)
-    fc = (f"[1:a]atrim=0:{D:.2f},volume={MUSIC},afade=t=in:d=1.2,afade=t=out:st={D - 2.5:.2f}:d=2.5[m];"
+    fc = (f"[1:a]atrim=0:{D:.2f},volume={MUSIC},afade=t=in:d=0.3,afade=t=out:st={D - 0.6:.2f}:d=0.6[m];"
           f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=450[md];"
           f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"   # no SFX / room tone (client note, Set 18)
           f"[0:v]ass={TMP / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/5[v]")
-    final = P / "out/WilloMD_RootOut_Set5_H1_9x16_v6.mp4"
-    run(["-i", str(cat), "-i", str(P / "assets/music/Dreamer.mp3"), "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(FPS),
+    final = P / "out/WilloMD_RootOut_Set5_H1_9x16_v7.mp4"
+    run(["-i", str(cat), "-i", str(MUSIC_FILE), "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(FPS),
          "-c:v", "libx264", "-crf", "18", "-maxrate", "10M", "-bufsize", "20M", "-preset", "slow", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-map_metadata", "-1", "-movflags", "+faststart", str(final)])
     shots = sum(len(s[3]) for s in SECTIONS) + 1
-    print("H1 v6", round(dur(final), 2), "s,", shots, "shots,", n, "caption cards ->", final)
+    print("H1 v7", round(dur(final), 2), "s,", shots, "shots,", n, "caption cards ->", final)
