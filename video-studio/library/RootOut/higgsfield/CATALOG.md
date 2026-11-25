@@ -5,12 +5,14 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1664 generations (1221 video, 282 image, 161 audio). RootOut era (from 21 Nov 2026): 850.
+Totals: 1666 generations (1223 video, 282 image, 161 audio). RootOut era (from 21 Nov 2026): 852.
 
-## RootOut-era video (463; 249 named by a set)
+## RootOut-era video (465; 251 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `6ce646e3` | Set 14 · s14_t2_dad | seedance_2_5 | Dad on porch step, own voice: 'His heel took about two weeks. We kept going, to make sure it was gone.' son's  |
+| 2026-11-25 | `e4dd0edb` | Set 14 · s14_t1_mom | seedance_2_5 | Mom on bed edge, own voice: 'She said it didn't hurt. Kept reading her book.' girl's feet + picture book behin |
 | 2026-11-25 | `9c0b1e18` | Set 14 · s14_flake_blocked | seedance_2_5 | blocked by the safety filter (fleshy wart macro start frame); do not retry |
 | 2026-11-25 | `5327664e` | Set 14 · s14_hook | seedance_2_5 | 5 s: hand dabs store wart liquid on a kid's heel, white ring of skin, bath towel, slow push-in (H1 hook) |
 | 2026-11-25 | `ad56e80b` | Set 2 · T1_row2 | seedance_2_5 | Set 2 narrator take (voice lock): 'Freezing, pads, acid, clippers. You've tried at least one. It grew back.' s |

@@ -45,6 +45,8 @@ AUDIO = {k: GN / f"{k}.mp3" for k, _ in LINES if k.startswith("n")}
 AUDIO["t1"], AUDIO["t2"] = GN / "t1.mp4", GN / "t2.mp4"
 GAP = {"n01": 0.35, "n08": 0.3, "t1": 0.35, "n10": 0.3, "t2": 0.35}  # pause after a line (default 0.22)
 END_CARD = 3.0
+LOW_CAP = {"44_s4_P2_slidein.mp4", "28_s4_P4_flatlay.mp4", "63_s4_P9_endcard.mp4", "27_s4_P3_hero.mp4", "43_s4_P1_lineup.mp4",
+           "60_s5_h3_foot.mp4", "33_s17_b2_routine.mp4", "36_s19_b38_brush.mp4", "42_s19_three.mp4", "41_s17_x10_three.mp4"}
 
 NUM = {"8x": "eight", "4": "four", "2": "two", "14": "fourteen", "90": "ninety", "rootout": "rootout"}
 def norm(w): return re.sub(r"[^a-z0-9x]", "", w.lower().replace("’", "'"))
@@ -96,43 +98,50 @@ def line_end(key): return AT[key] + SPAN[key][1]
 S = lambda n: R / n
 SHOTS = [
  (line_start("n01"), GN / "hook.mp4", 0.0, {}),
- (line_start("n02"), S("01_s4_B6_padpress.mp4"), 0.6, {}),
- (at("n02", "and nothing is working"), S("48_s1_b04_clinic.mp4"), 0.4, {}),
+ (line_start("n02"), S("48_s1_b04_clinic.mp4"), 0.0, {}),
  (at("n02", "here's why."), S("04_s4_D3_rootstill.mp4"), 0.0, {}),
+ (at("n03", "dead skin piles up"), S("51_k24_1a00.mp4"), 0.0, {}),
  (at("n03", "Store stuff stops there."), S("05_s4_D1_tape3d.mp4"), 0.5, {}),
  (line_start("n04"), S("03_s4_D2_toponly.mp4"), 0.0, {}),
  (at("n04", "like picking a dandelion."), S("12_s1_dand_snap.mp4"), 0.6, {}),
  (at("n04", "The root stays"), S("13_s17_x3_soil.mp4"), 0.0, {}),
  (line_start("n05"), S("44_s4_P2_slidein.mp4"), 0.0, {}),
  (at("n05", "It's an oil with four plants"), S("28_s4_P4_flatlay.mp4"), 0.0, {}),
- (at("n05", "Lemon opens the hard skin"), S("21_s4_D4_lemon.mp4"), 0.4, {}),
+ (at("n05", "and each one has a job."), S("29_s4_B14_lemon.mp4"), 0.0, {}),
+ (at("n05", "Lemon opens the hard skin"), S("21_s4_D4_lemon.mp4"), 0.8, {}),
+ (at("n05", "so the oil can get in."), S("53_k23_a538.mp4"), 0.5, {}),
  (at("n05", "Tea tree is a thin oil"), S("30_s4_B15_teatree.mp4"), 0.0, {}),
- (at("n05", "that carries the others down"), S("23_s4_D6_carry.mp4"), 0.3, {}),
  (at("n05", "up to 8x deeper"), S("22_s4_D5_sink.mp4"), 0.2, {"gauge": 1}),
- (line_start("n06"), S("31_s4_B16_pokeweed.mp4"), 0.0, {}),
+ (line_start("n06") + 0.1, S("31_s4_B16_pokeweed.mp4"), 0.0, {}),
+ (at("n06", "used on warts for over"), S("18_s13_m1_door.mp4"), 0.0, {}),
  (at("n06", "break the wart down"), S("24_s4_D7_crumble.mp4"), 0.0, {}),
- (at("n06", "One alone can't do it."), S("25_s4_D8_together.mp4"), 0.0, {}),
+ (at("n06", "so it can't grow back."), S("26_s4_D9_clean.mp4"), 1.2, {}),
+ (at("n06", "One alone can't do it."), S("45_s19_skin_lemon.mp4"), 0.0, {}),
+ (at("n06", "Together, they reach"), S("25_s4_D8_together.mp4"), 1.0, {}),
  (at("n06", "And a clear dot"), S("34_s19_b55_dot.mp4"), 0.5, {"clock": 1}),
- (line_start("n07"), S("27_s4_P3_hero.mp4"), 0.0, {}),
- (at("n07", "No acid, no freezing"), S("43_s4_P1_lineup.mp4"), 0.0, {}),
+ (line_start("n07"), S("63_s4_P9_endcard.mp4"), 0.0, {}),
+ (at("n07", "It's a kids' formula"), S("27_s4_P3_hero.mp4"), 0.5, {}),
+ (at("n07", "No acid, no freezing"), S("43_s4_P1_lineup.mp4"), 0.2, {}),
  (at("n07", "Just a little cool tingle."), S("38_s19_b43_clear.mp4"), 0.3, {}),
  (at("n07", "Recommended by pediatricians."), S("47_s17_b1_glove.mp4"), 0.3, {}),
  (line_start("n08"), S("60_s5_h3_foot.mp4"), 1.5, {}),
  (at("n08", "Rub the little file"), S("32_s19_file_kid.mp4"), 0.6, {}),
  (at("n08", "Only on the hard top"), S("33_s17_b2_routine.mp4"), 0.0, {"zoom": 1.12}),
+ (at("n08", "Then brush the oil on."), S("36_s19_b38_brush.mp4"), 0.5, {}),
  (line_start("t1") - 0.12, GN / "t1.mp4", None, {"talk": "t1"}),
  (line_start("n09"), S("11_k25_a72f.mp4"), 0.0, {}),
+ (at("n09", "then flakes off."), S("10_k25_b0d3.mp4"), 1.5, {}),
  (at("n09", "Smooth skin underneath."), S("37_s4_B18_smoothsole.mp4"), 0.0, {}),
  (line_start("n10"), S("40_s5_i05_calX.mp4"), 0.0, {}),
  (at("n10", "Then keep going 14"), S("39_s4_B20_plus14.mp4"), 0.0, {}),
+ (at("n10", "so the root goes too."), S("19_s13_m2_root.mp4"), 1.5, {}),
  (at("n10", "That's the Root Rule."), S("61_s1_dand_root.mp4"), 0.5, {}),
  (line_start("t2") - 0.12, GN / "t2.mp4", None, {"talk": "t2"}),
  (line_start("n11"), S("62_s19_shelf_sweep.mp4"), 0.0, {}),
  (at("n11", "Get yours from the link below."), S("42_s19_three.mp4"), 0.0, {}),
  (at("n11", "Order two, get a third free."), S("41_s17_x10_three.mp4"), 1.0, {}),
  (at("n11", "And if it's not gone"), "CARD_OFFER", 0.0, {}),
- (at("n11", "You don't even send it back."), S("63_s4_P9_endcard.mp4"), 0.0, {}),
- (TOTAL - END_CARD, "END_CARD", 0.0, {}),
+ (at("n11", "You don't even send it back."), "END_CARD", 0.0, {}),
 ]
 
 # ---------------- graphics ----------------
@@ -153,7 +162,8 @@ def gauge_frames(d):
         p = min(1, i / 45); p = 1 - (1 - p) ** 3
         img = Image.new("RGBA", (240, 760), (0, 0, 0, 0)); g = ImageDraw.Draw(img)
         g.rounded_rectangle((70, 40, 170, 640), 50, fill=(255, 255, 255, 215))
-        top = 640 - int(600 * p); g.rounded_rectangle((80, max(50, top), 160, 630), 40, fill=(240, 170, 40, 255))
+        top = 640 - int(600 * p)
+        if top < 590: g.rounded_rectangle((80, max(50, top), 160, 630), 40, fill=(240, 170, 40, 255))
         f = F("Black", 92); txt = f"{max(1, round(8 * p))}x"; tw = g.textlength(txt, font=f)
         g.text(((240 - tw) / 2, 652), txt, font=f, fill=WHITE, stroke_width=6, stroke_fill=NAVY)
         img.save(d / f"g{i:03d}.png")
@@ -191,7 +201,7 @@ def end_card(out):
 
 def make_gfx():
     hook_box(G / "hook.png"); gauge_frames(G / "gauge"); clock_frames(G / "clock"); offer_card(G / "offer.png")
-    ff("-ss", "3.5", "-i", R / "12_s1_dand_snap.mp4", "-frames:v", "1", "-vf", "crop=iw:iw:0:ih*0.35", G / "stub.png")
+    ff("-ss", "3.6", "-i", R / "12_s1_dand_snap.mp4", "-frames:v", "1", "-vf", "crop=iw:iw:0:0", G / "stub.png")
     ff("-ss", "2.0", "-i", R / "61_s1_dand_root.mp4", "-frames:v", "1", "-vf", "crop=iw:iw:0:ih*0.15", G / "root.png")
     end_card(G / "end.png")
 
@@ -247,7 +257,11 @@ def main():
     offer_t0 = next(r["t0"] for r in rows if r["src"] == "CARD_OFFER"); offer_t1 = next(r["t1"] for r in rows if r["src"] == "CARD_OFFER")
     for gi, g in enumerate(groups):
         g_end = min(g[-1][2] + 0.3, groups[gi + 1][0][1] if gi + 1 < len(groups) else g[-1][2] + 0.3)
-        mv = 250 if offer_t0 - 0.05 <= g[0][1] < offer_t1 else 430   # keep clear of the offer card
+        t_ = g[0][1]
+        if offer_t0 - 0.05 <= t_ < offer_t1: mv = 250           # below the offer card
+        elif any(r["t0"] - 0.05 <= t_ < r["t1"] for r in rows if r["src"] == "END_CARD"): mv = 40   # under the end-card pill
+        elif any(r["t0"] - 0.05 <= t_ < r["t1"] for r in rows if r["src"] in LOW_CAP): mv = 150     # under the bottle
+        else: mv = 430
         for wi, w in enumerate(g):
             s = w[1]; e = g[wi + 1][1] if wi + 1 < len(g) else g_end
             txt = " ".join(("{\\c&H2AB4F5&}" + x[0].upper() + "{\\c&HFFFFFF&}") if xi == wi else x[0].upper() for xi, x in enumerate(g))
