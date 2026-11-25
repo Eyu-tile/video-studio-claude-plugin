@@ -54,6 +54,11 @@ Make 3-4 (`count: 4`), show them as a labelled sheet, the person picks the face 
   arm's length; label close-ups come from real Library footage (generated close-ups garble labels).
 - **Change the distance** line to line: wide, face-filling, hands. Same distance three times reads as a jumpy take.
 - **The pose lives in the still.** Lying down, leaning in, holding the jar: put it in the picture.
+- **Say how the phone is held** per line: `"camera": "selfie"` (arm out of a bottom corner, default), `"propped"`
+  (on a counter / nightstand, still, slightly crooked) or `"close"` (extreme close-up). A propped shot written as
+  a selfie comes back with an arm in it.
+- **Describe the product's real look** once in the script (`product.look`: "amber glass, dark green label, gold
+  cap, pink rose quartz roller") so every still that holds it says the same thing as the photos.
 
 ## 4. Voice: one read, cut by line
 One TTS read of the whole script (one line per paragraph so the pauses fall between lines), then

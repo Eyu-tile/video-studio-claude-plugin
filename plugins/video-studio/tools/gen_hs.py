@@ -24,13 +24,16 @@ Script (work/gen/<v>.script.json):
                  "flaws": "crow's feet, smile lines, a few sun spots, crepey neck",
                  "wardrobe": "faded lilac cardigan over a nightgown", "home": "small lived-in house, Ohio",
                  "consent": "fictional"},
-   "product": {"name": "50ml Castor Oil Roll On", "photos": ["https://...", "..."]},
+   "product": {"name": "50ml Castor Oil Roll On", "photos": ["https://...", "..."],
+               "look": "amber glass, dark green label, gold cap, pink rose quartz roller ball"},
    "voice": {"model": "eleven-tts-v2", "voice": "<voice id>", "style": "warm, a little dry"}   (omit: music only)
    "rooms": {"bathroom": "her small bathroom at night, one warm vanity bulb, a counter crowded with half-used creams"},
    "lines": [{"say": "I'm 65 and I used to do nine steps.", "show": "talking", "room": "bathroom",
               "still": "close to the mirror, glasses on her head, one eyebrow up", "perform": "small shrug on 'nine'"},
              {"show": "broll", "room": "bathroom", "product": true,
               "still": "her hand on the counter next to the roller", "action": "her fingers pick up the roller"},
+             {"show": "motion", "room": "kitchen", "camera": "propped",       (camera: selfie | propped | close)
+              "still": "mid-laugh with a coffee mug", "action": "she waves off a compliment"},
              {"show": "motion", "room": "bedroom", "still": "in bed, reaching for the lamp",
               "action": "she switches off the bedside lamp", "seconds": 2.0, "caption": "Works while you sleep"}]}
 """
@@ -55,6 +58,11 @@ CAMERA = ("Photorealistic vertical 9:16 frame, like a paused frame from a casual
           "slightly off-center, chest-up to face-filling.")
 LOOK = ("Deep focus, no portrait mode, no background blur. True-to-life flat phone color, not graded. Real skin "
         "texture: pores, the lines and spots named above, slight unevenness, never airbrushed or plastic.")
+PROPPED = ("Photorealistic vertical 9:16 frame, like a paused frame from a video filmed on a phone propped up nearby "
+           "(on a counter, a nightstand, against a bowl), not handheld: the frame does not move and is a couple of degrees "
+           "crooked, framed from the waist or chest up.")
+CLOSE = ("Photorealistic vertical 9:16 frame, like a paused frame from a selfie video filmed on an iPhone front camera held "
+         "very close: EXTREME CLOSE-UP, the face or the body part fills almost the whole frame, a couple of degrees of tilt.")
 CLEAN = "No text, no logos except the product's own label, no watermark, no phone visible in frame."
 NOT_GRID = "Output ONE single photo, not a grid."
 
@@ -102,7 +110,7 @@ def master_prompt(c, room, room_txt):
             f"{room_txt}\n\n{c.get('moment', 'Mid-word, eyes on the lens.')}\n\n{LOOK}\n\n{CLEAN}")
 
 
-def still_prompt(c, ln, room_txt, has_master, has_product):
+def still_prompt(c, ln, room_txt, has_master, has_product, product_look=""):
     refs = []
     if has_master:
         refs.append("Image 1 is the master frame of this room. Keep EVERYTHING about it: the same person, the same "
@@ -112,11 +120,13 @@ def still_prompt(c, ln, room_txt, has_master, has_product):
     else:
         refs.append(_identity(c, 2))
     if has_product:
-        refs.append("The last reference image(s) are the real product: keep its bottle, cap, roller and label exactly "
-                    "as they are; keep it at arm's length or smaller in the frame, never a label close-up.")
+        refs.append("The last reference image(s) are the real product" + (f" ({product_look})" if product_look else "")
+                    + ": keep its bottle, cap, roller and label exactly as they are; keep it at arm's length or smaller "
+                    "in the frame, never a label close-up.")
     shot = ln.get("still") or ln.get("broll") or ""
+    cam = ln.get("camera", "selfie")
     who = ("No face in the shot: only her hands and the props, filmed on a phone held close."
-           if ln.get("show") == "broll" else CAMERA)
+           if ln.get("show") == "broll" else {"propped": PROPPED, "close": CLOSE}.get(cam, CAMERA))
     place = "" if has_master else f"\n\nSetting: {room_txt}" if room_txt else ""
     return f"{' '.join(refs)}\n\n{who}\n\n{shot}{place}\n\n{LOOK}\n\n{CLEAN}"
 
@@ -198,7 +208,8 @@ def plan(s, a):
         if ln.get("source") == "library":
             continue
         job(f"still{n}", "still", needs, model=IMAGE, aspect=aspect, usd=PRICE["image"], refs=refs, line=i,
-            prompt=still_prompt(c, ln, rooms.get(r, ""), r in shared, bool(ln.get("product") and photos)))
+            prompt=still_prompt(c, ln, rooms.get(r, ""), r in shared, bool(ln.get("product") and photos),
+                                prod.get("look", "")))
         if show == "talking":
             job(f"talk{n}", "talking", [f"still{n}", "slices"], model=TALK, line=i, image=f"still{n}",
                 audio=f"slice{n}", prompt=talk_prompt(ln),

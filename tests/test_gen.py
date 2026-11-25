@@ -116,14 +116,14 @@ class GenTest(unittest.TestCase):
         hs = {"variant": "hs1", "aspect": "9:16", "provider": "hyperscale",
               "character": {"name": "June", "age": 65, "look": "short silver hair", "flaws": "crow's feet, sun spots",
                             "wardrobe": "lilac cardigan", "consent": "fictional"},
-              "product": {"name": "Roll On", "photos": [f"{self.base}/frame.png"]},
+              "product": {"name": "Roll On", "photos": [f"{self.base}/frame.png"], "look": "amber glass, gold cap"},
               "voice": {"model": "eleven-tts-v2", "voice": "v123"},
               "rooms": {"bathroom": "small bathroom at night, one warm bulb"},
               "lines": [{"say": "I'm sixty five and I used to do nine steps.", "room": "bathroom",
                          "still": "close to the mirror", "perform": "small shrug"},
                         {"say": "Now I do one.", "show": "broll", "room": "bathroom", "product": True,
                          "still": "her hand by the roller", "action": "fingers pick up the roller"},
-                        {"show": "motion", "room": "bedroom", "still": "in bed by the lamp",
+                        {"show": "motion", "room": "bedroom", "still": "in bed by the lamp", "camera": "propped",
                          "action": "she switches off the lamp", "seconds": 1.5, "caption": "Works while you sleep"}]}
         Path("proj/work/gen/hs1.script.json").write_text(json.dumps(hs))
         J = "proj/work/gen/hs1.jobs.json"
@@ -136,11 +136,14 @@ class GenTest(unittest.TestCase):
         self.assertEqual(jobs["still1"]["needs"][0], "master_bathroom")
         self.assertIn("product", jobs["still2"]["needs"])
         self.assertIn("No face", jobs["still2"]["prompt"])
+        self.assertIn("amber glass, gold cap", jobs["still2"]["prompt"])
         self.assertEqual(jobs["talk1"]["model"], "omnihuman-1-5")
         self.assertEqual(jobs["broll2"]["model"], "seedance-2-5")
         self.assertEqual(jobs["motion3"]["needs"], ["still3"])
         self.assertIn("65-year-old", jobs["character"]["prompt"])
         self.assertIn("not a model", jobs["character"]["prompt"])
+        self.assertIn("propped", jobs["still3"]["prompt"])
+        self.assertNotIn("arm's length", jobs["still3"]["prompt"])
         # One read with two pauses' worth of lines: tone, silence, tone.
         sh("ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "sine=f=300:d=1.4", "-f", "lavfi", "-i",
            "anullsrc=r=44100:cl=mono:d=0.6", "-f", "lavfi", "-i", "sine=f=500:d=0.8", "-filter_complex",
