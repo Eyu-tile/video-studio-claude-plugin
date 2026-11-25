@@ -7,7 +7,7 @@ trimmed to speech; talking shots cut from the same clip at the same time as thei
 - Every shot starts on the word it illustrates (anchors in the take's word timings).
 - Smoothness: 24 fps end to end (the sources are 24), straight cuts (only the NIGHT stamps blur in), stills rendered at
   2x then a single linear push-in (no jitter), slowed clips frame-blended, no jump cuts inside talking shots.
-Usage: build7.py  -> out/WilloMD_RootOut_Set5_H1_9x16_v7.mp4"""
+Usage: build7.py [--remix] [--hook H2|H3|H4] -> out/WilloMD_RootOut_Set5_<hook>_9x16_vN.mp4"""
 import json, re, subprocess, sys, difflib
 from pathlib import Path
 
@@ -23,10 +23,15 @@ FONT = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
 COVER = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1"
 norm = lambda s: re.sub(r"[^a-z0-9]", "", s.lower())
 V4 = P / "raw/v4"
+HK = P / "raw/hooks"
 VOC = P / "work/clone/pick"   # VO in her own voice: Seed Audio 1.0 with her Seedance voice-lock clip as the reference
-MUSIC = 0.12            # music bed level (v4 was 0.20; client: too loud)
-MUSIC_FILE = P / "assets/music/dr_build.mp3"   # v7: energetic build-up bed (ElevenLabs Music v2.5), cut on the beat at the end
+MUSIC = 0.11            # music bed level (v4 was 0.20; client: too loud)
+MUSIC_FILE = P / "assets/music/Dreamer.mp3"   # client chose v6 (Dreamer); v7 tried assets/music/dr_build.mp3
 SCRIPT = {k: v[1] for k, v in json.load(open(P / "work/vo_lines.json")).items()}
+SCRIPT.update({
+    "h2": "The doctor said, 'We can freeze it.' So before I booked it, I tried this for fourteen nights. Here's what happened.",
+    "h3": "If your kid has a wart, don't book the freeze yet. Here's what this does in fourteen nights at bedtime.",
+    "h4": "Winter break is two weeks at home. That's exactly how long this takes. Here's what happened to my son's wart over fourteen nights."})
 
 
 def dur(f): return float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(f)]))
@@ -179,19 +184,23 @@ BLK = {
     "M2": (V4 / "m2.mp4", ["v25"], True),
     "M3": (V4 / "m3.mp4", ["v26"], True),
     "E5": (V4 / "E5_close.mp4", ["v27", "v29"], True),
+    # hook variants (brief: H2, H3, H4 replace the H1 opening; the body is the same)
+    "H2T": (HK / "H2.mp4", ["h2"], True),
+    "H3V": (HK / "H3_vo.wav", ["h3"], False),
+    "H4T": (HK / "H4.mp4", ["h4"], True),
 }
-TAKES = {"h1": ["E1"], "n1": ["N1a", "N1T", "N1b"], "n3": ["N3a", "E3", "N3b"], "n7": ["N7"], "n10": ["E4"],
+TAKES = {"h1": ["E1"], "h2": ["H2T"], "h3": ["H3V"], "h4": ["H4T"], "n1": ["N1a", "N1T", "N1b"], "n3": ["N3a", "E3", "N3b"], "n7": ["N7"], "n10": ["E4"],
          "n14": ["N14"], "m1": ["M1"], "m2": ["M2"], "m3": ["M3"], "cl": ["E5"]}
 GAP = 0.08   # breath between blocks inside a section (v6: tighter)
 SPEED = 1.10   # v6: her lines (VO + on-camera) play 10% faster, pitch kept; testimonials stay natural
-MOM = {"E1", "N1a", "N1T", "N1b", "N3a", "E3", "N3b", "N7", "E4", "N14", "E5"}
+MOM = {"H2T", "H3V", "H4T", "E1", "N1a", "N1T", "N1b", "N3a", "E3", "N3b", "N7", "E4", "N14", "E5"}
 WJ = P / "work/v4_words.json"
 
 
 def block_words():
     """Word timings per block (whisper medium.en, cached). Times are in the block file's own clock."""
     cache = json.load(open(WJ)) if WJ.exists() else {}
-    todo = [k for k in BLK if k not in cache or cache[k]["mtime"] != BLK[k][0].stat().st_mtime]
+    todo = [k for k in BLK if BLK[k][0].exists() and (k not in cache or cache[k]["mtime"] != BLK[k][0].stat().st_mtime)]
     if todo:
         from faster_whisper import WhisperModel
         import librosa, numpy as np
@@ -273,6 +282,25 @@ def build_section(si, sec):
     return out, total, words, starts
 
 
+HOOKS = {   # brief titles: H2 "Before you book the freeze", H3 "Don't book the freeze yet"; H4 has none in the brief (ours)
+    "H2": (("Before you book ", "the freeze"), ("h1", "h2", 0.12, [(0, "talk", "H2T", {"ovs": [GX / "hook_title_H2.png"]})])),
+    "H3": (("Don't book ", "the freeze yet"), ("h1", "h3", 0.12, [(0, "clip", HK / "H3.mp4", {"ss": 0.2, "ovs": [GX / "hook_title_H3.png"]})])),
+    "H4": (("14 nights ", "of winter break"), ("h1", "h4", 0.12, [
+        (0, "talk", "H4T", {"ovs": [GX / "hook_title_H4.png"]}),
+        (("son's", 0), "photo", FR / "W1.png", {"ovs": [GX / "glow.png"]}),
+        (("over", 0), "talk", "H4T", {})])),
+}
+
+
+def hook_title(tag, a, b):
+    from PIL import Image, ImageDraw, ImageFont
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im); f = ImageFont.truetype(FONT, 66)
+    wa, wb = d.textlength(a, font=f), d.textlength(b, font=f); x = (W - wa - wb) / 2
+    d.rounded_rectangle((x - 34, 220, x + wa + wb + 34, 330), 22, fill=(255, 255, 255, 245))
+    d.text((x, 275), a, font=f, fill=(11, 42, 91), anchor="lm"); d.text((x + wa, 275), b, font=f, fill=(23, 99, 184), anchor="lm")
+    im.save(GX / f"hook_title_{tag}.png")
+
+
 DISPLAY = {"v09": "The tea tree is a thin oil. It sinks in, up to 8x deeper than a regular cream, and carries the pokeweed and white cedar down with it.",
            "v29": "And if it's not gone, you get your money back. That's a 90-day guarantee.",
            "v23": "It's a kids' formula, for ages 4 and up, and pediatricians recommend it."}
@@ -311,25 +339,36 @@ def captions(tl, D):
 
 if __name__ == "__main__":
     REMIX = "--remix" in sys.argv   # reuse the last cut (picture + voice) and only redo music, captions and the final mix
+    HOOK = sys.argv[sys.argv.index("--hook") + 1] if "--hook" in sys.argv else None   # H2/H3/H4: new opening + the H1 body
     outs, tl, t = [], [], 0.0
-    for si, sec in enumerate([] if REMIX else SECTIONS):
+    if HOOK:
+        (ta, tb), hsec = HOOKS[HOOK]; hook_title(HOOK, ta, tb)
+        H1TL = json.load(open(TMP / "timeline_H1.json")); H1OUT = [l.split("'")[1] for l in (TMP / "list_H1.txt").read_text().splitlines()]
+        out, d, words, starts = build_section(90, hsec)
+        tl.append({"sec": "h1", "take": hsec[1], "start": 0.0, "dur": round(d, 3), "words": [list(w) for w in words], "shots": [round(x, 2) for x in starts]})
+        outs.append(out); t = d; print(f"{HOOK} hook +{d:6.2f}")
+        for x, o in zip(H1TL[1:], H1OUT[1:-1]):
+            x = dict(x); x["start"] = round(t, 3); tl.append(x); outs.append(Path(o)); t += x["dur"]
+    for si, sec in enumerate([] if (REMIX or HOOK) else SECTIONS):
         out, d, words, starts = build_section(si, sec)
         tl.append({"sec": sec[0], "take": sec[1], "start": round(t, 3), "dur": round(d, 3), "words": [list(w) for w in words], "shots": [round(x, 2) for x in starts]})
         outs.append(out); t += d; print(f"{sec[0]:4s} {t - d:7.2f} +{d:6.2f}  shots {len(starts)}")
     end = TMP / "sec_99_end.mp4"
     if REMIX: tl = json.load(open(TMP / "timeline.json")); outs = [TMP / l.split("'")[1] for l in (TMP / "list.txt").read_text().splitlines()][:-1]
     run(["-i", str(GX / "endcard.mp4"), "-f", "lavfi", "-t", "3.2", "-i", "anullsrc=r=48000:cl=stereo", "-vf", f"fps={FPS}", "-t", "3.2", *ENC, "-c:a", "aac", "-b:a", "192k", "-shortest", str(end)])
-    outs.append(end); json.dump(tl, open(TMP / "timeline.json", "w"), indent=1)
+    outs.append(end); tag = HOOK or "H1"
+    json.dump(tl, open(TMP / f"timeline_{tag}.json", "w"), indent=1); (TMP / f"list_{tag}.txt").write_text("".join(f"file '{o}'\n" for o in outs))
+    json.dump(tl, open(TMP / "timeline.json", "w"), indent=1)
     (TMP / "list.txt").write_text("".join(f"file '{o}'\n" for o in outs))
     cat = TMP / "cut.mp4"; run(["-f", "concat", "-safe", "0", "-i", str(TMP / "list.txt"), "-c", "copy", str(cat)])
     D = dur(cat); n = captions(tl, D)
-    fc = (f"[1:a]atrim=0:{D:.2f},volume={MUSIC},afade=t=in:d=0.3,afade=t=out:st={D - 0.6:.2f}:d=0.6[m];"
+    fc = (f"[1:a]atrim=0:{D:.2f},volume={MUSIC},afade=t=in:d=1.2,afade=t=out:st={D - 2.5:.2f}:d=2.5[m];"
           f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=450[md];"
           f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"   # no SFX / room tone (client note, Set 18)
           f"[0:v]ass={TMP / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/5[v]")
-    final = P / "out/WilloMD_RootOut_Set5_H1_9x16_v7.mp4"
+    final = P / ("out/WilloMD_RootOut_Set5_H1_9x16_v6.mp4" if not HOOK else f"out/WilloMD_RootOut_Set5_{HOOK}_9x16_v1.mp4")
     run(["-i", str(cat), "-i", str(MUSIC_FILE), "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(FPS),
          "-c:v", "libx264", "-crf", "18", "-maxrate", "10M", "-bufsize", "20M", "-preset", "slow", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-map_metadata", "-1", "-movflags", "+faststart", str(final)])
     shots = sum(len(s[3]) for s in SECTIONS) + 1
-    print("H1 v7", round(dur(final), 2), "s,", shots, "shots,", n, "caption cards ->", final)
+    print(HOOK or "H1", round(dur(final), 2), "s,", shots, "shots,", n, "caption cards ->", final)
