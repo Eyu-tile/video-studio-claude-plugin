@@ -5,12 +5,25 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1555 generations (1201 video, 243 image, 111 audio). RootOut era (from 21 Nov 2026): 741.
+Totals: 1579 generations (1214 video, 243 image, 122 audio). RootOut era (from 21 Nov 2026): 765.
 
-## RootOut-era video (443; 212 named by a set)
+## RootOut-era video (456; 225 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `8073e4d5` | Set 16 · s16_G15_smooth | seedance_2_5 | couch, thumb over smooth skin where the wart was, relieved smile (start F3), 4 s |
+| 2026-11-25 | `2d86ec74` | Set 16 · s16_G14_flake | seedance_2_5 | couch, push-in on sole, dry spot flaking at the edge (start F2), 4 s |
+| 2026-11-25 | `73f9c865` | Set 16 · s16_G13_bedroom | seedance_2_5 | son's bedroom at night, comic book hides his face, turns a page, foot in mom's lap, real bottle on nightstand  |
+| 2026-11-25 | `8bedca75` | Set 16 · s16_G12_yard_bottle | seedance_2_5 | mom front-yard selfie lifts the real RootOut bottle by her face from ~2 s (start E4), 4 s |
+| 2026-11-25 | `015201ef` | Set 16 · s16_G11_vinegar | seedance_2_5 | hand dabs cotton ball on apple cider vinegar bottle, duct tape on bathroom counter (start E6), 4 s |
+| 2026-11-25 | `44b79314` | Set 16 · s16_M13_close | seedance_2_5 | mom couch, three real bottles: close/offer line (start E3), 7 s |
+| 2026-11-25 | `239b0a36` | Set 16 · s16_M12_run | seedance_2_5 | mom couch: 'Can you run on it now?' kid 'Yep!' hops off (start F3 smooth), 4 s |
+| 2026-11-25 | `23073b46` | Set 16 · s16_M11_root | seedance_2_5 | mom couch with bottle: 'We kept going fourteen more nights... hasn't come back' (start E2), 6 s |
+| 2026-11-25 | `1cb0db13` | Set 16 · s16_M9_week | seedance_2_5 | mom couch: 'After a week?' kid 'All dry and dark', finger on dry spot (start F1), 4 s |
+| 2026-11-25 | `71c53011` | Set 16 · s16_M6_safe | seedance_2_5 | mom couch with real bottle: 'Deep doesn't mean harsh... no scar' (start E2), 8 s |
+| 2026-11-25 | `7b1a4ec3` | Set 16 · s16_M5a_yard | seedance_2_5 | mom front-yard selfie: 'Freezing, acid and shaving only snap off the top,' (start E4), 4 s |
+| 2026-11-25 | `fd05a7bb` | Set 16 · s16_M3_q1 | seedance_2_5 | mom couch: 'Did any of it work?' kid 'Nope' off-frame + thumbs-down, 'Then I figured out why' (start E1), 5 s |
+| 2026-11-25 | `a026d221` | Set 16 · s16_M1_h1 | seedance_2_5 | mom couch, Cora voice native (audio ref), H1 hook: holds son's sole to lens (start E1), 8 s |
 | 2026-11-25 | `3b653e65` | Set 20 · s20_adult_foot_blocked |  | blocked by safety filter, not retried |
 | 2026-11-25 | `55d4bfce` | Set 20 · s20_h1_draft_blocked |  | blocked by safety filter (kid bare heel), refunded; do not retry |
 | 2026-11-25 | `980d299f` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
@@ -647,10 +660,21 @@ Totals: 1555 generations (1201 video, 243 image, 111 audio). RootOut era (from 2
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
 | 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
-## RootOut-era audio (111; 12 named by a set)
+## RootOut-era audio (122; 23 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `b9a5d5ec` | Set 16 · s16_a11_h3 | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): It hurt to step on. I thought it was a splinter. It was a pl |
+| 2026-11-25 | `52d3cff1` | Set 16 · s16_a10_h2 | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): My poor kid had a plantar wart that was getting bigger by th |
+| 2026-11-25 | `73f33456` | Set 16 · s16_a09_close | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): Get yours from the link below. Two in your cart, and a third |
+| 2026-11-25 | `0a6420e3` | Set 16 · s16_a08_run | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): Can you run on it now? / KID Yep! |
+| 2026-11-25 | `7a670e1b` | Set 16 · s16_a07_week | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): After a week? / KID All dry and dark. / flaked off... About  |
+| 2026-11-25 | `40c1f9b5` | Set 16 · s16_a06_routine | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): Rub the little file over it, twice... soaking all night. / K |
+| 2026-11-25 | `5b28d8d6` | Set 16 · s16_a05_safety | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): Deep doesn't mean harsh... Recommended by pediatricians. |
+| 2026-11-25 | `92f822a5` | Set 16 · s16_a04_mechanism | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): Dandelion + four plants (92 w, 31.9 s) |
+| 2026-11-25 | `b5be3d29` | Set 16 · s16_a03_q1 | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): Did any of it work? / KID Nope. / Then I figured out why. |
+| 2026-11-25 | `1a90fc27` | Set 16 · s16_a02_tried | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): We tried everything. The sticky pads. The freeze kit. Apple  |
+| 2026-11-25 | `2920f2c3` | Set 16 · s16_a01_h1 | elevenlabs_v4 | ElevenLabs v4 Cora (Set 16 mom; kid lines Pixie): My son had a plantar wart for months. Every week it got bigg |
 | 2026-11-25 | `2159fed6` | Set 13 · s13_ah3b |  | ElevenLabs v4 Naomi (Set 13 mom): She made that sign herself. About two weeks, start to finish. |
 | 2026-11-25 | `f85b2161` | Set 13 · s13_ah2_hook |  | ElevenLabs v4 Naomi (Set 13 mom): My daughter was scared of anything that touched her wart. Then it flaked rig |
 | 2026-11-25 | `4555458f` | Set 13 · s13_a12_offer |  | ElevenLabs v4 Naomi (Set 13 mom): Get yours from the link below. Buy two, we'll send three. And if it's not go |
