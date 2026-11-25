@@ -135,7 +135,7 @@ SECTIONS = [
         (("Pokeweed", 0), "split", R("r04_s17_root3d.mp4"), {"top": ("photo", SP / "flickr_thuja-occidentalis_srae.jpg")}),
         (("breaking", 0), "clip", R("r04_s17_root3d.mp4"), {"ss": 2.4}),
         (("so", 0), "photo", SP / "flickr_dandelion-roots-hands_isforinsects.jpg", {}),
-        (("And", 1), "clip", Gc("i02_kidbrush"), {"ss": 0.3})]),
+        (("And", 1), "clip", P / "raw/v5/kid_a.mp4", {"ss": 0.2})]),   # v6: kid clip re-made, natural foot (client)
     ("n10", "n10", 0.12, [
         (0, "stamp", SV / "mixkit_pool-feet-splashing_1261.mp4", {**ST(10), "ss": 3.0}),
         (("He", 0), "clip", SV / "mixkit_pool-feet-splashing_1261.mp4", {"ss": 4.6}),
