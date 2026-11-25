@@ -5,12 +5,15 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1584 generations (1214 video, 248 image, 122 audio). RootOut era (from 21 Nov 2026): 770.
+Totals: 1590 generations (1217 video, 251 image, 122 audio). RootOut era (from 21 Nov 2026): 776.
 
-## RootOut-era video (456; 225 named by a set)
+## RootOut-era video (459; 245 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `2af822f3` | Set 7 · s7_g4_aisle |  | Seedance 720p 4s from 03473b8f: grey-sleeve hand takes a freeze can off a drugstore shelf, puts it back |
+| 2026-11-25 | `31306546` | Set 7 · s7_g2_pick |  | Seedance 720p 4s: fingernail hovers at a black dot on a kid's heel (almost picks it); little motion |
+| 2026-11-25 | `370f474f` | Set 7 · s7_g1_bath |  | Seedance 720p 5s: mom dries foot with towel, thumb stops by the black-dot wart (H1 hook picture) |
 | 2026-11-25 | `8073e4d5` | Set 16 · s16_G15_smooth | seedance_2_5 | couch, thumb over smooth skin where the wart was, relieved smile (start F3), 4 s |
 | 2026-11-25 | `2d86ec74` | Set 16 · s16_G14_flake | seedance_2_5 | couch, push-in on sole, dry spot flaking at the edge (start F2), 4 s |
 | 2026-11-25 | `73f9c865` | Set 16 · s16_G13_bedroom | seedance_2_5 | son's bedroom at night, comic book hides his face, turns a page, foot in mom's lap, real bottle on nightstand  |
@@ -277,8 +280,8 @@ Totals: 1584 generations (1214 video, 248 image, 122 audio). RootOut era (from 2
 | 2026-11-23 | `6ac60226` | Set 4 · s4_M5_bottle | seedance_2_5 | Set 4 v2 mom lip-sync (kitchen/car/sofa), oatmeal sweater: bottle (rejected: replaced by M5r) |
 | 2026-11-23 | `f7a44a43` |  | kling3_0 | Unedited real iPhone video, bright soft morning daylight, no cinematic look. The camera, held low near the flo |
 | 2026-11-23 | `488703bc` |  | kling3_0 | Realistic home video, warm lamp light, slight handheld drift. The man's foot on the right slowly slides over t |
-| 2026-11-23 | `c1a8838d` |  | seedance_2_5 | The same single real shot, leading straight into the existing video with no cut: the same woman, the same kitc |
-| 2026-11-23 | `00c5230d` |  | seedance_2_5 | The same single real shot, leading straight into the existing video with no cut: the same woman, the same kitc |
+| 2026-11-23 | `c1a8838d` | Set 7 · s7_h3_talk | seedance_2_5 | Set 7 mom H3: 'scrubbed the whole bathroom...done instead.' |
+| 2026-11-23 | `00c5230d` | Set 7 · s7_h2_talk | seedance_2_5 | Set 7 mom H2: 'Is this a wart?...four things I wish I'd known.' |
 | 2026-11-23 | `72822182` |  | seedance_2_5 | Locked-off tripod shot, real phone footage feel. The woman in the grey robe sits relaxed on the bathtub edge,  |
 | 2026-11-23 | `448dd29c` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
 | 2026-11-23 | `4af18f46` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
@@ -287,16 +290,16 @@ Totals: 1584 generations (1214 video, 248 image, 122 audio). RootOut era (from 2
 | 2026-11-23 | `6c5cb27d` |  | seedance_2_5 | Realistic phone video, same scene as the start image: a bare heel resting on a white towel, one hand holds a r |
 | 2026-11-23 | `89140d21` |  | hf_mult_replace_object | Replace the white plastic spatula with the steel scraper from the reference image: a round brushed-steel paddl |
 | 2026-11-23 | `e83997c9` |  | hf_mult_replace_object | Replace the white squeeze bottle in the gloved hand with the reference bottle: the exact WilloMD Melt-Off navy |
-| 2026-11-23 | `4c1def64` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `4c1def64` | Set 7 · s7_offer_talk | seedance_2_5 | Set 7 mom offer: link below, buy two get one free, money back |
 | 2026-11-23 | `2ce9b563` |  | kling3_0 | Unedited real iPhone video, evening living room, natural warm lamp light and TV glow, camera still with tiny h |
 | 2026-11-23 | `a538251e` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, static camera. Inside the yellow call |
 | 2026-11-23 | `05727648` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
 | 2026-11-23 | `4d95a62a` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, slow push-in. Tiny milky-white drople |
 | 2026-11-23 | `ad32c25e` |  | hf_mult_replace_object | Replace the white lotion pump bottle with the reference bottle: the exact WilloMD Melt-Off navy pump bottle wi |
-| 2026-11-23 | `fb3d68c7` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same woman in the same kitchen. She talks to the camera  |
+| 2026-11-23 | `fb3d68c7` | Set 7 · s7_mom2_testimonial | seedance_2_5 | Set 7 MOM 2 (bob, navy cardigan, kitchen): 'gone by the second week...14 extra nights.' |
 | 2026-11-23 | `67dc6ee0` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still, no cinematic look. Her hand presses |
-| 2026-11-23 | `ad40b24e` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same woman in the same room with the warm lamp light. Sh |
-| 2026-11-23 | `1868c6b5` |  | seedance_2_5 | One continuous real phone selfie video, handheld, the same man on the same couch in the dim living room with t |
+| 2026-11-23 | `ad40b24e` | Set 7 · s7_mom1_testimonial | seedance_2_5 | Set 7 MOM 1 (bun, grey sweater, lamp): 'Just four plants...didn't think twice.' |
+| 2026-11-23 | `1868c6b5` | Set 7 · s7_dad_testimonial | seedance_2_5 | Set 7 DAD on couch: 'I rub the file over it, and he doesn't even look up from his show.' |
 | 2026-11-23 | `10911abd` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
 | 2026-11-23 | `878746bc` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, camera still with tiny hand shake, no cinematic l |
 | 2026-11-23 | `19a689d0` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, static camera. The amber glue lines b |
@@ -310,25 +313,25 @@ Totals: 1584 generations (1214 video, 248 image, 122 audio). RootOut era (from 2
 | 2026-11-23 | `24ff8030` |  | kling3_0 | Clean medical 3D animation, same cutaway of layered callus on pink skin, slow steady camera. A metal foot file |
 | 2026-11-23 | `90f58c30` |  | seedance_2_5 | Keep this exact photo: the same older woman in the armchair, the same cozy living room, her feet up on the ott |
 | 2026-11-23 | `ee855ac0` |  | seedance_2_5 | Keep this exact photo: the same two hands, the same bare heel on the white towel, the same round cotton pad he |
-| 2026-11-23 | `807a3b6b` |  | seedance_2_5 | One continuous real phone video, handheld close-up, same child's foot, same light. The mother's hand holds the |
+| 2026-11-23 | `807a3b6b` | Set 7 · s7_brush_dot | seedance_2_5 | brush from the white cap on a kid's heel wart, then a clear dot pressed on |
 | 2026-11-23 | `87667780` |  | seedance_2_5 | One continuous real phone video, handheld close-up, same child's foot, same light. The mother's hand holds the |
-| 2026-11-23 | `4900ec0c` |  | seedance_2_5 | One continuous real phone video, handheld, a very slow gentle push-in toward the three small bottles on the ba |
+| 2026-11-23 | `4900ec0c` | Set 7 · s7_shelf_names | seedance_2_5 | three real RootOut bottles on a bathroom shelf, caps labelled Leo, Mia, Mom |
 | 2026-11-23 | `2e659cd5` |  | kling3_0 | Clean medical 3D animation, slow smooth camera push-in and slight orbit. One after another, new thin dry dead- |
 | 2026-11-23 | `3462e9f0` |  | hf_mult_replace_object | Replace the dark bottle with the black cap held in the hand with the small RootOut bottle from the reference i |
-| 2026-11-23 | `bf27f921` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `bf27f921` | Set 7 · s7_use_talk | seedance_2_5 | Set 7 mom 'The one I use is RootOut...Lights out.' (says 'clear drop': patch 'dot') |
 | 2026-11-23 | `6c52a639` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
 | 2026-11-23 | `007f9d13` |  | voice_change_merge |  |
 | 2026-11-23 | `2c024363` |  | kling3_0 | Unedited real iPhone video, early morning, natural soft daylight, no cinematic look, camera still with tiny ha |
 | 2026-11-23 | `325d72e5` |  | kling3_0 | Unedited real iPhone video at night, natural dim lamp light, no cinematic look, camera still with tiny hand sh |
 | 2026-11-23 | `f37ebf8e` |  | kling3_0 | Unedited real iPhone video in a pharmacy, phone held with tiny natural shake, natural fluorescent light, no ci |
-| 2026-11-23 | `098057df` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `098057df` | Set 7 · s7_bonus_talk | seedance_2_5 | Set 7 mom bonus: bedtime, two weeks, fourteen more nights |
 | 2026-11-23 | `056d3378` |  | kling3_0 | Unedited real iPhone video at night, phone held still with tiny natural hand shake, natural dim lamp light, no |
 | 2026-11-23 | `b93f05c0` |  | kling3_0 | Unedited real iPhone video at night, phone held still by hand with tiny natural shake, natural lamp light, no  |
 | 2026-11-23 | `d1418a24` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
 | 2026-11-23 | `d99cc7e6` |  | kling3_0 | Macro close-up, warm lamp light, static camera. Right from the start the whole foot slides steadily to the lef |
 | 2026-11-23 | `e47af408` |  | kling3_0 | Macro close-up, warm lamp light, camera almost still. The rough dry heel slowly drags sideways across the smoo |
-| 2026-11-23 | `c895080e` |  | seedance_2_5 | One continuous real phone video, handheld, slight natural sway, at a kids' soccer game, same people and field  |
-| 2026-11-23 | `8a0f08eb` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `c895080e` | Set 7 · s7_soccer_hand | seedance_2_5 | soccer: man offers a handshake, boy hides hands (boy's face visible: crop waist-down) |
+| 2026-11-23 | `8a0f08eb` | Set 7 · s7_rule4_talk | seedance_2_5 | Set 7 mom rule 4 (24 s): timing, barefoot at home, sister, friend's son hid his hand |
 | 2026-11-23 | `bf64d6f6` |  | reframe |  |
 | 2026-11-23 | `8a870d50` |  | kling3_0 | Realistic home video, warm lamp light, slight handheld drift. She glances back at her sleeping husband for a m |
 | 2026-11-23 | `b3943b09` |  | hf_mult_replace_object | Replace the white plastic spatula held by the gloved hand with the reference tool: a stainless steel spoon-sha |
@@ -337,14 +340,14 @@ Totals: 1584 generations (1214 video, 248 image, 122 audio). RootOut era (from 2
 | 2026-11-23 | `1827d91e` |  | seedance_2_5 | Two relaxed adult woman's hands come in from the top of the frame holding an empty navy cotton heel sleeve. Th |
 | 2026-11-23 | `5604a739` |  | hf_mult_replace_object | Replace the white plastic spatula held by the gloved hand with the reference tool: a stainless steel spoon-sha |
 | 2026-11-23 | `dec47a18` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
-| 2026-11-23 | `002dcd0d` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `002dcd0d` | Set 7 · s7_rule3_talk | seedance_2_5 | Set 7 mom rule 3: deep doesn't mean harsh, kids' formula (no '4 and up' line) |
 | 2026-11-23 | `a9348e0c` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
-| 2026-11-23 | `79f0b3d8` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `79f0b3d8` | Set 7 · s7_rule2_talk_1080 | seedance_2_5 | Set 7 mom rule 2 1080p: says 'tea wood'/'pokewood' |
 | 2026-11-23 | `5412bf12` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
-| 2026-11-23 | `abf890fe` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
-| 2026-11-23 | `aa43466d` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
+| 2026-11-23 | `abf890fe` | Set 7 · s7_rule2_talk | seedance_2_5 | Set 7 mom rule 2 (480p, words right): four plants, thin oil, clear dot |
+| 2026-11-23 | `aa43466d` | Set 7 · s7_rule1_talk | seedance_2_5 | Set 7 mom rule 1 (18 s): black dots, don't pick, freeze spray, dandelion |
 | 2026-11-23 | `f60d6ad6` |  | seedance_2_5 | Continue the same single real shot without any cut: the same woman, the same kitchen floor, the same low front |
-| 2026-11-23 | `a3bb28d0` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps its look, co |
+| 2026-11-23 | `a3bb28d0` | Set 7 · s7_h1_talk | seedance_2_5 | 23 Nov Set 7 mom (kitchen floor, grey sweatshirt) H1: 'Things I wish I knew the night I found my son's first w |
 | 2026-11-23 | `e80894f7` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps its look, co |
 | 2026-11-23 | `66e92a85` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the start image and keeps its look, co |
 | 2026-11-22 | `98c207d7` |  | seedance_2_5 | Vertical phone video, late-afternoon backyard light, ground-level macro close-up on dry, cracked, pale-brown s |
@@ -468,10 +471,13 @@ Totals: 1584 generations (1214 video, 248 image, 122 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (192; 77 named by a set)
+## RootOut-era image (195; 80 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `4be26c88` | Set 7 · s7_g3_callus |  | GPT 2.6: adult heel with smooth yellow callus, no dots (callus vs wart) |
+| 2026-11-25 | `77c3c4aa` | Set 7 · s7_g2_pick_frame |  | GPT 2.6 edit of e98ca8e9: kid heel with black-dot wart, fingernail about to pick a dot |
+| 2026-11-25 | `93577073` | Set 7 · s7_g1_bath_frame |  | GPT 2.6: bath time, boy in navy hooded towel knees down, mom's hands lift foot, thumb by wart with black dots |
 | 2026-11-25 | `e32fc596` | Set 2 · s2_narrator_row2 | gpt_image_2_6 | GPT 2.6 edit of 775f8138: narrator at kitchen table with unbranded wart boxes, silver freeze can, foam pads, n |
 | 2026-11-25 | `fb0a325f` | Set 2 · s2_mom3_soul | soul_2 | Set 2 MOM 3 identity (Soul 2): mid-50s, silver bob, navy cardigan, glasses on a cord, hallway by the front doo |
 | 2026-11-25 | `a3b27f60` | Set 2 · s2_mom2_soul | soul_2 | Set 2 MOM 2 identity (Soul 2): mid-40s, short dark curly hair, rust-orange tee, kitchen daylight selfie |
