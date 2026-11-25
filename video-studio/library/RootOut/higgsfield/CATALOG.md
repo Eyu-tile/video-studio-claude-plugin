@@ -5,12 +5,14 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1500 generations (1199 video, 201 image, 100 audio). RootOut era (from 21 Nov 2026): 686.
+Totals: 1502 generations (1201 video, 201 image, 100 audio). RootOut era (from 21 Nov 2026): 688.
 
-## RootOut-era video (441; 197 named by a set)
+## RootOut-era video (443; 199 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `3b653e65` | Set 20 · s20_adult_foot_blocked |  | blocked by safety filter, not retried |
+| 2026-11-25 | `55d4bfce` | Set 20 · s20_h1_draft_blocked |  | blocked by safety filter (kid bare heel), refunded; do not retry |
 | 2026-11-25 | `980d299f` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
 | 2026-11-25 | `09a5e3dc` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
 | 2026-11-25 | `154b8603` |  | seedance_2_5 | References: the start image is the first frame and wins over everything. Image reference 1 is her character sh |
@@ -155,28 +157,28 @@ Totals: 1500 generations (1199 video, 201 image, 100 audio). RootOut era (from 2
 | 2026-11-24 | `e2178f7d` |  | kling3_0 | Unedited real iPhone video, early morning, natural soft daylight, no cinematic look, camera still with tiny ha |
 | 2026-11-24 | `8db9632e` |  | seedance_2_5 | ONE single continuous real shot, never cut. The video starts exactly on the first reference image and keeps ex |
 | 2026-11-24 | `562409cc` |  | seedance_2_5 | ONE single continuous real selfie shot, never cut. The video starts exactly on the first reference image and k |
-| 2026-11-23 | `ff44c9d3` | Set 20 · t_h3_flashlight | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `363c472d` | Set 20 · t_h2_pumice | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `97b21737` | Set 20 · g06_mom_phone_v2 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `55e3af23` | Set 20 · t24_b16_bottle | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the first reference image (sam |
-| 2026-11-23 | `9d5dc14b` | Set 20 · g07_drawer | seedance_2_5 | Vertical amateur phone video, close-up of an open bathroom drawer, warm evening light. A woman's hand in a cre |
-| 2026-11-23 | `66b36e48` | Set 20 · g04_squeeze | seedance_2_5 | Vertical amateur phone video, close-up on a beige couch in the evening, lamp light. A woman's hands in a cream |
-| 2026-11-23 | `bedc70f4` | Set 20 · g12_feetup | seedance_2_5 | Vertical amateur phone video, beige living-room couch in the evening, soft blue TV glow and a warm lamp. Two f |
-| 2026-11-23 | `ee26b25b` | Set 20 · g14_run | seedance_2_5 | Vertical amateur phone video of a suburban backyard lawn at golden hour, warm low sun, long shadows. Wide shot |
-| 2026-11-23 | `5b408ca8` | Set 20 · g02_walk | seedance_2_5 | Vertical amateur phone video, low angle at floor level in a home kitchen in the evening, warm light. A pair of |
-| 2026-11-23 | `d16f4a38` | Set 20 · g03_counter | seedance_2_5 | Vertical amateur phone video, bathroom counter close-up in the evening, warm vanity light. On the white counte |
-| 2026-11-23 | `2800c067` | Set 20 · g07_sister | seedance_2_5 | Vertical amateur phone video, looking down at a fluffy white bath mat on a tiled bathroom floor in the evening |
-| 2026-11-23 | `bc35e8e9` | Set 20 · t10_b06 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `d68c72e1` | Set 20 · t09_b05 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `825136c1` | Set 20 · t13_b08 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `d2e8e879` | Set 20 · t15_b09 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `06c9a8bf` | Set 20 · t04_b04 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `ffb04e98` | Set 20 · t23_b15 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
-| 2026-11-23 | `2f499ea0` | Set 20 · t17_b10_bottle | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the first reference image (sam |
-| 2026-11-23 | `1c8706ed` | Set 20 · t01_b02 | seedance_2_5 | Vertical amateur phone video, phone propped on the coffee table. The woman from the reference image (same face |
+| 2026-11-23 | `ff44c9d3` | Set 20 · s20_h3_flashlight | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, H3 hook: phone flashlight ove |
+| 2026-11-23 | `363c472d` | Set 20 · s20_h2_pumice | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, H2 hook: pumice stone in hand |
+| 2026-11-23 | `97b21737` | Set 20 · s20_mom_phone | seedance_2_5 | silent: mom on the couch scrolling her phone (used blurred behind a comment card) |
+| 2026-11-23 | `55e3af23` | Set 20 · s20_t24_bottle | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, holding the real RootOut bott |
+| 2026-11-23 | `9d5dc14b` | Set 20 · s20_drawer | seedance_2_5 | bathroom drawer opens, old remedies inside |
+| 2026-11-23 | `66b36e48` | Set 20 · s20_sock_squeeze | seedance_2_5 | mom's hand squeezes the kid's heel through the sock |
+| 2026-11-23 | `bedc70f4` | Set 20 · s20_feet_up | seedance_2_5 | kid's socked feet back up on mom's lap on the couch |
+| 2026-11-23 | `ee26b25b` | Set 20 · s20_kids_run | seedance_2_5 | kids run in a backyard, seen from far behind |
+| 2026-11-23 | `5b408ca8` | Set 20 · s20_walk_edge | seedance_2_5 | school-age kid in socks walks on the edge of the foot, no face |
+| 2026-11-23 | `d16f4a38` | Set 20 · s20_bath_counter | seedance_2_5 | bathroom counter with foot tools (pumice, file, tweezers) |
+| 2026-11-23 | `2800c067` | Set 20 · s20_sister_socks | seedance_2_5 | younger sister's feet in pink socks, no face |
+| 2026-11-23 | `bc35e8e9` | Set 20 · s20_t10_b06 | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, body line b06 (only with its  |
+| 2026-11-23 | `d68c72e1` | Set 20 · s20_t09_b05 | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, body line b05 (only with its  |
+| 2026-11-23 | `825136c1` | Set 20 · s20_t13_b08 | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, body line b08 (only with its  |
+| 2026-11-23 | `d2e8e879` | Set 20 · s20_t15_b09 | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, body line b09 (only with its  |
+| 2026-11-23 | `06c9a8bf` | Set 20 · s20_t04_b04 | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, body line b04 (only with its  |
+| 2026-11-23 | `ffb04e98` | Set 20 · s20_t23_b15 | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, body line b15 (only with its  |
+| 2026-11-23 | `2f499ea0` | Set 20 · s20_t17_bottle | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, holding the real RootOut bott |
+| 2026-11-23 | `1c8706ed` | Set 20 · s20_t01_b02 | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, body line b02 (only with its  |
 | 2026-11-23 | `24c9f7fe` |  | seedance_2_5 | Vertical phone video propped on a counter in a bright pediatric exam room. The tired, wry mom on the chair spe |
 | 2026-11-23 | `0dc1cd74` |  | seedance_2_5 | Same woman doctor on the rolling stool in the bright pediatric exam room, phone video propped on a counter. Sh |
-| 2026-11-23 | `c77f2bbf` | Set 20 · t01_h1_talk | seedance_2_5 | Vertical amateur phone video, phone propped on a coffee table, slight handheld micro-wobble. The woman from th |
+| 2026-11-23 | `c77f2bbf` | Set 20 · s20_h1_talk | seedance_2_5 | mom (cream cardigan, couch, lamp + TV glow) talks to camera, lip-synced to Juno, H1 'If your kid…'; dinosaur p |
 | 2026-11-23 | `5e57f5fc` | Set 17 · x10_three_bottles | seedance_2_5 | real RootOut bottles, a hand sets the third down |
 | 2026-11-23 | `ee317059` | Set 17 · x3_soil_cutaway | seedance_2_5 | cutaway: stub on top, root alive underground, flower regrows |
 | 2026-11-23 | `692c7031` | Set 17 · x6_root_3d | seedance_2_5 | green drops reach the root, it breaks, skin heals |
@@ -507,10 +509,10 @@ Totals: 1500 generations (1199 video, 201 image, 100 audio). RootOut era (from 2
 | 2026-11-24 | `522a0d6a` |  | nano_banana_2 | Same woman as the reference (same face, same short wavy white-grey hair, same age 62), now early the next morn |
 | 2026-11-24 | `7b3821b6` |  | nano_banana_2 | Edit this real phone selfie video frame. Keep the exact same framing, camera distance, phone angle, slight wid |
 | 2026-11-24 | `c65d2515` |  | nano_banana_2 | Edit image 1 only. Change ONLY the skin on the sole of the bare foot she is holding up to the camera: make it  |
-| 2026-11-23 | `06b81ce0` | Set 20 · f01c | text2image_soul_v2 | A close-up medium shot shows a young Caucasian woman in her late 20s to early 30s with model-like symmetrical  |
-| 2026-11-23 | `b28f5465` | Set 20 · f01d | text2image_soul_v2 | A medium close-up candid shot captures a young adult Caucasian woman with honey-blonde hair in a softly parted |
-| 2026-11-23 | `44519d60` | Set 20 · f01b | text2image_soul_v2 | Vertical phone video still, amateur UGC look, phone propped low on a coffee table. A calm American mom in her  |
-| 2026-11-23 | `c0ea9e4d` | Set 20 · mom_ref_f01a | text2image_soul_v2 | Vertical phone video still, amateur UGC look, phone propped low on a coffee table. A calm American mom in her  |
+| 2026-11-23 | `06b81ce0` | Set 20 · s20_mom_alt_rej | text2image_soul_v2 | rejected mom frame (odd legs / model drift / cartoon on TV) |
+| 2026-11-23 | `b28f5465` | Set 20 · s20_mom_alt_rej | text2image_soul_v2 | rejected mom frame (odd legs / model drift / cartoon on TV) |
+| 2026-11-23 | `44519d60` | Set 20 · s20_mom_alt_rej | text2image_soul_v2 | rejected mom frame (odd legs / model drift / cartoon on TV) |
+| 2026-11-23 | `c0ea9e4d` | Set 20 · s20_mom_ref | text2image_soul_v2 | Soul 2 mom identity ref: early 30s, light brown hair, cream knit cardigan, couch |
 | 2026-11-23 | `1edb48bf` |  | nano_banana_2 | Fix only one thing in this photo: she now holds up, in her right hand near her shoulder, the exact callus scra |
 | 2026-11-23 | `2657663a` |  | nano_banana_2 | Fix only one thing in this photo: she now holds a small, worn, grey oval pumice stone loosely in her right han |
 | 2026-11-23 | `5f23fd81` |  | nano_banana_2 | Replace the person with a completely different 56-year-old Italian-American woman who does not resemble the or |
