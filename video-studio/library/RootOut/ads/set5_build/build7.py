@@ -7,7 +7,7 @@ trimmed to speech; talking shots cut from the same clip at the same time as thei
 - Every shot starts on the word it illustrates (anchors in the take's word timings).
 - Smoothness: 24 fps end to end (the sources are 24), straight cuts (only the NIGHT stamps blur in), stills rendered at
   2x then a single linear push-in (no jitter), slowed clips frame-blended, no jump cuts inside talking shots.
-Usage: build7.py  -> out/WilloMD_RootOut_Set5_H1_9x16_v5.mp4"""
+Usage: build7.py  -> out/WilloMD_RootOut_Set5_H1_9x16_v6.mp4"""
 import json, re, subprocess, sys, difflib
 from pathlib import Path
 
@@ -44,10 +44,10 @@ def clock_filter(d, m0=21 * 60, m1=31 * 60):
             f"drawtext=fontfile={FONT}:fontsize=40:fontcolor=white:x=935:y=200:text='AM':enable='gte({M}\\,1440)'")
 
 
-def chain(kind, src, d, idx, ss=0.0, crop=None, size=(W, H), extra=""):
+def chain(kind, src, d, idx, ss=0.0, crop=None, size=(W, H), extra="", speed=None):
     w, h = size; cov = f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},setsar=1"
     if kind == "clip":
-        avail = dur(src) - ss; f = min(1.0, avail / d)
+        avail = dur(src) - ss; f = speed if speed else min(1.0, avail / d)
         if f < 0.75: sys.exit(f"{src.name}: needs {d:.2f}s from {ss:.2f}, has {avail:.2f}s")
         pre = f"crop={crop}," if crop else ""
         rate = f"minterpolate=fps={FPS}:mi_mode=blend" if f < 0.97 else f"fps={FPS}"   # slowed shots: blend, never repeat
@@ -71,7 +71,7 @@ def piece(k, src, d, o, out):
         for i, _ in enumerate(ovs): s += f";{cur}[{i + first}:v]overlay=0:0[o{i}]"; cur = f"[o{i}]"
         return s, cur
     if k in ("clip", "photo"):
-        g = chain(k, src, d, 0, ss, o.get("crop"), extra=extra) + "[v0]"; s, cur = ovc(1)
+        g = chain(k, src, d, 0, ss, o.get("crop"), extra=extra, speed=o.get("speed")) + "[v0]"; s, cur = ovc(1)
         run([*inp(k, src), *ovin, "-filter_complex", g + s, "-map", cur, "-t", f"{d:.3f}", "-an", *ENC, str(out)])
     elif k == "stamp":  # next shot blurred, easing into focus under the crayon NIGHT stamp (gentle, no pop)
         bk = o.get("bk", "clip")
@@ -99,11 +99,11 @@ Gc = lambda n: G / f"{n}.mp4"; R = lambda n: RU / n
 ST = lambda n: {"stamp": GX / f"stamp_N{n}.png"}
 # anchor: 0 = section start | ("word", occurrence[, words_back]) | "END" = end of the take (tail shots)
 SECTIONS = [
-    ("h1", "h1", 0.25, [
+    ("h1", "h1", 0.12, [
         (0, "talk", "E1", {"ovs": [GX / "hook_title.png"]}),
         (("The", 0), "photo", FR / "W1.png", {"ovs": [GX / "glow.png"]}),
         (("Here's", 0), "talk", "E1", {})]),
-    ("n1", "n1", 0.9, [
+    ("n1", "n1", 0.35, [
         (0, "stamp", Gc("i05_calX"), ST(1)),
         (("Two", 0), "clip", R("r00_s19_file_kid.mp4"), {"ss": 0.6}),
         (("just", 0), "photo", SP / "flickr_plantar-wart-case3a_happyfeet34.jpg", {}),
@@ -118,7 +118,7 @@ SECTIONS = [
         (("carries", 0, 1), "split", R("r05_s13_root_dot.mp4"), {"top": ("photo", SP / "flickr_pokeweed-berries_rkramer62.jpg")}),
         (("dot", 1, 1), "clip", R("r05_s13_root_dot.mp4"), {"ss": 2.5, "clock": True}),
         ("END", "clip", SV / "coverr-touch-lamp-6697.mp4", {"rev": True})]),
-    ("n3", "n3", 1.5, [
+    ("n3", "n3", 0.12, [
         (0, "stamp", FR / "W3.png", {**ST(3), "bk": "photo"}),
         (("little", 0, 1), "photo", FR / "W3.png", {}),
         (("are", 0), "cardclip", GX / "c_dots.png", {"bg": FR / "W1.png", "bk": "photo"}),
@@ -128,20 +128,19 @@ SECTIONS = [
         (("like", 0), "clip", SV / "mixkit_dandelion-closeup_45332.mp4", {}),   # v5: slower VO needs a 2nd shot here
         (("root", 0, 1), "clip", R("r07_s17_soil_cutaway.mp4"), {"ss": 0.2}),
         (("so", 0), "clip", R("r08_s1_dand_back.mp4"), {"ss": 0.4}),
-        ("END", "cardclip", GX / "c_repeat.png", {"bg": SV / "mixkit_dandelion-meadow_33321.mp4"})]),
-    ("n7", "n7", 0.25, [
+    ]),   # v6: "it grows back" card removed (client)
+    ("n7", "n7", 0.12, [
         (0, "stamp", FR / "W7.png", {**ST(7), "bk": "photo"}),
         (("It's", 0), "photo", FR / "W7.png", {}),
         (("Pokeweed", 0), "split", R("r04_s17_root3d.mp4"), {"top": ("photo", SP / "flickr_thuja-occidentalis_srae.jpg")}),
         (("breaking", 0), "clip", R("r04_s17_root3d.mp4"), {"ss": 2.4}),
         (("so", 0), "photo", SP / "flickr_dandelion-roots-hands_isforinsects.jpg", {}),
         (("And", 1), "clip", Gc("i02_kidbrush"), {"ss": 0.3})]),
-    ("n10", "n10", 0.25, [
+    ("n10", "n10", 0.12, [
         (0, "stamp", SV / "mixkit_pool-feet-splashing_1261.mp4", {**ST(10), "ss": 3.0}),
         (("He", 0), "clip", SV / "mixkit_pool-feet-splashing_1261.mp4", {"ss": 4.6}),
-        (("I", 0), "clip", Gc("i03_flipflops"), {}),
-        (("on", 0), "talk", "E4", {})]),
-    ("n14", "n14", 0.25, [
+        (("I", 0), "clip", Gc("i03_flipflops"), {})]),   # v6: flip-flops cover her whole last line (client)
+    ("n14", "n14", 0.12, [
         (0, "stamp", FR / "W14.png", {**ST(14), "bk": "photo"}),
         (("It's", 0), "photo", FR / "W14.png", {}),
         (("Most", 0), "clip", R("r12_s19_clear_sole.mp4"), {"ss": 0.4}),
@@ -152,10 +151,10 @@ SECTIONS = [
         (("no", 2), "clip", R("r13_s19_mason_sole.mp4"), {"ss": 0.5, "grey": True, "ovs": [GX / "redx.png"]}),
         (("It's", 1), "clip", R("r14_s20_feetup.mp4"), {"ss": 0.6}),
         (("pediatricians", 0, 1), "clip", HOWTO, {"ss": 4.75, "crop": "540:960:270:120"})]),
-    ("m1", "m1", 0.2, [(0, "talk", "M1", {})]),
-    ("m2", "m2", 0.2, [(0, "talk", "M2", {})]),
-    ("m3", "m3", 0.25, [(0, "talk", "M3", {})]),
-    ("cl", "cl", 0.2, [
+    ("m1", "m1", 0.1, [(0, "talk", "M1", {})]),
+    ("m2", "m2", 0.1, [(0, "talk", "M2", {})]),
+    ("m3", "m3", 0.1, [(0, "talk", "M3", {})]),
+    ("cl", "cl", 0.1, [
         (0, "talk", "E5", {}),
         (("Get", 0), "cardclip", GX / "c_tiers.png", {"bg": R("r18_s19_three_bottles.mp4"), "up": 40}),
         (("And", 1), "clip", R("r09_s17_three_bottles.mp4"), {"ss": 1.6}),
@@ -183,7 +182,9 @@ BLK = {
 }
 TAKES = {"h1": ["E1"], "n1": ["N1a", "N1T", "N1b"], "n3": ["N3a", "E3", "N3b"], "n7": ["N7"], "n10": ["E4"],
          "n14": ["N14"], "m1": ["M1"], "m2": ["M2"], "m3": ["M3"], "cl": ["E5"]}
-GAP = 0.18   # breath between blocks inside a section
+GAP = 0.08   # breath between blocks inside a section (v6: tighter)
+SPEED = 1.10   # v6: her lines (VO + on-camera) play 10% faster, pitch kept; testimonials stay natural
+MOM = {"E1", "N1a", "N1T", "N1b", "N3a", "E3", "N3b", "N7", "E4", "N14", "E5"}
 WJ = P / "work/v4_words.json"
 
 
@@ -206,7 +207,19 @@ def block_words():
     return cache
 
 
+def clean_words(k, ws):
+    """Drop Whisper's hallucinated tail (e.g. words invented in trailing noise): keep words up to the last one that
+    matches the block's script, and drop punctuation-only tokens."""
+    ws = [w for w in ws if re.search(r"[A-Za-z0-9]", w[0])]
+    sc = [norm(x) for l in BLK[k][1] for x in SCRIPT[l].replace("-", " ").split()]
+    hw = [norm(w[0]) for w in ws]
+    last = max((blk.b + blk.size for blk in difflib.SequenceMatcher(None, sc, hw, autojunk=False).get_matching_blocks() if blk.size), default=len(ws))
+    return ws[:last]
+
+
 BW = block_words()
+for _k in BW:
+    if _k in BLK: BW[_k]["words"] = clean_words(_k, BW[_k]["words"])
 
 
 def take(name):
@@ -215,13 +228,15 @@ def take(name):
     for k in TAKES[name]:
         f, _, talk = BLK[k]; ws = BW[k]["words"]
         a = max(0.0, ws[0][1] - 0.12); b = min(BW[k]["dur"], ws[-1][2] + 0.22)
-        offs[k] = (t, a, b)   # block k occupies section time [t, t+b-a); file time = section time - t + a
-        words += [(w, round(s - a + t, 3), round(e - a + t, 3), k) for w, s, e in ws]
-        parts.append((f, a, b)); t += (b - a) + GAP
+        sp = SPEED if k in MOM else 1.0
+        offs[k] = (t, a, b, sp)   # block k occupies section time [t, t+(b-a)/sp); file time = (section time - t)*sp + a
+        words += [(w, round((s - a) / sp + t, 3), round((e - a) / sp + t, 3), k) for w, s, e in ws]
+        parts.append((f, a, b, sp)); t += (b - a) / sp + GAP
     t -= GAP; wav = TMP / f"take_{name}.wav"
-    ins = sum((["-i", str(f)] for f, _, _ in parts), [])
+    ins = sum((["-i", str(f)] for f, _, _, _ in parts), [])
     fc = "".join(f"[{i}:a]atrim={a:.3f}:{b:.3f},asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo"
-                 + (f",apad=pad_dur={GAP}" if i < len(parts) - 1 else "") + f"[a{i}];" for i, (_, a, b) in enumerate(parts))
+                 + (f",atempo={sp:.3f}" if sp != 1 else "") + (f",apad=pad_dur={GAP}" if i < len(parts) - 1 else "") + f"[a{i}];"
+                 for i, (_, a, b, sp) in enumerate(parts))
     fc += "".join(f"[a{i}]" for i in range(len(parts))) + f"concat=n={len(parts)}:v=0:a=1[a]"
     run([*ins, "-filter_complex", fc, "-map", "[a]", str(wav)])
     return wav, t, words, offs
@@ -238,17 +253,17 @@ def anchor_time(words, a, total):
 def build_section(si, sec):
     name, tk, tail, items = sec; af, tdur, words, offs = take(tk); total = tdur + tail
     if items[-1][1] == "talk":  # a section that ends on a talking shot can't run past the end of that clip
-        bt, ba, _ = offs[items[-1][2]]; total = min(total, bt + dur(BLK[items[-1][2]][0]) - ba - 0.05)
+        bt, ba, _, sp = offs[items[-1][2]]; total = min(total, bt + (dur(BLK[items[-1][2]][0]) - ba) / sp - 0.05)
     starts = [anchor_time(words, it[0], tdur) for it in items]
     if any(b <= a + 0.3 for a, b in zip(starts, starts[1:])): sys.exit(f"{name}: shots too close {starts}")
     parts = []
     for j, (it, t0) in enumerate(zip(items, starts)):
         t1 = starts[j + 1] if j + 1 < len(items) else total
         _, k, src, o = it; o = dict(o); d = t1 - t0
-        if isinstance(o.get("bg"), str): bt, ba, _ = offs[o["bg"]]; o["bgss"] = max(0.0, t0 - bt + ba); o["bg"] = BLK[o["bg"]][0]
+        if isinstance(o.get("bg"), str): bt, ba, _, sp = offs[o["bg"]]; o["bgss"] = max(0.0, (t0 - bt) * sp + ba); o["bg"] = BLK[o["bg"]][0]
         if k == "talk":  # the clip whose own audio is playing: picture time == audio time
-            bt, ba, bb = offs[src]; src = BLK[src][0]; k = "clip"; o["ss"] = max(0.0, t0 - bt + ba)
-            if dur(src) - o["ss"] < d - 0.02: sys.exit(f"{name}: talk shot {j} runs past {src.name} ({o['ss']:.2f}+{d:.2f} > {dur(src):.2f})")
+            bt, ba, bb, sp = offs[src]; src = BLK[src][0]; k = "clip"; o["ss"] = max(0.0, (t0 - bt) * sp + ba); o["speed"] = sp
+            if dur(src) - o["ss"] < d * sp - 0.02: sys.exit(f"{name}: talk shot {j} runs past {src.name} ({o['ss']:.2f}+{d:.2f} > {dur(src):.2f})")
         out = TMP / f"{si:02d}_{name}_{j}.mp4"; piece(k, src, d, o, out); parts.append(out)
     ins = sum((["-i", str(p)] for p in parts), [])
     vc = "".join(f"[{j}:v]" for j in range(len(parts))) + f"concat=n={len(parts)}:v=1:a=0[v]"
@@ -310,9 +325,9 @@ if __name__ == "__main__":
           f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=450[md];"
           f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9[a];"   # no SFX / room tone (client note, Set 18)
           f"[0:v]ass={TMP / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/5[v]")
-    final = P / "out/WilloMD_RootOut_Set5_H1_9x16_v5.mp4"
+    final = P / "out/WilloMD_RootOut_Set5_H1_9x16_v6.mp4"
     run(["-i", str(cat), "-i", str(P / "assets/music/Dreamer.mp3"), "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(FPS),
          "-c:v", "libx264", "-crf", "18", "-maxrate", "10M", "-bufsize", "20M", "-preset", "slow", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-map_metadata", "-1", "-movflags", "+faststart", str(final)])
     shots = sum(len(s[3]) for s in SECTIONS) + 1
-    print("H1 v5", round(dur(final), 2), "s,", shots, "shots,", n, "caption cards ->", final)
+    print("H1 v6", round(dur(final), 2), "s,", shots, "shots,", n, "caption cards ->", final)
