@@ -2,6 +2,8 @@
 
 > **Owner rule (23 Nov 2026, overrides the briefs and CLAIMS.md):** no disclaimer-type text in our videos or generations: no "AI illustration" / AI-generated labels, no footnotes or marks (`*`, `†`), no FDA / "not evaluated" / "results vary" lines, no photo-credit captions. Disclosures go in the platform AI label and the post description. House lesson L1 (`style/LESSONS.md`), checked by `vs qa`.
 
+> **Lessons (25 Nov 2026):** `LESSONS.md` here holds what the client's notes taught us on every set (real bottle, ~3 s b-roll on the words, captions, music to the end, motion 3D, real web cards, kids' faces, delivery). Run `vs lessons brief --brand RootOut` before planning and `vs lessons check <edl> --brand RootOut` before delivery.
+
 WilloMD RootOut™ Advanced Wart, Corn & Callus Oil: a brush-on bedtime oil, **File · Soak · Cover**.
 "Freezing burns the top. This oil soaks down to the root.*" Brand: WilloMD (Alderion LLC). Read before any RootOut edit:
 

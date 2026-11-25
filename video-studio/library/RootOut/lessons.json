@@ -1,0 +1,173 @@
+{
+ "version": 1,
+ "lessons": [
+  {
+   "id": "L1",
+   "rule": "The product on screen is always the real RootOut bottle (small amber bottle, tall glossy white cap, white label with navy 'RootOut', blue band). Never an AI bottle with a garbled or different label. Make product shots with Seedance 2.5 using the real bottle as image_references (WilloMd media 2c52c56e-9f2f-4f40-9fda-4caa813e7578), or use the real PDP photos; Soul cannot hold the label.",
+   "category": "brand",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "bottle",
+    "label",
+    "product",
+    "another product"
+   ]
+  },
+  {
+   "id": "L2",
+   "rule": "Every b-roll shot is about 3 s (1.5-4 s), one shot per spoken phrase, cut on her words (get word timings with vs transcribe on the VO). Never one long clip under several lines.",
+   "category": "cuts",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "3 sec",
+    "3 s",
+    "single clip",
+    "length"
+   ]
+  },
+  {
+   "id": "L3",
+   "rule": "Each b-roll shot shows exactly what is being said at that moment (dandelion on 'dandelion', file on 'file', brush on 'brush', root under the skin on 'root'). Check every shot against the word timings before rendering; replace any shot that only fits the mood.",
+   "category": "cuts",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "explain",
+    "what is being said",
+    "match",
+    "accurate"
+   ]
+  },
+  {
+   "id": "L4",
+   "rule": "Each b-roll source is used once per ad; no freeze frames; no slow motion below 0.75x.",
+   "category": "cuts",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "once",
+    "repeat",
+    "freeze frame",
+    "slow"
+   ]
+  },
+  {
+   "id": "L5",
+   "rule": "Captions run through the whole video (bold word-by-word, active word highlighted), kept clear of the product, graphics, web cards and the hook title.",
+   "category": "captions",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "caption",
+    "subtitles"
+   ]
+  },
+  {
+   "id": "L6",
+   "rule": "Background music runs to the last frame and stays clearly audible on the offer and end cards: lift the bed where nobody speaks, and skip any near-silent bar in the track. Only a short fade on the final frame.",
+   "category": "music",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "music",
+    "until the end",
+    "background"
+   ]
+  },
+  {
+   "id": "L7",
+   "rule": "No room tone or sound effects in the mix unless the client asks for them (client notes on Sets 5 and 18): voice and music only.",
+   "category": "sound",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "keywords": [
+    "room tone",
+    "sound effects",
+    "sfx"
+   ]
+  },
+  {
+   "id": "L8",
+   "rule": "Mechanism animations move: 3D skin cross-sections like the Amoils #004 reference (hard top, wart, root; drops, door, root dissolving), never flat static diagrams. Reuse the shared clips first (library/RootOut/ads/set18_build/REUSE.md and the other sets' jobs.json, 0 credits) before generating.",
+   "category": "assets",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "animation",
+    "motion",
+    "3d",
+    "cross-section"
+   ]
+  },
+  {
+   "id": "L9",
+   "rule": "Web screenshots only from real public pages (AAD, NHS, Cleveland Clinic, PubMed, the WilloMD site), text quoted unchanged with the line highlighted, no third-party logos; log the source. Never fake reviews, Reddit posts or comments.",
+   "category": "assets",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "screenshot",
+    "web",
+    "internet",
+    "real"
+   ]
+  },
+  {
+   "id": "L10",
+   "rule": "Kids' faces are never in frame: feet, hands, pajama legs, backs of heads only.",
+   "category": "framing",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "kid face",
+    "child face"
+   ]
+  },
+  {
+   "id": "L11",
+   "rule": "Deliver to the WilloMD Drive folder (vs deliver --to willomd) only after the person says approved, and only the newest _vN of each hook; never drafts or raw renders; verify every size in Drive.",
+   "category": "delivery",
+   "added": "2026-11-25 09:25",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "must": true,
+   "keywords": [
+    "drive",
+    "deliver",
+    "push to drive"
+   ]
+  }
+ ]
+}
