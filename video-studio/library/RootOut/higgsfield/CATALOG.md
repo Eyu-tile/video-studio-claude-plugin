@@ -5,12 +5,14 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1643 generations (1219 video, 275 image, 149 audio). RootOut era (from 21 Nov 2026): 829.
+Totals: 1664 generations (1221 video, 282 image, 161 audio). RootOut era (from 21 Nov 2026): 850.
 
-## RootOut-era video (461; 247 named by a set)
+## RootOut-era video (463; 249 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `9c0b1e18` | Set 14 · s14_flake_blocked | seedance_2_5 | blocked by the safety filter (fleshy wart macro start frame); do not retry |
+| 2026-11-25 | `5327664e` | Set 14 · s14_hook | seedance_2_5 | 5 s: hand dabs store wart liquid on a kid's heel, white ring of skin, bath towel, slow push-in (H1 hook) |
 | 2026-11-25 | `ad56e80b` | Set 2 · T1_row2 | seedance_2_5 | Set 2 narrator take (voice lock): 'Freezing, pads, acid, clippers. You've tried at least one. It grew back.' s |
 | 2026-11-25 | `281451bc` | Set 6 · K1_hook_h1 | seedance_2_5 | Set 6 mom at kitchen counter, daylight, says the H1 hook word for word (11 s), lifts the real RootOut bottle a |
 | 2026-11-25 | `2af822f3` | Set 7 · s7_g4_aisle |  | Seedance 720p 4s from 03473b8f: grey-sleeve hand takes a freeze can off a drugstore shelf, puts it back |
@@ -473,10 +475,17 @@ Totals: 1643 generations (1219 video, 275 image, 149 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (219; 104 named by a set)
+## RootOut-era image (226; 111 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `92446e16` | Set 14 · s14_dad_scene | gpt_image_2_6 | GPT edit of the Soul dad: porch step, son's smooth bare heel on his knee, sock half off, no kid face |
+| 2026-11-25 | `a12c1a21` | Set 14 · s14_mom_scene | gpt_image_2_6 | GPT edit of the Soul mom: selfie on bed edge, girl's feet in pink pajamas + picture book behind her, no kid fa |
+| 2026-11-25 | `80524449` | Set 14 · s14_flake_frame_v2 | gpt_image_2_6 | Toy-like 3D skin block on navy, small grey wart bump on top (start frame for a flaking shot; not animated: acc |
+| 2026-11-25 | `fb38803d` | Set 14 · s14_flake_frame_v1 | gpt_image_2_6 | Navy 3D macro of a wart on hard skin; Seedance refused it as sensitive (do not reuse as a start frame) |
+| 2026-11-25 | `ccfc781d` | Set 14 · s14_hook_frame | gpt_image_2_6 | Kid heel on bath towel, white soggy ring round a wart, hand dabs clear store wart liquid with tiny brush (hook |
+| 2026-11-25 | `5c709c8f` | Set 14 · s14_dad_soul | soul_2 | Soul 2 dad ~42, dark hair, stubble, navy henley, porch step, daylight (testimonial dad identity) |
+| 2026-11-25 | `9dd13ec4` | Set 14 · s14_mom_soul | soul_2 | Soul 2 mom ~34, light-brown hair, gray sweatshirt, kid's bedroom at night, lamp (testimonial mom identity) |
 | 2026-11-25 | `0b6315d8` | Set 1B · s1b_f01_reject | soul_2 | Hook frame attempt: lower face visible, dirty sole smudge |
 | 2026-11-25 | `cf0bfb91` | Set 1B · s1b_g01_reject | soul_2 | Hook frame attempt: boy profile face visible (nose, lips) |
 | 2026-11-25 | `e8eb69ba` | Set 1B · s1b_g10_run | soul_2 | Start frame N10 (H2): boy knees-down running on sidewalk, green shorts, white sneakers |
@@ -697,10 +706,22 @@ Totals: 1643 generations (1219 video, 275 image, 149 audio). RootOut era (from 2
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
 | 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
-## RootOut-era audio (149; 50 named by a set)
+## RootOut-era audio (161; 62 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-25 | `65260dc8` | Set 14 · s14_n11 | text2speech_v2 | Narrator line n11 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `c9cccfe4` | Set 14 · s14_n10 | text2speech_v2 | Narrator line n10 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `0a787d2e` | Set 14 · s14_n09 | text2speech_v2 | Narrator line n09 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `ad083052` | Set 14 · s14_n08 | text2speech_v2 | Narrator line n08 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `901eec73` | Set 14 · s14_n07 | text2speech_v2 | Narrator line n07 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `1924a994` | Set 14 · s14_n06 | text2speech_v2 | Narrator line n06 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `2571a06b` | Set 14 · s14_n05 | text2speech_v2 | Narrator line n05 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `447673d7` | Set 14 · s14_n04 | text2speech_v2 | Narrator line n04 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `3679e00d` | Set 14 · s14_n03 | text2speech_v2 | Narrator line n03 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `ae9ebe54` | Set 14 · s14_n02 | text2speech_v2 | Narrator line n02 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
+| 2026-11-25 | `d81ec30e` | Set 14 · s14_n01_naomi_test | text2speech_v2 | Voice test, Naomi, same hook line (not used) |
+| 2026-11-25 | `57723ac5` | Set 14 · s14_n01 | text2speech_v2 | Narrator (ElevenLabs Sloane b57b22a0): 'Why won't store wart treatments work on the bottom of a kid's foot?' |
 | 2026-11-25 | `751e45fd` | Set 1B · s1b_t03 | seed_audio | Boy 2 testimonial (Miles, Seed Speech): It was gone in like two weeks. Now I run at recess. |
 | 2026-11-25 | `5b4d562b` | Set 1B · s1b_t02 | elevenlabs_v4 | Mom 2 testimonial (Maya), voice sample for her Seedance take: My daughter's six. She hated the freeze... |
 | 2026-11-25 | `d5d9c03c` | Set 1B · s1b_t01 | elevenlabs_v4 | Girl testimonial (Annie): It's like Chapstick for my wart. Just a little cold. |
