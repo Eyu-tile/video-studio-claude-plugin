@@ -5,12 +5,19 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1685 generations (1224 video, 300 image, 161 audio). RootOut era (from 21 Nov 2026): 871.
+Totals: 1704 generations (1231 video, 311 image, 162 audio). RootOut era (from 21 Nov 2026): 890.
 
-## RootOut-era video (466; 252 named by a set)
+## RootOut-era video (473; 259 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `44483b49` | Set 15 · M7_kitchen_close | seedance_2_5 | Set 15 mom close with 3 real bottles; laughs mid-line and the bottles fly out after ~4 s: use first sentence o |
+| 2026-11-26 | `f4cecbaa` | Set 15 · M6_kitchen_14nights | seedance_2_5 | Set 15 mom kitchen selfie: 'Then we did fourteen more nights, so the root's gone too.' 5 s |
+| 2026-11-26 | `8ded26a6` | Set 15 · M5_bedroom_routine | seedance_2_5 | Set 15 mom kneels by son's bed (son chest-down, dino pajamas, tablet, socked foot on her knee), real bottle on |
+| 2026-11-26 | `9fcc2cbb` | Set 15 · M2_backyard_dandelion | seedance_2_5 | Set 15 mom backyard selfie, snaps a dandelion on camera: full Dandelion line word for word; 9 s, voice ref M1 |
+| 2026-11-26 | `d0a2100c` | Set 15 · B3_bed_foot_blocked | seedance_2_5 | Set 15 BLOCKED by safety filter (bare kid foot with dot on a pillow, bedtime). Use socks/pajama legs instead. |
+| 2026-11-26 | `cff7c54f` | Set 15 · B1_couch_five_fingers | seedance_2_5 | Set 15 boy chest-down on couch, wart sole, five fingers: 'They froze my wart five times. It always came back.' |
+| 2026-11-26 | `7908f4c8` | Set 15 · M1_kitchen_round6 | seedance_2_5 | Set 15 mom kitchen selfie: 'Round six was already booked. Then I found out why.' native voice (163 Hz) = her v |
 | 2026-11-26 | `f871b5c1` | Set 16 · s16_N1_h1_natural | seedance_2_5 | TEST natural-movement recipe: H1 hook line in prompt, Cora 5.6 s voice sample (08a648c4) + real-selfie motion  |
 | 2026-11-25 | `6ce646e3` | Set 14 · s14_t2_dad | seedance_2_5 | Dad on porch step, own voice: 'His heel took about two weeks. We kept going, to make sure it was gone.' son's  |
 | 2026-11-25 | `e4dd0edb` | Set 14 · s14_t1_mom | seedance_2_5 | Mom on bed edge, own voice: 'She said it didn't hurt. Kept reading her book.' girl's feet + picture book behin |
@@ -478,10 +485,11 @@ Totals: 1685 generations (1224 video, 300 image, 161 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (244; 129 named by a set)
+## RootOut-era image (255; 140 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `7b81d1af` | Set 15 · e9_couch_smooth_sole | gpt_image_2_6 | Set 15 boy chest-down on couch, smooth sole (wart gone), finger taps the spot; start frame B4 |
 | 2026-11-26 | `0c14a31e` | Set 2 · s2_s16_green_smooth | gpt_image_2_6 | GPT 2.6: green sock, smooth sole |
 | 2026-11-26 | `9173bc16` | Set 2 · s2_s13_green_dot | gpt_image_2_6 | GPT 2.6: green sock, clear dot still on, morning |
 | 2026-11-26 | `81f297e3` | Set 2 · s2_s12_yellow_sock_pad | gpt_image_2_6 | GPT 2.6: yellow sock with pad stuck inside |
@@ -500,6 +508,16 @@ Totals: 1685 generations (1224 video, 300 image, 161 audio). RootOut era (from 2
 | 2026-11-26 | `6d945a99` | Set 2 · s2_narrator_why | gpt_image_2_6 | GPT 2.6: narrator, table cleared, one real RootOut bottle alone |
 | 2026-11-26 | `244dc570` | Set 16 · s16_N2_couch_crosslegged | gpt_image_2_6 | GPT 2.6 edit: cross-legged on couch, open-hand gesture, son's feet in lap, wart visible |
 | 2026-11-26 | `5bfe6a12` | Set 16 · s16_N1_couch_relaxed | gpt_image_2_6 | GPT 2.6 edit: relaxed natural pose, sitting back in couch corner, son's feet across lap, hand on ankle (fix fo |
+| 2026-11-26 | `b99d9d0e` | Set 15 · e8_swim_bag_hook | gpt_image_2_6 | Set 15 navy swim bag + blue goggles on hallway hook, boy's hand reaches in; start frame B2 |
+| 2026-11-26 | `afd9c193` | Set 15 · e7_couch_five_fingers | gpt_image_2_6 | Set 15 boy chest-down on couch, bare sole with wart toward camera, five fingers up; start frame B1 |
+| 2026-11-26 | `218dfe6b` | Set 15 · e6_bedroom_kneel | gpt_image_2_6 | Set 15 mom kneels by bed, son in dino pajamas chest-down with tablet, socked foot on her knee, bottle on night |
+| 2026-11-26 | `09de1af6` | Set 15 · e5_patio_step_son | gpt_image_2_6 | Set 15 mom on patio step with son (shoulders down), real bottle; start frame M3 |
+| 2026-11-26 | `9b47ec50` | Set 15 · e4_backyard_dandelion | gpt_image_2_6 | Set 15 mom crouched on lawn selfie, hand by a dandelion, cracked soil; start frame M2 |
+| 2026-11-26 | `a5f0b372` | Set 15 · e3_kitchen_3bottles | gpt_image_2_6 | Set 15 mom behind counter, three real RootOut bottles in a row, labels clean; start frame M7 |
+| 2026-11-26 | `cf677969` | Set 15 · e2_kitchen_bottle | gpt_image_2_6 | Set 15 mom kitchen selfie holding real RootOut bottle by her face, label clean; start frame M4 |
+| 2026-11-26 | `c3eb7f7a` | Set 15 · e1_kitchen_calendar | gpt_image_2_6 | Set 15 mom (Soul bfb7aff9) kitchen selfie, wall calendar with circled date; start frame M1 |
+| 2026-11-26 | `592d761f` | Set 15 · mom_soul_alt | text2image_soul_v2 | Set 15 mom Soul alt (looks younger, not used) |
+| 2026-11-26 | `bfb7aff9` | Set 15 · mom_soul_master | text2image_soul_v2 | Set 15 mom identity (Soul 2): late 30s, light brown low ponytail, grey crew tee, kitchen selfie |
 | 2026-11-25 | `92446e16` | Set 14 · s14_dad_scene | gpt_image_2_6 | GPT edit of the Soul dad: porch step, son's smooth bare heel on his knee, sock half off, no kid face |
 | 2026-11-25 | `a12c1a21` | Set 14 · s14_mom_scene | gpt_image_2_6 | GPT edit of the Soul mom: selfie on bed edge, girl's feet in pink pajamas + picture book behind her, no kid fa |
 | 2026-11-25 | `80524449` | Set 14 · s14_flake_frame_v2 | gpt_image_2_6 | Toy-like 3D skin block on navy, small grey wart bump on top (start frame for a flaking shot; not animated: acc |
@@ -727,10 +745,11 @@ Totals: 1685 generations (1224 video, 300 image, 161 audio). RootOut era (from 2
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
 | 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
-## RootOut-era audio (161; 62 named by a set)
+## RootOut-era audio (162; 63 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `d312a19a` | Set 15 · mom_voice_sample_naomi | text2speech_v2 | ElevenLabs Naomi sample for the Set 15 mom (same 163 Hz as M1); M1's own audio used as the reference instead |
 | 2026-11-25 | `65260dc8` | Set 14 · s14_n11 | text2speech_v2 | Narrator line n11 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
 | 2026-11-25 | `c9cccfe4` | Set 14 · s14_n10 | text2speech_v2 | Narrator line n10 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
 | 2026-11-25 | `0a787d2e` | Set 14 · s14_n09 | text2speech_v2 | Narrator line n09 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
