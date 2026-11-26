@@ -27,3 +27,10 @@ Balance after (25 Nov, ~19:15 UTC): **0.55 credits**. This step spent ~44.5 (4 �
 - QA (`vs qa --brand RootOut`, all three): -14.0/-14.1/-14.2 LUFS, true peak ≤ -1.6 dBTP, no silences > 1 s, no black or frozen frames. Each b-roll source once per ad, no b-roll shot > 4.6 s, slowest clip 0.81x.
 - Transcript vs script (H1): 404/406 words; every difference is number/apostrophe formatting by the transcriber.
 - Weak beats to flag to the client: "Kid two's skin went white" uses the reused pad-press clip (the white-ring close-up was safety-blocked); the "8x" and "dandelion icon" end-card elements are not in v1.
+
+## v2 previews (26 Nov) — `build_v2.py`, shot lists `SHOTS_H{1,2,3}_v2.md`. Changes from the Amoils #046 analysis (REFERENCE_ANALYSIS.md), 0 new credits:
+- Three-panel split hook (blue / yellow / green socks, one colour per panel, cropped from V01) on "We gave three kids" (H1) / "So we tested… / So we gave three kids" (H2, H3 bridges). Hook titles wrap to 2 lines (H1, H3).
+- Off-camera narration 1.08x (atempo; the on-camera takes untouched): H1 151 → 145 s.
+- Winner held longer: the smooth green-sock sole holds through "Kid three's spot was gone", then the barefoot hallway run (S1 b17) plays 1.9 s after the line.
+- Close: cutaway to two kids running barefoot in a backyard (S20 g14 ee26b25b) on "and if it's not gone, you get every penny back"; bouncing orange down-arrow on "link below"; 90-day money-back badge from "90 days" to the end of the take (sits on her shoulder, clear of her face).
+- QA all three: -14.0/-14.2/-14.2 LUFS, true peak ≤ -1.4 dBTP, no silences > 1 s, no black or frozen frames, each source once, no b-roll > 4.6 s. H1 144.9 s · H2 144.8 s · H3 142.7 s.
