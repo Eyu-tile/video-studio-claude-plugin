@@ -35,8 +35,12 @@ second, under 14 MB so it can be published), `strip.jpg` (timeline filmstrip), `
 **On claude.ai (the Artifact tool is available): publish it.** Read `publish.json` and call the Artifact tool with
 its `file_path`, `files`, `capabilities`, `icon` and `description` (the video, filmstrip and poster go up as files
 beside the page). Comments are then stored in the page's shared database: everyone the person shares it with sees
-them live, and you can read them. People need **Contributor** access to comment (Viewers and Commenters can watch and
-read only); say so in one line. Then:
+them live, and you can read them. To post there, people need edit access: invite an outside client **by email as
+Editor**, and they must sign in with that email and open the invitation link (say so in one line). Everyone else
+(Viewers, Commenters, the plain link, signed out) can watch; their notes stay on their device, marked **NOT sent**, with
+a warning before they leave, and they send them with Copy notes or Export CSV. Those notes end with an "Access check"
+line: `user=false` means claude.ai doesn't link their account to the invite; `write=false` means view-only access.
+The page has a Refresh button that re-reads the shared list. Then:
 ```bash
 vs present link $P/out/review/<version> <artifact url>     # remembered, and on the task's version when --task was given
 ```

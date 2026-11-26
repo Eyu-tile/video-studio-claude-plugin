@@ -126,6 +126,7 @@ input.name { background: var(--bg); border: 1px solid var(--line); border-radius
 .send-row { display: flex; align-items: center; gap: 8px; }
 .status { color: var(--muted); font-size: 12px; flex: 1; min-width: 0; }
 .status.warn { color: var(--danger); }
+.chip.warn { color: var(--danger); border-color: var(--danger); }
 .replying { font-size: 12px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
 
 @media (max-width: 880px) {
@@ -146,6 +147,7 @@ input.name { background: var(--bg); border: 1px solid var(--line); border-radius
     <span class="chip" id="meta"></span>
     <span class="spacer"></span>
     <span class="chip" id="counts">0 open</span>
+    <button class="btn" id="refresh" type="button" title="Reload the comments">Refresh</button>
     <button class="btn" id="copyNotes" type="button" title="Copy open comments as timestamped lines (vs notes format)">Copy notes</button>
     <button class="btn" id="exportCsv" type="button" title="Download comments as a Frame.io-style CSV">Export CSV</button>
   </header>
@@ -355,34 +357,81 @@ input.name { background: var(--bg); border: 1px solid var(--line); border-radius
     else if (e.key === "c") { e.preventDefault(); $("text").focus(); }
   });
 
-  // ---------- storage: shared db when published on claude.ai, this browser otherwise ----------
+  // ---------- storage: the shared list when this viewer can write it, notes on this device otherwise ----------
+  // Fixes carried over from the Hume review pages (2026-11-21), where client comments never reached the editor:
+  //  - each claude.use() is tried on its own, so one refused capability no longer drops shared comments for everyone;
+  //  - a viewer whose writes are refused keeps notes on this device, told plainly they are NOT sent (Copy notes /
+  //    Export CSV to send them), and is warned before leaving the page;
+  //  - Refresh re-reads the shared list; an access-check line in the status and in Copy notes says why a route failed.
   const LKEY = `vs-review:${cfg.id || cfg.video}`;
   const local = {
     read() { try { return JSON.parse(localStorage.getItem(LKEY) || "[]"); } catch { return []; } },
     write(rows) { try { localStorage.setItem(LKEY, JSON.stringify(rows)); return true; } catch { return false; } },
   };
-  let store = null;
-  function setMode(mode, text) { state.mode = mode; $("mode").textContent = text; }
+  const onClaude = () => !!(window.claude && window.claude.use);
+  const DENIED = ["invalid_argument", "not_granted", "permission_denied"];
+  const INVITE_TIP = "If you were invited, sign in to Claude with the invited email, open the invitation link, then press Refresh.";
+  let store = null, dbRef = null, unsub = null, unsent = false, lastErr = null;
+  const diag = {};
+  function diagText() {
+    return "Access check: " + Object.entries(diag).map(([k, x]) => `${k}=${x}`).join(" · ") + (lastErr ? ` · error=${lastErr}` : "");
+  }
+  const newId = () => `c${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+  const stamp = () => new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  function setMode(mode, text) { state.mode = mode; $("mode").textContent = text; $("mode").classList.toggle("warn", mode === "local" && onClaude()); }
   function setStatus(msg, warn = false) { const s = $("status"); s.textContent = msg; s.classList.toggle("warn", warn); }
+  function stopLive() { if (unsub) { try { unsub(); } catch { /* already closed */ } unsub = null; } }
 
-  function useLocal(reason) {
-    let mem = local.read();
+  function useLocal(reason, keep = []) {
+    stopLive();
+    let mem = [...local.read(), ...keep];               // keep: a note the shared list refused, so nothing typed is lost
     const persisted = local.write(mem);
     const save = () => { local.write(mem); state.comments = mem; render(); };
     store = {
-      add: async (c) => { c.id = `c${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`; mem = [...mem, c]; save(); },
+      add: async (c) => { c.id = newId(); mem = [...mem, c]; unsent = true; save(); },
       update: async (id, patch) => { mem = mem.map((c) => c.id === id ? { ...c, ...patch } : c); save(); },
-      remove: async (id) => { mem = mem.filter((c) => c.id !== id && c.parent !== id); save(); },
+      remove: async (id) => { mem = mem.filter((c) => c.id !== id && c.parent !== id); unsent = mem.length > 0; save(); },
     };
-    state.comments = mem;
-    setMode("local", persisted ? "Saved in this browser" : "Not saved (private window)");
+    state.comments = mem; state.canWrite = true;
+    $("composer").querySelectorAll("textarea,button").forEach((x) => x.disabled = false);
     $("nameInput").hidden = false;
-    try { $("nameInput").value = localStorage.getItem("vs-review:name") || ""; } catch { /* storage blocked */ }
-    if (reason) setStatus(reason);
+    try { $("nameInput").value = $("nameInput").value || localStorage.getItem("vs-review:name") || ""; } catch { /* storage blocked */ }
+    if (onClaude()) {
+      unsent = unsent || mem.length > 0;
+      setMode("local", persisted ? "NOT sent · this device" : "NOT sent · not saved");
+      setStatus(`${reason ? reason + " " : ""}Your notes are kept on this device only and are NOT sent. When you're done, press `
+        + `Copy notes (or Export CSV) and send them to the editor. (${diagText()})`, true);
+    } else {
+      setMode("local", persisted ? "Saved in this browser" : "Not saved (private window)");
+      if (reason) setStatus(reason);
+    }
     render();
   }
 
+  function subscribe() {
+    stopLive();
+    const col = dbRef.collection("comments");
+    return new Promise((resolve) => {
+      let settled = false;
+      const done = (ok) => { if (!settled) { settled = true; resolve(ok); } };
+      const timer = setTimeout(() => { setStatus("Comments can't be reached yet. Press Refresh to try again.", true); done(false); }, 10000);
+      try {
+        unsub = col.onSnapshot((snap) => {
+          if (state.mode === "local") return;
+          if (!snap.metadata.fromCache) clearTimeout(timer);
+          state.comments = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+          $("mode").textContent = `Shared · live · ${stamp()}`;
+          render(); done(true);
+        }, (err) => {
+          clearTimeout(timer); lastErr = (err && err.code) || "connect";
+          setStatus(`Comments stopped updating (${lastErr}). Press Refresh to reconnect.`, true); done(false);
+        });
+      } catch (e) { clearTimeout(timer); lastErr = (e && e.code) || "connect"; done(false); }
+    });
+  }
+
   async function useDb(db, user) {
+    dbRef = db;
     const col = db.collection("comments");
     store = {
       add: async (c) => { await col.add(c); },
@@ -392,31 +441,47 @@ input.name { background: var(--bg); border: 1px solid var(--line); border-radius
         await col.doc(id).delete();
       },
     };
-    if (user) {
-      const me = await user.me();
-      state.me = me.id;
-      const can = await user.can("data.write");
-      state.canWrite = can !== false;
+    let w = null;
+    if (user) {                                          // each call on its own: one failure must not hide the rest
+      try { const me = await user.me(); state.me = me && me.id; } catch { /* anonymous */ }
+      try { w = await user.can("data.write"); } catch { /* unknown: let the first write decide */ }
+      try { diag.owner = !!(await user.isOwner()); } catch { /* older runtime */ }
     }
-    setMode("db", state.canWrite ? "Shared · live" : "View only");
-    if (!state.canWrite) { $("composer").querySelectorAll("textarea,button").forEach((b) => b.disabled = true);
-      setStatus("You can watch and read comments. Ask the owner for Contributor access to comment."); }
-    const timer = setTimeout(() => setStatus("Comments can't be reached yet. They'll appear when the connection returns.", true), 10000);
-    col.onSnapshot((snap) => {
-      if (!snap.metadata.fromCache) clearTimeout(timer);
-      state.comments = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
-      render();
-    }, (err) => { clearTimeout(timer); setStatus(`Comments stopped updating (${err.code}). Reload the page to reconnect.`, true); });
+    diag.write = w;
+    if (w === false) { useLocal("Your access lets you watch and read this page but not post to its comment list."); return; }
+    state.canWrite = true;
+    setMode("db", "Shared · live");
+    $("composer").querySelectorAll("textarea,button").forEach((x) => x.disabled = false);
+    if (!user) setStatus("Claude doesn't link your account to this page, so your comments may not post. " + INVITE_TIP, true);
+    await subscribe();
   }
 
-  (async () => {
-    const use = window.claude && window.claude.use;
-    if (!use) { useLocal("Opened as a file: comments stay in this browser. Export CSV to send them."); return; }
-    let db = null, user = null;
-    try { [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]); } catch { db = null; }
-    if (!db) { useLocal("Shared comments are not available here: they stay in this browser. Export CSV to send them."); return; }
-    useDb(db, user).catch(() => useLocal("Could not open shared comments; they stay in this browser."));
-  })();
+  async function connect() {
+    stopLive(); state.mode = "none"; lastErr = null;
+    diag.claude = onClaude();
+    if (!diag.claude) { useLocal("Opened as a file: comments stay in this browser. Export CSV to send them."); return; }
+    const safe = (n) => Promise.resolve().then(() => window.claude.use(n))
+      .catch((e) => { diag[n + "Err"] = (e && e.code) || "error"; return null; });
+    const [db, user] = await Promise.all([safe("db"), safe("user")]);
+    diag.db = !!db; diag.user = !!user;
+    if (!db) { useLocal("Shared comments aren't available on your link." + (user ? "" : " " + INVITE_TIP)); return; }
+    try { await useDb(db, user); }
+    catch (e) { lastErr = (e && e.code) || "open"; useLocal("Could not open shared comments."); }
+  }
+  window.addEventListener("beforeunload", (e) => { if (state.mode === "local" && unsent && onClaude()) { e.preventDefault(); e.returnValue = ""; } });
+  $("refresh").onclick = async () => {
+    if (state.mode === "db" && dbRef) {
+      const ok = await subscribe();
+      setStatus(ok ? `Comments refreshed · ${stamp()}` : "Couldn't reach the comments. Try again.", !ok); return;
+    }
+    if (state.mode === "local" && onClaude() && !unsent) {   // e.g. the invite was just accepted: try the shared list again
+      await connect();
+      if (state.mode === "db") setStatus("Connected: your comments are shared now."); return;
+    }
+    if (state.mode === "local") { state.comments = local.read(); render(); setStatus("Notes on this device reloaded. They are NOT sent until you press Copy notes or Export CSV.", onClaude()); return; }
+    location.reload();
+  };
+  connect();
 
   // ---------- render ----------
   async function names(ids) {
@@ -579,8 +644,20 @@ input.name { background: var(--bg); border: 1px solid var(--line); border-radius
     if (state.mode === "db") { if (state.me) c.by = state.me; }
     else { const n = $("nameInput").value.trim(); if (n) { c.byName = n; try { localStorage.setItem("vs-review:name", n); } catch { /* ok */ } } }
     $("send").disabled = true;
-    try { await store.add(c); $("text").value = ""; clearOut(); endReply(); setStatus(state.mode === "db" ? "Comment posted." : "Comment saved in this browser."); }
-    catch (err) { fail(err); }
+    try {
+      await store.add(c); $("text").value = ""; clearOut(); endReply();
+      if (state.mode === "db") setStatus("Comment posted.");
+      else if (onClaude()) setStatus("Note kept on this device: NOT sent yet. Press Copy notes or Export CSV when you're done.", true);
+      else setStatus("Comment saved in this browser.");
+    }
+    catch (err) {
+      if (state.mode === "db" && err && DENIED.includes(err.code)) {
+        lastErr = err.code; c.id = newId();
+        const n = $("nameInput").value.trim(); if (n) c.byName = n;
+        $("text").value = ""; clearOut(); endReply(); unsent = true;
+        useLocal("The shared comment list didn't accept your note, so it's kept here.", [c]);
+      } else fail(err);
+    }
     finally { $("send").disabled = !state.canWrite; }
   });
 
@@ -612,21 +689,22 @@ input.name { background: var(--bg); border: 1px solid var(--line); border-radius
   $("copyNotes").onclick = async () => {
     const txt = notes(true);
     if (!txt) { setStatus("No open comments to copy."); return; }
-    try { await navigator.clipboard.writeText(txt); setStatus("Open comments copied. Paste them to Claude or into vs notes."); }
+    const full = state.mode === "local" && onClaude() ? `${txt}\n\n${diagText()}` : txt;
+    try { await navigator.clipboard.writeText(full); unsent = false; setStatus("Open comments copied. Paste them to Claude or into vs notes, or send them to the editor."); }
     catch { $("text").value = txt; $("text").select(); setStatus("Copy blocked here: the notes are in the box, selected. Copy them from there."); }
   };
   $("exportCsv").onclick = async () => {
     const file = `${(cfg.slug || "review")}-${cfg.version || "v1"}-comments.csv`;
     const dl = window.claude && window.claude.use ? await window.claude.use("downloads").catch(() => null) : null;
     if (dl) {
-      try { await dl.save({ filename: file, data: csv() }); setStatus("CSV saved."); }
+      try { await dl.save({ filename: file, data: csv() }); unsent = false; setStatus("CSV saved."); }
       catch (e) { setStatus(e && e.code === "declined" ? "Download cancelled." : "Download isn't available here. Use Copy notes.", e && e.code !== "declined"); }
       return;
     }
     if (window.claude && window.claude.use) { setStatus("Download isn't available here. Use Copy notes."); return; }
     const a = document.createElement("a");                       // opened as a local file: a normal download works
     a.href = URL.createObjectURL(new Blob([csv()], { type: "text/csv" })); a.download = file;
-    document.body.appendChild(a); a.click(); a.remove();
+    document.body.appendChild(a); a.click(); a.remove(); unsent = false;
     setStatus("CSV downloaded.");
   };
 

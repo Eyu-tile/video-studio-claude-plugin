@@ -163,3 +163,29 @@ Source: producer in chat; heart animation supplied (Drive). Everything else unch
 | 1 | 01:37:09 | Zoom out again; still too close | Hand-on-chest shot at 1.3× (was 1.7×). Her face now shows (Samantha, already in the ad uncropped at 1:40) | When "zoom out" keeps coming back, go clearly wider in one step |
 | 2 | 01:28 | Use the supplied heart animation | Producer's body/heart animation on "it showed a 65% blockage…", cropped slightly to remove its "Veo" watermark | Supplied AI clips: crop out generator watermarks (client: hide AI logos) |
 | 3 | 02:05 | A white hand wearing the Band | White hand with the Band on the wrist, outdoors (UGC) | |
+
+## Sizes: 2026-11-22, v6 → 4:5, 1:1 and a text-free 9:16 (producer in chat)
+| # | Where | Note (as given, lightly cleaned) | What we did | Lesson / rule |
+|---|---|---|---|---|
+| 1 | all hooks | "v6 in 1:1 and 4:5" | Built from the v6 EDLs (scripts/peri_sizes.py): per-shot vertical framing from contact sheets, so faces, the Band, BP monitor and phones stay in frame. App screens, the H3 HUD animation, and in 1:1 the Band-box close-up and phone opening use the blur fit, so the whole screen and its mark show. Each caption line is placed in the nearest gap that avoids faces and the product. Hook headline re-laid below the first hook shot's chin; study card centred. Same VO, music and encode as v6; lengths and −14.2 LUFS match. | Resizing: list each shot's no-cover zones (face, product) apart from its keep-in-frame range; a single range leaves no caption spot in 1:1. |
+| 2 | all hooks | "the exact 9:16 without any caption text, including the hook heading" | `_9x16_v6_CLEAN`: v6 EDLs with no captions, no hook headline, and no study-quote card. Same frames, length and loudness as v6. | Text in the footage itself stays (the H3 HUD labels, app screens, the "65% BLOCKED" animation). |
+
+## Sizes round 1: 2026-11-23, on 4:5 / 1:1 v6 → v7 (review page FRQdNQgD2PvkViVm49QKdn)
+Source: review page comments (8). Notes in the body apply to all three hooks; notes in a hook apply to that hook only.
+| # | Where | Note (as given, lightly cleaned) | What we did | Lesson / rule |
+|---|---|---|---|---|
+| 1 | H1 4:5 0:36, H1 1:1 0:37 (body) | "Fully fit the metrics footages to the frame, zooming on the important parts" | All 12 app screens: blur fit replaced by a full-frame crop centred on the red mark, with the mark's position measured from each clip. Captions kept off the mark. All hooks, both sizes. | Resizing: app screens never blur-fit; crop to the mark. Measure the mark; don't eyeball it. |
+| 2 | H1 1:1 0:43 (body) | "Put the product on the frame fully, no cut part" | sha_gift: the box sits at 30–65 % of the frame, not 8–52 % as read off the contact sheet. Reframed; whole box in frame. All hooks. | Check every product shot in the rendered size, not only on the contact sheet. |
+| 3 | H1 1:1 1:03 (body) | "Fully zoom the footage, no blurred part" | trev_app: full-frame crop on the phone screen. All hooks. | No blur fits in this client's resizes. |
+| 4 | H1 1:1 1:47 (body) | "Fully zoom the product, no blurred part, show all of the product" | bandcu1: full frame, whole Band; caption above it. All hooks. | Same. |
+| 5 | H3 4:5 0:02, H3 1:1 0:03 (hook) | "Fit the footage to the frame showing the heart" | anim_H3: blur fit replaced by a crop centred on the heart. H3 only. | |
+| 6 | H2 1:1 0:02 (hook) | "Show the heart part" | anim_H2 reframed so the heart sits in the upper middle; hook headline moved below it. H2 1:1 only. | The hook headline must not cover a hook shot's subject, the second hook shot included. |
+
+## Delivery: 2026-11-23, sizes (4:5 v7, 1:1 v7, 9:16 no captions v6)
+Drive: Hume_4Kiru/VIDEO_BAND_Longevity_40Plus_Perimenopause_ROHIT_NEBA_121126_2026Week46 https://drive.google.com/drive/folders/12jytFwWMDDgFaZCbAsoU14HBXKYX56Fi
+| Folder | Files (H1–H3) | Sizes in Drive = local |
+|---|---|---|
+| 4:5 | …_H{1,2,3}_4x5_v7.mp4 | 93283321 / 93785815 / 96816602 |
+| 1:1 | …_H{1,2,3}_1x1_v7.mp4 | 78225325 / 78503037 / 81024620 |
+| 9:16 No captions | …_H{1,2,3}_9x16_v6_CLEAN.mp4 | 119864579 / 120246844 / 123942301 |
+Nested folders: the delivery script only creates folders at the top level of Hume_4Kiru, so each size went into its own working folder there. The Drive connector then moved each folder into the main ad folder and renamed it.
