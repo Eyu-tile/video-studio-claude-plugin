@@ -5,12 +5,13 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1666 generations (1223 video, 282 image, 161 audio). RootOut era (from 21 Nov 2026): 852.
+Totals: 1669 generations (1224 video, 284 image, 161 audio). RootOut era (from 21 Nov 2026): 855.
 
-## RootOut-era video (465; 251 named by a set)
+## RootOut-era video (466; 252 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `f871b5c1` | Set 16 · s16_N1_h1_natural | seedance_2_5 | TEST natural-movement recipe: H1 hook line in prompt, Cora 5.6 s voice sample (08a648c4) + real-selfie motion  |
 | 2026-11-25 | `6ce646e3` | Set 14 · s14_t2_dad | seedance_2_5 | Dad on porch step, own voice: 'His heel took about two weeks. We kept going, to make sure it was gone.' son's  |
 | 2026-11-25 | `e4dd0edb` | Set 14 · s14_t1_mom | seedance_2_5 | Mom on bed edge, own voice: 'She said it didn't hurt. Kept reading her book.' girl's feet + picture book behin |
 | 2026-11-25 | `9c0b1e18` | Set 14 · s14_flake_blocked | seedance_2_5 | blocked by the safety filter (fleshy wart macro start frame); do not retry |
@@ -31,8 +32,8 @@ Totals: 1666 generations (1223 video, 282 image, 161 audio). RootOut era (from 2
 | 2026-11-25 | `1cb0db13` | Set 16 · s16_M9_week | seedance_2_5 | mom couch: 'After a week?' kid 'All dry and dark', finger on dry spot (start F1), 4 s |
 | 2026-11-25 | `71c53011` | Set 16 · s16_M6_safe | seedance_2_5 | mom couch with real bottle: 'Deep doesn't mean harsh... no scar' (start E2), 8 s |
 | 2026-11-25 | `7b1a4ec3` | Set 16 · s16_M5a_yard | seedance_2_5 | mom front-yard selfie: 'Freezing, acid and shaving only snap off the top,' (start E4), 4 s |
-| 2026-11-25 | `fd05a7bb` | Set 16 · s16_M3_q1 | seedance_2_5 | mom couch: 'Did any of it work?' kid 'Nope' off-frame + thumbs-down, 'Then I figured out why' (start E1), 5 s |
-| 2026-11-25 | `a026d221` | Set 16 · s16_M1_h1 | seedance_2_5 | mom couch, Cora voice native (audio ref), H1 hook: holds son's sole to lens (start E1), 8 s |
+| 2026-11-25 | `fd05a7bb` | Set 16 · s16_M3_q1 | seedance_2_5 | Set 16 v1 take rejected: stiff lean-in pose, over-precise lip-sync to exact-line audio ref (client: not natura |
+| 2026-11-25 | `a026d221` | Set 16 · s16_M1_h1 | seedance_2_5 | Set 16 v1 take rejected: stiff lean-in pose, over-precise lip-sync to exact-line audio ref (client: not natura |
 | 2026-11-25 | `3b653e65` | Set 20 · s20_adult_foot_blocked |  | blocked by safety filter, not retried |
 | 2026-11-25 | `55d4bfce` | Set 20 · s20_h1_draft_blocked |  | blocked by safety filter (kid bare heel), refunded; do not retry |
 | 2026-11-25 | `980d299f` |  | kling3_0 | Clean medical 3D animation continuing exactly from the start image: the same cross-section block of stacked dr |
@@ -477,10 +478,12 @@ Totals: 1666 generations (1223 video, 282 image, 161 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (226; 111 named by a set)
+## RootOut-era image (228; 113 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `244dc570` | Set 16 · s16_N2_couch_crosslegged | gpt_image_2_6 | GPT 2.6 edit: cross-legged on couch, open-hand gesture, son's feet in lap, wart visible |
+| 2026-11-26 | `5bfe6a12` | Set 16 · s16_N1_couch_relaxed | gpt_image_2_6 | GPT 2.6 edit: relaxed natural pose, sitting back in couch corner, son's feet across lap, hand on ankle (fix fo |
 | 2026-11-25 | `92446e16` | Set 14 · s14_dad_scene | gpt_image_2_6 | GPT edit of the Soul dad: porch step, son's smooth bare heel on his knee, sock half off, no kid face |
 | 2026-11-25 | `a12c1a21` | Set 14 · s14_mom_scene | gpt_image_2_6 | GPT edit of the Soul mom: selfie on bed edge, girl's feet in pink pajamas + picture book behind her, no kid fa |
 | 2026-11-25 | `80524449` | Set 14 · s14_flake_frame_v2 | gpt_image_2_6 | Toy-like 3D skin block on navy, small grey wart bump on top (start frame for a flaking shot; not animated: acc |
