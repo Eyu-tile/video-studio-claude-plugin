@@ -44,3 +44,9 @@ exact, f0 174 vs 182 Hz, natural sigh → then the batch. All takes checked with
 
 Spent this pass ≈ 1,630 cr (takes 1,176 + test 35 + G1/G2 63 + re-shoots 350 + audio ~3). Balance 3,961 → 673 (shared account; other sessions ran too).
 Music: "Wholesome", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit line goes in the post copy, not on screen.
+
+## Edit v2 (26 Nov) — reference pace (owner picked change 1 of REFERENCE_ANALYSIS.md)
+Her takes at 1.10x (atempo + setpts together, lips in sync), joins tightened (0.06 s in / 0.16 s out). T07 now the fridge
+card only (no 0.5 s flash of her); the dot clip starts on "clear". 0 credits.
+QA: 153.8 s, 3.04 words/s (v1 2.74; PestLab #026 3.38), 457/457 script words (only number/spelling forms differ),
+−14.4 LUFS; the only still frames are the study card's 2 s hold (43–45.7 s). Out: projects/rootout-set6/out/WilloMD_RootOut_Set6_H1_9x16_v2.mp4 (preview).
