@@ -38,3 +38,19 @@ Local video: `amoils-022.mp4` (28.5 s, 360x640, 3 cuts, avg shot 7.13 s; not com
 ## Do not copy
 
 kid faces; 'burned off 7 times' style claims unless true for our person
+
+## Watched the real ad again (26 Nov, Set 15 session)
+Pulled from the Meta Ad Library (id 4217474961875639; 28.5 s, 360x640, 30 fps; video not committed, frame sheet in
+`projects/rootout-set15/ref/ref_sheet.jpg` on the Set 15 machine).
+- **Shots:** 4 (cuts at 7.7, 19.6, 24.3 s): kid to camera 7.7 s → kid with the bottle + inset before/after photos 11.8 s
+  → dad steps in beside him 4.7 s → bottle in a hand with a red "Shop Now!" sticker + arrow 4.2 s. Handheld, white
+  door, flat home light; the kid's face is the whole first 20 s.
+- **Words:** ~60 words in 24 s (~2.5 w/s). Kid: count (7) → nothing happened → embarrassed at school → "this little
+  bottle right here, with a little bit of that" (holds it up at 7.8 s, yellow applicator) → "in maybe a month" (inset
+  photos: warty sole, then clear sole) → hands, knees, "all gone" → dad: "No burning, no pain… unbelievable. No joke."
+- **No** mechanism, no offer, no guarantee, no mom (the longer cuts #048/#023 add a VO half: all wart types, crowd
+  claim, kids love it, 90-day guarantee, review scroll).
+- **Captions:** white rounded boxes, black sentence-case text, lower third, phrase by phrase.
+- **Sound:** a constant bed under the whole ad (no silence below -40 dB; the end card is as loud as the speech), -18 LUFS.
+- **What carries it:** the kid's exact count + social cost in his own voice, the bottle in the kid's hand early, a
+  picture of the result right on the result line, and an adult witness for the one fear (pain).
