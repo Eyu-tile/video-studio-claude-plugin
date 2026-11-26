@@ -5,12 +5,14 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1765 generations (1266 video, 311 image, 188 audio). RootOut era (from 21 Nov 2026): 951.
+Totals: 1770 generations (1268 video, 314 image, 188 audio). RootOut era (from 21 Nov 2026): 956.
 
-## RootOut-era video (508; 294 named by a set)
+## RootOut-era video (510; 296 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `642db616` | Set 15 · E1_mom_hand_bottle_end | seedance_2_5 | Woman's hand holds the real bottle up to the lens in a blurred kitchen, slight turn; empty top third; end-card |
+| 2026-11-26 | `67a8e282` | Set 15 · B5_kid_hand_bottle_up | seedance_2_5 | Kid's hand (navy sleeve) pushes the real RootOut bottle to the lens, small shake, couch blurred; no audio; 4 s |
 | 2026-11-26 | `ff5e21b4` | Set 6 · T10b_root_r3 | seedance_2_5 | Set 6 plant line re-shoot 2: pokeweed OK, 'white cedar' still wrong ('seed Dieter'); used with the Seed Audio  |
 | 2026-11-26 | `fc4d3b9e` | Set 6 · T10b_root_r2 | seedance_2_5 | Set 6 plant line re-shoot 1: pokeweed OK, 'white cedar' heard as 'white eyeliner'. |
 | 2026-11-26 | `bddeb77d` | Set 6 · K1_hook_h1_v3 | seedance_2_5 | Set 6 hook H1, re-shoot 2 with a pronunciation note: 'limping' clear (STT exact), real bottle in hand, label r |
@@ -520,10 +522,13 @@ Totals: 1765 generations (1266 video, 311 image, 188 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (255; 140 named by a set)
+## RootOut-era image (258; 143 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `21ab4d2a` | Set 15 · e11_mom_hand_bottle_kitchen | gpt_image_2_6 | Woman's hand holds the real RootOut bottle up to the lens, warm kitchen blurred, empty top third (end-card pla |
+| 2026-11-26 | `2dfc00c0` | Set 15 · e10_kid_hand_bottle | gpt_image_2_6 | Kid's hand + navy sleeve holds the real RootOut bottle up to the lens, living-room couch blurred; label clean |
+| 2026-11-26 | `fb9510ca` | Set 15 · e10a_boy_couch_bottle_blocked | gpt_image_2_6 | BLOCKED by safety filter: edit of the couch frame with a bare kid foot + bottle. Use a hand-only close-up inst |
 | 2026-11-26 | `7b81d1af` | Set 15 · e9_couch_smooth_sole | gpt_image_2_6 | Set 15 boy chest-down on couch, smooth sole (wart gone), finger taps the spot; start frame B4 |
 | 2026-11-26 | `0c14a31e` | Set 2 · s2_s16_green_smooth | gpt_image_2_6 | GPT 2.6: green sock, smooth sole |
 | 2026-11-26 | `9173bc16` | Set 2 · s2_s13_green_dot | gpt_image_2_6 | GPT 2.6: green sock, clear dot still on, morning |

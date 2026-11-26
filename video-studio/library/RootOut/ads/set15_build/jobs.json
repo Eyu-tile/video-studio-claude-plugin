@@ -15,7 +15,9 @@
   "e6_bedroom": "218dfe6b-eb19-4f3b-9177-7c09e7f319d8",
   "e7_couch_wart": "afd9c193-4892-46f9-9d9e-8da9708103b4",
   "e8_swim_bag": "b99d9d0e-c077-4e55-91c7-80513ac14cdb",
-  "e9_couch_smooth": "7b81d1af-e289-41da-a5ea-88ef4f58909e"
+  "e9_couch_smooth": "7b81d1af-e289-41da-a5ea-88ef4f58909e",
+  "e10_kid_hand_bottle": "2dfc00c0-ddb9-4277-ab62-6c1797887355",
+  "e11_end_hand": "21ab4d2a-91e4-4891-9d68-e06892488020"
  },
  "takes": {
   "M1": "7908f4c8-1ccb-4b8a-84b9-0d1e4cc0f4e8",
@@ -28,7 +30,9 @@
   "B1": "cff7c54f-8f7c-46f1-be29-8701f1c14e87",
   "B2": "6ea5dce3-1d98-4db2-bac0-ea1e5f7fe1d5",
   "B3": "795a5050-2257-45a0-a2bd-d4630c0214c5",
-  "B4": "eceeabc6-9206-4a0b-a341-f6b91b94aab4"
+  "B4": "eceeabc6-9206-4a0b-a341-f6b91b94aab4",
+  "B5_bottle_up": "67a8e282-15de-41b5-ac33-92f572775bdc",
+  "E1_end_hand": "642db616-3fb2-4361-9523-018c6116af26"
  },
  "reuse": {
   "r01_clinic": "2eadbf23-bc85-4666-a36d-5031d0dc66ca",
@@ -45,6 +49,11 @@
   "r15_three_bottles": "5e57f5fc-7598-4519-9320-ab8c47a3f6e2"
  },
  "blocked": {
-  "B3_v1 d0a2100c-2ee1-4996-b82e-2974749d16de": "nsfw filter: bare child foot close-up in bed -> retried with socks + pajama legs"
+  "B3_v1 d0a2100c-2ee1-4996-b82e-2974749d16de": "nsfw filter: bare child foot close-up in bed -> retried with socks + pajama legs",
+  "e10a fb9510ca-e105-45c6-bba4-174944d841f8": "nsfw: couch frame with bare kid foot + bottle -> hand-only close-up"
+ },
+ "revoice": {
+  "fix_m3_a": "a280639e-c19a-407b-9dce-c51877135ddc",
+  "fix_b2_a": "a60fb5bf-462e-4d7c-bb8f-96b9dd34c1b5"
  }
 }

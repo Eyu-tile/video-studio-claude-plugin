@@ -28,3 +28,16 @@ Music: "Pamgaea", Kevin MacLeod (incompetech.com), CC BY 4.0 — credit line goe
   moved to the top on the routine bottle shot and the close (L5). Voice + music only (L7); music to the last frame,
   lifted on the end card (L6). End card: "Not the top. The root." · Buy 2, get 1 free (no "AI illustration", house L1).
 - Out: `projects/rootout-set15/out/WilloMD_RootOut_Set15_H1_9x16_v1.mp4`.
+
+## v2 (26 Nov) — owner: "do all of those changes" (from the Amoils #022 swipe analysis)
+- **Bottle in the boy's hand early:** new B5 (kid's hand + navy sleeve pushes the real bottle to the lens) on "Then I found
+  out why." at ~10 s (the swipe shows it at 7.8 s). The couch-frame version was blocked by the safety filter (bare kid
+  foot) → hand-only close-up.
+- **Before/after on the result line:** rounded photo insets (top right) cut from the boy's own couch frames: wart sole on
+  "About two weeks…", clear sole on "…and it was gone" (swipe 0:11). No labels (house L1). AI images (owner's call).
+- **Hand-held end card:** new E1 (woman's hand holds the real bottle in the blurred kitchen) + overlay: "Not the top. The
+  root." · "Buy 2, get 1 free" · red "Shop now!" sticker + arrow down to the link (swipe's last 4 s). 3.6 s.
+- **Hook caption** = his words: "They froze my wart / five times." (the bottom caption is skipped while it shows).
+- Cost: 2 GPT Image frames (+1 blocked) + 2 × 4 s Seedance ≈ 60 cr. Proxy ad analysis 2 credits.
+- QA: transcript matches the script; `vs qa --brand RootOut` all PASS (-14.1 LUFS, -1.4 dBTP, no freezes, L1).
+- Out: `projects/rootout-set15/out/WilloMD_RootOut_Set15_H1_9x16_v2.mp4` (75.1 s).

@@ -51,8 +51,37 @@ def end_card():
     d.text((W // 2, y0 + bh // 2), "Buy 2, get 1 free", font=font("ExtraBold", 66), fill="white", anchor="mm")
     im.save(G / "end_card.png")
 
+def inset(src, out, box):
+    """Rounded photo card (white border, soft shadow) cropped to the sole, like the swipe's inset photos."""
+    im = Image.open(src).convert("RGB").crop(box).resize((420, 420), Image.LANCZOS)
+    m = Image.new("L", im.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, 419, 419), 34, fill=255)
+    card = Image.new("RGBA", (452, 452), (0, 0, 0, 0)); d = ImageDraw.Draw(card)
+    d.rounded_rectangle((0, 0, 451, 451), 44, fill=(255, 255, 255, 255)); card.paste(im, (16, 16), m)
+    card.save(G / out)
+
+def end_overlay():
+    """v2 end card overlay for the hand-held bottle clip (the swipe ends on a bottle in a hand + 'Shop Now!' + arrow)."""
+    W, H = 1080, 1920; im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    d.rounded_rectangle((110, 150, 970, 470), 40, fill=(255, 255, 255, 236))
+    d.text((W // 2, 190), "Not the top.", font=font("ExtraBold", 100), fill=NAVY, anchor="ma")
+    d.text((W // 2, 318), "The root.", font=font("ExtraBold", 100), fill=BLUE, anchor="ma")
+    bw, bh = 760, 132; x0 = (W - bw) // 2; y0 = 1650
+    d.rounded_rectangle((x0, y0, x0 + bw, y0 + bh), 66, fill=ORANGE)
+    d.text((W // 2, y0 + bh // 2), "Buy 2, get 1 free", font=font("ExtraBold", 68), fill="white", anchor="mm")
+    # 'Shop now' sticker, tilted, with a hand-drawn arrow down to the link
+    st = Image.new("RGBA", (420, 130), (0, 0, 0, 0)); sd = ImageDraw.Draw(st)
+    sd.rounded_rectangle((6, 6, 414, 124), 60, fill=(214, 40, 57, 255), outline="white", width=6)
+    sd.text((210, 65), "Shop now!", font=font("Black", 70), fill="white", anchor="mm")
+    st = st.rotate(-7, expand=True, resample=Image.BICUBIC); im.alpha_composite(st, (650, 1420))
+    pts = [(930 + 70 * (t / 60) ** 0.6, 1520 + 330 * (t / 60) ** 1.4) for t in range(0, 61, 2)]
+    d.line(pts, fill="white", width=12, joint="curve")
+    ex, ey = pts[-1]; d.polygon([(ex + 4, ey + 34), (ex - 30, ey - 12), (ex + 30, ey - 14)], fill="white")
+    im.save(G / "end_overlay.png")
+
 if __name__ == "__main__":
-    hook(["Frozen 5 times.", "Still there."], "hook_h1.png")
+    hook(["They froze my wart", "five times."], "hook_h1.png")  # v2: his exact words, like the swipe's hook caption
     hook(["It came back", "faster every time."], "hook_h2.png")
     hook(["“I'm done", "with my wart!”"], "hook_h3.png")
-    end_card(); print("ok", sorted(p.name for p in G.iterdir()))
+    GEN = Path("/home/user/video-studio-claude-plugin/projects/rootout-set15/raw/gen")
+    inset(GEN / "e7.png", "inset_before.png", (90, 860, 950, 1720)); inset(GEN / "e9.png", "inset_after.png", (90, 860, 950, 1720))
+    end_overlay(); end_card(); print("ok", sorted(p.name for p in G.iterdir()))

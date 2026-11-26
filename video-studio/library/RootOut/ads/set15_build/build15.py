@@ -10,10 +10,10 @@ from pathlib import Path
 P = Path("/home/user/video-studio-claude-plugin/projects/rootout-set15")
 CL = P / "raw/gen/clips"; RE = P / "raw/reuse"; G = P / "assets/graphics"; MUSIC = P / "assets/music/Pamgaea.mp3"
 SITE = Path("/home/user/video-studio-claude-plugin/video-studio/library/RootOut/resources/site_videos/shopify-3062835a.mp4")
-HOOK = os.environ.get("HOOK", "H1"); VER = os.environ.get("VER", "v1")
+HOOK = os.environ.get("HOOK", "H1"); VER = os.environ.get("VER", "v2")
 OUT = P / f"work/{HOOK}"; SH = OUT / "shots"; SH.mkdir(parents=True, exist_ok=True)
 FINAL = P / f"out/WilloMD_RootOut_Set15_{HOOK}_9x16_{VER}.mp4"; FINAL.parent.mkdir(exist_ok=True)
-W, H, FPS, END = 1080, 1920, 30, 3.0
+W, H, FPS, END = 1080, 1920, 30, 3.6
 COVER = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
 ENC = ["-an", "-c:v", "libx264", "-crf", "17", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-r", str(FPS)]
 NUM = {"4": "four", "8x": "eight times", "14": "fourteen", "5": "five", "6": "six"}
@@ -57,7 +57,8 @@ ITEMS = [
  ("B1", "It always came back.", 0.4, [(None, RE / "r01_clinic.mp4", {"in": 0.2})]),
  # B2's take says "I miss swim": voice = Seed Audio clone of B1 ("missed"), picture = the B2 take
  ("vo/fix_b2_a", "After every freeze, I missed swim.", 0.25, [(None, TAKE, {"vtake": "B2", "vin": 1.3})]),
- ("M1", "Round six was already booked. Then I found out why.", 0.2, [(None, TAKE, {})]),
+ ("M1", "Round six was already booked. Then I found out why.", 0.5,
+   [(None, TAKE, {}), ("Then I found", CL / "B5_bottle_up.mp4", {})]),  # v2: the bottle in his hand early (swipe 0:07.8)
  ("M2", "Freezing, acid and shaving only snap off the top, like picking a dandelion. The root stays under the hard skin, so it grows back.", 0.2,
    [(None, TAKE, {}), ("The root stays", RE / "r03_soil_cutaway.mp4", {})]),
  ("M3", "Here's what I told him. RootOut has four plants, bud. Lemon opens up the hard skin. Tea tree carries it down, up to 8x deeper than a regular cream.", 0.1,
@@ -71,7 +72,8 @@ ITEMS = [
    [(None, TAKE, {}), ("Only on the", RE / "r10_file_macro.mp4", {"in": 0.2}), ("Brush the oil", RE / "r11_routine.mp4", {"in": 2.0, "captop": 1}),
     ("Then a clear", RE / "r12_brush_dot.mp4", {"in": 3.6})]),
  ("B3", "It doesn't hurt at all.", 0.2, [(None, TAKE, {"croptop": 0.2})]),  # crop: his chin/mouth touch the top edge (L10)
- ("B4", "About two weeks with this little bottle, and it was gone.", 0.15, [(None, TAKE, {})]),  # the take already shows the smooth sole
+ ("B4", "About two weeks with this little bottle, and it was gone.", 0.15,
+   [(None, TAKE, {"inset": [("About two weeks", "inset_before.png"), ("and it was gone", "inset_after.png")]})]),  # v2: before/after photos on the result line (swipe 0:11)
  ("M6", "Then we did fourteen more nights, so the root's gone too.", 0.2, [(None, TAKE, {})]),
  # M7: the take laughs between the sentences and the bottles fly out after ~4 s -> first sentence on camera, laugh dropped,
  # the money-back line over the real three-bottle clip
@@ -123,7 +125,7 @@ def build(plan_only=False):
     for it in L:
         for ph, src, o in it["vis"]:
             cuts.append((it["t0"] if ph is None else max(it["t0"], at(it, ph)), src, o, it))
-    cuts.sort(key=lambda c: c[0]); cuts.append((VEND, G / "end_card.png", {"end": 1}, None))
+    cuts.sort(key=lambda c: c[0]); cuts.append((VEND, CL / "E1_end_hand.mp4", {"end": 1}, None))  # v2: bottle in a hand + Shop now
     # a talking shot must not run past its take's last frame (that would freeze, L4): pull the next cut earlier
     for k in range(len(cuts) - 1):
         t0, src, o, it = cuts[k]
@@ -188,6 +190,7 @@ def captions(L, shots, TOTAL, VEND, path):
     for i, g in enumerate(gs):
         gend = min(g[-1][2] + 0.25, gs[i + 1][0][1] - 0.02 if i + 1 < len(gs) else g[-1][2] + 0.25)
         if g[0][1] >= VEND - 0.05: continue
+        if g[-1][1] < min(2.6, L[0]["t1"] + 0.3) - 0.05: continue  # the hook box already shows these words
         st = "CapTop" if any(a - 0.05 <= g[0][1] < b for a, b in top) else "Cap"
         for wi, w in enumerate(g):
             s = w[1] - 0.02 if wi else g[0][1] - 0.04; e = g[wi + 1][1] - 0.02 if wi + 1 < len(g) else gend
@@ -202,8 +205,21 @@ def finish(L, shots, TOTAL, VEND):
     hk = next(s for s in shots if s["opts"].get("hook")); hook_end = min(2.6, next(i for i in L)["t1"] + 0.3)
     ins = ["-i", OUT / "picture.mp4", "-loop", "1", "-framerate", "30", "-t", f"{hook_end:.2f}", "-i", G / f"hook_{HOOK.lower()}.png"]
     fl = [f"[1]format=rgba,fade=t=out:st={hook_end - 0.15:.2f}:d=0.15:alpha=1[hk]",
-          f"[0][hk]overlay=x=(W-w)/2:y='170+max(0,40*(1-t/0.15))':eof_action=pass[v1]",
-          f"[v1]subtitles={T / 'cap.ass'}:fontsdir=/usr/share/fonts/opentype/inter,noise=alls=4:allf=t,format=yuv420p[vout]"]
+          f"[0][hk]overlay=x=(W-w)/2:y='170+max(0,40*(1-t/0.15))':eof_action=pass[v1]"]
+    # v2 overlays: before/after photo insets on the result line, end-card text + Shop now sticker over the hand-held bottle
+    ov = []
+    for it in L:
+        for ph, src, o in it["vis"]:
+            for q, (iph, png) in enumerate(o.get("inset", [])):
+                a = at(it, iph); b = at(it, o["inset"][q + 1][0]) if q + 1 < len(o["inset"]) else it["t1"] + 0.15
+                ov.append((G / png, a, b, 590, 230))
+    ov.append((G / "end_overlay.png", VEND, TOTAL, 0, 0))
+    last = "v1"
+    for k, (png, a, b, x, y) in enumerate(ov):
+        j = k + 2; d = b - a; ins += ["-loop", "1", "-framerate", "30", "-t", f"{d:.2f}", "-i", png]
+        fl.append(f"[{j}]format=rgba,fade=t=in:st=0:d=0.12:alpha=1,setpts=PTS+{a:.3f}/TB[o{j}]")
+        fl.append(f"[{last}][o{j}]overlay=x={x}:y='{y}+max(0,30*(1-(t-{a:.2f})/0.12))':eof_action=pass[w{j}]"); last = f"w{j}"
+    fl.append(f"[{last}]subtitles={T / 'cap.ass'}:fontsdir=/usr/share/fonts/opentype/inter,noise=alls=4:allf=t,format=yuv420p[vout]")
     ff(*ins, "-filter_complex", ";".join(fl), "-map", "[vout]", "-t", f"{TOTAL:.3f}", "-c:v", "libx264", "-crf", "20", "-maxrate", "9M",
        "-bufsize", "18M", "-preset", "medium", "-r", "30", T / "picture_fin.mp4")
     # music: runs to the last frame, ducked under the voice, lifted on the end card, short fade on the final frame only
