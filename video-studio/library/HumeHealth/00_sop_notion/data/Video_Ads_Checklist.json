@@ -1,0 +1,70 @@
+{
+ "name": "📹 Video Ads Checklist",
+ "source_block": "2a83e72e-5270-8127-9d6c-dd262d9420fd",
+ "schema": [
+  [
+   "Done",
+   "checkbox",
+   []
+  ],
+  [
+   "Element",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Element": "The deliverable follows all the notes that the brief provided",
+   "_id": "2a83e72e-5270-800b-b807-fb1da66cbcef"
+  },
+  {
+   "Element": "No typo’s in any of the captions",
+   "_id": "2a83e72e-5270-8141-98c2-d1aae99916fc"
+  },
+  {
+   "Element": "Voiceover is correct and easy to follow",
+   "_id": "2a83e72e-5270-813d-b946-e6dd3c6b4f8d"
+  },
+  {
+   "Element": "The hook is attention grabbing",
+   "_id": "2a83e72e-5270-815a-a639-d3daba1a04a2"
+  },
+  {
+   "Element": "The pacing is correct, as per the target audience",
+   "_id": "2a83e72e-5270-8141-a73b-cec7fe135005"
+  },
+  {
+   "Element": "The video has a CTA",
+   "_id": "2a83e72e-5270-8131-895e-efff921e2767"
+  },
+  {
+   "Element": "All the notes inside the Creatives (Designer/Editor) SOP are follow",
+   "_id": "2a83e72e-5270-81a2-8efa-e3db2b471a70"
+  },
+  {
+   "Element": "The video speaks to a specific audience we want to target",
+   "_id": "2a83e72e-5270-81eb-84e5-e489fb51d8d7"
+  },
+  {
+   "Element": "The video is backed by research",
+   "_id": "2a83e72e-5270-8123-89d1-c4928163f190"
+  },
+  {
+   "Element": "The text is easy to read",
+   "_id": "2a83e72e-5270-819b-8625-d7b5666b1122"
+  },
+  {
+   "Element": "The UI does not cover the text or any important parts of the video",
+   "_id": "2a83e72e-5270-81d0-be60-d1d69328a6c2"
+  },
+  {
+   "Element": "Video is requested in sizes 1080x1350 & 1080x1920",
+   "_id": "2a83e72e-5270-8165-9c08-f51e5dfc72c3"
+  },
+  {
+   "Element": "The file naming convention it's the correct one",
+   "_id": "2a83e72e-5270-809d-a5d7-d468138c4a71"
+  }
+ ]
+}

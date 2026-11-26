@@ -1,0 +1,207 @@
+{
+ "name": "Channel Playbooks",
+ "source_block": "c6302062-b8e0-4f18-b726-ae93593c5027",
+ "schema": [
+  [
+   "Primary Metrics",
+   "text",
+   []
+  ],
+  [
+   "Adaptation Rules",
+   "text",
+   []
+  ],
+  [
+   "Owners",
+   "person",
+   []
+  ],
+  [
+   "Common Mistakes",
+   "text",
+   []
+  ],
+  [
+   "Recommended Awareness Stages",
+   "multi_select",
+   [
+    "Unaware",
+    "Problem aware",
+    "Solution aware",
+    "Product aware",
+    "Most aware"
+   ]
+  ],
+  [
+   "Channel Role",
+   "text",
+   []
+  ],
+  [
+   "Ideal Length",
+   "text",
+   []
+  ],
+  [
+   "Copy Style",
+   "text",
+   []
+  ],
+  [
+   "Best Hook Types",
+   "text",
+   []
+  ],
+  [
+   "Pacing",
+   "text",
+   []
+  ],
+  [
+   "Visual Style",
+   "text",
+   []
+  ],
+  [
+   "User Mindset",
+   "text",
+   []
+  ],
+  [
+   "Technical Requirements",
+   "text",
+   []
+  ],
+  [
+   "CTA Style",
+   "text",
+   []
+  ],
+  [
+   "Best Formats",
+   "multi_select",
+   [
+    "UGC",
+    "Static",
+    "AI visual",
+    "Long-form video",
+    "CTV spot",
+    "Advertorial",
+    "Listicle",
+    "Email",
+    "SMS",
+    "Landing page"
+   ]
+  ],
+  [
+   "Winning Examples",
+   "text",
+   []
+  ],
+  [
+   "Failed Examples",
+   "text",
+   []
+  ],
+  [
+   "Proof Style",
+   "text",
+   []
+  ],
+  [
+   "Landing-Page Recommendation",
+   "text",
+   []
+  ],
+  [
+   "Last Reviewed",
+   "date",
+   []
+  ],
+  [
+   "Offer Style",
+   "text",
+   []
+  ],
+  [
+   "Channel",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Common Mistakes": "Feature dumping before belief shift; sending cold hooks to product-aware PDP only.",
+   "Channel Role": "Scale fast, validate hooks and angles, feed winners into CRO and CRM.",
+   "Ideal Length": "6-35s for UGC, 1:1 and 4:5 for statics.",
+   "Best Hook Types": "Contrarian, confession, hidden problem, demonstration.",
+   "Pacing": "Hook in first 1.5 seconds, proof by second 5.",
+   "CTA Style": "Shop now, take the quiz, learn what your scale misses.",
+   "Proof Style": "Product demo, app screenshots, customer language, simple mechanism.",
+   "Landing-Page Recommendation": "Match TOF hooks to listicle or problem-aware LP.",
+   "Channel": "Meta",
+   "_id": "39d20d08-9385-8108-9648-dcf5b18afc6f"
+  },
+  {
+   "Common Mistakes": "Assuming YouTube viewers know the product category.",
+   "Channel Role": "Longer explanation for mechanism, comparison and decision confidence.",
+   "Ideal Length": "30-90s for shorts/demand gen; 2-4 min for long-form explainers.",
+   "Best Hook Types": "Question, authority, myth, comparison.",
+   "Pacing": "Open with problem, build mechanism, show demo, close with proof.",
+   "CTA Style": "Learn more; see how Hume measures progress.",
+   "Proof Style": "Mechanism explanation plus screen recording.",
+   "Landing-Page Recommendation": "Send to educational/product landing pages with deeper proof.",
+   "Channel": "YouTube",
+   "_id": "39d20d08-9385-810e-a0ed-fd61519dee2f"
+  },
+  {
+   "Common Mistakes": "Discount-only communication without education.",
+   "Channel Role": "Reinforce education, objection handling, post-purchase success and cross-sell.",
+   "Ideal Length": "Short emails/SMS with one belief shift each.",
+   "Best Hook Types": "Education, checklist, confession, proof reminder.",
+   "Pacing": "One insight, one proof, one action.",
+   "CTA Style": "Open the app, complete setup, shop compatible product.",
+   "Proof Style": "Usage tips, trend interpretation, safe customer language.",
+   "Landing-Page Recommendation": "Send to product education, onboarding or offer-specific pages.",
+   "Channel": "CRM",
+   "_id": "39d20d08-9385-812c-8d20-dcfc07bcded9"
+  },
+  {
+   "Common Mistakes": "Overproduced performance-ad feel or medical-sounding claims.",
+   "Channel Role": "Creator-led discovery, raw product demo and relatable confession hooks.",
+   "Ideal Length": "12-45s.",
+   "Best Hook Types": "Confession, problem reveal, demonstration, challenge.",
+   "Pacing": "Native, quick cuts, high first-frame curiosity.",
+   "CTA Style": "See your own body composition; check the link.",
+   "Proof Style": "Creator use case and visible app reveal.",
+   "Landing-Page Recommendation": "Use quiz/listicle or UGC-congruent bridge pages.",
+   "Channel": "TikTok",
+   "_id": "39d20d08-9385-8152-b93c-d7bf84d0fc9a"
+  },
+  {
+   "Common Mistakes": "Ad says plateau, page says generic smart scale.",
+   "Channel Role": "Convert ad promise into a page promise without breaking belief congruence.",
+   "Ideal Length": "As long as needed to resolve the awareness stage.",
+   "Best Hook Types": "Headline must mirror ad hook or new belief.",
+   "Pacing": "Above-the-fold: persona, problem, promise, proof, CTA.",
+   "CTA Style": "Product-aware CTA for PDP; educational CTA for cold traffic.",
+   "Proof Style": "Approved claims, app visuals, comparison tables, review language.",
+   "Landing-Page Recommendation": "Use Congruence DB before launch.",
+   "Channel": "CRO Landing Pages",
+   "_id": "39d20d08-9385-815d-996e-f230b95684fd"
+  },
+  {
+   "Common Mistakes": "Trying to test too many claims in one spot.",
+   "Channel Role": "Broad awareness and belief shift, especially category education.",
+   "Ideal Length": "15s, 30s, 60s.",
+   "Best Hook Types": "Problem reveal, aspiration, identity.",
+   "Pacing": "Clear single idea, no dense UI copy.",
+   "CTA Style": "Search Hume Health or visit HumeHealth.com <http://HumeHealth.com>.",
+   "Proof Style": "Human story plus simple product reveal.",
+   "Landing-Page Recommendation": "Use memorable hero promise and consistent post-view retargeting page.",
+   "Channel": "CTV",
+   "_id": "39d20d08-9385-81d4-9db5-ee9dce46acce"
+  }
+ ]
+}

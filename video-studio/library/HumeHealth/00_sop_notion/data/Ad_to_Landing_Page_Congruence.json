@@ -1,0 +1,257 @@
+{
+ "name": "Ad-to-Landing-Page Congruence",
+ "source_block": "8387d121-2e1d-41a3-ae86-6fef363be740",
+ "schema": [
+  [
+   "Dedicated Page Required",
+   "checkbox",
+   []
+  ],
+  [
+   "Persona Match",
+   "number",
+   []
+  ],
+  [
+   "Overall Congruence Score",
+   "formula",
+   []
+  ],
+  [
+   "Proof Match",
+   "number",
+   []
+  ],
+  [
+   "Review Date",
+   "date",
+   []
+  ],
+  [
+   "Promise Match",
+   "number",
+   []
+  ],
+  [
+   "Asset Relation",
+   "relation",
+   []
+  ],
+  [
+   "Owner",
+   "person",
+   []
+  ],
+  [
+   "Asset",
+   "text",
+   []
+  ],
+  [
+   "Angle Match",
+   "number",
+   []
+  ],
+  [
+   "Landing Page Relation",
+   "relation",
+   []
+  ],
+  [
+   "Objection Match",
+   "number",
+   []
+  ],
+  [
+   "Brief",
+   "text",
+   []
+  ],
+  [
+   "Awareness Match",
+   "number",
+   []
+  ],
+  [
+   "Recommended Page Change",
+   "text",
+   []
+  ],
+  [
+   "Recommended Ad Change",
+   "text",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "New",
+    "In review",
+    "Fix recommended",
+    "Fixed",
+    "Monitoring",
+    "Closed"
+   ]
+  ],
+  [
+   "Brief Relation",
+   "relation",
+   []
+  ],
+  [
+   "Visual Match",
+   "number",
+   []
+  ],
+  [
+   "Result After Fix",
+   "text",
+   []
+  ],
+  [
+   "Top Mismatch",
+   "text",
+   []
+  ],
+  [
+   "CRO Priority",
+   "select",
+   [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+   ]
+  ],
+  [
+   "Hook-to-Headline Match",
+   "number",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "CTA Match",
+   "number",
+   []
+  ],
+  [
+   "Landing Page",
+   "url",
+   []
+  ],
+  [
+   "Offer Match",
+   "number",
+   []
+  ],
+  [
+   "Congruence Review Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Dedicated Page Required": "No",
+   "Persona Match": "2",
+   "Proof Match": "1",
+   "Promise Match": "2",
+   "Asset": "HUME_POD_META_UGC_PLATEAU_CONFESSION_V1",
+   "Angle Match": "2",
+   "Objection Match": "2",
+   "Brief": "Pod plateau confession UGC",
+   "Awareness Match": "2",
+   "Recommended Page Change": "Move fat/muscle/hydration explanation above the fold.",
+   "Status": "Fix recommended",
+   "Visual Match": "1",
+   "Top Mismatch": "Proof visual needs to appear higher on page.",
+   "CRO Priority": "P1",
+   "Hook-to-Headline Match": "2",
+   "Product": "Hume Pod",
+   "CTA Match": "1",
+   "Landing Page": "https://humehealth.com/pages/weight-loss-general",
+   "Offer Match": "1",
+   "Congruence Review Name": "Pod plateau UGC to Weight Loss LP",
+   "_id": "39d20d08-9385-8133-ae16-fcfb597091aa"
+  },
+  {
+   "Dedicated Page Required": "Yes",
+   "Persona Match": "1",
+   "Proof Match": "1",
+   "Promise Match": "1",
+   "Asset": "HUME_BAND_META_UGC_RECOVERY_EXPLAINER_V1",
+   "Angle Match": "1",
+   "Objection Match": "1",
+   "Brief": "Band recovery explanation UGC",
+   "Awareness Match": "1",
+   "Recommended Page Change": "Create recovery-specific landing module or route to educational page.",
+   "Status": "Fix recommended",
+   "Visual Match": "1",
+   "Top Mismatch": "Ad promises recovery explanation; page is comparison-led.",
+   "CRO Priority": "P1",
+   "Hook-to-Headline Match": "1",
+   "Product": "Hume Band 2.0",
+   "CTA Match": "1",
+   "Landing Page": "https://insights.smartscalesreviews.com/the-5-best-smart-fitness-trackers-to-buy-in-2026",
+   "Offer Match": "1",
+   "Congruence Review Name": "Band recovery UGC to comparison LP",
+   "_id": "39d20d08-9385-8192-9415-d5a8399b2da8"
+  },
+  {
+   "Dedicated Page Required": "No",
+   "Persona Match": "2",
+   "Proof Match": "0",
+   "Promise Match": "1",
+   "Asset": "HUME_BAND_META_STATIC_NO_SUBSCRIPTION_V1",
+   "Angle Match": "2",
+   "Objection Match": "2",
+   "Brief": "Band subscription comparison static",
+   "Awareness Match": "2",
+   "Recommended Page Change": "Add current subscription/pricing FAQ after approval.",
+   "Status": "Monitoring",
+   "Visual Match": "1",
+   "Top Mismatch": "Offer proof must be verified before scale.",
+   "CRO Priority": "P2",
+   "Hook-to-Headline Match": "2",
+   "Product": "Hume Band 2.0",
+   "CTA Match": "1",
+   "Landing Page": "https://insights.smartscalesreviews.com/the-5-best-smart-fitness-trackers-to-buy-in-2026",
+   "Offer Match": "1",
+   "Congruence Review Name": "Band subscription static to comparison LP",
+   "_id": "39d20d08-9385-81c4-b530-f8206181a0e6"
+  },
+  {
+   "Dedicated Page Required": "Yes",
+   "Persona Match": "1",
+   "Proof Match": "1",
+   "Promise Match": "1",
+   "Asset": "HUME_POD_TIKTOK_UGC_DEXA_AT_HOME_V1",
+   "Angle Match": "1",
+   "Objection Match": "1",
+   "Brief": "Pod DEXA comparison UGC",
+   "Awareness Match": "2",
+   "Recommended Page Change": "Add compliant comparison section.",
+   "Status": "In review",
+   "Visual Match": "1",
+   "Top Mismatch": "Ad implies scan alternative; page must avoid equivalence and explain trend tracking.",
+   "CRO Priority": "P2",
+   "Hook-to-Headline Match": "1",
+   "Product": "Hume Pod",
+   "CTA Match": "1",
+   "Landing Page": "https://humehealth.com/pages/hume-listicle-1",
+   "Offer Match": "1",
+   "Congruence Review Name": "Pod DEXA UGC to Listicle",
+   "_id": "39d20d08-9385-81d3-96e1-c8c700e96f72"
+  }
+ ]
+}

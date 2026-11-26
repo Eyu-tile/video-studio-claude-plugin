@@ -1,0 +1,176 @@
+{
+ "name": "Creators and Talent",
+ "source_block": "4a8cf91e-7258-40c0-9c4d-a6dcf3bf26f4",
+ "schema": [
+  [
+   "Best Hooks",
+   "text",
+   []
+  ],
+  [
+   "Spend Supported",
+   "number",
+   []
+  ],
+  [
+   "Authority Type",
+   "select",
+   [
+    "Relatable peer",
+    "Fitness",
+    "Longevity",
+    "Medical/wellness",
+    "Parent/family",
+    "Data nerd"
+   ]
+  ],
+  [
+   "Persona Fit",
+   "text",
+   []
+  ],
+  [
+   "Related Assets",
+   "text",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Prospect",
+    "Active",
+    "Paused",
+    "Do not use",
+    "Archived"
+   ]
+  ],
+  [
+   "ROAS",
+   "number",
+   []
+  ],
+  [
+   "Audience",
+   "text",
+   []
+  ],
+  [
+   "Whitelisting Status",
+   "select",
+   [
+    "Not started",
+    "Requested",
+    "Approved",
+    "Live",
+    "Expired"
+   ]
+  ],
+  [
+   "Best Angles",
+   "text",
+   []
+  ],
+  [
+   "Creator Type",
+   "select",
+   [
+    "UGC creator",
+    "Influencer",
+    "Expert",
+    "Customer",
+    "Editor",
+    "Designer",
+    "Whitelisting partner"
+   ]
+  ],
+  [
+   "Owner",
+   "person",
+   []
+  ],
+  [
+   "Rights",
+   "text",
+   []
+  ],
+  [
+   "Location",
+   "text",
+   []
+  ],
+  [
+   "Notes",
+   "text",
+   []
+  ],
+  [
+   "Content Style",
+   "text",
+   []
+  ],
+  [
+   "Product Fit",
+   "multi_select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem"
+   ]
+  ],
+  [
+   "Rate",
+   "text",
+   []
+  ],
+  [
+   "Channels",
+   "multi_select",
+   [
+    "Meta",
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Organic",
+    "Whitelisting"
+   ]
+  ],
+  [
+   "Rights Expiry",
+   "date",
+   []
+  ],
+  [
+   "Related Briefs",
+   "text",
+   []
+  ],
+  [
+   "Reliability",
+   "select",
+   [
+    "High",
+    "Medium",
+    "Low",
+    "Unknown"
+   ]
+  ],
+  [
+   "Revenue",
+   "number",
+   []
+  ],
+  [
+   "Winner Count",
+   "number",
+   []
+  ],
+  [
+   "Creator Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": []
+}

@@ -1,0 +1,257 @@
+# Transcripts: BAND2_InHouse_Craig_Videos
+
+Faster-whisper small, word timings in per_second/BAND2_InHouse_Craig_Videos.jsonl.gz. `~~retake~~` = line repeated later in the clip (earlier take).
+
+## BAND2_InHouse/Craig_Videos/Hume 02.mp4  
+`1vxNtjuHH_ihHq1Du65iMAy310-Xg5NsD` · 444.7s
+
+- [0.9–3.4] Woop costs $240 a year.
+- [4.0–9.5] Aura costs $300 plus a subscription, but neither of them can track trends that escalate into
+- [9.5–10.3] something worse.
+- [11.8–16.7] I've tested the Hume Band against Woop, Aura and actual hospital cardiac monitoring equipment,
+- [17.2–19.7] and what I found genuinely shocked me.
+- [20.5–25.4] So let me break this down properly, because I still think the fitness wearables industry
+- [25.4–26.8] is selling people a lie.
+- [27.6–30.0] I spent 90 days wearing multiple devices.
+- [30.0–32.2] I compared the data side by side.
+- [32.7–36.9] I even got hooked up to clinical monitoring equipment to see which wearables are actually
+- [36.9–40.3] accurate and which ones were just expensive toys.
+- [41.2–42.4] Let's start with WOOP.
+- [42.9–46.7] WOOP costs you $240 a year, every single year.
+- [47.5–51.2] Subscription forever or your fancy strap becomes useless.
+- [52.0–53.4] And what does it actually track?
+- [54.1–60.0] Recovery scores, strain, sleep performance, heart rate variability, all fitness metrics.
+- [60.0–64.9] ~~Brilliant if you're an athlete optimizing your training, but can whoop detect~~
+- [64.9–70.9] cardiovascular stress patterns? The most relevant metrics for heart health? No. Can
+- [70.9–76.8] whoop see inflammatory markers building up inside your system? No. Can whoop flag
+- [76.8–82.2] heart health and chronic illness risk? Absolutely not. Whoop tells you if
+- [82.2–86.1] you're ready for leg day. It doesn't tell you your heart health signals.
+- [86.1–91.6] Next, Aura Ring.
+- [92.3–96.8] Aura costs $300 for the ring and $70 a year for the subscription.
+- [97.4–99.8] And again, it's fitness and sleep focused.
+- [100.5–103.7] Sleep stages, readiness scores, temperature trends.
+- [104.4–107.2] Lovely data if you want to optimize your morning routine.
+- [107.9–111.1] But can Aura see the visceral fat around your internal organs?
+- [111.9–113.3] No, it's the ring.
+- [114.0–116.2] It can't do body composition at all.
+- [116.2–121.4] Can aura detect cardiovascular warning patterns that are your heart's message to you?
+- [122.0–122.3] No.
+- [123.2–127.6] Can aura tell you the difference between a bad night's sleep and weakened internal body
+- [127.6–128.0] functions?
+- [128.8–129.7] Not even close.
+- [130.7–132.4] Aura tells you you're sleeping badly.
+- [133.0–136.8] It doesn't tell you why your heart is struggling to recover night after night.
+- [139.7–142.2] Now let's talk about actual clinical equipment.
+- [142.8–146.8] If you wanted hospital grade cardiac monitoring, you need a Holter monitor.
+- [146.8–152.6] That's the device that straps around your chest for 24 to 48 hours, costs about $300
+- [152.6–153.6] per test.
+- [154.2–158.9] And you need a referral, a waiting list, and a reason for them to even consider it.
+- [159.5–162.6] For body composition, you'd need a DEXA scan and $200.
+- [163.4–166.1] And you can only do it once every few months, realistically.
+- [167.0–173.3] For inflammatory markers, you'd need regular blood tests, $80 to $150 each privately.
+- [173.3–178.2] and good luck getting your GP to order them weekly so you can actually see patterns.
+- [179.4–182.8] So if you wanted to properly track things that actually predict heart disease,
+- [183.2–187.3] cardiovascular stress, inflammation, body composition, metabolic health,
+- [188.0–191.1] you're looking at thousands of dollars a year and endless appointments.
+- [191.9–194.2] That's the comparison that everyone's missing.
+- [195.2–198.1] Woop and Aura are competing with Fitbit and Apple Watch.
+- [198.5–201.8] They are fitness optimization tools for people who want to get healthier.
+- [201.8–206.2] The Hume Band is different. It's not trying to tell you if you're ready for a
+- [206.2–210.4] workout. It's trying to tell you small patterns before they turn into bigger
+- [210.4–216.0] problems. It tracks cardiovascular stress patterns overnight, not just heart
+- [216.0–221.0] rate, but how hard your heart is working when it should be resting. It monitors
+- [221.0–225.3] inflammatory markers, the chronic inflammation that can later result in
+- [225.3–230.1] plaque buildup and arterial damage. It measures heart rate variability and
+- [230.1–236.5] recovery, how well your heart adapts to stress and bounces back, and it uses AI trained on
+- [236.5–241.5] health trends from thousands of people to detect warning patterns before anything gets
+- [241.5–241.8] worse.
+- [242.9–244.2] ~~That's not fitness tracking.~~
+- [244.8–245.8] That's signal tracking.
+- [248.9–250.2] And here's what really matters.
+- [250.9–254.3] ~~The Hume Band is a one-time purchase with an optional subscription.~~
+- [255.2–256.1] No yearly fee.
+- [256.7–258.8] No yearly fee if you don't want to pay.
+- [259.4–261.4] You buy it once and it's yours forever.
+- [261.4–266.5] Compare that to Woop, where you're paying $240 every single year.
+- [267.1–271.6] ~~After three years you've spent over $700 and still don't own anything.~~
+- [272.3–274.3] Stop paying and your device is bricked.
+- [274.9–279.6] Aura is the same trap, $300 for the ring and $70 a year forever.
+- [280.3–284.3] After three years you're at $500 plus and still paying.
+- [287.5–290.5] HumeBand costs $200 with the current discount.
+- [290.9–292.8] One time optional subscription.
+- [292.8–296.3] And it does something that neither of those devices can do.
+- [296.8–299.1] Actually tells you what to do with that data.
+- [300.3–305.2] I spoke to a cardiologist, asked him straight, if you had to choose one wearable for a man
+- [305.2–308.8] over 40 who wants to track his heart health accurately, what would you pick?
+- [309.5–310.4] He didn't hesitate.
+- [311.0–316.0] He said one that monitors cardiovascular stress patterns and recovery overnight, because
+- [316.0–318.3] that's where the warning signs show up first.
+- [318.9–320.7] ~~Woop doesn't do that properly.~~
+- [321.2–322.8] ~~Aura doesn't do that properly.~~
+- [323.3–325.5] The Apple Watch doesn't do that properly.
+- [326.2–327.4] The Hume Band does.
+- [328.5–331.6] These are fitness tools being marketed like their health tools.
+- [332.2–335.4] People are walking around thinking their recovery scores mean they're safe.
+- [336.1–341.0] ~~You can have a perfect Woop Recovery Score and have no idea how your arteries are really doing.~~
+- [341.6–346.2] You can have an excellent Aura Readiness Score and have heart issues that are worsening.
+- [346.2–353.5] The Hume Band is at HumeHealth.com with a 45-day guarantee.
+- [354.4–358.9] If you're currently paying for a whoop subscription or a membership thinking it's protecting
+- [358.9–360.4] your health, it's not.
+- [361.0–362.7] It's telling you how well you slept.
+- [363.6–366.4] It's not telling you if you need to pay attention to your heart.
+- [367.3–371.2] Swap the subscription fee for something that tells you what to do with your data.
+- [373.1–378.0] Because the difference between fitness tracking and signal tracking is the difference
+- [378.0–383.4] between optimizing your workout and actually knowing how your workout improves your longevity.
+- [384.3–387.9] Get the Hume Band. Have data that you can act on for your health.
+- [390.6–397.2] ~~Whoop costs $240 a year. ORA costs $300 plus a subscription, but neither of them tells you~~
+- [397.2–408.3] ~~how the data is impacting your health. Whoop costs $240 a year. ORA costs $300 plus a subscription,~~
+- [408.3–413.8] yet both give you zero information on what to actually do with the health data they give you.
+- [416.3–423.3] Whoop costs $240 a year. Aura costs $300 plus a subscription. But what are you even getting
+- [423.3–432.0] ~~for that price? What do you even get when you pay $240 a year for Whoop and $300 plus a subscription~~
+- [432.0–439.7] for Aura? If you're paying $240 a year for Whoop or $300 plus a subscription for Aura,
+- [439.7–442.0] you need to reassess your choice.
+
+## BAND2_InHouse/Craig_Videos/Hume 03.mp4  
+`1v3lwXsUVjVE_pivgM2rqk6r5i649zEyx` · 100.6s
+
+- [0.8–4.2] How is HumePod 2.0 different from my regular scale?
+- [5.0–8.5] Yeah, fair question. I wondered the same thing when I saw the launch.
+- [10.2–13.7] If all you want to know is what you weigh, your regular scale gives you that.
+- [14.3–18.4] But say you're exercising, watching what you eat, and the number barely moves.
+- [19.0–24.2] Has your body fat changed? What's happening with your muscle? That number doesn't tell you.
+- [24.2–27.4] Humpod 2.0 is a 3D body scanner.
+- [27.9–32.6] It shows your body composition so you can follow fat and muscle alongside your weight.
+- [33.2–34.6] That's what caught my attention.
+- [35.2–39.5] I'd want to see those changes before deciding all that effort wasn't doing anything.
+- [40.1–42.6] And before you ask, who's going to explain the numbers?
+- [43.4–45.1] Yes, that was my next question too.
+- [45.9–50.4] Prof. AI explains changes in plain English and gives you guidance on what to adjust
+- [50.4–50.9] next.
+- [51.4–53.2] Because I'm happy to put the work in.
+- [53.2–55.7] I'd just like to understand what I'm looking at.
+- [56.6–58.3] And that's the difference I'm interested in.
+- [59.0–61.2] Number one, seeing more of what's changing.
+- [61.9–65.7] Number two, instead of trying to read everything into my weight.
+- [66.6–68.8] Have a look at the HumePod 2.0 launch.
+- [69.4–71.9] The body composition part is what I'd look at first.
+- [77.8–80.9] ~~How is HumePod 2.0 different from my regular scale?~~
+- [81.6–86.2] Well, my first question was, can it tell me anything useful when my weight stays the
+- [86.2–86.5] same?
+- [86.5–92.9] How is HumePod 2.0 different from my regular scale?
+- [94.1–95.9] I get it, mine still works too.
+- [96.6–98.3] Here's what caught my attention in the launch.
+
+## BAND2_InHouse/Craig_Videos/Hume 04.mp4  
+`117gmAcbmlw-v2LKgnchBw0q0vI_RShWy` · 123.9s
+
+- [1.1–2.1] ~~Let's read this.~~
+- [2.9–7.0] I want that new body scanner so bad that can my partner and I both use it?
+- [7.6–10.4] I get this question all the time and the short answer is yes.
+- [10.7–12.7] The body scanner is built for the whole household.
+- [13.3–17.9] You can create multiple private profiles so everyone gets their own personal dashboard.
+- [18.4–22.1] And it comes in black or white so you can actually pick one that matches your vibe.
+- [25.0–26.1] Let's answer this.
+- [26.5–28.2] Can everyone in my house use it?
+- [28.7–29.1] Yes.
+- [29.1–34.0] It supports multiple profiles and you both get to pick your own color too, black or white.
+- [34.5–38.9] My partner and I both scan every morning and the best part is our data stays private on
+- [38.9–39.9] our own separate apps.
+- [41.4–44.5] This is actually the best part about the HumePod 2.0.
+- [44.7–49.4] Your whole family can use it with private profiles for everyone in the household and
+- [49.4–51.9] you get to choose the color that actually fits your space.
+- [53.5–57.8] People always follow up and ask, okay, but is it really that different from a
+- [57.8–63.0] smart scale. And the answer is night and day. Those $20
+- [63.0–66.7] scales only scan your feet and use a math formula to guess the
+- [66.7–70.9] rest. The Humepod 2.0 uses direct read sensors, eight of them,
+- [71.1–74.4] in direct contact with your skin to scan your entire body
+- [74.4–79.0] with 99% dexa level accuracy, which in normal words, is as
+- [79.0–82.6] accurate as those expensive hospital machines. It tracks
+- [82.6–85.7] the markers that actually matter like your fat, muscle
+- [85.7–90.9] mass, visceral fat, metabolic age, hydration, and more, all broken down by body part.
+- [93.1–96.0] And then people ask, do I need to pay extra for all of that?
+- [96.4–96.8] No.
+- [97.2–100.1] There are zero monthly subscription fees for the full experience.
+- [100.5–105.3] Plus, it has a 45-day money-back guarantee, so it's basically the smartest health investment
+- [105.3–106.7] the whole family can make.
+- [107.4–111.6] Once you see your first full body report, you'll never go back to a regular or another
+- [111.6–112.4] smart scale.
+- [112.6–113.4] I promise you.
+- [113.9–115.4] I've been amazed by this tool.
+- [116.6–120.1] Click below to grab yours today with 10% off for the launch.
+- [120.5–122.0] Try it now and thank me later.
+
+## BAND2_InHouse/Craig_Videos/Hume 05.mp4  
+`1FrULLHazlr-67BYG9P8SJma11efc6S_l` · 130.8s
+
+- [0.7–5.0] There are three things that quietly shift in your body weeks before a heart attack happens.
+- [5.4–8.1] For decades, we've only been checking the wrong stuff.
+- [8.7–10.0] Blood pressure once a year.
+- [10.5–15.0] Maybe an EKG if you're lucky, and people kept having heart issues that came out of
+- [15.0–15.4] nowhere.
+- [16.0–18.3] But they didn't actually come out of nowhere.
+- [20.9–22.3] Now we kind of do.
+- [23.0–25.3] The first is overnight cardiovascular stress.
+- [25.8–30.3] Not just your heart rate, but how hard your heart's working at 3 AM when you're
+- [30.3–35.0] to be deep asleep and recovering. If it's straining every night instead of recovering,
+- [35.7–41.0] that's worth paying attention to. The second is inflammation. It's one of the biggest drivers
+- [41.0–45.9] behind heart disease, and most people only get it checked once a year with a basic blood test,
+- [46.0–55.0] if that. The third is HRV. A healthy heart adapts easily. Speeds up, slows down, recovers.
+- [55.6–60.0] When that starts declining over weeks, it's one of the earliest signs something's off.
+- [60.0–65.3] The Hume Band tracks all three of these every night while you sleep, and instead of one
+- [65.3–69.3] number a year, you get to see the pattern build over weeks in your own data.
+- [70.2–74.4] It's not diagnosing anything, and it's not replacing your doctor, but it's giving
+- [74.4–78.0] you way more visibility than a once a year checkup ever could.
+- [79.1–80.6] ~~Heart attacks don't come out of nowhere.~~
+- [81.3–85.2] Your body's usually been telling you for weeks, now you actually have a way to
+- [85.2–85.6] see it.
+- [85.6–90.8] Get yours at humehealth.com, 45-day guarantee and with 30% off.
+- [95.3–99.3] Your body usually starts sending signals weeks before a heart problem shows up.
+- [100.1–102.7] We've just been checking the wrong things this whole time.
+- [103.3–106.3] ~~Blood pressure once a year, an EKG if you're lucky.~~
+- [107.0–109.0] ~~People kept saying it came out of nowhere.~~
+- [109.9–110.5] It didn't.
+- [112.6–116.6] There are patterns that quietly build in your body weeks before something goes wrong
+- [116.6–117.1] with your heart.
+- [117.1–119.7] For decades, we've only checked the basics.
+- [120.5–121.5] Blood pressure once a year.
+- [122.0–123.5] Maybe an EKG if you're lucky.
+- [124.0–127.6] And people kept having hard issues that felt like they came out of nowhere.
+- [128.4–129.0] They didn't.
+
+## BAND2_InHouse/Craig_Videos/VIDEO_BAND_Health_Sleep_BadSleepChainReaction_JETLEE_SONAM_CRAIG_[STATUS?]_260726/Hume 01.mp4  
+`1kIqkxoAZD6IsqPymBhZJyi9jsx8dkR8D` · 192.6s
+
+- [1.4–10.4] Bad sleep doesn't just make you tired. It silently triggers fat storage, inflammation, and faster aging, and most people can't see it.
+- [12.0–16.4] Sleeping eight hours can still destroy your body. Most people have no idea.
+- [18.3–24.9] I slept eight hours every night for a year, and gained 15 pounds. Here's what I didn't know.
+- [26.3–31.7] Every week of bad sleep can be stealing months off your lifespan. Here's the science.
+- [33.1–39.4] Bad sleep triggers a chain reaction that silently destroys your metabolism. Most wearables can't
+- [39.4–46.6] see it. Every night of bad sleep adds three months to your biological age. Here's how to
+- [46.6–52.3] see if it's happening to you. Here's what's happening while you think you're sleeping
+- [52.3–59.3] 8 hours. Poor sleep spikes your cortisol. Cortisol tells your body to store fat, especially
+- [59.3–65.8] around your organs. More fat means more inflammation. And inflammation? That destroys your sleep
+- [65.8–73.1] quality even more. So now you're stuck. Worse sleep. Higher cortisol. More fat. Even
+- [73.1–78.9] worse sleep. Every single night, this cycle runs in the background. And if you're
+- [78.9–83.9] tracking how many hours you slept. You have no idea it's happening."
+- [83.9–90.6] I didn't. I'd sleep eight hours and wake up exhausted. My body felt heavier. I was gaining
+- [90.6–96.9] weight, even though I was doing everything right. Turns out, my sleep wasn't recovering
+- [96.9–98.9] me. It was breaking me down.
+- [99.7–105.2] And here's the scary part. If this cycle keeps running undetected, in five years
+- [105.2–110.8] your body is going to look very different. More belly fat, slower metabolism, higher
+- [110.8–117.2] biological age. All because you thought eight hours was enough. So I started tracking what
+- [117.2–123.4] was actually happening while I slept. And what I found changed everything. The hume
+- [123.4–128.4] band doesn't just track how long you sleep. It tracks what your body is doing while
+- [128.4–135.2] you sleep. Sleep stages, heart rate variability, skin temperature, blood oxygen. It shows
+- [135.2–139.3] you whether your body is actually recovering or quietly falling apart.
+- [140.0–144.3] Because you can hit 8 hours and still spend most of it in light sleep.
+- [145.1–148.7] You can sleep through the night but never drop into deep recovery.
+- [149.5–151.0] The Hume Band catches this.
+- [151.7–153.8] Once you see it, you can fix it.
+- [154.7–159.7] Adjust your routine, dial in your environment, track what actually moves the needle.
+- [159.7–166.0] and instead of aging faster every night, you start reversing the damage. Your
+- [166.0–171.2] inflammation drops, your body composition shifts, you wake up sharper, lighter,
+- [171.8–176.6] actually recovered. If you're tired of sleeping eight hours and still feeling
+- [176.6–180.4] like garbage, if you want to know whether your body is actually healing
+- [180.4–187.1] while you sleep, the Hume Band is 30% off right now. 45-day guarantee. Stop
+- [187.1–188.3] Stop guessing about your recovery.
+- [189.0–190.0] Start seeing the truth.

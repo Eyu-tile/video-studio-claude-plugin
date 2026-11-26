@@ -1,0 +1,244 @@
+{
+ "name": "Proof and Claims Bank",
+ "source_block": "0b614d68-3845-4ba6-8a56-5105bc51cd9a",
+ "schema": [
+  [
+   "Where It Can Be Used",
+   "multi_select",
+   [
+    "Paid social",
+    "Landing pages",
+    "Email",
+    "SMS",
+    "CTV",
+    "Native",
+    "Creator briefs",
+    "Internal only"
+   ]
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Risk Level",
+   "select",
+   [
+    "Low",
+    "Medium",
+    "High",
+    "Do not say"
+   ]
+  ],
+  [
+   "Evidence File",
+   "file",
+   []
+  ],
+  [
+   "Approval Status",
+   "select",
+   [
+    "Proposed",
+    "In review",
+    "Approved",
+    "Restricted",
+    "Rejected",
+    "Expired"
+   ]
+  ],
+  [
+   "Plain-English Explanation",
+   "text",
+   []
+  ],
+  [
+   "Evidence Source",
+   "text",
+   []
+  ],
+  [
+   "Where It Cannot Be Used",
+   "text",
+   []
+  ],
+  [
+   "Expiry / Review Date",
+   "date",
+   []
+  ],
+  [
+   "Approved By",
+   "person",
+   []
+  ],
+  [
+   "Type",
+   "select",
+   [
+    "Product feature",
+    "Product capability",
+    "Customer testimonial",
+    "Quantitative result",
+    "Study",
+    "Certification",
+    "Press mention",
+    "Comparison",
+    "Demo",
+    "App screenshot",
+    "Expert statement",
+    "Offer proof",
+    "Social proof",
+    "Review count",
+    "Guarantee",
+    "HSA/FSA",
+    "Accuracy",
+    "Technology",
+    "Compliance restriction"
+   ]
+  ],
+  [
+   "Exact Approved Language",
+   "text",
+   []
+  ],
+  [
+   "Review Status",
+   "formula",
+   []
+  ],
+  [
+   "Evidence URL",
+   "url",
+   []
+  ],
+  [
+   "Notes",
+   "text",
+   []
+  ],
+  [
+   "Approval Date",
+   "date",
+   []
+  ],
+  [
+   "Required Disclaimer",
+   "text",
+   []
+  ],
+  [
+   "Proof / Claim Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Product": "Hume Band 2.0",
+   "Risk Level": "Medium",
+   "Approval Status": "In review",
+   "Plain-English Explanation": "Verify current offer and app access before use.",
+   "Type": "Offer proof",
+   "Exact Approved Language": "No required monthly subscription for core use.",
+   "Proof / Claim Name": "No required monthly subscription for core use",
+   "_id": "39d20d08-9385-8101-ae6c-cf0aea84687c"
+  },
+  {
+   "Product": "Hume Pod",
+   "Risk Level": "Medium",
+   "Approval Status": "In review",
+   "Plain-English Explanation": "Needs current source confirmation before paid usage.",
+   "Type": "Product capability",
+   "Exact Approved Language": "Hume Pod tracks 45+ body metrics.",
+   "Proof / Claim Name": "Pod tracks 45+ body metrics",
+   "_id": "39d20d08-9385-811d-a6e8-d21b3833153f"
+  },
+  {
+   "Product": "Hume Band 2.0",
+   "Risk Level": "Do not say",
+   "Approval Status": "Rejected",
+   "Plain-English Explanation": "Hard red-line claim.",
+   "Type": "Compliance restriction",
+   "Exact Approved Language": "Do not claim Hume Band predicts heart attacks or acute medical events.",
+   "Proof / Claim Name": "No heart-event prediction claim",
+   "_id": "39d20d08-9385-8141-81f6-cd9b3d64041a"
+  },
+  {
+   "Product": "Hume Pod",
+   "Risk Level": "Low",
+   "Approval Status": "Approved",
+   "Plain-English Explanation": "Use this as a mechanism explanation, not a medical claim.",
+   "Type": "Product feature",
+   "Exact Approved Language": "Hume Pod uses hand and foot contact points to measure body composition trends.",
+   "Proof / Claim Name": "Pod hand-and-foot electrodes",
+   "_id": "39d20d08-9385-8144-8dff-d0cc61664616"
+  },
+  {
+   "Product": "Hume Pod",
+   "Risk Level": "Low",
+   "Approval Status": "Approved",
+   "Plain-English Explanation": "Safe direction when framed as visibility and trends.",
+   "Type": "Product capability",
+   "Exact Approved Language": "Hume Pod helps you see trends in fat, muscle, hydration and more beyond weight.",
+   "Proof / Claim Name": "Beyond weight: fat, muscle, hydration",
+   "_id": "39d20d08-9385-814f-bc6f-f2a62e774df5"
+  },
+  {
+   "Product": "Pod + Band Ecosystem",
+   "Risk Level": "High",
+   "Approval Status": "Restricted",
+   "Plain-English Explanation": "Route all comparison copy through proof review.",
+   "Type": "Compliance restriction",
+   "Exact Approved Language": "Any accuracy or competitor-comparison claim requires approved substantiation.",
+   "Proof / Claim Name": "Accuracy and comparison claims require substantiation",
+   "_id": "39d20d08-9385-8173-bd2f-e92ce2c4743f"
+  },
+  {
+   "Product": "Hume Band 2.0",
+   "Risk Level": "Medium",
+   "Approval Status": "In review",
+   "Plain-English Explanation": "Needs feature/source confirmation before paid scale.",
+   "Type": "Product capability",
+   "Exact Approved Language": "Hume Band helps users understand sleep, stress, recovery and activity trends.",
+   "Proof / Claim Name": "Band sleep, stress and recovery trends",
+   "_id": "39d20d08-9385-81b4-9811-f5e97c62e592"
+  },
+  {
+   "Product": "Pod + Band Ecosystem",
+   "Risk Level": "Do not say",
+   "Approval Status": "Restricted",
+   "Plain-English Explanation": "Use as a QA guardrail.",
+   "Type": "Compliance restriction",
+   "Exact Approved Language": "Do not claim Hume products diagnose, treat, cure or prevent disease.",
+   "Proof / Claim Name": "No diagnosis or prevention claim",
+   "_id": "39d20d08-9385-81c3-9e4b-c88696e4507e"
+  },
+  {
+   "Product": "Hume Band 2.0",
+   "Risk Level": "High",
+   "Approval Status": "Restricted",
+   "Plain-English Explanation": "Important for stress, sleep and heart-related creative.",
+   "Type": "Compliance restriction",
+   "Exact Approved Language": "Do not present Hume Band as a medical device or clinical diagnostic tool.",
+   "Proof / Claim Name": "Band is not a medical device",
+   "_id": "39d20d08-9385-81e6-88f0-e5877fb498ab"
+  },
+  {
+   "Product": "Hume Pod",
+   "Risk Level": "Medium",
+   "Approval Status": "In review",
+   "Plain-English Explanation": "Verify current merchant/payment setup before launch.",
+   "Type": "HSA/FSA",
+   "Exact Approved Language": "HSA/FSA eligible where applicable.",
+   "Proof / Claim Name": "HSA/FSA eligibility",
+   "_id": "39d20d08-9385-81fc-b02e-ef6189832bc4"
+  }
+ ]
+}

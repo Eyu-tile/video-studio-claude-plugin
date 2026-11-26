@@ -1,0 +1,185 @@
+{
+ "name": "Weekly Creative Review",
+ "source_block": "35028b55-e547-4c7a-a97d-ebdbc9e88261",
+ "schema": [
+  [
+   "Products",
+   "multi_select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Assets Delivered",
+   "number",
+   []
+  ],
+  [
+   "Top Customer Insight",
+   "text",
+   []
+  ],
+  [
+   "Top CRO Gap",
+   "text",
+   []
+  ],
+  [
+   "Briefs Created",
+   "number",
+   []
+  ],
+  [
+   "Leadership Notes",
+   "text",
+   []
+  ],
+  [
+   "Owners",
+   "person",
+   []
+  ],
+  [
+   "Tests Launched",
+   "number",
+   []
+  ],
+  [
+   "Spend",
+   "number",
+   []
+  ],
+  [
+   "Winners",
+   "text",
+   []
+  ],
+  [
+   "Losers",
+   "text",
+   []
+  ],
+  [
+   "Decisions Made",
+   "text",
+   []
+  ],
+  [
+   "Top Media Request",
+   "text",
+   []
+  ],
+  [
+   "Assets Launched",
+   "number",
+   []
+  ],
+  [
+   "Revenue",
+   "number",
+   []
+  ],
+  [
+   "Channels",
+   "multi_select",
+   [
+    "Meta",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO"
+   ]
+  ],
+  [
+   "Top Creative Gap",
+   "text",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Draft",
+    "Ready for meeting",
+    "Reviewed",
+    "Actions assigned",
+    "Archived"
+   ]
+  ],
+  [
+   "Key Learnings",
+   "text",
+   []
+  ],
+  [
+   "Emerging Winners",
+   "text",
+   []
+  ],
+  [
+   "Next Week Priorities",
+   "text",
+   []
+  ],
+  [
+   "Date",
+   "date",
+   []
+  ],
+  [
+   "Week",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Assets Delivered": "6",
+   "Top Customer Insight": "Plateau users need explanation, not motivation.",
+   "Top CRO Gap": "Cold plateau hooks need a matching problem-aware LP.",
+   "Briefs Created": "6",
+   "Tests Launched": "4",
+   "Spend": "10000",
+   "Winners": "Pod plateau confession UGC early signal.",
+   "Losers": "Generic body-metric feature statics.",
+   "Decisions Made": "Build dedicated plateau module and retest with stronger first-frame app visual.",
+   "Top Media Request": "More 9:16 UGC hook variants around scale-is-incomplete.",
+   "Assets Launched": "4",
+   "Revenue": "26000",
+   "Top Creative Gap": "More product-demo proof needed in first five seconds.",
+   "Status": "Ready for meeting",
+   "Key Learnings": "Belief-shift hooks are stronger than feature list hooks in cold traffic.",
+   "Emerging Winners": "Band recovery question hook.",
+   "Next Week Priorities": "Produce two Pod demo variants and one Band recovery comparison cut.",
+   "Week": "Example — Week 1 Creative Review",
+   "_id": "39d20d08-9385-8123-adad-d84e5ff3d760"
+  },
+  {
+   "Assets Delivered": "5",
+   "Top Customer Insight": "Wearable users want interpretation more than another metric.",
+   "Top CRO Gap": "Band comparison page needs clearer offer and subscription section.",
+   "Briefs Created": "4",
+   "Tests Launched": "3",
+   "Spend": "12000",
+   "Winners": "Band 'tracks sleep vs explains recovery' hook.",
+   "Losers": "Abstract longevity statics without product reveal.",
+   "Decisions Made": "Add subscription-proof claim review before scaling.",
+   "Top Media Request": "More comparison hooks against subscription-heavy wearables.",
+   "Assets Launched": "3",
+   "Revenue": "31000",
+   "Top Creative Gap": "Band proof needs cleaner app walkthrough.",
+   "Status": "Draft",
+   "Key Learnings": "Comparison angle works when the ad and LP both name the same decision criteria.",
+   "Emerging Winners": "Pod GLP-1 muscle-quality concept.",
+   "Next Week Priorities": "Create Band app demo and Pod GLP-1 compliance-reviewed script.",
+   "Week": "Example — Week 2 Creative Review",
+   "_id": "39d20d08-9385-81c2-8bde-f57980015e05"
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "name": "SOP and Knowledge Base",
+ "source_block": "83617d3f-9ad7-4a84-a7e9-0165d2993f5a",
+ "schema": [
+  [
+   "Version",
+   "text",
+   []
+  ],
+  [
+   "Last Reviewed",
+   "date",
+   []
+  ],
+  [
+   "Next Review",
+   "date",
+   []
+  ],
+  [
+   "Related Tools",
+   "text",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Draft",
+    "Active",
+    "Needs review",
+    "Outdated",
+    "Archived"
+   ]
+  ],
+  [
+   "Related Templates",
+   "text",
+   []
+  ],
+  [
+   "Page Content",
+   "text",
+   []
+  ],
+  [
+   "Related Databases",
+   "text",
+   []
+  ],
+  [
+   "Function",
+   "select",
+   [
+    "Customer research",
+    "Creative strategy",
+    "Production",
+    "Compliance",
+    "Media buying",
+    "CRO",
+    "CRM",
+    "Governance",
+    "Creator management",
+    "Database hygiene"
+   ]
+  ],
+  [
+   "Role",
+   "multi_select",
+   [
+    "Head of Creative",
+    "Creative Strategist",
+    "Media Buyer",
+    "Editor",
+    "Designer",
+    "Creator Manager",
+    "CRO Manager",
+    "CRM",
+    "Brand",
+    "Affiliate Manager",
+    "Leadership"
+   ]
+  ],
+  [
+   "Process Owner",
+   "person",
+   []
+  ],
+  [
+   "SOP Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Version": "1.0",
+   "Status": "Active",
+   "Related Templates": "Brief page template record",
+   "Related Databases": "Creative Brief Pipeline OS; Insight Bank; Angle Library; Proof and Claims Bank; Landing Pages",
+   "Function": "Creative strategy",
+   "SOP Name": "TEMPLATE — Creative Brief",
+   "_id": "39d20d08-9385-8155-8dfb-f3c9c55cb4d9",
+   "_has_body": true
+  },
+  {
+   "Version": "1.0",
+   "Status": "Active",
+   "Related Databases": "Weekly Creative Review; Asset Library; Creative Tests; Creative Brief Pipeline; Congruence",
+   "Function": "Governance",
+   "SOP Name": "TEMPLATE — Weekly Creative Review",
+   "_id": "39d20d08-9385-8163-9724-fd97d5c2df41",
+   "_has_body": true
+  },
+  {
+   "Version": "1.0",
+   "Status": "Active",
+   "Related Databases": "Ad-to-Landing-Page Congruence; Landing Pages; Asset Library; Creative Brief Pipeline OS",
+   "Function": "CRO",
+   "SOP Name": "TEMPLATE — Ad-to-LP Congruence Review",
+   "_id": "39d20d08-9385-81ab-81bb-e447264a0c65",
+   "_has_body": true
+  },
+  {
+   "Version": "1.0",
+   "Status": "Active",
+   "Related Databases": "Creative Tests and Experiments; Asset Library; Performance and Learning Log; Angle Library",
+   "Function": "Creative strategy",
+   "SOP Name": "TEMPLATE — Creative Learning Log",
+   "_id": "39d20d08-9385-81ab-aa45-e7dd5062677c",
+   "_has_body": true
+  },
+  {
+   "Version": "1.0",
+   "Status": "Active",
+   "Related Databases": "Channel Playbooks; Asset Library; Creative Brief Pipeline; Campaigns",
+   "Function": "Creative strategy",
+   "SOP Name": "TEMPLATE — Channel Adaptation Brief",
+   "_id": "39d20d08-9385-81ba-b6e8-d8448b0ffd3f",
+   "_has_body": true
+  }
+ ]
+}

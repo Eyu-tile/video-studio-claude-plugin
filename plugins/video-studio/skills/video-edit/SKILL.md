@@ -20,6 +20,8 @@ Tools: `vs <cmd>` (on PATH via this plugin's SessionStart hook; if missing, run
    (`/video-assets`). `P=video-studio/projects/<name>`. Check `video-studio/library/assets/` for logos, fonts, music.
 3. Client work: `vs lessons brief --brand <Client>` (what past feedback taught us; apply every line, `/feedback-learning`).
    Read `style/brand.md`, `style/moves.md`, `$P/project.md`.
+   Brand work: read `library/<Brand>/comments/README.md` (lessons checklist from every past review round) and the
+   file of the most similar past project in that folder, so no mistake a client already caught comes back.
    If `brand.md` is still the template and the video needs branding, ask for colours/font/logo once.
 4. Brief: if platform, max length, aspect or caption style is missing, ask ONE question with
    defaults ("Reels 9:16, ≤60 s, bold-pop captions, music under, OK?"). Record answers in `project.md`.
@@ -125,6 +127,12 @@ the normal steps; a music-only change still renders fast with `--since` (the pic
 checklist. Then decide what the round teaches: `vs lessons learn --brand <Client> --notes $P/work/notes.json`
 (lesson with a check, or one-off; `/feedback-learning`). A `REPEAT:` line from `vs notes add` is a mistake we had
 already learned about: fix it first and tighten that lesson. Log decisions in `project.md`.
+
+**Comments gallery (brand projects).** Every round of comments (client zip of annotated frames, review-page comments,
+the producer's notes in chat) is also logged in `video-studio/library/<Brand>/comments/<project-name>.md` before you
+change anything: date, version watched → version made, each note as given, what you did, and the lesson. A lesson that
+applies to every future ad goes into the checklist in `comments/README.md` (and into the brand's rules file if the
+client made it a rule). Create the project file from the template in `comments/README.md` on the first round.
 
 ## 6. Final
 `vs render ... -o $P/out/final.mp4 --preset <platform> --captions ...` (no `--preview`), `vs qa ... --brand <Client>` again (a

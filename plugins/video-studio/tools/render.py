@@ -281,7 +281,10 @@ def shot_video(ctx, gr, vlab, k, g):
         zx = kf_expr(kf["zoom"], tvar=tz) if "zoom" in kf else f"{z0}"
         xx = kf_expr(kf["x"], tvar=tz) if "x" in kf else f"{fx}"
         yy = kf_expr(kf["y"], tvar=tz) if "y" in kf else f"{fy}"
-        body = (f"fps={fps},scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase,crop={W * 2}:{H * 2},"
+        # The cover crop honours the focus point too, so a reframe (e.g. 9:16 source in a 4:5 frame) lands where
+        # `focus` says even when the zoom is small or 1.0; zoompan then pushes in around the same point.
+        body = (f"fps={fps},scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase,"
+                f"crop={W * 2}:{H * 2}:x='(iw-ow)*({fx})':y='(ih-oh)*({fy})',"
                 f"zoompan=z='max({zx},1)':x='(iw-iw/zoom)*({xx})':y='(ih-ih/zoom)*({yy})'"
                 f":d=1:s={W}x{H}:fps={fps}")
     elif "x" not in kf and "y" not in kf and z0 >= 1.0:
@@ -628,7 +631,9 @@ def finish_video(ctx, gr, vlab, ofmt, out):
         if not Path(ov["file"]).exists():
             die(f"overlay not found: {ov['file']}")
         dec = ["-c:v", "libvpx-vp9"] if ov["file"].lower().endswith(".webm") else []
-        loop = ["-loop", "1"] if is_image(ov["file"]) else []
+        # Image overlays loop at the timeline rate (image2 defaults to 25 fps) and run 2 frames past `end`, so the stream
+        # never ends before enable() closes: back-to-back captions swap on the same frame with no blank frame between.
+        loop = ["-loop", "1", "-framerate", str(ctx.fps)] if is_image(ov["file"]) else []
         seek = ["-ss", f"{float(ov['in']):.3f}"] if ov.get("in") and not loop else []
         oi = gr.add_input(*loop, *seek, *dec, "-i", ov["file"])
         s, e = float(ov["start"]), float(ov["end"])
@@ -650,7 +655,7 @@ def finish_video(ctx, gr, vlab, ofmt, out):
         if "opacity" in ov:
             chain.append(f"colorchannelmixer=aa={float(ov['opacity'])}")
         if loop:
-            chain.append(f"trim=0:{e - s:.3f}")
+            chain.append(f"trim=0:{e - s + 2 / ctx.fps:.3f}")
         chain.append("setpts=PTS-STARTPTS")
         if ov.get("fade_in"):
             chain.append(f"fade=t=in:st=0:d={float(ov['fade_in'])}:alpha=1")
