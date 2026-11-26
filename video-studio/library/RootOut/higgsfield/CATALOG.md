@@ -5,7 +5,7 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1669 generations (1224 video, 284 image, 161 audio). RootOut era (from 21 Nov 2026): 855.
+Totals: 1685 generations (1224 video, 300 image, 161 audio). RootOut era (from 21 Nov 2026): 871.
 
 ## RootOut-era video (466; 252 named by a set)
 
@@ -478,10 +478,26 @@ Totals: 1669 generations (1224 video, 284 image, 161 audio). RootOut era (from 2
 | 2026-11-21 | `15118a36` | Set 1 · c01_hook_h1 | seedance_2_5 | Handheld vertical phone selfie, slight natural wobble. The tired mom on the edge of the bed speaks the line fr |
 | 2026-11-23 | `ea2a5709` | Set 4 · s4_B19_handfoot |  | Set 4 v2 b-roll: handfoot (rejected: safety flag, replaced by B19r) |
 
-## RootOut-era image (228; 113 named by a set)
+## RootOut-era image (244; 129 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `0c14a31e` | Set 2 · s2_s16_green_smooth | gpt_image_2_6 | GPT 2.6: green sock, smooth sole |
+| 2026-11-26 | `9173bc16` | Set 2 · s2_s13_green_dot | gpt_image_2_6 | GPT 2.6: green sock, clear dot still on, morning |
+| 2026-11-26 | `81f297e3` | Set 2 · s2_s12_yellow_sock_pad | gpt_image_2_6 | GPT 2.6: yellow sock with pad stuck inside |
+| 2026-11-26 | `7c71fbf1` | Set 2 · s2_s11a_blue_blister | gpt_image_2_6 | GPT 2.6: blue sock rolled down, blister |
+| 2026-11-26 | `9f72334a` | Set 2 · s2_s08_yellow_pad | gpt_image_2_6 | GPT 2.6: yellow sock girl, acid pad pressed on |
+| 2026-11-26 | `c4168199` | Set 2 · s2_f45_checkout | gpt_image_2_6 | GPT 2.6: checkout belt, freeze-kit box, hand reaching |
+| 2026-11-26 | `c4f98d7c` | Set 2 · s2_f38_brush | gpt_image_2_6 | GPT 2.6: brush oil on kid sole, real bottle behind |
+| 2026-11-26 | `371cc618` | Set 2 · s2_f36_green_bedtime | gpt_image_2_6 | GPT 2.6: green socks up on pillow, book, lamp |
+| 2026-11-26 | `1a7f2d87` | Set 2 · s2_f09_green_bed_bottle | gpt_image_2_6 | GPT 2.6: green sock girl on bed, real bottle on duvet |
+| 2026-11-26 | `f36b5356` | Set 2 · s2_f06_blue_freeze | gpt_image_2_6 | GPT 2.6: blue sock boy, freeze spray at kitchen chair |
+| 2026-11-26 | `71d885b1` | Set 2 · s2_f01_three_socks | gpt_image_2_6 | GPT 2.6: three pairs of kids' feet in blue/yellow/green socks on a rug (bare-feet version was safety-blocked) |
+| 2026-11-26 | `a35eacb1` | Set 2 · s2_mom3_scene | gpt_image_2_6 | GPT 2.6: MOM 3 hallway, green socks in hand |
+| 2026-11-26 | `af6e67b6` | Set 2 · s2_mom2_scene | gpt_image_2_6 | GPT 2.6: MOM 2 kitchen, holds real bottle |
+| 2026-11-26 | `bc0759af` | Set 2 · s2_mom1_scene | gpt_image_2_6 | GPT 2.6: MOM 1 sofa, plain hoodie, kid leg/foot on lap, no kid face |
+| 2026-11-26 | `9670c998` | Set 2 · s2_narrator_close | gpt_image_2_6 | GPT 2.6: narrator, two real bottles + hand by a third |
+| 2026-11-26 | `6d945a99` | Set 2 · s2_narrator_why | gpt_image_2_6 | GPT 2.6: narrator, table cleared, one real RootOut bottle alone |
 | 2026-11-26 | `244dc570` | Set 16 · s16_N2_couch_crosslegged | gpt_image_2_6 | GPT 2.6 edit: cross-legged on couch, open-hand gesture, son's feet in lap, wart visible |
 | 2026-11-26 | `5bfe6a12` | Set 16 · s16_N1_couch_relaxed | gpt_image_2_6 | GPT 2.6 edit: relaxed natural pose, sitting back in couch corner, son's feet across lap, hand on ankle (fix fo |
 | 2026-11-25 | `92446e16` | Set 14 · s14_dad_scene | gpt_image_2_6 | GPT edit of the Soul dad: porch step, son's smooth bare heel on his knee, sock half off, no kid face |

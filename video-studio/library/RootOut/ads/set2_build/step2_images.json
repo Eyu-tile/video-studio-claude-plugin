@@ -1,0 +1,97 @@
+{
+ "0": [
+  "6d945a99-dd22-45e0-8f04-4d1e39afad97",
+  "s2_narrator_why",
+  "narrator, table cleared, one real RootOut bottle alone"
+ ],
+ "1": [
+  "9670c998-de98-4018-ad58-cd91c3bf198b",
+  "s2_narrator_close",
+  "narrator, two real bottles + hand by a third"
+ ],
+ "2": [
+  "bc0759af-b5e4-49aa-a7ca-356b30a0cd1b",
+  "s2_mom1_scene",
+  "MOM 1 sofa, plain hoodie, kid leg/foot on lap, no kid face"
+ ],
+ "3": [
+  "af6e67b6-f239-4cc3-806b-360d68dcdfbe",
+  "s2_mom2_scene",
+  "MOM 2 kitchen, holds real bottle"
+ ],
+ "4": [
+  "a35eacb1-101b-4949-8001-41406e1bf8fb",
+  "s2_mom3_scene",
+  "MOM 3 hallway, green socks in hand"
+ ],
+ "5": [
+  "71d885b1-1dc3-45b9-8bf8-40c4afa08f33",
+  "s2_f01_three_socks",
+  "three pairs of kids' feet in blue/yellow/green socks on a rug (bare-feet version was safety-blocked)"
+ ],
+ "6": [
+  "f36b5356-8fb5-4212-9f29-0c1955d00bd8",
+  "s2_f06_blue_freeze",
+  "blue sock boy, freeze spray at kitchen chair"
+ ],
+ "7": [
+  "1a7f2d87-4701-4220-ad75-1c0e09e37e68",
+  "s2_f09_green_bed_bottle",
+  "green sock girl on bed, real bottle on duvet"
+ ],
+ "8": [
+  "371cc618-8671-435c-93e4-7de79023b569",
+  "s2_f36_green_bedtime",
+  "green socks up on pillow, book, lamp"
+ ],
+ "9": [
+  "c4f98d7c-89cd-4c60-ad83-d494444b8b1c",
+  "s2_f38_brush",
+  "brush oil on kid sole, real bottle behind"
+ ],
+ "10": [
+  "c4168199-4d46-4eb3-ba74-ff8fe74d08bb",
+  "s2_f45_checkout",
+  "checkout belt, freeze-kit box, hand reaching"
+ ],
+ "11": [
+  "9f72334a-7e1f-4dd4-9b3a-631548f5380a",
+  "s2_s08_yellow_pad",
+  "yellow sock girl, acid pad pressed on"
+ ],
+ "12": [
+  "7c71fbf1-0d8a-41d9-b0f6-d69f96f6899d",
+  "s2_s11a_blue_blister",
+  "blue sock rolled down, blister"
+ ],
+ "13": [
+  "166d42a4-ed79-4d11-9062-665fc870ea27",
+  "s2_s11b_blister_macro",
+  "macro blister, wart edge"
+ ],
+ "14": [
+  "81f297e3-37f3-4a93-83b6-72f9b15f1c1a",
+  "s2_s12_yellow_sock_pad",
+  "yellow sock with pad stuck inside"
+ ],
+ "15": [
+  "9173bc16-d1a1-4ca5-8fdd-ec01fdf46116",
+  "s2_s13_green_dot",
+  "green sock, clear dot still on, morning"
+ ],
+ "16": [
+  "0e60aa89-be0f-4be3-9080-47b5e8f951fa",
+  "s2_s14_blue_wart_back",
+  "blue sock, wart back"
+ ],
+ "17": [
+  "c1a64d4c-b6b8-45c3-888a-a1a98cdbfe6d",
+  "s2_s15_yellow_white_ring",
+  "yellow sock, soggy white ring around wart"
+ ],
+ "18": [
+  "0c14a31e-2bb4-4393-842b-35370d989634",
+  "s2_s16_green_smooth",
+  "green sock, smooth sole"
+ ]
+}

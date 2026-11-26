@@ -12,3 +12,9 @@
 
 Balance before: 857.81.
 Balance after (25 Nov, ~19:15 UTC): **0.55 credits**. This step spent ~44.5 (4 × Soul 0.12, GPT 2.6 edit 2, Seedance 6 s 42); the other RootOut sessions spent the rest of the 857.81 in parallel. Step 2 (~445 cr) is blocked until the account is topped up.
+
+## Step 2 (26 Nov, approved ~445 cr; balance before 3,888.79)
+- Images (GPT 2.6, `step2_images.json`): narrator why/close with real bottles, MOM 1 fixed (plain hoodie, kid face removed), MOM 2 with bottle, MOM 3 with green socks, start frames for the new clips, test stills. All checked by eye.
+- **Safety-blocked, not retried:** three kids' bare feet together (4d73cd6d), and close-ups of a kid's blister (166d42a4), wart back (0e60aa89) and white acid ring (c1a64d4c). The hook was re-made with socks on (71d885b1, a different picture). The three close-ups are covered by reused clips instead of re-prompting around the filter.
+- Voice reference: narrator T1 audio uploaded as media c6ab93a2 (for her later takes).
+- Videos (`step2_videos.json`): 6 silent b-roll (29 s) + 5 talking takes (36 s), Seedance 2.5 720p.
