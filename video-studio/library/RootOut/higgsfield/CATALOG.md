@@ -5,12 +5,24 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1704 generations (1231 video, 311 image, 162 audio). RootOut era (from 21 Nov 2026): 890.
+Totals: 1740 generations (1243 video, 311 image, 186 audio). RootOut era (from 21 Nov 2026): 926.
 
-## RootOut-era video (473; 259 named by a set)
+## RootOut-era video (485; 271 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `3bd462a6` | Set 2 · V06_failed | seedance_2_5 | failed (generic error), retried as 81932a47 |
+| 2026-11-26 | `653a6950` | Set 2 · T43_mom3 | seedance_2_5 | MOM 3 hallway, green socks: 'kept going two more weeks...' words exact |
+| 2026-11-26 | `71df3e52` | Set 2 · T41_mom1 | seedance_2_5 | MOM 1 sofa: 'I was scared to file his foot...' words exact |
+| 2026-11-26 | `bb70f6bf` | Set 2 · T35_mom2 | seedance_2_5 | MOM 2 kitchen with bottle: 'tried it on my own hand first...' (repeats 'my own hand': jump cut 2.2-3.6 s) |
+| 2026-11-26 | `df8d7044` | Set 2 · T46_close | seedance_2_5 | narrator close: link, third bottle on us, money back, 90 days; slides third bottle; words exact |
+| 2026-11-26 | `614ff4ea` | Set 2 · T18_why | seedance_2_5 | narrator take: 'So why did only one work?' (trim at 2.5 s, adds 'Only one.') |
+| 2026-11-26 | `865673f7` | Set 2 · V45_checkout | seedance_2_5 | checkout belt, plain freeze-kit box taken back off |
+| 2026-11-26 | `5d9fd946` | Set 2 · V38_brush | seedance_2_5 | adult brushes oil from cap onto kid's wart, real bottle on nightstand |
+| 2026-11-26 | `170a4455` | Set 2 · V36_green_bedtime | seedance_2_5 | green socks up on pillow at bedtime, ankles cross |
+| 2026-11-26 | `c0582def` | Set 2 · V09_green_bed | seedance_2_5 | green sock girl on bed reading, real bottle on duvet |
+| 2026-11-26 | `81932a47` | Set 2 · V06_blue_freeze | seedance_2_5 | blue-sock boy, freeze spray puff on bare sole, grips chair (retry of failed 3bd462a6) |
+| 2026-11-26 | `cabc158e` | Set 2 · V01_three_socks | seedance_2_5 | three pairs of kids' feet in blue/yellow/green socks on a rug, slow pan |
 | 2026-11-26 | `44483b49` | Set 15 · M7_kitchen_close | seedance_2_5 | Set 15 mom close with 3 real bottles; laughs mid-line and the bottles fly out after ~4 s: use first sentence o |
 | 2026-11-26 | `f4cecbaa` | Set 15 · M6_kitchen_14nights | seedance_2_5 | Set 15 mom kitchen selfie: 'Then we did fourteen more nights, so the root's gone too.' 5 s |
 | 2026-11-26 | `8ded26a6` | Set 15 · M5_bedroom_routine | seedance_2_5 | Set 15 mom kneels by son's bed (son chest-down, dino pajamas, tablet, socked foot on her knee), real bottle on |
@@ -745,10 +757,34 @@ Totals: 1704 generations (1231 video, 311 image, 162 audio). RootOut era (from 2
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
 | 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
-## RootOut-era audio (162; 63 named by a set)
+## RootOut-era audio (186; 87 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `32c58da3` | Set 2 · s2_vo_v12b | seed_audio | Set 2 narrator VO line v12b (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `5b682bbb` | Set 2 · s2_vo_v44 | seed_audio | Set 2 narrator VO line v44 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `5e4e3f76` | Set 2 · s2_vo_v42 | seed_audio | Set 2 narrator VO line v42 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `118dde45` | Set 2 · s2_vo_v39 | seed_audio | Set 2 narrator VO line v39 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `64976280` | Set 2 · s2_vo_v36 | seed_audio | Set 2 narrator VO line v36 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `386d7ddc` | Set 2 · s2_vo_v31 | seed_audio | Set 2 narrator VO line v31 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `d1911e2e` | Set 2 · s2_vo_v28 | seed_audio | Set 2 narrator VO line v28 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `5c2853f7` | Set 2 · s2_vo_v25 | seed_audio | Set 2 narrator VO line v25 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `e77011dc` | Set 2 · s2_vo_v23 | seed_audio | Set 2 narrator VO line v23 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `9657d99a` | Set 2 · s2_vo_v19 | seed_audio | Set 2 narrator VO line v19 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `9a75417c` | Set 2 · s2_vo_v08 | seed_audio | Set 2 narrator VO line v08 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `8e9946e7` | Set 2 · s2_vo_h2a | seed_audio | Set 2 narrator VO line h2a (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `5305e7ba` | Set 2 · s2_vo_v14 | seed_audio | Set 2 narrator VO line v14 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `670e1d41` | Set 2 · s2_vo_v13 | seed_audio | Set 2 narrator VO line v13 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `7e1a1505` | Set 2 · s2_vo_v12 | seed_audio | Set 2 narrator VO line v12 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `6ca8c539` | Set 2 · s2_vo_v11 | seed_audio | Set 2 narrator VO line v11 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `240c76c3` | Set 2 · s2_vo_v09 | seed_audio | Set 2 narrator VO line v09 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `3ed8c49b` | Set 2 · s2_vo_h3b | seed_audio | Set 2 narrator VO line h3b (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `6f5be098` | Set 2 · s2_vo_h3a | seed_audio | Set 2 narrator VO line h3a (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `e9eb848a` | Set 2 · s2_vo_h2b | seed_audio | Set 2 narrator VO line h2b (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `26ab2edf` | Set 2 · s2_vo_v03 | seed_audio | Set 2 narrator VO line v03 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `94095e34` | Set 2 · s2_vo_v01 | seed_audio | Set 2 narrator VO line v01 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `9a046968` | Set 2 · s2_vo_v06 | seed_audio | Set 2 narrator VO line v06 (Seed Audio cloned from T1, media c6ab93a2) |
+| 2026-11-26 | `d484b722` | Set 2 · s2_vo_v05 | seed_audio | Set 2 narrator VO line v05 (Seed Audio cloned from T1, media c6ab93a2) |
 | 2026-11-26 | `d312a19a` | Set 15 · mom_voice_sample_naomi | text2speech_v2 | ElevenLabs Naomi sample for the Set 15 mom (same 163 Hz as M1); M1's own audio used as the reference instead |
 | 2026-11-25 | `65260dc8` | Set 14 · s14_n11 | text2speech_v2 | Narrator line n11 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
 | 2026-11-25 | `c9cccfe4` | Set 14 · s14_n10 | text2speech_v2 | Narrator line n10 (ElevenLabs Sloane), verbatim SET14_BRIEF, checked with speech-to-text |
