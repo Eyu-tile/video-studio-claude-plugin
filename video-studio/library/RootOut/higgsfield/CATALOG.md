@@ -5,12 +5,35 @@ Full data (prompt, references) is in `catalog.jsonl`; get a download link with j
 `python3 -I video-studio/library/RootOut/higgsfield/catalog.py search "<words>"`.
 **Before generating anything, search here. After every generation, add it** (`catalog.py add <job_id> --name ... --set ... --notes ...`) and push.
 
-Totals: 1740 generations (1243 video, 311 image, 186 audio). RootOut era (from 21 Nov 2026): 926.
+Totals: 1765 generations (1266 video, 311 image, 188 audio). RootOut era (from 21 Nov 2026): 951.
 
-## RootOut-era video (485; 271 named by a set)
+## RootOut-era video (508; 294 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `ff5e21b4` | Set 6 · T10b_root_r3 | seedance_2_5 | Set 6 plant line re-shoot 2: pokeweed OK, 'white cedar' still wrong ('seed Dieter'); used with the Seed Audio  |
+| 2026-11-26 | `fc4d3b9e` | Set 6 · T10b_root_r2 | seedance_2_5 | Set 6 plant line re-shoot 1: pokeweed OK, 'white cedar' heard as 'white eyeliner'. |
+| 2026-11-26 | `bddeb77d` | Set 6 · K1_hook_h1_v3 | seedance_2_5 | Set 6 hook H1, re-shoot 2 with a pronunciation note: 'limping' clear (STT exact), real bottle in hand, label r |
+| 2026-11-26 | `c0ecee8b` | Set 6 · K1 | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: hook H1 re-shoot 1 (still says 'lumping') -> reject. Voice r |
+| 2026-11-26 | `720d3bdf` | Set 6 · T13b_offer | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: link below, buy two add a third, 90 days. Voice ref = K1 aud |
+| 2026-11-26 | `7ccff632` | Set 6 · T13a_wait | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: if your kid's limping... don't wait. Voice ref = K1 audio (t |
+| 2026-11-26 | `457796da` | Set 6 · T12_after | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: 14 more nights, back at soccer, running not limping. Voice r |
+| 2026-11-26 | `8865c6ac` | Set 6 · T11_safe | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: kids' formula 4+, pediatricians, no freezing/acid/blister (b |
+| 2026-11-26 | `633b5920` | Set 6 · T10b_root | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: 8x, pokeweed/white cedar MISPRONOUNCED -> reject. Voice ref  |
+| 2026-11-26 | `2a2b4bfd` | Set 6 · T10a_wish | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: wish I'd known, lemon, tea tree thin oil. Voice ref = K1 aud |
+| 2026-11-26 | `4349e534` | Set 6 · T09b_routine | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: file, brush, dot, felt cool, two weeks, sister's too (adds ' |
+| 2026-11-26 | `11b06b36` | Set 6 · T09a_honest | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: didn't think it would work, two minutes, nobody held down. V |
+| 2026-11-26 | `cfc40065` | Set 6 · T08b_rootout | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: root stays, she used RootOut, four plants, bedtime (lifts bo |
+| 2026-11-26 | `2ddab76b` | Set 6 · T08a_tip | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: mom from his team, snap off the top, dandelion. Voice ref =  |
+| 2026-11-26 | `f8adefb5` | Set 6 · T06_freeze | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: froze it, held him, blistered, back, same spot. Voice ref =  |
+| 2026-11-26 | `778416fa` | Set 6 · T05_soccer | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: sat out soccer, shoes at a friend's. Voice ref = K1 audio (t |
+| 2026-11-26 | `5ce49ec7` | Set 6 · T04b_study | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: study of ~1,500 schoolkids, twice as likely. Voice ref = K1  |
+| 2026-11-26 | `3ec6a896` | Set 6 · T04a_two | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: didn't stay one, two, sister's heel. Voice ref = K1 audio (t |
+| 2026-11-26 | `5d1a3c30` | Set 6 · T03_found | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: bath time, turned his foot, plantar wart. Voice ref = K1 aud |
+| 2026-11-26 | `9991e986` | Set 6 · T02_limp | seedance_2_5 | Set 6 mom at the kitchen counter, on-camera take: limp, socks, splinter, tweezers, nothing. Voice ref = K1 aud |
+| 2026-11-26 | `968ed216` | Set 6 · T07_next_in_line | seedance_2_5 | Set 6 mom at the counter: 'And now his sister was next in line for the freeze.' + sigh. Voice ref = K1 audio ( |
+| 2026-11-26 | `cb0f5b4a` | Set 6 · G1_walk_school | seedance_2_5 | Boy from behind, waist down, walking to school on an autumn sidewalk, slight limp onto the outer edge; navy sh |
+| 2026-11-26 | `56e01931` | Set 6 · G2_sideline_moms | seedance_2_5 | Soccer sideline, sunny: Set 6 mom (olive fleece) and a curly-haired mom in a navy vest; the friend pulls the r |
 | 2026-11-26 | `3bd462a6` | Set 2 · V06_failed | seedance_2_5 | failed (generic error), retried as 81932a47 |
 | 2026-11-26 | `653a6950` | Set 2 · T43_mom3 | seedance_2_5 | MOM 3 hallway, green socks: 'kept going two more weeks...' words exact |
 | 2026-11-26 | `71df3e52` | Set 2 · T41_mom1 | seedance_2_5 | MOM 1 sofa: 'I was scared to file his foot...' words exact |
@@ -36,7 +59,7 @@ Totals: 1740 generations (1243 video, 311 image, 186 audio). RootOut era (from 2
 | 2026-11-25 | `9c0b1e18` | Set 14 · s14_flake_blocked | seedance_2_5 | blocked by the safety filter (fleshy wart macro start frame); do not retry |
 | 2026-11-25 | `5327664e` | Set 14 · s14_hook | seedance_2_5 | 5 s: hand dabs store wart liquid on a kid's heel, white ring of skin, bath towel, slow push-in (H1 hook) |
 | 2026-11-25 | `ad56e80b` | Set 2 · T1_row2 | seedance_2_5 | Set 2 narrator take (voice lock): 'Freezing, pads, acid, clippers. You've tried at least one. It grew back.' s |
-| 2026-11-25 | `281451bc` | Set 6 · K1_hook_h1 | seedance_2_5 | Set 6 mom at kitchen counter, daylight, says the H1 hook word for word (11 s), lifts the real RootOut bottle a |
+| 2026-11-25 | `281451bc` | Set 6 · K1_hook_h1 | seedance_2_5 | Set 6 hook take 1: says 'lumping' instead of 'limping' (2 transcribers). Voice/vibe = the Set 6 voice referenc |
 | 2026-11-25 | `2af822f3` | Set 7 · s7_g4_aisle |  | Seedance 720p 4s from 03473b8f: grey-sleeve hand takes a freeze can off a drugstore shelf, puts it back |
 | 2026-11-25 | `31306546` | Set 7 · s7_g2_pick |  | Seedance 720p 4s: fingernail hovers at a black dot on a kid's heel (almost picks it); little motion |
 | 2026-11-25 | `370f474f` | Set 7 · s7_g1_bath |  | Seedance 720p 5s: mom dries foot with towel, thumb stops by the black-dot wart (H1 hook picture) |
@@ -757,10 +780,12 @@ Totals: 1740 generations (1243 video, 311 image, 186 audio). RootOut era (from 2
 | 2026-11-21 | `f39e944d` | Set 1 · f01 | text2image_soul_v2 | Vertical phone selfie video still, front camera at arm's length, slightly low angle. A tired American mom in h |
 | 2026-11-23 | `8c3b39da` | Set 4 · s4_F_3dstyle |  | Set 4 v2 3D style frame (start image for every Set 4 skin animation) |
 
-## RootOut-era audio (186; 87 named by a set)
+## RootOut-era audio (188; 89 named by a set)
 
 | date | id (8) | set · name | model | what it is (prompt start) |
 |---|---|---|---|---|
+| 2026-11-26 | `e3ab1ac7` | Set 6 · T10b_patch_cedar_b | seed_audio | same line, faster read |
+| 2026-11-26 | `5eac3787` | Set 6 · T10b_patch_cedar | seed_audio | Seed Audio in the Set 6 mom's voice (ref fcc246df = 31 s of her takes): 'and carries the pokeweed and white ce |
 | 2026-11-26 | `32c58da3` | Set 2 · s2_vo_v12b | seed_audio | Set 2 narrator VO line v12b (Seed Audio cloned from T1, media c6ab93a2) |
 | 2026-11-26 | `5b682bbb` | Set 2 · s2_vo_v44 | seed_audio | Set 2 narrator VO line v44 (Seed Audio cloned from T1, media c6ab93a2) |
 | 2026-11-26 | `5e4e3f76` | Set 2 · s2_vo_v42 | seed_audio | Set 2 narrator VO line v42 (Seed Audio cloned from T1, media c6ab93a2) |

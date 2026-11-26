@@ -1,0 +1,427 @@
+[
+ {
+  "index": 2,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 15,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"It started with a limp. He walked on the side of his foot. Every school morning was a fight over socks. He said it hurt to step on. I thought it was a splinter. I shook out his shoes. I tried tweezers. Nothing.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. On 'Nothing.' she gives a small helpless shrug. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T02_limp"
+ },
+ {
+  "index": 3,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 9,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"Then one night at bath time, I turned his foot over. A hard little spot, with tiny black dots. A plantar wart.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. She goes quiet and serious on 'A plantar wart.' The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T03_found"
+ },
+ {
+  "index": 4,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 8,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"And it didn't stay one. A month later there were two. Then his little sister had one on her heel.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. She holds up two fingers on 'there were two'. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T04a_two"
+ },
+ {
+  "index": 5,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 12,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"I looked it up. A study of almost fifteen hundred schoolkids found that someone at home with a wart makes the other kids about twice as likely to get one.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. She picks up her phone from the counter, glances at it, then back to the lens. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T04b_study"
+ },
+ {
+  "index": 6,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 7,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"He sat out his soccer games. He wouldn't take his shoes off at a friend's house.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. A sad little smile. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T05_soccer"
+ },
+ {
+  "index": 7,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 13,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"So we did what the doctor said. We froze it. Somebody had to hold him still. It blistered, and he limped worse for a week. Three weeks later, it was back. Same spot.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. She shakes her head slightly on 'Same spot.' The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T06_freeze"
+ },
+ {
+  "index": 8,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 5,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"And now his sister was next in line for the freeze.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. She exhales and pauses after the line. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T07_next"
+ },
+ {
+  "index": 9,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 10,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"Then a mom from his team told me why it keeps coming back. Freezing, acid and shaving only snap off the top, like picking a dandelion.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. On 'snap off the top' she mimes a little snap with her fingers. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T08a_tip"
+ },
+ {
+  "index": 10,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 11,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"The root stays under the hard skin, so it grows back. She used RootOut. It's an oil with four plants, and you brush it on at bedtime.\" On 'She used RootOut' she picks the small amber RootOut bottle up from the counter and holds it up beside her face, label toward the lens. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T08b_rootout"
+ },
+ {
+  "index": 11,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 8,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"Honestly, I didn't think it would work. But it was two minutes at bedtime, and nobody had to hold anybody down.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. A small honest laugh at 'Honestly'. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T09a_honest"
+ },
+ {
+  "index": 12,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 14,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"Two light rubs with the little file, just on the hard top. Brush the oil on. A clear dot on top. He said it felt cool. In about two weeks, it was gone. His sister's too.\" She holds the small amber RootOut bottle in one hand and counts the three steps on her fingers; she smiles on 'His sister's too.' The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T09b_routine"
+ },
+ {
+  "index": 13,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 8,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"Here's what I wish I'd known sooner. The lemon softens that hard skin on top. The tea tree is a thin oil.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. She leans in a little, explaining. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T10a_wish"
+ },
+ {
+  "index": 14,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 14,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"It sinks in, up to eight times deeper than a regular cream, and carries the pokeweed and white cedar down to the root. Then those two break the wart down from there, so it can't grow back.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. Calm explaining hand gestures, pointing down on 'down to the root'. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T10b_root"
+ },
+ {
+  "index": 15,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 8,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"It's a kids' formula, for ages 4 and up, and pediatricians recommend it. No freezing, no acid, no blister.\" She holds the small amber RootOut bottle up to the lens, label facing the camera. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T11_safe"
+ },
+ {
+  "index": 16,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 9,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"We did fourteen more nights after it was gone, so the root was gone too. He's back at soccer. Running, not limping.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. A relieved, proud smile on 'Running, not limping.' The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T12_after"
+ },
+ {
+  "index": 17,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 8,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"If your kid's limping and you find a hard spot under his foot, don't wait for it to spread.\" The small amber RootOut bottle stands on the counter beside the fruit bowl, label facing the camera. Sincere, direct to the lens. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T13a_wait"
+ },
+ {
+  "index": 18,
+  "params": {
+   "model": "seedance_2_5",
+   "duration": 9,
+   "aspect_ratio": "9:16",
+   "resolution": "720p",
+   "medias": [
+    {
+     "value": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+     "role": "start_image"
+    },
+    {
+     "value": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+     "role": "image"
+    },
+    {
+     "value": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+     "role": "audio"
+    }
+   ],
+   "prompt": "Real vertical phone video, the phone propped against the fruit bowl on the kitchen counter, still camera with a tiny natural wobble, plain morning daylight; the same woman, same olive fleece, same kitchen as the start image; one continuous take, never cut. She talks straight to the lens like she's telling a close friend what happened: relaxed, honest, a little tired, natural small pauses between sentences, small shrugs, normal blinking, she glances away while remembering and comes back to the lens; not performing, not salesy. Voice: the same warm American female voice as the reference audio (use the audio only for her voice and tone, never its words), conversational, unhurried. She says exactly: \"It's at the link below. Buy two, we'll add a third. And if it's not gone, you've got 90 days to get your money back.\" She holds the small amber RootOut bottle beside her face, label toward the lens, and points down once on 'link below'. The RootOut bottle is always exactly the reference bottle: white label with navy 'RootOut', blue band, tall glossy white cap, label unchanged and readable, never mirrored. No music, no captions, no on-screen text."
+  },
+  "name": "T13b_offer"
+ }
+]

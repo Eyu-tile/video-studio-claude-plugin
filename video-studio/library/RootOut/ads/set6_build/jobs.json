@@ -1,0 +1,42 @@
+{
+ "identity": "dbc1310c-12c2-4a11-9d55-8ed93586265b",
+ "start_frame": "e5b43ab6-bfdb-4cf9-96d6-f369ef258287",
+ "bottle_ref": "2c52c56e-9f2f-4f40-9fda-4caa813e7578",
+ "voice_ref": "260e1746-252f-4938-b69d-fcffe8fb4de6",
+ "takes": {
+  "K1_old": "281451bc-73b0-4450-896d-a771e648dd9b",
+  "K1": "bddeb77d-f0d2-43d4-bd06-ff87880b8b01",
+  "T02_limp": "9991e986-a266-467b-bbd1-293bf46bd52d",
+  "T03_found": "5d1a3c30-b9dd-4116-874c-882ba0dec8ca",
+  "T04a_two": "3ec6a896-9ec5-4336-8ccf-09de57bd6258",
+  "T04b_study": "5ce49ec7-2810-4854-b18d-802129a831b6",
+  "T05_soccer": "778416fa-ab6e-4147-94cc-d457170f8f14",
+  "T06_freeze": "f8adefb5-9ea1-4d35-8f9d-a962aa08a579",
+  "T07_next": "968ed216-cdc5-438d-8496-35823d95f528",
+  "T08a_tip": "2ddab76b-faa0-40ea-b7e2-8a38258c4e80",
+  "T08b_rootout": "cfc40065-d372-4844-952f-7152b3cddf28",
+  "T09a_honest": "11b06b36-c860-4045-8007-16632b647604",
+  "T09b_routine": "4349e534-7a6f-47d3-90ba-2a2256349a5b",
+  "T10a_wish": "2a2b4bfd-ea90-4843-ae02-c9801bd7f434",
+  "T10b_root": "fc4d3b9e-d146-44b1-aca6-83ba587d761a",
+  "T11_safe": "8865c6ac-95f7-4695-aa05-6a5c3bc2d3a3",
+  "T12_after": "457796da-abac-4f99-bdd4-8d6fa598fe26",
+  "T13a_wait": "7ccff632-d376-4a58-826d-d98af8a7f120",
+  "T13b_offer": "720d3bdf-b00c-4d72-9010-198c6c41a0f0",
+  "K1_r1": "c0ecee8b-7944-4503-b4b3-9954b4a44240",
+  "T10b_r1": "633b5920-f2dc-44de-93b2-862b5cc2f764"
+ },
+ "gen": {
+  "G1_walk": "cb0f5b4a-e9d9-4bfb-9be9-03aa4447e49e",
+  "G2_sideline": "56e01931-32a4-48ad-8fd6-cd04510ce9fc"
+ },
+ "stills": {
+  "N1": "0c2f00ce-dda0-488f-8774-befaaddf0c1b",
+  "N2": "ecb59073-d8e4-4df5-a05c-afcb44c6e1ae",
+  "N3": "56952fc2-fd9e-4e7f-b7e8-a222f73e6e8e",
+  "N4": "d6e750aa-65a0-46ab-9f21-c4af78b88913",
+  "N5": "d7ee7fcf-17fc-4ea3-bad7-e968a660f95c",
+  "N6": "6ddd5d40-7592-45bb-9cbe-268cd041fd48",
+  "N7": "4c859dd3-8274-4404-9fc3-a9dfd13c18e8"
+ }
+}

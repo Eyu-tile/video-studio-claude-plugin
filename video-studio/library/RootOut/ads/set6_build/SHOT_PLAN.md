@@ -6,6 +6,13 @@ Project (git-ignored): `video-studio/projects/rootout-set6/`. 9:16, ~3:04 with H
 Billing: Higgsfield `WilloMd` only, private workspace ab6cddcc…, Ultra, **857.81 credits on 25 Nov** (shared with the other RootOut sessions).
 Models (house): Soul 2 (identity, 0.12 cr) → GPT Image 2.6 scene edits (0.75 cr) → Seedance 2.5 720p native takes (7 cr/s, line in the prompt, no lip-sync pass, L2) · off-camera VO = Seed Audio cloned from her first take (Set 18 method).
 
+
+> **Owner, 26 Nov: whole body on camera.** "It needs to feel natural, the way she talks in the hook." Every line is now
+> her own on-camera Seedance take (K1 hook + T02–T13b body, 17 takes, 168 s, `takes.py`), with K1's voice as the
+> voice reference (media 260e1746…, timbre only). No cloned VO. The cutaways in the table below play **over her own take
+> audio** (picture cuts away, her voice keeps going); she comes back on camera between them, about every 2–3 cutaways.
+> Cost: ~1,176 cr takes + ~63 cr G1/G2 (approved, balance 3,961 on 26 Nov).
+
 ## Rules applied
 L1 no disclaimer text (end card's "AI illustration." dropped) · L2 talking heads native · L1-brand real bottle via `image_references` 2c52c56e… · L2/L3 one shot per phrase, ~3 s, picture = the word · L4 each source once, no freezes, ≥0.75x · L5 captions throughout · L6 music to the last frame · L7 voice + music only · L8 moving 3D (reuse S13/S17 blocks) · L9 citation card from the real PubMed abstract only · L10 no kid faces · L12 search/reuse first, log every new job.
 
