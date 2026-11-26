@@ -4,13 +4,13 @@ Each section = one Seedance take (her native voice, untouched, no clone, no lip-
 b-roll on the exact word it shows (ElevenLabs STT word times) while her take audio keeps playing, then back to her.
 House/RootOut rules: L1 no disclaimer text · L2 ~3 s b-roll on the words · L4 each source once, no freeze, >=0.75x ·
 L5 bold word-by-word captions, active word highlighted, kept off graphics · L6 music to the last frame · L7 voice + music only.
-Usage: build6.py [--plan]  -> projects/rootout-set6/out/WilloMD_RootOut_Set6_H1_9x16_v1.mp4"""
+Usage: build6.py [--plan]  -> projects/rootout-set6/out/WilloMD_RootOut_Set6_H1_9x16_v2.mp4"""
 import json, re, subprocess, sys, difflib
 from pathlib import Path
 
 P = Path("/home/user/video-studio-claude-plugin/video-studio/projects/rootout-set6")
 TK, RU, ST, GN, GX = P / "raw/takes", P / "raw/reuse", P / "raw/stills", P / "raw/gen", P / "assets/graphics"
-TMP = P / "work/v1"; TMP.mkdir(parents=True, exist_ok=True); (P / "out").mkdir(exist_ok=True)
+TMP = P / "work/v2"; TMP.mkdir(parents=True, exist_ok=True); (P / "out").mkdir(exist_ok=True)
 W, H, FPS = 1080, 1920, 24
 ENC = ["-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p", "-r", str(FPS)]
 COVER = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1"
@@ -58,11 +58,11 @@ SECTIONS = [
  ("T05_soccer", [(0, "photo", N("N5"), {}), (("He", 1), "photo", N("N6"), {})]),
  ("T06_freeze", [(0, "talk", None, {}), (("We", 1), "clip", R("2eadbf23"), {"ss": 0.0}), (("blistered", 0, 1), "clip", R("b959c1ff"), {"ss": 0.3}),
                  (("Three", 0), "clip", R("28fafd4b"), {"ss": 0.6}), (("Same", 0), "talk", None, {})]),
- ("T07_next", [(0, "talk", None, {}), (("next", 0), "photo", N("N7"), {})]),
+ ("T07_next", [(0, "photo", N("N7"), {})]),   # v2: no 0.5 s flash of her before the card
  ("T08a_tip", [(0, "clip", GN / "G2_sideline.mp4", {}), (("Freezing", 0), "talk", None, {}), (("snap", 0), "clip", R("3e99af22"), {"ss": 0.0})]),
  ("T08b_rootout", [(0, "clip", R("ee317059"), {"ss": 0.0}), (("so", 0), "clip", R("644d4a63"), {"ss": 0.2}), (("She", 0), "talk", None, {})]),
  ("T09a_honest", [(0, "talk", None, {})]),
- ("T09b_routine", [(0, "clip", R("757ba2f9"), {"ss": 0.3}), (("Brush", 0), "clip", R("18e77103"), {"ss": 0.4}), (("A", 0), "clip", R("686ace6f"), {"ss": 0.3}),
+ ("T09b_routine", [(0, "clip", R("757ba2f9"), {"ss": 0.3}), (("Brush", 0), "clip", R("18e77103"), {"ss": 0.4}), (("clear", 0), "clip", R("686ace6f"), {"ss": 0.3}),
                    (("He", 0), "clip", R("e2efa595"), {"ss": 0.2}), (("In", 0), "clip", R("d24782f6"), {"ss": 0.2})]),
  ("T10a_wish", [(0, "talk", None, {}), (("The", 0), "clip", R("56f40499"), {"ss": 0.0}), (("The", 1), "talk", None, {})]),
  ("T10b_root", [(0, "clip", R("ce962fe0"), {"ss": 0.0, "gauge": 1}), (("and", 0), "clip", R("692c7031"), {"ss": 0.0}),
@@ -74,7 +74,8 @@ SECTIONS = [
  ("T13a_wait", [(0, "talk", None, {})]),
  ("T13b_offer", [(0, "talk", None, {}), (("Buy", 0), "clip", R("5e57f5fc"), {"ss": 0.6}), (("And", 0), "anim", GX / "c_offer.mp4", {"nocap": 1})]),
 ]
-GAP_IN, GAP_OUT = 0.10, 0.22   # breath kept before the first and after the last word of each take
+GAP_IN, GAP_OUT = 0.06, 0.16   # breath kept before the first and after the last word of each take (v2: tighter)
+SP = 1.10                      # v2 (owner 26 Nov, reference pace): her takes play 10% faster, pitch kept, lips stay in sync
 ZOOM = [1.0, 1.07]             # alternate framing between consecutive takes (hides jump cuts on her)
 
 def words(name):
@@ -106,9 +107,9 @@ def anchor(ws, a):
 
 def chain(kind, src, d, ss=0.0, zoom=1.0):
     if kind in ("clip", "anim", "talk"):
-        avail = dur(src) - ss; f = 1.0 if kind == "talk" else min(1.0, avail / d)
+        avail = dur(src) - ss; f = SP if kind == "talk" else min(1.0, avail / d)
         if f < 0.75: sys.exit(f"{src.name}: needs {d:.2f}s from {ss:.2f}, has {avail:.2f}s (would be {f:.2f}x)")
-        rate = f"minterpolate=fps={FPS}:mi_mode=blend" if f < 0.97 else f"fps={FPS}"
+        rate = f"minterpolate=fps={FPS}:mi_mode=blend" if f < 0.97 else f"fps={FPS}"   # talk shots: f = SP (faster)
         z = f",scale={int(W * zoom)}:{int(H * zoom)},crop={W}:{H},setsar=1" if zoom != 1.0 else ""
         return f"[0:v]trim=start={ss:.3f},setpts=(PTS-STARTPTS)/{f:.4f},{rate},{COVER}{z}"
     n = int(d * FPS) + 2
@@ -131,14 +132,14 @@ def build_section(si, name, items):
     k0 = next(i for i, w in enumerate(ws) if w[0] == first); ws = ws[k0:]   # drop words she added before the line (T09b)
     miss = check_words(name, ws)
     if miss: print(f"  ! {name} words differ from script: {miss}")
-    a = max(0.0, ws[0][1] - GAP_IN); b = min(dur(src), ws[-1][2] + GAP_OUT); total = b - a
-    wsr = [(w, s - a, e - a, p) for w, s, e, p in ws]
+    a = max(0.0, ws[0][1] - GAP_IN); b = min(dur(src), ws[-1][2] + GAP_OUT); total = (b - a) / SP
+    wsr = [(w, (s - a) / SP, (e - a) / SP, p) for w, s, e, p in ws]   # output (sped-up) clock
     starts = [max(0.0, anchor(wsr, it[0]) - 0.04) if it[0] != 0 else 0.0 for it in items]
     if any(y <= x + 0.3 for x, y in zip(starts, starts[1:])): sys.exit(f"{name}: shots too close {starts}")
     zoom = ZOOM[si % 2]; parts, plan = [], []
     for j, ((_, kind, s, o), t0) in enumerate(zip(items, starts)):
         t1 = starts[j + 1] if j + 1 < len(items) else total; d = t1 - t0; o = dict(o)
-        if kind == "talk": s = src; o["ss"] = a + t0; o["zoom"] = zoom
+        if kind == "talk": s = src; o["ss"] = a + t0 * SP; o["zoom"] = zoom
         out = TMP / f"{si:02d}_{name}_{j}.mp4"
         if "--plan" not in sys.argv and not ("--assemble" in sys.argv and out.exists() and name not in REBUILD): piece(kind, s, d, o, out)
         parts.append(out); plan.append((round(t0, 2), round(d, 2), kind, Path(s).stem, o.get("nocap", 0)))
@@ -146,8 +147,8 @@ def build_section(si, name, items):
     if "--plan" not in sys.argv and not ("--assemble" in sys.argv and sec.exists() and name not in REBUILD):
         ins = sum((["-i", p] for p in parts), [])
         vc = "".join(f"[{j}:v]setsar=1[s{j}];" for j in range(len(parts))) + "".join(f"[s{j}]" for j in range(len(parts))) + f"concat=n={len(parts)}:v=1:a=0[v]"
-        run([*ins, "-ss", f"{a:.3f}", "-t", f"{total:.3f}", "-i", src, "-filter_complex",
-             f"{vc};[{len(parts)}:a]aresample=48000,aformat=channel_layouts=stereo,apad,atrim=0:{total:.3f}[a]",
+        run([*ins, "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", src, "-filter_complex",
+             f"{vc};[{len(parts)}:a]aresample=48000,aformat=channel_layouts=stereo,atempo={SP},apad,atrim=0:{total:.3f}[a]",
              "-map", "[v]", "-map", "[a]", "-t", f"{total:.3f}", *ENC, "-c:a", "aac", "-b:a", "192k", sec])
     return sec, total, wsr, plan
 
@@ -220,7 +221,7 @@ if __name__ == "__main__":
           f"[0:a]asplit[vo][sc];[m][sc]sidechaincompress=threshold=0.03:ratio=4:attack=20:release=400[md];"
           f"[vo][md]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-2:LRA=9,alimiter=limit=0.79:level=false[a];"
           f"[0:v]ass={TMP / 'captions.ass'},noise=alls=3:allf=t,vignette=PI/6[v]")
-    final = P / "out/WilloMD_RootOut_Set6_H1_9x16_v1.mp4"
+    final = P / "out/WilloMD_RootOut_Set6_H1_9x16_v2.mp4"
     run(["-i", cat, "-i", MUSIC_FILE, "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-r", str(FPS),
          "-c:v", "libx264", "-crf", "20" if PREVIEW else "18", "-maxrate", "10M", "-bufsize", "20M", "-preset", "veryfast" if PREVIEW else "slow", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-map_metadata", "-1", "-movflags", "+faststart", final])
