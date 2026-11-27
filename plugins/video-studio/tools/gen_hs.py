@@ -56,8 +56,15 @@ CAMERA = ("Photorealistic vertical 9:16 frame, like a paused frame from a casual
           "front camera. She holds the phone herself at arm's length, her near arm angling out of the bottom corner "
           "of the frame toward the lens. Slight wide-angle selfie perspective, a couple of degrees of handheld tilt, "
           "slightly off-center, chest-up to face-filling.")
-LOOK = ("Deep focus, no portrait mode, no background blur. True-to-life flat phone color, not graded. Real skin "
-        "texture: pores, the lines and spots named above, slight unevenness, never airbrushed or plastic.")
+# Visual imperfections are what make it read as real (team tip): harsh-ish light, imperfect framing, real exposure.
+IMPERFECT = ("Imperfect on purpose: slightly harsh, uneven light from one real source in the room; imperfect framing "
+             "(a little too close, part of the head or shoulder cut off at the edge, not centered); realistic phone "
+             "exposure, so the brightest window or lamp is a little blown out and the shadows are a little crushed.")
+LOOK = (f"{IMPERFECT} Deep focus, no portrait mode, no background blur. True-to-life flat phone color, not graded. "
+        "Real skin texture: pores, the lines and spots named above, slight unevenness, never airbrushed or plastic.")
+MOVE = ("iPhone-style UGC: natural handheld movement, small shakes and drifts, the framing slips a little and gets "
+        "corrected; realistic exposure shifts as the phone moves, the auto-exposure brightening and dimming slightly "
+        "when a window or lamp comes into frame.")
 PROPPED = ("Photorealistic vertical 9:16 frame, like a paused frame from a video filmed on a phone propped up nearby "
            "(on a counter, a nightstand, against a bowl), not handheld: the frame does not move and is a couple of degrees "
            "crooked, framed from the waist or chest up.")
@@ -136,7 +143,7 @@ def talk_prompt(ln):
     tone = ln.get("tone", "warm, natural, conversational")
     move = f" {ln['perform']}." if ln.get("perform") else ""
     return (f"{where}. {tone}.{move} Stays in place, head upright and level, only small natural nods. The phone is "
-            f"handheld, so the frame drifts slightly.")
+            f"handheld, so the frame drifts slightly, with small natural exposure shifts.")
 
 
 def motion_prompt(ln, aspect):
@@ -144,10 +151,15 @@ def motion_prompt(ln, aspect):
     act = ln.get("action") or ln.get("still") or ""
     face = ("No face in the shot." if kind == "broll" else
             "Keep her face, hair, skin texture and lines exactly as in the start frame.")
-    return (f"5 seconds. Shot like a real person filming on a recent iPhone with one hand, "
-            f"{'vertical' if aspect == '9:16' else 'horizontal'}. Handheld, small natural shake. Deep focus, flat "
-            f"honest phone color. ONE clear action: {act}. {face} The product label stays exactly as it is. "
-            f"No new text, no logos, no captions. No beauty filter.")
+    orient = "vertical" if aspect == "9:16" else "horizontal"
+    if ln.get("camera") == "propped":
+        how = (f"Filmed on a recent iPhone propped up nearby, {orient}: the frame stays put apart from tiny bumps, a "
+               f"couple of degrees crooked; realistic exposure shifts when the light in the room changes.")
+    else:
+        how = f"Shot like a real person filming on a recent iPhone with one hand, {orient}. {MOVE}"
+    return (f"5 seconds. {how} Slightly harsh real light, deep focus, flat honest phone color. ONE clear action: "
+            f"{act}. {face} The product label stays exactly as it is. No new text, no logos, no captions. "
+            f"No beauty filter, no smooth gimbal motion.")
 
 
 def plan(s, a):

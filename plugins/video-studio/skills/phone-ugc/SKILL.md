@@ -30,8 +30,14 @@ cuts the voice and builds the EDL. Read `/hyperscale-briefs` first when the ad c
 | Focus | everything sharp, front to back | blurred background |
 | Color | flat, honest phone color | a grade, glow, contrast |
 | Room | lived in: unmade bed, cluttered counter, blown-out window | a styled set |
+| Light | slightly harsh, uneven, one real source (a bulb, a window) | soft, even studio light |
+| Exposure | a little blown-out window or lamp, crushed shadows; in video, the auto-exposure shifting as the phone moves | perfectly even, locked exposure |
+| Movement (video) | natural handheld: small shakes and drifts, framing slips and gets corrected | gimbal-smooth, locked off |
 | Shot length | 1-4 s | one long take |
 Polished is the tell. Too close, slightly crooked, one window of light: ask for that on purpose.
+**Biggest single lever (team tip): put the visual imperfections in every prompt** - slightly harsh lighting,
+imperfect framing, iPhone-style UGC, natural handheld movement, realistic exposure shifts. `vs gen plan` adds them
+to every still (`IMPERFECT`) and clip (`MOVE`) prompt; keep them when you write a prompt by hand.
 
 ## 2. The character (spend the time here)
 Five parts: **camera, person, moment, place, look**. Age as a number, flaws by name, "not a model".

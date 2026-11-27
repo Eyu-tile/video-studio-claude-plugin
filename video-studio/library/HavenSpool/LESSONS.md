@@ -14,6 +14,7 @@ Learned from feedback. Apply before planning; `vs qa --brand` checks the ones ma
 
 ## framing
 - [L1] Product at true size: the 50 ml roll-on sits in a palm. Prompt with a hand holding it and use the Products tab photos; check every product shot against them (#300 #355 #357 #395)  (MUST)
+- [L9] AI characters and clips: put visual imperfections in every prompt - slightly harsh lighting, imperfect framing, iPhone-style UGC, natural handheld movement, realistic exposure shifts. Polished reads as AI.
 
 ## text
 - [L8] Castor seeds whole only; never chewing, crushing or rubbing a raw seed on skin (#457)  (MUST)

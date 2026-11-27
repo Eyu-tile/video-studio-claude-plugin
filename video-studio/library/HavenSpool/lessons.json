@@ -7,7 +7,7 @@
    "category": "framing",
    "added": "2026-11-23 15:42",
    "source": "inferred",
-   "seen": 2,
+   "seen": 3,
    "repeats": 0,
    "must": true
   },
@@ -78,6 +78,23 @@
    "seen": 1,
    "repeats": 0,
    "must": true
+  },
+  {
+   "id": "L9",
+   "rule": "AI characters and clips: put visual imperfections in every prompt - slightly harsh lighting, imperfect framing, iPhone-style UGC, natural handheld movement, realistic exposure shifts. Polished reads as AI.",
+   "category": "framing",
+   "added": "2026-11-27 09:49",
+   "source": "told",
+   "seen": 1,
+   "repeats": 0,
+   "keywords": [
+    "realism",
+    "imperfections",
+    "ugc",
+    "ai",
+    "handheld",
+    "exposure"
+   ]
   }
  ]
 }

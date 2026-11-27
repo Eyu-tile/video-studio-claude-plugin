@@ -143,6 +143,10 @@ class GenTest(unittest.TestCase):
         self.assertIn("65-year-old", jobs["character"]["prompt"])
         self.assertIn("not a model", jobs["character"]["prompt"])
         self.assertIn("propped", jobs["still3"]["prompt"])
+        self.assertIn("harsh", jobs["character"]["prompt"])               # visual imperfections in every still
+        self.assertIn("exposure shifts", jobs["broll2"]["prompt"])        # ... and every clip
+        self.assertIn("propped", jobs["motion3"]["prompt"])
+        self.assertNotIn("one hand", jobs["motion3"]["prompt"])
         self.assertNotIn("arm's length", jobs["still3"]["prompt"])
         # One read with two pauses' worth of lines: tone, silence, tone.
         sh("ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "sine=f=300:d=1.4", "-f", "lavfi", "-i",
