@@ -17,6 +17,8 @@ import json
 import re
 from pathlib import Path
 
+from vs_common import file_sig  # noqa: F401  (content fingerprints; re-exported for callers)
+
 # EDL keys that only change sound (the audio is always re-rendered in full on a revision)
 AUDIO_EDL_KEYS = {"sfx", "music", "tracks", "audio", "audio_track"}
 TIMED_VIDEO_KEYS = ("texts", "overlays", "blurs")
@@ -26,14 +28,6 @@ MAX_WINDOW_SHARE = 0.6      # a window over 60 % of the edit: a full render is a
 
 def _sig(obj):
     return hashlib.sha1(json.dumps(obj, sort_keys=True, default=str).encode()).hexdigest()[:16]
-
-
-def file_sig(path):
-    try:
-        st = Path(path).stat()
-        return [str(Path(path).resolve()), st.st_size, int(st.st_mtime)]
-    except OSError:
-        return [str(path), None, None]
 
 
 def ass_events(path):

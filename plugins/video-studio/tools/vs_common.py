@@ -193,6 +193,91 @@ def probe(path):
     }
 
 
+# --------------------------------------------------------------------------------------------
+# Content fingerprints: a file is "the same" when its bytes are, wherever it lives and whenever it was written.
+# Renders, chunk caches and revision plans key on these, so a script that rewrites an unchanged card, a copy of
+# the project, or a touched source doesn't make everything look changed. Hashes are cached per file version
+# (size + mtime + ctime + inode), so each version of a file is read once.
+
+_HASHES = None
+_HASHES_DIRTY = False
+
+
+def _hash_cache_path():
+    import os
+    base = os.environ.get("VS_HASH_CACHE")
+    if base:
+        return Path(base)
+    return Path(os.environ.get("XDG_CACHE_HOME") or Path.home() / ".cache") / "video-studio" / "hashes.json"
+
+
+def _hash_cache():
+    global _HASHES
+    if _HASHES is None:
+        try:
+            _HASHES = load_json(_hash_cache_path())
+        except (OSError, ValueError):
+            _HASHES = {}
+    return _HASHES
+
+
+def save_hash_cache():
+    """Write new fingerprints to disk (called at exit by content_sig's users; safe to call often)."""
+    global _HASHES_DIRTY
+    if not _HASHES_DIRTY or _HASHES is None:
+        return
+    import os
+    import tempfile
+    p = _hash_cache_path()
+    try:
+        p.parent.mkdir(parents=True, exist_ok=True)
+        live = {k: v for k, v in _HASHES.items() if Path(k).exists()} if len(_HASHES) > 20000 else _HASHES
+        fd, tmp = tempfile.mkstemp(dir=p.parent, suffix=".tmp")
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(live, f)
+        os.replace(tmp, p)
+        _HASHES_DIRTY = False
+    except OSError:
+        pass
+
+
+def content_sig(path):
+    """sha256 of a file's bytes (first 24 hex), or None if it's missing. Cached per file version."""
+    import atexit
+    import hashlib
+    global _HASHES_DIRTY
+    try:
+        rp = Path(path).resolve()
+        st = rp.stat()
+    except OSError:
+        return None
+    key = str(rp)
+    ver = [st.st_size, st.st_mtime_ns, st.st_ctime_ns, st.st_ino]
+    cache = _hash_cache()
+    hit = cache.get(key)
+    if hit and hit[0] == ver:
+        return hit[1]
+    h = hashlib.sha256()
+    with open(rp, "rb") as f:
+        for block in iter(lambda: f.read(1 << 20), b""):
+            h.update(block)
+    sig = h.hexdigest()[:24]
+    if not _HASHES_DIRTY:
+        atexit.register(save_hash_cache)
+    cache[key] = [ver, sig]
+    _HASHES_DIRTY = True
+    return sig
+
+
+def file_sig(path):
+    """What render caches and revision plans compare a file by: its size and content fingerprint."""
+    try:
+        size = Path(path).stat().st_size
+    except OSError:
+        return [None, None]
+    return [size, content_sig(path)]
+
+
 def load_json(path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)

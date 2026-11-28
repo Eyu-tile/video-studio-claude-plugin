@@ -4,6 +4,7 @@ revisions, fallbacks, and a real splice checked against a full render (needs ffm
 Run: python3 -m unittest discover -s tests -v
 """
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -86,6 +87,7 @@ class SpliceRenderTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = Path(tempfile.mkdtemp(prefix="vs-splice-"))
+        os.environ["VS_HASH_CACHE"] = str(cls.tmp / "hashes.json")
         sh("ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "testsrc2=s=320x180:r=25:d=30", "-f", "lavfi",
            "-i", "sine=f=330:d=30", "-shortest", "-c:v", "libx264", "-g", "50", "-c:a", "aac", cls.tmp / "src.mp4")
         segs = [{"src": "src.mp4", "start": i * 2.5, "end": i * 2.5 + 2.0} for i in range(10)]
@@ -119,7 +121,7 @@ class SpliceRenderTest(unittest.TestCase):
         (self.tmp / "v2.json").write_text(json.dumps(e))
         out = sh(VS, "render", "v2.json", "-o", "out/v2.mp4", "--since", "out/v1.mp4", cwd=self.tmp).stdout
         self.assertIn("revision: re-encoded 00:04.000-00:05.200", out)
-        sh(VS, "render", "v2.json", "-o", "out/v2_full.mp4", cwd=self.tmp)
+        sh(VS, "render", "v2.json", "-o", "out/v2_full.mp4", "--since", "none", cwd=self.tmp)
         self.assertEqual(self.frames("out/v2.mp4"), self.frames("out/v2_full.mp4"))      # 480 frames
         self.assertGreater(self.psnr_min("out/v2.mp4", "out/v2_full.mp4"), 40)            # visually identical
         self.assertTrue((self.tmp / "out" / "v2.mp4.render.json").exists())               # chainable
@@ -152,6 +154,61 @@ class SpliceRenderTest(unittest.TestCase):
         p = sh(VS, "render", "v4.json", "-o", "out/v4.mp4", "--since", "out/v1.mp4", cwd=self.tmp)
         self.assertIn("full render", p.stderr)
         self.assertNotIn("revision:", p.stdout)
+
+    def test_auto_reuses_a_sibling_variant(self):
+        """A second hook in front of the same body: `vs render` (default --since auto) finds the first hook's render in
+        the folder, re-encodes only the hook and copies the body."""
+        d = self.tmp / "auto"
+        d.mkdir(exist_ok=True)
+        h1 = json.loads(json.dumps(self.edl))
+        (d / "h1.json").write_text(json.dumps(h1))
+        sh(VS, "render", d / "h1.json", "-o", d / "out" / "h1.mp4", "--since", "none", cwd=self.tmp)
+        h2 = json.loads(json.dumps(self.edl))
+        h2["segments"][0] = {"src": "src.mp4", "start": 26.0, "end": 29.0}       # a longer, different hook shot
+        h2["texts"][0]["text"] = "OTHER HOOK"
+        h2["texts"][1].update(start=18.0, end=20.5)                               # the body moved 1 s later
+        (d / "h2.json").write_text(json.dumps(h2))
+        p = sh(VS, "render", d / "h2.json", "-o", d / "out" / "h2.mp4", cwd=self.tmp)
+        self.assertIn("--since auto: reusing h1.mp4", p.stderr)
+        self.assertIn("revision: re-encoded 00:00.000-00:03.000", p.stdout)
+        sh(VS, "render", d / "h2.json", "-o", d / "full" / "h2.mp4", "--since", "none", cwd=self.tmp)
+        self.assertEqual(self.frames("auto/out/h2.mp4"), self.frames("auto/full/h2.mp4"))
+        self.assertGreater(self.psnr_min("auto/out/h2.mp4", "auto/full/h2.mp4"), 40)
+
+        # the same name again after a fix: the previous render is parked, reused, then removed
+        h2["segments"][6]["end"] -= 0.4
+        h2["texts"][1].update(start=17.6, end=20.1)
+        (d / "h2.json").write_text(json.dumps(h2))
+        p = sh(VS, "render", d / "h2.json", "-o", d / "out" / "h2.mp4", cwd=self.tmp)
+        self.assertIn("h2.mp4 (previous)", p.stderr)
+        self.assertIn("revision:", p.stdout)
+        self.assertTrue((d / "out" / "h2.mp4.render.json").exists())
+        self.assertFalse(list((d / "out").glob(".vs-cache/previous-*")))
+        self.assertEqual(self.frames("auto/out/h2.mp4"), round((21.0 - 0.4) * 25))
+
+    def test_revision_with_a_voice_track(self):
+        """Ads: muted shots under a separate voice-over track. The sound-only pass of a revision used to reference
+        per-shot sound that a voice track never makes, failed, and fell back to a full render every time."""
+        d = self.tmp / "vo"
+        (d / "out").mkdir(parents=True, exist_ok=True)
+        sh("ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "sine=f=500:d=21", d / "vo.wav")
+        e = json.loads(json.dumps(self.edl))
+        for seg in e["segments"]:
+            seg["mute"] = True
+        e["audio_track"] = {"src": str(d / "vo.wav"), "start": 0}
+        (d / "v1.json").write_text(json.dumps(e))
+        sh(VS, "render", d / "v1.json", "-o", d / "out" / "ad.mp4", "--since", "none", cwd=self.tmp)
+        e["segments"][6].update(start=26.0, end=28.0)                             # a different moment, same length
+        (d / "v1.json").write_text(json.dumps(e))
+        p = sh(VS, "render", d / "v1.json", "-o", d / "out" / "ad.mp4", cwd=self.tmp)
+        self.assertIn("revision: re-encoded 00:12.000-00:14.000", p.stdout, p.stderr)
+        self.assertNotIn("rendering everything", p.stderr)
+
+    def test_limiter_in_the_finish(self):
+        p = sh(VS, "render", "v1.json", "-o", "out/lim.mp4", "--loudnorm", "-14", "--lra", "7", "--limiter",
+               "--dry-run", cwd=self.tmp)
+        self.assertIn("LRA=7", p.stdout)
+        self.assertIn("alimiter=limit=0.7079", p.stdout)
 
 
 if __name__ == "__main__":
