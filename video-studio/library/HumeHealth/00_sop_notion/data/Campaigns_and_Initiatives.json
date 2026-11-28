@@ -1,0 +1,194 @@
+{
+ "name": "Campaigns and Initiatives",
+ "source_block": "980e44d9-9294-4320-baf1-0e9cb0648bf9",
+ "schema": [
+  [
+   "Revenue Target",
+   "number",
+   []
+  ],
+  [
+   "Start Date",
+   "date",
+   []
+  ],
+  [
+   "Affiliate Support",
+   "text",
+   []
+  ],
+  [
+   "End Date",
+   "date",
+   []
+  ],
+  [
+   "Direct Mail Support",
+   "text",
+   []
+  ],
+  [
+   "Influencer Support",
+   "text",
+   []
+  ],
+  [
+   "Channels",
+   "multi_select",
+   [
+    "Meta",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "Influencer",
+    "Affiliate",
+    "CRO"
+   ]
+  ],
+  [
+   "Assets",
+   "text",
+   []
+  ],
+  [
+   "Campaign Type",
+   "select",
+   [
+    "Evergreen",
+    "Product launch",
+    "Promotion",
+    "Seasonal",
+    "Persona campaign",
+    "Angle campaign",
+    "Educational",
+    "Brand",
+    "Retention",
+    "Cross-sell",
+    "Bundle",
+    "Market expansion"
+   ]
+  ],
+  [
+   "Product",
+   "multi_select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Campaign Owner",
+   "person",
+   []
+  ],
+  [
+   "Briefs",
+   "text",
+   []
+  ],
+  [
+   "Offer",
+   "text",
+   []
+  ],
+  [
+   "Landing Pages",
+   "text",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Planning",
+    "Live",
+    "Monitoring",
+    "Complete",
+    "Paused",
+    "Retired"
+   ]
+  ],
+  [
+   "Angles",
+   "text",
+   []
+  ],
+  [
+   "CRM Support",
+   "text",
+   []
+  ],
+  [
+   "Personas",
+   "text",
+   []
+  ],
+  [
+   "Tests",
+   "text",
+   []
+  ],
+  [
+   "Business Objective",
+   "text",
+   []
+  ],
+  [
+   "Spend Target",
+   "number",
+   []
+  ],
+  [
+   "Learnings",
+   "text",
+   []
+  ],
+  [
+   "Results",
+   "text",
+   []
+  ],
+  [
+   "Campaign Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Revenue Target": "75000",
+   "Campaign Type": "Angle campaign",
+   "Briefs": "6 concept briefs tied to plateau and composition quality",
+   "Offer": "Pod core offer plus HSA/FSA proof if verified",
+   "Landing Pages": "Weight Loss General LP, Hume Listicle 1",
+   "Status": "Planning",
+   "Angles": "Scale is incomplete; Plateau explanation; Fat vs muscle truth",
+   "Personas": "Weight-loss plateau user, GLP-1 user, gym user",
+   "Business Objective": "Create and test a belief-shift campaign around plateau explanation for Hume Pod.",
+   "Spend Target": "25000",
+   "Learnings": "Capture hook, LP congruence and objection patterns weekly.",
+   "Campaign Name": "Example — Pod Plateau Education Sprint",
+   "_id": "39d20d08-9385-8100-894b-eaf12f5d8624"
+  },
+  {
+   "Revenue Target": "45000",
+   "Campaign Type": "Educational",
+   "Briefs": "Band UGC recovery clarity, comparison static, YouTube explainer",
+   "Offer": "Band value story, no-subscription proof pending verification",
+   "Landing Pages": "SmartScale Band Comparison LP",
+   "Status": "Planning",
+   "Angles": "Tracking vs understanding; Recovery is not just sleep hours; No-subscription wearable value",
+   "Personas": "Busy professional, wearable skeptic, overwhelmed wearable user",
+   "Business Objective": "Prove whether Band can win on interpreted recovery instead of raw tracking.",
+   "Spend Target": "15000",
+   "Learnings": "Watch whether recovery clarity or subscription value drives stronger intent.",
+   "Campaign Name": "Example — Band Recovery Clarity Sprint",
+   "_id": "39d20d08-9385-81c5-9f02-d11a3580bafc"
+  }
+ ]
+}

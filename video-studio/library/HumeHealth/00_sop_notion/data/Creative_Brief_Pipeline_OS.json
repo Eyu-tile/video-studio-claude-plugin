@@ -1,0 +1,608 @@
+{
+ "name": "Creative Brief Pipeline OS",
+ "source_block": "56e3674d-e851-4e4b-be9d-499c405328b3",
+ "schema": [
+  [
+   "Editor",
+   "person",
+   []
+  ],
+  [
+   "Result",
+   "select",
+   [
+    "Pending",
+    "Winner",
+    "Iterate",
+    "Pause",
+    "Retire",
+    "Inconclusive"
+   ]
+  ],
+  [
+   "Learning Due Date",
+   "date",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Hook Relation",
+   "relation",
+   []
+  ],
+  [
+   "Effort",
+   "number",
+   []
+  ],
+  [
+   "Compliance Status",
+   "select",
+   [
+    "Not needed",
+    "Needs review",
+    "Approved",
+    "Restricted",
+    "Rejected"
+   ]
+  ],
+  [
+   "Solution Mechanism",
+   "text",
+   []
+  ],
+  [
+   "Landing Page",
+   "url",
+   []
+  ],
+  [
+   "Media Buyer",
+   "person",
+   []
+  ],
+  [
+   "Deliverables",
+   "text",
+   []
+  ],
+  [
+   "CRO Owner",
+   "person",
+   []
+  ],
+  [
+   "Angle Relation",
+   "relation",
+   []
+  ],
+  [
+   "Due Date",
+   "date",
+   []
+  ],
+  [
+   "Congruence Requirement",
+   "text",
+   []
+  ],
+  [
+   "Impact Estimate",
+   "number",
+   []
+  ],
+  [
+   "Learning",
+   "text",
+   []
+  ],
+  [
+   "Old Belief",
+   "text",
+   []
+  ],
+  [
+   "Brief ID",
+   "auto_increment_id",
+   []
+  ],
+  [
+   "Proof",
+   "text",
+   []
+  ],
+  [
+   "Customer Insight",
+   "text",
+   []
+  ],
+  [
+   "Confidence",
+   "number",
+   []
+  ],
+  [
+   "Persona Relation",
+   "relation",
+   []
+  ],
+  [
+   "QA Status",
+   "select",
+   [
+    "Not started",
+    "In QA",
+    "Passed",
+    "Needs revision",
+    "Blocked"
+   ]
+  ],
+  [
+   "Format",
+   "select",
+   [
+    "UGC",
+    "Static",
+    "AI visual",
+    "Long-form video",
+    "Advertorial",
+    "Listicle",
+    "Influencer",
+    "Email",
+    "SMS",
+    "Landing-page module"
+   ]
+  ],
+  [
+   "Date Requested",
+   "date",
+   []
+  ],
+  [
+   "CTA",
+   "text",
+   []
+  ],
+  [
+   "Creator",
+   "text",
+   []
+  ],
+  [
+   "Insight Relation",
+   "relation",
+   []
+  ],
+  [
+   "Business Objective",
+   "text",
+   []
+  ],
+  [
+   "Landing Page Relation",
+   "relation",
+   []
+  ],
+  [
+   "Next Action",
+   "select",
+   [
+    "Scale",
+    "Iterate",
+    "Retest",
+    "Adapt to other channels",
+    "Build dedicated landing page",
+    "Change offer",
+    "Pause",
+    "Retire",
+    "Capture learning"
+   ]
+  ],
+  [
+   "Persona",
+   "text",
+   []
+  ],
+  [
+   "Priority",
+   "select",
+   [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+   ]
+  ],
+  [
+   "Hook",
+   "text",
+   []
+  ],
+  [
+   "Missing Requirements Flag",
+   "select",
+   [
+    "Complete",
+    "Missing strategy",
+    "Missing proof",
+    "Missing landing page",
+    "Needs QA"
+   ]
+  ],
+  [
+   "New Belief",
+   "text",
+   []
+  ],
+  [
+   "Funnel Stage",
+   "select",
+   [
+    "TOF",
+    "MOF",
+    "BOF",
+    "Retention"
+   ]
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Backlog",
+    "Researching",
+    "Strategy approved",
+    "Writing",
+    "Ready for production",
+    "In production",
+    "Internal review",
+    "Revisions",
+    "Compliance review",
+    "Ready to launch",
+    "Scheduled",
+    "Live",
+    "Gathering data",
+    "Learning captured",
+    "Iterating",
+    "Complete",
+    "Paused",
+    "Cancelled"
+   ]
+  ],
+  [
+   "Offer",
+   "text",
+   []
+  ],
+  [
+   "Awareness Stage",
+   "select",
+   [
+    "Unaware",
+    "Problem aware",
+    "Solution aware",
+    "Product aware",
+    "Most aware"
+   ]
+  ],
+  [
+   "Angle",
+   "text",
+   []
+  ],
+  [
+   "Production Start",
+   "date",
+   []
+  ],
+  [
+   "Writer",
+   "person",
+   []
+  ],
+  [
+   "Duration",
+   "text",
+   []
+  ],
+  [
+   "Blocker",
+   "text",
+   []
+  ],
+  [
+   "Campaign",
+   "text",
+   []
+  ],
+  [
+   "Claim Relation",
+   "relation",
+   []
+  ],
+  [
+   "Sub-Angle",
+   "text",
+   []
+  ],
+  [
+   "Launch Date",
+   "date",
+   []
+  ],
+  [
+   "Product Relation",
+   "relation",
+   []
+  ],
+  [
+   "Variations Required",
+   "number",
+   []
+  ],
+  [
+   "Channel",
+   "multi_select",
+   [
+    "Meta",
+    "Instagram",
+    "TikTok",
+    "TikTok Shop",
+    "YouTube",
+    "YouTube Demand Gen",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO Landing Page"
+   ]
+  ],
+  [
+   "Brief Owner",
+   "person",
+   []
+  ],
+  [
+   "Problem Mechanism",
+   "text",
+   []
+  ],
+  [
+   "ICE Score",
+   "number",
+   []
+  ],
+  [
+   "Designer",
+   "person",
+   []
+  ],
+  [
+   "Brief Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Product": "Hume Band 2.0",
+   "Compliance Status": "Needs review",
+   "Solution Mechanism": "Hume Band 2.0 brings longevity signals into a polished daily view with trend context and action direction.",
+   "Deliverables": "9:16 primary cut, then 4:5 adaptation after approval. Include main hook plus 3 hook variants.",
+   "Old Belief": "Longevity is abstract, distant, or only visible through occasional lab work.",
+   "Brief ID": "8",
+   "Proof": "Inspired by the IntroducingBand2.0 ad structure: premium product reveal, sensor/app intelligence, daily action guidance, 14-day battery, and no-subscription close.",
+   "Customer Insight": "People want longevity guidance, but most wearables feel like activity trackers rather than a clear read on recovery, aging, and long-term health direction.",
+   "QA Status": "Not started",
+   "Format": "Long-form video",
+   "Date Requested": "2026-08-19",
+   "CTA": "Shop Hume Band 2.0",
+   "Creator": "Not required",
+   "Business Objective": "Create a production-ready Hume Band 2.0 launch variant focused on longevity while preserving the polished launch-video feel from the source ad.",
+   "Next Action": "Iterate",
+   "Priority": "P1",
+   "Hook": "Longevity starts here. Alt hooks: Longevity starts with what your body is telling you today. / Your body is aging in patterns. / Most wearables track activity.",
+   "Missing Requirements Flag": "Needs QA",
+   "New Belief": "Longevity can be understood through daily trend signals like sleep, recovery, HRV, stress, Pace of Aging, heart-health trends, and metabolic signals.",
+   "Funnel Stage": "TOF",
+   "Status": "Ready for production",
+   "Awareness Stage": "Product aware",
+   "Angle": "Longevity intelligence as a polished product launch.",
+   "Duration": "56 seconds",
+   "Campaign": "Band 2.0 Longevity Launch Variant",
+   "Sub-Angle": "Biological age and long-term health direction framed through daily trends.",
+   "Variations Required": "4",
+   "Channel": "Meta,Instagram",
+   "Problem Mechanism": "One-off numbers and activity metrics do not explain how the body is recovering, adapting, and moving over time.",
+   "Brief Name": "VIDEO_BAND_Longevity_BiologicalAge_LongevityStartsHere_ANI_Sonam_Polished_190826_9x16",
+   "_id": "3c120d08-9385-819a-8554-d3da028d77d7",
+   "_has_body": true
+  },
+  {
+   "Product": "Hume Band 2.0",
+   "Compliance Status": "Needs review",
+   "Solution Mechanism": "Hume Band 2.0 surfaces Blood Pressure Insights alongside sleep, stress, recovery, HRV, and broader health trends.",
+   "Deliverables": "9:16 primary cut, then 4:5 adaptation after approval. Include main hook plus 3 hook variants.",
+   "Old Belief": "Blood pressure is just a number you check once in a while.",
+   "Brief ID": "7",
+   "Proof": "Inspired by the IntroducingBand2.0 ad structure: premium launch reveal, sensor/app intelligence, daily action guidance, and no-subscription ownership close. Requires approved Blood Pressure Insights UI before paid launch.",
+   "Customer Insight": "A single BP reading feels isolated and hard to act on; people want context from sleep, stress, recovery, HRV, and daily habits.",
+   "QA Status": "Not started",
+   "Format": "Long-form video",
+   "Date Requested": "2026-08-19",
+   "CTA": "Shop Hume Band 2.0",
+   "Creator": "Not required",
+   "Business Objective": "Create a production-ready Band 2.0 launch variant that heroes Blood Pressure Insights while preserving the core learnings from the winning IntroducingBand2.0 ad.",
+   "Next Action": "Iterate",
+   "Priority": "P1",
+   "Hook": "Blood pressure isn't one number. Alt hooks: Your blood pressure has a pattern. / Checking once in a while misses the point. / What changed today?",
+   "Missing Requirements Flag": "Needs QA",
+   "New Belief": "Blood pressure makes more sense as a trend when viewed alongside the body's recovery, stress, sleep, and heart-health signals.",
+   "Funnel Stage": "TOF",
+   "Status": "Ready for production",
+   "Awareness Stage": "Product aware",
+   "Angle": "Blood pressure is not one number; daily readings need trend context.",
+   "Duration": "52 seconds",
+   "Campaign": "Band 2.0 Blood Pressure Insights",
+   "Sub-Angle": "Premium product launch variant inspired by IntroducingBand2.0",
+   "Variations Required": "4",
+   "Channel": "Meta,Instagram",
+   "Problem Mechanism": "One-off readings miss the context around the body state that may influence daily changes.",
+   "Brief Name": "VIDEO_BAND_Tech_BloodPressure_BloodPressureInsights_ANI_Karl_Polished_190826_9x16",
+   "_id": "3c120d08-9385-81cb-9c47-d13c454174a7",
+   "_has_body": true
+  },
+  {
+   "Product": "Hume Pod",
+   "Compliance Status": "Approved",
+   "Landing Page": "https://humehealth.com/pages/weight-loss-general",
+   "Old Belief": "If the scale is flat, nothing is working.",
+   "Brief ID": "1",
+   "Proof": "Pod app shows fat, muscle and hydration trends beyond weight.",
+   "Customer Insight": "Scale plateau makes users doubt the plan.",
+   "Format": "UGC",
+   "CTA": "See what your scale is missing.",
+   "Persona": "Weight-loss plateau user",
+   "Priority": "P0",
+   "Hook": "I thought my plateau meant nothing was working.",
+   "Missing Requirements Flag": "Complete",
+   "New Belief": "Body composition can improve before weight moves.",
+   "Funnel Stage": "TOF",
+   "Status": "Ready for production",
+   "Awareness Stage": "Problem aware",
+   "Angle": "Plateau explanation",
+   "ICE Score": "9",
+   "Brief Name": "Example Brief — Pod plateau confession UGC",
+   "_id": "39d20d08-9385-8164-bed2-dd2b014942ab",
+   "_has_body": true
+  },
+  {
+   "Product": "Hume Pod",
+   "Compliance Status": "Needs review",
+   "Landing Page": "https://humehealth.com/pages/weight-loss-general",
+   "Old Belief": "Weight loss is automatically success.",
+   "Brief ID": "2",
+   "Proof": "Track fat and muscle trends; avoid treatment claims.",
+   "Customer Insight": "A lower number is not enough if muscle is falling too.",
+   "Format": "Static",
+   "CTA": "Track what is changing.",
+   "Persona": "GLP-1 user worried about muscle loss",
+   "Priority": "P0",
+   "Hook": "All weight loss is not the same.",
+   "Missing Requirements Flag": "Needs QA",
+   "New Belief": "The quality of weight loss matters.",
+   "Funnel Stage": "MOF",
+   "Status": "Strategy approved",
+   "Awareness Stage": "Solution aware",
+   "Angle": "GLP-1 muscle protection",
+   "ICE Score": "8",
+   "Brief Name": "Example Brief — Pod GLP-1 muscle quality static",
+   "_id": "39d20d08-9385-818c-98f6-e022033b350e",
+   "_has_body": true
+  },
+  {
+   "Product": "Pod + Band Ecosystem",
+   "Compliance Status": "Restricted",
+   "Landing Page": "https://humehealth.com/pages/hume-body-pod",
+   "Old Belief": "One device can tell the whole story.",
+   "Brief ID": "6",
+   "Proof": "Pod composition trend plus Band recovery trend.",
+   "Customer Insight": "People want a clearer health picture, not more isolated metrics.",
+   "Format": "Long-form video",
+   "CTA": "Build your Hume routine.",
+   "Persona": "Busy professional seeking accountability",
+   "Priority": "P2",
+   "Hook": "Your body and your daily recovery are telling two different stories.",
+   "Missing Requirements Flag": "Missing landing page",
+   "New Belief": "Body structure and daily physiology answer different questions together.",
+   "Funnel Stage": "MOF",
+   "Status": "Backlog",
+   "Awareness Stage": "Solution aware",
+   "Angle": "Ecosystem explanation",
+   "ICE Score": "6",
+   "Brief Name": "Example Brief — Meta winner to YouTube explainer",
+   "_id": "39d20d08-9385-818c-a210-cdead33d1175",
+   "_has_body": true
+  },
+  {
+   "Product": "Hume Pod",
+   "Compliance Status": "Restricted",
+   "Landing Page": "https://humehealth.com/pages/hume-listicle-1",
+   "Old Belief": "Only clinic scans can tell me useful composition information.",
+   "Brief ID": "3",
+   "Proof": "Pod provides convenient at-home body-composition trend visibility.",
+   "Customer Insight": "Clinic scans are useful but too high-friction for frequent feedback.",
+   "Format": "UGC",
+   "CTA": "See your trends at home.",
+   "Persona": "Longevity optimizer",
+   "Priority": "P1",
+   "Hook": "Do not pay for another scan before seeing this.",
+   "Missing Requirements Flag": "Missing proof",
+   "New Belief": "At-home trend tracking can keep me informed between higher-friction checks.",
+   "Funnel Stage": "MOF",
+   "Status": "Writing",
+   "Awareness Stage": "Solution aware",
+   "Angle": "DEXA at-home alternative",
+   "ICE Score": "7",
+   "Brief Name": "Example Brief — Pod DEXA-at-home comparison UGC",
+   "_id": "39d20d08-9385-818d-93a4-f1c001ccd011",
+   "_has_body": true
+  },
+  {
+   "Product": "Hume Band 2.0",
+   "Compliance Status": "Needs review",
+   "Landing Page": "https://insights.smartscalesreviews.com/the-5-best-smart-fitness-trackers-to-buy-in-2026",
+   "Old Belief": "Useful wearables require ongoing membership.",
+   "Brief ID": "5",
+   "Proof": "Offer proof pending current verification.",
+   "Customer Insight": "Monthly fees make premium wearables feel expensive.",
+   "Format": "Static",
+   "CTA": "Compare Hume Band.",
+   "Persona": "Wearable skeptic",
+   "Priority": "P1",
+   "Hook": "I thought all useful wearables came with a monthly bill.",
+   "Missing Requirements Flag": "Missing proof",
+   "New Belief": "A wearable can deliver value without subscription fatigue.",
+   "Funnel Stage": "MOF",
+   "Status": "Strategy approved",
+   "Awareness Stage": "Product aware",
+   "Angle": "No-subscription wearable value",
+   "ICE Score": "7",
+   "Brief Name": "Example Brief — Band subscription comparison static",
+   "_id": "39d20d08-9385-81a0-b5eb-fd89eacbbc7c",
+   "_has_body": true
+  },
+  {
+   "Product": "Hume Band 2.0",
+   "Compliance Status": "Needs review",
+   "Landing Page": "https://insights.smartscalesreviews.com/the-5-best-smart-fitness-trackers-to-buy-in-2026",
+   "Old Belief": "Eight hours means I should be recovered.",
+   "Brief ID": "4",
+   "Proof": "Band app recovery and stress trend walkthrough, pending exact feature review.",
+   "Customer Insight": "Sleep hours do not explain waking up exhausted.",
+   "Format": "UGC",
+   "CTA": "Understand your recovery patterns.",
+   "Persona": "Busy professional",
+   "Priority": "P1",
+   "Hook": "Your wearable tracks sleep, but does it explain recovery?",
+   "Missing Requirements Flag": "Needs QA",
+   "New Belief": "Recovery depends on more than time asleep.",
+   "Funnel Stage": "TOF",
+   "Status": "Ready for production",
+   "Awareness Stage": "Problem aware",
+   "Angle": "Recovery is not just sleep hours",
+   "ICE Score": "8",
+   "Brief Name": "Example Brief — Band recovery explanation UGC",
+   "_id": "39d20d08-9385-81ed-b312-d267be67d55b",
+   "_has_body": true
+  }
+ ]
+}

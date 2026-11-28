@@ -1,0 +1,295 @@
+{
+ "name": "Hook Library",
+ "source_block": "f84457a8-e258-4569-8902-7a154eddc4b6",
+ "schema": [
+  [
+   "Spend",
+   "number",
+   []
+  ],
+  [
+   "Notes",
+   "text",
+   []
+  ],
+  [
+   "Pattern Interrupt",
+   "text",
+   []
+  ],
+  [
+   "Hook Type",
+   "select",
+   [
+    "Question",
+    "Contrarian",
+    "Confession",
+    "Problem reveal",
+    "Hidden problem",
+    "Demonstration",
+    "Visual shock",
+    "Story",
+    "Comparison",
+    "Authority",
+    "Social proof",
+    "Specific result",
+    "Challenge",
+    "Myth",
+    "News",
+    "List",
+    "Identity",
+    "Fear without exaggeration",
+    "Aspiration",
+    "Product reveal"
+   ]
+  ],
+  [
+   "Persona",
+   "text",
+   []
+  ],
+  [
+   "Hook Rate",
+   "number",
+   []
+  ],
+  [
+   "Core Curiosity",
+   "text",
+   []
+  ],
+  [
+   "Format",
+   "select",
+   [
+    "UGC",
+    "Static",
+    "AI visual",
+    "Long-form video",
+    "Advertorial",
+    "Listicle",
+    "Email",
+    "Landing page"
+   ]
+  ],
+  [
+   "Hold Rate",
+   "number",
+   []
+  ],
+  [
+   "CTR",
+   "number",
+   []
+  ],
+  [
+   "Related Angle",
+   "text",
+   []
+  ],
+  [
+   "Fatigue Status",
+   "select",
+   [
+    "Fresh",
+    "Watch",
+    "Fatiguing",
+    "Fatigued",
+    "Retired"
+   ]
+  ],
+  [
+   "Proof Introduced",
+   "text",
+   []
+  ],
+  [
+   "Winner Status",
+   "select",
+   [
+    "Insufficient data",
+    "Early signal",
+    "Emerging winner",
+    "Winner",
+    "Scalable winner",
+    "Fatiguing winner",
+    "Inconclusive",
+    "Loser",
+    "Retired"
+   ]
+  ],
+  [
+   "First-Frame Concept",
+   "text",
+   []
+  ],
+  [
+   "ROAS",
+   "number",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Awareness Stage",
+   "select",
+   [
+    "Unaware",
+    "Problem aware",
+    "Solution aware",
+    "Product aware",
+    "Most aware"
+   ]
+  ],
+  [
+   "Hook ID",
+   "auto_increment_id",
+   []
+  ],
+  [
+   "Channel",
+   "multi_select",
+   [
+    "Meta",
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO"
+   ]
+  ],
+  [
+   "CVR",
+   "number",
+   []
+  ],
+  [
+   "Hook",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Hook Type": "Problem reveal",
+   "Persona": "Man over 40",
+   "Core Curiosity": "What metric created the wake-up moment?",
+   "Format": "Static",
+   "First-Frame Concept": "App metric framed carefully as a discovery moment.",
+   "Product": "Hume Pod",
+   "Hook ID": "3",
+   "Hook": "My body thought it was older than me",
+   "_id": "39d20d08-9385-8129-ad6f-ce221f783379"
+  },
+  {
+   "Hook Type": "Confession",
+   "Persona": "Weight-loss plateau user",
+   "Core Curiosity": "What changed when the weight did not?",
+   "Format": "UGC",
+   "First-Frame Concept": "Before/after app trend reveal.",
+   "Product": "Hume Pod",
+   "Hook ID": "2",
+   "Hook": "I thought my plateau meant nothing was working",
+   "_id": "39d20d08-9385-815c-ae0f-e1536edf9940"
+  },
+  {
+   "Hook Type": "Confession",
+   "Persona": "Busy professional",
+   "Core Curiosity": "What pattern explained the fatigue?",
+   "Format": "UGC",
+   "First-Frame Concept": "Morning routine with Band app insight.",
+   "Product": "Hume Band 2.0",
+   "Hook ID": "7",
+   "Hook": "I stopped guessing why I was exhausted",
+   "_id": "39d20d08-9385-815f-ae7c-ec214b4a75c9"
+  },
+  {
+   "Hook Type": "Specific result",
+   "Persona": "Gym user",
+   "Core Curiosity": "Can progress happen without weight loss?",
+   "Format": "UGC",
+   "First-Frame Concept": "Weight number vs muscle trend split-screen.",
+   "Product": "Hume Pod",
+   "Hook ID": "4",
+   "Hook": "The number did not change, but my muscle did",
+   "_id": "39d20d08-9385-8168-8de8-c6c0bc7a72aa"
+  },
+  {
+   "Hook Type": "Comparison",
+   "Persona": "Longevity optimizer",
+   "Core Curiosity": "What can I track at home?",
+   "Format": "UGC",
+   "First-Frame Concept": "Clinic calendar vs at-home Pod setup.",
+   "Product": "Hume Pod",
+   "Hook ID": "5",
+   "Hook": "Do not pay for another scan before seeing this",
+   "_id": "39d20d08-9385-8169-89b0-f8413ffb09ab"
+  },
+  {
+   "Hook Type": "Hidden problem",
+   "Persona": "Man over 40",
+   "Core Curiosity": "What else should I measure?",
+   "Format": "Static",
+   "First-Frame Concept": "Body outline plus body-composition categories.",
+   "Product": "Hume Pod",
+   "Hook ID": "9",
+   "Hook": "What if your belly fat is not the whole story?",
+   "_id": "39d20d08-9385-818d-b461-daf0a5060dbb"
+  },
+  {
+   "Hook Type": "Contrarian",
+   "Persona": "Weight-loss plateau user",
+   "Core Curiosity": "What is the scale missing?",
+   "Format": "UGC",
+   "First-Frame Concept": "Creator stands on scale, then cuts to Pod body-composition screen.",
+   "Product": "Hume Pod",
+   "Hook ID": "1",
+   "Hook": "Your scale cannot tell you this",
+   "_id": "39d20d08-9385-818f-8ce5-fef2d1a7d01b"
+  },
+  {
+   "Hook Type": "Question",
+   "Persona": "Wearable user overwhelmed by data",
+   "Core Curiosity": "What is missing from sleep tracking?",
+   "Format": "UGC",
+   "First-Frame Concept": "Sleep-hours screen contrasted with recovery interpretation.",
+   "Product": "Hume Band 2.0",
+   "Hook ID": "6",
+   "Hook": "Your wearable tracks sleep, but does it explain recovery?",
+   "_id": "39d20d08-9385-81aa-befc-f9b4f32d4e8c"
+  },
+  {
+   "Hook Type": "Identity",
+   "Persona": "Longevity-focused buyer",
+   "Core Curiosity": "What signal matters with age?",
+   "Format": "Static",
+   "First-Frame Concept": "Age-40 health dashboard motif, no medical promises.",
+   "Product": "Hume Band 2.0",
+   "Hook ID": "8",
+   "Hook": "This is the metric I wish I saw at 40",
+   "_id": "39d20d08-9385-81cb-8b85-db3d550ddba6"
+  },
+  {
+   "Hook Type": "Contrarian",
+   "Persona": "Wearable user overwhelmed by data",
+   "Core Curiosity": "Why did more metrics not help?",
+   "Format": "UGC",
+   "First-Frame Concept": "Overloaded dashboard visual turning into simple Hume interpretation.",
+   "Product": "Hume Band 2.0",
+   "Hook ID": "10",
+   "Hook": "I thought more data would help. I needed clearer data.",
+   "_id": "39d20d08-9385-81eb-80c9-d75527349127"
+  }
+ ]
+}

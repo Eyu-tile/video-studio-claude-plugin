@@ -1,0 +1,166 @@
+{
+ "name": "Performance and Learning Log",
+ "source_block": "96694578-0bcb-460e-b8f5-b218b040e39c",
+ "schema": [
+  [
+   "Why We Think It Happened",
+   "text",
+   []
+  ],
+  [
+   "Learning ID",
+   "auto_increment_id",
+   []
+  ],
+  [
+   "Hook",
+   "text",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Date",
+   "date",
+   []
+  ],
+  [
+   "Applies to Other Channels",
+   "checkbox",
+   []
+  ],
+  [
+   "Next Recommended Action",
+   "select",
+   [
+    "Scale",
+    "Iterate",
+    "Retest",
+    "Adapt to other channels",
+    "Build dedicated landing page",
+    "Change offer",
+    "Pause",
+    "Retire"
+   ]
+  ],
+  [
+   "Landing Page",
+   "text",
+   []
+  ],
+  [
+   "Owner",
+   "person",
+   []
+  ],
+  [
+   "Asset",
+   "text",
+   []
+  ],
+  [
+   "Channel",
+   "multi_select",
+   [
+    "Meta",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO"
+   ]
+  ],
+  [
+   "Customer Insight Supported",
+   "text",
+   []
+  ],
+  [
+   "What to Avoid",
+   "text",
+   []
+  ],
+  [
+   "Format",
+   "text",
+   []
+  ],
+  [
+   "What to Repeat",
+   "text",
+   []
+  ],
+  [
+   "Supporting Metrics",
+   "text",
+   []
+  ],
+  [
+   "Customer Insight Contradicted",
+   "text",
+   []
+  ],
+  [
+   "Angle",
+   "text",
+   []
+  ],
+  [
+   "Review Status",
+   "select",
+   [
+    "New",
+    "Reviewed",
+    "Needs discussion",
+    "Archived"
+   ]
+  ],
+  [
+   "Persona",
+   "text",
+   []
+  ],
+  [
+   "What Happened",
+   "text",
+   []
+  ],
+  [
+   "Applies to Other Products",
+   "checkbox",
+   []
+  ],
+  [
+   "Confidence Level",
+   "select",
+   [
+    "Observation",
+    "Early signal",
+    "Moderate confidence",
+    "Strong confidence",
+    "Proven pattern"
+   ]
+  ],
+  [
+   "Test",
+   "text",
+   []
+  ],
+  [
+   "Learning",
+   "title",
+   []
+  ]
+ ],
+ "rows": []
+}

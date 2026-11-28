@@ -1,0 +1,66 @@
+{
+ "name": "🖼️ Image Ads Checklist",
+ "source_block": "2a83e72e-5270-817b-97ce-c4aca466fc91",
+ "schema": [
+  [
+   "Done",
+   "checkbox",
+   []
+  ],
+  [
+   "Element",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Element": "The deliverable follows all the notes that the brief provided",
+   "_id": "2a83e72e-5270-80b4-a7ba-ece8fabf3e0a"
+  },
+  {
+   "Element": "No typo’s in the image",
+   "_id": "2a83e72e-5270-81d4-ba2f-e0dbab8e7bc0"
+  },
+  {
+   "Element": "All elements are properly alligned",
+   "_id": "2a83e72e-5270-8167-8f07-df2580c99432"
+  },
+  {
+   "Element": "Image uses the right fonts",
+   "_id": "2a83e72e-5270-81a8-964a-ff853773680e"
+  },
+  {
+   "Element": "Image colour scheme is correct",
+   "_id": "2a83e72e-5270-818a-a747-f64b3f7f85b1"
+  },
+  {
+   "Element": "Image fits the brand as per the brand guidelines (if applicable)",
+   "_id": "2a83e72e-5270-8149-a288-d6e00114cd2e"
+  },
+  {
+   "Element": "The image speaks to a specific audience we want to target",
+   "_id": "2a83e72e-5270-81b2-b56d-e4e6e227d3de"
+  },
+  {
+   "Element": "The image is backed by research",
+   "_id": "2a83e72e-5270-81f2-8a90-f91a15711f63"
+  },
+  {
+   "Element": "The text is easy to read",
+   "_id": "2a83e72e-5270-818d-b623-d232b800f5cd"
+  },
+  {
+   "Element": "The UI does not cover the text or any important parts of the image",
+   "_id": "2a83e72e-5270-816f-91ac-ed1b63f8fb3a"
+  },
+  {
+   "Element": "Video is requested in sizes 1080x1080 & 1080x1920",
+   "_id": "2a83e72e-5270-8100-819e-c2f96ff00a37"
+  },
+  {
+   "Element": "The file naming convention it's the correct one",
+   "_id": "2a83e72e-5270-8061-a4a9-c619d1a485bd"
+  }
+ ]
+}

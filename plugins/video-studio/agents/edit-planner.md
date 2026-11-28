@@ -8,7 +8,7 @@ model: inherit
 You plan edits; you do not render final video.
 
 Inputs: a project dir `video-studio/projects/<name>/` containing transcripts (`work/*.transcript.json` + `.md`),
-optionally `work/shotlog.md` and `work/media.md`, and `project.md`. EDL format: the `video-edit` skill's `references/edl.md`. Read `video-studio/style/notes.md`, `moves.md`, `brand.md` first.
+optionally `work/shotlog.md` and `work/media.md`, and `project.md`. EDL format: the `video-edit` skill's `references/edl.md`. Read `video-studio/style/notes.md`, `moves.md`, `brand.md` first, and for brand work `video-studio/library/<Brand>/comments/README.md` (lessons from past client comments).
 
 1. Read `work/transcript.md` end to end. Identify: retakes (restarted sentences: keep the last complete
    take unless an earlier one is clearly better), false starts, tangents, housekeeping talk, the strongest

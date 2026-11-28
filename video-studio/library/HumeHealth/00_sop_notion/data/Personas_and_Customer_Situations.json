@@ -1,0 +1,302 @@
+{
+ "name": "Personas and Customer Situations",
+ "source_block": "00fb17bf-8a99-4357-af48-88be71c3fa5b",
+ "schema": [
+  [
+   "Objections",
+   "text",
+   []
+  ],
+  [
+   "Primary Job to Be Done",
+   "text",
+   []
+  ],
+  [
+   "Emotional Driver",
+   "text",
+   []
+  ],
+  [
+   "Primary Pain",
+   "text",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Active",
+    "Researching",
+    "Needs validation",
+    "Paused",
+    "Archived"
+   ]
+  ],
+  [
+   "Existing Belief",
+   "text",
+   []
+  ],
+  [
+   "Trigger Moment",
+   "text",
+   []
+  ],
+  [
+   "Awareness Stage",
+   "select",
+   [
+    "Unaware",
+    "Problem aware",
+    "Solution aware",
+    "Product aware",
+    "Most aware"
+   ]
+  ],
+  [
+   "Failed Alternatives",
+   "text",
+   []
+  ],
+  [
+   "Sophistication Level",
+   "select",
+   [
+    "Low",
+    "Moderate",
+    "High",
+    "Very high"
+   ]
+  ],
+  [
+   "Best Formats",
+   "multi_select",
+   [
+    "UGC",
+    "Static",
+    "AI visual",
+    "Long-form video",
+    "Advertorial",
+    "Listicle",
+    "Email",
+    "Landing page"
+   ]
+  ],
+  [
+   "Under-Tested Flag",
+   "formula",
+   []
+  ],
+  [
+   "Best Channels",
+   "multi_select",
+   [
+    "Meta",
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO"
+   ]
+  ],
+  [
+   "Best Landing-Page Type",
+   "select",
+   [
+    "PDP",
+    "Product landing page",
+    "Persona landing page",
+    "Editorial",
+    "Advertorial",
+    "Listicle",
+    "Quiz",
+    "Comparison page"
+   ]
+  ],
+  [
+   "Proof Required",
+   "text",
+   []
+  ],
+  [
+   "Desired Outcome",
+   "text",
+   []
+  ],
+  [
+   "Performance Summary",
+   "text",
+   []
+  ],
+  [
+   "Best Angles",
+   "text",
+   []
+  ],
+  [
+   "Priority",
+   "select",
+   [
+    "P0",
+    "P1",
+    "P2",
+    "Reference"
+   ]
+  ],
+  [
+   "Owner",
+   "person",
+   []
+  ],
+  [
+   "Secondary Pain",
+   "text",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Identity Driver",
+   "text",
+   []
+  ],
+  [
+   "Last Reviewed",
+   "date",
+   []
+  ],
+  [
+   "Life Stage",
+   "text",
+   []
+  ],
+  [
+   "New Belief Required",
+   "text",
+   []
+  ],
+  [
+   "Persona / Situation Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Primary Job to Be Done": "Turn wearable data into next actions.",
+   "Primary Pain": "Too many metrics, not enough meaning.",
+   "Status": "Active",
+   "Existing Belief": "More data should make health easier.",
+   "Proof Required": "App interpretation demo.",
+   "Desired Outcome": "Know what sleep, stress and recovery patterns suggest.",
+   "Priority": "P0",
+   "Product": "Hume Band 2.0",
+   "New Belief Required": "Interpreted data beats more raw metrics.",
+   "Persona / Situation Name": "Wearable user overwhelmed by data",
+   "_id": "39d20d08-9385-8116-9983-c90b8385b816"
+  },
+  {
+   "Primary Job to Be Done": "Understand body composition without booking a clinic scan.",
+   "Primary Pain": "Weight alone does not answer whether hidden fat is changing.",
+   "Status": "Active",
+   "Existing Belief": "If I look okay, I am probably okay.",
+   "Proof Required": "Segmental body-composition and app trend demo.",
+   "Desired Outcome": "Get a clearer body-composition signal at home.",
+   "Priority": "P1",
+   "Product": "Hume Pod",
+   "New Belief Required": "Hidden composition signals matter more than weight alone.",
+   "Persona / Situation Name": "Man over 40 worried about hidden visceral fat",
+   "_id": "39d20d08-9385-8129-9fd7-f78fe1a7aea6"
+  },
+  {
+   "Primary Job to Be Done": "Explain progress and reduce doubt.",
+   "Primary Pain": "Plateau makes the whole plan feel pointless.",
+   "Status": "Active",
+   "Existing Belief": "Plateau means failure.",
+   "Proof Required": "Fat, muscle, hydration breakdown.",
+   "Desired Outcome": "Understand what changed when pounds did not.",
+   "Priority": "P0",
+   "Product": "Hume Pod",
+   "New Belief Required": "Plateaus can hide composition shifts.",
+   "Persona / Situation Name": "Weight-loss plateau user",
+   "_id": "39d20d08-9385-8158-8c94-fe7d962580bb"
+  },
+  {
+   "Primary Job to Be Done": "Regain confidence in progress tracking.",
+   "Primary Pain": "Body changes feel confusing and unfair when weight stalls.",
+   "Status": "Active",
+   "Existing Belief": "My body is broken if the scale will not move.",
+   "Proof Required": "Fat, muscle and hydration trend visuals.",
+   "Desired Outcome": "See changes beyond pounds.",
+   "Priority": "P1",
+   "Product": "Hume Pod",
+   "New Belief Required": "Body recomposition and hydration shifts can hide progress.",
+   "Persona / Situation Name": "Menopausal woman frustrated weight is not changing",
+   "_id": "39d20d08-9385-8178-957a-c18f0152fa54"
+  },
+  {
+   "Primary Job to Be Done": "Stay consistent with minimal mental overhead.",
+   "Primary Pain": "Health routines break when feedback is vague.",
+   "Status": "Active",
+   "Existing Belief": "I need willpower more than measurement.",
+   "Proof Required": "Weekly routine and app-report walkthrough.",
+   "Desired Outcome": "Weekly feedback that keeps habits visible.",
+   "Priority": "P2",
+   "Product": "Pod + Band Ecosystem",
+   "New Belief Required": "Measurement can create accountability without obsession.",
+   "Persona / Situation Name": "Busy professional seeking accountability",
+   "_id": "39d20d08-9385-81be-bac8-ee3282326a42"
+  },
+  {
+   "Primary Job to Be Done": "Validate workout progress.",
+   "Primary Pain": "Scale does not reflect strength or muscle changes.",
+   "Status": "Active",
+   "Existing Belief": "The scale proves whether workouts work.",
+   "Proof Required": "Muscle and fat trend demo.",
+   "Desired Outcome": "See whether training is changing muscle and fat.",
+   "Priority": "P1",
+   "Product": "Hume Pod",
+   "New Belief Required": "Training success can show up in composition before weight.",
+   "Persona / Situation Name": "Gym user gaining strength but not losing weight",
+   "_id": "39d20d08-9385-81d0-8e56-cbb9c8b2e835"
+  },
+  {
+   "Primary Job to Be Done": "Get meaningful long-term health signals.",
+   "Primary Pain": "Does not trust another subscription-heavy tracker.",
+   "Status": "Active",
+   "Existing Belief": "Wearables are expensive dashboards.",
+   "Proof Required": "App explanation and offer proof.",
+   "Desired Outcome": "Track recovery and stress trends with clearer value.",
+   "Priority": "P1",
+   "Product": "Hume Band 2.0",
+   "New Belief Required": "A wearable should explain patterns, not just collect data.",
+   "Persona / Situation Name": "Longevity-focused wearable skeptic",
+   "_id": "39d20d08-9385-81f6-9d8a-fa6181889569"
+  },
+  {
+   "Primary Job to Be Done": "Monitor body-composition quality during weight loss.",
+   "Primary Pain": "Fast weight loss may include muscle loss.",
+   "Status": "Active",
+   "Existing Belief": "Weight loss is automatically success.",
+   "Proof Required": "Muscle-mass trend and compliance-reviewed language.",
+   "Desired Outcome": "Track fat loss while preserving muscle trends.",
+   "Priority": "P0",
+   "Product": "Hume Pod",
+   "New Belief Required": "Composition quality matters as much as weight loss.",
+   "Persona / Situation Name": "GLP-1 user worried about losing muscle",
+   "_id": "39d20d08-9385-81f8-b23a-d44fd79ad0ea"
+  }
+ ]
+}

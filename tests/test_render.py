@@ -3,6 +3,7 @@
 Run: python3 -m unittest discover -s tests -v
 """
 import json
+import re
 import os
 import shutil
 import subprocess
@@ -36,6 +37,7 @@ class RenderTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.tmp = Path(tempfile.mkdtemp(prefix="vs-test-"))
+        os.environ["VS_HASH_CACHE"] = str(cls.tmp / "hashes.json")
         cls.cwd = os.getcwd()
         os.chdir(cls.tmp)
         Path("raw").mkdir()
@@ -61,6 +63,8 @@ class RenderTest(unittest.TestCase):
         path = Path("work") / f"{name}.json"
         path.write_text(json.dumps(edl))
         out = Path("out") / f"{name}.mp4"
+        if "--since" not in extra:   # these tests check full renders; revision reuse is tested on its own
+            extra = (*extra, "--since", "none")
         p = sh(sys.executable, TOOLS / "render.py", path, "-o", out, *extra)
         return out, p
 
@@ -167,13 +171,42 @@ class RenderTest(unittest.TestCase):
     def test_chunked_render_and_cache(self):
         segs = [{"src": "raw/a.mp4" if k % 2 == 0 else "raw/b.mp4", "start": 0.5 + 0.1 * k, "end": 2.5} for k in range(6)]
         edl = {"segments": segs, "music": {"file": "raw/music.wav", "gain_db": -20}}
-        whole, _ = self.render(edl, "whole", "--chunks", "off")
-        chunked, p1 = self.render(edl, "chunked", "--chunks", "3", "--jobs", "2")
-        self.assertIn("3 chunks, 0 cached", p1.stderr)
+        whole, _ = self.render(edl, "whole", "--chunks", "off", "--since", "none")
+        chunked, p1 = self.render(edl, "chunked", "--chunks", "3", "--jobs", "2", "--since", "none")
+        n = int(re.search(r"(\d+) chunks, 0 cached", p1.stderr).group(1))
+        self.assertGreaterEqual(n, 2)
         self.assertAlmostEqual(self.dur(chunked), self.dur(whole), delta=0.08)
         edl["segments"][5]["end"] = 2.0  # change one shot: only its chunk re-renders
-        _, p2 = self.render(edl, "chunked2", "--chunks", "3", "--jobs", "2")
-        self.assertIn("2 cached", p2.stderr)
+        _, p2 = self.render(edl, "chunked2", "--chunks", "3", "--jobs", "2", "--since", "none")
+        m = re.search(r"(\d+) chunks, (\d+) cached, rendering (\d+)", p2.stderr)
+        self.assertLessEqual(int(m.group(3)), 2, p2.stderr)    # the changed shot's chunk (and its neighbour at most)
+        self.assertGreaterEqual(int(m.group(2)), 2, p2.stderr)
+
+    def test_variants_share_body_chunks(self):
+        """Two hooks of different lengths before the same body: the body splits at the same shots (chunk boundaries
+        come from shot content, not time), so the second variant renders only its hook's chunk."""
+        body = [{"src": "raw/a.mp4" if k % 2 == 0 else "raw/b.mp4", "start": 0.3 + 0.05 * k, "end": 1.9}
+                for k in range(20)]
+        h1 = {"segments": [{"src": "raw/b.mp4", "start": 0.0, "end": 1.3}] + body}
+        h2 = {"segments": [{"src": "raw/a.mp4", "start": 0.2, "end": 2.9}] + body}
+        _, p1 = self.render(h1, "var_h1", "--chunks", "3", "--since", "none")
+        _, p2 = self.render(h2, "var_h2", "--chunks", "3", "--since", "none")
+        n1 = int(re.search(r"(\d+) chunks, 0 cached", p1.stderr).group(1))
+        m = re.search(r"(\d+) chunks, (\d+) cached", p2.stderr)
+        self.assertGreaterEqual(n1, 3)
+        self.assertGreaterEqual(int(m.group(2)), int(m.group(1)) - 2, p2.stderr)
+
+    def test_same_content_new_file_is_unchanged(self):
+        """A card rewritten with the same pixels (a script re-run) doesn't count as a change."""
+        import shutil as sh_
+        edl = {"segments": [{"src": "raw/a.mp4", "start": 0, "end": 2}],
+               "overlays": [{"file": "work/card.png", "start": 0.2, "end": 1.5, "x": 10, "y": 10, "w": 200}]}
+        sh_.copy("raw/gs.png", "work/card.png")
+        self.render(edl, "card_v1", "--no-loudnorm")
+        Path("work/card.png").unlink()
+        sh_.copy("raw/gs.png", "work/card.png")    # new file, new mtime, same bytes
+        _, p = self.render(edl, "card_v2", "--no-loudnorm", "--since", "auto")
+        self.assertIn("picture unchanged", p.stderr + p.stdout)
 
     def test_ten_bit_and_stabilize(self):
         edl = {"source": "raw/a.mp4", "segments": [{"start": 0, "end": 2, "stabilize": True}]}

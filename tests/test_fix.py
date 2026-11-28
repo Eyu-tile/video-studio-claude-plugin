@@ -78,7 +78,7 @@ class FixTest(unittest.TestCase):
         self.assertEqual(book["notes"][0]["status"], "done")
         # the same result as rendering the edit in full
         sh(VS, "render", self.pd / "work" / "edl.json", "-o", self.pd / "out" / "full.mp4", "--captions",
-           self.pd / "work" / "captions.ass", cwd=self.tmp, env=self.env)
+           self.pd / "work" / "captions.ass", "--since", "none", cwd=self.tmp, env=self.env)
         p = sh("ffmpeg", "-hide_banner", "-i", v2, "-i", self.pd / "out" / "full.mp4", "-lavfi", "[0:v][1:v]psnr",
                "-f", "null", "-")
         mn = re.findall(r"min:([\d.]+|inf)", p.stderr)[-1]

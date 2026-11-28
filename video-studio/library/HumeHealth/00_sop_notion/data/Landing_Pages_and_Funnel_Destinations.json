@@ -1,0 +1,246 @@
+{
+ "name": "Landing Pages and Funnel Destinations",
+ "source_block": "5dfa9758-a147-4cfe-bee3-c7b8bab2f6ed",
+ "schema": [
+  [
+   "Page Type",
+   "select",
+   [
+    "PDP",
+    "Product landing page",
+    "Persona landing page",
+    "Editorial",
+    "Advertorial",
+    "Listicle",
+    "Comparison page",
+    "Quiz",
+    "Direct mail page",
+    "Influencer page",
+    "Affiliate page",
+    "Educational page",
+    "Bundle page",
+    "Checkout",
+    "Post-purchase"
+   ]
+  ],
+  [
+   "Page URL",
+   "url",
+   []
+  ],
+  [
+   "Next Recommended Test",
+   "text",
+   []
+  ],
+  [
+   "Education Depth",
+   "select",
+   [
+    "Short",
+    "Moderate",
+    "Deep",
+    "Editorial"
+   ]
+  ],
+  [
+   "Primary Promise",
+   "text",
+   []
+  ],
+  [
+   "Notes",
+   "text",
+   []
+  ],
+  [
+   "Objections Addressed",
+   "text",
+   []
+  ],
+  [
+   "Days Since Last Audit",
+   "formula",
+   []
+  ],
+  [
+   "Page Owner",
+   "person",
+   []
+  ],
+  [
+   "Mobile Status",
+   "select",
+   [
+    "Good",
+    "Needs QA",
+    "Needs fix",
+    "Unknown"
+   ]
+  ],
+  [
+   "Bounce / Engagement Signal",
+   "text",
+   []
+  ],
+  [
+   "Current Status",
+   "select",
+   [
+    "Live",
+    "Draft",
+    "Testing",
+    "Needs update",
+    "Paused",
+    "Retired"
+   ]
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Offer",
+   "text",
+   []
+  ],
+  [
+   "Congruence Score",
+   "number",
+   []
+  ],
+  [
+   "Traffic Source",
+   "multi_select",
+   [
+    "Meta",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "Influencer",
+    "Affiliate"
+   ]
+  ],
+  [
+   "Last Audited",
+   "date",
+   []
+  ],
+  [
+   "Awareness Stage",
+   "select",
+   [
+    "Unaware",
+    "Problem aware",
+    "Solution aware",
+    "Product aware",
+    "Most aware"
+   ]
+  ],
+  [
+   "Proof Used",
+   "text",
+   []
+  ],
+  [
+   "Current CVR",
+   "number",
+   []
+  ],
+  [
+   "Primary Angle",
+   "text",
+   []
+  ],
+  [
+   "Add-to-Cart Rate",
+   "number",
+   []
+  ],
+  [
+   "Primary Persona",
+   "text",
+   []
+  ],
+  [
+   "Page Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Page Type": "Listicle",
+   "Page URL": "https://humehealth.com/pages/hume-listicle-1",
+   "Education Depth": "Editorial",
+   "Primary Promise": "A smarter way to understand body-composition progress.",
+   "Notes": "Use for colder problem-aware traffic.",
+   "Mobile Status": "Needs QA",
+   "Current Status": "Live",
+   "Product": "Hume Pod",
+   "Congruence Score": "1.4",
+   "Proof Used": "Product mechanism, review and comparison framing",
+   "Primary Angle": "Scale is incomplete",
+   "Primary Persona": "Smart scale skeptic",
+   "Page Name": "Hume Listicle 1",
+   "_id": "39d20d08-9385-8174-82b1-f81f25a59f34"
+  },
+  {
+   "Page Type": "PDP",
+   "Page URL": "https://humehealth.com/pages/hume-body-pod",
+   "Education Depth": "Moderate",
+   "Primary Promise": "Know what your body is made of, not just what you weigh.",
+   "Notes": "Primary destination for product-aware traffic. Needs audit against top TOF hooks.",
+   "Mobile Status": "Needs QA",
+   "Current Status": "Live",
+   "Product": "Hume Pod",
+   "Congruence Score": "1.5",
+   "Proof Used": "Pod body-composition trend demo",
+   "Primary Angle": "Scale is incomplete",
+   "Primary Persona": "Product-aware Pod buyer",
+   "Page Name": "Hume Pod PDP",
+   "_id": "39d20d08-9385-8195-a0df-d9ce4a25e3c8"
+  },
+  {
+   "Page Type": "Comparison page",
+   "Page URL": "https://insights.smartscalesreviews.com/the-5-best-smart-fitness-trackers-to-buy-in-2026",
+   "Education Depth": "Editorial",
+   "Primary Promise": "Find a wearable that explains recovery without subscription fatigue.",
+   "Notes": "Needs claim verification and congruence check against Band paid social.",
+   "Mobile Status": "Needs QA",
+   "Current Status": "Live",
+   "Product": "Hume Band 2.0",
+   "Congruence Score": "1.2",
+   "Proof Used": "Comparison table and offer proof, pending verification",
+   "Primary Angle": "No-subscription wearable value",
+   "Primary Persona": "Wearable skeptic",
+   "Page Name": "SmartScale Band Comparison LP",
+   "_id": "39d20d08-9385-81cc-b1fc-feb05a0e761e"
+  },
+  {
+   "Page Type": "Product landing page",
+   "Page URL": "https://humehealth.com/pages/weight-loss-general",
+   "Education Depth": "Moderate",
+   "Primary Promise": "Understand what changed when pounds did not.",
+   "Notes": "Good match for plateau and GLP-1-adjacent creative with compliance review.",
+   "Mobile Status": "Needs QA",
+   "Current Status": "Live",
+   "Product": "Hume Pod",
+   "Congruence Score": "1.6",
+   "Proof Used": "Fat, muscle, hydration trend explanation",
+   "Primary Angle": "Plateau explanation",
+   "Primary Persona": "Weight-loss plateau user",
+   "Page Name": "Weight Loss General LP",
+   "_id": "39d20d08-9385-81ec-9daf-c472fda0907b"
+  }
+ ]
+}

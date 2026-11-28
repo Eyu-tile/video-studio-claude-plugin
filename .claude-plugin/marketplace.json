@@ -7,7 +7,7 @@
       "name": "video-studio",
       "source": "./plugins/video-studio",
       "description": "Agentic video editing for any format: cut lists, renders, captions, QA, free-internet, stock and editor-provided media, music, sound design, multicam, montages, screencasts, colour, audio, exports, motion graphics, NLE handoff.",
-      "version": "2.18.0",
+      "version": "2.19.0",
       "category": "productivity"
     }
   ]

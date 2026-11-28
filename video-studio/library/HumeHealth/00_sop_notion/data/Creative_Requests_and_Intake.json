@@ -1,0 +1,145 @@
+{
+ "name": "Creative Requests and Intake",
+ "source_block": "ca50dd98-efd8-4110-b3c7-d8bb12e4ef26",
+ "schema": [
+  [
+   "Related Campaign",
+   "text",
+   []
+  ],
+  [
+   "Priority",
+   "select",
+   [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+   ]
+  ],
+  [
+   "Assigned Strategist",
+   "person",
+   []
+  ],
+  [
+   "Supporting Data",
+   "url",
+   []
+  ],
+  [
+   "Audience Affected",
+   "text",
+   []
+  ],
+  [
+   "Requester",
+   "person",
+   []
+  ],
+  [
+   "Business Problem",
+   "text",
+   []
+  ],
+  [
+   "Outcome Needed",
+   "text",
+   []
+  ],
+  [
+   "Team",
+   "select",
+   [
+    "Media Buying",
+    "CRO",
+    "CRM",
+    "Leadership",
+    "Brand",
+    "Affiliate",
+    "Creative",
+    "Other"
+   ]
+  ],
+  [
+   "Deadline",
+   "date",
+   []
+  ],
+  [
+   "Resulting Brief",
+   "text",
+   []
+  ],
+  [
+   "Requested Deliverable",
+   "text",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Why Now",
+   "text",
+   []
+  ],
+  [
+   "Related Page",
+   "url",
+   []
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "New",
+    "Triaging",
+    "Accepted",
+    "Needs clarification",
+    "Brief created",
+    "Declined",
+    "Done"
+   ]
+  ],
+  [
+   "Channel",
+   "multi_select",
+   [
+    "Meta",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO",
+    "Influencer",
+    "Affiliate"
+   ]
+  ],
+  [
+   "Decision",
+   "text",
+   []
+  ],
+  [
+   "Metric or Behavior Signal",
+   "text",
+   []
+  ],
+  [
+   "Request",
+   "title",
+   []
+  ]
+ ],
+ "rows": []
+}

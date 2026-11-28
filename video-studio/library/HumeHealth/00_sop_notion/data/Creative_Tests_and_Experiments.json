@@ -1,0 +1,346 @@
+{
+ "name": "Creative Tests and Experiments",
+ "source_block": "867c7b7f-0922-44c2-ae10-57201fe9a9b8",
+ "schema": [
+  [
+   "Spend",
+   "number",
+   []
+  ],
+  [
+   "Learning Relation",
+   "relation",
+   []
+  ],
+  [
+   "Primary Metric",
+   "select",
+   [
+    "ROAS",
+    "CPA",
+    "CTR",
+    "CVR",
+    "Hook rate",
+    "Hold rate",
+    "Add-to-cart rate",
+    "Revenue",
+    "MER"
+   ]
+  ],
+  [
+   "Secondary Metrics",
+   "text",
+   []
+  ],
+  [
+   "Test ID",
+   "auto_increment_id",
+   []
+  ],
+  [
+   "Confidence",
+   "select",
+   [
+    "Low",
+    "Medium",
+    "High",
+    "Very high"
+   ]
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Backlog",
+    "Ready",
+    "Live",
+    "Awaiting decision",
+    "Learning needed",
+    "Complete",
+    "Paused"
+   ]
+  ],
+  [
+   "Offer",
+   "text",
+   []
+  ],
+  [
+   "Landing Pages",
+   "text",
+   []
+  ],
+  [
+   "Hypothesis",
+   "text",
+   []
+  ],
+  [
+   "Variants",
+   "text",
+   []
+  ],
+  [
+   "Variable Being Tested",
+   "select",
+   [
+    "Hook",
+    "Persona",
+    "Proof",
+    "Format",
+    "Offer",
+    "Landing page",
+    "CTA",
+    "Creator",
+    "Length"
+   ]
+  ],
+  [
+   "Start Date",
+   "date",
+   []
+  ],
+  [
+   "Briefs",
+   "text",
+   []
+  ],
+  [
+   "Owner",
+   "person",
+   []
+  ],
+  [
+   "Control",
+   "text",
+   []
+  ],
+  [
+   "Customer Insight",
+   "text",
+   []
+  ],
+  [
+   "Next Test",
+   "text",
+   []
+  ],
+  [
+   "CRO Learning",
+   "text",
+   []
+  ],
+  [
+   "Winner",
+   "text",
+   []
+  ],
+  [
+   "CRM Learning",
+   "text",
+   []
+  ],
+  [
+   "End Date",
+   "date",
+   []
+  ],
+  [
+   "Minimum Decision Threshold",
+   "text",
+   []
+  ],
+  [
+   "Channel",
+   "multi_select",
+   [
+    "Meta",
+    "TikTok",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO"
+   ]
+  ],
+  [
+   "Media Learning",
+   "text",
+   []
+  ],
+  [
+   "Brief Relation",
+   "relation",
+   []
+  ],
+  [
+   "Persona",
+   "text",
+   []
+  ],
+  [
+   "Asset Relation",
+   "relation",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Loss Reason",
+   "text",
+   []
+  ],
+  [
+   "Landing Page Relation",
+   "relation",
+   []
+  ],
+  [
+   "Decision",
+   "select",
+   [
+    "Scale",
+    "Iterate",
+    "Retest",
+    "Adapt to other channels",
+    "Build dedicated landing page",
+    "Change offer",
+    "Pause",
+    "Retire",
+    "Inconclusive"
+   ]
+  ],
+  [
+   "Angle",
+   "text",
+   []
+  ],
+  [
+   "Creative Learning",
+   "text",
+   []
+  ],
+  [
+   "Media Buyer",
+   "person",
+   []
+  ],
+  [
+   "Assets",
+   "text",
+   []
+  ],
+  [
+   "Budget",
+   "number",
+   []
+  ],
+  [
+   "Result",
+   "select",
+   [
+    "Pending",
+    "Winner",
+    "Loser",
+    "Inconclusive",
+    "Mixed"
+   ]
+  ],
+  [
+   "Test Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Primary Metric": "CVR",
+   "Test ID": "3",
+   "Status": "Ready",
+   "Landing Pages": "Hume Pod PDP; Weight Loss General LP; Hume Listicle 1",
+   "Hypothesis": "Problem-aware plateau traffic converts better on an educational page than PDP.",
+   "Variants": "Weight Loss General LP, Hume Listicle 1",
+   "Variable Being Tested": "Landing page",
+   "Control": "Hume Pod PDP",
+   "CRO Learning": "Need hook-to-headline match above the fold.",
+   "Minimum Decision Threshold": "2,000 landing page views per page",
+   "Persona": "Weight-loss plateau user",
+   "Product": "Hume Pod",
+   "Decision": "Build dedicated landing page",
+   "Angle": "Scale is incomplete",
+   "Result": "Pending",
+   "Test Name": "Example Test — Pod listicle vs product LP",
+   "_id": "39d20d08-9385-8116-83a1-ed61dc53c52c"
+  },
+  {
+   "Spend": "2500",
+   "Primary Metric": "ROAS",
+   "Test ID": "1",
+   "Status": "Live",
+   "Landing Pages": "Weight Loss General LP",
+   "Hypothesis": "Confession hooks will outperform generic feature hooks for plateau users.",
+   "Variants": "Plateau confession, scale-is-incomplete, number-did-not-change",
+   "Variable Being Tested": "Hook",
+   "Control": "Generic smart scale feature ad",
+   "Minimum Decision Threshold": "$2k spend or 50 conversions",
+   "Persona": "Weight-loss plateau user",
+   "Product": "Hume Pod",
+   "Decision": "Iterate",
+   "Angle": "Plateau explanation",
+   "Creative Learning": "Belief-first hooks are showing stronger early CTR.",
+   "Assets": "HUME_POD_META_UGC_PLATEAU_CONFESSION_V1",
+   "Result": "Pending",
+   "Test Name": "Example Test — Pod plateau hook variants",
+   "_id": "39d20d08-9385-819d-8674-de938044057b"
+  },
+  {
+   "Spend": "3000",
+   "Primary Metric": "ROAS",
+   "Test ID": "2",
+   "Status": "Awaiting decision",
+   "Landing Pages": "SmartScale Band Comparison LP",
+   "Hypothesis": "Recovery interpretation beats no-subscription value for cold traffic unless offer proof is very clear.",
+   "Variants": "Recovery explanation UGC, subscription comparison static",
+   "Variable Being Tested": "Proof",
+   "Control": "No-subscription comparison static",
+   "Minimum Decision Threshold": "$1.5k spend per variant",
+   "Persona": "Wearable skeptic",
+   "Product": "Hume Band 2.0",
+   "Decision": "Retest",
+   "Angle": "Tracking vs understanding",
+   "Creative Learning": "Recovery angle gets better intent; subscription needs proof clarity.",
+   "Assets": "HUME_BAND_META_UGC_RECOVERY_EXPLAINER_V1; HUME_BAND_META_STATIC_NO_SUBSCRIPTION_V1",
+   "Result": "Mixed",
+   "Test Name": "Example Test — Band recovery vs subscription proof",
+   "_id": "39d20d08-9385-81d5-a6a9-c0d87056f899"
+  },
+  {
+   "Primary Metric": "CVR",
+   "Test ID": "4",
+   "Status": "Backlog",
+   "Landing Pages": "SmartScale Band Comparison LP",
+   "Hypothesis": "Adding verified no-subscription proof increases Band comparison-page CVR.",
+   "Variants": "Offer proof module, FAQ proof module",
+   "Variable Being Tested": "Proof",
+   "Control": "Current comparison page",
+   "CRO Learning": "Depends on current claim verification.",
+   "Minimum Decision Threshold": "One full-week traffic cycle",
+   "Persona": "Wearable skeptic",
+   "Product": "Hume Band 2.0",
+   "Decision": "Retest",
+   "Angle": "No-subscription wearable value",
+   "Result": "Pending",
+   "Test Name": "Example Test — Offer proof in Band comparison page",
+   "_id": "39d20d08-9385-81d9-b9c6-fcbec60918ff"
+  }
+ ]
+}

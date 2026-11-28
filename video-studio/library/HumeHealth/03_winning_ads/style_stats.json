@@ -1,0 +1,503 @@
+{
+ "ALL": {
+  "n_ads": 54,
+  "duration": {
+   "n": 54,
+   "median": 39.65,
+   "p25": 24.94,
+   "p75": 56.78,
+   "mean": 45.64
+  },
+  "n_shots": {
+   "n": 54,
+   "median": 20.0,
+   "p25": 13.5,
+   "p75": 28.25,
+   "mean": 21.44
+  },
+  "avg_shot": {
+   "n": 54,
+   "median": 1.71,
+   "p25": 1.47,
+   "p75": 2.62,
+   "mean": 4.67
+  },
+  "median_shot": {
+   "n": 54,
+   "median": 1.49,
+   "p25": 1.29,
+   "p75": 2.35,
+   "mean": 4.17
+  },
+  "cuts_per_10s": {
+   "n": 54,
+   "median": 5.41,
+   "p25": 3.53,
+   "p75": 6.31,
+   "mean": 4.93
+  },
+  "first_cut": {
+   "n": 51,
+   "median": 1.43,
+   "p25": 1.03,
+   "p75": 2.0,
+   "mean": 2.59
+  },
+  "wpm": {
+   "n": 49,
+   "median": 219.0,
+   "p25": 199.0,
+   "p75": 246.5,
+   "mean": 223.51
+  },
+  "talk_ratio": {
+   "n": 54,
+   "median": 0.88,
+   "p25": 0.72,
+   "p75": 0.91,
+   "mean": 0.74
+  },
+  "cuts_on_word_start_pct": {
+   "n": 51,
+   "median": 75.0,
+   "p25": 52.2,
+   "p75": 81.8,
+   "mean": 63.38
+  },
+  "cuts_in_speech_gaps_pct": {
+   "n": 51,
+   "median": 72.7,
+   "p25": 60.7,
+   "p75": 84.6,
+   "mean": 72.81
+  },
+  "sfx_on_cuts_pct": {
+   "n": 51,
+   "median": 52.9,
+   "p25": 42.9,
+   "p75": 70.7,
+   "mean": 55.01
+  },
+  "I_lufs": {
+   "n": 54,
+   "median": -14.55,
+   "p25": -18.52,
+   "p75": -14.1,
+   "mean": -16.38
+  },
+  "true_peak": {
+   "n": 54,
+   "median": -0.8,
+   "p25": -3.9,
+   "p75": -0.57,
+   "mean": -2.32
+  },
+  "LRA": {
+   "n": 54,
+   "median": 3.6,
+   "p25": 2.68,
+   "p75": 4.5,
+   "mean": 3.74
+  },
+  "bpm": {
+   "n": 54,
+   "median": 117.5,
+   "p25": 111.15,
+   "p75": 129.2,
+   "mean": 119.86
+  },
+  "words_per_caption_card": {
+   "n": 54,
+   "median": 1.0,
+   "p25": 1.0,
+   "p75": 1.0,
+   "mean": 1.09
+  },
+  "caption_y": {
+   "n": 54,
+   "median": 0.6,
+   "p25": 0.53,
+   "p75": 0.65,
+   "mean": 0.59
+  },
+  "caption_height": {
+   "n": 54,
+   "median": 0.03,
+   "p25": 0.03,
+   "p75": 0.04,
+   "mean": 0.03
+  },
+  "caption_card_duration": {
+   "n": 54,
+   "median": 0.5,
+   "p25": 0.5,
+   "p75": 0.5,
+   "mean": 0.56
+  },
+  "captions_crossing_cuts_per_ad": {
+   "n": 54,
+   "median": 2.0,
+   "p25": 0.0,
+   "p75": 5.25,
+   "mean": 3.39
+  },
+  "pct_ads_with_colour_highlight": 88.9,
+  "highlight_colours": {
+   "green": 86,
+   "red": 126,
+   "blue": 195,
+   "yellow": 11,
+   "other-colour": 8
+  },
+  "pct_ads_with_headline": 100.0,
+  "ads_with_HARD_flag": 11,
+  "hard_rules": {
+   "early-detection framing": 5,
+   "prevention (check product vs user)": 1,
+   "heart-event / stroke": 1,
+   "prediction": 2,
+   "disease named": 4,
+   "diagnosis claim": 1,
+   "medical/clinical claim": 2,
+   "DEXA equivalence": 4
+  },
+  "soft_rules": {
+   "accuracy claim": 22,
+   "price / offer": 7,
+   "age claim": 13,
+   "brand name misheard/mispronounced (check VO)": 4,
+   "competitor named": 3
+  }
+ },
+ "Pod": {
+  "n_ads": 27,
+  "duration": {
+   "n": 27,
+   "median": 43.05,
+   "p25": 33.37,
+   "p75": 56.32,
+   "mean": 45.84
+  },
+  "n_shots": {
+   "n": 27,
+   "median": 22,
+   "p25": 14.0,
+   "p75": 26.0,
+   "mean": 20.7
+  },
+  "avg_shot": {
+   "n": 27,
+   "median": 1.77,
+   "p25": 1.52,
+   "p75": 3.08,
+   "mean": 6.37
+  },
+  "median_shot": {
+   "n": 27,
+   "median": 1.53,
+   "p25": 1.2,
+   "p75": 2.43,
+   "mean": 5.69
+  },
+  "cuts_per_10s": {
+   "n": 27,
+   "median": 5.41,
+   "p25": 3.02,
+   "p75": 6.22,
+   "mean": 4.91
+  },
+  "first_cut": {
+   "n": 26,
+   "median": 1.75,
+   "p25": 1.32,
+   "p75": 2.08,
+   "mean": 2.76
+  },
+  "wpm": {
+   "n": 27,
+   "median": 226.0,
+   "p25": 210.0,
+   "p75": 265.0,
+   "mean": 232.19
+  },
+  "talk_ratio": {
+   "n": 27,
+   "median": 0.89,
+   "p25": 0.87,
+   "p75": 0.92,
+   "mean": 0.88
+  },
+  "cuts_on_word_start_pct": {
+   "n": 26,
+   "median": 77.55,
+   "p25": 66.7,
+   "p75": 83.77,
+   "mean": 75.15
+  },
+  "cuts_in_speech_gaps_pct": {
+   "n": 26,
+   "median": 66.7,
+   "p25": 55.45,
+   "p75": 80.1,
+   "mean": 68.03
+  },
+  "sfx_on_cuts_pct": {
+   "n": 26,
+   "median": 57.7,
+   "p25": 40.67,
+   "p75": 69.9,
+   "mean": 55.46
+  },
+  "I_lufs": {
+   "n": 27,
+   "median": -14.6,
+   "p25": -18.7,
+   "p75": -14.1,
+   "mean": -16.49
+  },
+  "true_peak": {
+   "n": 27,
+   "median": -0.7,
+   "p25": -3.8,
+   "p75": -0.5,
+   "mean": -1.93
+  },
+  "LRA": {
+   "n": 27,
+   "median": 3.2,
+   "p25": 2.5,
+   "p75": 5.3,
+   "mean": 3.9
+  },
+  "bpm": {
+   "n": 27,
+   "median": 117.5,
+   "p25": 112.3,
+   "p75": 129.2,
+   "mean": 119.08
+  },
+  "words_per_caption_card": {
+   "n": 27,
+   "median": 1,
+   "p25": 1.0,
+   "p75": 1.0,
+   "mean": 1.07
+  },
+  "caption_y": {
+   "n": 27,
+   "median": 0.58,
+   "p25": 0.51,
+   "p75": 0.65,
+   "mean": 0.59
+  },
+  "caption_height": {
+   "n": 27,
+   "median": 0.03,
+   "p25": 0.03,
+   "p75": 0.04,
+   "mean": 0.04
+  },
+  "caption_card_duration": {
+   "n": 27,
+   "median": 0.5,
+   "p25": 0.5,
+   "p75": 0.5,
+   "mean": 0.52
+  },
+  "captions_crossing_cuts_per_ad": {
+   "n": 27,
+   "median": 2,
+   "p25": 0.0,
+   "p75": 6.0,
+   "mean": 3.48
+  },
+  "pct_ads_with_colour_highlight": 88.9,
+  "highlight_colours": {
+   "red": 60,
+   "blue": 101,
+   "green": 51,
+   "yellow": 6,
+   "other-colour": 1
+  },
+  "pct_ads_with_headline": 100.0,
+  "ads_with_HARD_flag": 6,
+  "hard_rules": {
+   "medical/clinical claim": 2,
+   "DEXA equivalence": 4,
+   "early-detection framing": 1
+  },
+  "soft_rules": {
+   "accuracy claim": 19,
+   "price / offer": 5,
+   "age claim": 6,
+   "competitor named": 3,
+   "brand name misheard/mispronounced (check VO)": 1
+  }
+ },
+ "Band": {
+  "n_ads": 11,
+  "duration": {
+   "n": 11,
+   "median": 64.73,
+   "p25": 47.15,
+   "p75": 86.53,
+   "mean": 79.75
+  },
+  "n_shots": {
+   "n": 11,
+   "median": 30,
+   "p25": 28.0,
+   "p75": 42.0,
+   "mean": 36.18
+  },
+  "avg_shot": {
+   "n": 11,
+   "median": 2.2,
+   "p25": 1.6,
+   "p75": 2.68,
+   "mean": 2.4
+  },
+  "median_shot": {
+   "n": 11,
+   "median": 1.88,
+   "p25": 1.22,
+   "p75": 2.4,
+   "mean": 1.85
+  },
+  "cuts_per_10s": {
+   "n": 11,
+   "median": 4.48,
+   "p25": 3.6,
+   "p75": 6.04,
+   "mean": 4.67
+  },
+  "first_cut": {
+   "n": 11,
+   "median": 1.4,
+   "p25": 0.63,
+   "p75": 2.7,
+   "mean": 3.4
+  },
+  "wpm": {
+   "n": 11,
+   "median": 200.0,
+   "p25": 187.0,
+   "p75": 219.0,
+   "mean": 201.0
+  },
+  "talk_ratio": {
+   "n": 11,
+   "median": 0.89,
+   "p25": 0.82,
+   "p75": 0.93,
+   "mean": 0.87
+  },
+  "cuts_on_word_start_pct": {
+   "n": 11,
+   "median": 79.3,
+   "p25": 65.7,
+   "p75": 80.0,
+   "mean": 72.3
+  },
+  "cuts_in_speech_gaps_pct": {
+   "n": 11,
+   "median": 71.4,
+   "p25": 60.7,
+   "p75": 75.6,
+   "mean": 69.34
+  },
+  "sfx_on_cuts_pct": {
+   "n": 11,
+   "median": 53.6,
+   "p25": 44.8,
+   "p75": 70.7,
+   "mean": 57.53
+  },
+  "I_lufs": {
+   "n": 11,
+   "median": -14.2,
+   "p25": -14.6,
+   "p75": -14.1,
+   "mean": -14.67
+  },
+  "true_peak": {
+   "n": 11,
+   "median": -0.5,
+   "p25": -0.8,
+   "p75": 0.2,
+   "mean": -0.57
+  },
+  "LRA": {
+   "n": 11,
+   "median": 4.1,
+   "p25": 2.8,
+   "p75": 4.7,
+   "mean": 3.79
+  },
+  "bpm": {
+   "n": 11,
+   "median": 123.0,
+   "p25": 117.5,
+   "p75": 129.2,
+   "mean": 121.77
+  },
+  "words_per_caption_card": {
+   "n": 11,
+   "median": 1,
+   "p25": 1.0,
+   "p75": 2.0,
+   "mean": 1.27
+  },
+  "caption_y": {
+   "n": 11,
+   "median": 0.59,
+   "p25": 0.52,
+   "p75": 0.6,
+   "mean": 0.59
+  },
+  "caption_height": {
+   "n": 11,
+   "median": 0.03,
+   "p25": 0.03,
+   "p75": 0.03,
+   "mean": 0.03
+  },
+  "caption_card_duration": {
+   "n": 11,
+   "median": 0.5,
+   "p25": 0.5,
+   "p75": 0.5,
+   "mean": 0.5
+  },
+  "captions_crossing_cuts_per_ad": {
+   "n": 11,
+   "median": 2,
+   "p25": 0.0,
+   "p75": 4.0,
+   "mean": 2.82
+  },
+  "pct_ads_with_colour_highlight": 81.8,
+  "highlight_colours": {
+   "red": 48,
+   "blue": 38,
+   "yellow": 2,
+   "green": 30,
+   "other-colour": 2
+  },
+  "pct_ads_with_headline": 100.0,
+  "ads_with_HARD_flag": 5,
+  "hard_rules": {
+   "early-detection framing": 4,
+   "prevention (check product vs user)": 1,
+   "heart-event / stroke": 1,
+   "prediction": 2,
+   "disease named": 4,
+   "diagnosis claim": 1
+  },
+  "soft_rules": {
+   "age claim": 6,
+   "brand name misheard/mispronounced (check VO)": 3,
+   "price / offer": 1
+  }
+ }
+}

@@ -211,7 +211,8 @@ The bundled HyperFrames CLI sends usage telemetry (and a usage beacon when its s
 
 ## Workspace
 Style files, projects and a shared `library/` (logos, fonts, LUTs, music) live in your repo (`video-studio/`), so brand rules, notes from past feedback
-and editing "moves" travel with the project. Footage and renders are git-ignored by the generated `.gitignore`.
+and editing "moves" travel with the project. Each brand library keeps a comments gallery (`library/<Brand>/comments/`): one file per
+project with every review round (note, fix, lesson) and a lessons checklist that is read before planning and before every delivery. Footage and renders are git-ignored by the generated `.gitignore`.
 
 ## Limits
 - No generative video/voice by default; `media-use` can add it on request (HeyGen or local tools).

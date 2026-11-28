@@ -1,0 +1,488 @@
+{
+ "name": "Asset Library",
+ "source_block": "9b9d3963-e335-4f82-91e8-d65440268c90",
+ "schema": [
+  [
+   "Average Play Duration",
+   "number",
+   []
+  ],
+  [
+   "Date Launched",
+   "date",
+   []
+  ],
+  [
+   "Hook Rate",
+   "number",
+   []
+  ],
+  [
+   "CPC",
+   "number",
+   []
+  ],
+  [
+   "Spend",
+   "number",
+   []
+  ],
+  [
+   "Revenue",
+   "number",
+   []
+  ],
+  [
+   "Usage Rights",
+   "text",
+   []
+  ],
+  [
+   "CVR",
+   "number",
+   []
+  ],
+  [
+   "Related Test",
+   "text",
+   []
+  ],
+  [
+   "Brief",
+   "text",
+   []
+  ],
+  [
+   "Notes",
+   "text",
+   []
+  ],
+  [
+   "Iteration Type",
+   "select",
+   [
+    "New concept",
+    "Hook iteration",
+    "Proof iteration",
+    "Format adaptation",
+    "Landing-page match",
+    "Offer iteration"
+   ]
+  ],
+  [
+   "Media Buyer",
+   "person",
+   []
+  ],
+  [
+   "Ad Platform ID",
+   "text",
+   []
+  ],
+  [
+   "CPA",
+   "number",
+   []
+  ],
+  [
+   "Checkout Rate",
+   "number",
+   []
+  ],
+  [
+   "Angle Relation",
+   "relation",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Version",
+   "text",
+   []
+  ],
+  [
+   "Hold Rate",
+   "number",
+   []
+  ],
+  [
+   "Angle",
+   "text",
+   []
+  ],
+  [
+   "Test Relation",
+   "relation",
+   []
+  ],
+  [
+   "Date Completed",
+   "date",
+   []
+  ],
+  [
+   "Caption",
+   "text",
+   []
+  ],
+  [
+   "Campaign",
+   "text",
+   []
+  ],
+  [
+   "CTR",
+   "number",
+   []
+  ],
+  [
+   "Creator",
+   "text",
+   []
+  ],
+  [
+   "Winner Status",
+   "select",
+   [
+    "Insufficient data",
+    "Early signal",
+    "Emerging winner",
+    "Winner",
+    "Scalable winner",
+    "Fatiguing winner",
+    "Inconclusive",
+    "Loser",
+    "Retired"
+   ]
+  ],
+  [
+   "Final File",
+   "url",
+   []
+  ],
+  [
+   "Next Action",
+   "select",
+   [
+    "Scale",
+    "Iterate",
+    "Retest",
+    "Adapt",
+    "Fix LP",
+    "Pause",
+    "Retire",
+    "Capture learning"
+   ]
+  ],
+  [
+   "Naming Convention Check",
+   "formula",
+   []
+  ],
+  [
+   "Persona",
+   "text",
+   []
+  ],
+  [
+   "ROAS",
+   "number",
+   []
+  ],
+  [
+   "Hook Relation",
+   "relation",
+   []
+  ],
+  [
+   "Parent Asset",
+   "text",
+   []
+  ],
+  [
+   "Missing Learning Flag",
+   "formula",
+   []
+  ],
+  [
+   "Aspect Ratio",
+   "select",
+   [
+    "9:16",
+    "4:5",
+    "1:1",
+    "16:9",
+    "HTML/email",
+    "Other"
+   ]
+  ],
+  [
+   "Learning Captured",
+   "checkbox",
+   []
+  ],
+  [
+   "Channel",
+   "multi_select",
+   [
+    "Meta",
+    "Instagram",
+    "TikTok",
+    "TikTok Shop",
+    "YouTube",
+    "CTV",
+    "Native",
+    "Email",
+    "SMS",
+    "CRO"
+   ]
+  ],
+  [
+   "Status",
+   "select",
+   [
+    "Requested",
+    "In production",
+    "In review",
+    "Ready to launch",
+    "Live",
+    "Paused",
+    "Retired"
+   ]
+  ],
+  [
+   "Add-to-Cart Rate",
+   "number",
+   []
+  ],
+  [
+   "Asset ID",
+   "auto_increment_id",
+   []
+  ],
+  [
+   "Impressions",
+   "number",
+   []
+  ],
+  [
+   "Raw Footage",
+   "url",
+   []
+  ],
+  [
+   "Script",
+   "url",
+   []
+  ],
+  [
+   "Thumbnail",
+   "file",
+   []
+  ],
+  [
+   "Landing Page",
+   "url",
+   []
+  ],
+  [
+   "Format",
+   "select",
+   [
+    "UGC",
+    "Static",
+    "AI visual",
+    "Long-form video",
+    "Advertorial",
+    "Listicle",
+    "Influencer",
+    "Email",
+    "SMS",
+    "Landing-page module"
+   ]
+  ],
+  [
+   "Editor",
+   "person",
+   []
+  ],
+  [
+   "Brief Relation",
+   "relation",
+   []
+  ],
+  [
+   "LPV",
+   "number",
+   []
+  ],
+  [
+   "Ad Name",
+   "text",
+   []
+  ],
+  [
+   "Rights Expiry",
+   "date",
+   []
+  ],
+  [
+   "Fatigue Status",
+   "select",
+   [
+    "Fresh",
+    "Watch",
+    "Fatiguing",
+    "Fatigued",
+    "Retired"
+   ]
+  ],
+  [
+   "Designer",
+   "person",
+   []
+  ],
+  [
+   "Hook",
+   "text",
+   []
+  ],
+  [
+   "Duration",
+   "text",
+   []
+  ],
+  [
+   "Asset Name",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Brief": "Pod DEXA comparison UGC",
+   "Product": "Hume Pod",
+   "Angle": "DEXA at-home alternative",
+   "Winner Status": "Insufficient data",
+   "Next Action": "Capture learning",
+   "Persona": "Longevity optimizer",
+   "Aspect Ratio": "9:16",
+   "Learning Captured": "No",
+   "Status": "In review",
+   "Asset ID": "3",
+   "Landing Page": "https://humehealth.com/pages/hume-listicle-1",
+   "Format": "UGC",
+   "Fatigue Status": "Fresh",
+   "Hook": "Do not pay for another scan before seeing this",
+   "Asset Name": "HUME_POD_TIKTOK_UGC_DEXA_AT_HOME_V1",
+   "_id": "39d20d08-9385-811b-9c04-c071e59e56fa"
+  },
+  {
+   "Brief": "Pod GLP-1 muscle quality static",
+   "Product": "Hume Pod",
+   "Angle": "Fat vs muscle truth",
+   "Winner Status": "Insufficient data",
+   "Next Action": "Retest",
+   "Persona": "GLP-1 user",
+   "Aspect Ratio": "4:5",
+   "Learning Captured": "No",
+   "Status": "Ready to launch",
+   "Asset ID": "2",
+   "Landing Page": "https://humehealth.com/pages/weight-loss-general",
+   "Format": "Static",
+   "Fatigue Status": "Fresh",
+   "Hook": "All weight loss is not the same",
+   "Asset Name": "HUME_POD_META_STATIC_GLP1_MUSCLE_QUALITY_V1",
+   "_id": "39d20d08-9385-817d-b84e-d06360e44f10"
+  },
+  {
+   "Brief": "Band subscription comparison static",
+   "Product": "Hume Band 2.0",
+   "Angle": "No-subscription wearable value",
+   "Winner Status": "Insufficient data",
+   "Next Action": "Retest",
+   "Persona": "Wearable skeptic",
+   "Aspect Ratio": "4:5",
+   "Learning Captured": "No",
+   "Status": "Ready to launch",
+   "Asset ID": "5",
+   "Landing Page": "https://insights.smartscalesreviews.com/the-5-best-smart-fitness-trackers-to-buy-in-2026",
+   "Format": "Static",
+   "Fatigue Status": "Fresh",
+   "Hook": "I thought all useful wearables came with a monthly bill",
+   "Asset Name": "HUME_BAND_META_STATIC_NO_SUBSCRIPTION_V1",
+   "_id": "39d20d08-9385-81af-8df6-cf147cde0251"
+  },
+  {
+   "Brief": "Meta winner to YouTube explainer",
+   "Product": "Pod + Band Ecosystem",
+   "Angle": "Ecosystem explanation",
+   "Winner Status": "Insufficient data",
+   "Next Action": "Adapt",
+   "Persona": "Busy professional",
+   "Aspect Ratio": "16:9",
+   "Learning Captured": "No",
+   "Status": "Requested",
+   "Asset ID": "6",
+   "Landing Page": "https://humehealth.com/pages/hume-body-pod",
+   "Format": "Long-form video",
+   "Fatigue Status": "Fresh",
+   "Hook": "Your body and recovery tell different stories",
+   "Asset Name": "HUME_ECO_YOUTUBE_EXPLAINER_BODY_RECOVERY_V1",
+   "_id": "39d20d08-9385-81b2-b5ee-d4fda4d34e81"
+  },
+  {
+   "Spend": "2500",
+   "Revenue": "6200",
+   "Brief": "Pod plateau confession UGC",
+   "Product": "Hume Pod",
+   "Angle": "Plateau explanation",
+   "CTR": "1.8",
+   "Winner Status": "Early signal",
+   "Next Action": "Iterate",
+   "Persona": "Weight-loss plateau user",
+   "ROAS": "2.48",
+   "Aspect Ratio": "9:16",
+   "Learning Captured": "Yes",
+   "Status": "Live",
+   "Asset ID": "1",
+   "Landing Page": "https://humehealth.com/pages/weight-loss-general",
+   "Format": "UGC",
+   "Fatigue Status": "Fresh",
+   "Hook": "I thought my plateau meant nothing was working",
+   "Asset Name": "HUME_POD_META_UGC_PLATEAU_CONFESSION_V1",
+   "_id": "39d20d08-9385-81b3-a51b-fe2120590161"
+  },
+  {
+   "Spend": "1800",
+   "Revenue": "4300",
+   "Brief": "Band recovery explanation UGC",
+   "Product": "Hume Band 2.0",
+   "Angle": "Recovery is not just sleep hours",
+   "CTR": "1.6",
+   "Winner Status": "Emerging winner",
+   "Next Action": "Scale",
+   "Persona": "Busy professional",
+   "ROAS": "2.39",
+   "Aspect Ratio": "9:16",
+   "Learning Captured": "Yes",
+   "Status": "Live",
+   "Asset ID": "4",
+   "Landing Page": "https://insights.smartscalesreviews.com/the-5-best-smart-fitness-trackers-to-buy-in-2026",
+   "Format": "UGC",
+   "Fatigue Status": "Fresh",
+   "Hook": "Your wearable tracks sleep, but does it explain recovery?",
+   "Asset Name": "HUME_BAND_META_UGC_RECOVERY_EXPLAINER_V1",
+   "_id": "39d20d08-9385-81ea-91fe-ca3668d6edfd"
+  }
+ ]
+}

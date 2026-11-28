@@ -1,0 +1,160 @@
+{
+ "name": "Competitor and Alternative Research",
+ "source_block": "cbef0d00-df43-4523-a048-a7d841ece0a9",
+ "schema": [
+  [
+   "Pricing",
+   "text",
+   []
+  ],
+  [
+   "Owner",
+   "person",
+   []
+  ],
+  [
+   "Customer Complaints",
+   "text",
+   []
+  ],
+  [
+   "Last Reviewed",
+   "date",
+   []
+  ],
+  [
+   "Comparison Claims Allowed",
+   "text",
+   []
+  ],
+  [
+   "Key Claims",
+   "text",
+   []
+  ],
+  [
+   "Product",
+   "select",
+   [
+    "Hume Pod",
+    "Hume Band 2.0",
+    "Pod + Band Ecosystem",
+    "Future Product"
+   ]
+  ],
+  [
+   "Messaging Opportunities",
+   "text",
+   []
+  ],
+  [
+   "Subscription",
+   "text",
+   []
+  ],
+  [
+   "Comparison Claims Restricted",
+   "text",
+   []
+  ],
+  [
+   "Strengths",
+   "text",
+   []
+  ],
+  [
+   "Weaknesses",
+   "text",
+   []
+  ],
+  [
+   "Objections Hume Must Overcome",
+   "text",
+   []
+  ],
+  [
+   "Customer Praise",
+   "text",
+   []
+  ],
+  [
+   "Core Positioning",
+   "text",
+   []
+  ],
+  [
+   "Product Category",
+   "select",
+   [
+    "Smart scale",
+    "Wearable",
+    "Scan/clinic",
+    "Manual tracking",
+    "Fitness app",
+    "No tracking",
+    "Professional service"
+   ]
+  ],
+  [
+   "Source Links",
+   "url",
+   []
+  ],
+  [
+   "Customer Uses It For",
+   "text",
+   []
+  ],
+  [
+   "Competitor / Alternative",
+   "title",
+   []
+  ]
+ ],
+ "rows": [
+  {
+   "Customer Complaints": "Friction, cost and scheduling.",
+   "Product": "Hume Pod",
+   "Messaging Opportunities": "Position Hume as at-home trend visibility between higher-friction checks.",
+   "Strengths": "High authority and detailed composition readout.",
+   "Weaknesses": "Expensive, inconvenient and not frequent.",
+   "Core Positioning": "Professional body-composition scan.",
+   "Product Category": "Scan/clinic",
+   "Competitor / Alternative": "DEXA scans",
+   "_id": "39d20d08-9385-8113-bf0d-eab1ee4bd5df"
+  },
+  {
+   "Customer Complaints": "Creates anxiety and confusion during plateaus.",
+   "Product": "Hume Pod",
+   "Messaging Opportunities": "Make the belief shift: weight is not the whole story.",
+   "Strengths": "Universal and cheap.",
+   "Weaknesses": "Cannot separate fat, muscle or hydration changes.",
+   "Core Positioning": "Simple weight tracking.",
+   "Product Category": "Manual tracking",
+   "Competitor / Alternative": "Traditional bathroom scale",
+   "_id": "39d20d08-9385-8130-ba7a-d77336af6296"
+  },
+  {
+   "Customer Complaints": "Too much data, unclear action, ongoing fees.",
+   "Product": "Hume Band 2.0",
+   "Messaging Opportunities": "Show interpretation, clarity and value equation.",
+   "Strengths": "Strong category awareness and habit use case.",
+   "Weaknesses": "Subscription fatigue and metric overload.",
+   "Core Positioning": "Premium recovery and sleep tracking.",
+   "Product Category": "Wearable",
+   "Competitor / Alternative": "Oura / Whoop-style wearables",
+   "_id": "39d20d08-9385-81b2-843a-d442117e94de"
+  },
+  {
+   "Customer Complaints": "Accuracy skepticism and shallow app experience.",
+   "Product": "Hume Pod",
+   "Messaging Opportunities": "Explain Hume Pod mechanism and richer trend story.",
+   "Strengths": "Accessible, familiar, low price.",
+   "Weaknesses": "Often foot-only and easy to dismiss as generic.",
+   "Core Positioning": "Low-cost body-composition estimate.",
+   "Product Category": "Smart scale",
+   "Competitor / Alternative": "Cheap smart scales",
+   "_id": "39d20d08-9385-81f5-b17e-df8812a70e7e"
+  }
+ ]
+}
