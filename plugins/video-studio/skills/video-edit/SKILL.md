@@ -20,6 +20,8 @@ Tools: `vs <cmd>` (on PATH via this plugin's SessionStart hook; if missing, run
    (`/video-assets`). `P=video-studio/projects/<name>`. Check `video-studio/library/assets/` for logos, fonts, music.
 3. Client work: `vs lessons brief --brand <Client>` (what past feedback taught us; apply every line, `/feedback-learning`).
    Read `style/brand.md`, `style/moves.md`, `$P/project.md`.
+   Brand work: read `library/<Brand>/comments/README.md` (lessons checklist from every past review round) and the
+   file of the most similar past project in that folder, so no mistake a client already caught comes back.
    If `brand.md` is still the template and the video needs branding, ask for colours/font/logo once.
 4. Brief: if platform, max length, aspect or caption style is missing, ask ONE question with
    defaults ("Reels 9:16, ≤60 s, bold-pop captions, music under, OK?"). Record answers in `project.md`.
@@ -120,11 +122,35 @@ the edit, not the same again:
    and the client's lessons, and makes a before/after sheet per note. Look at each sheet once; if a fix is wrong,
    `vs notes reopen` and repeat 2-3. On the 2:35 test Reel: 3.5 s for step 1, 19 s for step 3 (a full render alone
    was 48 s).
+**Ads with variants (several hooks, sizes, CTAs, lengths): keep revisions small.** These rules decide whether a
+one-clip note costs seconds or a full rebuild of every deliverable:
+- **After the first build, the EDLs are the source.** Never re-run a script that writes the EDLs, cards or captions
+  from scratch to apply a note: it rewrites every entry, so every render looks changed. Change only the entries the
+  note means with `vs edl` (or edit the JSON and `vs edl snapshot -m "..."`). A note on a shared stretch (the body
+  every hook plays) is the same `vs edl` change in each variant's EDL (each hook x size).
+- **One render pass per deliverable, straight to its final name:** `vs render <edl> -o <out>/<final>.mp4 --captions
+  <ass> --preset reels [--lra 7 --limiter]`. Never burn captions or loudness in a second ffmpeg pass: it doubles the
+  encode, re-compresses the picture, and leaves no `.render.json`, which every later revision needs.
+- **Render variants into the same folder, and keep each final's `.render.json` beside it.** `vs render` reuses the
+  closest render there by default (`--since auto`): an earlier version of the same edit, or a sibling variant that
+  shares its shots. The second and third hooks re-encode only their hook; a fix re-encodes only the shots around
+  it; rendering over the same file name works. It prints `--since auto: reusing <file>` and `revision: re-encoded
+  <a>-<b>`. If it renders everything, it says why (a global setting, caption style or size changed, or over 60% of
+  the edit changed). Cards and music beds that a script rewrites with the same bytes are not a change: files are
+  compared by content.
+- Check only the changed windows (`vs fix --render` does this), not every deliverable end to end again.
+
 Notes about the whole video (a new grade, "make it all faster", a different song) are not local: handle them with
 the normal steps; a music-only change still renders fast with `--since` (the picture is copied whole). Reply with the
 checklist. Then decide what the round teaches: `vs lessons learn --brand <Client> --notes $P/work/notes.json`
 (lesson with a check, or one-off; `/feedback-learning`). A `REPEAT:` line from `vs notes add` is a mistake we had
 already learned about: fix it first and tighten that lesson. Log decisions in `project.md`.
+
+**Comments gallery (brand projects).** Every round of comments (client zip of annotated frames, review-page comments,
+the producer's notes in chat) is also logged in `video-studio/library/<Brand>/comments/<project-name>.md` before you
+change anything: date, version watched → version made, each note as given, what you did, and the lesson. A lesson that
+applies to every future ad goes into the checklist in `comments/README.md` (and into the brand's rules file if the
+client made it a rule). Create the project file from the template in `comments/README.md` on the first round.
 
 ## 6. Final
 `vs render ... -o $P/out/final.mp4 --preset <platform> --captions ...` (no `--preview`), `vs qa ... --brand <Client>` again (a

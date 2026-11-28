@@ -42,7 +42,11 @@ Usage:
   vs render work/edl.json -o out/final.mp4 --preset reels --captions work/captions.ass
   vs render work/edl.json -o out/part.mp4 --range 20-35 --preview
   vs render work/edl_v2.json -o out/final_v2.mp4 --since out/final_v1.mp4   revision: re-encode only the shots
-        that changed (between the cuts around them), copy the rest of v1's picture, remix the audio in full
+        that changed (between the cuts around them), copy the rest of v1's picture, remix the audio in full.
+        Default --since auto: the closest render with a .render.json in the output folder (an earlier version, or a
+        sibling variant such as another hook over the same body), also when re-rendering over the same name.
+  vs render ads/h2.edl.json -o out/ads/h2.mp4 --captions ads/h2.ass --preset reels --lra 7 --limiter
+        one pass to the final file (captions, loudness, peak limiter): no second encode, and the .render.json stays
   vs render work/edl.json -o out/final.mov --codec prores --10bit
   vs render work/edl.json -o out/hdr.mp4 --codec h265 --hdr     (keep HDR10 / HLG)
   vs render work/edl.json -o out/long.mp4 --chunks 60 --jobs 4  (force chunking; default: auto)
@@ -65,7 +69,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import splice  # noqa: E402
 from vs_common import (ASPECTS, GRADES, PRESETS, VOICE_ENHANCE, die, sfx_chain, fmt_ts, has_filter,  # noqa: E402
                        is_image, kf_expr, load_json, need, probe, ramp_points, ramp_setpts, run, safe_zone, save_json,
-                       timeline)
+                       timeline, file_sig)
 
 RENDER_VERSION = "2.5.0"  # part of the chunk cache key: bump when stage-1 output changes
 FADE = 0.025
@@ -152,11 +156,6 @@ def proxy_for(src):
     """The proxy `vs proxy` made for a source (raw/.proxy/<name>.mkv), if any."""
     p = Path(src).parent / ".proxy" / (Path(src).name + ".mkv")
     return p if p.exists() and p.stat().st_mtime >= Path(src).stat().st_mtime else None
-
-
-def file_sig(path):
-    st = Path(path).stat()
-    return [str(Path(path).resolve()), st.st_size, int(st.st_mtime)]
 
 
 # --------------------------------------------------------------------------------------------
@@ -281,7 +280,10 @@ def shot_video(ctx, gr, vlab, k, g):
         zx = kf_expr(kf["zoom"], tvar=tz) if "zoom" in kf else f"{z0}"
         xx = kf_expr(kf["x"], tvar=tz) if "x" in kf else f"{fx}"
         yy = kf_expr(kf["y"], tvar=tz) if "y" in kf else f"{fy}"
-        body = (f"fps={fps},scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase,crop={W * 2}:{H * 2},"
+        # The cover crop honours the focus point too, so a reframe (e.g. 9:16 source in a 4:5 frame) lands where
+        # `focus` says even when the zoom is small or 1.0; zoompan then pushes in around the same point.
+        body = (f"fps={fps},scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase,"
+                f"crop={W * 2}:{H * 2}:x='(iw-ow)*({fx})':y='(ih-oh)*({fy})',"
                 f"zoompan=z='max({zx},1)':x='(iw-iw/zoom)*({xx})':y='(ih-ih/zoom)*({yy})'"
                 f":d=1:s={W}x{H}:fps={fps}")
     elif "x" not in kf and "y" not in kf and z0 >= 1.0:
@@ -511,6 +513,9 @@ def build_shots(ctx, gr, groups, t0=0.0):
     has_tr = any(g["overlap"] > 0 for g in groups[1:])
     G = len(groups)
     if not vid:   # sound only: join the shots' audio the way the picture would be joined
+        if skip_audio:   # a voice track replaces the shots' sound: the finish mixes it, the shots add silence
+            silence(gr, "ca", groups[-1]["out_end"] - t0)
+            return None, "ca", groups[-1]["out_end"] - t0
         al = "a0"
         for k in range(1, G):
             d = groups[k]["overlap"]
@@ -628,7 +633,9 @@ def finish_video(ctx, gr, vlab, ofmt, out):
         if not Path(ov["file"]).exists():
             die(f"overlay not found: {ov['file']}")
         dec = ["-c:v", "libvpx-vp9"] if ov["file"].lower().endswith(".webm") else []
-        loop = ["-loop", "1"] if is_image(ov["file"]) else []
+        # Image overlays loop at the timeline rate (image2 defaults to 25 fps) and run 2 frames past `end`, so the stream
+        # never ends before enable() closes: back-to-back captions swap on the same frame with no blank frame between.
+        loop = ["-loop", "1", "-framerate", str(ctx.fps)] if is_image(ov["file"]) else []
         seek = ["-ss", f"{float(ov['in']):.3f}"] if ov.get("in") and not loop else []
         oi = gr.add_input(*loop, *seek, *dec, "-i", ov["file"])
         s, e = float(ov["start"]), float(ov["end"])
@@ -650,7 +657,7 @@ def finish_video(ctx, gr, vlab, ofmt, out):
         if "opacity" in ov:
             chain.append(f"colorchannelmixer=aa={float(ov['opacity'])}")
         if loop:
-            chain.append(f"trim=0:{e - s:.3f}")
+            chain.append(f"trim=0:{e - s + 2 / ctx.fps:.3f}")
         chain.append("setpts=PTS-STARTPTS")
         if ov.get("fade_in"):
             chain.append(f"fade=t=in:st=0:d={float(ov['fade_in'])}:alpha=1")
@@ -666,12 +673,16 @@ def finish_video(ctx, gr, vlab, ofmt, out):
         gr.f(f"[{vlab}][o{j}]overlay=x={x}:y={y}:enable='between(t,{s},{e})':eof_action=pass{ofmt}[ov{j}]")
         vlab = f"ov{j}"
 
-    # Custom fonts: project assets/fonts, then the workspace library, then style/fonts.
+    # Custom fonts: --fonts, then the project's assets/fonts (the EDL's folder or any folder above it, up to three
+    # levels: work/edl.json and work/ads/h1.edl.json both find <project>/assets/fonts), then the workspace library,
+    # then style/fonts.
     fontsdir = ""
     edl_dir = Path(ctx.args.edl).resolve().parent
     ws = edl_dir.parents[2] if len(edl_dir.parents) > 2 else None
-    for cand in (edl_dir.parent / "assets" / "fonts", ws and ws / "library" / "assets" / "fonts",
-                 ws and ws / "style" / "fonts"):
+    ups = [edl_dir, *list(edl_dir.parents)[:3]]
+    given = getattr(ctx.args, "fonts", None)
+    for cand in ([Path(given)] if given else []) + [u / "assets" / "fonts" for u in ups] + \
+            [ws and ws / "library" / "assets" / "fonts", ws and ws / "style" / "fonts"]:
         if cand and cand.is_dir() and any(cand.iterdir()):
             fontsdir = f":fontsdir='{esc_path(cand)}'"
             break
@@ -747,8 +758,13 @@ def finish_audio(ctx, gr, alab, total):
         alab = "am"
     lufs = ctx.lufs
     if lufs is not None:
-        gr.f(f"[{alab}]loudnorm=I={lufs}:TP=-1.5:LRA=11,aresample=48000[an]")
+        gr.f(f"[{alab}]loudnorm=I={lufs}:TP=-1.5:LRA={getattr(ctx.args, 'lra', 11.0):g},aresample=48000[an]")
         alab = "an"
+    lim = getattr(ctx.args, "limiter", None)
+    if lim is not None:
+        gr.f(f"[{alab}]alimiter=limit={10 ** (min(lim, 0.0) / 20):.4f}:level=false:attack=1:release=50,"
+             f"aresample=48000[alim]")
+        alab = "alim"
     gr.f(f"[{alab}]anull[aout]")
 
 
@@ -824,6 +840,32 @@ def manifest_path(out):
     return Path(str(out) + ".render.json")
 
 
+def pick_since(out, new_manifest):
+    """--since auto: the render in the output folder that leaves the least to re-encode. Candidates are finals with a
+    .render.json: earlier versions of this edit and sibling variants (another hook, another CTA) sharing its shots.
+    Returns (path, plan) or (None, None)."""
+    folder = Path(out).resolve().parent
+    best = None
+    for m in folder.glob("*.render.json"):
+        video = Path(str(m)[: -len(".render.json")])
+        if not video.exists():
+            continue
+        try:
+            old_m = load_json(m)
+        except (OSError, ValueError):
+            continue
+        if old_m.get("settings") != new_manifest["settings"] or old_m.get("globals") != new_manifest["globals"]:
+            continue
+        p = splice.plan(old_m, new_manifest)
+        if p.get("full"):
+            continue
+        cost = 0.0 if p.get("copy") else p["b_new"] - p["a"]
+        key = (cost, -m.stat().st_mtime)
+        if best is None or key < best[0]:
+            best = (key, video, p)
+    return (best[1], best[2]) if best else (None, None)
+
+
 def splice_plan(since, new_manifest, out):
     """Can this render reuse `since`? Returns the plan (window / copy) or None for a full render, saying why."""
     old_file, old_m = Path(since), manifest_path(since)
@@ -832,7 +874,8 @@ def splice_plan(since, new_manifest, out):
               file=sys.stderr)
         return None
     if old_file.resolve() == Path(out).resolve():
-        die("--since must be a different file from -o (the old render is read while the new one is written)")
+        die("--since must be a different file from -o (the old render is read while the new one is written); "
+            "--since auto handles re-rendering over the same file")
     plan = splice.plan(load_json(old_m), new_manifest)
     if plan.get("full"):
         print(f"--since: full render ({plan['full']})", file=sys.stderr)
@@ -975,14 +1018,25 @@ def stab_prepass(ctx, groups):
         ctx.trf[g["index"]] = trf
 
 
+def _boundary(g):
+    """Is this shot a natural place to start a chunk? Decided by the shot's own content, not its time in the edit, so
+    two variants that share a run of shots (the same body after different hooks) split it at the same shots and
+    share those chunks in the cache."""
+    h = hashlib.sha1(json.dumps([g["src"], round(g["start"], 3), round(g["end"], 3), g["seg"]], sort_keys=True,
+                                default=str).encode()).digest()
+    return h[0] % 4 == 0
+
+
 def chunk_groups(groups, target):
-    """Split shots into chunks of about `target` seconds, only at plain hard cuts."""
+    """Split shots into chunks of about `target` seconds (between half and twice it), only at plain hard cuts, at
+    shots chosen by content (see _boundary)."""
     chunks, cur = [], []
     for k, g in enumerate(groups):
         if cur:
             prev = groups[k - 1]
             clean = (g["overlap"] == 0 and not g["seg"].get("audio_lead") and not prev["seg"].get("audio_tail"))
-            if clean and g["out_start"] - cur[0]["out_start"] >= target:
+            length = g["out_start"] - cur[0]["out_start"]
+            if clean and (length >= 2 * target or (length >= target / 2 and _boundary(g))):
                 chunks.append(cur)
                 cur = []
         cur.append(g)
@@ -991,11 +1045,19 @@ def chunk_groups(groups, target):
     return chunks
 
 
+def _track_key(tr):
+    if not tr:
+        return None
+    return tr if tr.get("follow") else {"plain": True}
+
+
 def chunk_key(ctx, chunk):
     data = {"v": RENDER_VERSION, "W": ctx.W, "H": ctx.H, "fps": ctx.fps, "pix": ctx.pixfmt, "hdr": ctx.keep_hdr,
             "proxy": ctx.use_proxy, "preview": bool(ctx.args.preview),
-            "edl": {k: ctx.edl.get(k) for k in ("grade", "lut", "reframe", "fit", "audio_track")},
-            "shots": [[g["src"], g["start"], g["end"], g["out_start"] - chunk[0]["out_start"], g["seg"],
+            "edl": {k: ctx.edl.get(k) for k in ("grade", "lut", "reframe", "fit")},
+            # a plain voice track is mixed in the finish; stage 1 only needs to know it replaces the shots' sound
+            "track": _track_key(ctx.edl.get("audio_track")),
+            "shots": [[g["src"], round(g["start"], 4), round(g["end"], 4), round(g["out_start"] - chunk[0]["out_start"], 4), g["seg"],
                        file_sig(ctx.video_src(g["src"])), file_sig(g["src"])] for g in chunk]}
     luts = {g["seg"].get("lut") for g in chunk} | {ctx.edl.get("lut")}
     data["luts"] = [file_sig(lp) for lp in sorted(x for x in luts if x) if Path(lp).exists()]
@@ -1026,7 +1088,11 @@ def main():
     ap.add_argument("--captions", help="ASS or SRT file to burn in (from `vs captions`)")
     ap.add_argument("--loudnorm", type=float, nargs="?", const=-14.0, help="LUFS target (preset sets it)")
     ap.add_argument("--no-loudnorm", action="store_true")
+    ap.add_argument("--lra", type=float, default=11.0, help="loudness range for --loudnorm (ads: 7)")
+    ap.add_argument("--limiter", type=float, nargs="?", const=-3.0,
+                    help="peak limiter after loudness, in dBFS (default -3): finals need no second encode")
     ap.add_argument("--font", default="Inter", help="font for EDL texts")
+    ap.add_argument("--fonts", help="folder of font files for captions and texts (default: the project's assets/fonts)")
     ap.add_argument("--codec", choices=["h264", "h265", "prores"], default="h264")
     ap.add_argument("--crf", type=int, default=18)
     ap.add_argument("--speed", choices=["fast", "balanced", "best"], default="fast",
@@ -1034,8 +1100,10 @@ def main():
     ap.add_argument("--10bit", dest="ten_bit", action="store_true", help="10-bit output (h265/prores): no banding")
     ap.add_argument("--hdr", action="store_true", help="keep HDR (HDR10/HLG) instead of tone-mapping to SDR (h265)")
     ap.add_argument("--range", help="render only this output window, e.g. 20-35")
-    ap.add_argument("--since", help="a previous render of this edit (with its .render.json): re-encode only the "
-                                    "changed window and copy the rest; falls back to a full render when needed")
+    ap.add_argument("--since", default="auto",
+                    help="reuse an earlier render: re-encode only what changed and copy the rest. auto (default): the "
+                         "closest render in the output folder (an earlier version of this edit, or a sibling variant "
+                         "such as another hook); a file: that render; none: render everything")
     ap.add_argument("--preview", action="store_true", help="half resolution, ultrafast, proxies: for review drafts")
     ap.add_argument("--proxy", action="store_true", help="use proxies from `vs proxy` (on by default with --preview)")
     ap.add_argument("--chunks", default="auto", help="auto | off | seconds per chunk (stage 1 in parallel, cached)")
@@ -1125,13 +1193,44 @@ def main():
     cut_times = new_manifest["cuts"][1:-1]
     if args.codec == "h264":  # an IDR frame at every hard cut: a later revision can splice there without re-encoding
         venc += ["-force_key_frames", ",".join(f"{t:.4f}" for t in [0.0] + cut_times), "-x264-params", "forced-idr=1"]
-    sp = None
-    if args.since:
-        sp = splice_plan(args.since, new_manifest, out)
+    sp, parked = None, None
+    since = None if (args.since or "none").lower() in ("none", "off", "no", "") else args.since
+    if since and since.lower() == "auto":
+        since = None
+        if not args.dry_run and not args.range:
+            cand, cplan = pick_since(out, new_manifest)
+            if cand is not None:
+                if cand.resolve() == out.resolve():
+                    # re-rendering over the same name: park the old render while the new one is written
+                    cache_dir.mkdir(parents=True, exist_ok=True)
+                    parked = cache_dir / f"previous-{out.name}"
+                    shutil.move(str(out), str(parked))
+                    shutil.move(str(manifest_path(out)), str(manifest_path(parked)))
+                    cand = parked
+                why = "picture unchanged" if cplan.get("copy") else \
+                    f"{cplan['b_new'] - cplan['a']:.1f} s of {total:.1f} s changed"
+                print(f"--since auto: reusing {cand.name if cand != parked else out.name + ' (previous)'} ({why})",
+                      file=sys.stderr)
+                since = str(cand)
+    try:
+        if since:
+            sp = splice_plan(since, new_manifest, out)
+        if sp and not args.dry_run and not args.range:
+            if splice_render(ctx, groups, sp, venc, aenc, fps, total, out, new_manifest):
+                return
+        full_render(ctx, args, groups, chunks, cache_dir, venc, aenc, fps, total, out, new_manifest, preset, warnings)
+    finally:
+        if parked is not None:
+            if out.exists():
+                parked.unlink(missing_ok=True)
+                manifest_path(parked).unlink(missing_ok=True)
+            else:   # the render failed: put the previous version back
+                shutil.move(str(parked), str(out))
+                if manifest_path(parked).exists():
+                    shutil.move(str(manifest_path(parked)), str(manifest_path(out)))
 
-    if sp and not args.dry_run and not args.range:
-        if splice_render(ctx, groups, sp, venc, aenc, fps, total, out, new_manifest):
-            return
+
+def full_render(ctx, args, groups, chunks, cache_dir, venc, aenc, fps, total, out, new_manifest, preset, warnings):
 
     gr = Graph()
     if len(chunks) == 1:
