@@ -104,6 +104,19 @@ class PresentTest(unittest.TestCase):
         p = sh("node", Path(__file__).with_name("review_access_check.js"), d, ok=False)
         self.assertEqual(p.returncode, 0, p.stdout + p.stderr[-1500:])
 
+    def test_vertical_page_fits_the_video(self):
+        """A 9:16 ad: the player takes the video's shape (not a wide black box) and the filmstrip has no gaps."""
+        if not shutil.which("node") or subprocess.run(["node", "-e", "require('playwright')"],
+                                                      capture_output=True).returncode != 0:
+            self.skipTest("node + playwright not installed")
+        tall = self.ws / "projects" / "demo" / "out" / "tall.mp4"
+        sh("ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "testsrc2=s=360x640:r=30:d=10", "-f", "lavfi",
+           "-i", "sine=f=330:d=10", "-shortest", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", tall)
+        self.vs("present", tall, "--project", "demo", "--version", "tall1", "--max-mb", "3")
+        d = self.ws / "projects" / "demo" / "out" / "review" / "tall1"
+        p = sh("node", Path(__file__).with_name("review_vertical_check.js"), d, ok=False)
+        self.assertEqual(p.returncode, 0, p.stdout + p.stderr[-1500:])
+
     def test_pref_and_link(self):
         self.assertEqual(self.vs("present", "pref").stdout.strip(), "ask")
         self.vs("present", "pref", "never")
